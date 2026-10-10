@@ -30,6 +30,10 @@ async function fetchDocumentPage(link, siteRoot) {
   return new DOMParser().parseFromString(html, 'text/html');
 }
 
+export function init() {
+  enableDocumentDownloads(new URL(document.body.dataset.root, location.href));
+}
+
 export function enableDocumentDownloads(siteRoot) {
   const controls = [...document.querySelectorAll('[data-document-download]')];
   if (!controls.length) return;

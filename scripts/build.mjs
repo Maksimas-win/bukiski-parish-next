@@ -173,7 +173,7 @@ function addArticlePages() {
       lang: entry.language,
       uiLocale,
       title: entry.title,
-      description: entry.page.description || entry.description,
+      description: entry.description,
       article: true,
       extraDialogs: lightboxDialog(t, uiLocale)
     };

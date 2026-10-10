@@ -251,6 +251,10 @@
   gap: 0.25rem 1.25rem;
 }
 
+.meta-row > * {
+  padding-block: 0.15rem;
+}
+
 .facts + .meta-row {
   margin-top: 1.25rem;
 }
@@ -391,7 +395,7 @@ input[type='checkbox'] {
   gap: 0.25rem;
   padding: 0.25rem;
   border: 1.5px solid var(--line-strong);
-  border-radius: 999px;
+  border-radius: 1.6rem;
 }
 
 .segmented input {

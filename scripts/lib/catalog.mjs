@@ -36,11 +36,14 @@ export function titleOf(page) {
 }
 
 const MAX_DESCRIPTION = 180;
+// Default text the old site builder left where no description was written.
+const PLACEHOLDER_DESCRIPTION = /^(?:Straipsnio aprašymas|Article description|Описание статьи)\.?$/i;
 
 /** Short summary for cards and metadata, cut at a word boundary. */
 export function descriptionOf(page) {
   const fallback = page.blocks.find(block => block.tag === 'p' && block.text.length > 100)?.text || '';
-  const text = (page.description || fallback).trim();
+  const own = (page.description || '').trim();
+  const text = (PLACEHOLDER_DESCRIPTION.test(own) ? '' : own) || fallback.trim();
   if (text.length <= MAX_DESCRIPTION) return text;
   const cut = text.slice(0, MAX_DESCRIPTION);
   return `${cut.slice(0, cut.lastIndexOf(' ')).replace(/[\s,;:—–-]+$/, '')}…`;

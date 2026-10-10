@@ -678,8 +678,10 @@
   box-shadow: var(--shadow);
 }
 
+/* The card is one large link, so the focus ring is drawn around the card. */
 .article-card:focus-within {
-  border-color: var(--focus);
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
 }
 
 .article-card__image {
@@ -827,7 +829,7 @@
 
 .contents ol {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.15rem;
   padding: 0;
   list-style: none;
   font-size: 0.9375rem;
@@ -836,7 +838,7 @@
 
 .contents a {
   display: block;
-  padding-inline-start: 0.75rem;
+  padding: 0.2rem 0 0.2rem 0.75rem;
   border-inline-start: 2px solid transparent;
   color: var(--ink-soft);
   text-decoration: none;
