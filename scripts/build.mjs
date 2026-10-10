@@ -106,7 +106,7 @@ function articleBody(p,t){
     const document=documents.find(d=>d.source===ref.to);
     const related=pages.find(page=>page.url===ref.to);
     if(document){
-      const sourceLink=document.local?link('/'+document.local,e(ref.label)):ext(ref.to,ref.label);
+      const sourceLink=document.local?`<a href="${e(url('/'+document.local))}" download rel="nofollow">${e(ref.label)} <span class="small muted">(${e(document.local.split('.').at(-1).toUpperCase())})</span></a>`:ext(ref.to,ref.label);
       const unavailable=document.local?'':` <span class="small muted">${e(t.documentUnavailable)}</span>`;
       const alternative=!document.local&&/бланк.*записк|записк.*бланк/i.test(ref.label)?` ${link(route(t===locales.ru?'ru':t===locales.lt?'lt':'en','notes'),e(t.notes))}`:'';
       references.set(ref.to,sourceLink+unavailable+alternative);

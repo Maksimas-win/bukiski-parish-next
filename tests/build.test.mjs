@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile,readdir,stat } from 'node:fs/promises';
 import { resolve,dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import { escapeHTML } from '../assets/js/domain.js';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const dist=resolve(root,'dist');
@@ -47,6 +48,32 @@ test('Each source URL has a target and every preserved text block survives HTML 
     for(const block of source.blocks)assert.ok(archive.includes(escapeHTML(block.text)),`Missing text in ${source.url}`);
   }
 });
+test('Recovered originals retain their bytes and replace every document reference',async()=>{
+  const documents=JSON.parse(await read('content/source-documents.json'));
+  const migration=JSON.parse(await read('content/migration.json'));
+  assert.equal(documents.length,4);
+  for(const document of documents){
+    assert.match(document.local,/^assets\/documents\/[a-z0-9-]+\.(pdf|doc)$/);
+    const original=await readFile(resolve(root,document.local));
+    const published=await readFile(resolve(dist,document.local));
+    assert.equal(original.length,document.bytes);
+    assert.deepEqual(published,original);
+    assert.equal(createHash('sha256').update(original).digest('hex'),document.sha256);
+    const signature=document.local.endsWith('.pdf')?'255044462d':'d0cf11e0a1b11ae1';
+    assert.equal(original.subarray(0,signature.length/2).toString('hex'),signature);
+    for(const ref of document.links){
+      const record=migration.find(r=>r.source===ref.from);
+      assert.ok(record,ref.from);
+      const legacyPath=new URL(ref.from).pathname;
+      for(const path of [record.target,record.archive,legacyPath]){
+        const html=await readFile(fileFor(path),'utf8');
+        assert.ok(html.includes(`href="${base}/${document.local}" download rel="nofollow"`),path);
+        assert.ok(!html.includes(`href="${escapeHTML(document.source)}"`),path);
+      }
+    }
+  }
+});
+
 test('RU/LT/EN core keys and hreflang equivalents are complete',async()=>{
   const locales=JSON.parse(await read('content/locales.json'));
   const keys=Object.keys(locales.ru).sort();
