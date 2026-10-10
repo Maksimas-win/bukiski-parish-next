@@ -2,10 +2,18 @@
   "origin": "https://bukiski-hram.org",
   "basePath": "",
   "production": false,
+  "documentDelivery": "envelope",
   "reviewedOn": "2026-10-10",
   "phone": "+37063693506",
   "phoneDisplay": "+370 636 93506",
   "address": "Sodų g. 8, Bukiškis, LT-14180, Lietuva",
+  "addressParts": {
+    "street": "Sodų g. 8",
+    "locality": "Bukiškis",
+    "district": "Vilniaus rajonas",
+    "postalCode": "LT-14180",
+    "country": "Lietuva"
+  },
   "legalName": "Bukiškio stačiatikių Kristaus Gimimo parapija",
   "organizationCode": "301004570",
   "iban": "LT40 7044 0600 0624 4432",
@@ -15,6 +23,23 @@
   "scheduleSource": "https://bukiski-hram.org/data/services.json",
   "timezone": "Europe/Vilnius",
   "scheduleMaxAgeHours": 48,
+  "links": {
+    "historicalSource": "https://orthodoxy.lt/source/laikrastis/rus_2025-01.pdf",
+    "contactsSource": "https://bukiski-hram.org/ru/contacts.html",
+    "supportSource": "https://bukiski-hram.org/",
+    "vmi": "https://www.vmi.lt/evmi/paramos-skyrimas",
+    "githubPrivacy": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "transport": [
+      {
+        "label": "JUDU",
+        "url": "https://judu.lt/"
+      },
+      {
+        "label": "stops.lt",
+        "url": "https://www.stops.lt/vilnius/"
+      }
+    ]
+  },
   "locales": [
     "ru",
     "lt",
