@@ -30,7 +30,7 @@
     "timeZone": "Время Вильнюса · Europe/Vilnius",
     "fromCalendar": "По приходскому календарю",
     "updated": "Источник обновлён",
-    "checked": "Сведения проверены",
+    "checked": "Сверено с приходским сайтом",
     "stale": "Сохранённое расписание может быть устаревшим. Перед поездкой проверьте приходской календарь или позвоните.",
     "empty": "Предстоящие службы с подтверждённым временем пока не опубликованы. Уточните расписание по телефону.",
     "regular": "Обычно по воскресеньям — Божественная литургия в 08:00. Праздничные службы и изменения уточняйте по календарю.",
@@ -43,7 +43,7 @@
     "welcomeSteps": [
       "Посмотрите расписание и уточните изменения перед поездкой.",
       "О подготовке к исповеди, Причастию, крещению или венчанию поговорите со священником.",
-      "Если нужна помощь при входе в храм, позвоните заранее."
+      "Если вам трудно подниматься по ступеням или нужна помощь, чтобы войти в храм, позвоните в приход перед визитом."
     ],
     "discover": "Приход рядом с вами",
     "discoverIntro": "Для молитвы, знакомства и добрых дел",
@@ -106,8 +106,8 @@
     "mapPrivacy": "Карта откроется на внешнем сайте только после нажатия.",
     "transport": "Общественный транспорт",
     "transportIntro": "Проверьте маршруты и время отправления у перевозчика: расписание может меняться.",
-    "entryAccess": "Доступность посещения",
-    "entryAccessText": "На фотографии у входа видны ступени. Наличие пандуса и доступного входа не подтверждено. Если нужна помощь, позвоните заранее.",
+    "entryAccess": "Вход в храм и помощь при посещении",
+    "entryAccessText": "У входа в храм есть ступени. Если вам трудно по ним подниматься или вы пользуетесь инвалидной коляской, позвоните в приход перед визитом и уточните, как попасть внутрь. Информацию о пандусе и входе без ступеней ещё нужно подтвердить.",
     "saveContact": "Сохранить контакт (.vcf)",
     "noteIntro": "Подготовьте записку дома и передайте её в храме. Имена обрабатываются только в этой вкладке: сайт их не отправляет и не сохраняет.",
     "noteType": "Вид записки",
@@ -157,7 +157,10 @@
     "footerLine": "Рады каждому, кто ищет путь к храму.",
     "rights": "Тексты и фотографии — приход и указанные авторы.",
     "notFound": "Страница не найдена",
-    "notFoundText": "Найдите материал в библиотеке или вернитесь на главную."
+    "notFoundText": "Найдите материал в библиотеке или вернитесь на главную.",
+    "githubHosting": "Эта тестовая версия размещена на GitHub Pages. GitHub обрабатывает технические данные посещений согласно своей политике конфиденциальности.",
+    "hostingPolicy": "Политика конфиденциальности GitHub",
+    "documentUnavailable": "Копия этого документа недоступна. Сохранена ссылка на источник."
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -179,7 +182,7 @@
     "access": "Skaitymo nuostatos",
     "large": "Didelis tekstas",
     "contrast": "Didelis kontrastas",
-    "reset": "Atkurti nuostatas",
+    "reset": "Atkurti pradines nuostatas",
     "close": "Uždaryti",
     "hero": "Maldos vieta.\nNamai sielai.",
     "heroIntro": "Kristaus Gimimo cerkvė Bukiškyje — parapijos bendruomenė šalia Vilniaus. Kviečiame į pamaldas, susipažinti su cerkve ir pabūti tyloje.",
@@ -190,10 +193,10 @@
     "timeZone": "Vilniaus laiku · Europe/Vilnius",
     "fromCalendar": "Pagal parapijos kalendorių",
     "updated": "Šaltinis atnaujintas",
-    "checked": "Informacija patikrinta",
+    "checked": "Palyginta su parapijos svetaine",
     "stale": "Išsaugotas tvarkaraštis gali būti pasenęs. Prieš vykdami patikrinkite parapijos kalendorių arba paskambinkite.",
     "empty": "Būsimos pamaldos su patvirtintu laiku dar nepaskelbtos. Dėl tvarkaraščio skambinkite parapijai.",
-    "regular": "Įprastai sekmadieniais 08:00 aukojama Dieviškoji liturgija. Švenčių pamaldas ir pakeitimus tikrinkite kalendoriuje.",
+    "regular": "Dieviškoji liturgija paprastai švenčiama sekmadieniais 08:00. Šventinių pamaldų laiką ir tvarkaraščio pakeitimus tikrinkite kalendoriuje.",
     "calendar": "Parapijos kalendorius",
     "calendarDownload": "Atsisiųsti tvarkaraštį (.ics)",
     "calendarNote": "Faile pateikiama paskelbtų įvykių kopija; ji automatiškai neatnaujinama.",
@@ -203,7 +206,7 @@
     "welcomeSteps": [
       "Peržiūrėkite tvarkaraštį ir prieš vykdami pasitikrinkite pakeitimus.",
       "Apie pasirengimą išpažinčiai, Komunijai, krikštui ar santuokai pasikalbėkite su kunigu.",
-      "Jei reikia pagalbos įeinant į cerkvę, paskambinkite iš anksto."
+      "Jei jums sunku lipti laiptais ar reikia pagalbos patenkant į cerkvę, prieš atvykdami paskambinkite į parapiją."
     ],
     "discover": "Parapija šalia jūsų",
     "discoverIntro": "Maldai, pažinčiai ir geriems darbams",
@@ -266,8 +269,8 @@
     "mapPrivacy": "Žemėlapis išorinėje svetainėje atsidarys tik paspaudus nuorodą.",
     "transport": "Viešasis transportas",
     "transportIntro": "Maršrutus ir išvykimo laiką tikrinkite vežėjo svetainėje: tvarkaraščiai gali keistis.",
-    "entryAccess": "Apsilankymo prieinamumas",
-    "entryAccessText": "Nuotraukoje prie įėjimo matyti laipteliai. Rampos ar pritaikyto įėjimo buvimas nepatvirtintas. Jei reikia pagalbos, paskambinkite iš anksto.",
+    "entryAccess": "Patekimas į cerkvę",
+    "entryAccessText": "Prie įėjimo į cerkvę yra laipteliai. Jei jums sunku jais lipti arba naudojatės neįgaliojo vežimėliu, prieš atvykdami paskambinkite į parapiją ir pasiteiraukite, kaip patekti į vidų. Informaciją apie pandusą ir įėjimą be laiptelių dar reikia patvirtinti.",
     "saveContact": "Išsaugoti kontaktą (.vcf)",
     "noteIntro": "Parenkite maldos raštelį namuose ir perduokite jį cerkvėje. Vardai tvarkomi tik šiame skirtuke: svetainė jų nesiunčia ir neišsaugo.",
     "noteType": "Raštelio rūšis",
@@ -279,7 +282,7 @@
     "notePrint": "Spausdinti raštelį",
     "noteDownload": "Atsisiųsti tekstą",
     "noteClear": "Išvalyti vardus",
-    "noteError": "Įveskite nuo 1 iki 20 vardų, iki 60 simbolių kiekviename. Naudokite raides, tarpus, brūkšnelį ar apostrofą.",
+    "noteError": "Įveskite nuo 1 iki 20 vardų. Kiekvienas vardas gali būti iki 60 simbolių ilgio. Naudokite raides, tarpus, brūkšnelius ar apostrofus.",
     "noteReady": "Raštelis parengtas. Jis neišsiųstas parapijai.",
     "noteCleared": "Vardai išvalyti.",
     "noteLocal": "Parengiama jūsų įrenginyje",
@@ -317,7 +320,10 @@
     "footerLine": "Laukiame kiekvieno, ieškančio kelio į cerkvę.",
     "rights": "Tekstai ir nuotraukos — parapija ir nurodyti autoriai.",
     "notFound": "Puslapis nerastas",
-    "notFoundText": "Raskite tekstą skaitinių skyriuje arba grįžkite į pradžią."
+    "notFoundText": "Raskite tekstą skaitinių skyriuje arba grįžkite į pradžią.",
+    "githubHosting": "Ši bandomoji svetainės versija talpinama GitHub Pages. GitHub tvarko techninius apsilankymų duomenis pagal savo privatumo politiką.",
+    "hostingPolicy": "GitHub privatumo politika",
+    "documentUnavailable": "Šio dokumento kopijos nėra. Išsaugota nuoroda į šaltinį."
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -350,7 +356,7 @@
     "timeZone": "Vilnius time · Europe/Vilnius",
     "fromCalendar": "From the parish calendar",
     "updated": "Source updated",
-    "checked": "Information checked",
+    "checked": "Checked against the parish website",
     "stale": "This saved schedule may be out of date. Check the parish calendar or call before travelling.",
     "empty": "No upcoming services with a confirmed time are currently published. Please call the parish.",
     "regular": "Divine Liturgy is usually celebrated on Sundays at 08:00. Check the calendar for feast-day services and changes.",
@@ -363,7 +369,7 @@
     "welcomeSteps": [
       "Check the schedule and any changes before travelling.",
       "Speak to the priest about preparing for Confession, Communion, Baptism or Marriage.",
-      "If you need assistance entering the church, please call ahead."
+      "If you find steps difficult or need help getting into the church, please call the parish before your visit."
     ],
     "discover": "A parish close to you",
     "discoverIntro": "For prayer, discovery and acts of kindness",
@@ -412,7 +418,7 @@
       ],
       [
         "Marriage",
-        "Discuss eligibility, preparation and the wedding date in advance."
+        "Speak to the priest in advance about marrying in the church, how to prepare and a suitable date."
       ],
       [
         "Commemoration and pastoral care",
@@ -427,7 +433,7 @@
     "transport": "Public transport",
     "transportIntro": "Check routes and departure times with the transport operator, as schedules may change.",
     "entryAccess": "Access to the church",
-    "entryAccessText": "The entrance photograph shows steps. A ramp or step-free entrance has not been confirmed. Please call ahead if you need assistance.",
+    "entryAccessText": "There are steps at the church entrance. If you find steps difficult or use a wheelchair, please call the parish before your visit to discuss access. The availability of a ramp or an entrance without steps still needs to be confirmed.",
     "saveContact": "Save contact (.vcf)",
     "noteIntro": "Prepare a prayer request at home and bring it to the church. Names are processed only in this tab; the website does not send or save them.",
     "noteType": "Prayer request type",
@@ -477,6 +483,9 @@
     "footerLine": "Welcoming everyone seeking a path to the church.",
     "rights": "Texts and photographs belong to the parish and credited authors.",
     "notFound": "Page not found",
-    "notFoundText": "Find the article in the reading section or return home."
+    "notFoundText": "Find the article in the reading section or return home.",
+    "githubHosting": "This preview is hosted on GitHub Pages. GitHub processes technical visit data under its privacy statement.",
+    "hostingPolicy": "GitHub privacy statement",
+    "documentUnavailable": "A copy of this document is unavailable. The source link has been preserved."
   }
 }

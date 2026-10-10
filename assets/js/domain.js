@@ -38,8 +38,15 @@ export function normalizeSchedule(source) {
       throw new Error(`Missing service-title translation: ${event.id}`);
     }
     ids.add(event.id);
+    const subtitle={...event.liturgical};
+    // Correct English word order without changing the source's liturgical numbering.
+    if(typeof subtitle.en==='string') subtitle.en=subtitle.en.replace(/^Sunday (\d+) after Pentecost$/,(_,number)=>{
+      const n=Number(number), lastTwo=n%100;
+      const suffix=lastTwo>=11&&lastTwo<=13?'th':({1:'st',2:'nd',3:'rd'}[n%10]||'th');
+      return `${n}${suffix} Sunday after Pentecost`;
+    });
     events.push({ id:event.id, date:event.date, start:event.start, startTime:event.startTime,
-      title:event.title, subtitle:event.liturgical || {}, source:event.source });
+      title:event.title, subtitle, source:event.source });
   }
   return {
     schemaVersion:1, timezone:TIMEZONE, generatedAt:source.generatedAt,

@@ -11,10 +11,18 @@
   "iban": "LT40 7044 0600 0624 4432",
   "latitude": 54.76091,
   "longitude": 25.207621,
-  "calendarUrl": "https://calendar.google.com/calendar/u/0/r?cid=f51cbd879e77f29661b68d2d0fd75ee1146a96eb331fb9f9b11d2924ceb9cf53%40group.calendar.google.com",
+  "calendarUrl": "https://calendar.google.com/calendar/embed?src=f51cbd879e77f29661b68d2d0fd75ee1146a96eb331fb9f9b11d2924ceb9cf53%40group.calendar.google.com&ctz=Europe%2FVilnius&mode=AGENDA",
   "scheduleSource": "https://bukiski-hram.org/data/services.json",
   "timezone": "Europe/Vilnius",
   "scheduleMaxAgeHours": 48,
-  "locales": ["ru", "lt", "en"],
-  "translationReview": { "ru": "editorial-draft", "lt": "native-and-clergy-review-required", "en": "clergy-review-required" }
+  "locales": [
+    "ru",
+    "lt",
+    "en"
+  ],
+  "translationReview": {
+    "ru": "editorial-draft",
+    "lt": "native-and-clergy-review-required",
+    "en": "clergy-review-required"
+  }
 }

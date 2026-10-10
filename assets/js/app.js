@@ -102,7 +102,13 @@ if(form){
     const prepare=select('[data-note-prepare]'),clear=select('[data-note-clear]');
     let prepared=null;
     show(prepare,true);show(clear,true);show(select('[data-note-unavailable]'),false);
-    const invalidate=()=>{prepared=null;show(preview,false);show(actions,false);show(select('.note-result>.small'),false);};
+    const invalidate=()=>{
+      prepared=null;status.textContent='';
+      select('[data-note-heading]').textContent='';
+      select('[data-note-names]').replaceChildren();
+      show(preview,false);show(actions,false);show(select('.note-result>.small'),false);
+      document.body.classList.remove('note-printing');
+    };
     invalidate();
     const erase=()=>{form.reset();textarea.value='';textarea.removeAttribute('aria-invalid');invalidate();status.textContent='';};
     textarea.addEventListener('input',()=>{invalidate();status.textContent='';textarea.removeAttribute('aria-invalid');});

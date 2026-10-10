@@ -66,6 +66,13 @@ test('ICS uses UTC instants and valid byte-folded lines for all three languages'
     for(const match of text.matchAll(/DTSTART:([^\r]+)/g))assert.match(match[1],/^\d{8}T\d{6}Z$/);
   }
 });
+test('The downloaded contact opens this site including the project path',async()=>{
+  const vcard=await read('dist/assets/parish.vcf');
+  const href=vcard.match(/^URL:(.+)$/m)[1].trim();
+  const home=await read('dist/ru/index.html');
+  const canonical=home.match(/rel="canonical" href="([^"]+)"/)[1];
+  assert.equal(href,canonical.replace(/ru\/$/,''));
+});
 test('Runtime assets do not contain analytics, remote fetches, or stored prayer names',async()=>{
   const js=await read('assets/js/app.js');
   assert.doesNotMatch(js,/innerHTML|document\.write|gtag\(|googletagmanager|facebook\.net|eval\(/);

@@ -47,3 +47,12 @@ test('Library search tolerates Lithuanian accents and Russian yo',()=>{
   assert.equal(searchText('Bukiškis ĄŽUOLAS'),'bukiskis azuolas');
   assert.equal(searchText('Ещё'),'еще');
 });
+test('English Sunday ordinals are grammatical and do not alter the imported source',()=>{
+  for(const [n,suffix] of [[1,'st'],[2,'nd'],[3,'rd'],[11,'th'],[12,'th'],[13,'th'],[19,'th'],[21,'st'],[22,'nd'],[23,'rd']]){
+    const liturgical={ru:`Неделя ${n}-я по Пятидесятнице`,en:`Sunday ${n} after Pentecost`};
+    const normalized=normalizeSchedule(feed([event({liturgical})])).events[0];
+    assert.equal(normalized.subtitle.en,`${n}${suffix} Sunday after Pentecost`);
+    assert.equal(normalized.subtitle.ru,liturgical.ru);
+    assert.equal(liturgical.en,`Sunday ${n} after Pentecost`);
+  }
+});

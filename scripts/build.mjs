@@ -32,6 +32,7 @@ const canonical=path=>origin+base+path;
 const link=(path,label,cls='')=>`<a${cls?` class="${cls}"`:''} href="${e(url(path))}">${label}</a>`;
 const ext=(href,label,cls='')=>safeExternalURL(href)?`<a href="${e(href)}" rel="noopener noreferrer"${cls?` class="${cls}"`:''}>${e(label)} <span aria-hidden="true">↗</span></a>`:'';
 const phone=(t,cls='button')=>`<a class="${cls}" href="tel:${settings.phone}">${e(t.call)} <span>${e(settings.phoneDisplay)}</span></a>`;
+const calendarLink=lang=>{const target=new URL(settings.calendarUrl);target.searchParams.set('hl',lang);return target.href;};
 const image=(cls='church-image',loading='lazy')=>`<img class="${cls}" src="${url('/assets/img/church-1280.webp')}" srcset="${url('/assets/img/church-640.webp')} 640w, ${url('/assets/img/church-1280.webp')} 1280w, ${url('/assets/img/church-1920.webp')} 1920w" sizes="(max-width: 760px) 100vw, 65vw" width="1280" height="720" loading="${loading}" ${loading==='eager'?'fetchpriority="high"':''} decoding="async" alt="PHOTO_ALT">`;
 const sha=value=>createHash('sha256').update(value).digest('hex').slice(0,16);
 const shortTitle=p=>p.url.endsWith('/dokumet-ob-uchastii-vernyh-v-evharistii')?'Об участии верных в Евхаристии':p.title.split(' | ')[0].trim();
@@ -91,7 +92,7 @@ function notes(t){return titleBlock(t,t.notes,t.noteIntro)+`<section class="wrap
 function history(t,l){return titleBlock(t,t.historyHeading,t.historyIntro)+`<section class="wrap history-layout"><figure>${image()}<figcaption>${e(t.name)} · Bukiškis</figcaption></figure><ol class="timeline">${t.timeline.map(([year,title,text])=>`<li><span>${e(year)}</span><div><h2>${e(title)}</h2><p>${e(text)}</p></div></li>`).join('')}</ol></section><section class="wrap prose section-space"><p>${ext('https://orthodoxy.lt/source/laikrastis/rus_2025-01.pdf',t.historicalSource)}</p><p>${link(originals.get(`https://bukiski-hram.org/${l}/history.html`),e(t.archiveOriginal))}</p></section>`;}
 function sacraments(t,l){return titleBlock(t,t.sacraments,t.sacramentsIntro)+`<section class="wrap two-columns sacrament-grid">${t.sacramentItems.map(([h,p],i)=>`<article><span class="feature-number">0${i+1}</span><h2>${e(h)}</h2><p>${e(p)}</p></article>`).join('')}</section><section class="wrap callout">${phone(t)}${link(route(l,'notes'),e(t.notes),'text-link')}</section>`;}
 function support(t,l){return titleBlock(t,t.support,t.supportIntro)+`<section class="wrap two-columns section-space"><article class="bank-details"><dl><dt>${e(t.recipient)}</dt><dd>${e(settings.legalName)}</dd><dt>${e(t.bank)}</dt><dd class="iban">${e(settings.iban)}</dd><dt>${e(t.orgCode)}</dt><dd>${settings.organizationCode}</dd></dl><p class="small muted">${e(t.checked)}: ${settings.reviewedOn} · ${ext('https://bukiski-hram.org/',t.source)}</p></article><article><span class="display-number">1,2 %</span><h2>${e(t.gpm)}</h2><p>${e(t.gpmNote)}</p><p>${ext('https://www.vmi.lt/evmi/paramos-skyrimas','VMI','text-link')}</p>${link(`/${l}/gpm.html`,e(t.archiveOriginal),'text-link')}</article></section>`;}
-function privacy(t){return titleBlock(t,t.privacy,t.privacyIntro)+`<section class="wrap prose section-space">${t.privacyItems.map(([h,p])=>`<h2>${e(h)}</h2><p>${e(p)}</p>`).join('')}</section>`;}
+function privacy(t){return titleBlock(t,t.privacy,t.privacyIntro)+`<section class="wrap prose section-space">${new URL(origin).hostname.endsWith('.github.io')?`<p>${e(t.githubHosting)} ${ext('https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement',t.hostingPolicy)}</p>`:''}${t.privacyItems.map(([h,p])=>`<h2>${e(h)}</h2><p>${e(p)}</p>`).join('')}</section>`;}
 const entryDescription=p=>(p.description || p.blocks.find(b=>b.tag==='p'&&b.text.length>100)?.text || '').slice(0,180);
 function articleList(t,l,news=false){
   let list=records.filter(p=>!/^\/(pl)\/(?:contacts|schedule|history|sacraments|news)/.test(new URL(p.url).pathname));
@@ -104,7 +105,12 @@ function articleBody(p,t){
   for(const ref of sourceLinks.filter(r=>r.from===p.url&&r.label)){
     const document=documents.find(d=>d.source===ref.to);
     const related=pages.find(page=>page.url===ref.to);
-    if(document)references.set(ref.to,document.local?link('/'+document.local,e(ref.label)):ext(ref.to,ref.label));
+    if(document){
+      const sourceLink=document.local?link('/'+document.local,e(ref.label)):ext(ref.to,ref.label);
+      const unavailable=document.local?'':` <span class="small muted">${e(t.documentUnavailable)}</span>`;
+      const alternative=!document.local&&/бланк.*записк|записк.*бланк/i.test(ref.label)?` ${link(route(t===locales.ru?'ru':t===locales.lt?'lt':'en','notes'),e(t.notes))}`:'';
+      references.set(ref.to,sourceLink+unavailable+alternative);
+    }
     else if(related&&!corePaths.has(sourceTarget(related))&&related.url!==p.url)references.set(ref.to,link(sourceTarget(related),e(ref.label)));
   }
   const referenceHTML=references.size?`<aside class="article-references"><h2>${e(t.source)}</h2><ul>${[...references.values()].map(value=>`<li>${value}</li>`).join('')}</ul></aside>`:'';
@@ -134,7 +140,7 @@ for(const asset of assets){
 
 for (const l of settings.locales) for(const page of core){
   const t=locales[l];
-  const bodies={home:()=>home(t,l),schedule:()=>titleBlock(t,t.allServices,t.regular)+`<section class="wrap schedule-page">${scheduleSection(t,l,90)}<div class="actions">${ext(settings.calendarUrl,t.calendar,'button')}${link(`/assets/schedule-${l}.ics`,e(t.calendarDownload),'text-link')}</div><p class="small muted">${e(t.calendarNote)}</p>${phone(t,'text-link phone-link')}</section>`,contacts:()=>contacts(t,l),notes:()=>notes(t),history:()=>history(t,l),sacraments:()=>sacraments(t,l),support:()=>support(t,l),privacy:()=>privacy(t),library:()=>articleList(t,l),news:()=>articleList(t,l,true)};
+  const bodies={home:()=>home(t,l),schedule:()=>titleBlock(t,t.allServices,t.regular)+`<section class="wrap schedule-page">${scheduleSection(t,l,90)}<div class="actions">${ext(calendarLink(l),t.calendar,'button')}${link(`/assets/schedule-${l}.ics`,e(t.calendarDownload),'text-link')}</div><p class="small muted">${e(t.calendarNote)}</p>${phone(t,'text-link phone-link')}</section>`,contacts:()=>contacts(t,l),notes:()=>notes(t),history:()=>history(t,l),sacraments:()=>sacraments(t,l),support:()=>support(t,l),privacy:()=>privacy(t),library:()=>articleList(t,l),news:()=>articleList(t,l,true)};
   frame({lang:l,page,title:page==='home'?t.name:t[page],description:page==='home'?t.heroIntro:(t[page+'Intro']||t[page+'Teaser']||t[page]),body:bodies[page](),path:route(l,page),alternates:settings.locales.map(lang=>({lang,path:route(lang,page)}))});
 }
 // Root is a useful server-rendered RU home with a canonical language route, without JS redirection.
@@ -188,6 +194,6 @@ for(const l of settings.locales){
   const lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Bukiski Parish//Service Schedule//'+l.toUpperCase(),'CALSCALE:GREGORIAN',...schedule.events.flatMap(ev=>['BEGIN:VEVENT',`UID:${ev.id}@bukiski-hram.org`,`DTSTAMP:${utc(schedule.sourceUpdatedAt)}`,`DTSTART:${utc(ev.start)}`,`SUMMARY:${icsEscape(ev.title[l])}`,`LOCATION:${icsEscape(settings.address)}`,`DESCRIPTION:${icsEscape(locales[l].calendarNote)}`,'END:VEVENT']),'END:VCALENDAR'];
   await writeFile(resolve(DIST,`assets/schedule-${l}.ics`),lines.map(fold).join('\r\n')+'\r\n');
 }
-await writeFile(resolve(DIST,'assets/parish.vcf'),`BEGIN:VCARD\r\nVERSION:3.0\r\nFN:${settings.legalName}\r\nORG:${settings.legalName}\r\nTEL;TYPE=WORK,VOICE:${settings.phone}\r\nADR;TYPE=WORK:;;Sodų g. 8;Bukiškis;;LT-14180;Lietuva\r\nURL:${origin}\r\nEND:VCARD\r\n`);
+await writeFile(resolve(DIST,'assets/parish.vcf'),`BEGIN:VCARD\r\nVERSION:3.0\r\nFN:${settings.legalName}\r\nORG:${settings.legalName}\r\nTEL;TYPE=WORK,VOICE:${settings.phone}\r\nADR;TYPE=WORK:;;Sodų g. 8;Bukiškis;;LT-14180;Lietuva\r\nURL:${canonical('/')}\r\nEND:VCARD\r\n`);
 await writeFile(resolve(DIST,'build-info.json'),JSON.stringify({generatedAt:new Date(buildTime).toISOString(),production,basePath:base,sourcePages:pages.length,generatedPages:allRoutes.size,confirmedServices:schedule.events.length,sourceUpdatedAt:schedule.sourceUpdatedAt},null,2));
 console.log(`Built ${allRoutes.size} pages, ${pages.length} source records, ${schedule.events.length} calendar services. Production indexing: ${production}.`);
