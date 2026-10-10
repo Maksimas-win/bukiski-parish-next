@@ -1,0 +1,20 @@
+{
+  "origin": "https://bukiski-hram.org",
+  "basePath": "",
+  "production": false,
+  "reviewedOn": "2026-10-10",
+  "phone": "+37063693506",
+  "phoneDisplay": "+370 636 93506",
+  "address": "Sodų g. 8, Bukiškis, LT-14180, Lietuva",
+  "legalName": "Bukiškio stačiatikių Kristaus Gimimo parapija",
+  "organizationCode": "301004570",
+  "iban": "LT40 7044 0600 0624 4432",
+  "latitude": 54.76091,
+  "longitude": 25.207621,
+  "calendarUrl": "https://calendar.google.com/calendar/u/0/r?cid=f51cbd879e77f29661b68d2d0fd75ee1146a96eb331fb9f9b11d2924ceb9cf53%40group.calendar.google.com",
+  "scheduleSource": "https://bukiski-hram.org/data/services.json",
+  "timezone": "Europe/Vilnius",
+  "scheduleMaxAgeHours": 48,
+  "locales": ["ru", "lt", "en"],
+  "translationReview": { "ru": "editorial-draft", "lt": "native-and-clergy-review-required", "en": "clergy-review-required" }
+}

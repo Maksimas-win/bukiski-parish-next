@@ -1,0 +1,482 @@
+{
+  "ru": {
+    "name": "Храм Рождества Христова",
+    "place": "Букишки · Литва",
+    "denomination": "Православный приход",
+    "home": "Главная",
+    "schedule": "Расписание",
+    "history": "О храме",
+    "sacraments": "Таинства",
+    "news": "Жизнь прихода",
+    "library": "Библиотека",
+    "contacts": "Контакты",
+    "notes": "Подготовить записку",
+    "support": "Помочь приходу",
+    "privacy": "Конфиденциальность",
+    "skip": "Перейти к содержанию",
+    "menu": "Меню",
+    "languages": "Выбрать язык",
+    "access": "Настройки чтения",
+    "large": "Крупный текст",
+    "contrast": "Высокая контрастность",
+    "reset": "Сбросить настройки",
+    "close": "Закрыть",
+    "hero": "Место молитвы.\nДом для души.",
+    "heroIntro": "Храм Рождества Христова в Букишках — приходская община рядом с Вильнюсом. Приходите на богослужение, познакомьтесь с храмом, побудьте в тишине.",
+    "allServices": "Расписание богослужений",
+    "directions": "Как добраться",
+    "photo": "Храм Рождества Христова в Букишках, вид со стороны входа",
+    "next": "Ближайшие богослужения",
+    "timeZone": "Время Вильнюса · Europe/Vilnius",
+    "fromCalendar": "По приходскому календарю",
+    "updated": "Источник обновлён",
+    "checked": "Сведения проверены",
+    "stale": "Сохранённое расписание может быть устаревшим. Перед поездкой проверьте приходской календарь или позвоните.",
+    "empty": "Предстоящие службы с подтверждённым временем пока не опубликованы. Уточните расписание по телефону.",
+    "regular": "Обычно по воскресеньям — Божественная литургия в 08:00. Праздничные службы и изменения уточняйте по календарю.",
+    "calendar": "Приходской календарь",
+    "calendarDownload": "Скачать расписание (.ics)",
+    "calendarNote": "Файл содержит снимок опубликованных событий и не обновляется автоматически.",
+    "call": "Позвонить в приход",
+    "welcome": "Вы здесь впервые?",
+    "welcomeIntro": "Начните с простого. Выберите удобное богослужение или свяжитесь с приходом — мы поможем сориентироваться.",
+    "welcomeSteps": [
+      "Посмотрите расписание и уточните изменения перед поездкой.",
+      "О подготовке к исповеди, Причастию, крещению или венчанию поговорите со священником.",
+      "Если нужна помощь при входе в храм, позвоните заранее."
+    ],
+    "discover": "Приход рядом с вами",
+    "discoverIntro": "Для молитвы, знакомства и добрых дел",
+    "historyTeaser": "Память места, восстановление храма и возвращение приходской жизни.",
+    "notesTeaser": "Подготовьте и распечатайте имена для передачи в храме.",
+    "libraryTeaser": "Сохранённые статьи о вере, богослужении и христианской жизни.",
+    "historyHeading": "Храм, к которому возвращаются",
+    "historyIntro": "История храма в Букишках связана с семьёй Божеряновых, годами запустения и трудом людей, вернувших святыню к жизни.",
+    "timeline": [
+      [
+        "XIX век",
+        "Начало истории",
+        "Основание храма связано с семьёй Божеряновых. Точная дата строительства требует дополнительной архивной проверки."
+      ],
+      [
+        "2002",
+        "Восстановление",
+        "Начались работы по восстановлению храма."
+      ],
+      [
+        "2011",
+        "Возвращение богослужений",
+        "Летом возобновилась богослужебная жизнь."
+      ]
+    ],
+    "historicalSource": "Источник: «Православная Литва», январь 2025, стр. 8",
+    "archiveOriginal": "Сохранённая версия исходного текста",
+    "originalLanguage": "Материал сохранён на языке оригинала. Перевод ещё не подготовлен.",
+    "archiveNotice": "Архивный материал. Даты, исторические утверждения и пастырские рекомендации отражают исходную публикацию; актуальные вопросы уточняйте в приходе.",
+    "source": "Источник",
+    "search": "Поиск по заголовкам и описаниям",
+    "searchPlaceholder": "Например, молитва или Причастие",
+    "allLanguages": "Все языки",
+    "results": "Найдено материалов",
+    "noResults": "Ничего не найдено. Попробуйте другое слово или язык.",
+    "read": "Читать материал",
+    "sacramentsIntro": "Подготовка к таинствам начинается с разговора со священником. Обстоятельства каждого человека важны.",
+    "sacramentItems": [
+      [
+        "Крещение",
+        "Обсудите огласительные беседы, восприемников и дату крещения."
+      ],
+      [
+        "Исповедь и Причастие",
+        "Порядок подготовки и время исповеди уточните у священника."
+      ],
+      [
+        "Венчание",
+        "Заранее согласуйте возможность венчания, подготовку и дату."
+      ],
+      [
+        "Поминовение и пастырская помощь",
+        "По вопросам панихиды, молебна или посещения больного свяжитесь с приходом."
+      ]
+    ],
+    "contactIntro": "Будем рады встрече в Букишках. Перед поездкой уточните время службы и возможность посещения.",
+    "addressLabel": "Адрес храма",
+    "route": "Построить маршрут",
+    "map": "Открыть карту",
+    "mapPrivacy": "Карта откроется на внешнем сайте только после нажатия.",
+    "transport": "Общественный транспорт",
+    "transportIntro": "Проверьте маршруты и время отправления у перевозчика: расписание может меняться.",
+    "entryAccess": "Доступность посещения",
+    "entryAccessText": "На фотографии у входа видны ступени. Наличие пандуса и доступного входа не подтверждено. Если нужна помощь, позвоните заранее.",
+    "saveContact": "Сохранить контакт (.vcf)",
+    "noteIntro": "Подготовьте записку дома и передайте её в храме. Имена обрабатываются только в этой вкладке: сайт их не отправляет и не сохраняет.",
+    "noteType": "Вид записки",
+    "living": "О здравии",
+    "departed": "Об упокоении",
+    "names": "Имена, каждое с новой строки",
+    "namesHint": "До 20 имён. Не указывайте фамилии, диагнозы, адреса или телефоны. Порядок поминовения уточняйте в приходе.",
+    "notePrepare": "Подготовить к печати",
+    "notePrint": "Распечатать записку",
+    "noteDownload": "Скачать текст",
+    "noteClear": "Очистить имена",
+    "noteError": "Введите от 1 до 20 имён, каждое до 60 символов. Используйте буквы, пробелы, дефис или апостроф.",
+    "noteReady": "Записка подготовлена. Она не отправлена в приход.",
+    "noteCleared": "Имена очищены.",
+    "noteLocal": "Подготовка на вашем устройстве",
+    "noteNoJs": "Для подготовки записки включите JavaScript или напишите имена на бумаге и передайте их в храме.",
+    "supportIntro": "Ваша помощь поддерживает повседневную жизнь храма. Реквизиты взяты с приходского сайта; перед переводом проверьте получателя в банке.",
+    "recipient": "Получатель",
+    "bank": "Банковский счёт",
+    "orgCode": "Код организации",
+    "gpm": "Информация о 1,2 % GPM",
+    "gpmNote": "Условия и сроки проверяйте на сайте VMI. Исходный приходской гид сохранён отдельно.",
+    "privacyIntro": "Сайт не использует аналитику, рекламные пиксели и встраиваемые карты. Все основные материалы доступны без регистрации.",
+    "privacyItems": [
+      [
+        "Настройки чтения",
+        "Размер текста и контрастность сохраняются в localStorage вашего браузера. Кнопка сброса удаляет эти настройки. Cookies сайта не устанавливаются."
+      ],
+      [
+        "Записки",
+        "Имена остаются в памяти вкладки. Очистите форму после использования. Скачанный файл и распечатка остаются под вашим контролем. Передача записок через интернет в этой версии не включена."
+      ],
+      [
+        "Внешние ссылки",
+        "Карты, календарь, транспортные сайты и банк могут обрабатывать данные по своим правилам. Переход выполняется только по вашему нажатию."
+      ],
+      [
+        "Технические данные",
+        "Хостинг может получать IP-адрес, время запроса и сведения о браузере для доставки страниц и защиты сервиса. Конкретный провайдер и сроки хранения должны быть указаны приходом перед публичным запуском."
+      ],
+      [
+        "Связь по вопросам данных",
+        "Предполагаемый оператор — Bukiškio stačiatikių Kristaus Gimimo parapija. До запуска приход должен подтвердить оператора, правовые основания и канал обращений. Сейчас связаться с приходом можно по телефону +370 636 93506."
+      ]
+    ],
+    "newsIntro": "Материалы и объявления из приходского архива. Текущие изменения в богослужениях смотрите в расписании.",
+    "footerLine": "Рады каждому, кто ищет путь к храму.",
+    "rights": "Тексты и фотографии — приход и указанные авторы.",
+    "notFound": "Страница не найдена",
+    "notFoundText": "Найдите материал в библиотеке или вернитесь на главную."
+  },
+  "lt": {
+    "name": "Kristaus Gimimo cerkvė",
+    "place": "Bukiškis · Lietuva",
+    "denomination": "Stačiatikių parapija",
+    "home": "Pradžia",
+    "schedule": "Pamaldos",
+    "history": "Apie cerkvę",
+    "sacraments": "Sakramentai",
+    "news": "Parapijos gyvenimas",
+    "library": "Skaitiniai",
+    "contacts": "Kontaktai",
+    "notes": "Parengti maldos raštelį",
+    "support": "Parama parapijai",
+    "privacy": "Privatumas",
+    "skip": "Pereiti prie turinio",
+    "menu": "Meniu",
+    "languages": "Pasirinkti kalbą",
+    "access": "Skaitymo nuostatos",
+    "large": "Didelis tekstas",
+    "contrast": "Didelis kontrastas",
+    "reset": "Atkurti nuostatas",
+    "close": "Uždaryti",
+    "hero": "Maldos vieta.\nNamai sielai.",
+    "heroIntro": "Kristaus Gimimo cerkvė Bukiškyje — parapijos bendruomenė šalia Vilniaus. Kviečiame į pamaldas, susipažinti su cerkve ir pabūti tyloje.",
+    "allServices": "Pamaldų tvarkaraštis",
+    "directions": "Kaip atvykti",
+    "photo": "Kristaus Gimimo cerkvė Bukiškyje, vaizdas nuo įėjimo pusės",
+    "next": "Artimiausios pamaldos",
+    "timeZone": "Vilniaus laiku · Europe/Vilnius",
+    "fromCalendar": "Pagal parapijos kalendorių",
+    "updated": "Šaltinis atnaujintas",
+    "checked": "Informacija patikrinta",
+    "stale": "Išsaugotas tvarkaraštis gali būti pasenęs. Prieš vykdami patikrinkite parapijos kalendorių arba paskambinkite.",
+    "empty": "Būsimos pamaldos su patvirtintu laiku dar nepaskelbtos. Dėl tvarkaraščio skambinkite parapijai.",
+    "regular": "Įprastai sekmadieniais 08:00 aukojama Dieviškoji liturgija. Švenčių pamaldas ir pakeitimus tikrinkite kalendoriuje.",
+    "calendar": "Parapijos kalendorius",
+    "calendarDownload": "Atsisiųsti tvarkaraštį (.ics)",
+    "calendarNote": "Faile pateikiama paskelbtų įvykių kopija; ji automatiškai neatnaujinama.",
+    "call": "Skambinti parapijai",
+    "welcome": "Lankotės pirmą kartą?",
+    "welcomeIntro": "Pradėkite paprastai. Pasirinkite pamaldas arba susisiekite su parapija — padėsime pasiruošti apsilankymui.",
+    "welcomeSteps": [
+      "Peržiūrėkite tvarkaraštį ir prieš vykdami pasitikrinkite pakeitimus.",
+      "Apie pasirengimą išpažinčiai, Komunijai, krikštui ar santuokai pasikalbėkite su kunigu.",
+      "Jei reikia pagalbos įeinant į cerkvę, paskambinkite iš anksto."
+    ],
+    "discover": "Parapija šalia jūsų",
+    "discoverIntro": "Maldai, pažinčiai ir geriems darbams",
+    "historyTeaser": "Vietos atmintis, cerkvės atkūrimas ir parapijos gyvenimo atgimimas.",
+    "notesTeaser": "Parenkite ir atsispausdinkite vardus, kuriuos perduosite cerkvėje.",
+    "libraryTeaser": "Išsaugoti straipsniai apie tikėjimą, pamaldas ir krikščionišką gyvenimą.",
+    "historyHeading": "Cerkvė, į kurią sugrįžtama",
+    "historyIntro": "Bukiškio cerkvės istorija susijusi su Božerianovų šeima, apleidimo metais ir žmonėmis, sugrąžinusiais jai gyvenimą.",
+    "timeline": [
+      [
+        "XIX a.",
+        "Istorijos pradžia",
+        "Cerkvės įkūrimas siejamas su Božerianovų šeima. Tiksli statybos data dar tikslintina archyviniuose šaltiniuose."
+      ],
+      [
+        "2002",
+        "Atkūrimas",
+        "Prasidėjo cerkvės atkūrimo darbai."
+      ],
+      [
+        "2011",
+        "Pamaldų sugrįžimas",
+        "Vasarą cerkvėje vėl pradėtos pamaldos."
+      ]
+    ],
+    "historicalSource": "Šaltinis: „Православная Литва“, 2025 m. sausis, p. 8",
+    "archiveOriginal": "Išsaugotas originalus tekstas",
+    "originalLanguage": "Tekstas išsaugotas originalo kalba. Vertimas dar neparengtas.",
+    "archiveNotice": "Archyvinė medžiaga. Datos, istoriniai teiginiai ir pastoraciniai patarimai atitinka pirminę publikaciją; aktualią informaciją tikrinkite parapijoje.",
+    "source": "Šaltinis",
+    "search": "Ieškoti antraštėse ir aprašymuose",
+    "searchPlaceholder": "Pavyzdžiui, malda arba Komunija",
+    "allLanguages": "Visos kalbos",
+    "results": "Rasta tekstų",
+    "noResults": "Nieko nerasta. Pabandykite kitą žodį arba kalbą.",
+    "read": "Skaityti tekstą",
+    "sacramentsIntro": "Pasirengimas sakramentams prasideda pokalbiu su kunigu. Svarbios kiekvieno žmogaus aplinkybės.",
+    "sacramentItems": [
+      [
+        "Krikštas",
+        "Aptarkite katechezės pokalbius, krikštatėvius ir krikšto datą."
+      ],
+      [
+        "Išpažintis ir Komunija",
+        "Pasirengimą ir išpažinties laiką aptarkite su kunigu."
+      ],
+      [
+        "Santuokos sakramentas",
+        "Iš anksto suderinkite galimybę tuoktis cerkvėje, pasirengimą ir datą."
+      ],
+      [
+        "Malda ir pastoracinė pagalba",
+        "Dėl pamaldų už mirusiuosius, kitų maldos poreikių ar ligonio aplankymo susisiekite su parapija."
+      ]
+    ],
+    "contactIntro": "Laukiame jūsų Bukiškyje. Prieš vykdami pasitikrinkite pamaldų laiką ir galimybę apsilankyti.",
+    "addressLabel": "Cerkvės adresas",
+    "route": "Planuoti maršrutą",
+    "map": "Atverti žemėlapį",
+    "mapPrivacy": "Žemėlapis išorinėje svetainėje atsidarys tik paspaudus nuorodą.",
+    "transport": "Viešasis transportas",
+    "transportIntro": "Maršrutus ir išvykimo laiką tikrinkite vežėjo svetainėje: tvarkaraščiai gali keistis.",
+    "entryAccess": "Apsilankymo prieinamumas",
+    "entryAccessText": "Nuotraukoje prie įėjimo matyti laipteliai. Rampos ar pritaikyto įėjimo buvimas nepatvirtintas. Jei reikia pagalbos, paskambinkite iš anksto.",
+    "saveContact": "Išsaugoti kontaktą (.vcf)",
+    "noteIntro": "Parenkite maldos raštelį namuose ir perduokite jį cerkvėje. Vardai tvarkomi tik šiame skirtuke: svetainė jų nesiunčia ir neišsaugo.",
+    "noteType": "Raštelio rūšis",
+    "living": "Už gyvuosius",
+    "departed": "Už mirusiuosius",
+    "names": "Vardai, kiekvienas naujoje eilutėje",
+    "namesHint": "Iki 20 vardų. Nenurodykite pavardžių, diagnozių, adresų ar telefonų. Minėjimo tvarką pasitikslinkite parapijoje.",
+    "notePrepare": "Parengti spausdinti",
+    "notePrint": "Spausdinti raštelį",
+    "noteDownload": "Atsisiųsti tekstą",
+    "noteClear": "Išvalyti vardus",
+    "noteError": "Įveskite nuo 1 iki 20 vardų, iki 60 simbolių kiekviename. Naudokite raides, tarpus, brūkšnelį ar apostrofą.",
+    "noteReady": "Raštelis parengtas. Jis neišsiųstas parapijai.",
+    "noteCleared": "Vardai išvalyti.",
+    "noteLocal": "Parengiama jūsų įrenginyje",
+    "noteNoJs": "Norėdami parengti raštelį, įjunkite JavaScript arba užrašykite vardus ant popieriaus ir perduokite cerkvėje.",
+    "supportIntro": "Jūsų parama padeda kasdieniam cerkvės gyvenimui. Rekvizitai pateikti pagal parapijos svetainę; prieš pervesdami patikrinkite gavėją banke.",
+    "recipient": "Gavėjas",
+    "bank": "Banko sąskaita",
+    "orgCode": "Organizacijos kodas",
+    "gpm": "Informacija apie 1,2 % GPM",
+    "gpmNote": "Sąlygas ir terminus tikrinkite VMI svetainėje. Ankstesnis parapijos gidas išsaugotas atskirai.",
+    "privacyIntro": "Svetainėje nenaudojama analitika, reklamos pikseliai ar įterptieji žemėlapiai. Pagrindinis turinys prieinamas be registracijos.",
+    "privacyItems": [
+      [
+        "Skaitymo nuostatos",
+        "Teksto dydis ir kontrastas saugomi jūsų naršyklės localStorage. Atkūrimo mygtukas šias nuostatas pašalina. Svetainė slapukų nenustato."
+      ],
+      [
+        "Maldos rašteliai",
+        "Vardai lieka skirtuko atmintyje. Baigę išvalykite formą. Atsisiųstas failas ir spaudinys lieka jūsų žinioje. Raštelių siuntimas internetu šioje versijoje neįjungtas."
+      ],
+      [
+        "Išorinės nuorodos",
+        "Žemėlapių, kalendoriaus, transporto ir bankų svetainės gali tvarkyti duomenis pagal savo taisykles. Į jas pereinama tik jums paspaudus."
+      ],
+      [
+        "Techniniai duomenys",
+        "Prieglobos teikėjas gali gauti IP adresą, užklausos laiką ir naršyklės informaciją puslapiams pateikti bei paslaugai apsaugoti. Prieš viešą paleidimą parapija turi nurodyti konkretų teikėją ir saugojimo terminus."
+      ],
+      [
+        "Klausimai apie duomenis",
+        "Numatomas valdytojas — Bukiškio stačiatikių Kristaus Gimimo parapija. Prieš paleidimą parapija turi patvirtinti valdytoją, teisinius pagrindus ir kreipimosi kanalą. Šiuo metu su parapija galima susisiekti telefonu +370 636 93506."
+      ]
+    ],
+    "newsIntro": "Tekstai ir pranešimai iš parapijos archyvo. Aktualius pamaldų pakeitimus rasite tvarkaraštyje.",
+    "footerLine": "Laukiame kiekvieno, ieškančio kelio į cerkvę.",
+    "rights": "Tekstai ir nuotraukos — parapija ir nurodyti autoriai.",
+    "notFound": "Puslapis nerastas",
+    "notFoundText": "Raskite tekstą skaitinių skyriuje arba grįžkite į pradžią."
+  },
+  "en": {
+    "name": "Church of the Nativity of Christ",
+    "place": "Bukiškis · Lithuania",
+    "denomination": "Orthodox parish",
+    "home": "Home",
+    "schedule": "Services",
+    "history": "Our church",
+    "sacraments": "Sacraments",
+    "news": "Parish life",
+    "library": "Reading",
+    "contacts": "Contact",
+    "notes": "Prepare a prayer request",
+    "support": "Support the parish",
+    "privacy": "Privacy",
+    "skip": "Skip to content",
+    "menu": "Menu",
+    "languages": "Choose a language",
+    "access": "Reading settings",
+    "large": "Larger text",
+    "contrast": "High contrast",
+    "reset": "Reset settings",
+    "close": "Close",
+    "hero": "A place of prayer.\nA home for the soul.",
+    "heroIntro": "The Church of the Nativity of Christ in Bukiškis is a parish community near Vilnius. Join us in worship, discover the church and find a moment of stillness.",
+    "allServices": "Service schedule",
+    "directions": "Getting here",
+    "photo": "The Church of the Nativity of Christ in Bukiškis, viewed from the entrance side",
+    "next": "Upcoming services",
+    "timeZone": "Vilnius time · Europe/Vilnius",
+    "fromCalendar": "From the parish calendar",
+    "updated": "Source updated",
+    "checked": "Information checked",
+    "stale": "This saved schedule may be out of date. Check the parish calendar or call before travelling.",
+    "empty": "No upcoming services with a confirmed time are currently published. Please call the parish.",
+    "regular": "Divine Liturgy is usually celebrated on Sundays at 08:00. Check the calendar for feast-day services and changes.",
+    "calendar": "Parish calendar",
+    "calendarDownload": "Download schedule (.ics)",
+    "calendarNote": "The file is a snapshot of published events and does not update automatically.",
+    "call": "Call the parish",
+    "welcome": "Visiting for the first time?",
+    "welcomeIntro": "Start simply. Choose a service or contact the parish for help planning your visit.",
+    "welcomeSteps": [
+      "Check the schedule and any changes before travelling.",
+      "Speak to the priest about preparing for Confession, Communion, Baptism or Marriage.",
+      "If you need assistance entering the church, please call ahead."
+    ],
+    "discover": "A parish close to you",
+    "discoverIntro": "For prayer, discovery and acts of kindness",
+    "historyTeaser": "The memory of this place, its restoration and the return of parish life.",
+    "notesTeaser": "Prepare and print names to bring to the church.",
+    "libraryTeaser": "Preserved articles about faith, worship and Christian life.",
+    "historyHeading": "A church to come home to",
+    "historyIntro": "The history of the church in Bukiškis is linked to the Bozheryanov family, years of neglect and the people who brought it back to life.",
+    "timeline": [
+      [
+        "19th century",
+        "The early years",
+        "The founding of the church is associated with the Bozheryanov family. The exact construction date requires further archival research."
+      ],
+      [
+        "2002",
+        "Restoration",
+        "Work began to restore the church."
+      ],
+      [
+        "2011",
+        "Worship returns",
+        "Services resumed in the summer."
+      ]
+    ],
+    "historicalSource": "Source: Pravoslavnaya Litva, January 2025, p. 8",
+    "archiveOriginal": "Preserved original text",
+    "originalLanguage": "This material is preserved in its original language. A translation is not yet available.",
+    "archiveNotice": "Archive material. Dates, historical claims and pastoral guidance reflect the original publication; contact the parish for current advice.",
+    "source": "Source",
+    "search": "Search titles and descriptions",
+    "searchPlaceholder": "For example, prayer or Communion",
+    "allLanguages": "All languages",
+    "results": "Results",
+    "noResults": "No results. Try another word or language.",
+    "read": "Read article",
+    "sacramentsIntro": "Preparation for the sacraments begins with a conversation with the priest. Each person’s circumstances matter.",
+    "sacramentItems": [
+      [
+        "Baptism",
+        "Discuss preparation, godparents and the date of Baptism."
+      ],
+      [
+        "Confession and Communion",
+        "Ask the priest about preparation and the time for Confession."
+      ],
+      [
+        "Marriage",
+        "Discuss eligibility, preparation and the wedding date in advance."
+      ],
+      [
+        "Commemoration and pastoral care",
+        "Contact the parish about memorial services, other prayer needs or a visit to someone who is ill."
+      ]
+    ],
+    "contactIntro": "We look forward to welcoming you in Bukiškis. Please confirm service times and visiting arrangements before travelling.",
+    "addressLabel": "Church address",
+    "route": "Plan your route",
+    "map": "Open map",
+    "mapPrivacy": "The map opens on an external website only when you follow the link.",
+    "transport": "Public transport",
+    "transportIntro": "Check routes and departure times with the transport operator, as schedules may change.",
+    "entryAccess": "Access to the church",
+    "entryAccessText": "The entrance photograph shows steps. A ramp or step-free entrance has not been confirmed. Please call ahead if you need assistance.",
+    "saveContact": "Save contact (.vcf)",
+    "noteIntro": "Prepare a prayer request at home and bring it to the church. Names are processed only in this tab; the website does not send or save them.",
+    "noteType": "Prayer request type",
+    "living": "For the living",
+    "departed": "For the departed",
+    "names": "Names, one per line",
+    "namesHint": "Up to 20 names. Do not include surnames, diagnoses, addresses or phone numbers. Ask the parish about commemoration practice.",
+    "notePrepare": "Prepare for printing",
+    "notePrint": "Print prayer request",
+    "noteDownload": "Download text",
+    "noteClear": "Clear names",
+    "noteError": "Enter 1 to 20 names, up to 60 characters each. Use letters, spaces, hyphens or apostrophes.",
+    "noteReady": "Your prayer request is ready. It has not been sent to the parish.",
+    "noteCleared": "Names cleared.",
+    "noteLocal": "Prepared on your device",
+    "noteNoJs": "Enable JavaScript to prepare a request, or write the names on paper and bring them to the church.",
+    "supportIntro": "Your support helps sustain the daily life of the church. These details come from the parish website; verify the recipient with your bank before transferring.",
+    "recipient": "Recipient",
+    "bank": "Bank account",
+    "orgCode": "Organisation code",
+    "gpm": "Information about 1.2% GPM",
+    "gpmNote": "Check the conditions and deadlines with VMI. The original parish guide is preserved separately.",
+    "privacyIntro": "This website uses no analytics, advertising pixels or embedded maps. Its main content is available without registration.",
+    "privacyItems": [
+      [
+        "Reading settings",
+        "Text size and contrast preferences are saved in your browser’s localStorage. The reset button removes them. The website sets no cookies."
+      ],
+      [
+        "Prayer requests",
+        "Names remain in tab memory. Clear the form after use. Downloaded files and printouts remain under your control. Online submission is not enabled in this version."
+      ],
+      [
+        "External links",
+        "Map, calendar, transport and banking websites may process data under their own policies. You leave this site only when you follow a link."
+      ],
+      [
+        "Technical data",
+        "The hosting provider may receive your IP address, request time and browser information to deliver pages and protect the service. The parish must identify the provider and retention periods before public launch."
+      ],
+      [
+        "Data enquiries",
+        "The intended controller is Bukiškio stačiatikių Kristaus Gimimo parapija. Before launch, the parish must confirm the controller, legal bases and contact channel. You can currently contact the parish on +370 636 93506."
+      ]
+    ],
+    "newsIntro": "Articles and announcements from the parish archive. See the service schedule for current changes.",
+    "footerLine": "Welcoming everyone seeking a path to the church.",
+    "rights": "Texts and photographs belong to the parish and credited authors.",
+    "notFound": "Page not found",
+    "notFoundText": "Find the article in the reading section or return home."
+  }
+}

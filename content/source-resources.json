@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://bukiski-hram.net/robots.txt",
+    "status": 200,
+    "finalUrl": "https://bukiski-hram.net/robots.txt",
+    "type": "text/plain; charset=utf-8"
+  },
+  {
+    "url": "https://bukiski-hram.net/sitemap.xml",
+    "status": 200,
+    "finalUrl": "https://bukiski-hram.net/sitemap.xml",
+    "type": "application/xml"
+  },
+  {
+    "url": "https://bukiski-hram.org/robots.txt",
+    "status": 200,
+    "finalUrl": "https://bukiski-hram.org/robots.txt",
+    "type": "text/plain"
+  },
+  {
+    "url": "https://bukiski-hram.org/sitemap.xml",
+    "status": 200,
+    "finalUrl": "https://bukiski-hram.org/sitemap.xml",
+    "type": "application/xml"
+  },
+  {
+    "url": "https://bukiski-hram.org/sitemap-en.xml",
+    "status": 200,
+    "finalUrl": "https://bukiski-hram.org/sitemap-en.xml",
+    "type": "application/xml"
+  },
+  {
+    "url": "https://bukiski-hram.org/sitemap-gpm.xml",
+    "status": 200,
+    "finalUrl": "https://bukiski-hram.org/sitemap-gpm.xml",
+    "type": "application/xml"
+  },
+  {
+    "url": "https://bukiski-hram.org/sitemap-lt.xml",
+    "status": 200,
+    "finalUrl": "https://bukiski-hram.org/sitemap-lt.xml",
+    "type": "application/xml"
+  },
+  {
+    "url": "https://bukiski-hram.org/sitemap-pl.xml",
+    "status": 200,
+    "finalUrl": "https://bukiski-hram.org/sitemap-pl.xml",
+    "type": "application/xml"
+  },
+  {
+    "url": "https://bukiski-hram.org/sitemap-ru.xml",
+    "status": 200,
+    "finalUrl": "https://bukiski-hram.org/sitemap-ru.xml",
+    "type": "application/xml"
+  }
+]

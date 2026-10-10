@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="{{csp}}">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <meta name="robots" content="{{robots}}">
+  <meta name="theme-color" content="#59262e">
+  <link rel="canonical" href="{{canonical}}">
+  {{alternates}}
+  <meta property="og:type" content="{{ogType}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:locale" content="{{ogLocale}}">
+  <meta property="og:site_name" content="{{siteName}}">
+  <meta property="og:image" content="{{ogImage}}">
+  <meta property="og:image:alt" content="{{photoAlt}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{{base}}/assets/img/cross.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="{{base}}/assets/css/site.css">
+  <script src="{{base}}/assets/js/app.js" type="module"></script>
+</head>
+<body data-locale="{{uiLocale}}" data-root="{{base}}/" data-page="{{page}}">
+  <a href="#main" class="skip-link">{{skip}}</a>
+  {{header}}
+  <main id="main" tabindex="-1">{{body}}</main>
+  {{footer}}
+  {{accessibility}}
+</body>
+</html>
