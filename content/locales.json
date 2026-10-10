@@ -160,7 +160,14 @@
     "notFoundText": "Найдите материал в библиотеке или вернитесь на главную.",
     "githubHosting": "Эта тестовая версия размещена на GitHub Pages. GitHub обрабатывает технические данные посещений согласно своей политике конфиденциальности.",
     "hostingPolicy": "Политика конфиденциальности GitHub",
-    "documentUnavailable": "Копия этого документа недоступна. Сохранена ссылка на источник."
+    "documentUnavailable": "Копия этого документа недоступна. Сохранена ссылка на источник.",
+    "documentDownload": "Скачать документ",
+    "documentIntro": "Оригинальный документ для чтения или печати.",
+    "documentLoading": "Подготавливаем файл…",
+    "documentReady": "Файл готов. Проверьте загрузки браузера.",
+    "documentError": "Не удалось скачать файл. Повторите попытку или откройте страницу документа в новой вкладке.",
+    "documentNoJs": "Для скачивания документа включите JavaScript в браузере и обновите страницу.",
+    "documentBack": "Вернуться в библиотеку"
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -323,7 +330,14 @@
     "notFoundText": "Raskite tekstą skaitinių skyriuje arba grįžkite į pradžią.",
     "githubHosting": "Ši bandomoji svetainės versija talpinama GitHub Pages. GitHub tvarko techninius apsilankymų duomenis pagal savo privatumo politiką.",
     "hostingPolicy": "GitHub privatumo politika",
-    "documentUnavailable": "Šio dokumento kopijos nėra. Išsaugota nuoroda į šaltinį."
+    "documentUnavailable": "Šio dokumento kopijos nėra. Išsaugota nuoroda į šaltinį.",
+    "documentDownload": "Atsisiųsti dokumentą",
+    "documentIntro": "Originalus dokumentas skaityti arba spausdinti.",
+    "documentLoading": "Failas ruošiamas…",
+    "documentReady": "Failas paruoštas. Patikrinkite naršyklės atsisiuntimus.",
+    "documentError": "Nepavyko atsisiųsti failo. Bandykite dar kartą arba atverkite dokumento puslapį naujame skirtuke.",
+    "documentNoJs": "Norėdami atsisiųsti dokumentą, naršyklėje įjunkite JavaScript ir atnaujinkite puslapį.",
+    "documentBack": "Grįžti į biblioteką"
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -486,6 +500,13 @@
     "notFoundText": "Find the article in the reading section or return home.",
     "githubHosting": "This preview is hosted on GitHub Pages. GitHub processes technical visit data under its privacy statement.",
     "hostingPolicy": "GitHub privacy statement",
-    "documentUnavailable": "A copy of this document is unavailable. The source link has been preserved."
+    "documentUnavailable": "A copy of this document is unavailable. The source link has been preserved.",
+    "documentDownload": "Download document",
+    "documentIntro": "The original document, ready to read or print.",
+    "documentLoading": "Preparing your file…",
+    "documentReady": "Your file is ready. Check your browser’s downloads.",
+    "documentError": "The file could not be downloaded. Try again or open the document page in a new tab.",
+    "documentNoJs": "To download this document, enable JavaScript in your browser and reload the page.",
+    "documentBack": "Back to the library"
   }
 }

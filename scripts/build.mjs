@@ -3,6 +3,7 @@ import { resolve, dirname, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { escapeHTML as e, normalizeSchedule, upcomingEvents, isStale, safeExternalURL } from '../assets/js/domain.js';
+import { documentPath, decodeDocument } from '../assets/js/document-data.js';
 
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const DIST=resolve(ROOT,'dist');
@@ -33,6 +34,7 @@ const link=(path,label,cls='')=>`<a${cls?` class="${cls}"`:''} href="${e(url(pat
 const ext=(href,label,cls='')=>safeExternalURL(href)?`<a href="${e(href)}" rel="noopener noreferrer"${cls?` class="${cls}"`:''}>${e(label)} <span aria-hidden="true">↗</span></a>`:'';
 const phone=(t,cls='button')=>`<a class="${cls}" href="tel:${settings.phone}">${e(t.call)} <span>${e(settings.phoneDisplay)}</span></a>`;
 const calendarLink=lang=>{const target=new URL(settings.calendarUrl);target.searchParams.set('hl',lang);return target.href;};
+const documentRegion=t=>`data-document-region data-document-loading="${e(t.documentLoading)}" data-document-ready="${e(t.documentReady)}" data-document-error="${e(t.documentError)}"`;
 const image=(cls='church-image',loading='lazy')=>`<img class="${cls}" src="${url('/assets/img/church-1280.webp')}" srcset="${url('/assets/img/church-640.webp')} 640w, ${url('/assets/img/church-1280.webp')} 1280w, ${url('/assets/img/church-1920.webp')} 1920w" sizes="(max-width: 760px) 100vw, 65vw" width="1280" height="720" loading="${loading}" ${loading==='eager'?'fetchpriority="high"':''} decoding="async" alt="PHOTO_ALT">`;
 const sha=value=>createHash('sha256').update(value).digest('hex').slice(0,16);
 const shortTitle=p=>p.url.endsWith('/dokumet-ob-uchastii-vernyh-v-evharistii')?'Об участии верных в Евхаристии':p.title.split(' | ')[0].trim();
@@ -56,14 +58,14 @@ const allRoutes=new Map();
 const redirects=[];
 const inventory=[];
 
-function frame({lang='ru',uiLocale=lang,page='article',title,description,body,path,canonicalPath=path,alternates=[],noindex=false,article=false}) {
+function frame({lang='ru',uiLocale=lang,page='article',title,description,body,path,canonicalPath=path,alternates=[],noindex=false,noFollow=false,article=false}) {
   const t=locales[uiLocale] || locales.en;
   const l=locales[uiLocale]?uiLocale:'en';
   const languageTargets=alternates.length ? alternates : settings.locales.map(code=>({lang:code,path:route(code,'library')}));
   const header=`<header class="site-header" lang="${l}"><div class="utility"><div class="wrap utility-inner"><span>${e(t.denomination)} · ${e(t.place)}</span><div class="utility-actions"><button class="reading-button" type="button" data-access-open hidden aria-label="${e(t.access)}" aria-haspopup="dialog">Aa <span>${e(t.access)}</span></button><nav aria-label="${e(t.languages)}" class="languages">${languageTargets.map(a=>`<a href="${url(a.path)}" lang="${a.lang}" hreflang="${a.lang}"${a.lang===lang?' aria-current="true"':''}>${a.lang.toUpperCase()}</a>`).join('')}</nav></div></div></div><div class="wrap main-header">${link(route(l,'home'),`<img src="${url('/assets/img/cross.svg')}" alt="" width="33" height="44"><span>${e(t.name)}<small>${e(t.place)}</small></span>`,'brand')}<button type="button" class="menu-toggle" data-menu-toggle hidden aria-expanded="false" aria-controls="main-navigation">${e(t.menu)} <span aria-hidden="true">☰</span></button><nav id="main-navigation" class="main-nav" aria-label="${e(t.menu)}">${navigation(l,t,page)}</nav></div></header>`;
   const footer=`<footer class="site-footer" lang="${l}"><div class="wrap footer-grid"><div><p class="eyebrow">${e(t.place)}</p><h2>${e(t.name)}</h2><p>${e(t.footerLine)}</p></div><div><h3>${e(t.contacts)}</h3><a href="tel:${settings.phone}">${settings.phoneDisplay}</a><p>${e(settings.address)}</p>${link(route(l,'contacts'),e(t.directions)+' ↗')}</div><nav aria-label="${e(t.menu)}">${['schedule','notes','support','news','privacy'].map(p=>link(route(l,p),e(t[p]))).join('')}</nav></div><div class="wrap footer-bottom"><small>© ${new Date(buildTime).getUTCFullYear()} ${e(settings.legalName)}. ${e(t.rights)}</small>${link(route(l,'library'),e(t.library))}</div></footer>`;
   const accessibility=`<dialog lang="${l}" id="reading-dialog" aria-labelledby="reading-title"><div class="dialog-heading"><h2 id="reading-title">${e(t.access)}</h2><button type="button" data-access-close aria-label="${e(t.close)}">×</button></div><label class="setting"><input type="checkbox" data-large-text> ${e(t.large)}</label><label class="setting"><input type="checkbox" data-high-contrast> ${e(t.contrast)}</label><button type="button" class="button" data-reset-settings>${e(t.reset)}</button></dialog>`;
-  const vars={lang,uiLocale:l,page,title:e(title===t.name?`${t.name} · ${t.place}`:`${title} | ${t.name}`),siteName:e(t.name),description:e(description || title),csp:e(csp),robots:production&&!noindex?'index,follow':'noindex,follow',canonical:e(canonical(canonicalPath)),base,ogType:article?'article':'website',ogLocale:{ru:'ru_RU',lt:'lt_LT',en:'en_GB',pl:'pl_PL',de:'de_DE',uk:'uk_UA'}[lang]||'en_GB',ogImage:e(canonical('/assets/img/church-1280.webp')),photoAlt:e(t.photo),skip:e(t.skip),alternates:alternates.map(a=>`<link rel="alternate" hreflang="${a.lang}" href="${e(canonical(a.path))}">`).join('\n  ')+(alternates.length?`\n  <link rel="alternate" hreflang="x-default" href="${e(canonical(alternates[0].path))}">`:''),header,footer,accessibility,body:body.replaceAll('PHOTO_ALT',e(t.photo))};
+  const vars={lang,uiLocale:l,page,title:e(title===t.name?`${t.name} · ${t.place}`:`${title} | ${t.name}`),siteName:e(t.name),description:e(description || title),csp:e(csp),robots:noFollow?'noindex,nofollow':production&&!noindex?'index,follow':'noindex,follow',canonical:e(canonical(canonicalPath)),base,ogType:article?'article':'website',ogLocale:{ru:'ru_RU',lt:'lt_LT',en:'en_GB',pl:'pl_PL',de:'de_DE',uk:'uk_UA'}[lang]||'en_GB',ogImage:e(canonical('/assets/img/church-1280.webp')),photoAlt:e(t.photo),skip:e(t.skip),alternates:alternates.map(a=>`<link rel="alternate" hreflang="${a.lang}" href="${e(canonical(a.path))}">`).join('\n  ')+(alternates.length?`\n  <link rel="alternate" hreflang="x-default" href="${e(canonical(alternates[0].path))}">`:''),header,footer,accessibility,body:body.replaceAll('PHOTO_ALT',e(t.photo))};
   const html=template.replace(/\{\{(\w+)\}\}/g,(_,key)=>vars[key]??'');
   if(allRoutes.has(path))throw new Error(`Route collision: ${path}`);
   allRoutes.set(path,{html,noindex,canonicalPath,lang});
@@ -100,20 +102,21 @@ function articleList(t,l,news=false){
   return titleBlock(t,news?t.news:t.library,news?t.newsIntro:t.libraryTeaser)+`<section class="wrap library section-space">${news?`<p>${link(originals.get(`https://bukiski-hram.org/${l}/news.html`),e(t.archiveOriginal))}</p>`:''}<div class="search-controls" data-search-controls hidden><div><label for="library-query">${e(t.search)}</label><input id="library-query" type="search" placeholder="${e(t.searchPlaceholder)}" maxlength="100"></div><div><label for="library-language">${e(t.languages)}</label><select id="library-language"><option value="all">${e(t.allLanguages)}</option>${[['ru','Русский'],['lt','Lietuvių'],['en','English'],['pl','Polski'],['de','Deutsch'],['uk','Українська']].map(([v,label])=>`<option value="${v}">${label}</option>`).join('')}</select></div></div><p data-search-status role="status" aria-live="polite">${e(t.results)}: ${list.length}</p><div class="article-grid">${list.map(p=>`<article class="article-card" data-library-item data-language="${e(p.language)}" data-search="${e(shortTitle(p)+' '+entryDescription(p))}"><span class="eyebrow">${e(p.language.toUpperCase())} · ${new URL(p.url).hostname}</span><h2 lang="${e(p.language)}">${link(sourceTarget(p),e(shortTitle(p)))}</h2><p lang="${e(p.language)}">${e(entryDescription(p))}</p>${p.publishedAt?`<time class="small muted" datetime="${e(p.publishedAt)}">${new Intl.DateTimeFormat(l,{dateStyle:'medium',timeZone:'Europe/Vilnius'}).format(new Date(p.publishedAt))}</time>`:''}<span class="read-link">${link(sourceTarget(p),e(t.read)+' ↗')}</span></article>`).join('')}</div><p data-no-results hidden>${e(t.noResults)}</p></section>`;
 }
 function articleBody(p,t){
+  const lang=t===locales.ru?'ru':t===locales.lt?'lt':'en';
   const uniqueImages=assets.filter(a=>p.images.includes(a.source)&&a.local&&a.pages.length<4).slice(0,8);
   const references=new Map();
   for(const ref of sourceLinks.filter(r=>r.from===p.url&&r.label)){
     const document=documents.find(d=>d.source===ref.to);
     const related=pages.find(page=>page.url===ref.to);
     if(document){
-      const sourceLink=document.local?`<a href="${e(url('/'+document.local))}" download rel="nofollow">${e(ref.label)} <span class="small muted">(${e(document.local.split('.').at(-1).toUpperCase())})</span></a>`:ext(ref.to,ref.label);
+      const sourceLink=document.local?`<a href="${e(url(documentPath(document,lang)))}" data-document-download rel="nofollow">${e(ref.label)} <span class="small muted">(${e(document.local.split('.').at(-1).toUpperCase())})</span></a>`:ext(ref.to,ref.label);
       const unavailable=document.local?'':` <span class="small muted">${e(t.documentUnavailable)}</span>`;
       const alternative=!document.local&&/бланк.*записк|записк.*бланк/i.test(ref.label)?` ${link(route(t===locales.ru?'ru':t===locales.lt?'lt':'en','notes'),e(t.notes))}`:'';
       references.set(ref.to,sourceLink+unavailable+alternative);
     }
     else if(related&&!corePaths.has(sourceTarget(related))&&related.url!==p.url)references.set(ref.to,link(sourceTarget(related),e(ref.label)));
   }
-  const referenceHTML=references.size?`<aside class="article-references"><h2>${e(t.source)}</h2><ul>${[...references.values()].map(value=>`<li>${value}</li>`).join('')}</ul></aside>`:'';
+  const referenceHTML=references.size?`<aside class="article-references" ${documentRegion(t)}><h2>${e(t.source)}</h2><ul>${[...references.values()].map(value=>`<li>${value}</li>`).join('')}</ul><p class="small" data-document-status role="status" aria-live="polite"></p></aside>`:'';
   const text=p.blocks.map(b=>{
     const tag=/^h[1-6]$/.test(b.tag)?'h2':b.tag==='blockquote'?'blockquote':'p';
     return `<${tag}>${e(b.text)}</${tag}>`;
@@ -123,7 +126,9 @@ function articleBody(p,t){
 }
 
 await rm(DIST,{recursive:true,force:true}); await mkdir(DIST,{recursive:true});
-await cp(resolve(ROOT,'assets'),resolve(DIST,'assets'),{recursive:true});
+// Originals stay in the repository; only noindex HTML download envelopes are published.
+// This exclusion also retires the old direct PDF/DOC URLs with a real 404 on Pages.
+await cp(resolve(ROOT,'assets'),resolve(DIST,'assets'),{recursive:true,filter:source=>source!==resolve(ROOT,'assets/documents')});
 await mkdir(resolve(DIST,'assets/data'),{recursive:true});
 await writeFile(resolve(DIST,'assets/data/schedule.json'),JSON.stringify(schedule));
 await writeFile(resolve(DIST,'assets/data/locales.json'),JSON.stringify(locales));
@@ -145,6 +150,21 @@ for (const l of settings.locales) for(const page of core){
 }
 // Root is a useful server-rendered RU home with a canonical language route, without JS redirection.
 allRoutes.set('/',{...allRoutes.get('/ru/'),canonicalPath:'/ru/'});
+
+for(const document of documents.filter(d=>d.local)){
+  const filename=document.local.split('/').at(-1);
+  const mime=filename.endsWith('.pdf')?'application/pdf':'application/msword';
+  const content=await readFile(resolve(ROOT,document.local));
+  const base64=content.toString('base64');
+  // Reject damaged or replaced originals before producing any deployable artifact.
+  await decodeDocument({filename,mime,bytes:document.bytes,sha256:document.sha256,base64});
+  for(const lang of settings.locales){
+    const t=locales[lang];
+    const size=new Intl.NumberFormat(lang,{style:'unit',unit:'megabyte',maximumFractionDigits:2}).format(content.length/1000000);
+    const body=titleBlock(t,t.documentDownload,t.documentIntro)+`<section class="wrap prose section-space" ${documentRegion(t)}><h2 lang="ru">${e(document.title)}</h2><p class="small muted">${e(filename.split('.').at(-1).toUpperCase())} · ${e(size)}</p><div class="actions"><button type="button" class="button" data-document-download hidden>${e(t.documentDownload)} (${e(filename.split('.').at(-1).toUpperCase())})</button>${link(route(lang,'library'),e(t.documentBack),'text-link')}</div><p class="small" data-document-status role="status" aria-live="polite"></p><noscript><p class="notice">${e(t.documentNoJs)}</p></noscript><template data-document-payload data-filename="${e(filename)}" data-mime="${mime}" data-bytes="${content.length}" data-sha256="${document.sha256}">${base64}</template></section>`;
+    frame({lang,page:'document',title:t.documentDownload+' · '+document.title,description:t.documentIntro,body,path:documentPath(document,lang),noindex:true,noFollow:true,alternates:settings.locales.map(l=>({lang:l,path:documentPath(document,l)}))});
+  }
+}
 
 for(const p of pages){
   const target=sourceTarget(p);const lang=p.language||'ru'; const uiLocale=locales[lang]?lang:'en';const t=locales[uiLocale];

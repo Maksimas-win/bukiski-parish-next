@@ -5,6 +5,7 @@ import { resolve,dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { escapeHTML } from '../assets/js/domain.js';
+import { documentPath, decodeDocument } from '../assets/js/document-data.js';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const dist=resolve(root,'dist');
 const read=p=>readFile(resolve(root,p),'utf8');
@@ -22,7 +23,7 @@ test('Every generated page has one H1, a language, metadata, canonical, and no i
     assert.doesNotMatch(html,/<(?:iframe|style)(?:\s|>)|\s(?:style|on\w+)\s*=|javascript:|unsafe-inline/i,file);
     for(const script of html.matchAll(/<script\b([^>]*)>/g))assert.match(script[1],/\bsrc="/,file);
     assert.doesNotMatch(html,/\{\{\w+\}\}|PHOTO_ALT|href="undefined"|src="undefined"/,file);
-    if(!info.production)assert.match(html,/name="robots" content="noindex,follow"/,file);
+    if(!info.production)assert.match(html,/name="robots" content="noindex,(?:no)?follow"/,file);
   }
 });
 test('All generated internal links and assets resolve, including the GitHub project prefix',async()=>{
@@ -48,30 +49,45 @@ test('Each source URL has a target and every preserved text block survives HTML 
     for(const block of source.blocks)assert.ok(archive.includes(escapeHTML(block.text)),`Missing text in ${source.url}`);
   }
 });
-test('Recovered originals retain their bytes and replace every document reference',async()=>{
+test('Documents are downloadable as original bytes only through noindex HTML pages',async()=>{
   const documents=JSON.parse(await read('content/source-documents.json'));
   const migration=JSON.parse(await read('content/migration.json'));
   assert.equal(documents.length,4);
   for(const document of documents){
     assert.match(document.local,/^assets\/documents\/[a-z0-9-]+\.(pdf|doc)$/);
     const original=await readFile(resolve(root,document.local));
-    const published=await readFile(resolve(dist,document.local));
+    await assert.rejects(stat(resolve(dist,document.local)),{code:'ENOENT'});
     assert.equal(original.length,document.bytes);
-    assert.deepEqual(published,original);
     assert.equal(createHash('sha256').update(original).digest('hex'),document.sha256);
     const signature=document.local.endsWith('.pdf')?'255044462d':'d0cf11e0a1b11ae1';
     assert.equal(original.subarray(0,signature.length/2).toString('hex'),signature);
+    for(const lang of ['ru','lt','en']){
+      const path=documentPath(document,lang);
+      const html=await readFile(fileFor(path),'utf8');
+      assert.match(html,/name="robots" content="noindex,nofollow"/);
+      assert.ok(!((await read('dist/sitemap.xml')).includes(path)));
+      const payload=html.match(/<template data-document-payload([^>]*)>([A-Za-z0-9+/=]+)<\/template>/);
+      assert.ok(payload,path);
+      const attrs=Object.fromEntries([...payload[1].matchAll(/ data-([a-z0-9]+)="([^"]+)"/g)].map(m=>[m[1],m[2]]));
+      const decoded=await decodeDocument({...attrs,base64:payload[2]});
+      assert.deepEqual(Buffer.from(decoded.content),original);
+      assert.match(html,/<button[^>]*data-document-download hidden>/);
+      assert.match(html,/<noscript><p class="notice">/);
+    }
     for(const ref of document.links){
       const record=migration.find(r=>r.source===ref.from);
       assert.ok(record,ref.from);
       const legacyPath=new URL(ref.from).pathname;
       for(const path of [record.target,record.archive,legacyPath]){
         const html=await readFile(fileFor(path),'utf8');
-        assert.ok(html.includes(`href="${base}/${document.local}" download rel="nofollow"`),path);
+        assert.ok(html.includes(`href="${base}${documentPath(document,'ru')}" data-document-download rel="nofollow"`),path);
         assert.ok(!html.includes(`href="${escapeHTML(document.source)}"`),path);
       }
     }
   }
+  const deployedFiles=await readdir(dist,{recursive:true});
+  assert.equal(deployedFiles.filter(path=>/\.(pdf|docx?)$/i.test(path)).length,0,'Raw documents must not be published');
+  for(const {file,html} of pages)assert.ok(!html.includes(`href="${base}/assets/documents/`),file);
 });
 
 test('RU/LT/EN core keys and hreflang equivalents are complete',async()=>{

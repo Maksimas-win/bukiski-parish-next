@@ -1,4 +1,5 @@
 import { upcomingEvents, isStale, parseNames, searchText } from './domain.js';
+import { enableDocumentDownloads } from './document-downloads.js';
 
 const root=document.documentElement;
 root.classList.add('js');
@@ -7,6 +8,7 @@ const siteRoot=new URL(document.body.dataset.root,location.href);
 const select=(selector)=>document.querySelector(selector);
 const all=(selector)=>[...document.querySelectorAll(selector)];
 const show=(element,visible)=>{if(element)element.hidden=!visible;};
+enableDocumentDownloads(siteRoot);
 
 // Navigation remains visible if JavaScript is unavailable.
 const toggle=select('[data-menu-toggle]');
