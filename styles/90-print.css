@@ -1,0 +1,91 @@
+@media print {
+  :root {
+    color-scheme: light;
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-tint: #ffffff;
+    --ink: #000000;
+    --ink-soft: #333333;
+    --line: #999999;
+    --accent: #000000;
+    --label: #333333;
+  }
+
+  body {
+    font-size: 11pt;
+  }
+
+  .site-header,
+  .site-footer,
+  .skip-link,
+  .toast-region,
+  .to-top,
+  .reading-progress,
+  .actions,
+  .schedule__tools,
+  .month-nav,
+  .schedule__more,
+  .library__tools,
+  .library__more,
+  .service__add,
+  .copy-button,
+  .contents,
+  .article__more,
+  .support-band,
+  dialog {
+    display: none !important;
+  }
+
+  .shell {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  h2 {
+    font-size: 16pt;
+  }
+
+  .services-band {
+    background: none;
+    color: #000000;
+  }
+
+  .month__title {
+    position: static;
+  }
+
+  .service,
+  .article-card,
+  .card {
+    break-inside: avoid;
+  }
+
+  /* Printing a prayer request: only the sheet itself reaches the paper. */
+  body.is-printing-note main > :not(.notes),
+  body.is-printing-note .notes__form,
+  body.is-printing-note .notes__preview-title,
+  body.is-printing-note .notes__result .hint {
+    display: none !important;
+  }
+
+  body.is-printing-note .notes {
+    display: block;
+    padding: 0;
+  }
+
+  body.is-printing-note .note-sheet {
+    max-width: 110mm;
+    min-height: 0;
+    margin: 0 auto;
+    border: 1px solid #999999;
+    box-shadow: none;
+  }
+
+  body.is-printing-note .note-sheet__names {
+    font-size: 14pt;
+    line-height: 1.5;
+  }
+}

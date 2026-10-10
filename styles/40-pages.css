@@ -1,0 +1,994 @@
+/* Home: hero ---------------------------------------------------------------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-block: clamp(2rem, 5vw, 4rem) clamp(2.5rem, 6vw, 5rem);
+}
+
+.hero__kicker {
+  margin-bottom: 1rem;
+  font-weight: 650;
+  color: var(--label);
+}
+
+.hero h1 {
+  font-size: clamp(2.75rem, 1.4rem + 5.6vw, 5.5rem);
+  line-height: 1;
+}
+
+.hero .lead {
+  margin-top: 1.5rem;
+}
+
+.hero .actions {
+  margin-top: 2rem;
+}
+
+.hero__figure {
+  justify-self: end;
+  width: min(100%, 30rem);
+}
+
+/* The photograph is framed by a keel arch, the outline of the church's own
+   gables and windows. Browsers without masks fall back to a rounded arch. */
+.hero__photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 50% 50% var(--radius-l) var(--radius-l) / 32% 32% var(--radius-l) var(--radius-l);
+  object-fit: cover;
+  object-position: 58% 50%;
+}
+
+@supports (mask-image: url('x.svg')) or (-webkit-mask-image: url('x.svg')) {
+  .hero__photo {
+    border-radius: 0;
+    -webkit-mask: url('../img/arch-mask.svg') center / 100% 100% no-repeat;
+    mask: url('../img/arch-mask.svg') center / 100% 100% no-repeat;
+  }
+}
+
+@media (max-width: 54rem) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__figure {
+    justify-self: start;
+    width: min(70%, 18rem);
+    order: -1;
+  }
+
+  .hero__photo {
+    aspect-ratio: 1;
+  }
+}
+
+/* One arrival moment on the home page; nothing else animates on its own. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero__figure {
+    animation: hero-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .hero__copy > * {
+    animation: hero-fade 0.7s ease-out both;
+  }
+
+  .hero__copy > :nth-child(2) {
+    animation-delay: 0.08s;
+  }
+
+  .hero__copy > :nth-child(3) {
+    animation-delay: 0.16s;
+  }
+
+  .hero__copy > :nth-child(4) {
+    animation-delay: 0.24s;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(2rem) scale(0.97);
+  }
+}
+
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+}
+
+/* Home: services band ------------------------------------------------------- */
+
+/* Inside the band the usual tokens are re-pointed to light-on-blue values, so
+   every component placed here keeps its contrast without special cases. */
+.services-band {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  background: var(--band-bg);
+  color: var(--band-ink);
+
+  --ink: var(--band-ink);
+  --ink-soft: var(--band-soft);
+  --line: var(--band-line);
+  --line-strong: var(--band-soft);
+  --surface-tint: var(--band-tint);
+  --accent: var(--band-accent);
+  --accent-hover: #ffffff;
+  --on-accent: #1a1408;
+  --label: var(--band-accent);
+  --focus: #9fd6f2;
+}
+
+.services__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  margin-bottom: 1.75rem;
+}
+
+.services__foot {
+  margin-top: 1.5rem;
+  color: var(--ink-soft);
+}
+
+.services__foot .notice--warning {
+  color: #1f262b;
+  background: #fbf1d6;
+}
+
+.service-list--featured .service:last-child {
+  border-bottom: 0;
+}
+
+/* The next service is set apart as a light card. */
+.service-list--featured .is-next {
+  grid-template-columns: 4.75rem minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  padding: 1.5rem;
+  border: 0;
+  border-radius: var(--radius-l);
+  background: var(--feature-bg);
+  color: var(--feature-ink);
+
+  --ink: var(--feature-ink);
+  --ink-soft: var(--feature-soft);
+  --surface-tint: var(--feature-tint);
+  --line-strong: var(--feature-line);
+  --accent: var(--feature-accent);
+  --on-accent: var(--feature-on-accent);
+  --label: var(--feature-label);
+  --focus: var(--feature-focus);
+}
+
+/* In the featured card «Добавить в календарь» is a labelled button at the foot. */
+.service-list--featured .is-next .service__add {
+  grid-column: 1 / -1;
+  align-self: end;
+  justify-self: start;
+  display: inline-flex;
+  gap: 0.5rem;
+  width: auto;
+  height: auto;
+  min-height: 2.75rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 0.8rem;
+  border: 1.5px solid var(--line-strong);
+  border-radius: var(--radius-m);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.service-list--featured .is-next .service__add-label {
+  display: inline;
+}
+
+.service-list--featured .is-next .service__date {
+  padding: 1rem 0 0.7rem;
+  border-radius: 2.4rem 2.4rem 0.5rem 0.5rem;
+}
+
+.service-list--featured .is-next .service__day {
+  font-size: 2.1rem;
+}
+
+.service-list--featured .is-next .service__title {
+  margin-top: 0.4rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.2rem);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.service-list--featured .is-next .service__clock {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.service-list--featured .is-next .service__subtitle {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 56rem) {
+  .service-list--featured {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    align-items: start;
+    column-gap: 3rem;
+  }
+
+  .service-list--featured .service {
+    grid-column: 2;
+  }
+
+  .service-list--featured .is-next {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    align-self: stretch;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 55.99rem) {
+  .service-list--featured .is-next {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Home: first visit, explore, support -------------------------------------- */
+
+.first-visit {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  padding-block: var(--section);
+}
+
+.first-visit .lead {
+  margin-top: 1rem;
+}
+
+.visit-card {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: var(--radius-l);
+  background: var(--surface-tint);
+}
+
+.visit-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.visit-card__address {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.125rem;
+}
+
+.visit-card__address > .icon {
+  color: var(--accent);
+}
+
+@media (max-width: 54rem) {
+  .first-visit {
+    grid-template-columns: 1fr;
+  }
+}
+
+.explore {
+  padding-bottom: var(--section);
+}
+
+.support-band {
+  background: var(--wine);
+  color: #fdfcfa;
+
+  --focus: #f3dba6;
+}
+
+.support-band__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.5rem 2rem;
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.support-band p {
+  grid-column: 1;
+  color: #ead9d2;
+}
+
+.support-band .button {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.support-band + .site-footer {
+  margin-top: 0;
+}
+
+@media (max-width: 40rem) {
+  .support-band__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .support-band .button {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: start;
+    margin-top: 1rem;
+  }
+}
+
+/* Schedule ------------------------------------------------------------------ */
+
+.schedule {
+  display: grid;
+  gap: 2rem;
+  padding-top: 0.5rem;
+}
+
+.schedule__main {
+  min-width: 0;
+}
+
+.schedule__aside {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.schedule__aside .actions {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.schedule__aside .schedule-status {
+  margin-top: 0;
+}
+
+@media (min-width: 62rem) {
+  .schedule {
+    grid-template-columns: minmax(0, 1fr) 21rem;
+    align-items: start;
+    column-gap: clamp(2rem, 5vw, 4.5rem);
+  }
+
+  .schedule__aside {
+    position: sticky;
+    top: calc(var(--header-height) + 1.5rem);
+  }
+}
+
+.schedule__tools {
+  margin-bottom: 1rem;
+}
+
+.month-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* On phones the months become one swipeable row instead of many lines. */
+@media (max-width: 46rem) {
+  .month-nav {
+    flex-wrap: nowrap;
+    margin-inline: calc(-1 * var(--gutter));
+    padding: 0 var(--gutter) 0.5rem;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+}
+
+.chip--link {
+  flex: none;
+  border-color: var(--line);
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.month {
+  margin-bottom: 2.5rem;
+}
+
+.month__title {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 5;
+  padding-block: 0.6rem;
+  border-bottom: 1px solid var(--line-strong);
+  background: var(--bg);
+  font-size: 1.75rem;
+}
+
+.schedule__more {
+  margin-block: 0.5rem 1.5rem;
+}
+
+@media (max-width: 34rem) {
+  .service {
+    grid-template-columns: 3.25rem minmax(0, 1fr) auto;
+    gap: 0.85rem;
+  }
+
+  .service__title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Contacts ------------------------------------------------------------------ */
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-block: 1rem 2.5rem;
+}
+
+.contact__details {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact__details h2 {
+  font-size: 2rem;
+}
+
+.contact__details .hint + .hint {
+  margin-top: -1rem;
+}
+
+@media (max-width: 54rem) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* History ------------------------------------------------------------------- */
+
+.history {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-block: 1rem 2rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 2rem;
+  margin: 0;
+  padding: 0 0 0 1.75rem;
+  border-inline-start: 2px solid var(--line);
+  list-style: none;
+}
+
+.timeline li {
+  position: relative;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: calc(-1.75rem - 0.45rem - 1px);
+  top: 0.55rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 2px solid var(--bg);
+  border-radius: 50%;
+  background: var(--gilt);
+}
+
+.timeline__year {
+  font-weight: 700;
+  color: var(--label);
+}
+
+.timeline h2 {
+  margin-bottom: 0.35rem;
+  font-size: 1.75rem;
+}
+
+@media (max-width: 54rem) {
+  .history {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Prayer request ------------------------------------------------------------ */
+
+.notes {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-block: 1rem 2rem;
+}
+
+.notes__form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.notes__local {
+  font-weight: 650;
+  color: var(--label);
+}
+
+.notes__result {
+  position: sticky;
+  top: calc(var(--header-height) + 1.5rem);
+  display: grid;
+  gap: 1rem;
+}
+
+.notes__preview-title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.note-sheet {
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+  min-height: 18rem;
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-s);
+  background: #fffefb;
+  color: #1f262b;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.note-sheet__cross {
+  font-size: 2.25rem;
+  line-height: 1;
+  color: #5b0f19;
+}
+
+.note-sheet__type {
+  font-family: var(--font-serif);
+  font-size: 1.9rem;
+  line-height: 1.1;
+}
+
+.note-sheet__names {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.note-sheet__empty {
+  align-self: center;
+  color: #4d575e;
+}
+
+.note-sheet__parish {
+  align-self: end;
+  font-size: 0.8125rem;
+  color: #4d575e;
+}
+
+@media (max-width: 54rem) {
+  .notes {
+    grid-template-columns: 1fr;
+  }
+
+  .notes__result {
+    position: static;
+  }
+}
+
+/* Library ------------------------------------------------------------------- */
+
+.library {
+  padding-bottom: 1rem;
+}
+
+.library__tools {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.search-field {
+  max-width: 44rem;
+}
+
+.search-field__box {
+  position: relative;
+}
+
+.search-field__box .icon {
+  position: absolute;
+  left: 0.95rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ink-soft);
+  pointer-events: none;
+}
+
+.search-field__box input {
+  padding-inline-start: 2.8rem;
+  min-height: 3.25rem;
+  font-size: 1.0625rem;
+}
+
+.library__status {
+  margin-bottom: 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+}
+
+.library__more {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.article-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  background: var(--surface);
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.article-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+/* The card is one large link, so the focus ring is drawn around the card. */
+.article-card:focus-within {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.article-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--surface-tint);
+}
+
+.article-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem;
+}
+
+.article-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.article-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+}
+
+.article-card__title a {
+  text-decoration: none;
+}
+
+.article-card__title a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.article-card__title a:focus-visible {
+  outline: none;
+}
+
+.article-card__text {
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+}
+
+.article-card__foot {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+/* Article ------------------------------------------------------------------- */
+
+.article {
+  margin-bottom: var(--section);
+}
+
+.article .shell {
+  max-width: 64rem;
+}
+
+.article__head {
+  padding-block: clamp(1.5rem, 4vw, 3rem) 1.5rem;
+}
+
+.article__crumb {
+  margin-bottom: 1.25rem;
+}
+
+.article__head h1 {
+  max-width: 24ch;
+  font-size: clamp(2.2rem, 1.4rem + 3.2vw, 3.75rem);
+}
+
+.article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1.25rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+}
+
+.article__meta li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.article__cover {
+  margin-bottom: 2rem;
+}
+
+.article__cover img {
+  width: 100%;
+  max-height: 30rem;
+  border-radius: var(--radius-l);
+  object-fit: cover;
+}
+
+.article__cover a,
+.gallery__item a {
+  display: block;
+  cursor: zoom-in;
+}
+
+.article__layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.article__body {
+  min-width: 0;
+  max-width: 43rem;
+}
+
+.contents {
+  padding: 1.25rem;
+  border-radius: var(--radius-l);
+  background: var(--surface-tint);
+}
+
+.contents h2 {
+  margin-bottom: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.contents ol {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9375rem;
+  line-height: 1.35;
+}
+
+.contents a {
+  display: block;
+  padding: 0.2rem 0 0.2rem 0.75rem;
+  border-inline-start: 2px solid transparent;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.contents a:hover {
+  color: var(--ink);
+}
+
+.contents a.is-current {
+  border-color: var(--accent);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+@media (min-width: 62rem) {
+  .article__layout.has-contents {
+    grid-template-columns: minmax(0, 43rem) minmax(0, 1fr);
+    column-gap: 3.5rem;
+  }
+
+  .article__layout.has-contents .contents {
+    grid-column: 2;
+    grid-row: 1;
+    position: sticky;
+    top: calc(var(--header-height) + 1.5rem);
+    align-self: start;
+    max-height: calc(100vh - var(--header-height) - 3rem);
+    overflow-y: auto;
+  }
+}
+
+.article__more {
+  margin-top: var(--section);
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.article__more h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Long-form text ------------------------------------------------------------ */
+
+.prose {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.prose--narrow {
+  max-width: 46rem;
+  margin-inline-start: max(var(--gutter), (100% - 76rem) / 2);
+  padding-block: 1rem;
+}
+
+.prose > * + * {
+  margin-top: 1.1em;
+}
+
+.prose h2 {
+  margin-top: 2.2em;
+  font-size: clamp(1.6rem, 1.3rem + 1vw, 2rem);
+  line-height: 1.15;
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.prose h2:focus {
+  outline: none;
+}
+
+.prose h3 {
+  margin-top: 1.8em;
+  font-size: 1.3rem;
+}
+
+.prose h4 {
+  margin-top: 1.5em;
+  font-size: 1.125rem;
+}
+
+.prose ul,
+.prose ol {
+  display: grid;
+  gap: 0.45em;
+  padding-inline-start: 1.4em;
+}
+
+.prose li::marker {
+  color: var(--label);
+}
+
+.prose dl {
+  display: grid;
+  gap: 0.3em;
+}
+
+.prose dt {
+  margin-top: 0.7em;
+  font-weight: 650;
+}
+
+.prose blockquote {
+  padding: 0.25em 0 0.25em 1.25em;
+  border-inline-start: 3px solid var(--gilt);
+  font-family: var(--font-serif);
+  font-size: 1.3em;
+  line-height: 1.45;
+}
+
+.prose .caption {
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.prose .notice {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.references {
+  margin-top: 2.5em;
+  padding: 1.25rem;
+  border-radius: var(--radius-l);
+  background: var(--surface-tint);
+  font-size: 1rem;
+}
+
+.references h2 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.references ul {
+  padding-inline-start: 1.2em;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  align-items: start;
+  gap: 1rem;
+  margin-top: 2.5em;
+}
+
+/* Images keep their real size: small ones are never stretched. */
+.gallery__item img {
+  width: auto;
+  max-width: 100%;
+  border-radius: var(--radius-m);
+}

@@ -1,0 +1,150 @@
+/* Typefaces of the existing parish site, served from this origin (SIL OFL). */
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('../fonts/source-sans-3/source-sans-3-roman-v3.052.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Serif 4 Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/source-serif-4/source-serif-4-display-regular.woff2') format('woff2');
+}
+
+/*
+  Colour comes from the church itself: the wine of the parish emblem, the blue
+  of the domes, the pale yellow brick of the walls and the gilt of the crosses.
+  Text pairs are checked for WCAG AA contrast in tests/design.test.mjs.
+*/
+:root {
+  color-scheme: light;
+
+  --font-sans: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Source Serif 4 Display', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+
+  --wine: #5b0f19;
+  --dome: #1c4253;
+  --dome-deep: #112b37;
+  --gilt: #b99759;
+
+  --bg: #fdfcfa;
+  --surface: #ffffff;
+  --surface-tint: #f6f0e3;
+  --ink: #1f262b;
+  --ink-soft: #4d575e;
+  --line: #e2dccf;
+  --line-strong: #b9b09d;
+  --accent: #5b0f19;
+  --accent-hover: #7a1823;
+  --on-accent: #ffffff;
+  --label: #7a5a1c;
+  --focus: #1c6a8f;
+  --warning-bg: #fbf1d6;
+  --warning-line: #a97a12;
+  --danger: #9c2f2f;
+
+  --band-bg: #1c4253;
+  --band-ink: #f6f1e6;
+  --band-soft: #c9d6dc;
+  --band-line: #3d6172;
+  --band-accent: #ecd29b;
+  --band-tint: #2a5367;
+
+  /* The next-service card inside the band */
+  --feature-bg: #fdfcfa;
+  --feature-ink: #1f262b;
+  --feature-soft: #4d575e;
+  --feature-tint: #f6f0e3;
+  --feature-line: #b9b09d;
+  --feature-accent: #5b0f19;
+  --feature-on-accent: #ffffff;
+  --feature-label: #7a5a1c;
+  --feature-focus: #1c6a8f;
+
+  --shadow: 0 1px 2px rgb(17 43 55 / 6%), 0 14px 34px -14px rgb(17 43 55 / 22%);
+
+  --radius-s: 0.5rem;
+  --radius-m: 0.8rem;
+  --radius-l: 1.25rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --section: clamp(3rem, 7vw, 6rem);
+  --header-height: 4.5rem;
+}
+
+/* Dark theme: the church interior by candlelight. Applied by system preference
+   unless the visitor chose «Светлое», and always when they chose «Тёмное». */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --bg: #0f1a20;
+    --surface: #16252d;
+    --surface-tint: #1c303a;
+    --ink: #f0eadc;
+    --ink-soft: #b3bdc2;
+    --line: #2a3d47;
+    --line-strong: #4b626d;
+    --accent: #e7c98a;
+    --accent-hover: #f3dba6;
+    --on-accent: #1a1408;
+    --label: #d9bb7c;
+    --focus: #7cc4e8;
+    --warning-bg: #3a2f14;
+    --warning-line: #d9a93a;
+    --danger: #f0a3a3;
+    --band-bg: #132a34;
+    --band-ink: #f0eadc;
+    --band-soft: #b3bdc2;
+    --band-line: #2f4853;
+    --band-accent: #e7c98a;
+    --band-tint: #1c3944;
+    --feature-bg: #213c48;
+    --feature-ink: #f0eadc;
+    --feature-soft: #c3ccd0;
+    --feature-tint: #2d4c5a;
+    --feature-line: #6b858f;
+    --feature-accent: #e7c98a;
+    --feature-on-accent: #1a1408;
+    --feature-label: #e7c98a;
+    --feature-focus: #9fd6f2;
+    --shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 14px 34px -14px rgb(0 0 0 / 60%);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0f1a20;
+  --surface: #16252d;
+  --surface-tint: #1c303a;
+  --ink: #f0eadc;
+  --ink-soft: #b3bdc2;
+  --line: #2a3d47;
+  --line-strong: #4b626d;
+  --accent: #e7c98a;
+  --accent-hover: #f3dba6;
+  --on-accent: #1a1408;
+  --label: #d9bb7c;
+  --focus: #7cc4e8;
+  --warning-bg: #3a2f14;
+  --warning-line: #d9a93a;
+  --danger: #f0a3a3;
+  --band-bg: #132a34;
+  --band-ink: #f0eadc;
+  --band-soft: #b3bdc2;
+  --band-line: #2f4853;
+  --band-accent: #e7c98a;
+  --band-tint: #1c3944;
+  --feature-bg: #213c48;
+  --feature-ink: #f0eadc;
+  --feature-soft: #c3ccd0;
+  --feature-tint: #2d4c5a;
+  --feature-line: #6b858f;
+  --feature-accent: #e7c98a;
+  --feature-on-accent: #1a1408;
+  --feature-label: #e7c98a;
+  --feature-focus: #9fd6f2;
+  --shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 14px 34px -14px rgb(0 0 0 / 60%);
+}
