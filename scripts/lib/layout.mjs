@@ -121,6 +121,11 @@ export function renderDocument(site, page) {
   const robots = noFollow ? 'noindex,nofollow' : site.production && !noindex ? 'index,follow' : 'noindex,follow';
   const alternateLinks = alternates.map(alternate => html`<link rel="alternate" hreflang="${alternate.lang}" href="${site.canonical(alternate.path)}">`);
   if (alternates.length) alternateLinks.push(html`<link rel="alternate" hreflang="x-default" href="${site.canonical(alternates[0].path)}">`);
+  // The home photograph is the first thing seen: fetch it alongside the stylesheet.
+  if (pageId === 'home') {
+    const sizes = site.photos.hero;
+    alternateLinks.push(html`<link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="${sizes.map(size => `${site.url(`/${size.file}`)} ${size.width}w`).join(', ')}" imagesizes="100vw">`);
+  }
 
   const values = {
     lang,
