@@ -2,6 +2,7 @@
 
 import { html, attrs, raw } from './html.mjs';
 import { icon, socialIcon } from './icons.mjs';
+import { LANGUAGE_NAMES } from './pages/library.mjs';
 import { externalLink, siteLink } from './components.mjs';
 
 /**
@@ -32,8 +33,14 @@ function header(site, t, lang, uiLocale, pageId, languageTargets) {
         <span class="brand__text"><span class="brand__name">${t.name}</span><span class="brand__place">${t.place}</span></span>
       </a>
       <nav class="lang-switch" aria-label="${t.languages}">
-        ${languageTargets.map(target => html`<a${attrs({ href: site.url(target.path), lang: target.lang, hreflang: target.lang, 'aria-current': target.lang === lang ? 'true' : null })}>${target.lang.toUpperCase()}</a>`)}
+        ${languageTargets.map(target => html`<a${attrs({ href: site.url(target.path), lang: target.lang, hreflang: target.lang, 'aria-current': target.lang === lang ? 'true' : null, title: LANGUAGE_NAMES[target.lang] })}>${target.lang.toUpperCase()}</a>`)}
       </nav>
+      <details class="lang-menu" data-lang-menu>
+        <summary aria-label="${t.languages}: ${LANGUAGE_NAMES[lang] || lang.toUpperCase()}">${icon('globe')}<span>${lang.toUpperCase()}</span></summary>
+        <ul class="lang-menu__list">
+          ${languageTargets.map(target => html`<li><a${attrs({ href: site.url(target.path), lang: target.lang, hreflang: target.lang, 'aria-current': target.lang === lang ? 'true' : null })}><span class="lang-menu__code">${target.lang.toUpperCase()}</span>${LANGUAGE_NAMES[target.lang] || target.lang}</a></li>`)}
+        </ul>
+      </details>
       <button type="button" class="icon-button menu-toggle" data-menu-toggle hidden aria-expanded="false" aria-controls="site-menu" aria-label="${t.menu}">${icon('menu')}</button>
       <div class="site-menu" id="site-menu" data-menu>
         <nav class="site-nav" aria-label="${t.menu}">

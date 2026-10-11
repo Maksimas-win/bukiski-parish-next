@@ -2,7 +2,9 @@
 // Nothing here touches the DOM, the network or storage.
 
 export const TIMEZONE = 'Europe/Vilnius';
-export const SITE_LANGUAGES = ['ru', 'lt', 'en'];
+export const SITE_LANGUAGES = ['ru', 'lt', 'en', 'pl', 'de', 'uk'];
+/** Languages the parish calendar feed itself must provide; the others are added by the build. */
+export const FEED_LANGUAGES = ['ru', 'lt', 'en'];
 export const MAX_NAMES = 20;
 export const MAX_NAME_LENGTH = 60;
 
@@ -83,7 +85,7 @@ export function normalizeSchedule(source) {
     if (`${parts.year}-${parts.month}-${parts.day}` !== event.date || `${parts.hour}:${parts.minute}` !== event.startTime) {
       throw new Error(`Service time disagrees with Europe/Vilnius: ${event.id}`);
     }
-    if (!SITE_LANGUAGES.every(lang => typeof event.title?.[lang] === 'string' && event.title[lang].trim())) {
+    if (!FEED_LANGUAGES.every(lang => typeof event.title?.[lang] === 'string' && event.title[lang].trim())) {
       throw new Error(`Missing service-title translation: ${event.id}`);
     }
     ids.add(event.id);

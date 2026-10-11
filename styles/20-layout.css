@@ -394,3 +394,87 @@ main > .support-band:last-child {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* Compact language menu; the pill row of six languages is used only where the
+   whole navigation fits on one line. */
+.lang-menu {
+  position: relative;
+  display: none;
+  order: 2;
+}
+
+.lang-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2.5rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+}
+
+.lang-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.lang-menu[open] summary {
+  border-color: var(--ink);
+}
+
+.lang-menu__list {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 30;
+  display: grid;
+  min-width: 12rem;
+  margin: 0;
+  padding: 0.4rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  list-style: none;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.lang-menu__list a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.lang-menu__list a:hover {
+  background: var(--surface-tint);
+}
+
+.lang-menu__list [aria-current] {
+  font-weight: 700;
+  background: var(--surface-tint);
+}
+
+.lang-menu__code {
+  min-width: 1.75rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--label);
+}
+
+@media (max-width: 86rem) {
+  .lang-switch {
+    display: none;
+  }
+
+  .lang-menu {
+    display: block;
+  }
+}

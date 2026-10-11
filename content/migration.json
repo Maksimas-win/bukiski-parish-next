@@ -1050,7 +1050,7 @@
     "language": "pl",
     "title": "Prawosławna Cerkiew Narodzenia Chrystusa w Bukszyszkach",
     "target": "/pl/",
-    "archive": "/pl/",
+    "archive": "/archive/9093770b1a2e98b4.html",
     "textCharacters": 5134,
     "contentHash": "7d7be37a105dfb98",
     "strategy": "preserve-path"
@@ -1237,7 +1237,7 @@
     "language": "pl",
     "title": "Kontakt",
     "target": "/pl/contacts.html",
-    "archive": "/pl/contacts.html",
+    "archive": "/archive/58658c0eec36beb7.html",
     "textCharacters": 2880,
     "contentHash": "cad895f2e1470fab",
     "strategy": "preserve-path"
@@ -1281,7 +1281,7 @@
     "language": "pl",
     "title": "Historia cerkwi w Bukiszkach",
     "target": "/pl/history.html",
-    "archive": "/pl/history.html",
+    "archive": "/archive/cb8844fa6e986da1.html",
     "textCharacters": 6024,
     "contentHash": "12b1874743536bec",
     "strategy": "preserve-path"
@@ -1292,7 +1292,7 @@
     "language": "pl",
     "title": "Aktualności parafialne",
     "target": "/pl/news.html",
-    "archive": "/pl/news.html",
+    "archive": "/archive/9cb93e56d464fa20.html",
     "textCharacters": 1172,
     "contentHash": "ea9ca40eca6ce186",
     "strategy": "preserve-path"
@@ -1303,7 +1303,7 @@
     "language": "pl",
     "title": "Sakramenty i posługi duszpasterskie",
     "target": "/pl/sacraments.html",
-    "archive": "/pl/sacraments.html",
+    "archive": "/archive/a0ef1da1885bd6f1.html",
     "textCharacters": 1092,
     "contentHash": "0d53b18f72d3bb87",
     "strategy": "preserve-path"
@@ -1314,7 +1314,7 @@
     "language": "pl",
     "title": "Porządek nabożeństw",
     "target": "/pl/schedule.html",
-    "archive": "/pl/schedule.html",
+    "archive": "/archive/7af87f02b03800f7.html",
     "textCharacters": 663,
     "contentHash": "a489a867c582f15f",
     "strategy": "preserve-path"
