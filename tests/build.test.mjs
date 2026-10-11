@@ -17,6 +17,8 @@ const readJSON = async path => JSON.parse(await read(path));
 const info = await readJSON('dist/build-info.json');
 const settings = await readJSON('content/settings.json');
 const base = info.basePath;
+const historyStory = await readJSON('content/stories/istoriya-o-hrame.json');
+const stories = new Map([[historyStory.source, historyStory]]);
 const htmlFiles = (await readdir(dist, { recursive: true })).filter(path => path.endsWith('.html'));
 const pages = await Promise.all(htmlFiles.map(async file => ({ file, html: await readFile(resolve(dist, file), 'utf8') })));
 
@@ -88,7 +90,12 @@ test('Each source URL has a target, and every preserved text block survives esca
     assert.ok(record, source.url);
     assert.ok(await exists(fileFor(record.target)), record.target);
     const archive = await page(record.archive);
-    for (const block of source.blocks) assert.ok(archive.includes(escapeHTML(block.text)), `Missing text in ${source.url}`);
+    // An illustrated story may leave out only the decorative glyphs it lists.
+    const decorative = new Set(stories.get(source.url)?.decorative || []);
+    for (const block of source.blocks) {
+      if (decorative.has(block.text)) continue;
+      assert.ok(archive.includes(escapeHTML(block.text)), `Missing text in ${source.url}: ${block.text.slice(0, 60)}`);
+    }
   }
 });
 
@@ -325,4 +332,31 @@ test('The sitemap lists only canonical, indexable pages', async () => {
     const html = await page(new URL(url).pathname.slice(base.length));
     assert.ok(html.includes(`<link rel="canonical" href="${url}">`), url);
   }
+});
+
+test('The illustrated history keeps the source wording and shows the photographs before restoration', async () => {
+  const sources = await readJSON('content/source-pages.json');
+  const source = sources.find(candidate => candidate.url === historyStory.source);
+  const texts = new Set(source.blocks.map(block => block.text));
+  // Every sentence of the story comes verbatim from the source page.
+  const strings = [];
+  const walk = (value, key) => {
+    if (typeof value === 'string') { if (!['source', 'heroPhoto', 'id', 'icon', 'before', 'web', 'thumb'].includes(key) && key !== 'caption') strings.push(value); }
+    else if (Array.isArray(value)) value.forEach(item => walk(item, key));
+    else if (value && typeof value === 'object') for (const [name, item] of Object.entries(value)) if (name !== 'restoration' && name !== 'caption') walk(item, name);
+  };
+  walk(historyStory);
+  for (const text of strings) assert.ok(texts.has(text), `Not in the source: ${text.slice(0, 60)}`);
+  for (const stat of historyStory.chapters.flatMap(chapter => chapter.stats || [])) assert.ok(texts.has(String(stat.value)));
+  for (const text of historyStory.decorative) assert.ok(!/[\p{L}]{3,}/u.test(text), `Only glyphs may be left out: ${text}`);
+
+  const story = await page('/ru/library/istoriya-o-hrame.html');
+  assert.match(story, /data-story/);
+  assert.equal((story.match(/data-story-chapter/g) || []).length, historyStory.chapters.length + 1);
+  assert.match(story, /<input class="compare__range" type="range"/);
+  for (const photo of historyStory.restoration.photos) {
+    assert.ok(story.includes(`${photo.web}"`), photo.id);
+    assert.ok(await exists(resolve(dist, photo.web)), photo.web);
+  }
+  assert.doesNotMatch(story, / style=/, 'no inline styles under the CSP');
 });

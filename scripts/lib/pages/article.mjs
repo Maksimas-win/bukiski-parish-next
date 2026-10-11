@@ -8,6 +8,7 @@ import { icon } from '../icons.mjs';
 import { formatDate } from '../site.mjs';
 import { externalLink, siteLink } from '../components.mjs';
 import { articleCard, LANGUAGE_NAMES } from './library.mjs';
+import { storyPage } from './story.mjs';
 
 /** Articles with at least this many sections get a table of contents. */
 const MIN_TOC_HEADINGS = 3;
@@ -138,6 +139,8 @@ export function lightboxDialog(t, uiLocale) {
  * @param {boolean} [options.archiveOnly] true for old wording of a rewritten core page
  */
 export function articlePage(site, catalog, entry, t, uiLocale, { related = [], archiveOnly = false } = {}) {
+  const story = site.stories.get(entry.url);
+  if (story && !archiveOnly) return storyPage(site, story, entry, t, uiLocale);
   const { page } = entry;
   const { body, headings } = renderBlocks(page.blocks, entry.title);
   const showContents = headings.length >= MIN_TOC_HEADINGS;

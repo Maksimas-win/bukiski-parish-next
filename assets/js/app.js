@@ -17,6 +17,7 @@ const features = [
   ['[data-library]', () => import('./features/library.js')],
   ['[data-notes]', () => import('./features/notes.js')],
   ['[data-article]', () => import('./features/article.js')],
+  ['[data-story]', () => import('./features/story.js')],
   ['[data-lightbox]', () => import('./features/lightbox.js')],
   ['[data-document-download]', () => import('./document-downloads.js')]
 ];

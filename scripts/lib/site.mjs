@@ -28,7 +28,7 @@ function resolveBasePath(value) {
 }
 
 export async function loadSite(env = process.env) {
-  const [settings, locales, pages, assets, documents, sourceLinks, rawSchedule, imageManifest, photos, template] = await Promise.all([
+  const [settings, locales, pages, assets, documents, sourceLinks, rawSchedule, imageManifest, photos, historyStory, template] = await Promise.all([
     readJSON('settings.json'),
     readJSON('locales.json'),
     readJSON('source-pages.json'),
@@ -38,6 +38,7 @@ export async function loadSite(env = process.env) {
     readJSON('original-services.json'),
     readJSON('image-manifest.json'),
     readJSON('photos.json'),
+    readJSON('stories/istoriya-o-hrame.json'),
     readFile(resolve(ROOT, 'index.html'), 'utf8')
   ]);
 
@@ -73,6 +74,8 @@ export async function loadSite(env = process.env) {
     rawSchedule,
     imageManifest,
     photos,
+    /** Articles shown with a dedicated layout, by source URL. */
+    stories: new Map([[historyStory.source, historyStory]]),
     template,
     schedule: normalizeSchedule(rawSchedule),
     origin,

@@ -293,7 +293,20 @@
     "footerSocial": "Мы в соцсетях",
     "heroKicker": "Православный храм",
     "heroPlace": "Букишки · Вильнюсский район",
-    "allPhotos": "Все фотографии"
+    "allPhotos": "Все фотографии",
+    "storyChapters": "Главы",
+    "storyAuthor": "Автор исследования",
+    "storyBuildings": "Что было в усадьбе",
+    "storyDuties": "Повинности крестьян",
+    "storyStats": "Имение в цифрах",
+    "restoration": "До восстановления",
+    "restorationIntro": "Так выглядел храм, прежде чем его восстановили.",
+    "beforeAfter": "Было и стало",
+    "compareBefore": "До восстановления",
+    "compareAfter": "Сегодня",
+    "compareRange": "Сравнить фотографии: до восстановления и сегодня",
+    "compareHint": "Передвиньте ползунок, чтобы сравнить",
+    "storySources": "Источники и примечание"
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -589,7 +602,20 @@
     "footerSocial": "Socialiniai tinklai",
     "heroKicker": "Stačiatikių cerkvė",
     "heroPlace": "Bukiškis · Vilniaus rajonas",
-    "allPhotos": "Visos nuotraukos"
+    "allPhotos": "Visos nuotraukos",
+    "storyChapters": "Skyriai",
+    "storyAuthor": "Tyrimo autorė",
+    "storyBuildings": "Kas buvo dvare",
+    "storyDuties": "Valstiečių prievolės",
+    "storyStats": "Dvaras skaičiais",
+    "restoration": "Prieš atstatymą",
+    "restorationIntro": "Taip atrodė cerkvė prieš ją atstatant.",
+    "beforeAfter": "Buvo ir yra",
+    "compareBefore": "Prieš atstatymą",
+    "compareAfter": "Šiandien",
+    "compareRange": "Palyginti nuotraukas: prieš atstatymą ir šiandien",
+    "compareHint": "Pastumkite slankiklį ir palyginkite",
+    "storySources": "Šaltiniai ir pastaba"
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -885,6 +911,19 @@
     "footerSocial": "Social media",
     "heroKicker": "Orthodox church",
     "heroPlace": "Bukiškis · Vilnius District",
-    "allPhotos": "All photos"
+    "allPhotos": "All photos",
+    "storyChapters": "Chapters",
+    "storyAuthor": "Author of the study",
+    "storyBuildings": "What stood on the estate",
+    "storyDuties": "Duties of the peasants",
+    "storyStats": "The estate in figures",
+    "restoration": "Before restoration",
+    "restorationIntro": "This is how the church looked before it was restored.",
+    "beforeAfter": "Then and now",
+    "compareBefore": "Before restoration",
+    "compareAfter": "Today",
+    "compareRange": "Compare the photographs: before restoration and today",
+    "compareHint": "Move the slider to compare",
+    "storySources": "Sources and note"
   }
 }
