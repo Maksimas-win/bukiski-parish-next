@@ -1,98 +1,132 @@
 /* Home: hero ---------------------------------------------------------------- */
 
+/* The church itself, edge to edge, with its name. The shade keeps the white
+   type above 4.5:1 on every part of the photograph, in both colour schemes. */
 .hero {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-  align-items: center;
-  gap: clamp(2rem, 5vw, 5rem);
-  padding-block: clamp(2rem, 5vw, 4rem) clamp(2.5rem, 6vw, 5rem);
+  align-items: end;
+  min-height: clamp(30rem, 86svh, 56rem);
+  overflow: hidden;
+  isolation: isolate;
+  background: #1d2430;
+  color: #fff;
+}
+
+.hero__photo,
+.hero__shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__photo {
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+.hero__shade {
+  background:
+    linear-gradient(to top, rgb(10 14 22 / 0.88) 0%, rgb(10 14 22 / 0.62) 32%, rgb(10 14 22 / 0.18) 62%, rgb(10 14 22 / 0) 80%),
+    linear-gradient(to bottom, rgb(10 14 22 / 0.35), rgb(10 14 22 / 0) 22%);
+}
+
+.hero__content {
+  padding-block: 6rem clamp(2.5rem, 7vw, 5rem);
 }
 
 .hero__kicker {
-  margin-bottom: 1rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
   font-weight: 650;
-  color: var(--label);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-.hero h1 {
-  font-size: clamp(2.75rem, 1.4rem + 5.6vw, 5.5rem);
-  line-height: 1;
+.hero__title {
+  max-width: 9em;
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 1.2rem + 6vw, 6.25rem);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: #fff;
+  text-wrap: balance;
+  text-shadow: 0 2px 24px rgb(0 0 0 / 0.35);
 }
 
-.hero .lead {
-  margin-top: 1.5rem;
+.hero__place {
+  margin: 1.1rem 0 0;
+  font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.3rem);
+  color: #fff;
 }
 
-.hero .actions {
-  margin-top: 2rem;
+.hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  margin: 2rem 0 0;
 }
 
-.hero__figure {
-  justify-self: end;
-  width: min(100%, 30rem);
+.hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgb(255 255 255 / 0.5);
+  text-underline-offset: 0.3em;
 }
 
-/* The photograph is framed by a keel arch, the outline of the church's own
-   gables and windows. Browsers without masks fall back to a rounded arch. */
-.hero__photo {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  border-radius: 50% 50% var(--radius-l) var(--radius-l) / 32% 32% var(--radius-l) var(--radius-l);
-  object-fit: cover;
-  object-position: 58% 50%;
+.hero__link:hover,
+.hero__link:focus-visible {
+  color: #fff;
+  text-decoration-color: currentColor;
 }
 
-@supports (mask-image: url('x.svg')) or (-webkit-mask-image: url('x.svg')) {
-  .hero__photo {
-    border-radius: 0;
-    -webkit-mask: url('../img/arch-mask.svg') center / 100% 100% no-repeat;
-    mask: url('../img/arch-mask.svg') center / 100% 100% no-repeat;
-  }
-}
-
-@media (max-width: 54rem) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero__figure {
-    justify-self: start;
-    width: min(70%, 18rem);
-    order: -1;
-  }
-
-  .hero__photo {
-    aspect-ratio: 1;
-  }
+.hero__link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
 }
 
 /* One arrival moment on the home page; nothing else animates on its own. */
-@media (prefers-reduced-motion: no-preference) {
-  .hero__figure {
-    animation: hero-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  }
-
-  .hero__copy > * {
-    animation: hero-fade 0.7s ease-out both;
-  }
-
-  .hero__copy > :nth-child(2) {
-    animation-delay: 0.08s;
-  }
-
-  .hero__copy > :nth-child(3) {
-    animation-delay: 0.16s;
-  }
-
-  .hero__copy > :nth-child(4) {
-    animation-delay: 0.24s;
+@media (max-width: 40rem) {
+  .hero__photo {
+    object-position: 60% 40%;
   }
 }
 
-@keyframes hero-rise {
+@media (prefers-reduced-motion: no-preference) {
+  .hero__photo {
+    animation: hero-settle 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .hero__content > * {
+    animation: hero-fade 0.8s ease-out both;
+  }
+
+  .hero__content > :nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .hero__content > :nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .hero__content > :nth-child(4) {
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes hero-settle {
   from {
-    opacity: 0;
-    transform: translateY(2rem) scale(0.97);
+    transform: scale(1.06);
   }
 }
 
@@ -100,6 +134,87 @@
   from {
     opacity: 0;
     transform: translateY(0.75rem);
+  }
+}
+
+/* Home: photographs of parish life ----------------------------------------- */
+
+.home-photos {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem) 0;
+}
+
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: clamp(9rem, 16vw, 13rem);
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mosaic__item:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.mosaic__item a {
+  position: relative;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-m);
+  background: var(--surface-tint);
+  color: #fff;
+}
+
+.mosaic__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.mosaic__caption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 2rem 0.9rem 0.7rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #fff;
+  background: linear-gradient(to top, rgb(10 14 22 / 0.85), rgb(10 14 22 / 0));
+}
+
+.mosaic__item a:hover img,
+.mosaic__item a:focus-visible img {
+  transform: scale(1.04);
+}
+
+.mosaic__item a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+@media (max-width: 40rem) {
+  .mosaic {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 9rem;
+  }
+
+  .mosaic__item:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .mosaic__item:nth-child(n + 4) {
+    grid-row: span 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mosaic__item img {
+    transition: none;
   }
 }
 

@@ -1,26 +1,62 @@
 import { upcomingEvents } from '../../../assets/js/domain.js';
-import { html, attrs, lines } from '../html.mjs';
+import { html, attrs } from '../html.mjs';
 import { icon } from '../icons.mjs';
-import { churchImage, copyButton, externalLink, phoneLink, scheduleData, scheduleStatus, serviceRow, siteLink } from '../components.mjs';
+import { copyButton, externalLink, phoneLink, scheduleData, scheduleStatus, serviceRow, siteLink } from '../components.mjs';
 
 /** Rows rendered into the page; the browser shows the first few that are still ahead. */
 const RENDERED_SERVICES = 8;
 const VISIBLE_SERVICES = 4;
 
+/**
+ * The church itself opens the site: a full-width photograph with its name.
+ * No slogan; the two links lead to what visitors look for first.
+ */
 function hero(site, lang, t) {
-  return html`<section class="hero shell">
-    <div class="hero__copy">
-      <p class="hero__kicker">${t.denomination}</p>
-      <h1>${lines(t.hero)}</h1>
-      <p class="lead">${t.heroIntro}</p>
-      <div class="actions">
-        ${siteLink(site, site.route(lang, 'schedule'), html`${icon('calendar')}${t.allServices}`, 'button')}
-        ${siteLink(site, site.route(lang, 'contacts'), html`${icon('pin')}${t.directions}`, 'button button--quiet')}
-      </div>
+  const { hero: sizes } = site.photos;
+  const largest = sizes.at(-1);
+  return html`<section class="hero" aria-labelledby="hero-title">
+    <img${attrs({
+      class: 'hero__photo',
+      src: site.url(`/${sizes[1].file}`),
+      srcset: sizes.map(size => `${site.url(`/${size.file}`)} ${size.width}w`).join(', '),
+      sizes: '100vw',
+      width: largest.width,
+      height: largest.height,
+      fetchpriority: 'high',
+      decoding: 'async',
+      alt: t.photo
+    })}>
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="shell hero__content">
+      <p class="hero__kicker">${t.heroKicker}</p>
+      <h1 id="hero-title" class="hero__title">${t.name}</h1>
+      <p class="hero__place">${t.heroPlace}</p>
+      <p class="hero__links">
+        ${siteLink(site, site.route(lang, 'schedule'), html`${icon('calendar')}${t.allServices}`, 'hero__link')}
+        ${siteLink(site, site.route(lang, 'contacts'), html`${icon('pin')}${t.directions}`, 'hero__link')}
+      </p>
     </div>
-    <figure class="hero__figure">
-      ${churchImage(site, t, { className: 'hero__photo', sizes: '(max-width: 860px) 100vw, 48vw', eager: true })}
-    </figure>
+  </section>`;
+}
+
+/** A few photographs of parish life, leading to the gallery. */
+function photos(site, lang, t) {
+  const byId = new Map(site.photos.gallery.map(photo => [photo.id, photo]));
+  const chosen = site.photos.homeMosaic.map(id => byId.get(id));
+  if (chosen.some(photo => !photo)) throw new Error('photos.json: homeMosaic names a photo that is not in the gallery');
+  return html`<section class="shell home-photos" aria-labelledby="photos-title">
+    <div class="section-head">
+      <h2 id="photos-title">${t.gallery}</h2>
+      ${siteLink(site, site.route(lang, 'gallery'), html`${t.allPhotos}${icon('arrow-right')}`, 'link link--arrow')}
+    </div>
+    <ul class="mosaic">
+      ${chosen.map((photo, index) => html`<li class="mosaic__item">
+        <a href="${site.url(site.route(lang, 'gallery'))}">
+          <img${attrs({ src: site.url(`/${photo.thumb}`), srcset: `${site.url(`/${photo.thumb}`)} ${photo.thumbWidth}w, ${site.url(`/${photo.web}`)} ${photo.width}w`, sizes: index === 0 ? '(max-width: 40rem) 100vw, 50vw' : '(max-width: 40rem) 50vw, 25vw', width: photo.thumbWidth, height: photo.thumbHeight, loading: 'lazy', decoding: 'async', alt: photo.caption[lang] })}>
+          <span class="mosaic__caption">${photo.caption[lang]}</span>
+        </a>
+      </li>`)}
+    </ul>
   </section>`;
 }
 
@@ -100,5 +136,5 @@ function support(site, lang, t) {
 }
 
 export function homePage(site, lang, t) {
-  return html`${hero(site, lang, t)}${services(site, lang, t)}${visit(site, lang, t)}${explore(site, lang, t)}${support(site, lang, t)}`;
+  return html`${hero(site, lang, t)}${services(site, lang, t)}${photos(site, lang, t)}${visit(site, lang, t)}${explore(site, lang, t)}${support(site, lang, t)}`;
 }
