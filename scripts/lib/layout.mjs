@@ -1,7 +1,7 @@
 // The document shell: <head> metadata, header, footer and shared dialogs.
 
 import { html, attrs, raw } from './html.mjs';
-import { icon, crossMark } from './icons.mjs';
+import { icon } from './icons.mjs';
 import { externalLink, siteLink } from './components.mjs';
 
 /**
@@ -28,7 +28,7 @@ function header(site, t, lang, uiLocale, pageId, languageTargets) {
   return html`<header class="site-header" lang="${uiLocale}" data-header>
     <div class="shell site-header__bar">
       <a class="brand" href="${site.url(site.route(uiLocale, 'home'))}"${attrs({ 'aria-current': pageId === 'home' ? 'page' : null })}>
-        ${crossMark}
+        <img class="brand__mark" src="${site.url('/assets/img/logo-128.webp')}" srcset="${site.url('/assets/img/logo-128.webp')} 1x, ${site.url('/assets/img/logo-256.webp')} 2x" width="52" height="52" alt="">
         <span class="brand__text"><span class="brand__name">${t.name}</span><span class="brand__place">${t.place}</span></span>
       </a>
       <nav class="lang-switch" aria-label="${t.languages}">

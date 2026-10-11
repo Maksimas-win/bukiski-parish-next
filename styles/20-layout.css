@@ -30,10 +30,9 @@
 
 .brand__mark {
   flex: none;
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 3.5;
-  stroke-linecap: square;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
 }
 
 .brand__text {
@@ -231,8 +230,8 @@
   }
 
   .brand__mark {
-    width: 22px;
-    height: 30px;
+    width: 42px;
+    height: 42px;
   }
 
   .lang-switch a {

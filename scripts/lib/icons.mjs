@@ -39,4 +39,3 @@ export function icon(name) {
 }
 
 /** The three-bar Orthodox cross used as the site mark. */
-export const crossMark = raw('<svg class="brand__mark" viewBox="0 0 48 64" width="27" height="36" aria-hidden="true" focusable="false"><path d="M24 3v56M15 14h18M7 26h34M15 42l18 9"/></svg>');
