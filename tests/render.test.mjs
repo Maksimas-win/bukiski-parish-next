@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { html, raw, attrs, lines } from '../scripts/lib/html.mjs';
 import { renderBlocks } from '../scripts/lib/pages/article.mjs';
-import { robots, oldDomainHtaccess, htaccess } from '../scripts/lib/outputs.mjs';
+import { robots, orgDomainHtaccess, htaccess } from '../scripts/lib/outputs.mjs';
 
 const text = fragment => html`${fragment}`.value;
 
@@ -60,11 +60,11 @@ test('Production robots.txt lets crawlers reach noindex pages; previews block ev
 
 test('Host configuration is derived from committed settings', () => {
   const redirects = [{ from: '/', to: '/ru/' }, { from: '/podat-zapisku', to: '/ru/notes.html' }];
-  const preview = { base: '/bukiski-parish-next', productionOrigin: 'https://bukiski-hram.org', documentDelivery: 'direct' };
-  const old = oldDomainHtaccess(preview, redirects);
-  assert.match(old, /RewriteRule \^\/\?\$ https:\/\/bukiski-hram\.org\/ru\/ \[R=301,L,NE\]/);
-  assert.match(old, /RewriteRule \^podat-zapisku\/\?\$ https:\/\/bukiski-hram\.org\/ru\/notes\.html \[R=301,L,NE\]/);
-  assert.doesNotMatch(old, /bukiski-parish-next/);
+  const preview = { base: '/bukiski-parish-next', productionOrigin: 'https://bukiski-hram.net', documentDelivery: 'direct', settings: {} };
+  const org = orgDomainHtaccess({ ...preview, productionOrigin: 'https://bukiski-hram.net' });
+  assert.match(org, /RewriteRule \^\(\.\*\)\$ https:\/\/bukiski-hram\.net\/\$1 \[R=301,L,NE\]/);
+  assert.doesNotMatch(org, /bukiski-parish-next/);
+  assert.throws(() => orgDomainHtaccess({ productionOrigin: 'https://bukiski-hram.org' }));
 
   const current = htaccess(preview, redirects);
   assert.match(current, /RewriteRule \^podat-zapisku\/\?\$ \/bukiski-parish-next\/ru\/notes\.html \[R=301,L,NE\]/);

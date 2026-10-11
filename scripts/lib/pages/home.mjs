@@ -62,13 +62,15 @@ function visit(site, lang, t) {
         ${externalLink(t, routeUrl, t.route, 'button')}
         ${phoneLink(site, t, 'button button--quiet')}
       </div>
-      <p class="hint">${t.mapPrivacy}</p>
+      <p class="hint">${t.openHours.replace('{time}', settings.openFrom)}</p>
+      <h3 class="visit-card__social">${t.social}</h3>
+      <p class="chips">${settings.social.map(item => externalLink(t, item.url, item.label, 'chip chip--link'))}</p>
     </aside>
   </section>`;
 }
 
 function explore(site, lang, t) {
-  const cards = [['history', 'historyTeaser'], ['notes', 'notesTeaser'], ['library', 'libraryTeaser']];
+  const cards = [['notes', 'notesTeaser'], ['history', 'historyTeaser'], ['gallery', 'galleryTeaser'], ['library', 'libraryTeaser']];
   return html`<section class="shell explore" aria-labelledby="explore-title">
     <div class="section-head">
       <div>

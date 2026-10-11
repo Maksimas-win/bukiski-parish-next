@@ -8,12 +8,12 @@
 import { createHash } from 'node:crypto';
 import { CORE_PAGES } from './site.mjs';
 
+// The two history articles of bukiski-hram.net stay full articles in the library;
+// the history page links to them.
 const OLD_MAIN_SECTIONS = {
   '/': 'home',
   '/raspisanie-bogosluzhenij': 'schedule',
   '/kontaktai-hram-rozhdestva-hristova': 'contacts',
-  '/o-nashem-hrame': 'history',
-  '/istoriya-o-hrame': 'history',
   '/podat-zapisku': 'notes',
   '/poleznoe-chtenie': 'library',
   '/naudingas-skaitymas': 'library',

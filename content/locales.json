@@ -6,11 +6,11 @@
     "home": "Главная",
     "schedule": "Расписание",
     "history": "О храме",
-    "sacraments": "Таинства",
+    "sacraments": "Таинства и требы",
     "news": "Жизнь прихода",
     "library": "Библиотека",
     "contacts": "Контакты",
-    "notes": "Подготовить записку",
+    "notes": "Подать записку",
     "support": "Помочь приходу",
     "privacy": "Конфиденциальность",
     "skip": "Перейти к содержанию",
@@ -47,15 +47,25 @@
     "discover": "Приход рядом с вами",
     "discoverIntro": "Для молитвы, знакомства и добрых дел",
     "historyTeaser": "Память места, восстановление храма и возвращение приходской жизни.",
-    "notesTeaser": "Подготовьте и распечатайте имена для передачи в храме.",
+    "notesTeaser": "Подайте записку онлайн или подготовьте её к печати.",
     "libraryTeaser": "Сохранённые статьи о вере, богослужении и христианской жизни.",
     "historyHeading": "Храм, к которому возвращаются",
     "historyIntro": "История храма в Букишках связана с семьёй Божеряновых, годами запустения и трудом людей, вернувших святыню к жизни.",
     "timeline": [
       [
-        "XIX век",
-        "Начало истории",
-        "Основание храма связано с семьёй Божеряновых. Точная дата строительства требует дополнительной архивной проверки."
+        "1866",
+        "Имение Букишки",
+        "Прасковья Николаевна Божерянова приобретает имение Букишки, позднее признанное родовым имением семьи."
+      ],
+      [
+        "Вторая половина XIX века",
+        "Строительство храма",
+        "Храм возведён по замыслу генерала Александра Михайловича Божерянова и освящён в честь Покрова Пресвятой Богородицы. Точная дата строительства требует архивной проверки."
+      ],
+      [
+        "XX век",
+        "Годы забвения",
+        "После революции храм был закрыт, родовая усыпальница осквернена, а в советское время здание использовали как склад."
       ],
       [
         "2002",
@@ -77,7 +87,7 @@
     "allLanguages": "Все языки",
     "results": "Найдено материалов",
     "noResults": "Ничего не найдено. Попробуйте другое слово или язык.",
-    "sacramentsIntro": "Подготовка к таинствам начинается с разговора со священником. Обстоятельства каждого человека важны.",
+    "sacramentsIntro": "Записки о здравии и упокоении, поминовения на Литургии и требы по согласованию со священником. Подготовка к таинствам начинается с разговора со священником.",
     "sacramentItems": [
       [
         "Крещение",
@@ -102,11 +112,11 @@
     "map": "Открыть карту",
     "mapPrivacy": "Карта откроется на внешнем сайте только после нажатия.",
     "transport": "Общественный транспорт",
-    "transportIntro": "Проверьте маршруты и время отправления у перевозчика: расписание может меняться.",
+    "transportIntro": "Маршруты указаны по данным прежнего сайта прихода. Перед поездкой проверьте расписание у перевозчика: оно может меняться.",
     "entryAccess": "Вход в храм и помощь при посещении",
     "entryAccessText": "У входа в храм есть ступени. Если вам трудно по ним подниматься или вы пользуетесь инвалидной коляской, позвоните в приход перед визитом и уточните, как попасть внутрь. Информацию о пандусе и входе без ступеней ещё нужно подтвердить.",
     "saveContact": "Сохранить контакт (.vcf)",
-    "noteIntro": "Подготовьте записку дома и передайте её в храме. Имена обрабатываются только в этой вкладке: сайт их не отправляет и не сохраняет.",
+    "noteIntro": "Напишите имена — записку можно отправить в приход онлайн, распечатать или передать в храме.",
     "noteType": "Вид записки",
     "living": "О здравии",
     "departed": "Об упокоении",
@@ -117,8 +127,8 @@
     "noteClear": "Очистить имена",
     "noteReady": "Записка подготовлена. Она не отправлена в приход.",
     "noteCleared": "Имена очищены.",
-    "noteLocal": "Подготовка на вашем устройстве",
-    "noteNoJs": "Для подготовки записки включите JavaScript или напишите имена на бумаге и передайте их в храме.",
+    "noteLocal": "Записка о здравии или об упокоении",
+    "noteNoJs": "Для подачи записки онлайн включите JavaScript. Можно также написать имена на бумаге и передать их в храме.",
     "supportIntro": "Ваша помощь поддерживает повседневную жизнь храма. Реквизиты взяты с приходского сайта; перед переводом проверьте получателя в банке.",
     "recipient": "Получатель",
     "bank": "Банковский счёт",
@@ -133,11 +143,11 @@
       ],
       [
         "Записки",
-        "Имена остаются в памяти вкладки. Очистите форму после использования. Скачанный файл и распечатка остаются под вашим контролем. Передача записок через интернет в этой версии не включена."
+        "Если вы нажимаете «Отправить», введённые имена, ваше имя, e-mail и пояснение передаются приходу через сервис Formspree (Formspree, Inc., США) и приходят на почту прихода. Без нажатия имена остаются только в этой вкладке и стираются, когда вы уходите со страницы. Сам сайт записки не хранит. Распечатка и скачанный файл остаются у вас."
       ],
       [
         "Внешние ссылки",
-        "Карты, календарь, транспортные сайты и банк могут обрабатывать данные по своим правилам. Переход выполняется только по вашему нажатию."
+        "Карты, календарь, транспортные сайты, соцсети, WhatsApp и банк обрабатывают данные по своим правилам. Переход выполняется только по вашему нажатию."
       ],
       [
         "Технические данные",
@@ -197,7 +207,7 @@
     "notePreview": "Так будет выглядеть записка",
     "notePreviewEmpty": "Введите имена — записка появится здесь.",
     "noteCopy": "Скопировать текст",
-    "noteNotSent": "Сайт не отправляет записку в приход. Распечатайте её или перепишите и передайте в храме.",
+    "noteNotSent": "Имена уходят в приход только после нажатия «Отправить». Распечатать или скопировать записку можно и без отправки.",
     "readingTime": "≈ {n} мин чтения",
     "published": "Опубликовано",
     "savedOn": "Сохранено",
@@ -213,7 +223,84 @@
     "imageNext": "Следующее изображение",
     "searchFullText": "Искать и в тексте статей",
     "searchLoading": "Загружаем тексты статей…",
-    "searchUnavailable": "Не удалось загрузить тексты. Поиск идёт по заголовкам и описаниям."
+    "searchUnavailable": "Не удалось загрузить тексты. Поиск идёт по заголовкам и описаниям.",
+    "commemorations": "Поминовения на Литургии",
+    "commemorationsIntro": "Поминовения совершаются за богослужением. Если нужно особое время или обстоятельства, лучше заранее связаться со священником.",
+    "commemorationItems": [
+      [
+        "Проскомидия",
+        "Поминовение на Божественной литургии о здравии и об упокоении."
+      ],
+      [
+        "Обедня",
+        "Поминовение на Литургии по запискам."
+      ],
+      [
+        "Сорокоуст",
+        "Поминовение в течение 40 дней."
+      ],
+      [
+        "Полгода",
+        "Длительное поминовение на проскомидии в течение 6 месяцев."
+      ],
+      [
+        "Год",
+        "Длительное поминовение на проскомидии в течение 12 месяцев."
+      ]
+    ],
+    "byArrangement": "По предварительному согласованию",
+    "byArrangementIntro": "Эти требы совершаются по договорённости со священником. Общая панихида в дни поминовения совершается по расписанию.",
+    "byArrangementItems": [
+      "Крещение",
+      "Венчание",
+      "Отпевание",
+      "Заочное отпевание",
+      "Соборование",
+      "Освящение дома",
+      "Освящение могилы",
+      "Молебен",
+      "Панихида"
+    ],
+    "rector": "Настоятель храма",
+    "rectorContact": "Поговорить со священником можно после службы в храме или по телефону.",
+    "rectorSite": "Личный сайт",
+    "whatsapp": "Написать в WhatsApp",
+    "social": "Приход в соцсетях",
+    "socialIntro": "Будьте в курсе приходских новостей.",
+    "openHours": "В дни богослужений храм открыт с {time}.",
+    "byCar": "На автомобиле",
+    "byCarText": "От ТЦ BIG (Ukmergės g. 369) дорога до храма занимает около 6 минут, от района Фабийонишкес — около 5 км.",
+    "buses": "Автобусы",
+    "busStop": "Остановка",
+    "subscribe": "Подписаться на календарь",
+    "subscribeGoogle": "Google Календарь",
+    "subscribeOther": "Apple, Outlook и другие",
+    "subscribeNote": "Подписка обновляется сама, когда приход меняет календарь.",
+    "galleryIntro": "Храм Рождества Христова в Букишках в разное время года.",
+    "galleryCaptions": [
+      "Храм зимой",
+      "Иконостас",
+      "Храм летом",
+      "Пасхальное убранство храма",
+      "Вид сверху",
+      "Купола храма"
+    ],
+    "galleryTeaser": "Храм снаружи и внутри, летом и зимой.",
+    "historyMore": "Подробнее об истории",
+    "timelineSource": "По материалам статей прихода «Храм в Букишках — история веры и памяти» и «Псковские и Виленские помещики Божеряновы».",
+    "noteSender": "Ваше имя (не публикуется)",
+    "noteSenderPlaceholder": "Например: Иван или раба Божия Мария",
+    "noteEmail": "E-mail для ответа (необязательно)",
+    "noteComment": "Пояснение (необязательно)",
+    "noteCommentPlaceholder": "Годовщина, благодарение, нужда, на ближайшую службу…",
+    "noteConsent": "Согласен(на) на обработку указанных данных для подачи записки.",
+    "noteConsentRequired": "Чтобы отправить записку, отметьте согласие на обработку данных.",
+    "noteSend": "Отправить записку в приход",
+    "noteSending": "Отправляем записку…",
+    "noteSent": "Записка отправлена в приход. Спаси Господи!",
+    "noteSendError": "Не удалось отправить записку. Проверьте подключение к интернету и попробуйте ещё раз или позвоните в приход.",
+    "noteDonation": "Пожертвование — по возможности.",
+    "footerSocial": "Мы в соцсетях"
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -222,11 +309,11 @@
     "home": "Pradžia",
     "schedule": "Pamaldos",
     "history": "Apie cerkvę",
-    "sacraments": "Sakramentai",
+    "sacraments": "Sakramentai ir apeigos",
     "news": "Parapijos gyvenimas",
     "library": "Skaitiniai",
     "contacts": "Kontaktai",
-    "notes": "Parengti maldos raštelį",
+    "notes": "Pateikti maldos raštelį",
     "support": "Parama parapijai",
     "privacy": "Privatumas",
     "skip": "Pereiti prie turinio",
@@ -263,25 +350,35 @@
     "discover": "Parapija šalia jūsų",
     "discoverIntro": "Maldai, pažinčiai ir geriems darbams",
     "historyTeaser": "Vietos atmintis, cerkvės atkūrimas ir parapijos gyvenimo atgimimas.",
-    "notesTeaser": "Parenkite ir atsispausdinkite vardus, kuriuos perduosite cerkvėje.",
+    "notesTeaser": "Pateikite raštelį internetu arba paruoškite jį spausdinti.",
     "libraryTeaser": "Išsaugoti straipsniai apie tikėjimą, pamaldas ir krikščionišką gyvenimą.",
     "historyHeading": "Cerkvė, į kurią sugrįžtama",
     "historyIntro": "Bukiškio cerkvės istorija susijusi su Božerianovų šeima, apleidimo metais ir žmonėmis, sugrąžinusiais jai gyvenimą.",
     "timeline": [
       [
-        "XIX a.",
-        "Istorijos pradžia",
-        "Cerkvės įkūrimas siejamas su Božerianovų šeima. Tiksli statybos data dar tikslintina archyviniuose šaltiniuose."
+        "1866",
+        "Bukiškio dvaras",
+        "Praskovja Nikolajevna Božerianova įsigyja Bukiškio dvarą, vėliau pripažintą šeimos giminės dvaru."
+      ],
+      [
+        "XIX a. antroji pusė",
+        "Cerkvės statyba",
+        "Cerkvė pastatyta generolo Aleksandro Michailovičiaus Božerianovo sumanymu ir pašventinta Švenčiausiosios Dievo Gimdytojos Globos garbei. Tiksli statybos data dar turi būti patikrinta archyvuose."
+      ],
+      [
+        "XX a.",
+        "Užmaršties metai",
+        "Po revoliucijos cerkvė buvo uždaryta, giminės kapavietė išniekinta, o sovietmečiu pastatas naudotas kaip sandėlis."
       ],
       [
         "2002",
-        "Atkūrimas",
-        "Prasidėjo cerkvės atkūrimo darbai."
+        "Atstatymas",
+        "Prasidėjo cerkvės atstatymo darbai."
       ],
       [
         "2011",
-        "Pamaldų sugrįžimas",
-        "Vasarą cerkvėje vėl pradėtos pamaldos."
+        "Pamaldų atgimimas",
+        "Vasarą atsinaujino liturginis gyvenimas."
       ]
     ],
     "historicalSource": "Šaltinis: „Православная Литва“, 2025 m. sausis, p. 8",
@@ -293,7 +390,7 @@
     "allLanguages": "Visos kalbos",
     "results": "Rasta tekstų",
     "noResults": "Nieko nerasta. Pabandykite kitą žodį arba kalbą.",
-    "sacramentsIntro": "Pasirengimas sakramentams prasideda pokalbiu su kunigu. Svarbios kiekvieno žmogaus aplinkybės.",
+    "sacramentsIntro": "Maldos rašteliai už gyvuosius ir mirusiuosius, minėjimai per Liturgiją ir apeigos, suderintos su kunigu. Pasiruošimas sakramentams prasideda pokalbiu su kunigu.",
     "sacramentItems": [
       [
         "Krikštas",
@@ -318,11 +415,11 @@
     "map": "Atverti žemėlapį",
     "mapPrivacy": "Žemėlapis išorinėje svetainėje atsidarys tik paspaudus nuorodą.",
     "transport": "Viešasis transportas",
-    "transportIntro": "Maršrutus ir išvykimo laiką tikrinkite vežėjo svetainėje: tvarkaraščiai gali keistis.",
+    "transportIntro": "Maršrutai nurodyti pagal ankstesnę parapijos svetainę. Prieš kelionę patikrinkite tvarkaraštį pas vežėją: jis gali keistis.",
     "entryAccess": "Patekimas į cerkvę",
     "entryAccessText": "Prie įėjimo į cerkvę yra laipteliai. Jei jums sunku jais lipti arba naudojatės neįgaliojo vežimėliu, prieš atvykdami paskambinkite į parapiją ir pasiteiraukite, kaip patekti į vidų. Informaciją apie pandusą ir įėjimą be laiptelių dar reikia patvirtinti.",
     "saveContact": "Išsaugoti kontaktą (.vcf)",
-    "noteIntro": "Parenkite maldos raštelį namuose ir perduokite jį cerkvėje. Vardai tvarkomi tik šiame skirtuke: svetainė jų nesiunčia ir neišsaugo.",
+    "noteIntro": "Įrašykite vardus – raštelį galima išsiųsti parapijai internetu, atsispausdinti arba perduoti cerkvėje.",
     "noteType": "Raštelio rūšis",
     "living": "Už gyvuosius",
     "departed": "Už mirusiuosius",
@@ -333,8 +430,8 @@
     "noteClear": "Išvalyti vardus",
     "noteReady": "Raštelis parengtas. Jis neišsiųstas parapijai.",
     "noteCleared": "Vardai išvalyti.",
-    "noteLocal": "Parengiama jūsų įrenginyje",
-    "noteNoJs": "Norėdami parengti raštelį, įjunkite JavaScript arba užrašykite vardus ant popieriaus ir perduokite cerkvėje.",
+    "noteLocal": "Raštelis už gyvuosius arba mirusiuosius",
+    "noteNoJs": "Norėdami pateikti raštelį internetu, įjunkite JavaScript. Taip pat galite užrašyti vardus ant popieriaus ir perduoti juos cerkvėje.",
     "supportIntro": "Jūsų parama padeda kasdieniam cerkvės gyvenimui. Rekvizitai pateikti pagal parapijos svetainę; prieš pervesdami patikrinkite gavėją banke.",
     "recipient": "Gavėjas",
     "bank": "Banko sąskaita",
@@ -349,11 +446,11 @@
       ],
       [
         "Maldos rašteliai",
-        "Vardai lieka skirtuko atmintyje. Baigę išvalykite formą. Atsisiųstas failas ir spaudinys lieka jūsų žinioje. Raštelių siuntimas internetu šioje versijoje neįjungtas."
+        "Paspaudus „Išsiųsti“, įvesti vardai, jūsų vardas, el. paštas ir paaiškinimas per paslaugą Formspree (Formspree, Inc., JAV) perduodami parapijai ir gaunami parapijos el. paštu. Nepaspaudus vardai lieka tik šiame skirtuke ir ištrinami išėjus iš puslapio. Pati svetainė raštelių nesaugo. Spaudinys ir atsisiųstas failas lieka jums."
       ],
       [
         "Išorinės nuorodos",
-        "Žemėlapių, kalendoriaus, transporto ir bankų svetainės gali tvarkyti duomenis pagal savo taisykles. Į jas pereinama tik jums paspaudus."
+        "Žemėlapių, kalendoriaus, transporto, socialinių tinklų, WhatsApp ir bankų svetainės duomenis tvarko pagal savo taisykles. Į jas pereinama tik jums paspaudus."
       ],
       [
         "Techniniai duomenys",
@@ -413,7 +510,7 @@
     "notePreview": "Taip atrodys raštelis",
     "notePreviewEmpty": "Įrašykite vardus – raštelis atsiras čia.",
     "noteCopy": "Kopijuoti tekstą",
-    "noteNotSent": "Svetainė raštelio parapijai nesiunčia. Atsispausdinkite jį arba persirašykite ir perduokite cerkvėje.",
+    "noteNotSent": "Vardai parapijai išsiunčiami tik paspaudus „Išsiųsti“. Atsispausdinti ar nukopijuoti raštelį galima ir neišsiuntus.",
     "readingTime": "≈ {n} min. skaitymo",
     "published": "Paskelbta",
     "savedOn": "Išsaugota",
@@ -429,7 +526,84 @@
     "imageNext": "Kita nuotrauka",
     "searchFullText": "Ieškoti ir straipsnių tekste",
     "searchLoading": "Įkeliami straipsnių tekstai…",
-    "searchUnavailable": "Nepavyko įkelti tekstų. Ieškoma antraštėse ir aprašymuose."
+    "searchUnavailable": "Nepavyko įkelti tekstų. Ieškoma antraštėse ir aprašymuose.",
+    "commemorations": "Minėjimai per Liturgiją",
+    "commemorationsIntro": "Minėjimai atliekami per pamaldas. Jei reikia ypatingo laiko ar aplinkybių, geriau iš anksto susisiekti su kunigu.",
+    "commemorationItems": [
+      [
+        "Proskomidija",
+        "Minėjimas per Dieviškąją liturgiją už gyvuosius ir mirusiuosius."
+      ],
+      [
+        "Liturgija",
+        "Minėjimas per Liturgiją pagal raštelius."
+      ],
+      [
+        "Sorokoustas",
+        "Minėjimas 40 dienų."
+      ],
+      [
+        "Pusmetis",
+        "Ilgalaikis minėjimas per proskomidiją 6 mėnesius."
+      ],
+      [
+        "Metai",
+        "Ilgalaikis minėjimas per proskomidiją 12 mėnesių."
+      ]
+    ],
+    "byArrangement": "Iš anksto suderinus",
+    "byArrangementIntro": "Šios apeigos atliekamos susitarus su kunigu. Bendra panichida minėjimo dienomis vyksta pagal tvarkaraštį.",
+    "byArrangementItems": [
+      "Krikštas",
+      "Santuoka (vainikavimas)",
+      "Laidojimo apeigos",
+      "Laidojimo apeigos be velionio",
+      "Ligonių patepimas",
+      "Namų šventinimas",
+      "Kapo šventinimas",
+      "Molebenas",
+      "Panichida"
+    ],
+    "rector": "Cerkvės klebonas",
+    "rectorContact": "Su kunigu galima pasikalbėti po pamaldų cerkvėje arba telefonu.",
+    "rectorSite": "Asmeninė svetainė",
+    "whatsapp": "Rašyti per WhatsApp",
+    "social": "Parapija socialiniuose tinkluose",
+    "socialIntro": "Sekite parapijos naujienas.",
+    "openHours": "Pamaldų dienomis cerkvė atidaryta nuo {time}.",
+    "byCar": "Automobiliu",
+    "byCarText": "Nuo prekybos centro BIG (Ukmergės g. 369) iki cerkvės – apie 6 minutes, nuo Fabijoniškių – apie 5 km.",
+    "buses": "Autobusai",
+    "busStop": "Stotelė",
+    "subscribe": "Prenumeruoti kalendorių",
+    "subscribeGoogle": "Google kalendorius",
+    "subscribeOther": "Apple, Outlook ir kiti",
+    "subscribeNote": "Prenumerata atsinaujina pati, kai parapija keičia kalendorių.",
+    "galleryIntro": "Kristaus Gimimo cerkvė Bukiškyje skirtingais metų laikais.",
+    "galleryCaptions": [
+      "Cerkvė žiemą",
+      "Ikonostasas",
+      "Cerkvė vasarą",
+      "Velykinis cerkvės papuošimas",
+      "Vaizdas iš viršaus",
+      "Cerkvės kupolai"
+    ],
+    "galleryTeaser": "Cerkvė iš lauko ir viduje, vasarą ir žiemą.",
+    "historyMore": "Daugiau apie istoriją",
+    "timelineSource": "Pagal parapijos straipsnius rusų kalba apie cerkvės istoriją ir Božerianovų giminę.",
+    "noteSender": "Jūsų vardas (neskelbiamas)",
+    "noteSenderPlaceholder": "Pavyzdžiui: Jonas arba Marija",
+    "noteEmail": "El. paštas atsakymui (neprivaloma)",
+    "noteComment": "Paaiškinimas (neprivaloma)",
+    "noteCommentPlaceholder": "Metinės, padėka, prašymas, artimiausioms pamaldoms…",
+    "noteConsent": "Sutinku, kad nurodyti duomenys būtų tvarkomi raštelio pateikimo tikslu.",
+    "noteConsentRequired": "Norėdami išsiųsti raštelį, pažymėkite sutikimą dėl duomenų tvarkymo.",
+    "noteSend": "Išsiųsti raštelį parapijai",
+    "noteSending": "Siunčiame raštelį…",
+    "noteSent": "Raštelis išsiųstas parapijai. Ačiū!",
+    "noteSendError": "Raštelio išsiųsti nepavyko. Patikrinkite interneto ryšį ir bandykite dar kartą arba paskambinkite į parapiją.",
+    "noteDonation": "Auka – pagal galimybes.",
+    "footerSocial": "Socialiniai tinklai"
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -438,11 +612,11 @@
     "home": "Home",
     "schedule": "Services",
     "history": "Our church",
-    "sacraments": "Sacraments",
+    "sacraments": "Sacraments and services",
     "news": "Parish life",
     "library": "Reading",
     "contacts": "Contact",
-    "notes": "Prepare a prayer request",
+    "notes": "Send a prayer request",
     "support": "Support the parish",
     "privacy": "Privacy",
     "skip": "Skip to content",
@@ -479,25 +653,35 @@
     "discover": "A parish close to you",
     "discoverIntro": "For prayer, discovery and acts of kindness",
     "historyTeaser": "The memory of this place, its restoration and the return of parish life.",
-    "notesTeaser": "Prepare and print names to bring to the church.",
+    "notesTeaser": "Send a prayer request online or prepare it for printing.",
     "libraryTeaser": "Preserved articles about faith, worship and Christian life.",
     "historyHeading": "A church to come home to",
     "historyIntro": "The history of the church in Bukiškis is linked to the Bozheryanov family, years of neglect and the people who brought it back to life.",
     "timeline": [
       [
-        "19th century",
-        "The early years",
-        "The founding of the church is associated with the Bozheryanov family. The exact construction date requires further archival research."
+        "1866",
+        "The Bukiškis estate",
+        "Praskovya Nikolaevna Bozheryanova buys the Bukiškis estate, later recognised as the family estate."
+      ],
+      [
+        "Second half of the 19th century",
+        "Building the church",
+        "The church is built on the initiative of General Alexander Mikhailovich Bozheryanov and consecrated in honour of the Protection of the Mother of God. The exact date of construction still needs archival confirmation."
+      ],
+      [
+        "20th century",
+        "Years of neglect",
+        "After the revolution the church was closed and the family crypt desecrated; in Soviet times the building was used as a warehouse."
       ],
       [
         "2002",
         "Restoration",
-        "Work began to restore the church."
+        "Restoration work on the church began."
       ],
       [
         "2011",
-        "Worship returns",
-        "Services resumed in the summer."
+        "Services resume",
+        "Liturgical life resumed in the summer."
       ]
     ],
     "historicalSource": "Source: Pravoslavnaya Litva, January 2025, p. 8",
@@ -509,7 +693,7 @@
     "allLanguages": "All languages",
     "results": "Results",
     "noResults": "No results. Try another word or language.",
-    "sacramentsIntro": "Preparation for the sacraments begins with a conversation with the priest. Each person’s circumstances matter.",
+    "sacramentsIntro": "Prayer requests for the living and the departed, commemorations at the Liturgy, and services arranged with the priest. Preparation for the sacraments begins with a conversation with the priest.",
     "sacramentItems": [
       [
         "Baptism",
@@ -534,11 +718,11 @@
     "map": "Open map",
     "mapPrivacy": "The map opens on an external website only when you follow the link.",
     "transport": "Public transport",
-    "transportIntro": "Check routes and departure times with the transport operator, as schedules may change.",
+    "transportIntro": "Routes are taken from the previous parish website. Check the timetable with the operator before you travel, as it may change.",
     "entryAccess": "Access to the church",
     "entryAccessText": "There are steps at the church entrance. If you find steps difficult or use a wheelchair, please call the parish before your visit to discuss access. The availability of a ramp or an entrance without steps still needs to be confirmed.",
     "saveContact": "Save contact (.vcf)",
-    "noteIntro": "Prepare a prayer request at home and bring it to the church. Names are processed only in this tab; the website does not send or save them.",
+    "noteIntro": "Write the names: you can send the request to the parish online, print it or hand it in at the church.",
     "noteType": "Prayer request type",
     "living": "For the living",
     "departed": "For the departed",
@@ -549,8 +733,8 @@
     "noteClear": "Clear names",
     "noteReady": "Your prayer request is ready. It has not been sent to the parish.",
     "noteCleared": "Names cleared.",
-    "noteLocal": "Prepared on your device",
-    "noteNoJs": "Enable JavaScript to prepare a request, or write the names on paper and bring them to the church.",
+    "noteLocal": "Prayer request for the living or the departed",
+    "noteNoJs": "To send a request online, please enable JavaScript. You can also write the names on paper and hand them in at the church.",
     "supportIntro": "Your support helps sustain the daily life of the church. These details come from the parish website; verify the recipient with your bank before transferring.",
     "recipient": "Recipient",
     "bank": "Bank account",
@@ -565,11 +749,11 @@
       ],
       [
         "Prayer requests",
-        "Names remain in tab memory. Clear the form after use. Downloaded files and printouts remain under your control. Online submission is not enabled in this version."
+        "When you press “Send”, the names, your name, email and note are passed to the parish through the Formspree service (Formspree, Inc., USA) and arrive in the parish mailbox. Until then the names stay only in this tab and are erased when you leave the page. The website itself does not store requests. Printouts and downloaded files stay with you."
       ],
       [
         "External links",
-        "Map, calendar, transport and banking websites may process data under their own policies. You leave this site only when you follow a link."
+        "Map, calendar, transport, social media, WhatsApp and banking services process data under their own rules. You reach them only by clicking."
       ],
       [
         "Technical data",
@@ -629,7 +813,7 @@
     "notePreview": "How the request will look",
     "notePreviewEmpty": "Enter names and the request will appear here.",
     "noteCopy": "Copy text",
-    "noteNotSent": "The website does not send the request to the parish. Print it or copy it out and hand it in at the church.",
+    "noteNotSent": "Names are sent to the parish only when you press “Send”. You can print or copy the request without sending it.",
     "readingTime": "≈ {n} min read",
     "published": "Published",
     "savedOn": "Saved",
@@ -645,6 +829,83 @@
     "imageNext": "Next image",
     "searchFullText": "Also search inside articles",
     "searchLoading": "Loading article text…",
-    "searchUnavailable": "Article text could not be loaded. Searching titles and descriptions."
+    "searchUnavailable": "Article text could not be loaded. Searching titles and descriptions.",
+    "commemorations": "Commemorations at the Liturgy",
+    "commemorationsIntro": "Commemorations are made during the services. If a particular time or circumstance matters, please contact the priest in advance.",
+    "commemorationItems": [
+      [
+        "Proskomedia",
+        "Commemoration of the living and the departed at the Divine Liturgy."
+      ],
+      [
+        "Liturgy",
+        "Commemoration at the Liturgy from written requests."
+      ],
+      [
+        "Sorokoust",
+        "Commemoration for 40 days."
+      ],
+      [
+        "Six months",
+        "Extended commemoration at the proskomedia for 6 months."
+      ],
+      [
+        "One year",
+        "Extended commemoration at the proskomedia for 12 months."
+      ]
+    ],
+    "byArrangement": "By prior arrangement",
+    "byArrangementIntro": "These services are performed by arrangement with the priest. The general memorial service on days of remembrance follows the schedule.",
+    "byArrangementItems": [
+      "Baptism",
+      "Wedding (Crowning)",
+      "Funeral",
+      "Funeral in absentia",
+      "Holy Unction",
+      "Blessing of a home",
+      "Blessing of a grave",
+      "Moleben (service of supplication)",
+      "Panikhida (memorial service)"
+    ],
+    "rector": "Rector of the church",
+    "rectorContact": "You can speak with the priest after a service at the church or by phone.",
+    "rectorSite": "Personal website",
+    "whatsapp": "Message on WhatsApp",
+    "social": "The parish on social media",
+    "socialIntro": "Follow the news of the parish.",
+    "openHours": "On days of services the church is open from {time}.",
+    "byCar": "By car",
+    "byCarText": "From the BIG shopping centre (Ukmergės g. 369) the drive takes about 6 minutes; from Fabijoniškės it is about 5 km.",
+    "buses": "Buses",
+    "busStop": "Stop",
+    "subscribe": "Subscribe to the calendar",
+    "subscribeGoogle": "Google Calendar",
+    "subscribeOther": "Apple, Outlook and others",
+    "subscribeNote": "A subscription updates itself whenever the parish changes the calendar.",
+    "galleryIntro": "The Church of the Nativity of Christ in Bukiškis through the seasons.",
+    "galleryCaptions": [
+      "The church in winter",
+      "The iconostasis",
+      "The church in summer",
+      "The church decorated for Pascha",
+      "View from above",
+      "The domes"
+    ],
+    "galleryTeaser": "The church inside and out, in summer and winter.",
+    "historyMore": "More about the history",
+    "timelineSource": "Based on the parish’s articles in Russian on the history of the church and the Bozheryanov family.",
+    "noteSender": "Your name (not published)",
+    "noteSenderPlaceholder": "For example: John or Mary",
+    "noteEmail": "Email for a reply (optional)",
+    "noteComment": "Note (optional)",
+    "noteCommentPlaceholder": "Anniversary, thanksgiving, a need, for the next service…",
+    "noteConsent": "I agree that the details I enter may be processed in order to submit this request.",
+    "noteConsentRequired": "To send the request, please tick the consent box.",
+    "noteSend": "Send the request to the parish",
+    "noteSending": "Sending the request…",
+    "noteSent": "The request has been sent to the parish. Thank you!",
+    "noteSendError": "The request could not be sent. Check your internet connection and try again, or call the parish.",
+    "noteDonation": "A donation is welcome, as you are able.",
+    "footerSocial": "Social media"
   }
 }

@@ -2,12 +2,26 @@
 
 import { html, attrs, raw } from './html.mjs';
 import { icon, crossMark } from './icons.mjs';
-import { siteLink } from './components.mjs';
+import { externalLink, siteLink } from './components.mjs';
 
-export const CSP = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests";
+/**
+ * Everything loads from this site. The one exception is the parish's form
+ * service, which the prayer-request page may contact when a visitor presses
+ * «Отправить»; its origin comes from settings.notes.endpoint.
+ */
+export function contentSecurityPolicy(site) {
+  const connect = ["'self'"];
+  const endpoint = site.settings.notes?.endpoint;
+  if (endpoint) {
+    const url = new URL(endpoint);
+    if (url.protocol !== 'https:' || url.username || url.password) throw new Error('settings.notes.endpoint must be an HTTPS URL without credentials');
+    connect.push(url.origin);
+  }
+  return `default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src ${connect.join(' ')}; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests`;
+}
 
 const NAVIGATION = ['schedule', 'history', 'sacraments', 'library', 'notes', 'contacts'];
-const FOOTER_NAVIGATION = ['schedule', 'notes', 'support', 'news', 'library', 'privacy'];
+const FOOTER_NAVIGATION = ['schedule', 'notes', 'sacraments', 'gallery', 'support', 'news', 'library', 'privacy'];
 const OG_LOCALES = { ru: 'ru_RU', lt: 'lt_LT', en: 'en_GB', pl: 'pl_PL', de: 'de_DE', uk: 'uk_UA' };
 
 function header(site, t, lang, uiLocale, pageId, languageTargets) {
@@ -38,6 +52,8 @@ function footer(site, t, uiLocale) {
       <div class="site-footer__about">
         <p class="site-footer__name">${t.name}</p>
         <p>${t.footerLine}</p>
+        <p class="site-footer__social" aria-label="${t.footerSocial}">${settings.social.map(item => externalLink(t, item.url, item.label))}</p>
+        <p>${externalLink(t, settings.links.church.url, settings.links.church.label[uiLocale])}</p>
       </div>
       <div>
         <h2>${t.contacts}</h2>
@@ -106,7 +122,7 @@ export function renderDocument(site, page) {
     title: fullTitle,
     siteName: t.name,
     description: description || title,
-    csp: CSP,
+    csp: contentSecurityPolicy(site),
     robots,
     canonical: site.canonical(canonicalPath),
     base: site.base,

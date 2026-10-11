@@ -23,7 +23,13 @@ const PATHS = {
   print: 'M7 8V4h10v4 M7 17H4V9h16v8h-3 M7 14h10v6H7z',
   share: 'M12 15V4 M8 8l4-4 4 4 M5 12v8h14v-8',
   clock: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M12 7v5l3 2',
-  contact: 'M5 4h14v16H5z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z M8 17a4 4 0 0 1 8 0'
+  contact: 'M5 4h14v16H5z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z M8 17a4 4 0 0 1 8 0',
+  message: 'M4 5h16v11H9l-5 4z',
+  send: 'M4 12l16-8-6 16-3-7z M11 13l9-9',
+  bus: 'M6 4h12a2 2 0 0 1 2 2v10H4V6a2 2 0 0 1 2-2z M4 11h16 M7 19v-3 M17 19v-3 M7.5 14h.01 M16.5 14h.01',
+  car: 'M5 16V11l2-5h10l2 5v5z M3 16h18 M7.5 13.5h.01 M16.5 13.5h.01 M7 16v2 M17 16v2',
+  door: 'M6 21V4h12v17 M3 21h18 M14 12h.01',
+  photo: 'M4 6h16v13H4z M4 15l5-5 4 4 3-3 4 4 M15.5 9.5h.01'
 };
 
 export function icon(name) {

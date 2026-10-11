@@ -242,12 +242,63 @@ test('Redirect targets are existing internal pages without chains', async () => 
   }
 });
 
-test('Old-domain redirects always point at the production address, never at a preview', async () => {
+test('The .org redirect file points at the production address and keeps the schedule feed', async () => {
   const target = settings.origin + settings.basePath;
-  const rules = (await read('deploy/old-domain.htaccess')).split('\n').filter(line => line.startsWith('RewriteRule'));
+  const file = await read('deploy/bukiski-hram-org.htaccess');
+  const rules = file.split('\n').filter(line => line.startsWith('RewriteRule'));
+  assert.deepEqual(rules, [`RewriteRule ^(.*)$ ${target}/$1 [R=301,L,NE]`]);
+  assert.match(file, /RewriteCond %\{REQUEST_URI\} !\^\/data\//);
+  assert.doesNotMatch(file, /github\.io/);
+});
+
+test('Old .net addresses lead to their new pages on the same host', async () => {
+  const rules = (await read('dist/.htaccess')).split('\n').filter(line => line.startsWith('RewriteRule'));
   assert.ok(rules.length > 80);
-  for (const rule of rules) assert.ok(rule.split(' ')[2].startsWith(`${target}/`), rule);
-  assert.doesNotMatch(rules.join('\n'), /github\.io/);
+  assert.ok(rules.includes(`RewriteRule ^podat-zapisku/?$ ${base}/ru/notes.html [R=301,L,NE]`));
+  assert.ok(rules.includes(`RewriteRule ^o-nashem-hrame/?$ ${base}/ru/library/o-nashem-hrame.html [R=301,L,NE]`));
+});
+
+test('Content from bukiski-hram.net is on the new site: rector, services, social links, transport, gallery', async () => {
+  const contacts = await page('/ru/contacts.html');
+  assert.ok(contacts.includes(settings.rector.name.ru));
+  assert.ok(contacts.includes(`href="${settings.whatsapp}"`));
+  for (const item of settings.social) assert.ok(contacts.includes(`href="${item.url}"`), item.url);
+  for (const bus of settings.transport.buses) assert.ok(contacts.includes(`>${bus.number}<`), bus.number);
+  assert.ok(contacts.includes(settings.openFrom));
+
+  const sacraments = await page('/ru/sacraments.html');
+  for (const term of ['Проскомидия', 'Сорокоуст', 'Заочное отпевание', 'Освящение могилы']) assert.ok(sacraments.includes(term), term);
+
+  const schedule = await page('/ru/schedule.html');
+  assert.ok(schedule.includes('href="webcal://calendar.google.com/calendar/ical/'));
+  assert.ok(schedule.includes('https://calendar.google.com/calendar/r?cid='));
+
+  const history = await page('/ru/history.html');
+  assert.ok(history.includes(`href="${base}/ru/library/o-nashem-hrame.html"`));
+  assert.ok(history.includes(`href="${base}/ru/library/istoriya-o-hrame.html"`));
+
+  for (const lang of settings.locales) {
+    const gallery = await page(`/${lang}/gallery.html`);
+    assert.equal((gallery.match(/ data-lightbox /g) || []).length, 6, lang);
+    assert.match(gallery, /<dialog class="lightbox"/);
+  }
+  const home = await page('/ru/');
+  assert.ok(home.includes(settings.links.church.url));
+});
+
+test('The prayer-request form posts only to the configured service, which is the only third party in the CSP', async () => {
+  const notes = await page('/ru/notes.html');
+  assert.ok(notes.includes(`data-notes-endpoint="${settings.notes.endpoint}"`));
+  assert.match(notes, /<input type="checkbox" name="consent" data-note-consent>/);
+  assert.match(notes, /<button type="submit"[^>]*data-note-send disabled>/);
+  assert.doesNotMatch(notes, /<form[^>]*\saction=/, 'the form must never submit natively');
+  const origin = new URL(settings.notes.endpoint).origin;
+  for (const { file, html } of pages) {
+    const csp = html.match(/http-equiv="Content-Security-Policy" content="([^"]+)"/)[1].replaceAll('&#39;', "'");
+    assert.match(csp, new RegExp(`connect-src 'self' ${origin.replace(/[.]/g, '\\.')};`), file);
+    assert.match(csp, /form-action 'none'/, file);
+    assert.doesNotMatch(csp.replace(origin, ''), /https?:/, file);
+  }
 });
 
 test('The sitemap lists only canonical, indexable pages', async () => {

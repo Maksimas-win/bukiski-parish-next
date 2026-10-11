@@ -1,14 +1,23 @@
 import { MAX_NAMES, MAX_NAME_LENGTH } from '../../../assets/js/domain.js';
 import { html, attrs } from '../html.mjs';
 import { icon } from '../icons.mjs';
-import { pageHead } from '../components.mjs';
+import { pageHead, siteLink } from '../components.mjs';
 
 /**
- * Prayer-request sheet prepared entirely in the visitor's browser tab.
- * There is deliberately no submit target: names never leave the device.
+ * Prayer request. Names stay in the visitor's tab until they press «Отправить»;
+ * only then are they sent to the parish through the form service configured in
+ * settings.notes (the same Formspree form the old bukiski-hram.net used).
+ * Printing, downloading and copying work without sending anything.
  */
 export function notesPage(site, lang, t) {
+  const { notes } = site.settings;
   const labels = attrs({
+    'data-notes-endpoint': notes.endpoint,
+    'data-notes-subject': notes.subject,
+    'data-label-sending': t.noteSending,
+    'data-label-sent': t.noteSent,
+    'data-label-send-error': t.noteSendError,
+    'data-label-consent-required': t.noteConsentRequired,
     'data-notes': true,
     'data-label-living': t.living,
     'data-label-departed': t.departed,
@@ -41,7 +50,26 @@ export function notesPage(site, lang, t) {
         <p class="field__meta"><span id="names-count" data-names-count></span></p>
         <ul class="field__errors" id="names-errors" data-names-errors aria-live="polite"></ul>
       </div>
+      <div class="field">
+        <label for="note-sender">${t.noteSender}</label>
+        <input id="note-sender" name="sender" type="text" maxlength="80" autocomplete="name" placeholder="${t.noteSenderPlaceholder}">
+      </div>
+      <div class="field">
+        <label for="note-email">${t.noteEmail}</label>
+        <input id="note-email" name="email" type="email" maxlength="120" autocomplete="email" inputmode="email" placeholder="name@example.com">
+      </div>
+      <div class="field">
+        <label for="note-comment">${t.noteComment}</label>
+        <textarea id="note-comment" name="comment" rows="3" maxlength="500" placeholder="${t.noteCommentPlaceholder}"></textarea>
+      </div>
+      <div class="visually-hidden" aria-hidden="true"><label for="note-website">Website</label><input id="note-website" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div>
+      <label class="toggle consent"><input type="checkbox" name="consent" data-note-consent><span>${t.noteConsent}</span></label>
+      <div class="notes__send" data-notes-online hidden>
+        <button type="submit" class="button button--large" data-note-send disabled>${icon('send')}${t.noteSend}</button>
+        <p class="hint">${t.noteDonation} ${siteLink(site, site.route(lang, 'support'), t.supportAction)}</p>
+      </div>
       <p class="notice" data-notes-unavailable>${t.noteNoJs}</p>
+      <p class="notice notes__result-message" data-note-message role="status" aria-live="polite" hidden></p>
       <p class="visually-hidden" role="status" aria-live="polite" data-notes-status></p>
     </form>
     <div class="notes__result" data-notes-result hidden>
