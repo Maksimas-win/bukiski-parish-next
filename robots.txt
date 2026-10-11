@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bukiski-hram.net/sitemap.xml

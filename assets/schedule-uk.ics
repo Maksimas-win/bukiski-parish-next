@@ -1,0 +1,764 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bukiski Parish//Service Schedule//UK
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Храм Різдва Христового
+X-WR-TIMEZONE:Europe/Vilnius
+BEGIN:VEVENT
+UID:svc-9ea7937c225a424dc310@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261004T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 18-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-c3721a45d3350d9d6461@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261011T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 19-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-a9b10cf5b7a4f49d25f6@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261014T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Покрова Пресвятої Богородиці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-db6c1ace6265c076ed10@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261018T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 20-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-13ee7c62cfc8e9ed2a22@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261025T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 21-ша по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-3fb67d558df4f94b9a27@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261101T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 22-га по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-df71f5a86086445f65e9@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261108T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 23-тя по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-791286fb58dd61374dad@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261115T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 24-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-142ac08220b6d32070b0@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261122T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 25-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-03eaf1010ec5c66215c9@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261129T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 26-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-67202f07ad81d38b891d@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261204T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Введення в храм Пресвятої Богоро
+ диці\nФайл містить знімок опубліковани
+ х подій і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-ff973fe3690d4f1d844c@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261206T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 27-ма по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-1822e6872f250c6e280c@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261213T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 28-ма по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-cbe317db75849e6c1bc1@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261219T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Файл містить знімок опубліковани
+ х подій і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-76eec744248119bcf883@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261220T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 29-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-82b83469f9c26886c81f@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20261227T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 30-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-9af349ea03c2d7e9d9f5@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270103T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 31-ша по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-1c1b4b605be048a0f9c7@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270106T150000Z
+SUMMARY:Всенічне бдіння
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Файл містить знімок опубліковани
+ х подій і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-5f8b381166ab426f7b39@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270106T214500Z
+SUMMARY:Часи і нічна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Різдво Христове\nФайл містить зні
+ мок опублікованих подій і не оновлюєть
+ ся автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-f4d625bf2216d125a124@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270107T070000Z
+SUMMARY:Обідниця
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Різдво Христове\nФайл містить зні
+ мок опублікованих подій і не оновлюєть
+ ся автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-07b8b11891d3d436932b@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270110T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 32-га по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-8b3c0961236599a92c83@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270117T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 33-тя по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-b5991b06180cba6be8c0@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270119T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Хрещення Господнє. Богоявлення\nФ
+ айл містить знімок опублікованих подій
+  і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-3c34aae5307e935f29bb@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270124T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 34-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-653f48a1c9b9c77fe600@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270131T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 35-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-10396f12c8873b45238c@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270207T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 36-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-8cbac427d3fd986ad787@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270214T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 37-ма по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-98ceb2c5b6ba8ce04c22@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270215T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Стрітення Господнє\nФайл містить 
+ знімок опублікованих подій і не оновлю
+ ється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-ffcf1a36c5601dfcf50c@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270221T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя про митаря і фарисея\nФайл 
+ містить знімок опублікованих подій і н
+ е оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-9a468aaf7729d4ad5c0e@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270228T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя про блудного сина\nФайл мі
+ стить знімок опублікованих подій і не о
+ новлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-720e38b086d3a46fb023@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270307T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя про Страшний суд\nФайл міс
+ тить знімок опублікованих подій і не он
+ овлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-2f5863fbd2fe295df1c0@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270314T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Прощена неділя\nФайл містить знім
+ ок опублікованих подій і не оновлюєтьс
+ я автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-1a29fc8ce7b3bfe53853@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270321T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 1-ша Великого посту. Торжес
+ тво Православ’я\nФайл містить знімок о
+ публікованих подій і не оновлюється ав
+ томатично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-17344e988f9dd264a85c@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270328T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 2-га Великого посту. Свт. Гр
+ игорія Палами\nФайл містить знімок опуб
+ лікованих подій і не оновлюється автом
+ атично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-a7f71a15ad0a27a6d21d@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270404T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 3-тя Великого посту. Хресто
+ поклонна\nФайл містить знімок опубліко
+ ваних подій і не оновлюється автоматич
+ но.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-2b0bf13632b3d7db7412@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270407T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Благовіщення Пресвятої Богороди
+ ці\nФайл містить знімок опублікованих п
+ одій і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-5e0621ac2deed0ff226c@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270411T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 4-та Великого посту. Прп. Іо
+ анна Ліствичника\nФайл містить знімок о
+ публікованих подій і не оновлюється ав
+ томатично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-bf2b223528ae706eafe8@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270418T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 5-та Великого посту. Прп. Ма
+ рії Єгипетської\nФайл містить знімок оп
+ ублікованих подій і не оновлюється авт
+ оматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-287b84c1f329e9b96f7e@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270425T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Вхід Господній у Єрусалим\nФайл м
+ істить знімок опублікованих подій і не 
+ оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-affb6ea909183b39d00b@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270501T203000Z
+SUMMARY:Великодня полуношниця\, хресний хід
+  і нічне богослужіння
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Світле Христове Воскресіння. Пас
+ ха\nФайл містить знімок опублікованих п
+ одій і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-c765f636b5603fe52e27@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270502T060000Z
+SUMMARY:Обідниця
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Світле Христове Воскресіння. Пас
+ ха\nФайл містить знімок опублікованих п
+ одій і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-144ad02352ba5dd4fa18@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270509T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 2-га по Пасці. Апостола Фом
+ и\nФайл містить знімок опублікованих по
+ дій і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-0b7fc37e15f873f82330@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270516T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 3-тя по Пасці. Святих жінок-
+ мироносиць\nФайл містить знімок опублі
+ кованих подій і не оновлюється автомат
+ ично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-dfd12ac05a7259f6374a@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270523T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 4-та по Пасці. Про розслабл
+ еного\nФайл містить знімок опублікован
+ их подій і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-a99f04995287a1b92cd9@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270530T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 5-та по Пасці. Про самарянк
+ у\nФайл містить знімок опублікованих по
+ дій і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-8ef565ebf322ca479ebb@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270606T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 6-та по Пасці. Про сліпого\n
+ Файл містить знімок опублікованих поді
+ й і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-e4f175b711d41c62d12e@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270610T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Вознесіння Господнє\nФайл містит
+ ь знімок опублікованих подій і не оновл
+ юється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-b36cc6c5100be7b41b47@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270613T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 7-ма по Пасці. Отців Першог
+ о Вселенського Собору\nФайл містить зні
+ мок опублікованих подій і не оновлюєть
+ ся автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-4cfa39b1715068a6ff0e@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270620T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:День Святої Трійці. П’ятидесятни
+ ця\nФайл містить знімок опублікованих п
+ одій і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-b1613e44f7934a75b98a@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270627T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 1-ша по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-f85a53b49e95e83e3d4e@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270704T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 2-га по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-2f8286832a0fb1fc59ea@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270711T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 3-тя по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-6fe2592f5ce85847bf4c@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270718T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 4-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-350114999562e82d0c2c@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270725T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 5-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-db6aa92d2a1c0c367b76@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270801T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 6-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-fdcc0350daff9756d7e4@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270808T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 7-ма по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-319961af294ca3318f36@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270815T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 8-ма по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-58857e8d95bbcf819eb3@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270819T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Преображення Господнє\nФайл міст
+ ить знімок опублікованих подій і не оно
+ влюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-6490a8b83a06d71aedad@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270822T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 9-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-a7bc7598d17afc0ab947@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270828T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Успіння Пресвятої Богородиці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-198e91ec976174326c9c@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270829T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 10-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-c56fb27019a288f526b4@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270905T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 11-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-56a2e64ae7a518606b2e@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270912T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 12-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-135c0697977ac8b46f18@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270919T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 13-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-135fb590e8cb16c236ab@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270921T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Різдво Пресвятої Богородиці\nФай
+ л містить знімок опублікованих подій і 
+ не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-5617e8eefe969ef4068c@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270926T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 14-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-4539bdc413e2f2aa789b@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20270927T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Воздвиження Хреста Господнього\n
+ Файл містить знімок опублікованих поді
+ й і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-bed2f1831c857afdbfd4@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20271003T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 15-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-16b09a5571ec243dcedc@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20271010T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 16-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-44ea4e713dd53489e615@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20271014T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Покрова Пресвятої Богородиці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-81492d2a320a795e8b9e@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20271017T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 17-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-1f6575169141472d35df@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20271024T050000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 18-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-6df679a79b28dd16749f@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20271031T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 19-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-f7ffb3558afdacae4afa@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20271107T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 20-та по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+BEGIN:VEVENT
+UID:svc-96c63b33f86a84c2b981@bukiski-hram.net
+DTSTAMP:20261011T203106Z
+DTSTART:20271114T060000Z
+SUMMARY:Божественна літургія
+LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
+DESCRIPTION:Неділя 21-ша по П’ятидесятниці\nФа
+ йл містить знімок опублікованих подій 
+ і не оновлюється автоматично.
+END:VEVENT
+END:VCALENDAR

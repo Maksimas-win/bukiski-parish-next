@@ -1,0 +1,114 @@
+Options -Indexes
+<IfModule mod_headers.c>
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests; frame-ancestors 'none'"
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "DENY"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+<FilesMatch "\.(html|json|ics|vcf|xml|txt)$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+<FilesMatch "\.(css|js|woff2)$">
+Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+<FilesMatch "\.(webp|jpg|jpeg|png|gif|svg)$">
+Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule (^|/)\.git(?:/|$) - [F,L,NC]
+RewriteRule ^ananiya-i-sapfira-pravda-serdca-i-svyatost-cerkvi/?$ /ru/library/ananiya-i-sapfira-pravda-serdca-i-svyatost-cerkvi.html [R=301,L,NE]
+RewriteRule ^apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-1/?$ /ru/library/apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-1.html [R=301,L,NE]
+RewriteRule ^apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-2/?$ /ru/library/apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-2.html [R=301,L,NE]
+RewriteRule ^apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-3/?$ /ru/library/apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-3.html [R=301,L,NE]
+RewriteRule ^arhimandrit-iannuarii-bog-ne-sluzhba-poiska-v-internete/?$ /ru/library/arhimandrit-iannuarii-bog-ne-sluzhba-poiska-v-internete.html [R=301,L,NE]
+RewriteRule ^arhimandrit-iannuarii-ivliev-bogoslov-bibleist-svidetel-slova/?$ /ru/library/arhimandrit-iannuarii-ivliev-bogoslov-bibleist-svidetel-slova.html [R=301,L,NE]
+RewriteRule ^bibliya-segodnya-vechnoe-slovo-v-menyayushemsya-mire/?$ /ru/library/bibliya-segodnya-vechnoe-slovo-v-menyayushemsya-mire.html [R=301,L,NE]
+RewriteRule ^boroda-i-brite-v-drevnosti-istoriya-kultura-i-bibleiskii-smysl/?$ /ru/library/boroda-i-brite-v-drevnosti-istoriya-kultura-i-bibleiskii-smysl.html [R=301,L,NE]
+RewriteRule ^car-navuhodonosor-kak-gordynya-prevratila-pravitelya-v-zverya/?$ /ru/library/car-navuhodonosor-kak-gordynya-prevratila-pravitelya-v-zverya.html [R=301,L,NE]
+RewriteRule ^chetyri-nedeli-do-velikogo-posta/?$ /ru/library/chetyri-nedeli-do-velikogo-posta.html [R=301,L,NE]
+RewriteRule ^chto-oznachayut-simvoly-na-pravoslavnom-kreste/?$ /ru/library/chto-oznachayut-simvoly-na-pravoslavnom-kreste.html [R=301,L,NE]
+RewriteRule ^chto-proishodit-s-dushoi-posle-smerti-pravoslavnoe-uchenie-o-zagrobnoi-zhizni/?$ /ru/library/chto-proishodit-s-dushoi-posle-smerti-pravoslavnoe-uchenie-o-zagrobnoi-zhizni.html [R=301,L,NE]
+RewriteRule ^dimitrievskaya-roditelskaya-subbota-istoriya-smysl-tradicii/?$ /ru/library/dimitrievskaya-roditelskaya-subbota-istoriya-smysl-tradicii.html [R=301,L,NE]
+RewriteRule ^dokumet-ob-uchastii-vernyh-v-evharistii/?$ /ru/library/dokumet-ob-uchastii-vernyh-v-evharistii.html [R=301,L,NE]
+RewriteRule ^dve-rodoslovnye-hrista-protivorechie-ili-taina-domostroitelstva/?$ /ru/library/dve-rodoslovnye-hrista-protivorechie-ili-taina-domostroitelstva.html [R=301,L,NE]
+RewriteRule ^dzhek-signalshik-babuin-na-gosudarstvennoi-sluzhbe/?$ /ru/library/dzhek-signalshik-babuin-na-gosudarstvennoi-sluzhbe.html [R=301,L,NE]
+RewriteRule ^eshe-uspeem-chast-i-u-menya-bog-v-dushe/?$ /ru/library/eshe-uspeem-chast-i-u-menya-bog-v-dushe.html [R=301,L,NE]
+RewriteRule ^eshe-uspeem-chast-ii-ya-ne-dostoin/?$ /ru/library/eshe-uspeem-chast-ii-ya-ne-dostoin.html [R=301,L,NE]
+RewriteRule ^eshe-uspeem-chast-iii-hram-ne-obyazannost-a-dyhanie-dushi/?$ /ru/library/eshe-uspeem-chast-iii-hram-ne-obyazannost-a-dyhanie-dushi.html [R=301,L,NE]
+RewriteRule ^evangelie-o-bludnom-syne-dver-pokayaniya-pered-velikim-postom/?$ /ru/library/evangelie-o-bludnom-syne-dver-pokayaniya-pered-velikim-postom.html [R=301,L,NE]
+RewriteRule ^evharisticheskii-post-i-pravila-v-osobye-dni/?$ /ru/library/evharisticheskii-post-i-pravila-v-osobye-dni.html [R=301,L,NE]
+RewriteRule ^evharistiya-serdce-cerkvi/?$ /ru/library/evharistiya-serdce-cerkvi.html [R=301,L,NE]
+RewriteRule ^gde-zhivet-tishina-kak-hram-pomogaet-uslyshat-boga/?$ /ru/library/gde-zhivet-tishina-kak-hram-pomogaet-uslyshat-boga.html [R=301,L,NE]
+RewriteRule ^hristianskii-brak-ot-vethogo-zaveta-do-nashih-dnei/?$ /ru/library/hristianskii-brak-ot-vethogo-zaveta-do-nashih-dnei.html [R=301,L,NE]
+RewriteRule ^ispoved-i-duhovnoe-rukovodstvo/?$ /ru/library/ispoved-i-duhovnoe-rukovodstvo.html [R=301,L,NE]
+RewriteRule ^ispoved-i-prichastie-v-pravoslavnoi-tradicii/?$ /ru/library/ispoved-i-prichastie-v-pravoslavnoi-tradicii.html [R=301,L,NE]
+RewriteRule ^ispoved-i-prichastie-v-pravoslavnoi-tradicii-istoriya-razvitie-i-sovremennaya-praktika/?$ /ru/library/ispoved-i-prichastie-v-pravoslavnoi-tradicii-istoriya-razvitie-i-sovremennaya-praktika.html [R=301,L,NE]
+RewriteRule ^ispoved-i-prichastie-v-pravoslavnoi-tradicii-istoriya-razvitie-i-sovremennaya-praktika-v-raznyh-patriarhatah/?$ /ru/library/ispoved-i-prichastie-v-pravoslavnoi-tradicii-istoriya-razvitie-i-sovremennaya-praktika-v-raznyh-patriarhatah.html [R=301,L,NE]
+RewriteRule ^istoriya-o-hrame/?$ /ru/library/istoriya-o-hrame.html [R=301,L,NE]
+RewriteRule ^iz-yadushego-vyshlo-yadomoe/?$ /ru/library/iz-yadushego-vyshlo-yadomoe.html [R=301,L,NE]
+RewriteRule ^kak-chasto-nuzhno-prichashatsya-put-ot-apostolov-do-nashih-dnei/?$ /ru/library/kak-chasto-nuzhno-prichashatsya-put-ot-apostolov-do-nashih-dnei.html [R=301,L,NE]
+RewriteRule ^kak-maloe-zlo-razzhigaet-velikii-pozhar/?$ /ru/library/kak-maloe-zlo-razzhigaet-velikii-pozhar.html [R=301,L,NE]
+RewriteRule ^kaledu-pasninkas-kelias-i-tylia-betliejaus-sviesa/?$ /lt/library/kaledu-pasninkas-kelias-i-tylia-betliejaus-sviesa.html [R=301,L,NE]
+RewriteRule ^kniga-chisel-kotoraya-na-samom-dele-v-pustyne/?$ /ru/library/kniga-chisel-kotoraya-na-samom-dele-v-pustyne.html [R=301,L,NE]
+RewriteRule ^kontaktai-hram-rozhdestva-hristova/?$ /ru/contacts.html [R=301,L,NE]
+RewriteRule ^kontracepciya-pravoslavnyi-bogoslovskii-vzglyad-v-kontekste-hristianskogo-bogosloviya-istorii-i-sovremennoi-mediciny/?$ /ru/library/kontracepciya-pravoslavnyi-bogoslovskii-vzglyad-v-kontekste-hristianskogo-bogosloviya-istorii-i-sovremennoi-mediciny.html [R=301,L,NE]
+RewriteRule ^molitva-za-usopshih-bogoslovie-praktika-otvety-na-voprosy/?$ /ru/library/molitva-za-usopshih-bogoslovie-praktika-otvety-na-voprosy.html [R=301,L,NE]
+RewriteRule ^molitvennaya-podgotovka-i-uchastie-v-bogosluzheniyah/?$ /ru/library/molitvennaya-podgotovka-i-uchastie-v-bogosluzheniyah.html [R=301,L,NE]
+RewriteRule ^naudingas-skaitymas/?$ /lt/library.html [R=301,L,NE]
+RewriteRule ^ne-boisya-bozhie-slovo-na-kazhdyi-den/?$ /ru/library/ne-boisya-bozhie-slovo-na-kazhdyi-den.html [R=301,L,NE]
+RewriteRule ^ne-boisya-tolko-verui-dva-chuda-kotorye-menyayut-vse/?$ /ru/library/ne-boisya-tolko-verui-dva-chuda-kotorye-menyayut-vse.html [R=301,L,NE]
+RewriteRule ^novozavetnye-apokrify-mezhdu-predaniem-i-predosterezheniem/?$ /ru/library/novozavetnye-apokrify-mezhdu-predaniem-i-predosterezheniem.html [R=301,L,NE]
+RewriteRule ^o-chinoposledovanii-eleosvyasheniya/?$ /ru/library/o-chinoposledovanii-eleosvyasheniya.html [R=301,L,NE]
+RewriteRule ^o-nashem-hrame/?$ /ru/library/o-nashem-hrame.html [R=301,L,NE]
+RewriteRule ^ob-uchastii-vernyh-v-evharistii-klyuchevye-polozheniya-cerkovnogo-dokumenta/?$ /ru/library/ob-uchastii-vernyh-v-evharistii-klyuchevye-polozheniya-cerkovnogo-dokumenta.html [R=301,L,NE]
+RewriteRule ^osobennosti-prichasheniya-miryan-suprugov-i-detei/?$ /ru/library/osobennosti-prichasheniya-miryan-suprugov-i-detei.html [R=301,L,NE]
+RewriteRule ^otkliki-drevnegrecheskoi-filosofii-v-poslaniyah-apostola-pavla-mezhdu-vdohnoveniem-i-preodoleniem/?$ /ru/library/otkliki-drevnegrecheskoi-filosofii-v-poslaniyah-apostola-pavla-mezhdu-vdohnoveniem-i-preodoleniem.html [R=301,L,NE]
+RewriteRule ^pochemu-evharistiya-centr-zhizni-cerkvi/?$ /ru/library/pochemu-evharistiya-centr-zhizni-cerkvi.html [R=301,L,NE]
+RewriteRule ^pochemu-hristos-dobrovolno-izbral-krest/?$ /ru/library/pochemu-hristos-dobrovolno-izbral-krest.html [R=301,L,NE]
+RewriteRule ^pochemu-iisus-propovedoval-s-lodki/?$ /ru/library/pochemu-iisus-propovedoval-s-lodki.html [R=301,L,NE]
+RewriteRule ^pochemu-ne-srazu-duhovnye-uroki-samogo-strannogo-isceleniya-hristova/?$ /ru/library/pochemu-ne-srazu-duhovnye-uroki-samogo-strannogo-isceleniya-hristova.html [R=301,L,NE]
+RewriteRule ^podat-zapisku/?$ /ru/notes.html [R=301,L,NE]
+RewriteRule ^podgotovka-k-prichasheniyu-post-molitva-i-vnutrennee-sostoyanie/?$ /ru/library/podgotovka-k-prichasheniyu-post-molitva-i-vnutrennee-sostoyanie.html [R=301,L,NE]
+RewriteRule ^poleznoe-chtenie/?$ /ru/library.html [R=301,L,NE]
+RewriteRule ^pravednyi-iosif-miloserdie-prezhde-zakona/?$ /ru/library/pravednyi-iosif-miloserdie-prezhde-zakona.html [R=301,L,NE]
+RewriteRule ^preddverie-vechnosti-bogoslovie-i-smysl-vselenskoi-myasopustnoi-roditelskoi-subboty/?$ /ru/library/preddverie-vechnosti-bogoslovie-i-smysl-vselenskoi-myasopustnoi-roditelskoi-subboty.html [R=301,L,NE]
+RewriteRule ^preddverii-vechnosti/?$ /ru/library/preddverii-vechnosti.html [R=301,L,NE]
+RewriteRule ^prepodobnyi-blagovernyi-knyaz-aleksandr-nevskii-strazh-very-mudrosti-i-narodnogo-sluzheniya/?$ /ru/library/prepodobnyi-blagovernyi-knyaz-aleksandr-nevskii-strazh-very-mudrosti-i-narodnogo-sluzheniya.html [R=301,L,NE]
+RewriteRule ^prichashenie-i-sostoyanie-dushi-nedopustimye-sluchai/?$ /ru/library/prichashenie-i-sostoyanie-dushi-nedopustimye-sluchai.html [R=301,L,NE]
+RewriteRule ^pritcha-o-molitve-za-blizhnih/?$ /ru/library/pritcha-o-molitve-za-blizhnih.html [R=301,L,NE]
+RewriteRule ^pritcha-o-sadah-dushi/?$ /ru/library/pritcha-o-sadah-dushi.html [R=301,L,NE]
+RewriteRule ^propoved-v-sedmicu-8-yu-po-pyatidesyatnice-vozmi-krest-svoi/?$ /ru/library/propoved-v-sedmicu-8-yu-po-pyatidesyatnice-vozmi-krest-svoi.html [R=301,L,NE]
+RewriteRule ^raspisanie-bogosluzhenij/?$ /ru/schedule.html [R=301,L,NE]
+RewriteRule ^raspisanie-bogosluzhenij-velikom-postu/?$ /ru/library/raspisanie-bogosluzhenij-velikom-postu.html [R=301,L,NE]
+RewriteRule ^rozhdestvenskii-post-doroga-k-tihomu-svetu-vifleema/?$ /ru/library/rozhdestvenskii-post-doroga-k-tihomu-svetu-vifleema.html [R=301,L,NE]
+RewriteRule ^sem-yaz-esm-hrista-kak-vethozavetnye-obrazy-obreli-polnotu-v-evangelii-ot-ioanna/?$ /ru/library/sem-yaz-esm-hrista-kak-vethozavetnye-obrazy-obreli-polnotu-v-evangelii-ot-ioanna.html [R=301,L,NE]
+RewriteRule ^septyni-kristaus-as-esu-kaip-senojo-testamento-vaizdiniai-igavo-pilnatve-jono-evangelijoje/?$ /lt/library/septyni-kristaus-as-esu-kaip-senojo-testamento-vaizdiniai-igavo-pilnatve-jono-evangelijoje.html [R=301,L,NE]
+RewriteRule ^skolko-lyudei-voskresil-hristos/?$ /ru/library/skolko-lyudei-voskresil-hristos.html [R=301,L,NE]
+RewriteRule ^sobor-arhistratiga-mihaila-i-nebesnyh-sil/?$ /ru/library/sobor-arhistratiga-mihaila-i-nebesnyh-sil.html [R=301,L,NE]
+RewriteRule ^sovremennye-chudesa-bozhii-i-slepota-chelovecheskogo-serdca/?$ /ru/library/sovremennye-chudesa-bozhii-i-slepota-chelovecheskogo-serdca.html [R=301,L,NE]
+RewriteRule ^sretenie-gospoda-boga-i-spasa-nashego-iisusa-hrista/?$ /ru/library/sretenie-gospoda-boga-i-spasa-nashego-iisusa-hrista.html [R=301,L,NE]
+RewriteRule ^sutochnyi-krug-bogosluzheniya-kak-cerkov-osvyashaet-vremya/?$ /ru/library/sutochnyi-krug-bogosluzheniya-kak-cerkov-osvyashaet-vremya.html [R=301,L,NE]
+RewriteRule ^svenciausiosios-dievo-motinos-ivedimas-i-sventykla/?$ /lt/library/svenciausiosios-dievo-motinos-ivedimas-i-sventykla.html [R=301,L,NE]
+RewriteRule ^svyatitel-ioann-zlatoust-slovo-kotoroe-ne-umolkaet/?$ /ru/library/svyatitel-ioann-zlatoust-slovo-kotoroe-ne-umolkaet.html [R=301,L,NE]
+RewriteRule ^svyatitel-nikolai-arhiepiskop-mir-likiiskih/?$ /ru/library/svyatitel-nikolai-arhiepiskop-mir-likiiskih.html [R=301,L,NE]
+RewriteRule ^svyatitel-nikolai-arhiepiskop-mir-likiiskih-uteshitel-skorbyashih-zashitnik-vernyh-i-obraz-pastyrskoi-lyubvi/?$ /ru/library/svyatitel-nikolai-arhiepiskop-mir-likiiskih-uteshitel-skorbyashih-zashitnik-vernyh-i-obraz-pastyrskoi-lyubvi.html [R=301,L,NE]
+RewriteRule ^svyatitel-tihon-pastyr-sformirovavshii-oblik-cerkvi-v-litovskom-krae/?$ /ru/library/svyatitel-tihon-pastyr-sformirovavshii-oblik-cerkvi-v-litovskom-krae.html [R=301,L,NE]
+RewriteRule ^svyatoi-iosif-obruchnik-tishina-v-kotoroi-deistvuet-bog/?$ /ru/library/svyatoi-iosif-obruchnik-tishina-v-kotoroi-deistvuet-bog.html [R=301,L,NE]
+RewriteRule ^the-seven-i-am-sayings-of-christ-how-the-old-testament-symbols-attain-fullness-in-the-gospel-of-john/?$ /en/library/the-seven-i-am-sayings-of-christ-how-the-old-testament-symbols-attain-fullness-in-the-gospel-of-john.html [R=301,L,NE]
+RewriteRule ^trete-iskushenie-hrista-bogoslovskii-razbor/?$ /ru/library/trete-iskushenie-hrista-bogoslovskii-razbor.html [R=301,L,NE]
+RewriteRule ^urok-lyubvi-sredi-vechnoi-merzloty/?$ /ru/library/urok-lyubvi-sredi-vechnoi-merzloty.html [R=301,L,NE]
+RewriteRule ^useful-reading/?$ /en/library.html [R=301,L,NE]
+RewriteRule ^velikoe-osvyashenie-vody-agiasma/?$ /ru/library/velikoe-osvyashenie-vody-agiasma.html [R=301,L,NE]
+RewriteRule ^voskresshie-svyatye-odno-iz-samyh-tainstvennyh-chudes-evangeliya/?$ /ru/library/voskresshie-svyatye-odno-iz-samyh-tainstvennyh-chudes-evangeliya.html [R=301,L,NE]
+RewriteRule ^vvedenie-vo-hram-presvyatoi-bogorodicy-taina-posvyasheniya-i-prizyv-k-chistote-serdca/?$ /ru/library/vvedenie-vo-hram-presvyatoi-bogorodicy-taina-posvyasheniya-i-prizyv-k-chistote-serdca.html [R=301,L,NE]
+RewriteRule ^vvedenie-vo-hram-presvyatoi-vladychicy-nashei-bogorodicy/?$ /ru/library/vvedenie-vo-hram-presvyatoi-vladychicy-nashei-bogorodicy.html [R=301,L,NE]
+RewriteRule ^yasli-i-dom-hleba/?$ /ru/library/yasli-i-dom-hleba.html [R=301,L,NE]
+RewriteRule ^zapiski-v-hrame-zhivaya-molitva-cerkvi/?$ /ru/library/zapiski-v-hrame-zhivaya-molitva-cerkvi.html [R=301,L,NE]
+RewriteRule ^zhenskie-golosa-v-cerkovnom-hore-kak-neprilichie-stalo-normoi/?$ /ru/library/zhenskie-golosa-v-cerkovnom-hore-kak-neprilichie-stalo-normoi.html [R=301,L,NE]
+RewriteRule ^zhizn-posle-prichastiya-kak-hranit-v-sebe-dar/?$ /ru/library/zhizn-posle-prichastiya-kak-hranit-v-sebe-dar.html [R=301,L,NE]
+RewriteRule ^znali-li-vy-chto-pastuhi-byli-merzostyu-dlya-egiptyan/?$ /ru/library/znali-li-vy-chto-pastuhi-byli-merzostyu-dlya-egiptyan.html [R=301,L,NE]
+</IfModule>
+ErrorDocument 404 /404.html
