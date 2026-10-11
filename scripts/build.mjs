@@ -28,15 +28,19 @@ const site = await loadSite();
 const HISTORY_ARTICLES = ['https://bukiski-hram.net/o-nashem-hrame', 'https://bukiski-hram.net/istoriya-o-hrame'];
 const catalog = createCatalog(site);
 const routes = new Map();
+const pageDefinitions = new Map();
 
 function addRoute(page) {
   if (routes.has(page.path)) throw new Error(`Route collision: ${page.path}`);
+  pageDefinitions.set(page.path, page);
   routes.set(page.path, renderDocument(site, page));
 }
 
 /** A second address for an existing page, with the original as canonical. */
 function addAlias(path, target, { noindex = true } = {}) {
-  routes.set(path, { ...routes.get(target), noindex, canonicalPath: target });
+  const page = pageDefinitions.get(target);
+  if (!page) throw new Error(`Missing alias target: ${target}`);
+  routes.set(path, renderDocument(site, { ...page, path, noindex, canonicalPath: target }));
 }
 
 async function writeOutput(path, content) {

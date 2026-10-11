@@ -56,8 +56,10 @@ export async function loadSite(env = process.env) {
   const production = env.PRODUCTION === undefined ? settings.production === true : env.PRODUCTION === 'true';
   if (production) {
     const release = await readJSON('release.json');
-    const pending = Object.entries(release).filter(([, approved]) => approved !== true).map(([key]) => key);
-    if (pending.length) throw new Error(`Production review is incomplete: ${pending.join(', ')}`);
+    const approval = release.publication;
+    if (approval?.approved !== true || approval.origin !== origin || base !== '') {
+      throw new Error('Production publication requires explicit owner approval for this origin and an empty BASE_PATH');
+    }
   }
 
   const documentDelivery = env.DOCUMENT_DELIVERY || settings.documentDelivery;

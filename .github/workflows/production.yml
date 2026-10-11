@@ -1,0 +1,61 @@
+name: Export production site for Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '43 3,9,15,21 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hostinger-production
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          path: source
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Refresh the parish schedule
+        working-directory: source
+        run: npm run schedule:sync
+        env:
+          SCHEDULE_SOURCE_URL: https://bukiski-hram.org/data/services.json
+      - name: Build and verify the production export
+        working-directory: source
+        run: npm run check
+        env:
+          SITE_ORIGIN: https://bukiski-hram.net
+          BASE_PATH: ''
+          PRODUCTION: 'true'
+          DOCUMENT_DELIVERY: envelope
+      - uses: actions/checkout@v6
+        with:
+          ref: hostinger-production
+          path: published
+      - name: Publish only verified static files
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          test -f source/dist/index.html
+          test -f source/dist/.htaccess
+          test -e published/.git
+          find published -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf -- {} +
+          cp -a source/dist/. published/
+          cd published
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Publish verified site from $SOURCE_SHA"
+          git push origin HEAD:hostinger-production

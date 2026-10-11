@@ -3,8 +3,16 @@ import assert from 'node:assert/strict';
 import { html, raw, attrs, lines } from '../scripts/lib/html.mjs';
 import { renderBlocks } from '../scripts/lib/pages/article.mjs';
 import { robots, orgDomainHtaccess, htaccess } from '../scripts/lib/outputs.mjs';
+import { loadSite } from '../scripts/lib/site.mjs';
 
 const text = fragment => html`${fragment}`.value;
+
+test('Owner publication approval is limited to the production origin without a project prefix', async () => {
+  const approved = await loadSite({ PRODUCTION: 'true', SITE_ORIGIN: 'https://bukiski-hram.net', BASE_PATH: '' });
+  assert.equal(approved.production, true);
+  await assert.rejects(loadSite({ PRODUCTION: 'true', SITE_ORIGIN: 'https://example.com' }), /explicit owner approval/);
+  await assert.rejects(loadSite({ PRODUCTION: 'true', SITE_ORIGIN: 'https://bukiski-hram.net', BASE_PATH: '/preview' }), /explicit owner approval/);
+});
 
 test('Templates escape interpolated text unless it is marked as markup', () => {
   const hostile = '<script>alert("x")</script>';

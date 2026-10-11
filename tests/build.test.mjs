@@ -80,6 +80,21 @@ test('Stylesheet and scripts are requested with the release version', async () =
   }
 });
 
+test('Legacy aliases keep their canonical target and noindex in the emitted HTML', async () => {
+  const aliases = [
+    ['/podat-zapisku', '/ru/notes.html'],
+    ['/raspisanie-bogosluzhenij', '/ru/schedule.html']
+  ];
+  for (const [alias, target] of aliases) {
+    const output = await page(alias);
+    assert.match(output, /name="robots" content="noindex,follow"/);
+    assert.ok(output.includes(`${base}${target}"`));
+  }
+  assert.match(await page('/ru/'), info.production
+    ? /name="robots" content="index,follow"/
+    : /name="robots" content="noindex,follow"/);
+});
+
 test('Each source URL has a target, and every preserved text block survives escaping', async () => {
   const sources = await readJSON('content/source-pages.json');
   const migration = await readJSON('content/migration.json');

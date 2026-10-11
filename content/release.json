@@ -1,4 +1,10 @@
 {
+  "publication": {
+    "approved": true,
+    "origin": "https://bukiski-hram.net",
+    "approvedOn": "2026-10-11",
+    "statement": "Владелец подтвердил тексты, переводы, реквизиты и публичный запуск с индексацией. Отдельные экспертные проверки ниже не подтверждались и не отмечаются выполненными автоматически."
+  },
   "servicesReviewedByParish": false,
   "ruReviewed": false,
   "ltReviewedByNativeSpeakerAndClergy": false,
