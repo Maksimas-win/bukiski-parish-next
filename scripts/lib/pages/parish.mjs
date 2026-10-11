@@ -154,26 +154,16 @@ export function sacramentsPage(site, lang, t) {
   </section>`;
 }
 
-/** Real photographs of the church from the parish's own sites, with their true sizes. */
-export const GALLERY = [
-  'assets/img/archive/7eb2b9b214ea663b.jpg',
-  'assets/img/archive/10323076ba321c90.jpg',
-  'assets/img/archive/36abc63c17718008.jpg',
-  'assets/img/archive/f2ede969c68e242b.jpg',
-  'assets/img/archive/a8a1bf916537e3bd.jpg',
-  'assets/img/archive/2b50e91560d5deff.jpg'
-];
-
+/** Photographs of the church and parish life, from content/photos.json. */
 export function galleryPage(site, lang, t) {
-  const photos = GALLERY.map((local, index) => ({ ...site.imageManifest[local], caption: t.galleryCaptions[index] }));
-  if (photos.some(photo => !photo.web) || t.galleryCaptions.length !== GALLERY.length) throw new Error('Gallery photos and captions are out of step');
+  const photos = site.photos.gallery;
   return html`${pageHead({ title: t.gallery, intro: t.galleryIntro })}
   <section class="shell photo-grid">
     ${photos.map(photo => html`<figure class="photo-grid__item${photo.height > photo.width ? ' is-tall' : ''}">
-      <a href="${site.url(`/${photo.web}`)}" data-lightbox data-width="${photo.width}" data-height="${photo.height}" aria-label="${t.imageOpen}: ${photo.caption}">
-        <img src="${site.url(`/${photo.thumb}`)}" width="${photo.thumbWidth}" height="${photo.thumbHeight}" loading="lazy" decoding="async" alt="${photo.caption}">
+      <a href="${site.url(`/${photo.web}`)}" data-lightbox data-width="${photo.width}" data-height="${photo.height}" aria-label="${t.imageOpen}: ${photo.caption[lang]}">
+        <img src="${site.url(`/${photo.thumb}`)}" width="${photo.thumbWidth}" height="${photo.thumbHeight}" loading="lazy" decoding="async" alt="${photo.caption[lang]}">
       </a>
-      <figcaption>${photo.caption}</figcaption>
+      <figcaption>${photo.caption[lang]}</figcaption>
     </figure>`)}
   </section>`;
 }

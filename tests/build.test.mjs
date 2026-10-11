@@ -279,11 +279,25 @@ test('Content from bukiski-hram.net is on the new site: rector, services, social
 
   for (const lang of settings.locales) {
     const gallery = await page(`/${lang}/gallery.html`);
-    assert.equal((gallery.match(/ data-lightbox /g) || []).length, 6, lang);
+    assert.equal((gallery.match(/ data-lightbox /g) || []).length, 13, lang);
     assert.match(gallery, /<dialog class="lightbox"/);
   }
   const home = await page('/ru/');
   assert.ok(home.includes(settings.links.church.url));
+});
+
+test('The home page opens with the church photograph and its name, with no slogan', async () => {
+  const locales = await readJSON('content/locales.json');
+  const photos = await readJSON('content/photos.json');
+  for (const lang of settings.locales) {
+    const home = await page(`/${lang}/`);
+    const hero = home.slice(home.indexOf('<section class="hero"'), home.indexOf('</section>', home.indexOf('<section class="hero"')));
+    assert.match(hero, new RegExp(`<h1 id="hero-title" class="hero__title">${locales[lang].name}</h1>`), lang);
+    assert.ok(photos.hero.every(size => hero.includes(`${size.file} ${size.width}w`)), lang);
+    assert.match(hero, /fetchpriority="high"/);
+    assert.doesNotMatch(hero, /class="button/, 'the hero has no call-to-action buttons');
+    assert.equal((home.match(/class="mosaic__item"/g) || []).length, photos.homeMosaic.length, lang);
+  }
 });
 
 test('The prayer-request form posts only to the configured service, which is the only third party in the CSP', async () => {

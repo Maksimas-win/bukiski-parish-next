@@ -21,8 +21,7 @@
     "contrast": "Высокая контрастность",
     "reset": "Сбросить настройки",
     "close": "Закрыть",
-    "hero": "Место молитвы.\nДом для души.",
-    "heroIntro": "Храм Рождества Христова в Букишках — приходская община рядом с Вильнюсом. Приходите на богослужение, познакомьтесь с храмом, побудьте в тишине.",
+    "heroIntro": "Православный храм Рождества Христова в Букишках под Вильнюсом: расписание богослужений, записки, таинства и требы, история храма.",
     "allServices": "Расписание богослужений",
     "directions": "Как добраться",
     "photo": "Храм Рождества Христова в Букишках, вид со стороны входа",
@@ -276,16 +275,8 @@
     "subscribeGoogle": "Google Календарь",
     "subscribeOther": "Apple, Outlook и другие",
     "subscribeNote": "Подписка обновляется сама, когда приход меняет календарь.",
-    "galleryIntro": "Храм Рождества Христова в Букишках в разное время года.",
-    "galleryCaptions": [
-      "Храм зимой",
-      "Иконостас",
-      "Храм летом",
-      "Пасхальное убранство храма",
-      "Вид сверху",
-      "Купола храма"
-    ],
-    "galleryTeaser": "Храм снаружи и внутри, летом и зимой.",
+    "galleryIntro": "Храм Рождества Христова в Букишках и жизнь прихода.",
+    "galleryTeaser": "Храм в разное время года, богослужения и праздники прихода.",
     "historyMore": "Подробнее об истории",
     "timelineSource": "По материалам статей прихода «Храм в Букишках — история веры и памяти» и «Псковские и Виленские помещики Божеряновы».",
     "noteSender": "Ваше имя (не публикуется)",
@@ -300,7 +291,10 @@
     "noteSent": "Записка отправлена в приход. Спаси Господи!",
     "noteSendError": "Не удалось отправить записку. Проверьте подключение к интернету и попробуйте ещё раз или позвоните в приход.",
     "noteDonation": "Пожертвование — по возможности.",
-    "footerSocial": "Мы в соцсетях"
+    "footerSocial": "Мы в соцсетях",
+    "heroKicker": "Православный храм",
+    "heroPlace": "Букишки · Вильнюсский район",
+    "allPhotos": "Все фотографии"
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -324,8 +318,7 @@
     "contrast": "Didelis kontrastas",
     "reset": "Atkurti pradines nuostatas",
     "close": "Uždaryti",
-    "hero": "Maldos vieta.\nNamai sielai.",
-    "heroIntro": "Kristaus Gimimo cerkvė Bukiškyje — parapijos bendruomenė šalia Vilniaus. Kviečiame į pamaldas, susipažinti su cerkve ir pabūti tyloje.",
+    "heroIntro": "Kristaus Gimimo stačiatikių cerkvė Bukiškyje prie Vilniaus: pamaldų tvarkaraštis, maldos rašteliai, sakramentai ir apeigos, cerkvės istorija.",
     "allServices": "Pamaldų tvarkaraštis",
     "directions": "Kaip atvykti",
     "photo": "Kristaus Gimimo cerkvė Bukiškyje, vaizdas nuo įėjimo pusės",
@@ -579,16 +572,8 @@
     "subscribeGoogle": "Google kalendorius",
     "subscribeOther": "Apple, Outlook ir kiti",
     "subscribeNote": "Prenumerata atsinaujina pati, kai parapija keičia kalendorių.",
-    "galleryIntro": "Kristaus Gimimo cerkvė Bukiškyje skirtingais metų laikais.",
-    "galleryCaptions": [
-      "Cerkvė žiemą",
-      "Ikonostasas",
-      "Cerkvė vasarą",
-      "Velykinis cerkvės papuošimas",
-      "Vaizdas iš viršaus",
-      "Cerkvės kupolai"
-    ],
-    "galleryTeaser": "Cerkvė iš lauko ir viduje, vasarą ir žiemą.",
+    "galleryIntro": "Kristaus Gimimo cerkvė Bukiškyje ir parapijos gyvenimas.",
+    "galleryTeaser": "Cerkvė skirtingais metų laikais, pamaldos ir parapijos šventės.",
     "historyMore": "Daugiau apie istoriją",
     "timelineSource": "Pagal parapijos straipsnius rusų kalba apie cerkvės istoriją ir Božerianovų giminę.",
     "noteSender": "Jūsų vardas (neskelbiamas)",
@@ -603,7 +588,10 @@
     "noteSent": "Raštelis išsiųstas parapijai. Ačiū!",
     "noteSendError": "Raštelio išsiųsti nepavyko. Patikrinkite interneto ryšį ir bandykite dar kartą arba paskambinkite į parapiją.",
     "noteDonation": "Auka – pagal galimybes.",
-    "footerSocial": "Socialiniai tinklai"
+    "footerSocial": "Socialiniai tinklai",
+    "heroKicker": "Stačiatikių cerkvė",
+    "heroPlace": "Bukiškis · Vilniaus rajonas",
+    "allPhotos": "Visos nuotraukos"
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -627,8 +615,7 @@
     "contrast": "High contrast",
     "reset": "Reset settings",
     "close": "Close",
-    "hero": "A place of prayer.\nA home for the soul.",
-    "heroIntro": "The Church of the Nativity of Christ in Bukiškis is a parish community near Vilnius. Join us in worship, discover the church and find a moment of stillness.",
+    "heroIntro": "The Orthodox Church of the Nativity of Christ in Bukiškis near Vilnius: service schedule, prayer requests, sacraments and services, history of the church.",
     "allServices": "Service schedule",
     "directions": "Getting here",
     "photo": "The Church of the Nativity of Christ in Bukiškis, viewed from the entrance side",
@@ -882,16 +869,8 @@
     "subscribeGoogle": "Google Calendar",
     "subscribeOther": "Apple, Outlook and others",
     "subscribeNote": "A subscription updates itself whenever the parish changes the calendar.",
-    "galleryIntro": "The Church of the Nativity of Christ in Bukiškis through the seasons.",
-    "galleryCaptions": [
-      "The church in winter",
-      "The iconostasis",
-      "The church in summer",
-      "The church decorated for Pascha",
-      "View from above",
-      "The domes"
-    ],
-    "galleryTeaser": "The church inside and out, in summer and winter.",
+    "galleryIntro": "The Church of the Nativity of Christ in Bukiškis and the life of the parish.",
+    "galleryTeaser": "The church through the seasons, services and parish feasts.",
     "historyMore": "More about the history",
     "timelineSource": "Based on the parish’s articles in Russian on the history of the church and the Bozheryanov family.",
     "noteSender": "Your name (not published)",
@@ -906,6 +885,9 @@
     "noteSent": "The request has been sent to the parish. Thank you!",
     "noteSendError": "The request could not be sent. Check your internet connection and try again, or call the parish.",
     "noteDonation": "A donation is welcome, as you are able.",
-    "footerSocial": "Social media"
+    "footerSocial": "Social media",
+    "heroKicker": "Orthodox church",
+    "heroPlace": "Bukiškis · Vilnius District",
+    "allPhotos": "All photos"
   }
 }

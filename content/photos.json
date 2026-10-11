@@ -1,0 +1,223 @@
+{
+  "hero": [
+    {
+      "file": "assets/img/hero-autumn-960.webp",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "file": "assets/img/hero-autumn-1600.webp",
+      "width": 1600,
+      "height": 901
+    },
+    {
+      "file": "assets/img/hero-autumn-2400.webp",
+      "width": 2400,
+      "height": 1351
+    }
+  ],
+  "homeMosaic": [
+    "palm-sunday",
+    "iconostasis",
+    "water-blessing",
+    "royal-doors",
+    "altar"
+  ],
+  "gallery": [
+    {
+      "id": "church-autumn",
+      "web": "assets/img/parish/church-autumn.webp",
+      "width": 1600,
+      "height": 901,
+      "thumb": "assets/img/parish/church-autumn-thumb.webp",
+      "thumbWidth": 640,
+      "thumbHeight": 360,
+      "source": "Передано приходом 11.10.2026",
+      "caption": {
+        "ru": "Храм осенью",
+        "lt": "Cerkvė rudenį",
+        "en": "The church in autumn"
+      }
+    },
+    {
+      "id": "palm-sunday",
+      "web": "assets/img/parish/palm-sunday.webp",
+      "width": 960,
+      "height": 1280,
+      "thumb": "assets/img/parish/palm-sunday-thumb.webp",
+      "thumbWidth": 640,
+      "thumbHeight": 853,
+      "source": "Передано приходом 11.10.2026",
+      "caption": {
+        "ru": "Вербное воскресенье",
+        "lt": "Verbų sekmadienis",
+        "en": "Palm Sunday"
+      }
+    },
+    {
+      "id": "iconostasis",
+      "web": "assets/img/parish/iconostasis.webp",
+      "width": 1280,
+      "height": 720,
+      "thumb": "assets/img/parish/iconostasis-thumb.webp",
+      "thumbWidth": 640,
+      "thumbHeight": 360,
+      "source": "Передано приходом 11.10.2026",
+      "caption": {
+        "ru": "Иконостас",
+        "lt": "Ikonostasas",
+        "en": "The iconostasis"
+      }
+    },
+    {
+      "id": "water-blessing",
+      "web": "assets/img/parish/water-blessing.webp",
+      "width": 1600,
+      "height": 1200,
+      "thumb": "assets/img/parish/water-blessing-thumb.webp",
+      "thumbWidth": 640,
+      "thumbHeight": 480,
+      "source": "Передано приходом 11.10.2026",
+      "caption": {
+        "ru": "Водосвятный молебен",
+        "lt": "Vandens šventinimo molebenas",
+        "en": "Service of the blessing of water"
+      }
+    },
+    {
+      "id": "royal-doors",
+      "web": "assets/img/parish/royal-doors.webp",
+      "width": 1600,
+      "height": 1200,
+      "thumb": "assets/img/parish/royal-doors-thumb.webp",
+      "thumbWidth": 640,
+      "thumbHeight": 480,
+      "source": "Передано приходом 11.10.2026",
+      "caption": {
+        "ru": "У царских врат",
+        "lt": "Prie karališkųjų vartų",
+        "en": "At the royal doors"
+      }
+    },
+    {
+      "id": "winter",
+      "web": "assets/img/web/7eb2b9b214ea663b.webp",
+      "width": 1400,
+      "height": 2486,
+      "thumb": "assets/img/web/7eb2b9b214ea663b-thumb.webp",
+      "thumbWidth": 520,
+      "thumbHeight": 924,
+      "source": "assets/img/archive/7eb2b9b214ea663b.jpg",
+      "caption": {
+        "ru": "Храм зимой",
+        "lt": "Cerkvė žiemą",
+        "en": "The church in winter"
+      }
+    },
+    {
+      "id": "altar",
+      "web": "assets/img/parish/altar.webp",
+      "width": 1600,
+      "height": 739,
+      "thumb": "assets/img/parish/altar-thumb.webp",
+      "thumbWidth": 640,
+      "thumbHeight": 296,
+      "source": "Передано приходом 11.10.2026",
+      "caption": {
+        "ru": "Святой престол",
+        "lt": "Šventasis stalas altoriuje",
+        "en": "The Holy Table"
+      }
+    },
+    {
+      "id": "liturgy-altar",
+      "web": "assets/img/parish/liturgy-altar.webp",
+      "width": 1600,
+      "height": 739,
+      "thumb": "assets/img/parish/liturgy-altar-thumb.webp",
+      "thumbWidth": 640,
+      "thumbHeight": 296,
+      "source": "Передано приходом 11.10.2026",
+      "caption": {
+        "ru": "В алтаре",
+        "lt": "Altoriuje",
+        "en": "In the sanctuary"
+      }
+    },
+    {
+      "id": "summer",
+      "web": "assets/img/web/36abc63c17718008.webp",
+      "width": 1400,
+      "height": 788,
+      "thumb": "assets/img/web/36abc63c17718008-thumb.webp",
+      "thumbWidth": 520,
+      "thumbHeight": 292,
+      "source": "assets/img/archive/36abc63c17718008.jpg",
+      "caption": {
+        "ru": "Храм летом",
+        "lt": "Cerkvė vasarą",
+        "en": "The church in summer"
+      }
+    },
+    {
+      "id": "aerial",
+      "web": "assets/img/web/a8a1bf916537e3bd.webp",
+      "width": 1024,
+      "height": 434,
+      "thumb": "assets/img/web/a8a1bf916537e3bd-thumb.webp",
+      "thumbWidth": 520,
+      "thumbHeight": 220,
+      "source": "assets/img/archive/a8a1bf916537e3bd.jpg",
+      "caption": {
+        "ru": "Вид сверху",
+        "lt": "Vaizdas iš viršaus",
+        "en": "View from above"
+      }
+    },
+    {
+      "id": "water-blessing-2",
+      "web": "assets/img/parish/water-blessing-2.webp",
+      "width": 1600,
+      "height": 739,
+      "thumb": "assets/img/parish/water-blessing-2-thumb.webp",
+      "thumbWidth": 640,
+      "thumbHeight": 296,
+      "source": "Передано приходом 11.10.2026",
+      "caption": {
+        "ru": "Освящение воды",
+        "lt": "Vandens šventinimas",
+        "en": "Blessing of water"
+      }
+    },
+    {
+      "id": "pascha",
+      "web": "assets/img/web/f2ede969c68e242b.webp",
+      "width": 1024,
+      "height": 434,
+      "thumb": "assets/img/web/f2ede969c68e242b-thumb.webp",
+      "thumbWidth": 520,
+      "thumbHeight": 220,
+      "source": "assets/img/archive/f2ede969c68e242b.jpg",
+      "caption": {
+        "ru": "Пасхальное убранство храма",
+        "lt": "Velykinis cerkvės papuošimas",
+        "en": "The church decorated for Pascha"
+      }
+    },
+    {
+      "id": "domes",
+      "web": "assets/img/web/2b50e91560d5deff.webp",
+      "width": 1024,
+      "height": 431,
+      "thumb": "assets/img/web/2b50e91560d5deff-thumb.webp",
+      "thumbWidth": 520,
+      "thumbHeight": 219,
+      "source": "assets/img/archive/2b50e91560d5deff.jpg",
+      "caption": {
+        "ru": "Купола храма",
+        "lt": "Cerkvės kupolai",
+        "en": "The domes"
+      }
+    }
+  ]
+}

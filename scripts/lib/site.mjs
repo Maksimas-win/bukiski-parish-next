@@ -28,7 +28,7 @@ function resolveBasePath(value) {
 }
 
 export async function loadSite(env = process.env) {
-  const [settings, locales, pages, assets, documents, sourceLinks, rawSchedule, imageManifest, template] = await Promise.all([
+  const [settings, locales, pages, assets, documents, sourceLinks, rawSchedule, imageManifest, photos, template] = await Promise.all([
     readJSON('settings.json'),
     readJSON('locales.json'),
     readJSON('source-pages.json'),
@@ -37,6 +37,7 @@ export async function loadSite(env = process.env) {
     readJSON('source-links.json'),
     readJSON('original-services.json'),
     readJSON('image-manifest.json'),
+    readJSON('photos.json'),
     readFile(resolve(ROOT, 'index.html'), 'utf8')
   ]);
 
@@ -71,6 +72,7 @@ export async function loadSite(env = process.env) {
     sourceLinks,
     rawSchedule,
     imageManifest,
+    photos,
     template,
     schedule: normalizeSchedule(rawSchedule),
     origin,
