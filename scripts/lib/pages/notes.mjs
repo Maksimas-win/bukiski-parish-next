@@ -32,7 +32,7 @@ export function notesPage(site, lang, t) {
   // Room for the longest allowed names plus line breaks.
   const maxLength = MAX_NAMES * (MAX_NAME_LENGTH + 1);
 
-  return html`${pageHead({ title: t.notes, intro: t.noteIntro })}
+  return html`${pageHead({ title: t.notes, intro: t.noteIntro, site, page: 'notes', t })}
   <section class="shell notes"${labels}>
     <form class="notes__form" id="prayer-form" autocomplete="off">
       <p class="notes__local">${t.noteLocal}</p>

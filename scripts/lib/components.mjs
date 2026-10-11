@@ -2,14 +2,43 @@
 
 import { isStale, safeExternalURL } from '../../assets/js/domain.js';
 import { html, attrs, classes } from './html.mjs';
-import { icon } from './icons.mjs';
+import { icon, socialHandle, socialIcon } from './icons.mjs';
 import { formatDate } from './site.mjs';
 
-export function pageHead({ title, intro, kicker }) {
-  return html`<header class="page-head shell">
-    ${kicker && html`<p class="page-head__kicker">${kicker}</p>`}
-    <h1>${title}</h1>
-    ${intro && html`<p class="lead">${intro}</p>`}
+/**
+ * Opening of an inner page. With `site`, `page` and `t` it gets the page's
+ * gold label and, when content/photos.json names one, a photograph banner.
+ */
+export function pageHead({ title, intro, kicker, site, page, t }) {
+  const label = kicker || (t && page && t.pageEyebrows?.[page]);
+  const photoId = site && page && site.photos.banners?.[page];
+  const photo = photoId && site.photos.gallery.find(candidate => candidate.id === photoId);
+  if (photoId && !photo) throw new Error(`photos.json: banner for ${page} names a missing photo`);
+  if (!photo) {
+    return html`<header class="page-head shell">
+      ${label && html`<p class="eyebrow">${label}</p>`}
+      <h1>${title}</h1>
+      ${intro && html`<p class="lead">${intro}</p>`}
+    </header>`;
+  }
+  return html`<header class="page-banner">
+    <img${attrs({
+      class: 'page-banner__photo',
+      src: site.url(`/${photo.web}`),
+      srcset: `${site.url(`/${photo.thumb}`)} ${photo.thumbWidth}w, ${site.url(`/${photo.web}`)} ${photo.width}w`,
+      sizes: '100vw',
+      width: photo.width,
+      height: photo.height,
+      fetchpriority: 'high',
+      decoding: 'async',
+      alt: ''
+    })}>
+    <div class="page-banner__shade" aria-hidden="true"></div>
+    <div class="shell page-banner__content">
+      ${label && html`<p class="eyebrow eyebrow--light">${label}</p>`}
+      <h1>${title}</h1>
+      ${intro && html`<p class="page-banner__lead">${intro}</p>`}
+    </div>
   </header>`;
 }
 
@@ -107,4 +136,20 @@ export function scheduleStatus(site, lang, t) {
   return html`<p class="schedule-status">${t.fromCalendar}. ${t.updated} <time datetime="${sourceUpdatedAt}">${formatDate(lang, sourceUpdatedAt, { dateStyle: 'medium', timeStyle: 'short' })}</time> (${t.timeZoneShort}).</p>
     <p${attrs({ class: 'notice notice--warning', 'data-stale': true, hidden: !stale })}>${t.stale}</p>
     <noscript><p class="notice notice--warning">${t.stale}</p></noscript>`;
+}
+
+/** The parish's social channels as large cards with each network's mark. */
+export function socialCards(site, t) {
+  return html`<ul class="social-cards">
+    ${site.settings.social.map(item => html`<li class="social-card social-card--${item.id}">
+      <a href="${item.url}" rel="noopener noreferrer">
+        <span class="social-card__icon">${socialIcon(item.id)}</span>
+        <span class="social-card__text">
+          <span class="social-card__name">${item.label}</span>
+          <span class="social-card__handle">${socialHandle(item.url)}</span>
+        </span>
+        <span class="social-card__go">${t.socialOpen}${icon('external')}<span class="visually-hidden"> (${t.external})</span></span>
+      </a>
+    </li>`)}
+  </ul>`;
 }

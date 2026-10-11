@@ -111,8 +111,6 @@
     "mapPrivacy": "Карта откроется на внешнем сайте только после нажатия.",
     "transport": "Общественный транспорт",
     "transportIntro": "Маршруты указаны по данным прежнего сайта прихода. Перед поездкой проверьте расписание у перевозчика: оно может меняться.",
-    "entryAccess": "Вход в храм и помощь при посещении",
-    "entryAccessText": "У входа в храм есть ступени. Если вам трудно по ним подниматься или вы пользуетесь инвалидной коляской, позвоните в приход перед визитом и уточните, как попасть внутрь. Информацию о пандусе и входе без ступеней ещё нужно подтвердить.",
     "saveContact": "Сохранить контакт (.vcf)",
     "noteIntro": "Напишите имена — записку можно отправить в приход онлайн, распечатать или передать в храме.",
     "noteType": "Вид записки",
@@ -315,7 +313,19 @@
     "eyebrowVisit": "Посещение храма",
     "eyebrowSocial": "Мы на связи",
     "eyebrowExplore": "Разделы сайта",
-    "socialOpen": "Открыть"
+    "socialOpen": "Открыть",
+    "pageEyebrows": {
+      "schedule": "Богослужения",
+      "history": "История храма",
+      "sacraments": "Церковная жизнь",
+      "contacts": "Посещение храма",
+      "library": "Чтение",
+      "news": "Приходской архив",
+      "notes": "Молитва Церкви",
+      "support": "Пожертвования",
+      "gallery": "Жизнь прихода",
+      "privacy": "Документы"
+    }
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -429,8 +439,6 @@
     "mapPrivacy": "Žemėlapis išorinėje svetainėje atsidarys tik paspaudus nuorodą.",
     "transport": "Viešasis transportas",
     "transportIntro": "Maršrutai nurodyti pagal ankstesnę parapijos svetainę. Prieš kelionę patikrinkite tvarkaraštį pas vežėją: jis gali keistis.",
-    "entryAccess": "Patekimas į cerkvę",
-    "entryAccessText": "Prie įėjimo į cerkvę yra laipteliai. Jei jums sunku jais lipti arba naudojatės neįgaliojo vežimėliu, prieš atvykdami paskambinkite į parapiją ir pasiteiraukite, kaip patekti į vidų. Informaciją apie pandusą ir įėjimą be laiptelių dar reikia patvirtinti.",
     "saveContact": "Išsaugoti kontaktą (.vcf)",
     "noteIntro": "Įrašykite vardus – raštelį galima išsiųsti parapijai internetu, atsispausdinti arba perduoti cerkvėje.",
     "noteType": "Raštelio rūšis",
@@ -633,7 +641,19 @@
     "eyebrowVisit": "Apsilankymas",
     "eyebrowSocial": "Būkime ryšyje",
     "eyebrowExplore": "Svetainės skyriai",
-    "socialOpen": "Atidaryti"
+    "socialOpen": "Atidaryti",
+    "pageEyebrows": {
+      "schedule": "Pamaldos",
+      "history": "Cerkvės istorija",
+      "sacraments": "Bažnytinis gyvenimas",
+      "contacts": "Apsilankymas",
+      "library": "Skaitiniai",
+      "news": "Parapijos archyvas",
+      "notes": "Bažnyčios malda",
+      "support": "Aukos",
+      "gallery": "Parapijos gyvenimas",
+      "privacy": "Dokumentai"
+    }
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -747,8 +767,6 @@
     "mapPrivacy": "The map opens on an external website only when you follow the link.",
     "transport": "Public transport",
     "transportIntro": "Routes are taken from the previous parish website. Check the timetable with the operator before you travel, as it may change.",
-    "entryAccess": "Access to the church",
-    "entryAccessText": "There are steps at the church entrance. If you find steps difficult or use a wheelchair, please call the parish before your visit to discuss access. The availability of a ramp or an entrance without steps still needs to be confirmed.",
     "saveContact": "Save contact (.vcf)",
     "noteIntro": "Write the names: you can send the request to the parish online, print it or hand it in at the church.",
     "noteType": "Prayer request type",
@@ -951,6 +969,18 @@
     "eyebrowVisit": "Visiting",
     "eyebrowSocial": "Stay in touch",
     "eyebrowExplore": "On this site",
-    "socialOpen": "Open"
+    "socialOpen": "Open",
+    "pageEyebrows": {
+      "schedule": "Services",
+      "history": "History of the church",
+      "sacraments": "Church life",
+      "contacts": "Visiting",
+      "library": "Reading",
+      "news": "Parish archive",
+      "notes": "Prayer of the Church",
+      "support": "Donations",
+      "gallery": "Parish life",
+      "privacy": "Documents"
+    }
   }
 }

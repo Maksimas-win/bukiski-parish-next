@@ -219,5 +219,16 @@
         "en": "The domes"
       }
     }
-  ]
+  ],
+  "banners": {
+    "schedule": "iconostasis",
+    "history": "winter",
+    "sacraments": "altar",
+    "contacts": "summer",
+    "library": "pascha",
+    "news": "royal-doors",
+    "notes": "liturgy-altar",
+    "support": "church-autumn",
+    "gallery": "domes"
+  }
 }

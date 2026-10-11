@@ -40,7 +40,7 @@ export function schedulePage(site, lang, t) {
   const months = groupByMonth(events);
   const monthName = monthEvents => capitalize(formatDate(lang, monthEvents[0].start, { month: 'long', year: 'numeric' }));
 
-  return html`${pageHead({ title: t.allServices, intro: t.regular })}
+  return html`${pageHead({ title: t.allServices, intro: t.regular, site, page: 'schedule', t })}
   <section class="shell schedule"${scheduleData(site, lang, t)} data-initial-months="${INITIAL_MONTHS}">
     <div class="schedule__main">
     <div class="schedule__tools" data-schedule-tools hidden>
