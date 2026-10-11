@@ -78,5 +78,6 @@ test('Host configuration is derived from committed settings', () => {
   assert.match(current, /RewriteRule \^podat-zapisku\/\?\$ \/bukiski-parish-next\/ru\/notes\.html \[R=301,L,NE\]/);
   assert.match(current, /<FilesMatch "\\\.\(pdf\|doc\)\$">\nHeader set X-Robots-Tag "noindex, nofollow"/);
   assert.match(current, /<FilesMatch "\\\.\(html\|json\|ics\|vcf\|xml\|txt\)\$">\nHeader set Cache-Control "no-cache"/);
-  assert.doesNotMatch(htaccess({ ...preview, documentDelivery: 'envelope' }, redirects), /X-Robots-Tag/);
+  assert.doesNotMatch(htaccess({ ...preview, documentDelivery: 'envelope' }, redirects), /FilesMatch "\\\.\(pdf\|doc\)/);
+  assert.match(current, /X-Robots-Tag "noindex, nofollow" env=preview_site/);
 });

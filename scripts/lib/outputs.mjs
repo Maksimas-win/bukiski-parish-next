@@ -49,7 +49,7 @@ export function htaccess(site, redirects) {
     ? '<FilesMatch "\\.(pdf|doc)$">\nHeader set X-Robots-Tag "noindex, nofollow"\n</FilesMatch>\n'
     : '';
   const rules = withoutRoot(redirects).map(({ from, to }) => `RewriteRule ^${regexEscape(from.slice(1))}/?$ ${base}${to} [R=301,L,NE]`).join('\n');
-  return `Options -Indexes\n<IfModule mod_headers.c>\n${headers}\n${caching}\n${documents}</IfModule>\n\n<IfModule mod_rewrite.c>\nRewriteEngine On\nRewriteRule (^|/)\\.git(?:/|$) - [F,L,NC]\n${rules}\n</IfModule>\nErrorDocument 404 ${base}/404.html\n`;
+  return `Options -Indexes\n<IfModule mod_setenvif.c>\nSetEnvIfNoCase Host "\\.hostingersite\\.com$" preview_site\n</IfModule>\n<IfModule mod_headers.c>\n${headers}\nHeader always set X-Robots-Tag "noindex, nofollow" env=preview_site\n${caching}\n${documents}</IfModule>\n\n<IfModule mod_rewrite.c>\nRewriteEngine On\nRewriteRule (^|/)\\.git(?:/|$) - [F,L,NC]\n${rules}\n</IfModule>\nErrorDocument 404 ${base}/404.html\n`;
 }
 
 /**
