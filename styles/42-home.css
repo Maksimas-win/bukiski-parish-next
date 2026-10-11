@@ -24,6 +24,14 @@
   background: currentColor;
 }
 
+.eyebrow.eyebrow--light {
+  color: #fff;
+}
+
+.eyebrow.eyebrow--light::before {
+  background: var(--gilt);
+}
+
 .section-title h2 {
   margin: 0;
 }

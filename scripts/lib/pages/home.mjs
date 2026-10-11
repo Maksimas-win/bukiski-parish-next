@@ -1,7 +1,7 @@
 import { upcomingEvents } from '../../../assets/js/domain.js';
 import { html, attrs } from '../html.mjs';
-import { icon, socialHandle, socialIcon } from '../icons.mjs';
-import { copyButton, externalLink, phoneLink, scheduleData, scheduleStatus, serviceRow, siteLink } from '../components.mjs';
+import { icon } from '../icons.mjs';
+import { copyButton, externalLink, phoneLink, scheduleData, scheduleStatus, serviceRow, siteLink, socialCards } from '../components.mjs';
 
 /** Rows rendered into the page; the browser shows the first few that are still ahead. */
 const RENDERED_SERVICES = 8;
@@ -139,18 +139,7 @@ function social(site, lang, t) {
       ${sectionTitle('social-title', t.eyebrowSocial, t.social)}
       <p class="section-head__note">${t.socialIntro}</p>
     </div>
-    <ul class="social-cards">
-      ${site.settings.social.map(item => html`<li class="social-card social-card--${item.id}">
-        <a href="${item.url}" rel="noopener noreferrer">
-          <span class="social-card__icon">${socialIcon(item.id)}</span>
-          <span class="social-card__text">
-            <span class="social-card__name">${item.label}</span>
-            <span class="social-card__handle">${socialHandle(item.url)}</span>
-          </span>
-          <span class="social-card__go">${t.socialOpen}${icon('external')}<span class="visually-hidden"> (${t.external})</span></span>
-        </a>
-      </li>`)}
-    </ul>
+    ${socialCards(site, t)}
   </section>`;
 }
 

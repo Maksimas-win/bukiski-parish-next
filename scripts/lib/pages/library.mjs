@@ -10,7 +10,7 @@ const PAGE_SIZE = 18;
 
 export function articleCard(site, lang, t, entry, heading = 'h2') {
   const href = site.url(entry.target);
-  return html`<li${attrs({ class: 'article-card', 'data-library-item': true, 'data-language': entry.language, 'data-url': entry.target, 'data-search': `${entry.title} ${entry.description}` })}>
+  return html`<li${attrs({ class: entry.cover ? 'article-card' : 'article-card article-card--text', 'data-library-item': true, 'data-language': entry.language, 'data-url': entry.target, 'data-search': `${entry.title} ${entry.description}` })}>
     ${entry.cover && html`<img${attrs({ class: 'article-card__image', src: site.url(`/${entry.cover.thumb}`), width: entry.cover.thumbWidth, height: entry.cover.thumbHeight, loading: 'lazy', decoding: 'async', alt: '' })}>`}
     <div class="article-card__body">
       <p class="article-card__meta">
@@ -39,7 +39,7 @@ export function libraryPage(site, catalog, lang, t) {
     'data-label-unavailable': t.searchUnavailable
   });
 
-  return html`${pageHead({ title: t.library, intro: t.libraryTeaser })}
+  return html`${pageHead({ title: t.library, intro: t.libraryTeaser, site, page: 'library', t })}
   <section class="shell library"${labels}>
     <div class="library__tools" data-library-tools hidden>
       <div class="search-field">
@@ -66,11 +66,11 @@ export function libraryPage(site, catalog, lang, t) {
 
 export function newsPage(site, catalog, lang, t, archivePath) {
   const articles = catalog.news();
-  return html`${pageHead({ title: t.news, intro: t.newsIntro })}
+  return html`${pageHead({ title: t.news, intro: t.newsIntro, site, page: 'news', t })}
   <section class="shell library">
-    ${archivePath && html`<p>${siteLink(site, archivePath, t.archiveOriginal)}</p>`}
     <ul class="article-grid">
       ${articles.map(entry => articleCard(site, lang, t, entry))}
     </ul>
+    ${archivePath && html`<p class="library__archive">${icon('book')}${siteLink(site, archivePath, t.archiveOriginal)}</p>`}
   </section>`;
 }
