@@ -1,7 +1,7 @@
 // The document shell: <head> metadata, header, footer and shared dialogs.
 
 import { html, attrs, raw } from './html.mjs';
-import { icon } from './icons.mjs';
+import { icon, socialIcon } from './icons.mjs';
 import { externalLink, siteLink } from './components.mjs';
 
 /**
@@ -52,7 +52,7 @@ function footer(site, t, uiLocale) {
       <div class="site-footer__about">
         <p class="site-footer__name">${t.name}</p>
         <p>${t.footerLine}</p>
-        <p class="site-footer__social" aria-label="${t.footerSocial}">${settings.social.map(item => externalLink(t, item.url, item.label))}</p>
+        <p class="site-footer__social" aria-label="${t.footerSocial}">${settings.social.map(item => externalLink(t, item.url, html`${socialIcon(item.id)}${item.label}`))}</p>
         <p>${externalLink(t, settings.links.church.url, settings.links.church.label[uiLocale])}</p>
       </div>
       <div>

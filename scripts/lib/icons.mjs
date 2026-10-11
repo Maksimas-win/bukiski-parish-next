@@ -34,6 +34,7 @@ const PATHS = {
   bath: 'M12 3s-5 6-5 10a5 5 0 0 0 10 0c0-4-5-10-5-10z M4 21h16',
   carriage: 'M3 14h13l2-5H6z M7 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z M15 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z M18 9h3',
   house: 'M3 11l9-7 9 7 M5 10v11h14V10 M10 21v-6h4v6',
+  book: 'M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z M5 19.5A1.5 1.5 0 0 0 6.5 21H19 M9 7h6',
   door: 'M6 21V4h12v17 M3 21h18 M14 12h.01',
   photo: 'M4 6h16v13H4z M4 15l5-5 4 4 3-3 4 4 M15.5 9.5h.01'
 };
@@ -45,3 +46,25 @@ export function icon(name) {
 }
 
 /** The three-bar Orthodox cross used as the site mark. */
+
+/**
+ * Social network marks, simplified, in the networks' own colours on the page.
+ * Used only next to the network's name, which carries the meaning.
+ */
+const SOCIAL = {
+  telegram: '<path fill="currentColor" d="M20.7 3.6 2.9 10.5c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 1.7 5.4c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.2-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 13.5l8.4-5.3c.4-.2.8-.1.5.2l-7.2 6.5-.3 3-1.4-4.4z"/>',
+  facebook: '<path fill="currentColor" d="M13.6 21v-8h2.7l.4-3.2h-3.1v-2c0-.9.3-1.6 1.6-1.6h1.7V3.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.5V13h2.8v8z"/>',
+  instagram: '<path fill="none" stroke="currentColor" stroke-width="1.9" d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3z M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><circle fill="currentColor" cx="17.3" cy="6.7" r="1.2"/>'
+};
+
+export function socialIcon(id) {
+  const path = SOCIAL[id];
+  if (!path) throw new Error(`Unknown social icon: ${id}`);
+  return raw(`<svg class="social-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">${path}</svg>`);
+}
+
+/** The account name shown under a network, read from its address: t.me/bukhram → @bukhram. */
+export function socialHandle(url) {
+  const name = new URL(url).pathname.split('/').filter(Boolean)[0] || '';
+  return new URL(url).hostname.includes('facebook') ? name : `@${name}`;
+}

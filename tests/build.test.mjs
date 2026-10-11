@@ -304,6 +304,9 @@ test('The home page opens with the church photograph and its name, with no sloga
     assert.match(hero, /fetchpriority="high"/);
     assert.doesNotMatch(hero, /class="button/, 'the hero has no call-to-action buttons');
     assert.equal((home.match(/class="mosaic__item"/g) || []).length, photos.homeMosaic.length, lang);
+    assert.equal((home.match(/class="social-card social-card--/g) || []).length, settings.social.length, lang);
+    for (const item of settings.social) assert.ok(home.includes(`href="${item.url}"`), item.url);
+    assert.equal((home.match(/class="quick__tile"/g) || []).length, 4, lang);
   }
 });
 

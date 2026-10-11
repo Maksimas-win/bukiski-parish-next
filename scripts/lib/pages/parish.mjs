@@ -1,7 +1,7 @@
 // Core sections with editorial text: contacts, history, sacraments, gallery, support, privacy.
 
 import { html } from '../html.mjs';
-import { icon } from '../icons.mjs';
+import { icon, socialIcon } from '../icons.mjs';
 import { formatDate } from '../site.mjs';
 import { churchImage, copyButton, externalLink, pageHead, phoneLink, siteLink } from '../components.mjs';
 
@@ -10,7 +10,7 @@ const reviewed = (site, lang, t, sourceUrl) => html`<p class="hint meta-row"><sp
 
 /** Parish social-media links as they appear on the parish's own site. */
 export function socialLinks(site, t, className = 'chip chip--link') {
-  return site.settings.social.map(item => externalLink(t, item.url, item.label, className));
+  return site.settings.social.map(item => externalLink(t, item.url, html`${socialIcon(item.id)}${item.label}`, className));
 }
 
 /** Who to contact: the rector, phone and WhatsApp, as published on bukiski-hram.net. */
