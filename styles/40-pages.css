@@ -65,36 +65,6 @@
   color: #fff;
 }
 
-.hero__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.75rem;
-  margin: 2rem 0 0;
-}
-
-.hero__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 2.75rem;
-  font-weight: 600;
-  color: #fff;
-  text-decoration: underline;
-  text-decoration-color: rgb(255 255 255 / 0.5);
-  text-underline-offset: 0.3em;
-}
-
-.hero__link:hover,
-.hero__link:focus-visible {
-  color: #fff;
-  text-decoration-color: currentColor;
-}
-
-.hero__link:focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 3px;
-}
-
 /* One arrival moment on the home page; nothing else animates on its own. */
 @media (max-width: 40rem) {
   .hero__photo {
@@ -1212,13 +1182,6 @@
 }
 
 /* Home and footer additions ------------------------------------------------- */
-
-.visit-card__social {
-  margin-top: 0.5rem;
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  font-weight: 650;
-}
 
 .site-footer__social {
   display: flex;

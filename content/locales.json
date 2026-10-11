@@ -306,7 +306,16 @@
     "compareAfter": "Сегодня",
     "compareRange": "Сравнить фотографии: до восстановления и сегодня",
     "compareHint": "Передвиньте ползунок, чтобы сравнить",
-    "storySources": "Источники и примечание"
+    "storySources": "Источники и примечание",
+    "quickTitle": "Быстрые ссылки",
+    "quickScheduleNote": "Службы и праздники",
+    "quickNotesNote": "Онлайн или для печати",
+    "eyebrowServices": "Богослужения",
+    "eyebrowPhotos": "Жизнь прихода",
+    "eyebrowVisit": "Посещение храма",
+    "eyebrowSocial": "Мы на связи",
+    "eyebrowExplore": "Разделы сайта",
+    "socialOpen": "Открыть"
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -615,7 +624,16 @@
     "compareAfter": "Šiandien",
     "compareRange": "Palyginti nuotraukas: prieš atstatymą ir šiandien",
     "compareHint": "Pastumkite slankiklį ir palyginkite",
-    "storySources": "Šaltiniai ir pastaba"
+    "storySources": "Šaltiniai ir pastaba",
+    "quickTitle": "Greitos nuorodos",
+    "quickScheduleNote": "Pamaldos ir šventės",
+    "quickNotesNote": "Internetu arba spausdinti",
+    "eyebrowServices": "Pamaldos",
+    "eyebrowPhotos": "Parapijos gyvenimas",
+    "eyebrowVisit": "Apsilankymas",
+    "eyebrowSocial": "Būkime ryšyje",
+    "eyebrowExplore": "Svetainės skyriai",
+    "socialOpen": "Atidaryti"
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -924,6 +942,15 @@
     "compareAfter": "Today",
     "compareRange": "Compare the photographs: before restoration and today",
     "compareHint": "Move the slider to compare",
-    "storySources": "Sources and note"
+    "storySources": "Sources and note",
+    "quickTitle": "Quick links",
+    "quickScheduleNote": "Services and feasts",
+    "quickNotesNote": "Online or to print",
+    "eyebrowServices": "Services",
+    "eyebrowPhotos": "Parish life",
+    "eyebrowVisit": "Visiting",
+    "eyebrowSocial": "Stay in touch",
+    "eyebrowExplore": "On this site",
+    "socialOpen": "Open"
   }
 }
