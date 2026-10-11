@@ -334,8 +334,8 @@
     "status": 200,
     "language": "ru",
     "title": "история о храме",
-    "target": "/ru/history.html",
-    "archive": "/archive/fd23a11c4d305e90.html",
+    "target": "/ru/library/istoriya-o-hrame.html",
+    "archive": "/ru/library/istoriya-o-hrame.html",
     "textCharacters": 9530,
     "contentHash": "37ceba6c2cb83c59",
     "strategy": "301-on-old-host"
@@ -499,8 +499,8 @@
     "status": 200,
     "language": "ru",
     "title": "История православный храм Букишкис. Богослужения, требы, пастырское. храм Рождества Христова",
-    "target": "/ru/history.html",
-    "archive": "/archive/ff79cd4f0ce86ab7.html",
+    "target": "/ru/library/o-nashem-hrame.html",
+    "archive": "/ru/library/o-nashem-hrame.html",
     "textCharacters": 5858,
     "contentHash": "44f2394bb4a1f47d",
     "strategy": "301-on-old-host"

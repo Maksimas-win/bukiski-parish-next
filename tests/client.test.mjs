@@ -27,17 +27,21 @@ test('Only reading preferences are stored in the browser', () => {
   assert.ok(sources.get('theme-init.js').includes(`'${key}'`));
 });
 
-test('Prayer names never leave the tab and are erased when the page is left', () => {
+test('Prayer names leave the tab only on «Отправить», after consent, and are erased when the page is left', () => {
   const notes = sources.get('features/notes.js');
-  assert.match(notes, /form\.addEventListener\('submit', event => event\.preventDefault\(\)\)/);
+  assert.match(notes, /event\.preventDefault\(\);\n\s*send\(\);/);
+  assert.match(notes, /if \(!consent\.checked\)/);
+  assert.equal((notes.match(/\bfetch\(/g) || []).length, 1);
+  assert.match(notes, /fetch\(endpoint, \{/);
+  assert.match(notes, /const endpoint = labels\.notesEndpoint;/);
   assert.match(notes, /window\.addEventListener\('pagehide', erase\)/);
   assert.match(notes, /if \(event\.persisted\) erase\(\)/);
-  assert.doesNotMatch(notes, /fetch\(|XMLHttpRequest|sendBeacon|WebSocket|localStorage|history\.|location\.|console\./);
+  assert.doesNotMatch(notes, /XMLHttpRequest|sendBeacon|WebSocket|localStorage|sessionStorage|history\.|location\.(?:href|search|hash)|console\./);
 });
 
-test('Network requests stay on this origin and are limited to two known files', () => {
+test('Network requests are limited to three known files and send no cookies', () => {
   const fetchers = [...sources].filter(([, source]) => /\bfetch\(/.test(source)).map(([name]) => name).sort();
-  assert.deepEqual(fetchers, ['document-downloads.js', 'features/library.js']);
+  assert.deepEqual(fetchers, ['document-downloads.js', 'features/library.js', 'features/notes.js']);
   for (const name of fetchers) assert.match(sources.get(name), /credentials: 'omit'/, name);
 });
 

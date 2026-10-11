@@ -17,6 +17,18 @@ function groupByMonth(events) {
   return [...months];
 }
 
+/** Adds the parish's public Google calendar to the visitor's Google account. */
+function googleSubscribe(site) {
+  return `https://calendar.google.com/calendar/r?cid=${encodeURIComponent(site.settings.calendarId)}`;
+}
+
+/** The same public calendar as a live subscription for Apple Calendar, Outlook and others. */
+function webcalSubscribe(site) {
+  const id = site.settings.calendarId;
+  if (!/^[a-f0-9]+@group\.calendar\.google\.com$/.test(id)) throw new Error('Invalid calendarId');
+  return `webcal://calendar.google.com/calendar/ical/${encodeURIComponent(id)}/public/basic.ics`;
+}
+
 function calendarLink(site, lang) {
   const target = new URL(site.settings.calendarUrl);
   target.searchParams.set('hl', lang);
@@ -59,6 +71,12 @@ export function schedulePage(site, lang, t) {
         ${phoneLink(site, t, 'button button--quiet')}
       </div>
       <p class="hint">${t.calendarNote}</p>
+      <h2 class="schedule__aside-title">${t.subscribe}</h2>
+      <div class="actions">
+        ${externalLink(t, googleSubscribe(site), t.subscribeGoogle, 'button button--quiet')}
+        <a class="button button--quiet" href="${webcalSubscribe(site)}">${icon('calendar-plus')}${t.subscribeOther}</a>
+      </div>
+      <p class="hint">${t.subscribeNote}</p>
     </aside>
   </section>`;
 }

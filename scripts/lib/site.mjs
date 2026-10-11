@@ -10,7 +10,7 @@ export const DIST = resolve(ROOT, 'dist');
 if (relative(ROOT, DIST) !== 'dist') throw new Error('Unsafe output path');
 
 /** Sections that exist in every site language, in navigation order. */
-export const CORE_PAGES = ['home', 'schedule', 'history', 'sacraments', 'news', 'contacts', 'library', 'notes', 'support', 'privacy'];
+export const CORE_PAGES = ['home', 'schedule', 'history', 'sacraments', 'gallery', 'news', 'contacts', 'library', 'notes', 'support', 'privacy'];
 
 const DOCUMENT_DELIVERY = ['envelope', 'direct'];
 

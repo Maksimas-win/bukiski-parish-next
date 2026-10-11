@@ -14,7 +14,8 @@ import { createCatalog } from './lib/catalog.mjs';
 import { renderDocument } from './lib/layout.mjs';
 import { homePage } from './lib/pages/home.mjs';
 import { schedulePage } from './lib/pages/schedule.mjs';
-import { contactsPage, historyPage, sacramentsPage, supportPage, privacyPage, notFoundPage } from './lib/pages/parish.mjs';
+import { contactsPage, historyPage, sacramentsPage, galleryPage, supportPage, privacyPage, notFoundPage } from './lib/pages/parish.mjs';
+import { lightboxDialog as galleryLightbox } from './lib/pages/article.mjs';
 import { notesPage } from './lib/pages/notes.mjs';
 import { libraryPage, newsPage } from './lib/pages/library.mjs';
 import { articlePage, lightboxDialog } from './lib/pages/article.mjs';
@@ -22,6 +23,9 @@ import { documentPage, loadDocument } from './lib/pages/document.mjs';
 import * as outputs from './lib/outputs.mjs';
 
 const site = await loadSite();
+
+/** Articles about the church on bukiski-hram.net, offered from the history page. */
+const HISTORY_ARTICLES = ['https://bukiski-hram.net/o-nashem-hrame', 'https://bukiski-hram.net/istoriya-o-hrame'];
 const catalog = createCatalog(site);
 const routes = new Map();
 
@@ -103,8 +107,9 @@ function addCorePages() {
     const bodies = {
       home: () => homePage(site, lang, t),
       schedule: () => schedulePage(site, lang, t),
-      history: () => historyPage(site, lang, t, archiveOf(`https://bukiski-hram.org/${lang}/history.html`)),
+      history: () => historyPage(site, lang, t, archiveOf(`https://bukiski-hram.org/${lang}/history.html`), HISTORY_ARTICLES.map(url => catalog.byUrl.get(url)).filter(Boolean)),
       sacraments: () => sacramentsPage(site, lang, t),
+      gallery: () => galleryPage(site, lang, t),
       news: () => newsPage(site, catalog, lang, t, archiveOf(`https://bukiski-hram.org/${lang}/news.html`)),
       contacts: () => contactsPage(site, lang, t),
       library: () => libraryPage(site, catalog, lang, t),
@@ -120,7 +125,8 @@ function addCorePages() {
         description: pageId === 'home' ? t.heroIntro : (t[`${pageId}Intro`] || t[`${pageId}Teaser`] || t[pageId]),
         body: bodies[pageId](),
         path: site.route(lang, pageId),
-        alternates: site.languages.map(code => ({ lang: code, path: site.route(code, pageId) }))
+        alternates: site.languages.map(code => ({ lang: code, path: site.route(code, pageId) })),
+        extraDialogs: pageId === 'gallery' ? galleryLightbox(t, lang) : ''
       });
     }
   }
@@ -251,7 +257,7 @@ for (const lang of site.languages) await writeOutput(`assets/schedule-${lang}.ic
 
 // Files kept in the repository for review. They depend only on committed
 // content, never on the environment of a particular build.
-await writeFile(resolve(ROOT, 'deploy/old-domain.htaccess'), outputs.oldDomainHtaccess(site, catalog.redirects));
+await writeFile(resolve(ROOT, 'deploy/bukiski-hram-org.htaccess'), outputs.orgDomainHtaccess(site));
 await writeFile(resolve(ROOT, 'content/migration.csv'), outputs.migrationCSV(catalog.inventory));
 await writeFile(resolve(ROOT, 'content/migration.json'), `${JSON.stringify(catalog.inventory, null, 2)}\n`);
 

@@ -538,7 +538,7 @@ input[type='checkbox'] {
 
 .link-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
   gap: 1.25rem;
   padding: 0;
   list-style: none;
@@ -750,4 +750,88 @@ input[type='checkbox'] {
 .lightbox__step--next {
   right: 1rem;
   top: 50%;
+}
+
+/* Text inputs share the look of the search field. */
+input[type='text'],
+input[type='email'] {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid var(--line-strong);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+input[type='text']:focus-visible,
+input[type='email']:focus-visible {
+  border-color: var(--focus);
+  outline-offset: 0;
+}
+
+input[type='email']:user-invalid {
+  border-color: var(--danger);
+}
+
+::placeholder {
+  color: var(--ink-soft);
+  opacity: 0.8;
+}
+
+.button--large {
+  min-height: 3.5rem;
+  padding-inline: 1.6rem;
+  font-size: 1.0625rem;
+}
+
+.notice--success {
+  border-inline-start: 4px solid var(--accent);
+  border-radius: var(--radius-s);
+}
+
+.with-icon-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.with-icon-line > .icon {
+  color: var(--accent);
+}
+
+/* A definition list of short terms with explanations. */
+.term-list {
+  display: grid;
+  gap: 0.9rem;
+  margin-block: 1.25rem;
+}
+
+.term-list dt {
+  font-weight: 650;
+}
+
+.term-list dd {
+  color: var(--ink-soft);
+}
+
+/* Words set as small pills, for lists of names rather than actions. */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: var(--surface-tint);
+  font-weight: 550;
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
 }
