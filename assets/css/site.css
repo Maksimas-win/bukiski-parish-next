@@ -357,6 +357,17 @@ mark {
   navigation: auto;
 }
 
+/* The header stays put and the page itself changes quickly, so a large photo
+   is never shown half-faded into the previous page. */
+.site-header {
+  view-transition-name: site-header;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.18s;
+}
+
 /* 20-layout.css */
 /* Header ------------------------------------------------------------------ */
 
@@ -1783,7 +1794,6 @@ input[type='email']:user-invalid {
 
 @keyframes hero-fade {
   from {
-    opacity: 0;
     transform: translateY(0.75rem);
   }
 }

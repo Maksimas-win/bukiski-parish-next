@@ -2,8 +2,8 @@
 // them by language and query. Searching inside article text is opt-in, because
 // it downloads the full text of every article.
 
-import { searchText } from '../domain.js?v=3412e3fd32';
-import { $, $$, show, create } from '../ui/dom.js?v=3412e3fd32';
+import { searchText } from '../domain.js?v=f58cdd99c9';
+import { $, $$, show, create } from '../ui/dom.js?v=f58cdd99c9';
 
 const SNIPPET_BEFORE = 70;
 const SNIPPET_AFTER = 130;
