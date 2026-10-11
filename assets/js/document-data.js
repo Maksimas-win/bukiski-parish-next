@@ -1,6 +1,8 @@
 // Validation shared by the build, the publication check and the browser for
 // documents delivered inside an HTML page. No browser storage is used.
 
+import { SITE_LANGUAGES } from './domain.js';
+
 const TYPES = { pdf: 'application/pdf', doc: 'application/msword' };
 const SIGNATURES = {
   pdf: [0x25, 0x50, 0x44, 0x46, 0x2d],                         // %PDF-
@@ -10,7 +12,7 @@ const MAX_BYTES = 5 * 1024 * 1024;
 
 /** Path of the download page for a document in a site language. */
 export function documentPath(document, lang) {
-  if (!['ru', 'lt', 'en'].includes(lang)) throw new Error('Unsupported document language');
+  if (!SITE_LANGUAGES.includes(lang)) throw new Error('Unsupported document language');
   const match = /^assets\/documents\/([a-z0-9-]+)\.(pdf|doc)$/.exec(document.local || '');
   if (!match) throw new Error('Invalid document path');
   return `/${lang}/documents/${match[1]}.html`;

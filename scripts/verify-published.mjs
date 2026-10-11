@@ -8,7 +8,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 import { documentPath, decodeDocument } from '../assets/js/document-data.js';
 
 const ATTEMPTS = 6;
-const LANGUAGES = ['ru', 'lt', 'en'];
+const LANGUAGES = ['ru', 'lt', 'en', 'pl', 'de', 'uk'];
 
 const base = new URL(process.env.PREVIEW_URL);
 if (base.protocol !== 'https:' || base.search || base.hash || !base.pathname.endsWith('/')) throw new Error('Invalid preview URL');

@@ -229,7 +229,10 @@
         "caption": {
           "ru": "Храм в строительных лесах, вид от ограды",
           "lt": "Cerkvė statybiniuose pastoliuose, vaizdas nuo tvoros",
-          "en": "The church in scaffolding, seen from the fence"
+          "en": "The church in scaffolding, seen from the fence",
+          "pl": "Cerkiew w rusztowaniach, widok od ogrodzenia",
+          "de": "Die Kirche im Gerüst, Blick vom Zaun",
+          "uk": "Храм у будівельних риштуваннях, вигляд від огорожі"
         }
       },
       {
@@ -243,7 +246,10 @@
         "caption": {
           "ru": "Стены в деревянных лесах",
           "lt": "Sienos mediniuose pastoliuose",
-          "en": "Walls behind timber scaffolding"
+          "en": "Walls behind timber scaffolding",
+          "pl": "Ściany w drewnianych rusztowaniach",
+          "de": "Mauern hinter Holzgerüsten",
+          "uk": "Стіни в дерев’яних риштуваннях"
         }
       },
       {
@@ -257,7 +263,10 @@
         "caption": {
           "ru": "Западный фасад с входной аркой",
           "lt": "Vakarinis fasadas su įėjimo arka",
-          "en": "West front with the entrance arch"
+          "en": "West front with the entrance arch",
+          "pl": "Fasada zachodnia z łukiem wejściowym",
+          "de": "Westfassade mit dem Eingangsbogen",
+          "uk": "Західний фасад із вхідною аркою"
         }
       },
       {
@@ -271,7 +280,10 @@
         "caption": {
           "ru": "Апсида и главка",
           "lt": "Apsidė ir kupolėlis",
-          "en": "The apse and a small dome"
+          "en": "The apse and a small dome",
+          "pl": "Absyda i kopułka",
+          "de": "Apsis und kleine Kuppel",
+          "uk": "Апсида і банька"
         }
       },
       {
@@ -285,7 +297,10 @@
         "caption": {
           "ru": "Храм в лесах, общий вид",
           "lt": "Cerkvė pastoliuose, bendras vaizdas",
-          "en": "The church in scaffolding, general view"
+          "en": "The church in scaffolding, general view",
+          "pl": "Cerkiew w rusztowaniach, widok ogólny",
+          "de": "Die Kirche im Gerüst, Gesamtansicht",
+          "uk": "Храм у риштуваннях, загальний вигляд"
         }
       },
       {
@@ -299,7 +314,10 @@
         "caption": {
           "ru": "Вид из-за ограды",
           "lt": "Vaizdas už tvoros",
-          "en": "View from behind the fence"
+          "en": "View from behind the fence",
+          "pl": "Widok zza ogrodzenia",
+          "de": "Blick von jenseits des Zauns",
+          "uk": "Вигляд з-за огорожі"
         }
       },
       {
@@ -313,7 +331,10 @@
         "caption": {
           "ru": "Алтарная апсида",
           "lt": "Altoriaus apsidė",
-          "en": "The altar apse"
+          "en": "The altar apse",
+          "pl": "Absyda ołtarzowa",
+          "de": "Altarapsis",
+          "uk": "Вівтарна апсида"
         }
       },
       {
@@ -327,7 +348,10 @@
         "caption": {
           "ru": "Разрушенная кровля",
           "lt": "Sugriuvęs stogas",
-          "en": "The ruined roof"
+          "en": "The ruined roof",
+          "pl": "Zniszczony dach",
+          "de": "Das zerstörte Dach",
+          "uk": "Зруйнована покрівля"
         }
       },
       {
@@ -341,7 +365,10 @@
         "caption": {
           "ru": "Подвальное помещение",
           "lt": "Rūsio patalpa",
-          "en": "A basement room"
+          "en": "A basement room",
+          "pl": "Pomieszczenie piwniczne",
+          "de": "Ein Kellerraum",
+          "uk": "Підвальне приміщення"
         }
       },
       {
@@ -355,7 +382,10 @@
         "caption": {
           "ru": "Обрушенная кладка над аркой",
           "lt": "Sugriuvęs mūras virš arkos",
-          "en": "Collapsed brickwork above an arch"
+          "en": "Collapsed brickwork above an arch",
+          "pl": "Zawalony mur nad łukiem",
+          "de": "Eingestürztes Mauerwerk über einem Bogen",
+          "uk": "Обвалена кладка над аркою"
         }
       },
       {
@@ -369,7 +399,10 @@
         "caption": {
           "ru": "Леса у разрушенной стены",
           "lt": "Pastoliai prie apgriuvusios sienos",
-          "en": "Scaffolding by a damaged wall"
+          "en": "Scaffolding by a damaged wall",
+          "pl": "Rusztowania przy zniszczonej ścianie",
+          "de": "Gerüst an einer beschädigten Mauer",
+          "uk": "Риштування біля зруйнованої стіни"
         }
       },
       {
@@ -383,7 +416,10 @@
         "caption": {
           "ru": "Окна изнутри",
           "lt": "Langai iš vidaus",
-          "en": "Windows from inside"
+          "en": "Windows from inside",
+          "pl": "Okna od wewnątrz",
+          "de": "Fenster von innen",
+          "uk": "Вікна зсередини"
         }
       },
       {
@@ -397,7 +433,10 @@
         "caption": {
           "ru": "Своды, поросшие мхом",
           "lt": "Samanomis apaugę skliautai",
-          "en": "Vaults overgrown with moss"
+          "en": "Vaults overgrown with moss",
+          "pl": "Sklepienia porośnięte mchem",
+          "de": "Mit Moos bewachsene Gewölbe",
+          "uk": "Склепіння, порослі мохом"
         }
       },
       {
@@ -411,7 +450,10 @@
         "caption": {
           "ru": "Следы окраски на карнизе",
           "lt": "Dažų pėdsakai ant karnizo",
-          "en": "Traces of paint on a cornice"
+          "en": "Traces of paint on a cornice",
+          "pl": "Ślady farby na gzymsie",
+          "de": "Farbspuren an einem Gesims",
+          "uk": "Сліди фарбування на карнизі"
         }
       },
       {
@@ -425,7 +467,10 @@
         "caption": {
           "ru": "Тройное окно",
           "lt": "Trigubas langas",
-          "en": "A triple window"
+          "en": "A triple window",
+          "pl": "Potrójne okno",
+          "de": "Dreifaches Fenster",
+          "uk": "Потрійне вікно"
         }
       }
     ]

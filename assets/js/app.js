@@ -3,12 +3,13 @@
 // pages that contain its markup.
 
 import { initCopyButtons } from './ui/copy.js';
-import { initMenu } from './ui/menu.js';
+import { initLanguageMenu, initMenu } from './ui/menu.js';
 import { initPreferences } from './ui/preferences.js';
 
 document.documentElement.classList.add('js');
 
 initMenu();
+initLanguageMenu();
 initPreferences();
 initCopyButtons();
 

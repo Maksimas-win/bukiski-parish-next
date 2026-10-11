@@ -5,7 +5,7 @@
 import { decodeDocument } from './document-data.js';
 
 const MAX_PAGE_LENGTH = 8 * 1024 * 1024;
-const DOCUMENT_PAGE = /^(ru|lt|en)\/documents\/[a-z0-9-]+\.html$/;
+const DOCUMENT_PAGE = /^(ru|lt|en|pl|de|uk)\/documents\/[a-z0-9-]+\.html$/;
 
 function readEnvelope(page) {
   const robots = page.querySelector('meta[name="robots"]')?.content.split(',').map(value => value.trim()) || [];

@@ -22,7 +22,10 @@
     "name": {
       "ru": "свящ. Максим Крутолевич",
       "lt": "kun. Maksim Krutolevič",
-      "en": "Fr Maksim Krutolevich"
+      "en": "Fr Maksim Krutolevich",
+      "pl": "ks. Maksim Krutolevič",
+      "de": "Priester Maksim Krutolevič",
+      "uk": "свящ. Максим Крутолевич"
     },
     "url": "https://maksimas.name/",
     "source": "https://bukiski-hram.net/o-nashem-hrame"
@@ -109,18 +112,27 @@
       "label": {
         "ru": "Литовская Православная Церковь",
         "lt": "Lietuvos stačiatikių bažnyčia",
-        "en": "Lithuanian Orthodox Church"
+        "en": "Lithuanian Orthodox Church",
+        "pl": "Litewska Cerkiew Prawosławna",
+        "de": "Orthodoxe Kirche Litauens",
+        "uk": "Литовська Православна Церква"
       }
     }
   },
   "locales": [
     "ru",
     "lt",
-    "en"
+    "en",
+    "pl",
+    "de",
+    "uk"
   ],
   "translationReview": {
     "ru": "editorial-draft",
     "lt": "native-and-clergy-review-required",
-    "en": "clergy-review-required"
+    "en": "clergy-review-required",
+    "pl": "native-and-clergy-review-required",
+    "de": "native-and-clergy-review-required",
+    "uk": "native-and-clergy-review-required"
   }
 }

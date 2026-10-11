@@ -363,3 +363,26 @@ test('The illustrated history keeps the source wording and shows the photographs
   }
   assert.doesNotMatch(story, / style=/, 'no inline styles under the CSP');
 });
+
+test('Polish, German and Ukrainian pages exist and every service title is translated', async () => {
+  const terms = await readJSON('content/liturgical-terms.json');
+  const { createTranslator } = await import('../scripts/lib/liturgical.mjs');
+  const raw = await readJSON('content/original-services.json');
+  const { translate, missing } = createTranslator(terms);
+  for (const event of raw.events.filter(item => item.source === 'parish-calendar')) {
+    for (const lang of ['pl', 'de', 'uk']) {
+      translate(event.title.en, lang);
+      if (event.liturgical?.en) translate(event.liturgical.en, lang);
+    }
+  }
+  assert.deepEqual([...missing], []);
+  assert.equal(translate('Sunday 21 after Pentecost', 'uk'), 'Неділя 21-ша по П’ятидесятниці');
+  assert.equal(translate('Sunday 13 after Pentecost', 'uk'), 'Неділя 13-та по П’ятидесятниці');
+
+  for (const lang of ['pl', 'de', 'uk']) {
+    const home = await page(`/${lang}/`);
+    assert.match(home, new RegExp(`<html lang="${lang}"`));
+    const schedule = await page(`/${lang}/schedule.html`);
+    assert.ok(schedule.includes(terms.terms['Divine Liturgy'][lang]), lang);
+  }
+});

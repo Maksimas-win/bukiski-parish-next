@@ -36,7 +36,10 @@
       "caption": {
         "ru": "Храм осенью",
         "lt": "Cerkvė rudenį",
-        "en": "The church in autumn"
+        "en": "The church in autumn",
+        "pl": "Cerkiew jesienią",
+        "de": "Die Kirche im Herbst",
+        "uk": "Храм восени"
       }
     },
     {
@@ -51,7 +54,10 @@
       "caption": {
         "ru": "Вербное воскресенье",
         "lt": "Verbų sekmadienis",
-        "en": "Palm Sunday"
+        "en": "Palm Sunday",
+        "pl": "Niedziela Palmowa",
+        "de": "Palmsonntag",
+        "uk": "Вербна неділя"
       }
     },
     {
@@ -66,7 +72,10 @@
       "caption": {
         "ru": "Иконостас",
         "lt": "Ikonostasas",
-        "en": "The iconostasis"
+        "en": "The iconostasis",
+        "pl": "Ikonostas",
+        "de": "Ikonostase",
+        "uk": "Іконостас"
       }
     },
     {
@@ -81,7 +90,10 @@
       "caption": {
         "ru": "Водосвятный молебен",
         "lt": "Vandens šventinimo molebenas",
-        "en": "Service of the blessing of water"
+        "en": "Service of the blessing of water",
+        "pl": "Molebien z poświęceniem wody",
+        "de": "Wasserweihe",
+        "uk": "Водосвятний молебень"
       }
     },
     {
@@ -96,7 +108,10 @@
       "caption": {
         "ru": "У царских врат",
         "lt": "Prie karališkųjų vartų",
-        "en": "At the royal doors"
+        "en": "At the royal doors",
+        "pl": "Przy Carskich Wrotach",
+        "de": "An der Königlichen Pforte",
+        "uk": "Біля царських врат"
       }
     },
     {
@@ -111,7 +126,10 @@
       "caption": {
         "ru": "Храм зимой",
         "lt": "Cerkvė žiemą",
-        "en": "The church in winter"
+        "en": "The church in winter",
+        "pl": "Cerkiew zimą",
+        "de": "Die Kirche im Winter",
+        "uk": "Храм узимку"
       }
     },
     {
@@ -126,7 +144,10 @@
       "caption": {
         "ru": "Святой престол",
         "lt": "Šventasis stalas altoriuje",
-        "en": "The Holy Table"
+        "en": "The Holy Table",
+        "pl": "Święty ołtarz",
+        "de": "Der heilige Altar",
+        "uk": "Святий престол"
       }
     },
     {
@@ -141,7 +162,10 @@
       "caption": {
         "ru": "В алтаре",
         "lt": "Altoriuje",
-        "en": "In the sanctuary"
+        "en": "In the sanctuary",
+        "pl": "W ołtarzu",
+        "de": "Im Altarraum",
+        "uk": "У вівтарі"
       }
     },
     {
@@ -156,7 +180,10 @@
       "caption": {
         "ru": "Храм летом",
         "lt": "Cerkvė vasarą",
-        "en": "The church in summer"
+        "en": "The church in summer",
+        "pl": "Cerkiew latem",
+        "de": "Die Kirche im Sommer",
+        "uk": "Храм улітку"
       }
     },
     {
@@ -171,7 +198,10 @@
       "caption": {
         "ru": "Вид сверху",
         "lt": "Vaizdas iš viršaus",
-        "en": "View from above"
+        "en": "View from above",
+        "pl": "Widok z góry",
+        "de": "Ansicht von oben",
+        "uk": "Вигляд згори"
       }
     },
     {
@@ -186,7 +216,10 @@
       "caption": {
         "ru": "Освящение воды",
         "lt": "Vandens šventinimas",
-        "en": "Blessing of water"
+        "en": "Blessing of water",
+        "pl": "Poświęcenie wody",
+        "de": "Wasserweihe",
+        "uk": "Освячення води"
       }
     },
     {
@@ -201,7 +234,10 @@
       "caption": {
         "ru": "Пасхальное убранство храма",
         "lt": "Velykinis cerkvės papuošimas",
-        "en": "The church decorated for Pascha"
+        "en": "The church decorated for Pascha",
+        "pl": "Paschalny wystrój cerkwi",
+        "de": "Österlicher Schmuck der Kirche",
+        "uk": "Великоднє оздоблення храму"
       }
     },
     {
@@ -216,7 +252,10 @@
       "caption": {
         "ru": "Купола храма",
         "lt": "Cerkvės kupolai",
-        "en": "The domes"
+        "en": "The domes",
+        "pl": "Kopuły cerkwi",
+        "de": "Die Kuppeln der Kirche",
+        "uk": "Бані храму"
       }
     }
   ],

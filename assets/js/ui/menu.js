@@ -23,3 +23,18 @@ export function initMenu() {
     if (isOpen() && !event.target.closest('[data-header]')) setOpen(false);
   });
 }
+
+/** The compact language menu closes on Escape or a click outside it. */
+export function initLanguageMenu() {
+  const menu = document.querySelector('[data-lang-menu]');
+  if (!menu) return;
+  document.addEventListener('click', event => {
+    if (menu.open && !menu.contains(event.target)) menu.open = false;
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menu.open) {
+      menu.open = false;
+      menu.querySelector('summary').focus();
+    }
+  });
+}

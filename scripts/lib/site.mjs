@@ -3,7 +3,8 @@
 import { readFile } from 'node:fs/promises';
 import { resolve, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { TIMEZONE, SITE_LANGUAGES, normalizeSchedule, safeExternalURL } from '../../assets/js/domain.js';
+import { TIMEZONE, SITE_LANGUAGES, FEED_LANGUAGES, normalizeSchedule, safeExternalURL } from '../../assets/js/domain.js';
+import { localizeSchedule } from './liturgical.mjs';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const DIST = resolve(ROOT, 'dist');
@@ -28,7 +29,7 @@ function resolveBasePath(value) {
 }
 
 export async function loadSite(env = process.env) {
-  const [settings, locales, pages, assets, documents, sourceLinks, rawSchedule, imageManifest, photos, historyStory, template] = await Promise.all([
+  const [settings, locales, pages, assets, documents, sourceLinks, rawSchedule, imageManifest, photos, historyStory, liturgicalTerms, template] = await Promise.all([
     readJSON('settings.json'),
     readJSON('locales.json'),
     readJSON('source-pages.json'),
@@ -39,11 +40,16 @@ export async function loadSite(env = process.env) {
     readJSON('image-manifest.json'),
     readJSON('photos.json'),
     readJSON('stories/istoriya-o-hrame.json'),
+    readJSON('liturgical-terms.json'),
     readFile(resolve(ROOT, 'index.html'), 'utf8')
   ]);
 
   if (settings.timezone !== TIMEZONE) throw new Error(`settings.timezone must be ${TIMEZONE}`);
   if (settings.locales.join() !== SITE_LANGUAGES.join()) throw new Error('settings.locales must match the supported site languages');
+
+  const schedule = normalizeSchedule(rawSchedule);
+  const untranslated = localizeSchedule(schedule, liturgicalTerms, SITE_LANGUAGES.filter(lang => !FEED_LANGUAGES.includes(lang)), rawSchedule.events);
+  if (untranslated.length) console.warn(`Liturgical texts without a translation (English shown): ${untranslated.join('; ')}`);
 
   const origin = resolveOrigin(env.SITE_ORIGIN || settings.origin);
   const base = resolveBasePath(env.BASE_PATH ?? settings.basePath);
@@ -77,7 +83,7 @@ export async function loadSite(env = process.env) {
     /** Articles shown with a dedicated layout, by source URL. */
     stories: new Map([[historyStory.source, historyStory]]),
     template,
-    schedule: normalizeSchedule(rawSchedule),
+    schedule,
     origin,
     base,
     production,

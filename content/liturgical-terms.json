@@ -1,0 +1,46 @@
+{
+  "note": "Service titles and liturgical day names for site languages that the parish feed does not provide, keyed by the feed's English text. Sundays after Pentecost are generated from the patterns.",
+  "patterns": {
+    "sundayAfterPentecost": {
+      "pl": "{n}. Niedziela po Pięćdziesiątnicy",
+      "de": "{n}. Sonntag nach Pfingsten",
+      "uk": "Неділя {n}-{suffix} по П’ятидесятниці"
+    }
+  },
+  "terms": {
+    "Divine Liturgy": { "pl": "Boska Liturgia", "de": "Göttliche Liturgie", "uk": "Божественна літургія" },
+    "All-night Vigil": { "pl": "Całonocne czuwanie", "de": "Ganznächtliche Vigil", "uk": "Всенічне бдіння" },
+    "Hours and night Liturgy": { "pl": "Godziny i nocna Liturgia", "de": "Horen und nächtliche Liturgie", "uk": "Часи і нічна літургія" },
+    "Typica": { "pl": "Obiednica", "de": "Typika", "uk": "Обідниця" },
+    "Paschal Midnight Office, procession and night service": { "pl": "Paschalne nabożeństwo północne, procesja i nocne nabożeństwo", "de": "Österliches Mitternachtsamt, Prozession und nächtlicher Gottesdienst", "uk": "Великодня полуношниця, хресний хід і нічне богослужіння" },
+    "Protection of the Mother of God": { "pl": "Opieka Przenajświętszej Bogurodzicy", "de": "Schutz der Allheiligen Gottesgebärerin", "uk": "Покрова Пресвятої Богородиці" },
+    "Entry of the Mother of God into the Temple": { "pl": "Wprowadzenie Przenajświętszej Bogurodzicy do Świątyni", "de": "Einführung der Allheiligen Gottesgebärerin in den Tempel", "uk": "Введення в храм Пресвятої Богородиці" },
+    "Nativity of Christ": { "pl": "Narodzenie Pańskie", "de": "Geburt Christi", "uk": "Різдво Христове" },
+    "Theophany. Baptism of the Lord": { "pl": "Chrzest Pański. Objawienie Pańskie", "de": "Theophanie. Taufe des Herrn", "uk": "Хрещення Господнє. Богоявлення" },
+    "Meeting of the Lord": { "pl": "Spotkanie Pańskie", "de": "Begegnung des Herrn", "uk": "Стрітення Господнє" },
+    "Sunday of the Publican and the Pharisee": { "pl": "Niedziela o celniku i faryzeuszu", "de": "Sonntag vom Zöllner und Pharisäer", "uk": "Неділя про митаря і фарисея" },
+    "Sunday of the Prodigal Son": { "pl": "Niedziela o synu marnotrawnym", "de": "Sonntag vom verlorenen Sohn", "uk": "Неділя про блудного сина" },
+    "Sunday of the Last Judgement": { "pl": "Niedziela o Sądzie Ostatecznym", "de": "Sonntag vom Jüngsten Gericht", "uk": "Неділя про Страшний суд" },
+    "Forgiveness Sunday": { "pl": "Niedziela Przebaczenia", "de": "Sonntag der Vergebung", "uk": "Прощена неділя" },
+    "1st Sunday of Lent. Triumph of Orthodoxy": { "pl": "1. Niedziela Wielkiego Postu. Triumf Prawosławia", "de": "1. Sonntag der Großen Fastenzeit. Sonntag der Orthodoxie", "uk": "Неділя 1-ша Великого посту. Торжество Православ’я" },
+    "2nd Sunday of Lent. St Gregory Palamas": { "pl": "2. Niedziela Wielkiego Postu. Św. Grzegorza Palamasa", "de": "2. Sonntag der Großen Fastenzeit. Hl. Gregor Palamas", "uk": "Неділя 2-га Великого посту. Свт. Григорія Палами" },
+    "3rd Sunday of Lent. Veneration of the Cross": { "pl": "3. Niedziela Wielkiego Postu. Niedziela Krzyżopokłonna", "de": "3. Sonntag der Großen Fastenzeit. Kreuzverehrung", "uk": "Неділя 3-тя Великого посту. Хрестопоклонна" },
+    "Annunciation to the Mother of God": { "pl": "Zwiastowanie Przenajświętszej Bogurodzicy", "de": "Verkündigung an die Allheilige Gottesgebärerin", "uk": "Благовіщення Пресвятої Богородиці" },
+    "4th Sunday of Lent. St John Climacus": { "pl": "4. Niedziela Wielkiego Postu. Św. Jana Klimaka", "de": "4. Sonntag der Großen Fastenzeit. Hl. Johannes Klimakos", "uk": "Неділя 4-та Великого посту. Прп. Іоанна Ліствичника" },
+    "5th Sunday of Lent. St Mary of Egypt": { "pl": "5. Niedziela Wielkiego Postu. Św. Marii Egipcjanki", "de": "5. Sonntag der Großen Fastenzeit. Hl. Maria von Ägypten", "uk": "Неділя 5-та Великого посту. Прп. Марії Єгипетської" },
+    "Entry of the Lord into Jerusalem": { "pl": "Wjazd Pański do Jerozolimy", "de": "Einzug des Herrn in Jerusalem", "uk": "Вхід Господній у Єрусалим" },
+    "Holy Resurrection of Christ. Pascha": { "pl": "Zmartwychwstanie Pańskie. Pascha", "de": "Heilige Auferstehung Christi. Pascha", "uk": "Світле Христове Воскресіння. Пасха" },
+    "2nd Sunday of Pascha. Apostle Thomas": { "pl": "2. Niedziela po Passze. Apostoła Tomasza", "de": "2. Sonntag nach Pascha. Apostel Thomas", "uk": "Неділя 2-га по Пасці. Апостола Фоми" },
+    "3rd Sunday of Pascha. Myrrh-bearing Women": { "pl": "3. Niedziela po Passze. Świętych Niewiast Niosących Wonności", "de": "3. Sonntag nach Pascha. Myrrhenträgerinnen", "uk": "Неділя 3-тя по Пасці. Святих жінок-мироносиць" },
+    "4th Sunday of Pascha. The Paralytic": { "pl": "4. Niedziela po Passze. O paralityku", "de": "4. Sonntag nach Pascha. Vom Gelähmten", "uk": "Неділя 4-та по Пасці. Про розслабленого" },
+    "5th Sunday of Pascha. The Samaritan Woman": { "pl": "5. Niedziela po Passze. O Samarytance", "de": "5. Sonntag nach Pascha. Von der Samariterin", "uk": "Неділя 5-та по Пасці. Про самарянку" },
+    "6th Sunday of Pascha. The Blind Man": { "pl": "6. Niedziela po Passze. O niewidomym", "de": "6. Sonntag nach Pascha. Vom Blindgeborenen", "uk": "Неділя 6-та по Пасці. Про сліпого" },
+    "Ascension of the Lord": { "pl": "Wniebowstąpienie Pańskie", "de": "Himmelfahrt des Herrn", "uk": "Вознесіння Господнє" },
+    "7th Sunday of Pascha. Fathers of the First Ecumenical Council": { "pl": "7. Niedziela po Passze. Ojców I Soboru Powszechnego", "de": "7. Sonntag nach Pascha. Väter des Ersten Ökumenischen Konzils", "uk": "Неділя 7-ма по Пасці. Отців Першого Вселенського Собору" },
+    "Holy Trinity. Pentecost": { "pl": "Dzień Świętej Trójcy. Pięćdziesiątnica", "de": "Heilige Dreiheit. Pfingsten", "uk": "День Святої Трійці. П’ятидесятниця" },
+    "Transfiguration of the Lord": { "pl": "Przemienienie Pańskie", "de": "Verklärung des Herrn", "uk": "Преображення Господнє" },
+    "Dormition of the Mother of God": { "pl": "Zaśnięcie Przenajświętszej Bogurodzicy", "de": "Entschlafen der Allheiligen Gottesgebärerin", "uk": "Успіння Пресвятої Богородиці" },
+    "Nativity of the Mother of God": { "pl": "Narodzenie Przenajświętszej Bogurodzicy", "de": "Geburt der Allheiligen Gottesgebärerin", "uk": "Різдво Пресвятої Богородиці" },
+    "Exaltation of the Holy Cross": { "pl": "Podwyższenie Krzyża Pańskiego", "de": "Kreuzerhöhung", "uk": "Воздвиження Хреста Господнього" }
+  }
+}
