@@ -1,4 +1,5 @@
 // Editorial facts from the parish's published contacts and visitor information.
+// Opening time confirmed by the rector on 2026-10-12: open from 07:45 on days of services.
 // Review these facts when the parish changes its details. Questions are never stored.
 export const PARISH = Object.freeze({
   phone: '+37063693506', displayPhone: '+370 636 93506',
@@ -11,12 +12,12 @@ export const PARISH = Object.freeze({
 export const FAQ = {
   hours: {
     page: 'contacts',
-    ru: 'Время начала богослужений смотрите в расписании. Чтобы уточнить часы открытия храма и договориться о посещении вне службы, позвоните в приход.',
-    lt: 'Pamaldų pradžios laiką rasite tvarkaraštyje. Dėl cerkvės atidarymo valandų ir apsilankymo ne pamaldų metu paskambinkite į parapiją.',
-    en: 'Service start times are listed in the schedule. Please call the parish to confirm church opening hours or arrange a visit outside services.',
-    pl: 'Godziny rozpoczęcia nabożeństw znajdziesz w harmonogramie. Aby potwierdzić godziny otwarcia cerkwi lub umówić wizytę poza nabożeństwem, zadzwoń do parafii.',
-    de: 'Die Anfangszeiten der Gottesdienste finden Sie im Plan. Bitte rufen Sie die Gemeinde an, um die Öffnungszeiten zu bestätigen oder einen Besuch außerhalb der Gottesdienste zu vereinbaren.',
-    uk: 'Час початку богослужінь дивіться в розкладі. Щоб уточнити години відкриття храму й домовитися про відвідування поза службою, зателефонуйте до парафії.'
+    ru: 'В дни богослужений храм открыт с 07:45. Время начала служб смотрите в расписании; о посещении вне службы договоритесь по телефону прихода.',
+    lt: 'Pamaldų dienomis cerkvė atidaryta nuo 07:45. Pamaldų pradžios laiką rasite tvarkaraštyje; dėl apsilankymo ne pamaldų metu susitarkite telefonu.',
+    en: 'On days of services the church is open from 07:45. Service start times are in the schedule; to visit outside services, please call the parish.',
+    pl: 'W dni nabożeństw cerkiew jest otwarta od 07:45. Godziny rozpoczęcia nabożeństw są w harmonogramie; wizytę poza nabożeństwem uzgodnij telefonicznie.',
+    de: 'An Gottesdiensttagen ist die Kirche ab 07:45 Uhr geöffnet. Die Anfangszeiten stehen im Plan; einen Besuch außerhalb der Gottesdienste vereinbaren Sie bitte telefonisch.',
+    uk: 'У дні богослужінь храм відкритий з 07:45. Час початку служб дивіться в розкладі; про відвідування поза службою домовтеся телефоном.'
   },
   sacraments: {
     page: 'sacraments',

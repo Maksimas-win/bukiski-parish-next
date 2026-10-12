@@ -1,0 +1,75 @@
+name: Site monitor
+
+# Read-only checks of the published sites. Publishes nothing. One GitHub issue
+# per confirmed incident (label "monitoring", assigned to the owner); the
+# issue is closed automatically on recovery. GitHub's schedule runs no more
+# often than every 5 minutes, may be delayed under load, and stops after 60
+# days without commits in the repository.
+on:
+  schedule:
+    - cron: '7,37 * * * *'          # health: twice an hour
+    - cron: '23 4 * * 1'            # links: Monday 04:23 UTC
+  workflow_run:
+    workflows: ['Export production site for Hostinger']
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'health, links or release'
+        type: choice
+        options: [health, links, release]
+        default: health
+      simulate:
+        description: 'failure = add one artificial failed check to test the alert path'
+        type: choice
+        options: [none, failure]
+        default: none
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: site-monitor
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Decide what to check
+        id: mode
+        run: |
+          mode="${{ github.event.inputs.mode }}"
+          if [ "${{ github.event_name }}" = "workflow_run" ]; then mode=release; fi
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" = "23 4 * * 1" ]; then mode=links; fi
+          echo "mode=${mode:-health}" >> "$GITHUB_OUTPUT"
+      - name: Expected .net version after a release
+        if: steps.mode.outputs.mode == 'release'
+        run: |
+          git fetch --depth=1 origin hostinger-production
+          echo "EXPECTED_ASSET_VERSION=$(git show origin/hostinger-production:build-info.json | node -p 'JSON.parse(require("fs").readFileSync(0,"utf8")).assetVersion')" >> "$GITHUB_ENV"
+      - name: Check the published sites
+        id: check
+        env:
+          MODE: ${{ steps.mode.outputs.mode }}
+          SIMULATE: ${{ github.event.inputs.simulate }}
+        run: node scripts/monitor/check-sites.mjs
+      - name: Report (issue on a new incident, close on recovery)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/monitor/report.mjs
+      - name: Keep the result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: monitor-result-${{ github.run_id }}
+          path: monitor-result.json
+          retention-days: 14
