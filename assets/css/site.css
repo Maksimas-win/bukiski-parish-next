@@ -5427,3 +5427,420 @@ html.high-contrast .site-nav a {
     line-height: 1.5;
   }
 }
+
+/* 95-parish-assistant.css */
+/* Scoped styles: independent of both sites' themes and typography. */
+.parish-assistant {
+  color-scheme: light;
+  font: 1rem/1.5 Arial, sans-serif;
+  color: #26332e;
+}
+
+.parish-assistant *, .parish-assistant *::before, .parish-assistant *::after {
+  box-sizing: border-box;
+}
+
+.parish-assistant button, .parish-assistant input, .parish-assistant select {
+  font: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.parish-assistant button {
+  cursor: pointer;
+}
+
+.parish-assistant button:disabled {
+  cursor: wait;
+  opacity: .65;
+}
+
+.parish-assistant :focus-visible {
+  outline: 3px solid #a97620;
+  outline-offset: 3px;
+}
+
+.parish-assistant .pa-launcher {
+  position: fixed;
+  z-index: 900;
+  right: 22px;
+  bottom: max(22px, env(safe-area-inset-bottom));
+  min-height: 48px;
+  max-width: calc(100vw - 32px);
+  padding: 13px 21px;
+  border: 1px solid #f8f5ef;
+  border-radius: 30px;
+  color: #fff;
+  background: #254b3e;
+  box-shadow: 0 5px 22px #0003;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  transition: background .16s ease;
+}
+
+.parish-assistant .pa-launcher:hover {
+  background: #18392e;
+}
+
+.parish-assistant .pa-dialog {
+  position: fixed;
+  inset: auto 20px 20px auto;
+  width: 440px;
+  max-width: calc(100vw - 32px);
+  height: 700px;
+  max-height: calc(100dvh - 40px);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #26332e;
+  background: #faf8f3;
+  border: 1px solid #c7cec8;
+  border-radius: 20px;
+  box-shadow: 0 20px 70px #0004;
+}
+
+.parish-assistant .pa-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.parish-assistant .pa-dialog::backdrop {
+  background: #14241e50;
+}
+
+.parish-assistant .pa-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 21px 20px 18px;
+  background: #254b3e;
+  color: #fff;
+}
+
+.parish-assistant .pa-heading {
+  min-width: 0;
+}
+
+.parish-assistant .pa-title {
+  font: 600 1.4375rem/1.25 Georgia, serif;
+  color: #fff;
+  margin: 6px 0 0;
+}
+
+.parish-assistant .pa-eyebrow {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: #ecf0e9;
+  margin: 0;
+}
+
+.parish-assistant .pa-close {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid #8da99a;
+  border-radius: 50%;
+  color: #fff;
+  background: transparent;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.parish-assistant .pa-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 14px;
+  border-bottom: 1px solid #d9dfd7;
+}
+
+.parish-assistant .pa-language select {
+  border: 1px solid #b9c5bc;
+  border-radius: 7px;
+  background: #fff;
+  color: #26332e;
+  padding: 6px;
+  min-height: 40px;
+  max-width: 145px;
+  font-size: 0.875rem;
+}
+
+.parish-assistant .pa-clear {
+  background: transparent;
+  color: #354c40;
+  border: 0;
+  padding: 9px 5px;
+  font-size: 0.8125rem;
+  min-height: 40px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.parish-assistant .pa-mode {
+  margin: 0;
+  padding: 9px 18px 0;
+  color: #566057;
+  font-size: 0.8125rem;
+}
+
+.parish-assistant .pa-transcript {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 70px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 16px;
+}
+
+.parish-assistant .pa-message {
+  margin: 0 20px 14px 0;
+  padding: 13px 14px;
+  border: 1px solid #d9dfd7;
+  border-radius: 4px 16px 16px;
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+
+.parish-assistant .pa-message--user {
+  margin-right: 0;
+  margin-left: 32px;
+  border: 1px solid #c9d8cc;
+  border-radius: 16px 4px 16px 16px;
+  background: #eaf0e8;
+}
+
+.parish-assistant .pa-author {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #53604e;
+  margin-bottom: 5px;
+}
+
+.parish-assistant .pa-text {
+  margin: 5px 0;
+  color: #26332e;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.parish-assistant .pa-events {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  display: grid;
+  gap: 12px;
+}
+
+.parish-assistant .pa-event {
+  border-left: 3px solid #a97620;
+  padding: 0 0 0 11px;
+  margin: 0;
+}
+
+.parish-assistant .pa-event-date {
+  display: block;
+  color: #566057;
+  font-size: 0.8125rem;
+}
+
+.parish-assistant .pa-event-title {
+  margin: 3px 0;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #26332e;
+}
+
+.parish-assistant .pa-event-note, .parish-assistant .pa-meta {
+  margin: 4px 0;
+  color: #566057;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.parish-assistant .pa-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 13px;
+  margin-top: 10px;
+}
+
+.parish-assistant .pa-link {
+  color: #245340;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.parish-assistant .pa-footer {
+  flex-shrink: 0;
+  padding: 12px 16px 14px;
+  border-top: 1px solid #d9dfd7;
+  background: #faf8f3;
+}
+
+.parish-assistant .pa-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.parish-assistant .pa-chip {
+  padding: 7px 10px;
+  min-height: 36px;
+  border: 1px solid #b6c6b9;
+  border-radius: 14px;
+  background: #fff;
+  color: #254b3e;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.parish-assistant .pa-chip:hover {
+  background: #eaf0e8;
+}
+
+.parish-assistant .pa-status {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: #566057;
+  margin: 7px 0;
+}
+
+.parish-assistant .pa-status:empty {
+  display: none;
+}
+
+.parish-assistant .pa-form {
+  display: flex;
+  align-items: stretch;
+  gap: 7px;
+  margin-top: 11px;
+}
+
+.parish-assistant .pa-input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #aab9ae;
+  border-radius: 10px;
+  padding: 11px;
+  background: #fff;
+  color: #26332e;
+  font-size: 1rem;
+}
+
+.parish-assistant .pa-input::placeholder {
+  color: #656b64;
+}
+
+.parish-assistant .pa-send {
+  border: 1px solid #254b3e;
+  border-radius: 10px;
+  background: #254b3e;
+  color: #fff;
+  padding: 9px 12px;
+  font-size: 0.875rem;
+  min-height: 46px;
+}
+
+.parish-assistant .pa-privacy {
+  margin: 10px 0 0;
+  color: #566057;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+.parish-assistant .pa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 520px) {
+  .parish-assistant .pa-suggestions {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .parish-assistant .pa-chip {
+    flex-shrink: 0;
+  }
+
+  .parish-assistant .pa-dialog {
+    inset: auto 8px max(8px, env(safe-area-inset-bottom));
+    width: auto;
+    max-width: none;
+    height: calc(100dvh - 16px);
+    max-height: calc(100dvh - 16px);
+    border-radius: 16px;
+  }
+
+  .parish-assistant .pa-header {
+    padding: 15px;
+  }
+
+  .parish-assistant .pa-footer {
+    padding: 10px 12px 12px;
+  }
+
+  .parish-assistant .pa-transcript {
+    padding: 12px;
+  }
+
+  .parish-assistant .pa-title {
+    font-size: 1.3125rem;
+  }
+
+  .parish-assistant .pa-launcher {
+    right: 14px;
+    bottom: max(14px, env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-height: 520px) {
+  .parish-assistant .pa-privacy, .parish-assistant .pa-eyebrow, .parish-assistant .pa-mode {
+    display: none;
+  }
+
+  .parish-assistant .pa-suggestions {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .parish-assistant .pa-chip {
+    flex-shrink: 0;
+  }
+
+  .parish-assistant .pa-header {
+    padding: 8px 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parish-assistant * {
+    transition: none;
+    scroll-behavior: auto;
+  }
+}
+
+@media print {
+  .parish-assistant {
+    display: none;
+  }
+}
