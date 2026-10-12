@@ -145,6 +145,7 @@ export function articlePage(site, catalog, entry, t, uiLocale, { related = [], a
   const { body, headings } = renderBlocks(page.blocks, entry.title);
   const showContents = headings.length >= MIN_TOC_HEADINGS;
   const languageName = LANGUAGE_NAMES[entry.language] || entry.language.toUpperCase();
+  const interactiveGuide = entry.host === 'bukiski-hram.org' && /^\/(?:ru|lt|en|pl|de|uk)\/gpm\.html$/.test(entry.sourcePath);
 
   return html`<article class="article" data-article>
     <header class="article__head shell" lang="${uiLocale}">
@@ -165,8 +166,8 @@ export function articlePage(site, catalog, entry, t, uiLocale, { related = [], a
       </nav>`}
       <div class="prose article__body" lang="${entry.language}">
         <aside class="notice notice--archive" lang="${uiLocale}">
-          <p>${t.archiveNotice}</p>
-          <p class="meta-row">${externalLink(t, entry.url, `${t.source}: ${entry.host}`)}<span>${t.savedOn}: <time datetime="${page.fetchedOn}">${formatDate(uiLocale, `${page.fetchedOn}T12:00:00Z`, { dateStyle: 'long' })}</time></span></p>
+          <p>${interactiveGuide ? t.gpmTextEdition : t.archiveNotice}</p>
+          <p class="meta-row">${externalLink(t, entry.url, interactiveGuide ? t.gpmInteractiveLink : `${t.source}: ${entry.host}`)}<span>${t.savedOn}: <time datetime="${page.fetchedOn}">${formatDate(uiLocale, `${page.fetchedOn}T12:00:00Z`, { dateStyle: 'long' })}</time></span></p>
         </aside>
         ${body}
         ${references(site, catalog, entry, t, uiLocale)}

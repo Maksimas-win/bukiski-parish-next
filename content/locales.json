@@ -337,7 +337,9 @@
     "saintsOfDay": "Память святых",
     "readingsOfDay": "Чтения дня",
     "calendarSourceLabel": "Источник календаря",
-    "openSchedule": "Открыть расписание"
+    "openSchedule": "Открыть расписание",
+    "gpmTextEdition": "Здесь сохранена текстовая версия приходского гида. Калькулятор, пошаговая инструкция и поиск ответов доступны на bukiski-hram.org.",
+    "gpmInteractiveLink": "Открыть интерактивный гид и калькулятор"
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -677,7 +679,9 @@
     "saintsOfDay": "Šventųjų minėjimas",
     "readingsOfDay": "Dienos skaitiniai",
     "calendarSourceLabel": "Kalendoriaus šaltinis",
-    "openSchedule": "Atidaryti tvarkaraštį"
+    "openSchedule": "Atidaryti tvarkaraštį",
+    "gpmTextEdition": "Čia išsaugota parapijos gido tekstinė versija. Skaičiuoklę, nuoseklią instrukciją ir atsakymų paiešką rasite bukiski-hram.org.",
+    "gpmInteractiveLink": "Atverti interaktyvų gidą ir skaičiuoklę"
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -1017,7 +1021,9 @@
     "saintsOfDay": "Saints commemorated",
     "readingsOfDay": "Readings of the day",
     "calendarSourceLabel": "Calendar source",
-    "openSchedule": "Open the schedule"
+    "openSchedule": "Open the schedule",
+    "gpmTextEdition": "This is the preserved text edition of the parish guide. The calculator, step-by-step guide and answer search are available at bukiski-hram.org.",
+    "gpmInteractiveLink": "Open the interactive guide and calculator"
   },
   "pl": {
     "name": "Cerkiew Narodzenia Pańskiego",
@@ -1357,7 +1363,9 @@
     "saintsOfDay": "Wspomnienie świętych",
     "readingsOfDay": "Czytania dnia",
     "calendarSourceLabel": "Źródło kalendarza",
-    "openSchedule": "Otwórz porządek nabożeństw"
+    "openSchedule": "Otwórz porządek nabożeństw",
+    "gpmTextEdition": "To zachowana tekstowa wersja poradnika parafii. Kalkulator, instrukcja krok po kroku i wyszukiwarka odpowiedzi są dostępne na bukiski-hram.org.",
+    "gpmInteractiveLink": "Otwórz interaktywny poradnik i kalkulator"
   },
   "de": {
     "name": "Kirche der Geburt Christi",
@@ -1697,7 +1705,9 @@
     "saintsOfDay": "Gedächtnis der Heiligen",
     "readingsOfDay": "Lesungen des Tages",
     "calendarSourceLabel": "Quelle des Kalenders",
-    "openSchedule": "Gottesdienstplan öffnen"
+    "openSchedule": "Gottesdienstplan öffnen",
+    "gpmTextEdition": "Hier finden Sie die gespeicherte Textfassung des Gemeindeleitfadens. Rechner, Schritt-für-Schritt-Anleitung und Antwortsuche stehen auf bukiski-hram.org bereit.",
+    "gpmInteractiveLink": "Interaktiven Leitfaden und Rechner öffnen"
   },
   "uk": {
     "name": "Храм Різдва Христового",
@@ -2037,6 +2047,8 @@
     "saintsOfDay": "Пам’ять святих",
     "readingsOfDay": "Читання дня",
     "calendarSourceLabel": "Джерело календаря",
-    "openSchedule": "Відкрити розклад"
+    "openSchedule": "Відкрити розклад",
+    "gpmTextEdition": "Тут збережено текстову версію парафіяльного посібника. Калькулятор, покрокова інструкція та пошук відповідей доступні на bukiski-hram.org.",
+    "gpmInteractiveLink": "Відкрити інтерактивний посібник і калькулятор"
   }
 }

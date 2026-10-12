@@ -30,7 +30,7 @@ function resolveBasePath(value) {
 }
 
 export async function loadSite(env = process.env) {
-  const [settings, locales, pages, assets, documents, sourceLinks, rawSchedule, imageManifest, photos, historyStory, liturgicalTerms, scheduleAdditions, titleOverrides, template] = await Promise.all([
+  const [settings, locales, pages, assets, documents, sourceLinks, rawSchedule, imageManifest, photos, historyStory, liturgicalTerms, scheduleAdditions, titleOverrides, descriptionOverrides, template] = await Promise.all([
     readJSON('settings.json'),
     readJSON('locales.json'),
     readJSON('source-pages.json'),
@@ -44,6 +44,7 @@ export async function loadSite(env = process.env) {
     readJSON('liturgical-terms.json'),
     readJSON('schedule-additions.json'),
     readJSON('title-overrides.json'),
+    readJSON('description-overrides.json'),
     readFile(resolve(ROOT, 'index.html'), 'utf8')
   ]);
 
@@ -90,6 +91,8 @@ export async function loadSite(env = process.env) {
     stories: new Map([[historyStory.source, historyStory]]),
     /** Readable titles for articles whose old <title> was in capitals; see content/title-overrides.json. */
     titleOverrides: titleOverrides.titles,
+    /** Editorial descriptions without changing the preserved source records. */
+    descriptionOverrides: descriptionOverrides.descriptions,
     template,
     schedule,
     origin,
