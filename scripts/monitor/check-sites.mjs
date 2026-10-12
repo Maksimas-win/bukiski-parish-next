@@ -5,8 +5,9 @@
 //   MODE=links node scripts/monitor/check-sites.mjs     # weekly: every sitemap page, its links and assets
 //   SIMULATE=failure node scripts/monitor/check-sites.mjs   # adds one failing check to test the alerting
 //
-// Every request has a 15-second timeout. A network error, timeout or 5xx is
-// retried once after 20 seconds, so a single hiccup is not an incident. A site
+// Every request has a 15-second timeout. A network error, timeout, 5xx or 404
+// is retried once after 20 seconds, so a single hiccup (or a file being
+// replaced during a deployment) is not an incident. A site
 // whose pages disagree with its version marker is re-checked once after 90 s,
 // so a publication in progress is not an incident either.
 // The result is written to $GITHUB_OUTPUT (failures, summary) and to
@@ -46,7 +47,8 @@ async function request(url, { retry = true } = {}) {
         signal: AbortSignal.timeout(TIMEOUT_MS)
       });
       const body = await response.text();
-      if (response.status >= 500 && retry && attempt === 1) { await delay(RETRY_AFTER_MS); continue; }
+      // 5xx: the host is struggling. 404: a known page may be mid-replacement during a deployment.
+      if ((response.status >= 500 || response.status === 404) && retry && attempt === 1) { await delay(RETRY_AFTER_MS); continue; }
       return { status: response.status, headers: response.headers, body };
     } catch (error) {
       if (retry && attempt === 1) { await delay(RETRY_AFTER_MS); continue; }
