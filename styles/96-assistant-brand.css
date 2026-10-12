@@ -28,3 +28,12 @@
 .parish-assistant :focus-visible {
   outline-color: var(--gilt);
 }
+
+/* On phones the launcher stays small so it hides less of the page beneath it. */
+@media (max-width: 40rem) {
+  .parish-assistant .pa-launcher {
+    right: 14px;
+    padding: 10px 16px;
+    font-size: 0.875rem;
+  }
+}
