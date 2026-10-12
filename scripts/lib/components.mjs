@@ -86,10 +86,31 @@ export function churchImage(site, t, { className, sizes, eager = false }) {
 }
 
 /**
+ * The church-calendar day behind a service, folded by default. The feed gives
+ * it in Russian, so other languages say so and mark the text as Russian.
+ */
+function churchDetails(lang, t, event) {
+  const day = event.church;
+  if (!day || (!day.saints.length && !day.readings.length && !day.oldStyleDate)) return '';
+  const oldStyle = day.oldStyleDate && formatDate(lang, `${day.oldStyleDate}T12:00:00Z`, { day: 'numeric', month: 'long', timeZone: 'UTC' });
+  return html`<details class="church-day">
+    <summary>${icon('book')}<span>${t.churchCalendar}</span></summary>
+    <div class="church-day__body">
+      ${lang !== 'ru' && html`<p class="church-day__note">${t.churchCalendarRu}</p>`}
+      ${oldStyle && html`<p class="church-day__old">${t.oldStyle.replace('{date}', oldStyle)}</p>`}
+      ${day.title && html`<p class="church-day__title" lang="ru">${day.title}</p>`}
+      ${day.saints.length > 0 && html`<h4>${t.saintsOfDay}</h4><ul class="church-day__list" lang="ru">${day.saints.map(item => html`<li>${item}</li>`)}</ul>`}
+      ${day.readings.length > 0 && html`<h4>${t.readingsOfDay}</h4><ul class="church-day__list church-day__list--readings" lang="ru">${day.readings.map(item => html`<li>${item}</li>`)}</ul>`}
+      ${day.sourceURL && html`<p class="church-day__source">${externalLink(t, day.sourceURL, t.calendarSourceLabel)}</p>`}
+    </div>
+  </details>`;
+}
+
+/**
  * One service. The same markup serves the home page and the schedule; the
  * browser later hides rows whose start has passed and labels today/tomorrow.
  */
-export function serviceRow(site, lang, t, event, { heading = 'h3', hidden = false, next = false } = {}) {
+export function serviceRow(site, lang, t, event, { heading = 'h3', hidden = false, next = false, label = null, following = null } = {}) {
   const subtitle = event.subtitle[lang] || '';
   const fullDate = formatDate(lang, event.start, { weekday: 'long', day: 'numeric', month: 'long' });
   return html`<li${attrs({
@@ -100,6 +121,8 @@ export function serviceRow(site, lang, t, event, { heading = 'h3', hidden = fals
     'data-feast': String(event.feast),
     'data-title': event.title[lang],
     'data-subtitle': subtitle,
+    'data-label': label,
+    'data-following': following,
     hidden
   })}>
     <div class="service__date" aria-hidden="true">
@@ -110,6 +133,9 @@ export function serviceRow(site, lang, t, event, { heading = 'h3', hidden = fals
       <p class="service__when"><time datetime="${event.start}">${fullDate}</time><span class="badge badge--soon" data-relative hidden></span>${event.feast && html`<span class="badge badge--feast">${t.feast}</span>`}</p>
       <${heading} class="service__title"><span class="service__clock">${event.startTime}</span> ${event.title[lang]}</${heading}>
       ${subtitle && html`<p class="service__subtitle">${subtitle}</p>`}
+      ${lang === 'ru' && event.church?.commemoration && event.church.commemoration !== subtitle && html`<p class="service__commemoration">${event.church.commemoration}</p>`}
+      <p class="service__start" aria-hidden="true"><span class="service__start-box"><span class="service__start-label">${t.serviceStart}</span><span class="service__start-time">${event.startTime}</span></span><span class="service__start-name">${event.title[lang]}</span></p>
+      ${churchDetails(lang, t, event)}
     </div>
     <button${attrs({ type: 'button', class: 'icon-button service__add', 'data-add-to-calendar': true, 'aria-label': `${t.addToCalendar}: ${event.title[lang]}, ${fullDate}`, title: t.addToCalendar, hidden: true })}>${icon('calendar-plus')}<span class="service__add-label" aria-hidden="true">${t.addToCalendar}</span></button>
   </li>`;

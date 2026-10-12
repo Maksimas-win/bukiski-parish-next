@@ -121,3 +121,17 @@ test('A single-service calendar file is valid and carries no invented end time',
   for (const line of text.split('\r\n')) assert.ok(Buffer.byteLength(line) <= 75);
   assert.equal(icsFold('я'.repeat(60)).split('\r\n ').join(''), 'я'.repeat(60), 'folding must not split a character');
 });
+
+test('The church-calendar day is kept as published, cleaned and bounded', () => {
+  const schedule = normalizeSchedule(feed([event({
+    oldStyleDate: '2026-09-28',
+    commemoration: { ru: '  Прп. Харитона   исповедника ' },
+    churchCalendar: { title: 'Неделя 19-я', saints: ['Прп. Харитона.', 42, ''], readings: ['Лк. 6:31-36'], sourceUrl: 'javascript:alert(1)' }
+  }), event({ id: 'plain', date: '2026-10-18', start: '2026-10-18T05:00:00Z' })]));
+  const [day, plain] = schedule.events;
+  assert.deepEqual(day.church, {
+    language: 'ru', commemoration: 'Прп. Харитона исповедника', title: 'Неделя 19-я', oldStyleDate: '2026-09-28',
+    saints: ['Прп. Харитона.'], readings: ['Лк. 6:31-36'], sourceURL: ''
+  });
+  assert.equal(plain.church, null);
+});

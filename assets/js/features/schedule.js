@@ -128,6 +128,25 @@ function setup(container) {
   });
 }
 
+/** «Открыть расписание» opens the services dialog; without it the link leads to the schedule page. */
+function setupDialog() {
+  const dialog = document.getElementById('services-dialog');
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+  for (const link of $$('[data-schedule-open]')) {
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      dialog.showModal();
+      $('[data-dialog-close]', dialog)?.focus();
+    });
+  }
+  $('[data-dialog-close]', dialog)?.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) dialog.close();
+  });
+}
+
 export function init() {
   for (const container of $$('[data-schedule]')) setup(container);
+  setupDialog();
 }
