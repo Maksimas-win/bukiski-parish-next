@@ -25,6 +25,13 @@ const NAVIGATION = ['schedule', 'history', 'sacraments', 'library', 'notes', 'co
 const FOOTER_NAVIGATION = ['schedule', 'notes', 'sacraments', 'gallery', 'support', 'news', 'library', 'privacy'];
 const OG_LOCALES = { ru: 'ru_RU', lt: 'lt_LT', en: 'en_GB', pl: 'pl_PL', de: 'de_DE', uk: 'uk_UA' };
 
+/** Every site language, each in its own name, linking to this page in that language. */
+function languageList(site, lang, targets, className) {
+  return html`<ul class="${className}">
+    ${targets.map(target => html`<li><a${attrs({ href: site.url(target.path), lang: target.lang, hreflang: target.lang, 'aria-current': target.lang === lang ? 'true' : null })}><span class="lang-code">${target.lang.toUpperCase()}</span><span class="lang-name">${LANGUAGE_NAMES[target.lang] || target.lang}</span></a></li>`)}
+  </ul>`;
+}
+
 function header(site, t, lang, uiLocale, pageId, languageTargets) {
   return html`<header class="site-header" lang="${uiLocale}" data-header>
     <div class="shell site-header__bar">
@@ -32,20 +39,24 @@ function header(site, t, lang, uiLocale, pageId, languageTargets) {
         <img class="brand__mark" src="${site.url('/assets/img/logo-128.webp')}" srcset="${site.url('/assets/img/logo-128.webp')} 1x, ${site.url('/assets/img/logo-256.webp')} 2x" width="52" height="52" alt="">
         <span class="brand__text"><span class="brand__name">${t.name}</span><span class="brand__place">${t.place}</span></span>
       </a>
-      <nav class="lang-switch" aria-label="${t.languages}">
-        ${languageTargets.map(target => html`<a${attrs({ href: site.url(target.path), lang: target.lang, hreflang: target.lang, 'aria-current': target.lang === lang ? 'true' : null, title: LANGUAGE_NAMES[target.lang] })}>${target.lang.toUpperCase()}</a>`)}
-      </nav>
+      <a${attrs({ class: 'home-button', href: site.url(site.route(uiLocale, 'home')), 'aria-label': t.home, title: t.home, 'aria-current': pageId === 'home' ? 'page' : null })}>${icon('home')}</a>
       <details class="lang-menu" data-lang-menu>
-        <summary aria-label="${t.languages}: ${LANGUAGE_NAMES[lang] || lang.toUpperCase()}">${icon('globe')}<span>${lang.toUpperCase()}</span></summary>
-        <ul class="lang-menu__list">
-          ${languageTargets.map(target => html`<li><a${attrs({ href: site.url(target.path), lang: target.lang, hreflang: target.lang, 'aria-current': target.lang === lang ? 'true' : null })}><span class="lang-menu__code">${target.lang.toUpperCase()}</span>${LANGUAGE_NAMES[target.lang] || target.lang}</a></li>`)}
-        </ul>
+        <summary aria-label="${t.languages}: ${LANGUAGE_NAMES[lang] || lang.toUpperCase()}" title="${t.languages}">${icon('globe')}<span>${lang.toUpperCase()}</span>${icon('chevron-down')}</summary>
+        <div class="lang-menu__panel">
+          <p class="lang-menu__title">${t.languages}</p>
+          ${languageList(site, lang, languageTargets, 'lang-menu__list')}
+        </div>
       </details>
       <button type="button" class="icon-button menu-toggle" data-menu-toggle hidden aria-expanded="false" aria-controls="site-menu" aria-label="${t.menu}">${icon('menu')}</button>
       <div class="site-menu" id="site-menu" data-menu>
         <nav class="site-nav" aria-label="${t.menu}">
+          <a${attrs({ class: 'site-nav__home', href: site.url(site.route(uiLocale, 'home')), 'aria-current': pageId === 'home' ? 'page' : null })}>${icon('home')}<span>${t.home}</span></a>
           ${NAVIGATION.map(id => html`<a href="${site.url(site.route(uiLocale, id))}"${attrs({ 'aria-current': pageId === id ? 'page' : null })}>${t.nav[id]}</a>`)}
         </nav>
+        <section class="menu-langs" aria-label="${t.languages}">
+          <p class="menu-langs__title">${icon('globe')}${t.languages}</p>
+          ${languageList(site, lang, languageTargets, 'menu-langs__list')}
+        </section>
         <button type="button" class="preferences-button" data-preferences-open hidden aria-haspopup="dialog" title="${t.access}">${icon('sliders')}<span>${t.access}</span></button>
       </div>
     </div>

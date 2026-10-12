@@ -401,3 +401,16 @@ test('Polish, German and Ukrainian pages exist and every service title is transl
     assert.ok(schedule.includes(terms.terms['Divine Liturgy'][lang]), lang);
   }
 });
+
+test('Every page header has a home button and lists all six languages', async () => {
+  for (const path of ['/ru/schedule.html', '/de/contacts.html', '/uk/']) {
+    const html = await page(path);
+    const lang = path.split('/')[1];
+    assert.match(html, new RegExp(`class="home-button" href="[^"]*/${lang}/"`), path);
+    assert.match(html, /class="site-nav__home"/, path);
+    for (const list of ['lang-menu__list', 'menu-langs__list']) {
+      const block = html.slice(html.indexOf(`<ul class="${list}">`), html.indexOf('</ul>', html.indexOf(`<ul class="${list}">`)));
+      assert.equal((block.match(/hreflang="/g) || []).length, settings.locales.length, `${path} ${list}`);
+    }
+  }
+});

@@ -50,34 +50,6 @@
   color: var(--ink-soft);
 }
 
-.lang-switch {
-  display: flex;
-  order: 2;
-  padding: 0.2rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-}
-
-.lang-switch a {
-  min-width: 2.4rem;
-  padding: 0.3rem 0.55rem;
-  border-radius: 999px;
-  font-size: 0.875rem;
-  font-weight: 650;
-  text-align: center;
-  text-decoration: none;
-  color: var(--ink-soft);
-}
-
-.lang-switch a:hover {
-  color: var(--ink);
-}
-
-.lang-switch [aria-current] {
-  background: var(--ink);
-  color: var(--bg);
-}
-
 /* On wide screens the menu wrapper dissolves, so the navigation and the
    settings button sit directly in the header bar. */
 .site-menu {
@@ -148,7 +120,7 @@
 
 /* Below this width the menu folds into a panel opened by the menu button.
    Without JavaScript the links simply wrap onto a second row. */
-@media (max-width: 68rem) {
+@media (max-width: 72rem) {
   .site-header__bar {
     flex-wrap: wrap;
     gap: 0.5rem 0.75rem;
@@ -234,10 +206,6 @@
     height: 42px;
   }
 
-  .lang-switch a {
-    min-width: 2.1rem;
-    padding-inline: 0.4rem;
-  }
 }
 
 /* Footer ------------------------------------------------------------------ */
@@ -392,89 +360,5 @@ main > .support-band:last-child {
 @media (min-width: 46rem) {
   .card-grid--two {
     grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* Compact language menu; the pill row of six languages is used only where the
-   whole navigation fits on one line. */
-.lang-menu {
-  position: relative;
-  display: none;
-  order: 2;
-}
-
-.lang-menu summary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  min-height: 2.5rem;
-  padding: 0.3rem 0.75rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: var(--ink);
-  cursor: pointer;
-  list-style: none;
-}
-
-.lang-menu summary::-webkit-details-marker {
-  display: none;
-}
-
-.lang-menu[open] summary {
-  border-color: var(--ink);
-}
-
-.lang-menu__list {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  right: 0;
-  z-index: 30;
-  display: grid;
-  min-width: 12rem;
-  margin: 0;
-  padding: 0.4rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-m);
-  list-style: none;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-
-.lang-menu__list a {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  min-height: 2.75rem;
-  padding: 0.4rem 0.75rem;
-  border-radius: 0.5rem;
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.lang-menu__list a:hover {
-  background: var(--surface-tint);
-}
-
-.lang-menu__list [aria-current] {
-  font-weight: 700;
-  background: var(--surface-tint);
-}
-
-.lang-menu__code {
-  min-width: 1.75rem;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: var(--label);
-}
-
-@media (max-width: 86rem) {
-  .lang-switch {
-    display: none;
-  }
-
-  .lang-menu {
-    display: block;
   }
 }

@@ -1,0 +1,221 @@
+/* Header: home button and languages ----------------------------------------- */
+
+/* Home: a house in the navigation on wide screens, a round button beside the
+   menu button on narrow ones. The church name on the left also leads home. */
+.site-nav .site-nav__home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.site-nav__home .icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.home-button {
+  display: none;
+  place-items: center;
+  order: 3;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.home-button:hover {
+  border-color: var(--line-strong);
+  background: var(--surface-tint);
+}
+
+.home-button[aria-current='page'] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.home-button .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Languages: a globe button opening a small panel. */
+.lang-menu {
+  position: relative;
+  order: 2;
+}
+
+.lang-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2.75rem;
+  padding: 0.3rem 0.65rem 0.3rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.lang-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.lang-menu summary:hover,
+.lang-menu[open] summary {
+  border-color: var(--line-strong);
+  background: var(--surface-tint);
+}
+
+.lang-menu summary .icon:last-child {
+  width: 0.95rem;
+  height: 0.95rem;
+  color: var(--ink-soft);
+  transition: transform 0.2s;
+}
+
+.lang-menu[open] summary .icon:last-child {
+  transform: rotate(180deg);
+}
+
+.lang-menu__panel {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  z-index: 30;
+  width: min(20rem, calc(100vw - 2rem));
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lang-menu[open] .lang-menu__panel {
+    animation: lang-pop 0.16s ease-out;
+  }
+}
+
+@keyframes lang-pop {
+  from {
+    transform: translateY(-0.35rem);
+  }
+}
+
+.lang-menu__title,
+.menu-langs__title {
+  margin: 0 0 0.6rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+.menu-langs__title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+/* The same two-column list is used in the panel and inside the mobile menu. */
+.lang-menu__list,
+.menu-langs__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lang-menu__list a,
+.menu-langs__list a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 2.75rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.lang-menu__list a:hover,
+.menu-langs__list a:hover {
+  border-color: var(--line-strong);
+  background: var(--surface-tint);
+}
+
+.lang-menu__list [aria-current],
+.menu-langs__list [aria-current] {
+  border-color: var(--accent);
+  font-weight: 700;
+  background: var(--surface-tint);
+}
+
+.lang-code {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 2rem;
+  height: 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--on-accent);
+  background: var(--accent);
+}
+
+.lang-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 0.9375rem;
+}
+
+/* Inside the menu panel the languages appear only on narrow screens. */
+.menu-langs {
+  display: none;
+}
+
+@media (max-width: 72rem) {
+  .home-button {
+    display: inline-grid;
+  }
+
+  .site-nav .site-nav__home {
+    display: none;
+  }
+
+  /* With JavaScript the languages move into the menu panel. */
+  .js .lang-menu {
+    display: none;
+  }
+
+  .js .menu-langs {
+    display: block;
+    margin-top: 1.25rem;
+  }
+}
+
+/* Medium widths: the house alone, its name kept for screen readers. */
+@media (max-width: 82rem) {
+  .site-nav__home span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
