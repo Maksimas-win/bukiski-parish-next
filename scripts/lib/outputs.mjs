@@ -5,6 +5,9 @@ import { contentSecurityPolicy } from './layout.mjs';
 
 const securityHeaders = site => [
   ['Content-Security-Policy', `${contentSecurityPolicy(site)}; frame-ancestors 'none'`],
+  // Browsers ignore this header over plain HTTP, and the host already answers
+  // every HTTP request with a redirect to HTTPS, so it is safe to send always.
+  ['Strict-Transport-Security', 'max-age=31536000'],
   ['X-Content-Type-Options', 'nosniff'],
   ['Referrer-Policy', 'strict-origin-when-cross-origin'],
   ['X-Frame-Options', 'DENY'],
@@ -26,7 +29,8 @@ const withoutRoot = redirects => redirects.filter(redirect => redirect.from !== 
 export function sitemap(site, routes) {
   const urls = [...routes].filter(([path, route]) => !route.noindex && path === route.canonicalPath);
   const escapeXML = value => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(([path]) => `<url><loc>${escapeXML(site.canonical(path))}</loc></url>`).join('')}</urlset>`;
+  const lastmod = route => (/^\d{4}-\d{2}-\d{2}/.test(route.lastmod || '') ? `<lastmod>${route.lastmod.slice(0, 10)}</lastmod>` : '');
+  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(([path, route]) => `<url><loc>${escapeXML(site.canonical(path))}</loc>${lastmod(route)}</url>`).join('')}</urlset>`;
 }
 
 /**
@@ -49,7 +53,15 @@ export function htaccess(site, redirects) {
     ? '<FilesMatch "\\.(pdf|doc)$">\nHeader set X-Robots-Tag "noindex, nofollow"\n</FilesMatch>\n'
     : '';
   const rules = withoutRoot(redirects).map(({ from, to }) => `RewriteRule ^${regexEscape(from.slice(1))}/?$ ${base}${to} [R=301,L,NE]`).join('\n');
-  return `Options -Indexes\n<IfModule mod_setenvif.c>\nSetEnvIfNoCase Host "\\.hostingersite\\.com$" preview_site\n</IfModule>\n<IfModule mod_headers.c>\n${headers}\nHeader always set X-Robots-Tag "noindex, nofollow" env=preview_site\n${caching}\n${documents}</IfModule>\n\n<IfModule mod_rewrite.c>\nRewriteEngine On\nRewriteRule (^|/)\\.git(?:/|$) - [F,L,NC]\n${rules}\n</IfModule>\nErrorDocument 404 ${base}/404.html\n`;
+  // One host and one address per page: www. moves to the bare domain and
+  // index.html to the directory, so search engines see a single URL.
+  const canonicalHost = [
+    'RewriteCond %{HTTP_HOST} ^www\\.(.+)$ [NC]',
+    'RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L,NE]',
+    'RewriteCond %{THE_REQUEST} \\s/+(?:[^\\s?]*/)?index\\.html(?:[\\s?]|$) [NC]',
+    `RewriteRule ^(.*/)?index\\.html$ ${base}/$1 [R=301,L,NE]`
+  ].join('\n');
+  return `Options -Indexes\n<IfModule mod_setenvif.c>\nSetEnvIfNoCase Host "\\.hostingersite\\.com$" preview_site\n</IfModule>\n<IfModule mod_headers.c>\n${headers}\nHeader always set X-Robots-Tag "noindex, nofollow" env=preview_site\n${caching}\n${documents}</IfModule>\n\n<IfModule mod_rewrite.c>\nRewriteEngine On\nRewriteRule (^|/)\\.git(?:/|$) - [F,L,NC]\n${canonicalHost}\n${rules}\n</IfModule>\nErrorDocument 404 ${base}/404.html\n`;
 }
 
 /**

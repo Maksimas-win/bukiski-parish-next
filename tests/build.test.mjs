@@ -40,11 +40,13 @@ test('Every page has one H1, a language, metadata, a canonical URL and no inline
       /<meta name="description" content="[^"]+"/,
       /<link rel="canonical" href="https:\/\//,
       /<meta property="og:title"/,
-      /<meta property="og:image" content="https:\/\/[^"]+\.jpg"/,
+      /<meta property="og:image" content="https:\/\/[^"]+\.(?:jpg|webp)"/,
+      /<meta property="og:image:width" content="\d+"/,
       /<main id="main"/
     ]) assert.match(html, pattern, file);
     assert.doesNotMatch(html, /<(?:iframe|style)(?:\s|>)|\s(?:style|on\w+)\s*=|javascript:|unsafe-inline/i, file);
-    for (const script of html.matchAll(/<script\b([^>]*)>/g)) assert.match(script[1], /\bsrc="/, file);
+    // Only external scripts run; a JSON-LD data block is not executable and the CSP allows it.
+    for (const script of html.matchAll(/<script\b([^>]*)>/g)) assert.match(script[1], /\bsrc="|^ type="application\/ld\+json"$/, file);
     assert.doesNotMatch(html, /\{\{\w+\}\}|="undefined"|>undefined<|\[object Object\]/, file);
     if (!info.production) assert.match(html, /name="robots" content="noindex,(?:no)?follow"/, file);
   }
@@ -435,4 +437,31 @@ test('A service confirmed by the rector appears with its note in every language 
     }
     assert.ok((await read('dist/assets/schedule-ru.ics')).includes(item.id));
   }
+});
+
+test('Structured data describes only confirmed parish facts and matches the page', async () => {
+  const settings = await readJSON('content/settings.json');
+  const home = await page('/ru/');
+  const block = home.match(/<script type="application\/ld\+json">(.*?)<\/script>/s);
+  assert.ok(block, 'home page has JSON-LD');
+  const graph = JSON.parse(block[1])['@graph'];
+  const church = graph.find(node => node['@type'] === 'Church');
+  assert.equal(church.telephone, settings.phone);
+  assert.equal(church.address.streetAddress, settings.addressParts.street);
+  assert.deepEqual(church.sameAs, settings.social.map(item => item.url));
+  assert.ok(!('openingHoursSpecification' in church) && !('openingHours' in church), 'opening hours are not confirmed');
+  assert.ok(!graph.some(node => node['@type'] === 'Event'), 'no events are invented');
+  const article = await page('/ru/library/istoriya-o-hrame.html');
+  const articleGraph = JSON.parse(article.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'];
+  assert.equal(articleGraph.find(node => node['@type'] === 'Article').headline, 'Псковские и Виленские помещики Божеряновы');
+  assert.equal(articleGraph.find(node => node['@type'] === 'BreadcrumbList').itemListElement.length, 3);
+  const noindex = pages.find(({ file, html }) => file.startsWith('archive/') && /noindex/.test(html));
+  assert.ok(noindex && !noindex.html.includes('application/ld+json'), 'archive copies carry no structured data');
+});
+
+test('The host configuration redirects www. and index.html to one canonical address', async () => {
+  const file = await read('dist/.htaccess');
+  assert.match(file, /RewriteCond %\{HTTP_HOST\} \^www\\\.\(\.\+\)\$ \[NC\]\nRewriteRule \^ https:\/\/%1%\{REQUEST_URI\} \[R=301,L,NE\]/);
+  assert.match(file, /index\\\.html\$ \/\$1 \[R=301,L,NE\]/);
+  assert.match(file, /Strict-Transport-Security "max-age=31536000"/);
 });

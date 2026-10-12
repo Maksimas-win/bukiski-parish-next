@@ -75,3 +75,7 @@ Hostinger Website Builder, на котором сейчас работает `.n
 Примеры обязательной проверки: `/raspisanie-bogosluzhenij` → `/ru/schedule.html`, `/podat-zapisku` → `/ru/notes.html`, `/o-nashem-hrame` → `/ru/library/o-nashem-hrame.html`, одна длинная статья RU и одна LT; на `.org` — `/lt/contacts.html` → `https://bukiski-hram.net/lt/contacts.html`.
 
 Откат: вернуть `.net` на конструктор и снять правило с `.org`. Сохранённые архивы и Git-история позволяют сделать это без потери материалов. Настройки DNS и перенаправления в этой работе не менялись.
+
+## Кэш CDN Hostinger
+
+Hostinger отдаёт сайт через свой CDN. HTML публикуется с `Cache-Control: no-cache`, CSS и JS — с версией в адресе, поэтому обычно новая версия видна сразу. Если после выкладки главная страница показывает прежнюю версию, а внутренние страницы — новую, очистите кэш CDN в панели Hostinger (hPanel → сайт → Производительность/CDN → очистить кэш). Workflow не делает этого сам: для этого нужен API-ключ Hostinger в секретах репозитория.
