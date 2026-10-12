@@ -35,9 +35,9 @@
   <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
   <link rel="preload" href="/assets/fonts/source-sans-3/source-sans-3-roman-v3.052.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/source-serif-4/source-serif-4-display-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/site.css?v=f58cdd99c9">
-  <script src="/assets/js/theme-init.js?v=f58cdd99c9"></script>
-  <script src="/assets/js/app.js?v=f58cdd99c9" type="module"></script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=c7a6e8903d">
+  <script src="/assets/js/theme-init.js?v=c7a6e8903d"></script>
+  <script src="/assets/js/app.js?v=c7a6e8903d" type="module"></script>
 </head>
 <body data-locale="en" data-root="/" data-page="history" data-label-copied="Copied" data-label-copy-failed="Could not copy. Select the text and copy it manually.">
   <a href="#main" class="skip-link">Skip to content</a>
@@ -47,20 +47,28 @@
         <img class="brand__mark" src="/assets/img/logo-128.webp" srcset="/assets/img/logo-128.webp 1x, /assets/img/logo-256.webp 2x" width="52" height="52" alt="">
         <span class="brand__text"><span class="brand__name">Church of the Nativity of Christ</span><span class="brand__place">Bukiškis · Lithuania</span></span>
       </a>
-      <nav class="lang-switch" aria-label="Choose a language">
-        <a href="/ru/history.html" lang="ru" hreflang="ru" title="Русский">RU</a><a href="/lt/history.html" lang="lt" hreflang="lt" title="Lietuvių">LT</a><a href="/en/history.html" lang="en" hreflang="en" aria-current="true" title="English">EN</a><a href="/pl/history.html" lang="pl" hreflang="pl" title="Polski">PL</a><a href="/de/history.html" lang="de" hreflang="de" title="Deutsch">DE</a><a href="/uk/history.html" lang="uk" hreflang="uk" title="Українська">UK</a>
-      </nav>
+      <a class="home-button" href="/en/" aria-label="Home" title="Home"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5 M5.5 9.5V20h4.5v-5.5h4V20h4.5V9.5"/></svg></a>
       <details class="lang-menu" data-lang-menu>
-        <summary aria-label="Choose a language: English"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M3 12h18 M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9 M12 3c-2.5 2.6-3.8 5.6-3.8 9s1.3 6.4 3.8 9"/></svg><span>EN</span></summary>
-        <ul class="lang-menu__list">
-          <li><a href="/ru/history.html" lang="ru" hreflang="ru"><span class="lang-menu__code">RU</span>Русский</a></li><li><a href="/lt/history.html" lang="lt" hreflang="lt"><span class="lang-menu__code">LT</span>Lietuvių</a></li><li><a href="/en/history.html" lang="en" hreflang="en" aria-current="true"><span class="lang-menu__code">EN</span>English</a></li><li><a href="/pl/history.html" lang="pl" hreflang="pl"><span class="lang-menu__code">PL</span>Polski</a></li><li><a href="/de/history.html" lang="de" hreflang="de"><span class="lang-menu__code">DE</span>Deutsch</a></li><li><a href="/uk/history.html" lang="uk" hreflang="uk"><span class="lang-menu__code">UK</span>Українська</a></li>
-        </ul>
+        <summary aria-label="Choose a language: English" title="Choose a language"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M3 12h18 M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9 M12 3c-2.5 2.6-3.8 5.6-3.8 9s1.3 6.4 3.8 9"/></svg><span>EN</span><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="lang-menu__panel">
+          <p class="lang-menu__title">Choose a language</p>
+          <ul class="lang-menu__list">
+    <li><a href="/ru/history.html" lang="ru" hreflang="ru"><span class="lang-code">RU</span><span class="lang-name">Русский</span></a></li><li><a href="/lt/history.html" lang="lt" hreflang="lt"><span class="lang-code">LT</span><span class="lang-name">Lietuvių</span></a></li><li><a href="/en/history.html" lang="en" hreflang="en" aria-current="true"><span class="lang-code">EN</span><span class="lang-name">English</span></a></li><li><a href="/pl/history.html" lang="pl" hreflang="pl"><span class="lang-code">PL</span><span class="lang-name">Polski</span></a></li><li><a href="/de/history.html" lang="de" hreflang="de"><span class="lang-code">DE</span><span class="lang-name">Deutsch</span></a></li><li><a href="/uk/history.html" lang="uk" hreflang="uk"><span class="lang-code">UK</span><span class="lang-name">Українська</span></a></li>
+  </ul>
+        </div>
       </details>
       <button type="button" class="icon-button menu-toggle" data-menu-toggle hidden aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M4 7h16 M4 12h16 M4 17h16"/></svg></button>
       <div class="site-menu" id="site-menu" data-menu>
         <nav class="site-nav" aria-label="Menu">
+          <a class="site-nav__home" href="/en/"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5 M5.5 9.5V20h4.5v-5.5h4V20h4.5V9.5"/></svg><span>Home</span></a>
           <a href="/en/schedule.html">Services</a><a href="/en/history.html" aria-current="page">About</a><a href="/en/sacraments.html">Sacraments</a><a href="/en/library.html">Reading</a><a href="/en/notes.html">Prayer requests</a><a href="/en/contacts.html">Contact</a>
         </nav>
+        <section class="menu-langs" aria-label="Choose a language">
+          <p class="menu-langs__title"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M3 12h18 M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9 M12 3c-2.5 2.6-3.8 5.6-3.8 9s1.3 6.4 3.8 9"/></svg>Choose a language</p>
+          <ul class="menu-langs__list">
+    <li><a href="/ru/history.html" lang="ru" hreflang="ru"><span class="lang-code">RU</span><span class="lang-name">Русский</span></a></li><li><a href="/lt/history.html" lang="lt" hreflang="lt"><span class="lang-code">LT</span><span class="lang-name">Lietuvių</span></a></li><li><a href="/en/history.html" lang="en" hreflang="en" aria-current="true"><span class="lang-code">EN</span><span class="lang-name">English</span></a></li><li><a href="/pl/history.html" lang="pl" hreflang="pl"><span class="lang-code">PL</span><span class="lang-name">Polski</span></a></li><li><a href="/de/history.html" lang="de" hreflang="de"><span class="lang-code">DE</span><span class="lang-name">Deutsch</span></a></li><li><a href="/uk/history.html" lang="uk" hreflang="uk"><span class="lang-code">UK</span><span class="lang-name">Українська</span></a></li>
+  </ul>
+        </section>
         <button type="button" class="preferences-button" data-preferences-open hidden aria-haspopup="dialog" title="Reading settings"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M4 7h10 M18 7h2 M4 17h2 M10 17h10 M16 5v4 M8 15v4"/></svg><span>Reading settings</span></button>
       </div>
     </div>
