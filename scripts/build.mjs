@@ -129,6 +129,7 @@ function addCorePages() {
         description: pageId === 'home' ? t.heroIntro : (t[`${pageId}Intro`] || t[`${pageId}Teaser`] || t[pageId]),
         body: bodies[pageId](),
         path: site.route(lang, pageId),
+        trail: pageId === 'home' ? undefined : [{ name: t[pageId], path: site.route(lang, pageId) }],
         alternates: site.languages.map(code => ({ lang: code, path: site.route(code, pageId) })),
         extraDialogs: pageId === 'gallery' ? galleryLightbox(t, lang) : ''
       });
@@ -185,6 +186,10 @@ function addArticlePages() {
       title: entry.title,
       description: entry.description,
       article: true,
+      publishedAt: entry.publishedAt || undefined,
+      // An article's own photograph makes a better preview than the church when it has one.
+      ogImage: entry.cover ? { url: site.canonical(`/${entry.cover.web}`), width: entry.cover.width, height: entry.cover.height, alt: entry.title } : undefined,
+      trail: [{ name: t.library, path: site.route(uiLocale, 'library') }, { name: entry.title, path: entry.target }],
       extraDialogs: lightboxDialog(t, uiLocale)
     };
     if (entry.ownsTarget) {

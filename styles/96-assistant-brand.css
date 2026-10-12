@@ -1,0 +1,39 @@
+/* The shared assistant widget in this site's own colours (wine, gilt, serif).
+   Only colours and the title typeface change; the widget's layout and the
+   shared stylesheet stay untouched so both parish sites keep one module. */
+
+.parish-assistant .pa-launcher,
+.parish-assistant .pa-header,
+.parish-assistant .pa-send {
+  background: var(--wine);
+}
+
+.parish-assistant .pa-launcher:hover,
+.parish-assistant .pa-send:hover {
+  background: #7a1823;
+}
+
+.parish-assistant .pa-send {
+  border-color: var(--wine);
+}
+
+.parish-assistant .pa-chip {
+  color: var(--wine);
+}
+
+.parish-assistant .pa-title {
+  font-family: var(--font-serif);
+}
+
+.parish-assistant :focus-visible {
+  outline-color: var(--gilt);
+}
+
+/* On phones the launcher stays small so it hides less of the page beneath it. */
+@media (max-width: 40rem) {
+  .parish-assistant .pa-launcher {
+    right: 14px;
+    padding: 10px 16px;
+    font-size: 0.875rem;
+  }
+}

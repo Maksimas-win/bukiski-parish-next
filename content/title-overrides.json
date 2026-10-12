@@ -1,0 +1,28 @@
+{
+  "note": "Readable titles for preserved articles whose old <title> was typed in capitals, in lower case or as a search-engine string. Only letter case and punctuation change; the wording is the page's own (its heading or first line). Keyed by source URL.",
+  "titles": {
+    "https://bukiski-hram.net/boroda-i-brite-v-drevnosti-istoriya-kultura-i-bibleiskii-smysl": "Борода и бритьё в древности: история, культура и библейский смысл",
+    "https://bukiski-hram.net/eshe-uspeem-chast-i-u-menya-bog-v-dushe": "Ещё успеем. Часть I. «У меня Бог в душе»",
+    "https://bukiski-hram.net/eshe-uspeem-chast-ii-ya-ne-dostoin": "Ещё успеем. Часть II. «Я не достоин»",
+    "https://bukiski-hram.net/eshe-uspeem-chast-iii-hram-ne-obyazannost-a-dyhanie-dushi": "Ещё успеем. Часть III. Храм — не обязанность, а дыхание души",
+    "https://bukiski-hram.net/evangelie-o-bludnom-syne-dver-pokayaniya-pered-velikim-postom": "Евангелие о блудном сыне: дверь покаяния перед Великим постом",
+    "https://bukiski-hram.net/hristianskii-brak-ot-vethogo-zaveta-do-nashih-dnei": "Христианский брак: от Ветхого Завета до наших дней",
+    "https://bukiski-hram.net/istoriya-o-hrame": "Псковские и Виленские помещики Божеряновы",
+    "https://bukiski-hram.net/kak-maloe-zlo-razzhigaet-velikii-pozhar": "Как малое зло разжигает великий пожар",
+    "https://bukiski-hram.net/kaledu-pasninkas-kelias-i-tylia-betliejaus-sviesa": "Kalėdų pasninkas: kelias į tylią Betliejaus šviesą",
+    "https://bukiski-hram.net/kniga-chisel-kotoraya-na-samom-dele-v-pustyne": "Книга Чисел, которая на самом деле «В пустыне»",
+    "https://bukiski-hram.net/o-nashem-hrame": "Храм в Букишках — история веры и памяти",
+    "https://bukiski-hram.net/prepodobnyi-blagovernyi-knyaz-aleksandr-nevskii-strazh-very-mudrosti-i-narodnogo-sluzheniya": "Преподобный благоверный князь Александр Невский: страж веры, мудрости и народного служения",
+    "https://bukiski-hram.net/rozhdestvenskii-post-doroga-k-tihomu-svetu-vifleema": "Рождественский пост: дорога к тихому свету Вифлеема",
+    "https://bukiski-hram.net/sobor-arhistratiga-mihaila-i-nebesnyh-sil": "Собор Архистратига Михаила и Небесных Сил",
+    "https://bukiski-hram.net/sutochnyi-krug-bogosluzheniya-kak-cerkov-osvyashaet-vremya": "Суточный круг богослужения: как Церковь освящает время",
+    "https://bukiski-hram.net/svenciausiosios-dievo-motinos-ivedimas-i-sventykla": "Švenčiausiosios Dievo Motinos Įvedimas į šventyklą",
+    "https://bukiski-hram.net/svyatitel-ioann-zlatoust-slovo-kotoroe-ne-umolkaet": "Святитель Иоанн Златоуст: слово, которое не умолкает",
+    "https://bukiski-hram.net/svyatitel-nikolai-arhiepiskop-mir-likiiskih": "Святитель Николай, архиепископ Мир Ликийских",
+    "https://bukiski-hram.net/svyatitel-nikolai-arhiepiskop-mir-likiiskih-uteshitel-skorbyashih-zashitnik-vernyh-i-obraz-pastyrskoi-lyubvi": "Святитель Николай, архиепископ Мир Ликийских: утешитель скорбящих, защитник верных и образ пастырской любви",
+    "https://bukiski-hram.net/svyatitel-tihon-pastyr-sformirovavshii-oblik-cerkvi-v-litovskom-krae": "Святитель Тихон: пастырь, сформировавший облик Церкви в Литовском крае",
+    "https://bukiski-hram.net/svyatoi-iosif-obruchnik-tishina-v-kotoroi-deistvuet-bog": "Святой Иосиф Обручник: тишина, в которой действует Бог",
+    "https://bukiski-hram.net/vvedenie-vo-hram-presvyatoi-bogorodicy-taina-posvyasheniya-i-prizyv-k-chistote-serdca": "Введение во храм Пресвятой Богородицы: тайна посвящения и призыв к чистоте сердца",
+    "https://bukiski-hram.net/znali-li-vy-chto-pastuhi-byli-merzostyu-dlya-egiptyan": "Знали ли вы, что пастухи были «мерзостью» для египтян?"
+  }
+}

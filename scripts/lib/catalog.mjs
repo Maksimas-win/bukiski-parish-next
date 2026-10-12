@@ -30,7 +30,8 @@ const MIN_COVER_WIDTH = 600;
 
 export const hash = value => createHash('sha256').update(value).digest('hex').slice(0, 16);
 
-export function titleOf(page) {
+export function titleOf(page, overrides = {}) {
+  if (overrides[page.url]) return overrides[page.url];
   if (page.url.endsWith('/dokumet-ob-uchastii-vernyh-v-evharistii')) return 'Об участии верных в Евхаристии';
   return page.title.split(' | ')[0].trim();
 }
@@ -59,7 +60,7 @@ function imagesOf(page, site) {
     const key = asset.source.split('/').pop();
     const area = info.originalWidth * info.originalHeight;
     if (!best.has(key) || best.get(key).area < area) {
-      const usableAlt = asset.alt && !/bed linen|Image/i.test(asset.alt) ? asset.alt : titleOf(page);
+      const usableAlt = asset.alt && !/bed linen|Image/i.test(asset.alt) ? asset.alt : titleOf(page, site.titleOverrides);
       best.set(key, { ...info, area, alt: usableAlt });
     }
   }
@@ -91,7 +92,7 @@ export function createCatalog(site) {
       host: source.hostname,
       sourcePath: source.pathname,
       language: page.language || 'ru',
-      title: titleOf(page),
+      title: titleOf(page, site.titleOverrides),
       description: descriptionOf(page),
       publishedAt: page.publishedAt || null,
       target,
