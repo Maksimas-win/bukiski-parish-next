@@ -6,7 +6,9 @@
 //   SIMULATE=failure node scripts/monitor/check-sites.mjs   # adds one failing check to test the alerting
 //
 // Every request has a 15-second timeout. A network error, timeout or 5xx is
-// retried once after 20 seconds, so a single hiccup is not an incident.
+// retried once after 20 seconds, so a single hiccup is not an incident. A site
+// whose pages disagree with its version marker is re-checked once after 90 s,
+// so a publication in progress is not an incident either.
 // The result is written to $GITHUB_OUTPUT (failures, summary) and to
 // monitor-result.json for scripts/monitor/report.mjs; nothing is sent anywhere.
 
@@ -16,6 +18,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 const MODE = process.env.MODE || 'health';
 const TIMEOUT_MS = 15000;
 const RETRY_AFTER_MS = 20000;
+const DEPLOY_WINDOW_MS = 90000; // pages are uploaded before the version marker during a publication
 const STALE_HOURS = 48;
 const SITES = {
   net: {
@@ -162,7 +165,21 @@ async function checkLinks() {
   }
 }
 
-if (process.env.SIMULATE === 'failure') fail('simulation', 'искусственный сбой для проверки уведомлений (SIMULATE=failure)');
+/**
+ * Runs one site's checks; if pages and the version marker disagree, a publication
+ * may be in progress (files are uploaded before the marker), so that site is
+ * re-checked once from scratch after a pause before anything is reported.
+ */
+async function checkSite(site, run) {
+  await run();
+  const mismatch = failures.some(item => item.id.startsWith(`${site}:`) && /does not reference version/.test(item.detail));
+  if (!mismatch) return;
+  await delay(DEPLOY_WINDOW_MS);
+  for (let index = failures.length - 1; index >= 0; index -= 1) if (failures[index].id.startsWith(`${site}:`)) failures.splice(index, 1);
+  for (let index = notes.length - 1; index >= 0; index -= 1) if (notes[index].startsWith(`${site}:`)) notes.splice(index, 1);
+  notes.push(`${site}: version mismatch on the first pass, re-checked after ${DEPLOY_WINDOW_MS / 1000} s`);
+  await run();
+}
 
 if (MODE === 'links') {
   await checkLinks();
@@ -172,15 +189,17 @@ if (MODE === 'links') {
   if (!expected) throw new Error('EXPECTED_ASSET_VERSION is required in release mode');
   for (let attempt = 1; attempt <= 8; attempt += 1) {
     failures.length = 0; notes.length = 0;
-    await checkNet(expected);
+    await checkSite('net', () => checkNet(expected));
     if (!failures.some(item => item.id === 'net:release')) break;
     if (attempt < 8) await delay(45000);
   }
-  await checkOrg();
+  await checkSite('org', checkOrg);
 } else {
-  await checkNet();
-  await checkOrg();
+  await checkSite('net', () => checkNet());
+  await checkSite('org', checkOrg);
 }
+
+if (process.env.SIMULATE === 'failure') fail('simulation', 'искусственный сбой для проверки уведомлений (SIMULATE=failure)');
 
 const summary = [...notes, ...failures.map(item => `FAIL ${item.id}: ${item.detail}`)].join('\n');
 console.log(summary || 'all checks passed');
