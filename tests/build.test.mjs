@@ -20,7 +20,7 @@ const base = info.basePath;
 const historyStory = await readJSON('content/stories/istoriya-o-hrame.json');
 const stories = new Map([[historyStory.source, historyStory]]);
 const htmlFiles = (await readdir(dist, { recursive: true })).filter(path => path.endsWith('.html'));
-const pages = await Promise.all(htmlFiles.map(async file => ({ file, html: await readFile(resolve(dist, file), 'utf8') })));
+const pages = await Promise.all(htmlFiles.map(async file => ({ file: file.replaceAll('\\', '/'), html: await readFile(resolve(dist, file), 'utf8') })));
 
 /** Site-relative route -> file in dist. */
 function fileFor(path) {
