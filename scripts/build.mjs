@@ -249,6 +249,8 @@ addNotFoundPage();
 for (const [path, route] of routes) await writeOutput(outputPathOf(path), route.html);
 
 await writeOutput('data/services.json', JSON.stringify(site.rawSchedule));
+// Use the same confirmed services as the page, including rector-confirmed additions.
+await writeOutput('data/assistant-services.json', JSON.stringify(site.schedule));
 await writeOutput('assets/data/search-index.json', JSON.stringify(outputs.searchIndex(catalog)));
 await writeOutput('sitemap.xml', outputs.sitemap(site, routes));
 await writeOutput('robots.txt', outputs.robots(site));

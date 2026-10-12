@@ -12,7 +12,11 @@ test('No script builds markup from strings, evaluates code or contacts third par
   assert.ok(sources.size >= 12);
   for (const [name, source] of sources) {
     assert.doesNotMatch(source, /innerHTML|outerHTML|insertAdjacentHTML|document\.write|\beval\(|new Function|setAttribute\(\s*['"]style/, name);
-    assert.doesNotMatch(source, /gtag\(|googletagmanager|google-analytics|facebook\.net|https?:\/\//, name);
+    assert.doesNotMatch(source, /gtag\(|googletagmanager|google-analytics|facebook\.net/, name);
+    // The assistant's two pure data modules contain navigation links, never requests.
+    if (['assistant/engine.js', 'assistant/knowledge.js'].includes(name)) {
+      assert.doesNotMatch(source, /\bfetch\(|XMLHttpRequest|WebSocket|sendBeacon/, name);
+    } else assert.doesNotMatch(source, /https?:\/\//, name);
   }
 });
 
@@ -39,10 +43,14 @@ test('Prayer names leave the tab only on «Отправить», after consent, 
   assert.doesNotMatch(notes, /XMLHttpRequest|sendBeacon|WebSocket|localStorage|sessionStorage|history\.|location\.(?:href|search|hash)|console\./);
 });
 
-test('Network requests are limited to three known files and send no cookies', () => {
+test('Network requests are limited to reviewed modules and send no cookies', () => {
   const fetchers = [...sources].filter(([, source]) => /\bfetch\(/.test(source)).map(([name]) => name).sort();
-  assert.deepEqual(fetchers, ['document-downloads.js', 'features/library.js', 'features/notes.js']);
+  assert.deepEqual(fetchers, ['assistant/widget.js', 'document-downloads.js', 'features/library.js', 'features/notes.js']);
   for (const name of fetchers) assert.match(sources.get(name), /credentials: 'omit'/, name);
+  const assistant = sources.get('assistant/widget.js');
+  assert.match(assistant, /feed\.origin !== origin/);
+  assert.match(assistant, /redirect: 'error'/);
+  assert.doesNotMatch(assistant, /method: 'POST'|JSON\.stringify\(question\)/);
 });
 
 test('Every feature module that app.js loads exists and exports init()', () => {
