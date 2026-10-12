@@ -1,5 +1,5 @@
-import { UI, LANGUAGES } from './i18n.js?v=f5b7f19f07';
-import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js?v=f5b7f19f07';
+import { UI, LANGUAGES } from './i18n.js?v=bb62728033';
+import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js?v=bb62728033';
 
 /** Self-contained, read-only widget. No cookies, analytics or conversation persistence. */
 export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 'ru', parent = document.body } = {}) {

@@ -1,5 +1,5 @@
-import { UI } from './i18n.js?v=f5b7f19f07';
-import { FAQ, PARISH } from './knowledge.js?v=f5b7f19f07';
+import { UI } from './i18n.js?v=bb62728033';
+import { FAQ, PARISH } from './knowledge.js?v=bb62728033';
 
 export const TIMEZONE = 'Europe/Vilnius';
 export const MAX_QUESTION = 500;
