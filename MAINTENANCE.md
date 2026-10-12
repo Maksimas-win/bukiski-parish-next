@@ -85,7 +85,7 @@ Workflow `.github/workflows/site-monitor.yml`, скрипты `scripts/monitor/`
 | Исходники | ветка `main` на GitHub и в локальных клонах | `git log main` |
 | Опубликованные файлы сайта целиком (HTML, CSS, JS, изображения, `.htaccess`, `data/services.json`) | ветка `hostinger-production` на GitHub, с полной историей (каждая выкладка — коммит) | `https://bukiski-hram.net/build-info.json` совпадает с `build-info.json` в ветке |
 | Снимки расписания из Google-календаря | `data/services.json` в каждом коммите `hostinger-production` (4 раза в сутки) и `content/original-services.json` в `main`; еженедельная копия хостинга .org | |
-| Копии Hostinger (весь аккаунт) | hPanel → Files → Backups | Включены ли, дата последней, периодичность, срок хранения — проверяет владелец; на 12.10.2026 не подтверждено (нет доступа к hPanel) |
+| Копии Hostinger (файлы сайта) | hPanel → сайт → Files → Backups («Atsarginės kopijos») | Проверено 12.10.2026: автоматические копии **ежедневно** (около 19:44), восстановление и скачивание из панели; у .net пока одна копия (сайт создан 11.10.2026), у .org видны ежедневные копии за три недели и еженедельные старше (самая ранняя 30.08.2026). Срок хранения панель не показывает; ручную копию можно создать раз в 24 ч |
 
 Сайт целиком описывается веткой `hostinger-production`; файлы, которых в ней нет (например, оставшиеся от прежнего конструктора), сайту не нужны. Увидеть их можно в hPanel → Files → File Manager (`public_html`); удалять — только после сверки с веткой. Резервные архивы в публичную папку сайта не класть.
 
@@ -95,7 +95,7 @@ Workflow `.github/workflows/site-monitor.yml`, скрипты `scripts/monitor/`
 
 - **Откатить неудачный выпуск**: в `main` сделать `git revert <коммит слияния>` и отправить в GitHub — workflow соберёт и опубликует прежнюю версию. Это единственный штатный путь; ветку `hostinger-production` руками не трогать.
 - **Восстановить сайт после потери файлов на хостинге**: в hPanel → сайт → Git → Deploy повторно развернуть ветку `hostinger-production` (или запустить `production.yml` вручную — он перезапишет ветку свежей сборкой). При полной потере аккаунта: создать Git-развёртывание ветки `hostinger-production` заново, проверить, что `.htaccess` отдаёт заголовки (раздел 5 мониторинга это покажет).
-- **Восстановить из копии Hostinger**: hPanel → Files → Backups → выбрать дату → Restore (только если ветка недоступна; потом всё равно сверить с веткой).
+- **Восстановить из копии Hostinger**: hPanel → сайт → Files → Backups → выбрать дату → «Atkurti failus» (только если ветка недоступна; потом всё равно сверить с веткой).
 - Локальная проверка любого снимка: `git archive origin/hostinger-production | tar -x -C /tmp/site && (cd /tmp/site && python3 -m http.server 8000)`.
 
 ## 8. Если снова видна старая версия
@@ -105,7 +105,7 @@ Workflow `.github/workflows/site-monitor.yml`, скрипты `scripts/monitor/`
 Если всё же видите старое:
 1. Откройте `https://bukiski-hram.net/build-info.json` — там время сборки. Сравните с последним запуском `production.yml` и коммитом в `hostinger-production`.
 2. Если ветка новая, а сайт старый — Hostinger не развернул ветку: hPanel → Git → Deploy.
-3. Если `build-info.json` новый, а страница старая — очистите кэш CDN: hPanel → сайт → Performance/CDN → Purge cache. Затем проверьте страницу с параметром `?nocache=1` и в режиме инкогнито.
+3. Если `build-info.json` новый, а страница старая — очистите кэш: hPanel → сайт (Valdymo skydas) → блок «Kešas» → «Išvalyti laikinąją atmintį» (Purge cache); там же «Peržiūra be kešavimo» открывает сайт без кэша. Затем проверьте страницу в режиме инкогнито. 12.10.2026 кэш обоих сайтов очищен после выпусков.
 4. Кэш не отключайте навсегда: настройки кэширования в `.htaccess` рассчитаны на CDN, менять их без причины не нужно.
 
 ## 9. Регламент
@@ -121,7 +121,7 @@ Workflow `.github/workflows/site-monitor.yml`, скрипты `scripts/monitor/`
 Без самих секретов — только где они живут:
 
 - **GitHub**: владелец обоих репозиториев (слияние PR, запуск workflow, issue мониторинга, уведомления на почту аккаунта).
-- **Hostinger hPanel, аккаунт u736200154**: Git-развёртывание ветки `hostinger-production`, очистка CDN, копии, домен и SSL.
+- **Hostinger hPanel, аккаунт u736200154** (план Business Web Hosting до 07.11.2028; на нём же `bukiski-hram.org`, `bukiski-hram.com`, `bukiski.lt`, `bukiskihram.lt`): Git-развёртывание ветки `hostinger-production` (блок «Prisijungta su GitHub» на панели сайта показывает последний деплой, ветку и коммит), очистка кэша, копии, домен и SSL.
 - **Google-календарь прихода** (расписание): права редактора.
 - **Formspree** (форма записок, адрес в `content/settings.json` → `notes.endpoint`): кабинет, куда приходят записки.
 - **Регистратор доменов / DNS**: записи обоих доменов (в этом репозитории не меняются).
