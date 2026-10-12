@@ -39,17 +39,23 @@ jobs:
     timeout-minutes: 20
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v7
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
           node-version: '24'
           package-manager-cache: false
       - name: Decide what to check
         id: mode
+        env:
+          INPUT_MODE: ${{ inputs.mode }}
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: |
-          mode="${{ github.event.inputs.mode }}"
-          if [ "${{ github.event_name }}" = "workflow_run" ]; then mode=release; fi
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" = "23 4 * * 1" ]; then mode=links; fi
+          mode="$INPUT_MODE"
+          if [ "$EVENT_NAME" = "workflow_run" ]; then mode=release; fi
+          if [ "$EVENT_NAME" = "schedule" ] && [ "$EVENT_SCHEDULE" = "23 4 * * 1" ]; then mode=links; fi
           echo "mode=${mode:-health}" >> "$GITHUB_OUTPUT"
       - name: Expected .net version after a release
         if: steps.mode.outputs.mode == 'release'
@@ -68,7 +74,7 @@ jobs:
         run: node scripts/monitor/report.mjs
       - name: Keep the result
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: monitor-result-${{ github.run_id }}
           path: monitor-result.json
