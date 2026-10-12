@@ -133,6 +133,7 @@ export function serviceRow(site, lang, t, event, { heading = 'h3', hidden = fals
       <p class="service__when"><time datetime="${event.start}">${fullDate}</time><span class="badge badge--soon" data-relative hidden></span>${event.feast && html`<span class="badge badge--feast">${t.feast}</span>`}</p>
       <${heading} class="service__title"><span class="service__clock">${event.startTime}</span> ${event.title[lang]}</${heading}>
       ${subtitle && html`<p class="service__subtitle">${subtitle}</p>`}
+      ${event.note?.[lang] && html`<p class="service__note">${icon('candle')}<span>${event.note[lang]}</span></p>`}
       ${lang === 'ru' && event.church?.commemoration && event.church.commemoration !== subtitle && html`<p class="service__commemoration">${event.church.commemoration}</p>`}
       <p class="service__start" aria-hidden="true"><span class="service__start-box"><span class="service__start-label">${t.serviceStart}</span><span class="service__start-time">${event.startTime}</span></span><span class="service__start-name">${event.title[lang]}</span></p>
       ${churchDetails(lang, t, event)}

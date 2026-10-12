@@ -1,0 +1,36 @@
+{
+  "note": "Services confirmed by the rector that the parish calendar feed does not yet carry with a time. Each is shown alongside the feed; if the feed later publishes a service on the same date and time, only its note is kept. Remove an entry once it is in the parish Google Calendar.",
+  "events": [
+    {
+      "id": "add-2026-11-07-dimitrievskaya",
+      "date": "2026-11-07",
+      "startTime": "08:00",
+      "confirmedBy": "rector",
+      "confirmedOn": "2026-10-12",
+      "title": {
+        "ru": "Божественная литургия",
+        "lt": "Dieviškoji liturgija",
+        "en": "Divine Liturgy",
+        "pl": "Boska Liturgia",
+        "de": "Göttliche Liturgie",
+        "uk": "Божественна літургія"
+      },
+      "subtitle": {
+        "ru": "Димитриевская родительская суббота",
+        "lt": "Šv. Demetrijaus mirusiųjų paminėjimo šeštadienis",
+        "en": "Demetrius Saturday, commemoration of the departed",
+        "pl": "Dymitrowska sobota zaduszna",
+        "de": "Demetrios-Seelensamstag",
+        "uk": "Димитрівська батьківська субота"
+      },
+      "note": {
+        "ru": "После Литургии — общая панихида.",
+        "lt": "Po liturgijos – bendra panichida.",
+        "en": "After the Liturgy, a general memorial service (panikhida).",
+        "pl": "Po Liturgii — wspólna panichida.",
+        "de": "Nach der Liturgie: allgemeine Panichida (Totengedenken).",
+        "uk": "Після Літургії — загальна панахида."
+      }
+    }
+  ]
+}

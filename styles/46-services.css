@@ -344,3 +344,21 @@
 .service:has(.church-day[open]) {
   align-items: start;
 }
+
+/* A note the parish added to a service, such as a memorial service after it. */
+.service__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+  font-size: 0.9375rem;
+  font-weight: 650;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.service__note .icon {
+  flex: none;
+  margin-top: 0.1rem;
+  color: var(--accent);
+}

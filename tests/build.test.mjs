@@ -425,3 +425,14 @@ test('Services show the church-calendar day from the feed and the home page offe
   const english = await page('/en/schedule.html');
   assert.match(english, /<ul class="church-day__list" lang="ru">/);
 });
+
+test('A service confirmed by the rector appears with its note in every language and in the calendar file', async () => {
+  const additions = await readJSON('content/schedule-additions.json');
+  for (const item of additions.events) {
+    for (const lang of settings.locales) {
+      const schedule = await page(`/${lang}/schedule.html`);
+      assert.ok(schedule.includes(escapeHTML(item.note[lang])), `${lang} ${item.id}`);
+    }
+    assert.ok((await read('dist/assets/schedule-ru.ics')).includes(item.id));
+  }
+});

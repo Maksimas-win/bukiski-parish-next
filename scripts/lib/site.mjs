@@ -5,6 +5,7 @@ import { resolve, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { TIMEZONE, SITE_LANGUAGES, FEED_LANGUAGES, normalizeSchedule, safeExternalURL } from '../../assets/js/domain.js';
 import { localizeSchedule } from './liturgical.mjs';
+import { mergeAdditions } from './additions.mjs';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const DIST = resolve(ROOT, 'dist');
@@ -29,7 +30,7 @@ function resolveBasePath(value) {
 }
 
 export async function loadSite(env = process.env) {
-  const [settings, locales, pages, assets, documents, sourceLinks, rawSchedule, imageManifest, photos, historyStory, liturgicalTerms, template] = await Promise.all([
+  const [settings, locales, pages, assets, documents, sourceLinks, rawSchedule, imageManifest, photos, historyStory, liturgicalTerms, scheduleAdditions, template] = await Promise.all([
     readJSON('settings.json'),
     readJSON('locales.json'),
     readJSON('source-pages.json'),
@@ -41,6 +42,7 @@ export async function loadSite(env = process.env) {
     readJSON('photos.json'),
     readJSON('stories/istoriya-o-hrame.json'),
     readJSON('liturgical-terms.json'),
+    readJSON('schedule-additions.json'),
     readFile(resolve(ROOT, 'index.html'), 'utf8')
   ]);
 
@@ -49,6 +51,7 @@ export async function loadSite(env = process.env) {
 
   const schedule = normalizeSchedule(rawSchedule);
   const untranslated = localizeSchedule(schedule, liturgicalTerms, SITE_LANGUAGES.filter(lang => !FEED_LANGUAGES.includes(lang)), rawSchedule.events);
+  mergeAdditions(schedule, scheduleAdditions);
   if (untranslated.length) console.warn(`Liturgical texts without a translation (English shown): ${untranslated.join('; ')}`);
 
   const origin = resolveOrigin(env.SITE_ORIGIN || settings.origin);
