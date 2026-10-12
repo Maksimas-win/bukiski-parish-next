@@ -325,7 +325,17 @@
       "support": "Пожертвования",
       "gallery": "Жизнь прихода",
       "privacy": "Документы"
-    }
+    },
+    "nextService": "Ближайшая служба",
+    "followingServices": "Следующие службы",
+    "serviceStart": "Начало",
+    "churchCalendar": "Церковный календарь",
+    "churchCalendarRu": "—",
+    "oldStyle": "По старому стилю: {date}",
+    "saintsOfDay": "Память святых",
+    "readingsOfDay": "Чтения дня",
+    "calendarSourceLabel": "Источник календаря",
+    "openSchedule": "Открыть расписание"
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -653,7 +663,17 @@
       "support": "Aukos",
       "gallery": "Parapijos gyvenimas",
       "privacy": "Dokumentai"
-    }
+    },
+    "nextService": "Artimiausios pamaldos",
+    "followingServices": "Kitos pamaldos",
+    "serviceStart": "Pradžia",
+    "churchCalendar": "Bažnytinis kalendorius",
+    "churchCalendarRu": "Pateikiama rusų kalba, kaip skelbia parapijos kalendorius.",
+    "oldStyle": "Pagal senąjį kalendorių: {date}",
+    "saintsOfDay": "Šventųjų minėjimas",
+    "readingsOfDay": "Dienos skaitiniai",
+    "calendarSourceLabel": "Kalendoriaus šaltinis",
+    "openSchedule": "Atidaryti tvarkaraštį"
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -981,7 +1001,17 @@
       "support": "Donations",
       "gallery": "Parish life",
       "privacy": "Documents"
-    }
+    },
+    "nextService": "Next service",
+    "followingServices": "Following services",
+    "serviceStart": "Starts",
+    "churchCalendar": "Church calendar",
+    "churchCalendarRu": "Given in Russian, as published in the parish calendar.",
+    "oldStyle": "Old style (Julian): {date}",
+    "saintsOfDay": "Saints commemorated",
+    "readingsOfDay": "Readings of the day",
+    "calendarSourceLabel": "Calendar source",
+    "openSchedule": "Open the schedule"
   },
   "pl": {
     "name": "Cerkiew Narodzenia Pańskiego",
@@ -1309,7 +1339,17 @@
       "support": "Ofiary",
       "gallery": "Życie parafii",
       "privacy": "Dokumenty"
-    }
+    },
+    "nextService": "Najbliższe nabożeństwo",
+    "followingServices": "Kolejne nabożeństwa",
+    "serviceStart": "Początek",
+    "churchCalendar": "Kalendarz cerkiewny",
+    "churchCalendarRu": "Podano po rosyjsku, tak jak w kalendarzu parafialnym.",
+    "oldStyle": "Według starego stylu: {date}",
+    "saintsOfDay": "Wspomnienie świętych",
+    "readingsOfDay": "Czytania dnia",
+    "calendarSourceLabel": "Źródło kalendarza",
+    "openSchedule": "Otwórz porządek nabożeństw"
   },
   "de": {
     "name": "Kirche der Geburt Christi",
@@ -1637,7 +1677,17 @@
       "support": "Spenden",
       "gallery": "Gemeindeleben",
       "privacy": "Dokumente"
-    }
+    },
+    "nextService": "Nächster Gottesdienst",
+    "followingServices": "Weitere Gottesdienste",
+    "serviceStart": "Beginn",
+    "churchCalendar": "Kirchenkalender",
+    "churchCalendarRu": "Auf Russisch, wie im Gemeindekalender veröffentlicht.",
+    "oldStyle": "Nach dem alten Stil: {date}",
+    "saintsOfDay": "Gedächtnis der Heiligen",
+    "readingsOfDay": "Lesungen des Tages",
+    "calendarSourceLabel": "Quelle des Kalenders",
+    "openSchedule": "Gottesdienstplan öffnen"
   },
   "uk": {
     "name": "Храм Різдва Христового",
@@ -1965,6 +2015,16 @@
       "support": "Пожертви",
       "gallery": "Життя парафії",
       "privacy": "Документи"
-    }
+    },
+    "nextService": "Найближча служба",
+    "followingServices": "Наступні служби",
+    "serviceStart": "Початок",
+    "churchCalendar": "Церковний календар",
+    "churchCalendarRu": "Подано російською, як у парафіяльному календарі.",
+    "oldStyle": "За старим стилем: {date}",
+    "saintsOfDay": "Пам’ять святих",
+    "readingsOfDay": "Читання дня",
+    "calendarSourceLabel": "Джерело календаря",
+    "openSchedule": "Відкрити розклад"
   }
 }

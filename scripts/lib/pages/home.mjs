@@ -85,14 +85,15 @@ function photos(site, lang, t) {
 
 function services(site, lang, t) {
   const events = upcomingEvents(site.schedule, site.buildTime).slice(0, RENDERED_SERVICES);
+  const scheduleHref = site.url(site.route(lang, 'schedule'));
   return html`<section class="services-band" aria-labelledby="services-title">
     <div class="shell services"${scheduleData(site, lang, t)} data-limit="${VISIBLE_SERVICES}">
       <div class="services__head">
         ${sectionTitle('services-title', t.eyebrowServices, t.next)}
-        ${siteLink(site, site.route(lang, 'schedule'), html`${t.allServices}${icon('arrow-right')}`, 'link link--arrow')}
+        <a class="button button--on-dark" href="${scheduleHref}" data-schedule-open aria-haspopup="dialog" aria-controls="services-dialog">${t.openSchedule}${icon('arrow-right')}</a>
       </div>
       <ol class="service-list service-list--featured" data-service-list>
-        ${events.map((event, index) => serviceRow(site, lang, t, event, { hidden: index >= VISIBLE_SERVICES, next: index === 0 }))}
+        ${events.map((event, index) => serviceRow(site, lang, t, event, { hidden: index >= VISIBLE_SERVICES, next: index === 0, label: t.nextService }))}
       </ol>
       <p${attrs({ 'data-empty': true, hidden: events.length > 0 })}>${t.empty}</p>
       <div class="services__foot">
@@ -100,7 +101,34 @@ function services(site, lang, t) {
         ${scheduleStatus(site, lang, t)}
       </div>
     </div>
-  </section>`;
+  </section>
+  ${servicesDialog(site, lang, t, events, scheduleHref)}`;
+}
+
+/** The upcoming services with their church-calendar days, opened from the home page. */
+function servicesDialog(site, lang, t, events, scheduleHref) {
+  return html`<dialog class="services-dialog" id="services-dialog" aria-labelledby="services-dialog-title">
+    <header class="services-dialog__head">
+      <div>
+        <p class="eyebrow">${t.name} · ${t.heroPlace.split(' · ')[0]}</p>
+        <h2 id="services-dialog-title">${t.allServices}</h2>
+      </div>
+      <button type="button" class="icon-button services-dialog__close" data-dialog-close aria-label="${t.close}">${icon('close')}</button>
+    </header>
+    <div class="services-dialog__body"${scheduleData(site, lang, t)} data-limit="${RENDERED_SERVICES}">
+      <ol class="service-list service-list--dialog" data-service-list>
+        ${events.map((event, index) => serviceRow(site, lang, t, event, { next: index === 0, label: t.nextService, following: t.followingServices }))}
+      </ol>
+      <p${attrs({ 'data-empty': true, hidden: events.length > 0 })}>${t.empty}</p>
+      <footer class="services-dialog__foot">
+        ${scheduleStatus(site, lang, t)}
+        <p class="actions">
+          <a class="button" href="${scheduleHref}">${icon('calendar')}${t.allServices}</a>
+          ${phoneLink(site, t, 'button button--quiet')}
+        </p>
+      </footer>
+    </div>
+  </dialog>`;
 }
 
 function visit(site, lang, t) {

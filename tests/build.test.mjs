@@ -414,3 +414,14 @@ test('Every page header has a home button and lists all six languages', async ()
     }
   }
 });
+
+test('Services show the church-calendar day from the feed and the home page offers the services dialog', async () => {
+  const home = await page('/ru/');
+  assert.match(home, /<dialog class="services-dialog" id="services-dialog"/);
+  assert.match(home, /data-schedule-open aria-haspopup="dialog" aria-controls="services-dialog"/);
+  const schedule = await page('/ru/schedule.html');
+  assert.match(schedule, /<details class="church-day">/);
+  assert.ok(schedule.includes('Прп. Романа Сладкопевца (ок 556).'));
+  const english = await page('/en/schedule.html');
+  assert.match(english, /<ul class="church-day__list" lang="ru">/);
+});

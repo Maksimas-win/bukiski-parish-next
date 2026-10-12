@@ -1,0 +1,346 @@
+/* Services: next-service card, church calendar and the services dialog ----- */
+
+.service__commemoration {
+  margin-top: 0.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+/* «Начало 08:00 · Божественная литургия» appears only on the next-service card. */
+.service__start {
+  display: none;
+}
+
+.service-list--featured .is-next .service__title,
+.service-list--dialog .is-next .service__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.service-list--featured .is-next .service__start,
+.service-list--dialog .is-next .service__start {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line-strong);
+}
+
+.service-list--featured .is-next .service__start,
+.service-list--dialog .is-next .service__start {
+  flex-wrap: nowrap;
+}
+
+.service__start-box {
+  display: grid;
+  flex: none;
+  gap: 0.1rem;
+  padding: 0.6rem 1.1rem 0.65rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+}
+
+.service__start-label {
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.service__start-time {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.service__start-name {
+  min-width: 0;
+  overflow-wrap: normal;
+  hyphens: manual;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.service-list--featured .is-next .service__when .badge,
+.service-list--dialog .is-next .service__when .badge {
+  font-family: var(--font-sans);
+}
+
+/* A label above the next card and above the services that follow it. */
+.service-list--featured .is-next::before,
+.service-list--dialog .is-next::before,
+.service-list--dialog .is-next + .service::before {
+  content: attr(data-label);
+  grid-column: 1 / -1;
+  margin-bottom: 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+.service-list--dialog .is-next + .service::before {
+  content: attr(data-following);
+  margin-top: 1rem;
+}
+
+.service-list--featured .is-next .service__subtitle,
+.service-list--dialog .is-next .service__subtitle {
+  margin-top: 0.9rem;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.service-list--featured .is-next .service__when,
+.service-list--dialog .is-next .service__when {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 1.1rem + 0.9vw, 1.75rem);
+  color: var(--ink);
+}
+
+/* Church calendar of the day ------------------------------------------------ */
+
+.church-day {
+  margin-top: 0.6rem;
+}
+
+.church-day summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.25rem;
+  font-size: 0.9375rem;
+  font-weight: 650;
+  color: var(--accent);
+  cursor: pointer;
+  list-style: none;
+}
+
+.church-day summary::-webkit-details-marker {
+  display: none;
+}
+
+.church-day summary::after {
+  content: '';
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-left: 0.15rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-20%);
+  transition: transform 0.2s;
+}
+
+.church-day[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+.church-day summary .icon {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.is-next .church-day {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line-strong);
+}
+
+.church-day__body {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-m);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  background: var(--surface-tint);
+}
+
+.church-day__body h4 {
+  margin: 0.4rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+.church-day__note {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.church-day__old {
+  font-weight: 650;
+}
+
+.church-day__title {
+  color: var(--ink-soft);
+}
+
+.church-day__list {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.church-day__list li::marker {
+  color: var(--gilt);
+}
+
+.church-day__list--readings {
+  font-variant-numeric: tabular-nums;
+}
+
+/* The services dialog ------------------------------------------------------- */
+
+.services-dialog {
+  width: min(46rem, calc(100vw - 1.5rem));
+  max-height: min(92vh, 60rem);
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-l);
+  color: var(--ink);
+  background: var(--bg);
+  box-shadow: 0 30px 80px -20px rgb(0 0 0 / 0.55);
+}
+
+.services-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-dialog::backdrop {
+  background: rgb(10 14 22 / 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.services-dialog__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem clamp(1.25rem, 4vw, 2.25rem) 1.25rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.services-dialog__head h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.25rem);
+}
+
+.services-dialog__close {
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+}
+
+.services-dialog__body {
+  overflow-y: auto;
+  padding: 1.25rem clamp(1.25rem, 4vw, 2.25rem) 1.5rem;
+  overscroll-behavior: contain;
+}
+
+.service-list--dialog .is-next {
+  grid-template-columns: 4.75rem minmax(0, 1fr);
+  align-items: start;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.service-list--dialog .is-next .service__add {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+.service-list--dialog .is-next .service__date {
+  padding: 1rem 0 0.7rem;
+  border-radius: 2.4rem 2.4rem 0.5rem 0.5rem;
+}
+
+.service-list--dialog .is-next .service__day {
+  font-size: 2.1rem;
+}
+
+.services-dialog__foot {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 30rem) {
+  .services-dialog {
+    width: 100vw;
+    max-width: none;
+    max-height: 100dvh;
+    height: 100dvh;
+    border-radius: 0;
+  }
+
+  .service__start-time {
+    font-size: 1.6rem;
+  }
+
+  .service__start-name {
+    font-size: 1.05rem;
+  }
+
+  .service-list--featured .is-next,
+  .service-list--dialog .is-next {
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    column-gap: 0.9rem;
+    padding: 1.1rem;
+  }
+
+  .service-list--featured .is-next .service__day,
+  .service-list--dialog .is-next .service__day {
+    font-size: 1.7rem;
+  }
+
+  .service-list--featured .is-next .service__start,
+  .service-list--dialog .is-next .service__start {
+    flex-wrap: wrap;
+  }
+
+  .services-dialog__body {
+    padding-inline: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .services-dialog[open] {
+    animation: dialog-rise 0.22s ease-out;
+  }
+}
+
+@keyframes dialog-rise {
+  from {
+    transform: translateY(1rem) scale(0.98);
+  }
+}
+
+/* With the calendar unfolded, the date stays beside the service it belongs to. */
+.service:has(.church-day[open]) {
+  align-items: start;
+}
