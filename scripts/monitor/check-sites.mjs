@@ -139,8 +139,10 @@ async function checkLinks() {
       const response = await request(page);
       checked += 1;
       if (response.status !== 200) { fail(`${site}:page`, `${page} → HTTP ${response.status || response.error}`); continue; }
-      for (const match of response.body.matchAll(/\b(?:href|src|imagesrcset)="([^"]+)"/g)) {
-        for (const candidate of match[1].split(',')) {
+      for (const match of response.body.matchAll(/\b(href|src|srcset|imagesrcset)="([^"]+)"/g)) {
+        // Only srcset lists are comma-separated; an href may legitimately contain commas (map links).
+        const candidates = match[1].endsWith('srcset') ? match[2].split(',') : [match[2]];
+        for (const candidate of candidates) {
           const value = candidate.trim().split(/\s+/)[0];
           if (!value || /^(?:#|tel:|mailto:|javascript:|webcal:|data:)/.test(value)) continue;
           let url;
@@ -157,7 +159,7 @@ async function checkLinks() {
       const response = await request(href, { retry: false });
       if (response.status === 0 || response.status >= 400) {
         const again = await request(href);
-        if (again.status === 0 || again.status >= 400) fail(`${site}:link`, `${href} → HTTP ${again.status || again.error} (linked from ${from})`);
+        if (again.status === 0 || again.status >= 400) fail(`${site}:link:${href}`, `HTTP ${again.status || again.error} (linked from ${from})`);
       }
       await delay(100);
     }

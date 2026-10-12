@@ -8,6 +8,7 @@
 // what GitHub e-mails about. Ongoing incidents and recoveries exit 0.
 
 import { readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 
 const result = JSON.parse(await readFile('monitor-result.json', 'utf8'));
 const repository = process.env.GITHUB_REPOSITORY;
@@ -31,7 +32,8 @@ async function api(path, init = {}) {
 }
 
 const vilnius = iso => new Intl.DateTimeFormat('ru-LT', { timeZone: 'Europe/Vilnius', dateStyle: 'medium', timeStyle: 'short' }).format(new Date(iso));
-const signature = result.failures.map(item => item.id).sort().join('|');
+// A short hash of the failure ids (ids may contain URLs, so they do not go into the HTML comment verbatim).
+const signature = createHash('sha256').update(result.failures.map(item => item.id).sort().join('|')).digest('hex').slice(0, 16);
 const list = result.failures.map(item => `- \`${item.id}\` — ${item.detail}`).join('\n');
 const footer = `\n\n${result.notes.map(note => `_${note}_`).join('\n')}\n\nЗапуск: ${runURL}\n<!-- signature:${signature} -->`;
 
@@ -53,7 +55,7 @@ if (!open) {
   console.log(`Opened issue #${issue.number}`);
   process.exit(1);
 }
-const previous = (open.body?.match(/<!-- signature:([^>]*) -->/) || [])[1] ?? '';
+const previous = (open.body?.match(/<!-- signature:([0-9a-f]*) -->/) || [])[1] ?? '';
 if (previous === signature) {
   console.log(`Incident unchanged; issue #${open.number} stays open without a new comment.`);
   process.exit(0);
