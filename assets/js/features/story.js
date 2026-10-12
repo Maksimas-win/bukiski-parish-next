@@ -3,7 +3,7 @@
 // and a before/after photo comparison. Without this module everything is
 // visible and readable as plain HTML.
 
-import { $, $$, show, prefersReducedMotion } from '../ui/dom.js?v=c7a6e8903d';
+import { $, $$, show, prefersReducedMotion } from '../ui/dom.js?v=f083d1dd15';
 
 function initChapterNav(story) {
   const nav = $('[data-story-nav]', story);

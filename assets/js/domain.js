@@ -61,6 +61,34 @@ function englishOrdinal(number) {
   return `${number}${{ 1: 'st', 2: 'nd', 3: 'rd' }[number % 10] || 'th'}`;
 }
 
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+const MAX_CALENDAR_ITEMS = 60;
+const MAX_CALENDAR_TEXT = 400;
+
+const cleanText = value => (typeof value === 'string' ? value.replace(/\s+/g, ' ').trim().slice(0, MAX_CALENDAR_TEXT) : '');
+const cleanList = value => (Array.isArray(value) ? value.map(cleanText).filter(Boolean).slice(0, MAX_CALENDAR_ITEMS) : []);
+
+/**
+ * The church-calendar day the feed attaches to a service: old-style date,
+ * commemorations of saints and the day's readings. The feed publishes these in
+ * Russian only; they are shown as given, never translated or completed.
+ */
+function churchDay(event) {
+  const day = event.churchCalendar || {};
+  const oldStyleDate = [day.oldStyleDate, event.oldStyleDate].find(value => typeof value === 'string' && ISO_DATE.test(value)) || '';
+  const result = {
+    language: 'ru',
+    commemoration: cleanText(event.commemoration?.ru || day.primaryCommemoration),
+    title: cleanText(day.title),
+    oldStyleDate,
+    saints: cleanList(day.saints),
+    readings: cleanList(day.readings),
+    sourceURL: safeExternalURL(day.sourceUrl) || ''
+  };
+  const empty = !result.commemoration && !result.oldStyleDate && !result.saints.length && !result.readings.length;
+  return empty ? null : result;
+}
+
 /**
  * Validates the parish feed and keeps only services the parish calendar confirms
  * with an exact time. A church-calendar feast or a recurring rule is not evidence
@@ -104,7 +132,8 @@ export function normalizeSchedule(source) {
       subtitle,
       // The feed marks great feasts itself; the site never infers them.
       feast: typeof event.feastType === 'string' && event.feastType.length > 0,
-      source: event.source
+      source: event.source,
+      church: churchDay(event)
     });
   }
 
