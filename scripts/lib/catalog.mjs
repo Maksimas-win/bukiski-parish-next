@@ -41,9 +41,9 @@ const MAX_DESCRIPTION = 180;
 const PLACEHOLDER_DESCRIPTION = /^(?:Straipsnio aprašymas|Article description|Описание статьи)\.?$/i;
 
 /** Short summary for cards and metadata, cut at a word boundary. */
-export function descriptionOf(page) {
+export function descriptionOf(page, overrides = {}) {
   const fallback = page.blocks.find(block => block.tag === 'p' && block.text.length > 100)?.text || '';
-  const own = (page.description || '').trim();
+  const own = (overrides[page.url] || page.description || '').trim();
   const text = (PLACEHOLDER_DESCRIPTION.test(own) ? '' : own) || fallback.trim();
   if (text.length <= MAX_DESCRIPTION) return text;
   const cut = text.slice(0, MAX_DESCRIPTION);
@@ -93,7 +93,7 @@ export function createCatalog(site) {
       sourcePath: source.pathname,
       language: page.language || 'ru',
       title: titleOf(page, site.titleOverrides),
-      description: descriptionOf(page),
+      description: descriptionOf(page, site.descriptionOverrides),
       publishedAt: page.publishedAt || null,
       target,
       /** True when the preserved text is published at `target` itself. */
