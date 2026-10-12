@@ -336,10 +336,6 @@
     height: 38px;
   }
 
-  .lang-switch a {
-    min-width: 1.9rem;
-    padding-inline: 0.3rem;
-  }
 }
 
 .requisites__row dd .copy-button {

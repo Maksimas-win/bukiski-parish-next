@@ -17,6 +17,7 @@ const PATHS = {
   sliders: 'M4 7h10 M18 7h2 M4 17h2 M10 17h10 M16 5v4 M8 15v4',
   'arrow-right': 'M5 12h14 M13 6l6 6-6 6',
   'arrow-up': 'M12 19V5 M6 11l6-6 6 6',
+  'chevron-down': 'M6 9l6 6 6-6',
   'chevron-left': 'M15 6l-6 6 6 6',
   'chevron-right': 'M9 6l6 6-6 6',
   download: 'M12 4v11 M7 11l5 5 5-5 M5 20h14',
@@ -42,6 +43,7 @@ const PATHS = {
   bank: 'M3 9l9-5 9 5 M5 9v9 M10 9v9 M14 9v9 M19 9v9 M3 20h18',
   id: 'M4 5h16v14H4z M8 10h.01 M11 10h5 M8 14h8',
   user: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 21a8 8 0 0 1 16 0',
+  home: 'M3 11.5 12 4l9 7.5 M5.5 9.5V20h4.5v-5.5h4V20h4.5V9.5',
   globe: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M3 12h18 M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9 M12 3c-2.5 2.6-3.8 5.6-3.8 9s1.3 6.4 3.8 9',
   door: 'M6 21V4h12v17 M3 21h18 M14 12h.01',
   photo: 'M4 6h16v13H4z M4 15l5-5 4 4 3-3 4 4 M15.5 9.5h.01'
