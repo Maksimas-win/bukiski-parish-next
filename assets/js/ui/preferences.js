@@ -1,4 +1,4 @@
-import { $, $$, show } from './dom.js?v=d532be9930';
+import { $, $$, show } from './dom.js?v=95fb8fa485';
 
 // The same key is read by theme-init.js before first paint.
 // Only reading preferences are stored; prayer names never enter browser storage.
