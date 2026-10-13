@@ -1,4 +1,12 @@
 export const LANGUAGES = { ru: 'Русский', lt: 'Lietuvių', en: 'English', pl: 'Polski', de: 'Deutsch', uk: 'Українська' };
+export const TELEGRAM_UI = {
+  ru: { intro: 'Нужен разговор или помощь с требой? Наш Telegram-помощник открыт для всех. Обращение священнику отправляется после вашего подтверждения.', chat: 'Открыть помощника в Telegram ↗', request: 'Обратиться к священнику ↗' },
+  lt: { intro: 'Norite pasikalbėti ar susitarti dėl apeigų? Telegram pagalbininkas prieinamas visiems (meniu rusų kalba). Prašymas kunigui siunčiamas tik jums patvirtinus.', chat: 'Atverti Telegram pagalbininką ↗', request: 'Kreiptis į kunigą ↗' },
+  en: { intro: 'Would you like to talk or ask about a church rite? Our Telegram assistant is open to everyone (menus in Russian). A request reaches the priest only after you confirm it.', chat: 'Open the Telegram assistant ↗', request: 'Contact the priest ↗' },
+  pl: { intro: 'Chcesz porozmawiać lub uzgodnić obrzęd? Pomocnik w Telegramie jest dostępny dla wszystkich (menu po rosyjsku). Prośba trafi do kapłana po Twoim potwierdzeniu.', chat: 'Otwórz pomocnika w Telegramie ↗', request: 'Napisz do kapłana ↗' },
+  de: { intro: 'Möchten Sie sprechen oder eine kirchliche Feier vereinbaren? Der Telegram-Assistent ist für alle offen (Menü auf Russisch). Eine Anfrage geht erst nach Ihrer Bestätigung an den Priester.', chat: 'Telegram-Assistenten öffnen ↗', request: 'Den Priester kontaktieren ↗' },
+  uk: { intro: 'Потрібна розмова або допомога з требою? Наш Telegram-помічник відкритий для всіх (меню російською). Звернення священнику надсилається після вашого підтвердження.', chat: 'Відкрити помічника в Telegram ↗', request: 'Звернутися до священника ↗' },
+};
 export const UI = {
   ru: {
     title: 'Помощник прихода', subtitle: 'Храм Рождества Христова · Букишки', open: 'Спросить помощника', close: 'Закрыть помощника',
