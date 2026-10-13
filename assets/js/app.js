@@ -2,9 +2,9 @@
 // this entry point wires up controls and loads a feature module only on the
 // pages that contain its markup.
 
-import { initCopyButtons } from './ui/copy.js?v=95fb8fa485';
-import { initLanguageMenu, initMenu } from './ui/menu.js?v=95fb8fa485';
-import { initPreferences } from './ui/preferences.js?v=95fb8fa485';
+import { initCopyButtons } from './ui/copy.js?v=b682e9dcca';
+import { initLanguageMenu, initMenu } from './ui/menu.js?v=b682e9dcca';
+import { initPreferences } from './ui/preferences.js?v=b682e9dcca';
 
 document.documentElement.classList.add('js');
 
@@ -14,13 +14,13 @@ initPreferences();
 initCopyButtons();
 
 const features = [
-  ['[data-schedule]', () => import('./features/schedule.js?v=95fb8fa485')],
-  ['[data-library]', () => import('./features/library.js?v=95fb8fa485')],
-  ['[data-notes]', () => import('./features/notes.js?v=95fb8fa485')],
-  ['[data-article]', () => import('./features/article.js?v=95fb8fa485')],
-  ['[data-story]', () => import('./features/story.js?v=95fb8fa485')],
-  ['[data-lightbox]', () => import('./features/lightbox.js?v=95fb8fa485')],
-  ['[data-document-download]', () => import('./document-downloads.js?v=95fb8fa485')]
+  ['[data-schedule]', () => import('./features/schedule.js?v=b682e9dcca')],
+  ['[data-library]', () => import('./features/library.js?v=b682e9dcca')],
+  ['[data-notes]', () => import('./features/notes.js?v=b682e9dcca')],
+  ['[data-article]', () => import('./features/article.js?v=b682e9dcca')],
+  ['[data-story]', () => import('./features/story.js?v=b682e9dcca')],
+  ['[data-lightbox]', () => import('./features/lightbox.js?v=b682e9dcca')],
+  ['[data-document-download]', () => import('./document-downloads.js?v=b682e9dcca')]
 ];
 
 for (const [selector, load] of features) {
