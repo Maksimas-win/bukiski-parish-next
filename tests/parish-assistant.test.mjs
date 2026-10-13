@@ -31,7 +31,7 @@ test('tomorrow is a Vilnius calendar date across DST and UTC midnight', () => {
 test('exact, impossible, ambiguous dates and Sunday are handled explicitly', () => {
   assert.equal(dateFromQuestion('14.10.2026', now).date, '2026-10-14');
   assert.equal(dateFromQuestion('31.02.2026', now).invalid, true);
-  assert.equal(dateFromQuestion('14 октября', now).invalid, true);
+  assert.equal(dateFromQuestion('14 октября', now).date, '2026-10-14');
   assert.equal(dateFromQuestion('в воскресенье', now).date, '2026-10-18');
   assert.equal(ask('Есть ли служба 14.10.2026?').events.length, 1);
 });
