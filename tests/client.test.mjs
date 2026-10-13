@@ -16,10 +16,9 @@ test('No script builds markup from strings, evaluates code or contacts third par
     // The assistant's two pure data modules contain navigation links, never requests.
     if (['assistant/engine.js', 'assistant/knowledge.js'].includes(name)) {
       assert.doesNotMatch(source, /\bfetch\(|XMLHttpRequest|WebSocket|sendBeacon/, name);
-    } else if (name === 'assistant/widget.js') {
-      // This literal is a user-clicked link, not an automatic third-party request.
-      assert.doesNotMatch(source.replace('https://t.me/bukiskis_parish_bot?start=', ''), /https?:\/\//, name);
-      assert.match(source, /link\.target = '_blank'; link\.rel = 'noopener noreferrer'/);
+    } else if (name === 'assistant/web-api.js') {
+      assert.doesNotMatch(source.replace('https://bukiski-hram.org/integrations/telegram/website.php', ''), /https?:\/\//, name);
+      assert.match(source, /redirect: 'error'/);
     } else assert.doesNotMatch(source, /https?:\/\//, name);
   }
 });
@@ -55,6 +54,10 @@ test('Network requests are limited to reviewed modules and send no cookies', () 
   assert.match(assistant, /feed\.origin !== origin/);
   assert.match(assistant, /redirect: 'error'/);
   assert.doesNotMatch(assistant, /method: 'POST'|JSON\.stringify\(question\)/);
+  const api = sources.get('assistant/web-api.js');
+  assert.match(api, /credentials: 'omit'/);
+  assert.match(api, /method: 'POST'/);
+  assert.doesNotMatch(api, /localStorage|sessionStorage|document\.cookie|console\./);
 });
 
 test('Every feature module that app.js loads exists and exports init()', () => {
@@ -63,3 +66,4 @@ test('Every feature module that app.js loads exists and exports init()', () => {
   assert.ok(features.length >= 5);
   for (const name of features) assert.match(sources.get(name), /export function init\(\)/, name);
 });
+

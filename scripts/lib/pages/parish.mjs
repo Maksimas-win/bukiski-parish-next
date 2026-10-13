@@ -1,4 +1,5 @@
 // Core sections with editorial text: contacts, history, sacraments, gallery, support, privacy.
+import { WEB_UI } from '../../../assets/js/assistant/web-i18n.js';
 
 import { html, attrs } from '../html.mjs';
 import { icon } from '../icons.mjs';
@@ -235,6 +236,8 @@ export function privacyPage(site, lang, t) {
   <section class="shell prose prose--narrow">
     ${onGitHubPages && html`<p>${t.githubHosting} ${externalLink(t, site.settings.links.githubPrivacy, t.hostingPolicy)}</p>`}
     ${t.privacyItems.map(([heading, text]) => html`<h2>${heading}</h2><p>${text}</p>`)}
+    <h2>${WEB_UI[lang].ai} · ${WEB_UI[lang].request}</h2>
+    <p>${WEB_UI[lang].policy}</p>
   </section>`;
 }
 
@@ -245,3 +248,4 @@ export function notFoundPage(site, t) {
     ${siteLink(site, '/ru/library.html', t.library, 'button button--quiet')}
   </div>`;
 }
+

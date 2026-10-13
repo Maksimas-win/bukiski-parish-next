@@ -7,12 +7,10 @@ import { structuredData } from './structured-data.mjs';
 import { externalLink, siteLink } from './components.mjs';
 
 /**
- * Everything loads from this site. The one exception is the parish's form
- * service, which the prayer-request page may contact when a visitor presses
- * «Отправить»; its origin comes from settings.notes.endpoint.
+ * Reviewed opt-in services: the parish assistant and the existing prayer form.
  */
 export function contentSecurityPolicy(site) {
-  const connect = ["'self'"];
+  const connect = ["'self'", 'https://bukiski-hram.org/integrations/telegram/website.php'];
   const endpoint = site.settings.notes?.endpoint;
   if (endpoint) {
     const url = new URL(endpoint);
@@ -177,3 +175,4 @@ export function renderDocument(site, page) {
   // Preserved articles have not changed since the source published them.
   return { html: document, noindex: noindex || noFollow, canonicalPath, lang, lastmod: page.publishedAt || null };
 }
+

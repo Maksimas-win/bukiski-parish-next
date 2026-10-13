@@ -1,7 +1,10 @@
-import { UI, LANGUAGES, TELEGRAM_UI } from './i18n.js';
+import { UI, LANGUAGES } from './i18n.js';
 import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js';
+import { WEB_UI } from './web-i18n.js';
+import { createWebApi } from './web-api.js';
+import { mountRequestForm } from './request-form.js';
 
-/** Self-contained, read-only widget. No cookies, analytics or conversation persistence. */
+/** Static-hosting compatible UI; online actions are opt-in, with no browser persistence. */
 export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 'ru', parent = document.body } = {}) {
   if (document.querySelector('[data-parish-assistant]')) {return;}
   let language = localeOf(locale);
@@ -11,6 +14,9 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   let cachedSchedule = null;
   let fetchedAt = 0;
   let activeRequest;
+  const api = createWebApi();
+  let aiEnabled = false;
+  let disposeRequest;
   const origin = location.origin;
   const feed = new URL(scheduleURL || `${base}/data/services.json`, origin);
   if (feed.origin !== origin || !['http:', 'https:'].includes(feed.protocol)) {throw new Error('Schedule must be same-origin');}
@@ -74,11 +80,12 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   const send = node('button', 'pa-send', t.send);
   send.type = 'submit';
   form.append(label, input, send);
-  const privacy = node('p', 'pa-privacy', t.privacy);
+  const privacy = node('p', 'pa-privacy', WEB_UI[language].privacy);
   privacy.id = 'pa-privacy';
   const foot = node('footer', 'pa-footer');
   foot.append(suggestions, status, form, privacy);
-  dialog.append(head, toolbar, mode, transcript, foot);
+  const online = node('div', 'pa-online-toolbar');
+  dialog.append(head, toolbar, online, mode, transcript, foot);
   root.append(launcher, dialog);
   parent.append(root);
 
@@ -148,20 +155,49 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   function reset() {
     session += 1;
     activeRequest?.abort();
+    disposeRequest?.(); disposeRequest = undefined;
+    api.forget(); aiEnabled = false;
+    form.hidden = false; suggestions.hidden = false; mode.textContent = t.mode;
     busy = false; send.disabled = false; input.disabled = false;
     transcript.replaceChildren(); input.value = ''; status.textContent = '';
     const welcome = entry(t.intro);
-    const telegram = TELEGRAM_UI[language];
-    welcome.append(node('p', 'pa-text', telegram.intro));
-    const actions = node('div', 'pa-links');
-    for (const [label, request] of [[telegram.chat, false], [telegram.request, true]]) {
-      const link = node('a', 'pa-link', label);
-      link.href = `https://t.me/bukiskis_parish_bot?start=${site === 'org' ? 'org' : 'net'}${request ? '_request' : ''}`;
-      link.target = '_blank'; link.rel = 'noopener noreferrer';
-      actions.append(link);
-    }
-    welcome.append(actions);
+    welcome.append(node('p', 'pa-text', WEB_UI[language].intro));
     addMessage(welcome);
+  }
+  function showPanel() {
+    reset(); transcript.replaceChildren(); form.hidden = true; suggestions.hidden = true;
+    const panel = node('div', 'pa-online-panel'); transcript.append(panel); return panel;
+  }
+  function offerAi() {
+    const panel = showPanel(); const copy = WEB_UI[language];
+    mode.textContent = copy.ai;
+    panel.append(node('p', 'pa-text', copy.consent), node('p', 'pa-meta', copy.privacy));
+    const details = node('details', 'pa-data'); details.append(node('summary', '', copy.data), node('p', 'pa-meta', copy.policy)); panel.append(details);
+    const enable = button('pa-send', copy.enable);
+    enable.addEventListener('click', () => {
+      aiEnabled = true; panel.remove(); form.hidden = false; suggestions.hidden = false;
+      mode.textContent = copy.active; addMessage(entry(copy.active)); input.focus();
+    });
+    const cancel = button('pa-clear', copy.cancel); cancel.addEventListener('click', () => { reset(); input.focus(); });
+    panel.append(enable, cancel); enable.focus();
+  }
+  function renderOnline() {
+    online.replaceChildren();
+    const copy = WEB_UI[language];
+    const ai = button('pa-chip', copy.ai); ai.addEventListener('click', offerAi);
+    const request = button('pa-chip', copy.request);
+    request.addEventListener('click', () => {
+      const panel = showPanel();
+      mode.textContent = copy.request;
+      disposeRequest = mountRequestForm({ container: panel, t: copy, node, button, api, done: () => { reset(); input.focus(); } });
+    });
+    const data = button('pa-clear', copy.data);
+    data.addEventListener('click', () => {
+      const panel = showPanel(); panel.append(node('p', 'pa-text', copy.policy));
+      mode.textContent = copy.data;
+      const back = button('pa-clear', copy.cancel); back.addEventListener('click', () => { reset(); input.focus(); }); panel.append(back); back.focus();
+    });
+    online.append(ai, request, data);
   }
   async function schedule() {
     if (cachedSchedule && Date.now() - fetchedAt < 60000) {return cachedSchedule;}
@@ -184,14 +220,34 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     if (busy) {return;}
     if (!question) { status.textContent = t.empty; input.focus(); return; }
     const turn = session;
-    const scheduleNeeded = intentOf(question) === 'schedule';
+    const intent = intentOf(question);
+    const scheduleNeeded = intent === 'schedule';
+    const useAi = aiEnabled && ['unknown', 'visit', 'sacraments', 'history'].includes(intent);
     addMessage(entry(question, true)); input.value = '';
     busy = true; send.disabled = true; input.disabled = true;
-    status.textContent = scheduleNeeded ? t.loading : '';
+    status.textContent = useAi ? WEB_UI[language].thinking : scheduleNeeded ? t.loading : '';
+    if (useAi) {
+      try {
+        const result = await api.call({ action: 'ai', id: globalThis.crypto.randomUUID(), question, language, consent: true });
+        if (turn !== session) {return;}
+        const article = entry(result.ai && typeof result.answer === 'string' ? result.answer : WEB_UI[language].error);
+        if (result.ai) {article.querySelector('.pa-author').textContent = WEB_UI[language].label;}
+        addMessage(article);
+      } catch {
+        if (turn === session) {addMessage(entry(WEB_UI[language].error));}
+      } finally {
+        if (turn === session) {busy = false; send.disabled = false; input.disabled = false; status.textContent = ''; if (dialog.open) {input.focus();}}
+      }
+      return;
+    }
     const data = scheduleNeeded ? await schedule() : null;
     if (turn !== session) {return;}
     const answer = answerQuestion(question, { locale: language, schedule: data, site, base });
     addMessage(renderAnswer(answer));
+    if (intent === 'unknown' && !aiEnabled) {
+      const prompt = entry(WEB_UI[language].intro); const enable = button('pa-chip', WEB_UI[language].ai);
+      enable.addEventListener('click', offerAi); prompt.append(enable); addMessage(prompt);
+    }
     busy = false; send.disabled = false; input.disabled = false; status.textContent = '';
     if (dialog.open) {input.focus({ preventScroll: true });}
   });
@@ -200,8 +256,8 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     launcher.textContent = t.open; title.textContent = t.title; eyebrow.textContent = t.subtitle;
     close.setAttribute('aria-label', t.close); select.setAttribute('aria-label', t.language); languageText.textContent = t.language;
     clear.textContent = t.clear; mode.textContent = t.mode; label.textContent = t.label;
-    input.placeholder = t.placeholder; send.textContent = t.send; privacy.textContent = t.privacy;
-    renderSuggestions(); reset();
+    input.placeholder = t.placeholder; send.textContent = t.send; privacy.textContent = WEB_UI[language].privacy;
+    renderSuggestions(); renderOnline(); reset();
   });
   clear.addEventListener('click', () => { reset(); status.textContent = t.cleared; input.focus(); });
   launcher.addEventListener('click', () => {
@@ -215,6 +271,10 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     const rect = dialog.getBoundingClientRect();
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) {dialog.close();}
   } });
-  renderSuggestions(); reset();
-  return { open: () => launcher.click(), destroy: () => { activeRequest?.abort(); root.remove(); } };
+  const erase = () => { reset(); };
+  globalThis.addEventListener('pagehide', erase);
+  globalThis.addEventListener('pageshow', erase);
+  renderSuggestions(); renderOnline(); reset();
+  return { open: () => launcher.click(), destroy: () => { activeRequest?.abort(); disposeRequest?.(); api.forget(); globalThis.removeEventListener('pagehide', erase); globalThis.removeEventListener('pageshow', erase); root.remove(); } };
 }
+
