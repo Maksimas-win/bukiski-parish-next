@@ -1,5 +1,6 @@
-import { UI } from './i18n.js?v=bb62728033';
-import { FAQ, PARISH } from './knowledge.js?v=bb62728033';
+import { UI } from './i18n.js?v=d532be9930';
+import { FAQ, PARISH } from './knowledge.js?v=d532be9930';
+import { namedCalendarDate, isCalendarFollowUp } from './calendar-requests.js?v=d532be9930';
 
 export const TIMEZONE = 'Europe/Vilnius';
 export const MAX_QUESTION = 500;
@@ -36,7 +37,7 @@ export function intentOf(question) {
   if (/впервые|первый раз|вперше|pirma kart|first visit|first time|pierwszy|erster besuch/.test(q)) {return 'visit';}
   if (/распис|розклад|служб|литург|богослуж|лiтург|pamald|tvarkar|liturg|service|schedule|nabozen|gottesdienst|пасх|покров|рождеств|різдв|easter|christmas|velyk|kaled|wielkanoc|ostern|weihnacht/.test(q)) {return 'schedule';}
   if (/^(?:(?:а|а на|на|в|and|what about)\s+)?(?:сегодня|сьогодн[іи]|завтра|послезавтра|післязавтра|воскресенье|нед[іи]лю|siandien|rytoj|poryt|sekmadieni|today|tomorrow|day after tomorrow|sunday|dzisiaj|jutro|pojutrze|niedziele|heute|morgen|ubermorgen|sonntag|\d{4}-\d{2}-\d{2}|\d{1,2}[./]\d{1,2}(?:[./]\d{4})?)[?!.\s]*$/.test(q)) {return 'schedule';}
-  return 'unknown';
+  return isCalendarFollowUp(q) ? 'schedule' : 'unknown';
 }
 
 export function dateFromQuestion(question, now = Date.now()) {
@@ -49,6 +50,8 @@ export function dateFromQuestion(question, now = Date.now()) {
     const date = `${short[3] || today.slice(0, 4)}-${short[2].padStart(2, '0')}-${short[1].padStart(2, '0')}`;
     return { date, invalid: !validDate(date) };
   }
+  const named = namedCalendarDate(q, today);
+  if (named) {return named;}
   if (/послезавтра|післязавтра|poryt|day after tomorrow|pojutrze|ubermorgen/.test(q)) {return { date: shiftDate(today, 2) };}
   if (/завтра|rytoj|tomorrow|jutro|morgen/.test(q)) {return { date: shiftDate(today, 1) };}
   if (/сегодня|сьогодн|siandien|today|dzis|heute/.test(q)) {return { date: today };}
