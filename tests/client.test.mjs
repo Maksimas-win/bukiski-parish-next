@@ -16,6 +16,10 @@ test('No script builds markup from strings, evaluates code or contacts third par
     // The assistant's two pure data modules contain navigation links, never requests.
     if (['assistant/engine.js', 'assistant/knowledge.js'].includes(name)) {
       assert.doesNotMatch(source, /\bfetch\(|XMLHttpRequest|WebSocket|sendBeacon/, name);
+    } else if (name === 'assistant/widget.js') {
+      // This literal is a user-clicked link, not an automatic third-party request.
+      assert.doesNotMatch(source.replace('https://t.me/bukiskis_parish_bot?start=', ''), /https?:\/\//, name);
+      assert.match(source, /link\.target = '_blank'; link\.rel = 'noopener noreferrer'/);
     } else assert.doesNotMatch(source, /https?:\/\//, name);
   }
 });

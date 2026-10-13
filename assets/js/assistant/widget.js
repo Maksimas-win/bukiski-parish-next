@@ -1,4 +1,4 @@
-import { UI, LANGUAGES } from './i18n.js';
+import { UI, LANGUAGES, TELEGRAM_UI } from './i18n.js';
 import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js';
 
 /** Self-contained, read-only widget. No cookies, analytics or conversation persistence. */
@@ -150,7 +150,18 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     activeRequest?.abort();
     busy = false; send.disabled = false; input.disabled = false;
     transcript.replaceChildren(); input.value = ''; status.textContent = '';
-    addMessage(entry(t.intro));
+    const welcome = entry(t.intro);
+    const telegram = TELEGRAM_UI[language];
+    welcome.append(node('p', 'pa-text', telegram.intro));
+    const actions = node('div', 'pa-links');
+    for (const [label, request] of [[telegram.chat, false], [telegram.request, true]]) {
+      const link = node('a', 'pa-link', label);
+      link.href = `https://t.me/bukiskis_parish_bot?start=${site === 'org' ? 'org' : 'net'}${request ? '_request' : ''}`;
+      link.target = '_blank'; link.rel = 'noopener noreferrer';
+      actions.append(link);
+    }
+    welcome.append(actions);
+    addMessage(welcome);
   }
   async function schedule() {
     if (cachedSchedule && Date.now() - fetchedAt < 60000) {return cachedSchedule;}
