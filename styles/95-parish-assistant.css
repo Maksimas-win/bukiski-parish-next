@@ -413,3 +413,79 @@
     display: none;
   }
 }
+
+/* Optional online assistant: accessible forms in the existing scrolling panel. */
+.parish-assistant [hidden] {
+  display: none !important;
+}
+
+.parish-assistant textarea {
+  font: inherit;
+  resize: vertical;
+}
+
+.parish-assistant .pa-online-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 14px 0;
+  flex-shrink: 0;
+}
+
+.parish-assistant .pa-online-panel {
+  min-width: 0;
+}
+
+.parish-assistant .pa-request-form {
+  display: grid;
+  gap: 14px;
+  position: relative;
+}
+
+.parish-assistant .pa-field {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9375rem;
+}
+
+.parish-assistant .pa-field select {
+  max-width: 100%;
+}
+
+.parish-assistant .pa-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0;
+  font-size: 0.9375rem;
+}
+
+.parish-assistant .pa-consent input {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  margin: 3px 0;
+}
+
+.parish-assistant .pa-data {
+  margin: 12px 0;
+  font-size: 0.875rem;
+}
+
+.parish-assistant .pa-data summary {
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.parish-assistant .pa-preserve {
+  white-space: pre-wrap;
+}
+
+.parish-assistant .pa-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+

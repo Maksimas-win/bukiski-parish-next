@@ -327,7 +327,7 @@ test('The home page opens with the church photograph and its name, with no sloga
   }
 });
 
-test('The prayer-request form posts only to the configured service, which is the only third party in the CSP', async () => {
+test('CSP permits only the reviewed prayer service and exact parish assistant endpoint', async () => {
   const notes = await page('/ru/notes.html');
   assert.ok(notes.includes(`data-notes-endpoint="${settings.notes.endpoint}"`));
   assert.match(notes, /<input type="checkbox" name="consent" data-note-consent>/);
@@ -336,9 +336,10 @@ test('The prayer-request form posts only to the configured service, which is the
   const origin = new URL(settings.notes.endpoint).origin;
   for (const { file, html } of pages) {
     const csp = html.match(/http-equiv="Content-Security-Policy" content="([^"]+)"/)[1].replaceAll('&#39;', "'");
-    assert.match(csp, new RegExp(`connect-src 'self' ${origin.replace(/[.]/g, '\\.')};`), file);
+    const assistant = 'https://bukiski-hram.org/integrations/telegram/website.php';
+    assert.equal(csp.match(/connect-src ([^;]+);/)[1], `'self' ${assistant} ${origin}`, file);
     assert.match(csp, /form-action 'none'/, file);
-    assert.doesNotMatch(csp.replace(origin, ''), /https?:/, file);
+    assert.doesNotMatch(csp.replace(origin, '').replace(assistant, ''), /https?:/, file);
   }
 });
 
@@ -465,3 +466,4 @@ test('The host configuration redirects www. and index.html to one canonical addr
   assert.match(file, /index\\\.html\$ \/\$1 \[R=301,L,NE\]/);
   assert.match(file, /Strict-Transport-Security "max-age=31536000"/);
 });
+
