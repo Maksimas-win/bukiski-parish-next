@@ -20,6 +20,7 @@ import { notesPage } from './lib/pages/notes.mjs';
 import { libraryPage, newsPage } from './lib/pages/library.mjs';
 import { articlePage, lightboxDialog } from './lib/pages/article.mjs';
 import { documentPage, loadDocument } from './lib/pages/document.mjs';
+import { appBootstrap } from './lib/app-bootstrap.mjs';
 import * as outputs from './lib/outputs.mjs';
 
 const site = await loadSite();
@@ -256,6 +257,8 @@ for (const [path, route] of routes) await writeOutput(outputPathOf(path), route.
 await writeOutput('data/services.json', JSON.stringify(site.rawSchedule));
 // Use the same confirmed services as the page, including rector-confirmed additions.
 await writeOutput('data/assistant-services.json', JSON.stringify(site.schedule));
+// Stable public contract shared by the website and the future parish app.
+await writeOutput('api/v1/bootstrap.json', `${JSON.stringify(appBootstrap(site), null, 2)}\n`);
 await writeOutput('assets/data/search-index.json', JSON.stringify(outputs.searchIndex(catalog)));
 await writeOutput('sitemap.xml', outputs.sitemap(site, routes));
 await writeOutput('robots.txt', outputs.robots(site));
