@@ -3,7 +3,7 @@
 // normalised schedule; a feed service at the same date and time takes priority
 // and only receives the addition's note.
 
-import { SITE_LANGUAGES, localParts } from '../../assets/js/domain.js';
+import { SITE_LANGUAGES, isCalendarDate, isServiceKind, localParts } from '../../assets/js/domain.js';
 
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const TIME = /^\d{2}:\d{2}$/;
@@ -35,6 +35,8 @@ export function mergeAdditions(schedule, additions) {
     schedule.events.push({
       id: item.id,
       date: item.date,
+      ...(isCalendarDate(item.feastDate) ? { feastDate: item.feastDate } : {}),
+      ...(isServiceKind(item.kind) ? { kind: item.kind } : {}),
       start,
       startTime: item.startTime,
       title: item.title,

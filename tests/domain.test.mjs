@@ -35,6 +35,42 @@ test('Feast days are taken from the feed and never inferred', () => {
   assert.deepEqual(schedule.events.map(e => [e.id, e.feast]), [['a', true], ['b', false], ['c', false]]);
 });
 
+test('Published feast metadata preserves the eve start and is never inferred for other services', () => {
+  const schedule = normalizeSchedule(feed([
+    event({ id: 'paschal-night', date: '2027-05-01', startTime: '23:30', start: '2027-05-01T20:30:00Z', feastDate: '2027-05-02', kind: 'paschal-night' }),
+    event({ id: 'ordinary' }), event({ id: 'feast-without-date', feastType: 'twelve-great-feast' })
+  ]));
+  const night = schedule.events.find(service => service.id === 'paschal-night');
+  assert.equal(night.date, '2027-05-01');
+  assert.equal(night.start, '2027-05-01T20:30:00Z');
+  assert.equal(night.feastDate, '2027-05-02');
+  assert.equal(night.kind, 'paschal-night');
+  for (const service of schedule.events.filter(service => service !== night)) {
+    assert.equal(Object.hasOwn(service, 'feastDate'), false);
+    assert.equal(Object.hasOwn(service, 'kind'), false);
+  }
+});
+
+test('Only explicit, real calendar dates can be retained as feast dates', () => {
+  for (const feastDate of [undefined, null, 20270502, {}, '2027-5-2', '2027-02-29', '2027-04-31', '2027-13-01', '2027-05-00']) {
+    const [service] = normalizeSchedule(feed([event({ feastDate })])).events;
+    assert.equal(Object.hasOwn(service, 'feastDate'), false, JSON.stringify(feastDate));
+  }
+  const [leapDay] = normalizeSchedule(feed([event({ feastDate: '2028-02-29' })])).events;
+  assert.equal(leapDay.feastDate, '2028-02-29');
+});
+
+test('Service kinds must be explicit, nonempty, bounded text without controls', () => {
+  for (const kind of [undefined, null, 42, {}, '', '  ', 'paschal\nnight', 'x'.repeat(81)]) {
+    const [service] = normalizeSchedule(feed([event({ kind })])).events;
+    assert.equal(Object.hasOwn(service, 'kind'), false, JSON.stringify(kind));
+  }
+  for (const kind of ['paschal-night', 'x'.repeat(80)]) {
+    const [service] = normalizeSchedule(feed([event({ kind })])).events;
+    assert.equal(service.kind, kind);
+  }
+});
+
 test('Past services are excluded using instants, not date strings', () => {
   const schedule = normalizeSchedule(feed([event()]));
   assert.equal(upcomingEvents(schedule, Date.parse('2026-10-11T04:59:59Z')).length, 1);
