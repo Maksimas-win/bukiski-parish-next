@@ -65,6 +65,19 @@ const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 const MAX_CALENDAR_ITEMS = 60;
 const MAX_CALENDAR_TEXT = 400;
 
+/** Checks a supplied calendar date without accepting impossible days or rollover. */
+export function isCalendarDate(value) {
+  if (typeof value !== 'string' || !ISO_DATE.test(value)) return false;
+  const date = new Date(`${value}T00:00:00Z`);
+  return Number.isFinite(date.getTime()) && date.toISOString().slice(0, 10) === value;
+}
+
+/** Accepts a bounded service kind as supplied, without classifying the service. */
+export function isServiceKind(value) {
+  return typeof value === 'string' && value.trim().length > 0 && value.length <= 80
+    && !/[\u0000-\u001f\u007f]/.test(value);
+}
+
 const cleanText = value => (typeof value === 'string' ? value.replace(/\s+/g, ' ').trim().slice(0, MAX_CALENDAR_TEXT) : '');
 const cleanList = value => (Array.isArray(value) ? value.map(cleanText).filter(Boolean).slice(0, MAX_CALENDAR_ITEMS) : []);
 
@@ -126,6 +139,9 @@ export function normalizeSchedule(source) {
     events.push({
       id: event.id,
       date: event.date,
+      // A night service may begin on the eve; never infer its feast date.
+      ...(isCalendarDate(event.feastDate) ? { feastDate: event.feastDate } : {}),
+      ...(isServiceKind(event.kind) ? { kind: event.kind } : {}),
       start: event.start,
       startTime: event.startTime,
       title: event.title,
