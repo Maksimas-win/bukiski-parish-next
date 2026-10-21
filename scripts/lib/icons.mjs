@@ -55,8 +55,6 @@ export function icon(name) {
   return raw(`<svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="${path}"/></svg>`);
 }
 
-/** The three-bar Orthodox cross used as the site mark. */
-
 /**
  * Social network marks, simplified, in the networks' own colours on the page.
  * Used only next to the network's name, which carries the meaning.

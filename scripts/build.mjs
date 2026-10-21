@@ -98,6 +98,7 @@ async function assetVersion(stylesheet) {
   const directory = resolve(ROOT, 'assets/js');
   const files = (await readdir(directory, { recursive: true })).filter(name => name.endsWith('.js')).sort();
   const digest = createHash('sha256').update(stylesheet);
+  digest.update(await readFile(resolve(ROOT, 'assets/img/cross.svg')));
   for (const name of files) digest.update(name).update(await readFile(resolve(directory, name)));
   return digest.digest('hex').slice(0, 10);
 }
