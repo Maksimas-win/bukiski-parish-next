@@ -75,7 +75,7 @@ export function notesPage(site, lang, t) {
     <div class="notes__result" data-notes-result hidden>
       <h2 class="notes__preview-title">${t.notePreview}</h2>
       <div class="note-sheet" data-note-sheet>
-        <span class="note-sheet__cross" aria-hidden="true">☦</span>
+        <img class="note-sheet__cross" src="${site.url('/assets/img/cross.svg')}?v=${site.assetVersion}" width="24" height="36" alt="" aria-hidden="true">
         <p class="note-sheet__type" data-note-heading></p>
         <ol class="note-sheet__names" data-note-names></ol>
         <p class="note-sheet__empty" data-note-empty>${t.notePreviewEmpty}</p>
