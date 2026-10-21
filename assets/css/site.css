@@ -2449,9 +2449,9 @@ input[type='email']:user-invalid {
 }
 
 .note-sheet__cross {
-  font-size: 2.25rem;
-  line-height: 1;
-  color: #5b0f19;
+  display: block;
+  width: 1.5rem;
+  height: auto;
 }
 
 .note-sheet__type {

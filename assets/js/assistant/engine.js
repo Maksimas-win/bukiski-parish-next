@@ -1,6 +1,6 @@
-import { UI } from './i18n.js?v=e8326ac698';
-import { FAQ, PARISH } from './knowledge.js?v=e8326ac698';
-import { namedCalendarDate, isCalendarFollowUp } from './calendar-requests.js?v=e8326ac698';
+import { UI } from './i18n.js?v=0ad7359c43';
+import { FAQ, PARISH } from './knowledge.js?v=0ad7359c43';
+import { namedCalendarDate, isCalendarFollowUp } from './calendar-requests.js?v=0ad7359c43';
 
 export const TIMEZONE = 'Europe/Vilnius';
 export const MAX_QUESTION = 500;
