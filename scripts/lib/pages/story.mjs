@@ -5,7 +5,7 @@
 // only the arrangement, photographs and interface labels are added here.
 
 import { html, attrs } from '../html.mjs';
-import { icon } from '../icons.mjs';
+import { icon, emblem } from '../icons.mjs';
 import { formatDate } from '../site.mjs';
 import { externalLink, siteLink } from '../components.mjs';
 
@@ -81,7 +81,7 @@ function buildings(chapter, t, uiLocale) {
     <h3 id="buildings-title" class="story-block__title" lang="${uiLocale}">${t.storyBuildings}</h3>
     <ul class="story-buildings">
       ${chapter.buildings.map(building => html`<li class="story-building">
-        <span class="story-building__icon">${icon(building.icon)}</span>
+        <span class="story-building__icon">${emblem(building.icon)}</span>
         <span class="story-building__name">${building.name}</span>
         <span class="story-building__note">${building.note}</span>
       </li>`)}

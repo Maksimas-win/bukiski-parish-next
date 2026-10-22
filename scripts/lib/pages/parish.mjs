@@ -2,7 +2,7 @@
 import { WEB_UI } from '../../../assets/js/assistant/web-i18n.js';
 
 import { html, attrs } from '../html.mjs';
-import { icon } from '../icons.mjs';
+import { icon, emblem } from '../icons.mjs';
 import { formatDate } from '../site.mjs';
 import { churchImage, copyButton, externalLink, pageHead, phoneLink, siteLink, socialCards } from '../components.mjs';
 
@@ -117,14 +117,14 @@ export function historyPage(site, lang, t, archivePath, articles = []) {
       <h2 id="history-more">${t.historyMore}</h2>
     </div>
     <ul class="link-cards">
-      ${others.map(entry => html`<li class="link-card">
-        <span class="link-card__badge">${icon('book')}</span>
+      ${others.map(entry => html`<li class="link-card" data-tilt>
+        <span class="link-card__badge">${emblem('book')}</span>
         <h3 lang="${entry.language}"><a href="${site.url(entry.target)}">${displayTitle(site, entry)}</a></h3>
         <p lang="${entry.language}">${entry.description}</p>
         <span class="link-card__arrow">${icon('arrow-right')}</span>
       </li>`)}
-      <li class="link-card">
-        <span class="link-card__badge">${icon('photo')}</span>
+      <li class="link-card" data-tilt>
+        <span class="link-card__badge">${emblem('photo')}</span>
         <h3><a href="${site.url(site.route(lang, 'gallery'))}">${t.gallery}</a></h3>
         <p>${t.galleryTeaser}</p>
         <span class="link-card__arrow">${icon('arrow-right')}</span>
@@ -161,12 +161,12 @@ function storyFeature(site, story, target, t) {
 }
 
 /** Icons for t.sacramentItems, in their order: baptism, confession and communion, wedding, commemoration. */
-const SACRAMENT_ICONS = ['bath', 'chalice', 'rings', 'candle'];
+const SACRAMENT_ICONS = ['font', 'chalice', 'rings', 'candle'];
 
 export function sacramentsPage(site, lang, t) {
   return html`${pageHead({ title: t.sacraments, intro: t.sacramentsIntro, site, page: 'sacraments', t })}
   <section class="shell card-grid card-grid--two">
-    ${t.sacramentItems.map(([heading, text], index) => html`<article class="card card--icon"><span class="card__badge">${icon(SACRAMENT_ICONS[index] || 'church')}</span><h2>${heading}</h2><p>${text}</p></article>`)}
+    ${t.sacramentItems.map(([heading, text], index) => html`<article class="card card--icon" data-tilt><span class="card__badge">${emblem(SACRAMENT_ICONS[index] || 'church')}</span><h2>${heading}</h2><p>${text}</p></article>`)}
   </section>
   <section class="shell services-grid">
     <article class="card">
@@ -219,7 +219,7 @@ export function supportPage(site, lang, t) {
       ${reviewed(site, lang, t, settings.links.supportSource)}
     </article>
     <article class="card card--icon">
-      <span class="card__badge">${icon('heart')}</span>
+      <span class="card__badge">${emblem('heart')}</span>
       <h2>${t.gpm}</h2>
       <p>${t.gpmNote}</p>
       <p class="actions">
