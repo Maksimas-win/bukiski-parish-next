@@ -262,7 +262,7 @@ const EMBLEMS = {
 export function emblem(name) {
   const body = EMBLEMS[name];
   if (!body) throw new Error(`Unknown emblem: ${name}`);
-  return raw(`<svg class="emblem emblem--${name}" viewBox="0 0 64 64" width="48" height="48" aria-hidden="true" focusable="false"><ellipse cx="32" cy="${56 + DEPTH / 2}" rx="17" ry="3" class="em-shadow"/>${body.replace(/\s*\n\s*/g, '')}</svg>`);
+  return raw(`<svg class="emblem emblem--${name}" viewBox="0 0 64 64" width="48" height="48" aria-hidden="true" focusable="false"><ellipse cx="32" cy="${56 + DEPTH / 2}" rx="17" ry="3.2" class="em-shadow" filter="url(#em-blur)"/>${body.replace(/\s*\n\s*/g, '')}</svg>`);
 }
 
 export const emblemNames = () => Object.keys(EMBLEMS);
@@ -270,5 +270,5 @@ export const emblemNames = () => Object.keys(EMBLEMS);
 /** Shared gradient definitions, emitted once per page; stop colours are set in the stylesheet. */
 export function svgDefs() {
   const linear = id => `<linearGradient id="em-${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="em-${id}-a"/><stop offset="1" class="em-${id}-b"/></linearGradient>`;
-  return raw(`<svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>${['wine', 'gilt', 'dome', 'cream', 'ink', 'flame'].map(linear).join('')}<radialGradient id="em-gloss" cx="0.3" cy="0.2" r="0.9"><stop offset="0" class="em-gloss-a"/><stop offset="1" class="em-gloss-b"/></radialGradient></defs></svg>`);
+  return raw(`<svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>${['wine', 'gilt', 'dome', 'cream', 'ink', 'flame'].map(linear).join('')}<radialGradient id="em-gloss" cx="0.3" cy="0.2" r="0.9"><stop offset="0" class="em-gloss-a"/><stop offset="1" class="em-gloss-b"/></radialGradient><filter id="em-blur" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="1.6"/></filter></defs></svg>`);
 }
