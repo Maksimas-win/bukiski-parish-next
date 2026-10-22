@@ -1,6 +1,6 @@
 import { upcomingEvents } from '../../../assets/js/domain.js';
 import { html, attrs } from '../html.mjs';
-import { icon } from '../icons.mjs';
+import { icon, emblem } from '../icons.mjs';
 import { copyButton, externalLink, phoneLink, scheduleData, scheduleStatus, serviceRow, siteLink, socialCards } from '../components.mjs';
 
 /** Rows rendered into the page; the browser shows the first few that are still ahead. */
@@ -48,14 +48,14 @@ function quickLinks(site, lang, t) {
   const { phone, phoneDisplay, address } = site.settings;
   const tiles = [
     { href: site.url(site.route(lang, 'schedule')), icon: 'calendar', title: t.schedule, note: t.quickScheduleNote },
-    { href: site.url(site.route(lang, 'notes')), icon: 'message', title: t.notes, note: t.quickNotesNote },
+    { href: site.url(site.route(lang, 'notes')), icon: 'note', title: t.notes, note: t.quickNotesNote },
     { href: site.url(site.route(lang, 'contacts')), icon: 'pin', title: t.directions, note: address.split(',').slice(0, 2).join(',') },
     { href: `tel:${phone}`, icon: 'phone', title: t.call, note: phoneDisplay }
   ];
   return html`<nav class="shell quick" aria-label="${t.quickTitle}">
     <ul class="quick__list">
-      ${tiles.map(tile => html`<li><a class="quick__tile" href="${tile.href}">
-        <span class="quick__icon">${icon(tile.icon)}</span>
+      ${tiles.map(tile => html`<li><a class="quick__tile" href="${tile.href}" data-tilt>
+        <span class="quick__icon">${emblem(tile.icon)}</span>
         <span class="quick__text"><span class="quick__title">${tile.title}</span><span class="quick__note">${tile.note}</span></span>
       </a></li>`)}
     </ul>
@@ -182,8 +182,8 @@ function explore(site, lang, t) {
       ${siteLink(site, site.route(lang, 'news'), html`${t.news}${icon('arrow-right')}`, 'link link--arrow')}
     </div>
     <ul class="link-cards">
-      ${cards.map(([id, teaser, symbol]) => html`<li class="link-card">
-        <span class="link-card__badge">${icon(symbol)}</span>
+      ${cards.map(([id, teaser, symbol]) => html`<li class="link-card" data-tilt>
+        <span class="link-card__badge">${emblem(symbol === 'message' ? 'note' : symbol)}</span>
         <h3><a href="${site.url(site.route(lang, id))}">${t[id]}</a></h3>
         <p>${t[teaser]}</p>
         <span class="link-card__arrow">${icon('arrow-right')}</span>
@@ -195,7 +195,7 @@ function explore(site, lang, t) {
 function support(site, lang, t) {
   return html`<section class="support-band">
     <div class="shell support-band__inner">
-      <h2><span class="support-band__icon">${icon('church')}</span>${t.support}</h2>
+      <h2><span class="support-band__icon">${emblem('church')}</span>${t.support}</h2>
       <p>${t.supportTeaser}</p>
       ${siteLink(site, site.route(lang, 'support'), t.supportAction, 'button button--on-dark')}
     </div>

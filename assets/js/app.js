@@ -5,6 +5,7 @@
 import { initCopyButtons } from './ui/copy.js';
 import { initLanguageMenu, initMenu } from './ui/menu.js';
 import { initPreferences } from './ui/preferences.js';
+import { initTilt } from './ui/tilt.js';
 
 document.documentElement.classList.add('js');
 
@@ -12,6 +13,7 @@ initMenu();
 initLanguageMenu();
 initPreferences();
 initCopyButtons();
+initTilt();
 
 const features = [
   ['[data-schedule]', () => import('./features/schedule.js')],

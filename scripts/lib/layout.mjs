@@ -1,7 +1,7 @@
 // The document shell: <head> metadata, header, footer and shared dialogs.
 
 import { html, attrs, raw } from './html.mjs';
-import { icon, socialIcon } from './icons.mjs';
+import { icon, socialIcon, svgDefs } from './icons.mjs';
 import { LANGUAGE_NAMES } from './pages/library.mjs';
 import { structuredData } from './structured-data.mjs';
 import { externalLink, siteLink } from './components.mjs';
@@ -161,6 +161,7 @@ export function renderDocument(site, page) {
     ogImageHeight: page.ogImage?.height || 630,
     ogImageAlt: page.ogImage?.alt || t.photo,
     skip: t.skip,
+    svgDefs: svgDefs(),
     alternates: raw(alternateLinks.join('\n  ')),
     bodyAttributes: attrs({ 'data-label-copied': t.copied, 'data-label-copy-failed': t.copyFailed }),
     header: header(site, t, lang, uiLocale, pageId, languageTargets),
