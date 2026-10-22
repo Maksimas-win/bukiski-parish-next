@@ -47,6 +47,7 @@ export async function loadSite(env = process.env) {
     readJSON('description-overrides.json'),
     readFile(resolve(ROOT, 'index.html'), 'utf8')
   ]);
+  const sacraments = await loadSacraments(settings.locales);
 
   if (settings.timezone !== TIMEZONE) throw new Error(`settings.timezone must be ${TIMEZONE}`);
   if (settings.locales.join() !== SITE_LANGUAGES.join()) throw new Error('settings.locales must match the supported site languages');
@@ -89,6 +90,8 @@ export async function loadSite(env = process.env) {
     photos,
     /** Articles shown with a dedicated layout, by source URL. */
     stories: new Map([[historyStory.source, historyStory]]),
+    /** Sacrament and service pages: content/sacraments/<lang>.json, the same ids in every language. */
+    sacraments,
     /** Readable titles for articles whose old <title> was in capitals; see content/title-overrides.json. */
     titleOverrides: titleOverrides.titles,
     /** Editorial descriptions without changing the preserved source records. */
@@ -109,6 +112,31 @@ export async function loadSite(env = process.env) {
     /** Path of a core section in a language. */
     route: (lang, page) => `/${lang}/${page === 'home' ? '' : `${page}.html`}`
   };
+}
+
+/**
+ * Reads content/sacraments/<lang>.json for every language and checks that each
+ * language describes the same pages with the same emblem and a complete body.
+ */
+async function loadSacraments(languages) {
+  const byLang = {};
+  for (const lang of languages) byLang[lang] = JSON.parse(await readFile(resolve(ROOT, 'content/sacraments', `${lang}.json`), 'utf8'));
+  const ids = byLang[languages[0]].map(entry => entry.id);
+  for (const lang of languages) {
+    const entries = byLang[lang];
+    if (entries.map(entry => entry.id).join() !== ids.join()) throw new Error(`content/sacraments/${lang}.json: page ids must match ${languages[0]}.json in order`);
+    for (const entry of entries) {
+      if (!/^[a-z-]+$/.test(entry.id)) throw new Error(`Invalid sacrament id: ${entry.id}`);
+      const reference = byLang[languages[0]].find(candidate => candidate.id === entry.id);
+      if (entry.emblem !== reference.emblem) throw new Error(`content/sacraments/${lang}.json: ${entry.id} emblem differs`);
+      if (!entry.title || !entry.lead) throw new Error(`content/sacraments/${lang}.json: ${entry.id} needs a title and a lead`);
+      if (!Array.isArray(entry.sections) || entry.sections.length === 0) throw new Error(`content/sacraments/${lang}.json: ${entry.id} needs sections`);
+      if (entry.sections.length !== reference.sections.length || entry.faq.length !== reference.faq.length) throw new Error(`content/sacraments/${lang}.json: ${entry.id} must have the same number of sections and questions as ${languages[0]}.json`);
+      for (const section of entry.sections) if (!section.heading || !section.text?.length) throw new Error(`content/sacraments/${lang}.json: ${entry.id} has an empty section`);
+      for (const item of entry.faq) if (!item.q || !item.a) throw new Error(`content/sacraments/${lang}.json: ${entry.id} has an empty question`);
+    }
+  }
+  return { ids, byLang };
 }
 
 /** Formats an instant for readers in a site language, always on the Vilnius clock. */

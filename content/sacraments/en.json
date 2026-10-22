@@ -1,0 +1,211 @@
+[
+  {
+    "id": "baptism",
+    "emblem": "font",
+    "title": "Baptism",
+    "lead": "Baptism is the entrance into the Church: a person is united with Christ, receives the forgiveness of sins and becomes a member of the church community. Our parish baptises both children and adults; preparation begins with a conversation with the priest.",
+    "sections": [
+      {
+        "heading": "What Baptism is",
+        "text": [
+          "In the sacrament of Baptism a person is immersed three times in water with the invocation of the Holy Trinity and, in the Apostle's words, 'puts on Christ'. Baptism is given once in a lifetime and is never repeated. It is followed at once by Chrismation, the gift of the Holy Spirit that strengthens the newly baptised for a life of faith.",
+          "A child is baptised on the faith of the parents and godparents, who undertake to help the child grow up in the Church. An adult receives Baptism by personal faith and after preparation."
+        ]
+      },
+      {
+        "heading": "How to prepare",
+        "text": [
+          "Before a Baptism the priest holds catechetical talks with the parents and godparents: a conversation about the meaning of the sacrament, about faith, and about life in the Church after Baptism. For an adult candidate these talks are the main part of the preparation.",
+          "Godparents must be Orthodox Christians who consciously live a church life. A child usually has two godparents, a man and a woman, but one godparent of the same sex as the child is sufficient. Ask the priest which documents are needed and what to bring when you agree on the date."
+        ]
+      },
+      {
+        "heading": "How to arrange it in our church",
+        "text": [
+          "Call the parish and discuss the catechetical talks, the godparents and the date with the priest. Baptisms are celebrated by prior arrangement, so please get in touch early, especially if you would like to time it with a feast or gather relatives from other cities."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "At what age can a child be baptised?", "a": "At any age. The Church sets no minimum: infants are baptised on the faith of their parents and godparents. If the child is old enough to understand, the priest will talk with the child as well." },
+      { "q": "Can a child be baptised if the parents are not married in church, or one of them is not Orthodox?", "a": "Yes. What matters is that at least one parent and the godparents are Orthodox and truly intend to raise the child in the faith. Discuss your situation with the priest; it is an ordinary conversation, not an examination." },
+      { "q": "Who can be a godparent?", "a": "An Orthodox Christian who is baptised, lives a church life and is ready to take part in the godchild's upbringing. Parents cannot be godparents of their own child, and a married couple does not normally sponsor the same child." },
+      { "q": "Does an adult need to prepare?", "a": "Yes. An adult receives Baptism consciously, so talks with the priest and acquaintance with the Gospel and with the services are a necessary part of the preparation. How long it takes depends on the person; agree on it personally." },
+      { "q": "I was baptised in another Christian church. Do I need to be baptised again?", "a": "Baptism is not repeated if it was performed in the name of the Holy Trinity. How a person is received into Orthodoxy is decided case by case by the priest after talking with you. Come and we will discuss it." }
+    ]
+  },
+  {
+    "id": "confession",
+    "emblem": "chalice",
+    "title": "Confession and Communion",
+    "lead": "Confession and Communion are the heart of church life. In Confession a person opens their sins before God and receives forgiveness; in Communion they are united with Christ in His Body and Blood. Confession is usually heard before the Liturgy; please check the arrangements and time with the priest.",
+    "sections": [
+      {
+        "heading": "Confession",
+        "text": [
+          "In the sacrament of Repentance a Christian sincerely names their sins before God in the presence of the priest and receives absolution. The priest is a witness of the repentance and a helper; the seal of confession is inviolable.",
+          "One prepares for Confession in advance: recalling what one has done wrong in word, deed and thought, and coming with the resolve to change. There is no need to retell the circumstances at length; what matters is to name the sin itself and not to justify oneself."
+        ]
+      },
+      {
+        "heading": "Communion",
+        "text": [
+          "Holy Communion is received at the Divine Liturgy. In preparation, Christians fast (usually taking no food or drink from midnight), read the prayers before Communion, attend the evening service the day before if they can, and make peace with those around them.",
+          "The measure of fasting and prayer may differ for children, the sick, pregnant and nursing women, and for those who receive Communion often. These questions are settled in conversation with the priest, not by a general scheme."
+        ]
+      },
+      {
+        "heading": "How it works in our church",
+        "text": [
+          "Confession is usually heard before the Liturgy; it is best to check the preparation and the time with the priest in advance, especially if this is your first confession or you have not been to church for a long time. If you need a conversation outside the service, call and we will agree on a time."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "I have never been to confession. Where do I start?", "a": "Come and tell the priest; he will help and guide you. You may write down beforehand what you wish to confess. The first confession is often the hardest and the most important." },
+      { "q": "Must I confess before every Communion?", "a": "In our tradition Confession normally precedes Communion. How often those who receive Communion regularly should confess is decided together with the priest who knows your spiritual life." },
+      { "q": "Do children need to confess?", "a": "Children under seven receive Communion without Confession. From about the age of seven a child begins to confess, simply and in a child's way; the priest will help." },
+      { "q": "May I receive Communion if I have not fasted?", "a": "Do not decide this alone: approach the priest before the Liturgy and explain. Illness, travel, not knowing — these are different situations with different answers." },
+      { "q": "I have not been to church for years and feel awkward. What should I do?", "a": "This is a very common feeling and it should not stop you. You can simply come to a service, or first call and arrange a conversation with the priest outside the service." }
+    ]
+  },
+  {
+    "id": "wedding",
+    "emblem": "rings",
+    "title": "Marriage",
+    "lead": "In the sacrament of Marriage the Church blesses the union of a man and a woman and asks grace for their life together. Please agree the possibility of a church wedding, the preparation and the date with the priest in advance.",
+    "sections": [
+      {
+        "heading": "The meaning of the sacrament",
+        "text": [
+          "In Marriage the spouses become a 'little Church': their love and faithfulness are sanctified by God, and the family receives a blessing to bear and raise children. The crowns held above the heads of the bride and groom are a sign both of glory and of martyrdom: family life calls for patience and self-giving.",
+          "The Church marries Christians who enter marriage consciously and freely. A civil marriage registration is required for an Orthodox wedding."
+        ]
+      },
+      {
+        "heading": "How to prepare",
+        "text": [
+          "Before the wedding the couple talks with the priest about the meaning of marriage and about the rite itself. By tradition the spouses confess and receive Communion on the eve or the day of the wedding.",
+          "For the wedding you will need rings, icons of the Saviour and the Mother of God, and candles; ask what else to prepare and which documents are needed when you agree on the date. Weddings are not celebrated during fasts, on the eves of Wednesday, Friday and Sunday, or on certain feasts, so it is best to discuss free dates in advance."
+        ]
+      },
+      {
+        "heading": "How to arrange it in our church",
+        "text": [
+          "Call the parish. The priest will discuss with you whether a church wedding is possible in your situation, how to prepare and which date to choose. Please get in touch early: convenient dates fill up quickly and the preparation takes time."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Can we have a church wedding without a civil registration?", "a": "No. The Church marries couples whose marriage is registered by the state. The registration can take place before the wedding, even on the same day." },
+      { "q": "We have been married for many years. Can we have a church wedding?", "a": "Yes, and it is often a particularly profound occasion. The rite for couples who have long been married differs very little; the priest will explain the details." },
+      { "q": "One of us is not Orthodox. Is a wedding possible?", "a": "Marriage between an Orthodox Christian and a baptised Christian of another confession is possible under certain conditions; with an unbaptised person it is not. Every situation is considered individually, so please talk with the priest." },
+      { "q": "Is a second church marriage possible?", "a": "In some cases the Church allows a second marriage, after a conversation with the priest and, as a rule, with the blessing of the ruling bishop. Come and we will discuss your situation." },
+      { "q": "Are witnesses needed?", "a": "By tradition witnesses hold the crowns at the wedding. They should be Orthodox Christians. If you have no witnesses, tell the priest; it can be arranged." }
+    ]
+  },
+  {
+    "id": "unction",
+    "emblem": "oil",
+    "title": "Holy Unction",
+    "lead": "Holy Unction (the Anointing of the Sick) is the sacrament in which the sick are anointed with blessed oil with prayer for the healing of soul and body and for the forgiveness of forgotten sins. It is celebrated by arrangement with the priest, in church or at the sick person's home.",
+    "sections": [
+      {
+        "heading": "What Holy Unction is",
+        "text": [
+          "The sacrament rests on the words of the Apostle James: 'Is any among you sick? Let him call for the elders of the Church, and let them pray over him, anointing him with oil in the name of the Lord.' During the rite seven passages from the Epistles and Gospels and seven prayers are read, and after each the sick person is anointed with oil.",
+          "Holy Unction is not a 'last rite' before death, as is sometimes thought. It is the Church's prayer for healing and strength; people turn to it in illnesses of body and soul, and many receive it every year during Great Lent."
+        ]
+      },
+      {
+        "heading": "How to prepare",
+        "text": [
+          "Holy Unction is given to baptised Orthodox Christians. It is advisable to confess before the sacrament and to receive Communion afterwards. For an anointing at home, prepare a table with a clean cloth, icons and a candle; the priest will tell you what else is needed when you arrange the time."
+        ]
+      },
+      {
+        "heading": "How to arrange it in our church",
+        "text": [
+          "Call the parish. If the sick person cannot come to church, the priest will come to the home or hospital; agree on a time. When a general Unction for parishioners is celebrated, it is announced in the schedule."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Can a healthy person receive Holy Unction?", "a": "Yes. Unction is not only for the gravely ill: any Orthodox Christian may receive it, especially during a fast. Ask the priest whether it is advisable in your case." },
+      { "q": "How often can one receive Holy Unction?", "a": "Usually not more than once a year unless there is a serious illness. In grave illness, with the priest's blessing." },
+      { "q": "Can children be anointed?", "a": "Yes, in illness. Small children are usually anointed as the need arises; talk to the priest about the details." },
+      { "q": "Should I confess before Holy Unction?", "a": "It is advisable: Unction does not replace Confession. If the person is gravely ill, the priest will decide how best to celebrate the sacraments." },
+      { "q": "What should I do with the oil that remains?", "a": "Blessed oil may be used reverently: anoint painful places in the sign of the cross with prayer. It is not thrown away; if some remains, bring it to church or ask the priest." }
+    ]
+  },
+  {
+    "id": "funeral",
+    "emblem": "candle",
+    "title": "Funeral and memorial services",
+    "lead": "The Church accompanies its children with prayer: the funeral service is the last farewell to the departed, the panikhida (memorial service) is prayer for them on days of remembrance. Funerals, funerals in absentia and memorial services are celebrated by arrangement with the priest; the general memorial service on days of commemoration follows the schedule.",
+    "sections": [
+      {
+        "heading": "The funeral service",
+        "text": [
+          "The funeral service is celebrated for a baptised Orthodox Christian, usually in church before the burial. In its prayers the Church asks forgiveness of the sins of the departed and rest 'in a place of light, a place of green pasture, a place of repose'. If the body cannot be brought to church, the priest may celebrate the service at the cemetery or in a funeral hall.",
+          "A funeral in absentia is celebrated when the burial has already taken place without a priest, sometimes years later. It is likewise the full prayer of the Church for the departed; agree the arrangements with the priest."
+        ]
+      },
+      {
+        "heading": "Memorial services and prayer for the departed",
+        "text": [
+          "A panikhida is served on the third, ninth and fortieth day, on the anniversary of death, on the birthday and name day of the departed, and on any day you wish to pray. Prayer requests for the departed are submitted for the Liturgy: the names are commemorated at the proskomedia. A forty-day commemoration or a longer one can be requested.",
+          "On memorial Saturdays and other days of special commemoration the general memorial service follows the Liturgy according to the church schedule; people bring notes with the names of the departed."
+        ]
+      },
+      {
+        "heading": "How to arrange it in our church",
+        "text": [
+          "When a loved one dies, call the parish as early as you can: the priest will help set the day and place of the funeral and advise what to prepare. A memorial service on the day you need and the blessing of a grave are also arranged by telephone. A prayer request for the departed can be submitted on the website or in church."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "What is needed for a funeral?", "a": "The departed must be a baptised Orthodox Christian. The priest will tell you what to bring and which documents are needed when you make the arrangements; usually a single call settles everything." },
+      { "q": "Can a funeral be celebrated for an unbaptised person or someone who took their own life?", "a": "The Church does not celebrate the funeral service for the unbaptised, but relatives may pray for them at home. Funerals of those who took their own life and other difficult cases are decided by the priest after talking with the family, if necessary with the bishop's blessing. Do not stay alone with this question; call." },
+      { "q": "What is a forty-day commemoration?", "a": "Commemoration of the departed at the Liturgy for forty days. It is usually requested immediately after the death, but may be requested at any other time; six-month and one-year commemorations also exist." },
+      { "q": "Can I request a memorial service if I am not in Lithuania?", "a": "Yes. Call or write to the parish, agree on the day, and submit the prayer request for the departed through the form on the website." },
+      { "q": "How is a grave blessed?", "a": "A grave is blessed by arrangement with the priest, usually together with a memorial service at the cemetery. Call the parish and suggest a convenient day." }
+    ]
+  },
+  {
+    "id": "commemoration",
+    "emblem": "note",
+    "title": "Prayer requests and commemoration",
+    "lead": "A prayer request for the living or the departed asks the Church to pray for your loved ones at the Liturgy. The names are commemorated at the proskomedia and a particle is taken from the prosphora for each. A request can be submitted on the website, printed, or handed in at church.",
+    "sections": [
+      {
+        "heading": "What we pray for",
+        "text": [
+          "For the living — 'for health': health, well-being, the salvation of the soul; 'health' here means more than the medical sense. For the departed — 'for repose': the forgiveness of their sins and rest with the saints. The note lists baptismal names: John, Mary.",
+          "Notes list baptised Orthodox Christians. For the unbaptised and people of other faiths one prays at home; such prayer is also important and is heard."
+        ]
+      },
+      {
+        "heading": "Kinds of commemoration",
+        "text": [
+          "Proskomedia — commemoration at the Divine Liturgy for the living and the departed. Liturgy commemoration by prayer requests. Forty-day commemoration — for 40 days. Half a year and a year — long-term commemoration at the proskomedia for 6 or 12 months.",
+          "Commemorations take place at the services. If a special time or circumstance is needed — a moleben, a memorial service on a particular day — it is best to contact the priest in advance."
+        ]
+      },
+      {
+        "heading": "How to submit a request",
+        "text": [
+          "The website has a form: you enter the names, choose the kind of commemoration and send the request to the parish, or print it and bring it to church. A request can also be handed in at church before the service."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "How many names may one note contain?", "a": "There is no strict limit, but the note must be easy to read: usually up to ten names, written large and clearly. If there are more, submit two notes." },
+      { "q": "How should names be written?", "a": "The full church name: John, Xenia, George. Before a priest's name, his rank; before the name of a child under seven, 'infant'; from seven to fourteen, 'child'. You may add 'sick' or 'travelling'." },
+      { "q": "May I submit a note for an unbaptised person?", "a": "Not for the Liturgy: at the proskomedia members of the Church are commemorated. But you can and should pray at home for unbaptised loved ones, and the priest will advise how." },
+      { "q": "When must a note be submitted to be read at the next Liturgy?", "a": "Before the service begins, preferably the day before. Requests through the website are also best sent in advance rather than on the morning of the Liturgy." },
+      { "q": "What does a 'forty-day commemoration for health' mean?", "a": "The commemoration of a living person at every Liturgy for forty days — for instance in illness, before an operation or in a difficult period of life." }
+    ]
+  }
+]

@@ -339,7 +339,12 @@
     "calendarSourceLabel": "Источник календаря",
     "openSchedule": "Открыть расписание",
     "gpmTextEdition": "Здесь сохранена текстовая версия приходского гида. Калькулятор, пошаговая инструкция и поиск ответов доступны на bukiski-hram.org.",
-    "gpmInteractiveLink": "Открыть интерактивный гид и калькулятор"
+    "gpmInteractiveLink": "Открыть интерактивный гид и калькулятор",
+    "sacramentsDetails": "Подробнее о таинствах и требах",
+    "faqTitle": "Вопросы и ответы",
+    "sacramentsBack": "Все таинства и требы",
+    "sacramentContact": "Договориться со священником",
+    "sacramentContactIntro": "Самый простой путь — позвонить в приход: священник ответит на вопросы и поможет выбрать день."
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -681,7 +686,12 @@
     "calendarSourceLabel": "Kalendoriaus šaltinis",
     "openSchedule": "Atidaryti tvarkaraštį",
     "gpmTextEdition": "Čia išsaugota parapijos gido tekstinė versija. Skaičiuoklę, nuoseklią instrukciją ir atsakymų paiešką rasite bukiski-hram.org.",
-    "gpmInteractiveLink": "Atverti interaktyvų gidą ir skaičiuoklę"
+    "gpmInteractiveLink": "Atverti interaktyvų gidą ir skaičiuoklę",
+    "sacramentsDetails": "Daugiau apie sakramentus ir apeigas",
+    "faqTitle": "Klausimai ir atsakymai",
+    "sacramentsBack": "Visi sakramentai ir apeigos",
+    "sacramentContact": "Susitarti su kunigu",
+    "sacramentContactIntro": "Paprasčiausias kelias – paskambinti į parapiją: kunigas atsakys į klausimus ir padės pasirinkti dieną."
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -1023,7 +1033,12 @@
     "calendarSourceLabel": "Calendar source",
     "openSchedule": "Open the schedule",
     "gpmTextEdition": "This is the preserved text edition of the parish guide. The calculator, step-by-step guide and answer search are available at bukiski-hram.org.",
-    "gpmInteractiveLink": "Open the interactive guide and calculator"
+    "gpmInteractiveLink": "Open the interactive guide and calculator",
+    "sacramentsDetails": "More about the sacraments and services",
+    "faqTitle": "Questions and answers",
+    "sacramentsBack": "All sacraments and services",
+    "sacramentContact": "Arrange it with the priest",
+    "sacramentContactIntro": "The simplest way is to call the parish: the priest will answer your questions and help you choose a day."
   },
   "pl": {
     "name": "Cerkiew Narodzenia Pańskiego",
@@ -1365,7 +1380,12 @@
     "calendarSourceLabel": "Źródło kalendarza",
     "openSchedule": "Otwórz porządek nabożeństw",
     "gpmTextEdition": "To zachowana tekstowa wersja poradnika parafii. Kalkulator, instrukcja krok po kroku i wyszukiwarka odpowiedzi są dostępne na bukiski-hram.org.",
-    "gpmInteractiveLink": "Otwórz interaktywny poradnik i kalkulator"
+    "gpmInteractiveLink": "Otwórz interaktywny poradnik i kalkulator",
+    "sacramentsDetails": "Więcej o sakramentach i posługach",
+    "faqTitle": "Pytania i odpowiedzi",
+    "sacramentsBack": "Wszystkie sakramenty i posługi",
+    "sacramentContact": "Umów się z kapłanem",
+    "sacramentContactIntro": "Najprościej zadzwonić do parafii: kapłan odpowie na pytania i pomoże wybrać dzień."
   },
   "de": {
     "name": "Kirche der Geburt Christi",
@@ -1707,7 +1727,12 @@
     "calendarSourceLabel": "Quelle des Kalenders",
     "openSchedule": "Gottesdienstplan öffnen",
     "gpmTextEdition": "Hier finden Sie die gespeicherte Textfassung des Gemeindeleitfadens. Rechner, Schritt-für-Schritt-Anleitung und Antwortsuche stehen auf bukiski-hram.org bereit.",
-    "gpmInteractiveLink": "Interaktiven Leitfaden und Rechner öffnen"
+    "gpmInteractiveLink": "Interaktiven Leitfaden und Rechner öffnen",
+    "sacramentsDetails": "Mehr über die Sakramente und Amtshandlungen",
+    "faqTitle": "Fragen und Antworten",
+    "sacramentsBack": "Alle Sakramente und Amtshandlungen",
+    "sacramentContact": "Mit dem Priester vereinbaren",
+    "sacramentContactIntro": "Der einfachste Weg ist ein Anruf in der Gemeinde: Der Priester beantwortet Ihre Fragen und hilft bei der Wahl des Tages."
   },
   "uk": {
     "name": "Храм Різдва Христового",
@@ -2049,6 +2074,11 @@
     "calendarSourceLabel": "Джерело календаря",
     "openSchedule": "Відкрити розклад",
     "gpmTextEdition": "Тут збережено текстову версію парафіяльного посібника. Калькулятор, покрокова інструкція та пошук відповідей доступні на bukiski-hram.org.",
-    "gpmInteractiveLink": "Відкрити інтерактивний посібник і калькулятор"
+    "gpmInteractiveLink": "Відкрити інтерактивний посібник і калькулятор",
+    "sacramentsDetails": "Докладніше про таїнства і треби",
+    "faqTitle": "Запитання і відповіді",
+    "sacramentsBack": "Усі таїнства і треби",
+    "sacramentContact": "Домовитися зі священником",
+    "sacramentContactIntro": "Найпростіший шлях — зателефонувати до парафії: священник відповість на запитання і допоможе обрати день."
   }
 }

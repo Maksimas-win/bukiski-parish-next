@@ -341,3 +341,173 @@
 .requisites__row dd .copy-button {
   flex: none;
 }
+
+/* Sacrament pages: text column with questions, and a side column with the contact card. */
+.sacrament {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding-block: var(--section);
+}
+
+@media (min-width: 60rem) {
+  .sacrament {
+    grid-template-columns: minmax(0, 7fr) minmax(16rem, 4fr);
+    align-items: start;
+  }
+}
+
+.sacrament__body {
+  max-width: 44rem;
+}
+
+.sacrament__section + .sacrament__section,
+.sacrament__faq {
+  margin-top: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.sacrament__section h2,
+.sacrament__faq h2 {
+  margin-bottom: 0.6rem;
+  font-size: 1.6rem;
+}
+
+.sacrament__section p {
+  margin-bottom: 0.9rem;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.faq {
+  border-top: 1px solid var(--line);
+}
+
+.faq:last-of-type {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.9rem 0;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.4;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::before {
+  content: '+';
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.05rem;
+  border-radius: 50%;
+  font-weight: 700;
+  line-height: 1.5rem;
+  text-align: center;
+  color: var(--accent);
+  background: var(--surface-tint);
+  transition: transform 0.2s ease;
+}
+
+.faq[open] summary::before {
+  transform: rotate(45deg);
+}
+
+.faq summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-s);
+}
+
+.faq p {
+  padding: 0 0 1rem 2.25rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.sacrament__aside {
+  display: grid;
+  gap: 1.5rem;
+  position: sticky;
+  top: calc(var(--header-height) + 1rem);
+}
+
+.sacrament__contact h2 {
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1.35rem;
+}
+
+.sacrament__contact .hint {
+  margin-top: 0.75rem;
+}
+
+.sacrament__others h2 {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+.sacrament__others ul {
+  margin: 0 0 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.sacrament__others li + li {
+  border-top: 1px solid var(--line);
+}
+
+.sacrament__others a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sacrament__others a:hover {
+  color: var(--accent);
+}
+
+.sacrament__mini {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.15rem;
+  border-radius: 50%;
+  background: var(--surface-tint);
+}
+
+.sacrament__mini .emblem {
+  width: 100%;
+  height: 100%;
+}
+
+.sacrament-cards {
+  padding-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.sacrament-cards__title {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq summary::before {
+    transition: none;
+  }
+}

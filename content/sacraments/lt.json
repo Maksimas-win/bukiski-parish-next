@@ -1,0 +1,211 @@
+[
+  {
+    "id": "baptism",
+    "emblem": "font",
+    "title": "Krikštas",
+    "lead": "Krikštas – įėjimas į Bažnyčią: žmogus susijungia su Kristumi, gauna nuodėmių atleidimą ir tampa bažnytinės bendruomenės nariu. Mūsų cerkvėje krikštijami ir vaikai, ir suaugusieji; pasirengimas prasideda pokalbiu su kunigu.",
+    "sections": [
+      {
+        "heading": "Kas yra Krikštas",
+        "text": [
+          "Krikšto sakramente žmogus tris kartus panardinamas į vandenį šaukiantis Švenčiausiosios Trejybės ir, apaštalo žodžiais, „apsivelka Kristumi“. Krikštas teikiamas vieną kartą gyvenime ir nekartojamas. Iškart po jo seka Patepimas šventąja mira – Šventosios Dvasios dovana, stiprinanti pakrikštytąjį gyventi pagal tikėjimą.",
+          "Vaikas krikštijamas pagal tėvų ir krikštatėvių tikėjimą – krikštatėviai įsipareigoja padėti jam augti Bažnyčioje. Suaugęs žmogus Krikštą priima pats, savo tikėjimu ir po pasirengimo."
+        ]
+      },
+      {
+        "heading": "Kaip pasirengti",
+        "text": [
+          "Prieš Krikštą tėvams ir krikštatėviams rengiami katechetiniai pokalbiai: apie sakramento prasmę, tikėjimą ir gyvenimą Bažnyčioje po Krikšto. Suaugusiam krikštijamajam tokie pokalbiai – pagrindinė pasirengimo dalis.",
+          "Krikštatėviai turi būti stačiatikiai, sąmoningai gyvenantys bažnytinį gyvenimą. Vaikas paprastai turi du krikštatėvius – vyrą ir moterį, bet pakanka ir vieno tos pačios lyties kaip vaikas. Kokių dokumentų reikia ir ką atsinešti – pasiteiraukite kunigo derindami datą."
+        ]
+      },
+      {
+        "heading": "Kaip susitarti mūsų cerkvėje",
+        "text": [
+          "Paskambinkite į parapiją ir aptarkite su kunigu katechetinius pokalbius, krikštatėvius ir datą. Krikštas teikiamas iš anksto susitarus, todėl kreipkitės anksčiau – ypač jei norite jį sieti su švente ar sukviesti artimuosius iš kitų miestų."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Kokio amžiaus galima krikštyti vaiką?", "a": "Bet kokio. Bažnyčia nenustato mažiausio amžiaus: kūdikiai krikštijami pagal tėvų ir krikštatėvių tikėjimą. Jei vaikas jau sąmoningo amžiaus, kunigas pasikalbės ir su juo." },
+      { "q": "Ar galima krikštyti vaiką, jei tėvai nesusituokę cerkvėje arba vienas iš jų ne stačiatikis?", "a": "Taip, vaiko Krikštas galimas. Svarbu, kad bent vienas iš tėvų ir krikštatėviai būtų stačiatikiai ir iš tikrųjų ketintų auginti vaiką tikėjime. Aptarkite savo padėtį su kunigu – tai paprastas pokalbis, o ne egzaminas." },
+      { "q": "Kas gali būti krikštatėviu?", "a": "Stačiatikis, kuris pats yra pakrikštytas, gyvena bažnytinį gyvenimą ir pasirengęs dalyvauti krikštavaikio auklėjime. Tėvai negali būti savo vaiko krikštatėviais. Sutuoktiniai paprastai nebūna to paties vaiko krikštatėviais." },
+      { "q": "Ar suaugusiam reikia rengtis?", "a": "Taip. Suaugęs žmogus Krikštą priima sąmoningai, todėl pokalbiai su kunigu, pažintis su Evangelija ir pamaldomis – būtina pasirengimo dalis. Jo trukmė priklauso nuo žmogaus; dėl to susitarkite asmeniškai." },
+      { "q": "Esu pakrikštytas kitoje krikščionių bažnyčioje. Ar reikia krikštytis iš naujo?", "a": "Krikštas nekartojamas, jei jis buvo suteiktas Švenčiausiosios Trejybės vardu. Kaip priimama į stačiatikybę kiekvienu atveju, sprendžia kunigas po pokalbio su jumis – ateikite, aptarsime." }
+    ]
+  },
+  {
+    "id": "confession",
+    "emblem": "chalice",
+    "title": "Išpažintis ir Komunija",
+    "lead": "Išpažintis ir Komunija – bažnytinio gyvenimo širdis. Per išpažintį žmogus atveria Dievui savo nuodėmes ir gauna atleidimą; Komunijoje susijungia su Kristumi Jo Kūne ir Kraujyje. Išpažintis paprastai vyksta prieš Liturgiją; tvarką ir laiką pasitikslinkite pas kunigą.",
+    "sections": [
+      {
+        "heading": "Išpažintis",
+        "text": [
+          "Atgailos sakramente krikščionis nuoširdžiai įvardija prieš Dievą savo nuodėmes dalyvaujant kunigui ir gauna jų atleidimą. Kunigas – atgailos liudininkas ir pagalbininkas; išpažinties paslaptis nepažeidžiama.",
+          "Išpažinčiai rengiamasi iš anksto: prisimenama, kuo nusidėta žodžiu, darbu ir mintimi, ir ateinama pasiryžus taisytis. Nereikia ilgai pasakoti aplinkybių – svarbu įvardyti pačią nuodėmę ir nesiteisinti."
+        ]
+      },
+      {
+        "heading": "Komunija",
+        "text": [
+          "Šventoji Komunija teikiama per Dieviškąją liturgiją. Rengdamiesi jai, krikščionys pasninkauja (paprastai nevalgo ir negeria nuo vidurnakčio), skaito maldas prieš Komuniją, jei gali, dalyvauja vakarinėse pamaldose išvakarėse ir susitaiko su artimaisiais.",
+          "Pasninko ir maldos saikas gali būti skirtingas – vaikams, ligoniams, nėščioms ir maitinančioms moterims, tiems, kas priima Komuniją dažnai. Šie klausimai sprendžiami pokalbyje su kunigu, o ne pagal bendrą schemą."
+        ]
+      },
+      {
+        "heading": "Kaip tai vyksta mūsų cerkvėje",
+        "text": [
+          "Išpažintis paprastai vyksta prieš Liturgiją; pasirengimo tvarką ir laiką geriau iš anksto pasitikslinti pas kunigą, ypač jei išpažintį atliekate pirmą kartą arba seniai nebuvote cerkvėje. Jei reikia pokalbio atskirai nuo pamaldų – paskambinkite, susitarsime dėl laiko."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Niekada nebuvau išpažinties. Nuo ko pradėti?", "a": "Ateikite ir pasakykite tai kunigui – jis padės ir patars. Galite iš anksto užsirašyti lapelyje, ką norite išpažinti. Pirmoji išpažintis dažnai būna pati sunkiausia ir pati svarbiausia." },
+      { "q": "Ar būtina atlikti išpažintį prieš kiekvieną Komuniją?", "a": "Mūsų tradicijoje išpažintis paprastai eina prieš Komuniją. Kaip dažnai išpažintį atlikti tiems, kas Komuniją priima reguliariai, sprendžiama kartu su kunigu, kuris pažįsta jūsų dvasinį gyvenimą." },
+      { "q": "Ar vaikams reikia išpažinties?", "a": "Vaikai iki septynerių metų Komuniją priima be išpažinties. Maždaug nuo septynerių vaikas pradeda išpažintį pats – paprastai ir vaikiškai; kunigas jam padės." },
+      { "q": "Ar galiu priimti Komuniją, jei nepasninkavau?", "a": "Nespręskite šio klausimo vienas: prieš Liturgiją prieikite prie kunigo ir papasakokite, kaip buvo. Liga, kelionė, nežinojimas – skirtingos situacijos, ir atsakymai skirtingi." },
+      { "q": "Ką daryti, jei seniai nebuvau cerkvėje ir varžausi?", "a": "Tai labai dažnas jausmas, ir jis neturėtų sustabdyti. Galite tiesiog ateiti į pamaldas, o galite pirmiausia paskambinti ir susitarti dėl pokalbio su kunigu ne pamaldų metu." }
+    ]
+  },
+  {
+    "id": "wedding",
+    "emblem": "rings",
+    "title": "Santuoka",
+    "lead": "Santuokos sakramente Bažnyčia laimina vyro ir moters sąjungą ir prašo jiems malonės bendram gyvenimui. Dėl santuokos galimybės, pasirengimo ir datos iš anksto susitarkite su kunigu.",
+    "sections": [
+      {
+        "heading": "Sakramento prasmė",
+        "text": [
+          "Santuokoje sutuoktiniai tampa „mažąja Bažnyčia“: jų meilę ir ištikimybę pašventina Dievas, o šeima gauna palaiminimą gimdyti ir auginti vaikus. Vainikai, laikomi virš jaunųjų galvų, – ir šlovės, ir kankinystės ženklas: šeimos gyvenimas reikalauja kantrybės ir atsidavimo.",
+          "Bažnyčia tuokia krikščionis, kurie santuoką sudaro sąmoningai ir laisvai. Stačiatikių santuokai reikalinga registruota civilinė santuoka."
+        ]
+      },
+      {
+        "heading": "Kaip pasirengti",
+        "text": [
+          "Prieš santuoką jaunieji kalbasi su kunigu apie santuokos prasmę ir pačias apeigas. Pagal tradiciją išvakarėse arba santuokos dieną sutuoktiniai atlieka išpažintį ir priima Komuniją.",
+          "Santuokai reikalingi žiedai, Išganytojo ir Dievo Motinos ikonos bei žvakės; ką dar paruošti ir kokių dokumentų reikia – pasitikslinkite derindami datą. Santuokos neteikiamos pasninkų metu, trečiadienio, penktadienio ir sekmadienio išvakarėse, kai kurių švenčių dienomis; laisvas dienas geriau aptarti iš anksto."
+        ]
+      },
+      {
+        "heading": "Kaip susitarti mūsų cerkvėje",
+        "text": [
+          "Paskambinkite į parapiją. Kunigas aptars su jumis, ar santuoka jūsų padėtyje galima, kaip pasirengti ir kokią datą pasirinkti. Kreipkitės iš anksto: patogios dienos kalendoriuje greitai užimamos, o pasirengimui reikia laiko."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Ar galima tuoktis cerkvėje be civilinės santuokos registracijos?", "a": "Ne. Bažnyčia tuokia poras, kurių santuoka įregistruota valstybės. Registraciją galima atlikti iki bažnytinės santuokos – kad ir tą pačią dieną." },
+      { "q": "Daug metų esame susituokę. Ar galime tuoktis cerkvėje?", "a": "Taip, ir tai neretai būna ypač gilus įvykis. Apeigos seniai santuokoje gyvenantiems beveik nesiskiria; smulkmenas paaiškins kunigas." },
+      { "q": "Vienas iš mūsų ne stačiatikis. Ar santuoka galima?", "a": "Stačiatikio santuoka su pakrikštytu kitos konfesijos krikščioniu galima tam tikromis sąlygomis; su nekrikštytu – ne. Kiekviena situacija nagrinėjama atskirai, todėl pasikalbėkite su kunigu." },
+      { "q": "Ar galima tuoktis cerkvėje antrą kartą?", "a": "Kai kuriais atvejais Bažnyčia leidžia antrą santuoką – po pokalbio su kunigu ir paprastai su vyskupo palaiminimu. Ateikite, aptarsime jūsų padėtį." },
+      { "q": "Ar reikalingi liudininkai?", "a": "Pagal tradiciją santuokoje dalyvauja liudininkai, laikantys vainikus. Jie turi būti stačiatikiai. Jei liudininkų nėra, pasakykite kunigui – tai išsprendžiama." }
+    ]
+  },
+  {
+    "id": "unction",
+    "emblem": "oil",
+    "title": "Ligonių patepimas",
+    "lead": "Ligonių patepimas (Aliejaus pašventinimas) – sakramentas, kuriame ligonis patepamas pašventintu aliejumi meldžiant sielos ir kūno išgijimo bei užmirštų nuodėmių atleidimo. Teikiamas susitarus su kunigu – cerkvėje arba ligonio namuose.",
+    "sections": [
+      {
+        "heading": "Kas yra Ligonių patepimas",
+        "text": [
+          "Sakramentas įsteigtas pagal apaštalo Jokūbo žodžius: „Kas iš jūsų serga, tepasikviečia Bažnyčios vyresniuosius, ir jie tesimeldžia už jį, patepdami aliejumi Viešpaties vardu“. Per apeigas skaitomos septynios Apaštalo ir Evangelijos ištraukos, septynios maldos, ir po kiekvienos ligonis patepamas aliejumi.",
+          "Ligonių patepimas – ne „paskutinis patepimas“ prieš mirtį, kaip kartais manoma. Tai Bažnyčios malda už išgijimą ir sustiprinimą; į jį kreipiamasi sergant kūno ir sielos ligomis, o daugelis – kasmet, Didžiojo pasninko metu."
+        ]
+      },
+      {
+        "heading": "Kaip pasirengti",
+        "text": [
+          "Patepimas teikiamas pakrikštytiems stačiatikiams. Prieš sakramentą pageidautina atlikti išpažintį, o po jo – priimti Komuniją. Patepimui namuose paruoškite stalą su švaria staltiese, ikonas, žvakę; ką dar reikia, kunigas pasakys derinant laiką."
+        ]
+      },
+      {
+        "heading": "Kaip susitarti mūsų cerkvėje",
+        "text": [
+          "Paskambinkite į parapiją. Jei ligonis negali atvykti į cerkvę, kunigas atvyks į namus ar ligoninę – susitarkite dėl laiko. Bendras parapijiečių Patepimas, kai jis teikiamas, skelbiamas tvarkaraštyje."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Ar sveikas žmogus gali priimti Patepimą?", "a": "Taip. Patepimas teikiamas ne tik sunkiai sergantiems: kiekvienas stačiatikis gali į jį kreiptis, ypač pasninko metu. Dėl tikslingumo jūsų atveju pasitarkite su kunigu." },
+      { "q": "Kaip dažnai galima priimti Patepimą?", "a": "Paprastai ne dažniau kaip kartą per metus, jei nėra rimtos ligos. Sunkiai sergant – su kunigo palaiminimu." },
+      { "q": "Ar galima patepti vaikus?", "a": "Taip, sergant. Mažyliai paprastai patepami pagal poreikį; dėl smulkmenų pasikalbėkite su kunigu." },
+      { "q": "Ar prieš Patepimą reikia išpažinties?", "a": "Pageidautina: Patepimas nepakeičia išpažinties. Jei ligonis sunkus, kunigas pats nuspręs, kaip geriau suteikti sakramentus." },
+      { "q": "Ką daryti su likusiu aliejumi?", "a": "Pašventintą aliejų galima pagarbiai naudoti: kryžiaus ženklu patepti skaudamas vietas su malda. Jo neišmetama; jei liko – atneškite į cerkvę arba paklauskite kunigo." }
+    ]
+  },
+  {
+    "id": "funeral",
+    "emblem": "candle",
+    "title": "Laidotuvės ir panichida",
+    "lead": "Bažnyčia palydi savo vaikus malda: laidotuvių apeigos – paskutinis palydėjimas mirusiajam, panichida – malda už jį atminimo dienomis. Laidotuvių apeigos, apeigos nedalyvaujant kūnui ir panichidos atliekamos susitarus su kunigu; bendra panichida mirusiųjų minėjimo dienomis – pagal tvarkaraštį.",
+    "sections": [
+      {
+        "heading": "Laidotuvių apeigos",
+        "text": [
+          "Laidotuvių apeigos atliekamos už pakrikštytą stačiatikį – paprastai cerkvėje, prieš laidojimą. Maldose Bažnyčia prašo atleisti mirusiojo nuodėmes ir suteikti jam atilsį „šviesioje, žalioje, ramioje vietoje“. Jei kūno atvežti į cerkvę neįmanoma, kunigas gali atlikti apeigas kapinėse arba laidojimo salėje.",
+          "Apeigos nedalyvaujant kūnui atliekamos, kai laidotuvės jau įvyko be kunigo – kartais po daugelio metų. Tai taip pat visa Bažnyčios malda už mirusįjį; dėl tvarkos susitarkite su kunigu."
+        ]
+      },
+      {
+        "heading": "Panichida ir malda už mirusiuosius",
+        "text": [
+          "Panichida atliekama trečią, devintą ir keturiasdešimtą dieną, mirties metinių, mirusiojo gimimo ir vardo dienomis – ir bet kurią dieną, kai norite pasimelsti. Už mirusiuosius paduodami rašteliai Liturgijai: vardai minimi proskomidijoje. Galima užsakyti sorokoustą arba ilgalaikį minėjimą.",
+          "Mirusiųjų minėjimo šeštadieniais ir kitomis ypatingo minėjimo dienomis bendra panichida atliekama po Liturgijos pagal cerkvės tvarkaraštį; į ją atnešami rašteliai su mirusiųjų vardais."
+        ]
+      },
+      {
+        "heading": "Kaip susitarti mūsų cerkvėje",
+        "text": [
+          "Mirus artimajam, paskambinkite į parapiją kuo anksčiau: kunigas padės nustatyti laidotuvių apeigų dieną ir vietą bei patars, ką paruošti. Dėl panichidos jums reikalingą dieną ir kapo pašventinimo taip pat susitarkite telefonu. Raštelį už mirusįjį galima paduoti svetainėje arba cerkvėje."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Ko reikia laidotuvių apeigoms?", "a": "Mirusysis turi būti pakrikštytas stačiatikis. Ką atsinešti ir kokių dokumentų reikia – pasakys kunigas derinant; paprastai viskas išsprendžiama vienu skambučiu." },
+      { "q": "Ar galima atlikti apeigas už nekrikštytą arba nusižudžiusį?", "a": "Už nekrikštytus Bažnyčia laidotuvių apeigų neatlieka, bet artimieji gali melstis už juos namuose. Dėl nusižudžiusiųjų ir sudėtingų atvejų sprendžia kunigas po pokalbio su artimaisiais, prireikus – su vyskupo palaiminimu. Nelikite su šiuo klausimu vieni – paskambinkite." },
+      { "q": "Kas yra sorokoustas?", "a": "Mirusiojo minėjimas Liturgijoje keturiasdešimt dienų. Paprastai užsakomas iškart po mirties, bet galima ir bet kuriuo kitu metu; yra ir pusės metų bei metų minėjimas." },
+      { "q": "Ar galiu užsakyti panichidą, jei esu ne Lietuvoje?", "a": "Taip. Paskambinkite ar parašykite į parapiją, susitarkite dėl dienos, o raštelį už mirusįjį galima paduoti per svetainės formą." },
+      { "q": "Kaip pašventinti kapą?", "a": "Kapas šventinamas susitarus su kunigu, paprastai kartu su panichida kapinėse. Paskambinkite į parapiją ir nurodykite patogią dieną." }
+    ]
+  },
+  {
+    "id": "commemoration",
+    "emblem": "note",
+    "title": "Rašteliai ir minėjimas",
+    "lead": "Raštelis už gyvuosius arba mirusiuosius – prašymas pasimelsti už jūsų artimuosius Liturgijoje. Vardai minimi proskomidijoje, ir už kiekvieną iš prosforos išimama dalelė. Raštelį galima paduoti svetainėje, atsispausdinti arba perduoti cerkvėje.",
+    "sections": [
+      {
+        "heading": "Už ką meldžiamės",
+        "text": [
+          "Už gyvuosius – „už sveikatą“: sveikatos, gerovės, sielos išganymo; „sveikata“ čia platesnė nei medicininė prasmė. Už mirusiuosius – „už atilsį“: jų nuodėmių atleidimo ir ramybės su šventaisiais. Raštelyje rašomi Krikšto vardai: Jonas, Marija.",
+          "Į raštelius įrašomi pakrikštyti stačiatikiai. Už nekrikštytus ir kito tikėjimo žmones meldžiamasi namuose – tokia malda taip pat svarbi ir išklausyta."
+        ]
+      },
+      {
+        "heading": "Minėjimo rūšys",
+        "text": [
+          "Proskomidija – minėjimas Dieviškojoje liturgijoje už gyvuosius ir mirusiuosius. Liturginis minėjimas pagal raštelius. Sorokoustas – 40 dienų. Pusė metų ir metai – ilgalaikis minėjimas proskomidijoje 6 arba 12 mėnesių.",
+          "Minėjimai atliekami per pamaldas. Jei reikia ypatingo laiko ar aplinkybių – molebeno, panichidos tam tikrą dieną, – geriau iš anksto susisiekti su kunigu."
+        ]
+      },
+      {
+        "heading": "Kaip paduoti raštelį",
+        "text": [
+          "Svetainėje yra forma: įrašote vardus, pasirenkate minėjimo rūšį ir išsiunčiate raštelį į parapiją arba atsispausdinate ir atnešate į cerkvę. Raštelį galima perduoti ir pačioje cerkvėje prieš pamaldas."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Kiek vardų galima rašyti viename raštelyje?", "a": "Griežto apribojimo nėra, bet raštelį turi būti patogu skaityti: paprastai iki dešimties vardų, stambiai ir įskaitomai. Jei vardų daugiau – paduokite du raštelius." },
+      { "q": "Kaip rašyti vardus?", "a": "Pilną bažnytinį vardą: Jonas, Ksenija, Jurgis. Prieš kunigo vardą – jo laipsnį, prieš vaiko iki septynerių metų vardą – „kūdikio“, nuo septynerių iki keturiolikos – „vaiko“. Galima pridėti „sergančio“, „keliaujančio“." },
+      { "q": "Ar galima paduoti raštelį už nekrikštytą?", "a": "Liturgijai – ne: proskomidijoje minimi Bažnyčios nariai. Bet už nekrikštytus artimuosius galima ir reikia melstis namuose, o kunigas patars, kaip." },
+      { "q": "Kada reikia paduoti raštelį, kad paminėtų artimiausioje Liturgijoje?", "a": "Iki pamaldų pradžios, geriau išvakarėse. Raštelius per svetainę taip pat geriau siųsti iš anksto, o ne rytą prieš Liturgiją." },
+      { "q": "Ką reiškia „sorokoustas už sveikatą“?", "a": "Tai gyvo žmogaus minėjimas kiekvienoje Liturgijoje keturiasdešimt dienų – pavyzdžiui, ligoje, prieš operaciją ar sunkiu gyvenimo laikotarpiu." }
+    ]
+  }
+]

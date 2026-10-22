@@ -249,6 +249,13 @@ const EMBLEMS = {
     <circle cx="16" cy="50" r="5.5" fill="url(#em-gilt)"/>
     <path d="M32 34C32 34 24 25 24 19a8 8 0 0 1 16 0c0 6-8 15-8 15z" fill="url(#em-wine)"/>
     <circle cx="32" cy="19" r="3.5" fill="url(#em-cream)"/>`,
+  oil: `
+    <path d="M24 28h16l4 14a6 6 0 0 1-6 6H26a6 6 0 0 1-6-6z" class="em-depth"/>
+    <path d="M24 26h16l4 14a6 6 0 0 1-6 6H26a6 6 0 0 1-6-6z" fill="url(#em-gilt)"/>
+    <path d="M27 14h10v12H27z" fill="url(#em-cream)"/>
+    <rect x="25" y="10" width="14" height="5" rx="2" fill="url(#em-gilt)"/>
+    <path d="M30 31h4v3h3v4h-3v5h-4v-5h-3v-4h3z" fill="url(#em-wine)"/>
+    <path d="M24 26h7l-2 8h-7z" fill="url(#em-gloss)"/>`,
   bus: `
     <rect x="12" y="18" width="40" height="30" rx="6" class="em-depth"/>
     <rect x="12" y="16" width="40" height="30" rx="6" fill="url(#em-wine)"/>

@@ -15,6 +15,7 @@ import { renderDocument } from './lib/layout.mjs';
 import { homePage } from './lib/pages/home.mjs';
 import { schedulePage } from './lib/pages/schedule.mjs';
 import { contactsPage, historyPage, sacramentsPage, galleryPage, supportPage, privacyPage, notFoundPage } from './lib/pages/parish.mjs';
+import { sacramentPage, sacramentPath } from './lib/pages/sacrament.mjs';
 import { lightboxDialog as galleryLightbox } from './lib/pages/article.mjs';
 import { notesPage } from './lib/pages/notes.mjs';
 import { libraryPage, newsPage } from './lib/pages/library.mjs';
@@ -140,6 +141,26 @@ function addCorePages() {
   addAlias('/', '/ru/', { noindex: false });
 }
 
+/** One page per sacrament or service in every language (content/sacraments/<lang>.json). */
+function addSacramentPages() {
+  for (const lang of site.languages) {
+    const t = site.locales[lang];
+    for (const entry of site.sacraments.byLang[lang]) {
+      addRoute({
+        lang,
+        pageId: 'sacrament',
+        title: entry.title,
+        description: entry.lead,
+        body: sacramentPage(site, lang, t, entry),
+        path: sacramentPath(lang, entry.id),
+        trail: [{ name: t.sacraments, path: site.route(lang, 'sacraments') }, { name: entry.title, path: sacramentPath(lang, entry.id) }],
+        alternates: site.languages.map(code => ({ lang: code, path: sacramentPath(code, entry.id) })),
+        faq: entry.faq
+      });
+    }
+  }
+}
+
 async function addDocumentPages() {
   const files = [];
   for (const document of site.documents.filter(candidate => candidate.local)) {
@@ -249,6 +270,8 @@ await writeOutput('assets/css/site.css', stylesheet);
 await versionScripts(site.assetVersion);
 
 addCorePages();
+
+addSacramentPages();
 const documentFiles = await addDocumentPages();
 addArticlePages();
 addNotFoundPage();
