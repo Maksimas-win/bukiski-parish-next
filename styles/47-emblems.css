@@ -35,6 +35,17 @@
   transition: transform 0.25s ease, filter 0.25s ease;
 }
 
+/* The parish logo as an emblem: the drawing fills the coin, with the same lift and shadow. */
+.link-card__badge--logo {
+  padding: 0.15rem;
+}
+
+.emblem--logo {
+  border-radius: 50%;
+  object-fit: cover;
+  filter: drop-shadow(0 3px 3px rgb(30 14 8 / 0.3));
+}
+
 /* The coin the emblem sits on: a soft dish with a rim highlight. */
 .quick__icon,
 .link-card__badge,

@@ -43,6 +43,11 @@ function sectionTitle(id, eyebrow, title) {
   </div>`;
 }
 
+/** The parish emblem as a badge: the drawn logo on the «О храме» card. */
+function parishLogo(site) {
+  return html`<img class="emblem emblem--logo" src="${site.url('/assets/img/logo-256.webp')}" width="64" height="64" loading="lazy" decoding="async" alt="">`;
+}
+
 /** Four tiles over the bottom edge of the photograph: what visitors need first. */
 function quickLinks(site, lang, t) {
   const { phone, phoneDisplay, address } = site.settings;
@@ -172,7 +177,7 @@ function social(site, lang, t) {
 }
 
 function explore(site, lang, t) {
-  const cards = [['notes', 'notesTeaser', 'message'], ['history', 'historyTeaser', 'church'], ['gallery', 'galleryTeaser', 'photo'], ['library', 'libraryTeaser', 'book']];
+  const cards = [['notes', 'notesTeaser', 'message'], ['history', 'historyTeaser', 'logo'], ['gallery', 'galleryTeaser', 'photo'], ['library', 'libraryTeaser', 'book']];
   return html`<section class="shell explore" aria-labelledby="explore-title">
     <div class="section-head">
       <div>
@@ -183,7 +188,7 @@ function explore(site, lang, t) {
     </div>
     <ul class="link-cards">
       ${cards.map(([id, teaser, symbol]) => html`<li class="link-card" data-tilt>
-        <span class="link-card__badge">${emblem(symbol === 'message' ? 'note' : symbol)}</span>
+        <span class="link-card__badge${symbol === 'logo' ? ' link-card__badge--logo' : ''}">${symbol === 'logo' ? parishLogo(site) : emblem(symbol === 'message' ? 'note' : symbol)}</span>
         <h3><a href="${site.url(site.route(lang, id))}">${t[id]}</a></h3>
         <p>${t[teaser]}</p>
         <span class="link-card__arrow">${icon('arrow-right')}</span>
