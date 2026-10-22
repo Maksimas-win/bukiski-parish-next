@@ -61,6 +61,12 @@ export function structuredData(site, t, uiLocale, page) {
     graph.push(church, breadcrumbs(site, t, uiLocale, page.trail || []));
   } else if (page.trail) {
     graph.push({ '@id': church['@id'], '@type': 'Church', name: t.name, url: church.url }, breadcrumbs(site, t, uiLocale, page.trail));
+    if (page.faq?.length) {
+      graph.push({
+        '@type': 'FAQPage',
+        mainEntity: page.faq.map(item => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } }))
+      });
+    }
     if (page.article) {
       graph.push({
         '@type': 'Article',

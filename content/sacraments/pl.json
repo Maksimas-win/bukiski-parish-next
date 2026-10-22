@@ -1,0 +1,211 @@
+[
+  {
+    "id": "baptism",
+    "emblem": "font",
+    "title": "Chrzest",
+    "lead": "Chrzest to wejście do Kościoła: człowiek jednoczy się z Chrystusem, otrzymuje odpuszczenie grzechów i staje się członkiem wspólnoty cerkiewnej. W naszej cerkwi chrzcimy dzieci i dorosłych; przygotowanie zaczyna się od rozmowy z kapłanem.",
+    "sections": [
+      {
+        "heading": "Czym jest Chrzest",
+        "text": [
+          "W sakramencie Chrztu człowiek zostaje trzykrotnie zanurzony w wodzie z wezwaniem Trójcy Świętej i, według słów Apostoła, „przyobleka się w Chrystusa”. Chrzest przyjmuje się raz w życiu i nie powtarza się go. Zaraz po nim następuje Bierzmowanie (Miropomazanie) – dar Ducha Świętego, który umacnia ochrzczonego do życia według wiary.",
+          "Dziecko chrzci się na podstawie wiary rodziców i rodziców chrzestnych, którzy zobowiązują się pomagać mu wzrastać w Kościele. Dorosły przyjmuje Chrzest z własnej wiary i po przygotowaniu."
+        ]
+      },
+      {
+        "heading": "Jak się przygotować",
+        "text": [
+          "Przed Chrztem odbywają się rozmowy katechetyczne dla rodziców i chrzestnych: o sensie sakramentu, o wierze i o tym, jak żyć w Kościele po Chrzcie. Dla dorosłego kandydata takie rozmowy to główna część przygotowania.",
+          "Rodzice chrzestni muszą być prawosławnymi chrześcijanami świadomie żyjącymi życiem cerkiewnym. Dziecko ma zwykle dwoje chrzestnych – mężczyznę i kobietę, ale wystarczy jedno tej samej płci co dziecko. Jakie dokumenty są potrzebne i co przynieść – zapytaj kapłana przy ustalaniu daty."
+        ]
+      },
+      {
+        "heading": "Jak umówić się w naszej cerkwi",
+        "text": [
+          "Zadzwoń do parafii i omów z kapłanem rozmowy katechetyczne, rodziców chrzestnych i datę. Chrzest odbywa się po wcześniejszym uzgodnieniu, dlatego lepiej zgłosić się z wyprzedzeniem – zwłaszcza jeśli chcesz połączyć go ze świętem lub zebrać bliskich z innych miast."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "W jakim wieku można ochrzcić dziecko?", "a": "W każdym. Kościół nie ustala minimalnego wieku: niemowlęta chrzci się na podstawie wiary rodziców i chrzestnych. Jeśli dziecko jest już w świadomym wieku, kapłan porozmawia także z nim." },
+      { "q": "Czy można ochrzcić dziecko, jeśli rodzice nie mają ślubu cerkiewnego albo jedno z nich nie jest prawosławne?", "a": "Tak, Chrzest dziecka jest możliwy. Ważne, aby przynajmniej jedno z rodziców i chrzestni byli prawosławni i rzeczywiście zamierzali wychowywać dziecko w wierze. Omów swoją sytuację z kapłanem – to zwykła rozmowa, a nie egzamin." },
+      { "q": "Kto może być rodzicem chrzestnym?", "a": "Prawosławny chrześcijanin, który sam jest ochrzczony, żyje życiem cerkiewnym i jest gotów uczestniczyć w wychowaniu chrześniaka. Rodzice nie mogą być chrzestnymi własnego dziecka. Małżonkowie zwykle nie są chrzestnymi tego samego dziecka." },
+      { "q": "Czy dorosły musi się przygotować?", "a": "Tak. Dorosły przyjmuje Chrzest świadomie, dlatego rozmowy z kapłanem, poznanie Ewangelii i nabożeństw to niezbędna część przygotowania. Jego długość zależy od człowieka; ustalcie to osobiście." },
+      { "q": "Zostałem ochrzczony w innym Kościele chrześcijańskim. Czy muszę chrzcić się ponownie?", "a": "Chrztu się nie powtarza, jeśli został udzielony w imię Trójcy Świętej. O sposobie przyjęcia do prawosławia w konkretnym przypadku decyduje kapłan po rozmowie z tobą – przyjdź, porozmawiamy." }
+    ]
+  },
+  {
+    "id": "confession",
+    "emblem": "chalice",
+    "title": "Spowiedź i Komunia",
+    "lead": "Spowiedź i Komunia to serce życia cerkiewnego. W spowiedzi człowiek wyznaje Bogu swoje grzechy i otrzymuje przebaczenie; w Komunii jednoczy się z Chrystusem w Jego Ciele i Krwi. Spowiedź odbywa się zwykle przed Liturgią; porządek i godzinę uzgodnij z kapłanem.",
+    "sections": [
+      {
+        "heading": "Spowiedź",
+        "text": [
+          "W sakramencie Pokuty chrześcijanin szczerze wyznaje przed Bogiem swoje grzechy w obecności kapłana i otrzymuje ich odpuszczenie. Kapłan jest świadkiem pokuty i pomocnikiem; tajemnica spowiedzi jest nienaruszalna.",
+          "Do spowiedzi przygotowujemy się wcześniej: przypominamy sobie, czym zgrzeszyliśmy słowem, czynem i myślą, i przychodzimy z postanowieniem poprawy. Nie trzeba długo opowiadać okoliczności – ważne, by nazwać sam grzech i nie usprawiedliwiać się."
+        ]
+      },
+      {
+        "heading": "Komunia",
+        "text": [
+          "Komunię Świętą przyjmuje się podczas Boskiej Liturgii. Przygotowując się do niej, chrześcijanie poszczą (zwykle nie jedzą i nie piją od północy), czytają modlitwy przed Komunią, w miarę możliwości uczestniczą w nabożeństwie wieczornym w przeddzień i jednają się z bliźnimi.",
+          "Miara postu i modlitwy może być różna – dla dzieci, chorych, kobiet w ciąży i karmiących, dla tych, którzy przystępują do Komunii często. Te sprawy rozstrzyga się w rozmowie z kapłanem, a nie według ogólnego schematu."
+        ]
+      },
+      {
+        "heading": "Jak to wygląda w naszej cerkwi",
+        "text": [
+          "Spowiedź odbywa się zwykle przed Liturgią; porządek przygotowania i godzinę lepiej wcześniej uzgodnić z kapłanem, zwłaszcza jeśli spowiadasz się po raz pierwszy lub dawno nie byłeś w cerkwi. Jeśli potrzebujesz rozmowy poza nabożeństwem – zadzwoń, umówimy się."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Nigdy się nie spowiadałem. Od czego zacząć?", "a": "Przyjdź i powiedz o tym kapłanowi – pomoże i podpowie. Możesz wcześniej zapisać na kartce to, z czego chcesz się wyspowiadać. Pierwsza spowiedź bywa najtrudniejsza i najważniejsza." },
+      { "q": "Czy trzeba spowiadać się przed każdą Komunią?", "a": "W naszej tradycji spowiedź zwykle poprzedza Komunię. Jak często spowiadać się tym, którzy przystępują do Komunii regularnie, ustala się wspólnie z kapłanem, który zna twoje życie duchowe." },
+      { "q": "Czy dzieci muszą się spowiadać?", "a": "Dzieci do siódmego roku życia przyjmują Komunię bez spowiedzi. Od około siedmiu lat dziecko zaczyna spowiadać się samo – prosto, po dziecięcemu; kapłan mu w tym pomoże." },
+      { "q": "Czy mogę przyjąć Komunię, jeśli nie pościłem?", "a": "Nie rozstrzygaj tego sam: podejdź do kapłana przed Liturgią i opowiedz, jak było. Choroba, podróż, niewiedza – to różne sytuacje i różne odpowiedzi." },
+      { "q": "Dawno nie byłem w cerkwi i wstydzę się. Co robić?", "a": "To bardzo częste uczucie i nie powinno zatrzymywać. Można po prostu przyjść na nabożeństwo, a można najpierw zadzwonić i umówić się na rozmowę z kapłanem poza nabożeństwem." }
+    ]
+  },
+  {
+    "id": "wedding",
+    "emblem": "rings",
+    "title": "Ślub cerkiewny",
+    "lead": "W sakramencie Małżeństwa Kościół błogosławi związek mężczyzny i kobiety i prosi dla nich o łaskę na wspólne życie. Możliwość ślubu, przygotowanie i datę uzgodnij z kapłanem z wyprzedzeniem.",
+    "sections": [
+      {
+        "heading": "Sens sakramentu",
+        "text": [
+          "W Małżeństwie małżonkowie stają się „małym Kościołem”: ich miłość i wierność uświęca Bóg, a rodzina otrzymuje błogosławieństwo na rodzenie i wychowanie dzieci. Korony trzymane nad głowami młodych to znak zarówno chwały, jak i męczeństwa: życie rodzinne wymaga cierpliwości i oddania.",
+          "Kościół udziela ślubu chrześcijanom, którzy zawierają małżeństwo świadomie i dobrowolnie. Do ślubu prawosławnego wymagane jest zarejestrowane małżeństwo cywilne."
+        ]
+      },
+      {
+        "heading": "Jak się przygotować",
+        "text": [
+          "Przed ślubem narzeczeni rozmawiają z kapłanem o sensie małżeństwa i o samym obrzędzie. Zgodnie z tradycją w przeddzień lub w dniu ślubu małżonkowie spowiadają się i przyjmują Komunię.",
+          "Na ślub potrzebne są obrączki, ikony Zbawiciela i Matki Bożej oraz świece; co jeszcze przygotować i jakie dokumenty są potrzebne – zapytaj przy ustalaniu daty. Ślubów nie udziela się w okresie postów, w wigilię środy, piątku i niedzieli oraz w niektóre święta; wolne terminy lepiej omówić wcześniej."
+        ]
+      },
+      {
+        "heading": "Jak umówić się w naszej cerkwi",
+        "text": [
+          "Zadzwoń do parafii. Kapłan omówi z wami, czy ślub w waszej sytuacji jest możliwy, jak się przygotować i jaką datę wybrać. Zgłoście się z wyprzedzeniem: dogodne terminy szybko się zapełniają, a przygotowanie wymaga czasu."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Czy można wziąć ślub cerkiewny bez ślubu cywilnego?", "a": "Nie. Kościół udziela ślubu parom, których małżeństwo jest zarejestrowane przez państwo. Rejestrację można załatwić przed ślubem – nawet tego samego dnia." },
+      { "q": "Jesteśmy małżeństwem od wielu lat. Czy możemy wziąć ślub cerkiewny?", "a": "Tak, i nierzadko jest to szczególnie głębokie wydarzenie. Obrzęd dla osób od dawna żyjących w małżeństwie prawie się nie różni; szczegóły wyjaśni kapłan." },
+      { "q": "Jedno z nas nie jest prawosławne. Czy ślub jest możliwy?", "a": "Małżeństwo prawosławnego z ochrzczonym chrześcijaninem innego wyznania jest możliwe pod pewnymi warunkami; z osobą nieochrzczoną – nie. Każdą sytuację rozpatruje się osobno, dlatego porozmawiaj z kapłanem." },
+      { "q": "Czy można wziąć ślub cerkiewny po raz drugi?", "a": "W niektórych przypadkach Kościół dopuszcza drugie małżeństwo – po rozmowie z kapłanem i z reguły za błogosławieństwem biskupa. Przyjdźcie, omówimy waszą sytuację." },
+      { "q": "Czy potrzebni są świadkowie?", "a": "Zgodnie z tradycją przy ślubie są świadkowie, którzy trzymają korony. Powinni być prawosławnymi chrześcijanami. Jeśli nie macie świadków, powiedzcie o tym kapłanowi – da się to rozwiązać." }
+    ]
+  },
+  {
+    "id": "unction",
+    "emblem": "oil",
+    "title": "Namaszczenie chorych",
+    "lead": "Namaszczenie chorych (Sakrament Oleju Świętego) to sakrament, w którym chory zostaje namaszczony poświęconym olejem z modlitwą o uzdrowienie duszy i ciała oraz o odpuszczenie zapomnianych grzechów. Odbywa się po uzgodnieniu z kapłanem – w cerkwi lub w domu chorego.",
+    "sections": [
+      {
+        "heading": "Czym jest Namaszczenie chorych",
+        "text": [
+          "Sakrament ustanowiony jest według słów apostoła Jakuba: „Choruje ktoś wśród was? Niech sprowadzi kapłanów Kościoła, by się modlili nad nim i namaścili go olejem w imię Pana”. Podczas obrzędu czyta się siedem fragmentów z Apostoła i Ewangelii, siedem modlitw, a po każdej chory jest namaszczany olejem.",
+          "Namaszczenie chorych to nie „ostatnie namaszczenie” przed śmiercią, jak czasem się sądzi. To modlitwa Kościoła o uzdrowienie i umocnienie; przystępuje się do niego w chorobach ciała i duszy, a wielu – co roku, w Wielkim Poście."
+        ]
+      },
+      {
+        "heading": "Jak się przygotować",
+        "text": [
+          "Namaszczenie przyjmują ochrzczeni prawosławni chrześcijanie. Przed sakramentem wskazana jest spowiedź, a po nim – Komunia. Do namaszczenia w domu przygotuj stół z czystym obrusem, ikony, świecę; co jeszcze jest potrzebne, kapłan powie przy ustalaniu terminu."
+        ]
+      },
+      {
+        "heading": "Jak umówić się w naszej cerkwi",
+        "text": [
+          "Zadzwoń do parafii. Jeśli chory nie może przyjść do cerkwi, kapłan przyjdzie do domu lub do szpitala – uzgodnijcie godzinę. Wspólne Namaszczenie dla parafian, gdy się odbywa, jest ogłaszane w rozkładzie nabożeństw."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Czy zdrowy człowiek może przyjąć Namaszczenie?", "a": "Tak. Namaszczenia udziela się nie tylko ciężko chorym: każdy prawosławny chrześcijanin może do niego przystąpić, zwłaszcza w czasie postu. O celowości w twoim przypadku poradź się kapłana." },
+      { "q": "Jak często można przyjmować Namaszczenie?", "a": "Zwykle nie częściej niż raz w roku, jeśli nie ma poważnej choroby. W ciężkiej chorobie – za błogosławieństwem kapłana." },
+      { "q": "Czy można namaszczać dzieci?", "a": "Tak, w chorobie. Małe dzieci namaszcza się zwykle w miarę potrzeby; o szczegóły zapytaj kapłana." },
+      { "q": "Czy przed Namaszczeniem trzeba się spowiadać?", "a": "Wskazane: Namaszczenie nie zastępuje spowiedzi. Jeśli chory jest w ciężkim stanie, kapłan sam zdecyduje, jak najlepiej udzielić sakramentów." },
+      { "q": "Co zrobić z pozostałym olejem?", "a": "Poświęcony olej można z czcią używać: namaszczać chore miejsca znakiem krzyża z modlitwą. Nie wyrzuca się go; jeśli został – przynieś do cerkwi albo zapytaj kapłana." }
+    ]
+  },
+  {
+    "id": "funeral",
+    "emblem": "candle",
+    "title": "Pogrzeb i panichida",
+    "lead": "Kościół odprowadza swoje dzieci modlitwą: pogrzeb to ostatnie pożegnanie zmarłego, panichida – modlitwa za niego w dni pamięci. Pogrzeb, pogrzeb zaoczny i panichidy odbywają się po uzgodnieniu z kapłanem; wspólna panichida w dni wspominania zmarłych – według rozkładu nabożeństw.",
+    "sections": [
+      {
+        "heading": "Pogrzeb",
+        "text": [
+          "Pogrzeb cerkiewny odprawia się za ochrzczonego prawosławnego chrześcijanina – zwykle w cerkwi, przed pochówkiem. W modlitwach Kościół prosi o odpuszczenie grzechów zmarłego i o spoczynek „w miejscu światłości, w miejscu zieleni, w miejscu odpoczynku”. Jeśli nie można przywieźć ciała do cerkwi, kapłan może odprawić obrzęd na cmentarzu lub w domu pogrzebowym.",
+          "Pogrzeb zaoczny odprawia się, gdy pochówek odbył się już bez kapłana – czasem po latach. To również pełna modlitwa Kościoła za zmarłego; o porządku umów się z kapłanem."
+        ]
+      },
+      {
+        "heading": "Panichida i modlitwa za zmarłych",
+        "text": [
+          "Panichidę odprawia się trzeciego, dziewiątego i czterdziestego dnia, w rocznicę śmierci, w dzień urodzin i imienin zmarłego – i w każdy dzień, gdy chcecie się pomodlić. Za zmarłych składa się kartki na Liturgię: imiona wspomina się na proskomidii. Można zamówić sorokoust lub dłuższe wspominanie.",
+          "W soboty rodzicielskie i inne dni szczególnego wspominania zmarłych wspólna panichida odprawiana jest po Liturgii według rozkładu cerkwi; przynosi się na nią kartki z imionami zmarłych."
+        ]
+      },
+      {
+        "heading": "Jak umówić się w naszej cerkwi",
+        "text": [
+          "W razie śmierci bliskiej osoby zadzwoń do parafii jak najwcześniej: kapłan pomoże ustalić dzień i miejsce pogrzebu i podpowie, co przygotować. Panichidę w potrzebnym dniu i poświęcenie grobu również uzgodnij telefonicznie. Kartkę za zmarłego można złożyć na stronie lub w cerkwi."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Co jest potrzebne do pogrzebu?", "a": "Zmarły musi być ochrzczonym prawosławnym chrześcijaninem. Co przynieść i jakie dokumenty są potrzebne – powie kapłan przy uzgadnianiu; zwykle wszystko załatwia się jednym telefonem." },
+      { "q": "Czy można odprawić pogrzeb za nieochrzczonego lub samobójcę?", "a": "Za nieochrzczonych Kościół nie odprawia pogrzebu, ale bliscy mogą modlić się za nich w domu. O pogrzebie samobójców i o trudnych przypadkach decyduje kapłan po rozmowie z rodziną, w razie potrzeby za błogosławieństwem biskupa. Nie zostawajcie z tym pytaniem sami – zadzwońcie." },
+      { "q": "Co to jest sorokoust?", "a": "Wspominanie zmarłego na Liturgii przez czterdzieści dni. Zwykle zamawia się je zaraz po śmierci, ale można w każdym innym czasie; jest też wspominanie półroczne i roczne." },
+      { "q": "Czy mogę zamówić panichidę, jeśli nie jestem na Litwie?", "a": "Tak. Zadzwoń lub napisz do parafii, uzgodnij dzień, a kartkę za zmarłego można złożyć przez formularz na stronie." },
+      { "q": "Jak poświęcić grób?", "a": "Grób poświęca się po uzgodnieniu z kapłanem, zwykle razem z panichidą na cmentarzu. Zadzwoń do parafii i podaj dogodny dzień." }
+    ]
+  },
+  {
+    "id": "commemoration",
+    "emblem": "note",
+    "title": "Kartki i wspominanie",
+    "lead": "Kartka za żywych lub za zmarłych to prośba o modlitwę za waszych bliskich na Liturgii. Imiona wspomina się na proskomidii, a za każdego wyjmuje się cząstkę z prosfory. Kartkę można złożyć na stronie, wydrukować lub przekazać w cerkwi.",
+    "sections": [
+      {
+        "heading": "O co się modlimy",
+        "text": [
+          "Za żywych – „o zdrowie”: zdrowie, pomyślność, zbawienie duszy; „zdrowie” znaczy tu więcej niż w sensie medycznym. Za zmarłych – „o spoczynek”: odpuszczenie ich grzechów i pokój ze świętymi. Na kartce pisze się imiona nadane na Chrzcie: Jan, Maria.",
+          "Na kartki wpisuje się ochrzczonych prawosławnych chrześcijan. Za nieochrzczonych i ludzi innej wiary modlimy się w domu – taka modlitwa też jest ważna i wysłuchana."
+        ]
+      },
+      {
+        "heading": "Rodzaje wspominania",
+        "text": [
+          "Proskomidia – wspominanie na Boskiej Liturgii za żywych i zmarłych. Wspominanie na Liturgii według kartek. Sorokoust – przez 40 dni. Pół roku i rok – długie wspominanie na proskomidii przez 6 lub 12 miesięcy.",
+          "Wspominania odbywają się podczas nabożeństw. Jeśli potrzebny jest szczególny czas lub okoliczności – molebien, panichida w określonym dniu – lepiej wcześniej skontaktować się z kapłanem."
+        ]
+      },
+      {
+        "heading": "Jak złożyć kartkę",
+        "text": [
+          "Na stronie jest formularz: wpisujesz imiona, wybierasz rodzaj wspominania i wysyłasz kartkę do parafii albo drukujesz ją i przynosisz do cerkwi. Kartkę można też przekazać w samej cerkwi przed nabożeństwem."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Ile imion można wpisać na jednej kartce?", "a": "Nie ma ścisłego ograniczenia, ale kartka musi być czytelna: zwykle do dziesięciu imion, dużymi, wyraźnymi literami. Jeśli imion jest więcej – złóż dwie kartki." },
+      { "q": "Jak pisać imiona?", "a": "Pełne imię cerkiewne: Jan, Ksenia, Jerzy. Przed imieniem kapłana – jego godność, przed imieniem dziecka do siedmiu lat – „niemowlę”, od siedmiu do czternastu – „otrok” lub „otrokowica”. Można dodać „chorego”, „podróżującego”." },
+      { "q": "Czy można złożyć kartkę za nieochrzczonego?", "a": "Na Liturgię – nie: na proskomidii wspomina się członków Kościoła. Ale za nieochrzczonych bliskich można i trzeba modlić się w domu, a kapłan podpowie, jak." },
+      { "q": "Kiedy złożyć kartkę, aby wspomniano na najbliższej Liturgii?", "a": "Przed rozpoczęciem nabożeństwa, najlepiej dzień wcześniej. Kartki przez stronę również lepiej wysyłać z wyprzedzeniem, a nie rano przed Liturgią." },
+      { "q": "Co znaczy „sorokoust o zdrowie”?", "a": "To wspominanie żyjącego człowieka na każdej Liturgii przez czterdzieści dni – na przykład w chorobie, przed operacją lub w trudnym okresie życia." }
+    ]
+  }
+]

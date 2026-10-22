@@ -5,6 +5,7 @@ import { html, attrs } from '../html.mjs';
 import { icon, emblem } from '../icons.mjs';
 import { formatDate } from '../site.mjs';
 import { churchImage, copyButton, externalLink, pageHead, phoneLink, siteLink, socialCards } from '../components.mjs';
+import { sacramentCards } from './sacrament.mjs';
 
 /** «Сверено с приходским сайтом: 10 октября 2026 г.» */
 const reviewed = (site, lang, t, sourceUrl) => html`<p class="hint meta-row"><span>${t.checked}: <time datetime="${site.settings.reviewedOn}">${formatDate(lang, `${site.settings.reviewedOn}T12:00:00Z`, { dateStyle: 'long' })}</time></span>${externalLink(t, sourceUrl, t.source)}</p>`;
@@ -168,6 +169,7 @@ export function sacramentsPage(site, lang, t) {
   <section class="shell card-grid card-grid--two">
     ${t.sacramentItems.map(([heading, text], index) => html`<article class="card card--icon" data-tilt><span class="card__badge">${emblem(SACRAMENT_ICONS[index] || 'church')}</span><h2>${heading}</h2><p>${text}</p></article>`)}
   </section>
+  ${sacramentCards(site, lang, t)}
   <section class="shell services-grid">
     <article class="card">
       <h2 class="card__title">${icon('candle')}${t.commemorations}</h2>
