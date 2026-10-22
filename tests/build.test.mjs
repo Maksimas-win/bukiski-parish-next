@@ -463,7 +463,7 @@ test('Structured data describes only confirmed parish facts and matches the page
 test('The host configuration redirects www. and index.html to one canonical address', async () => {
   const file = await read('dist/.htaccess');
   assert.match(file, /RewriteCond %\{HTTP_HOST\} \^www\\\.\(\.\+\)\$ \[NC\]\nRewriteRule \^ https:\/\/%1%\{REQUEST_URI\} \[R=301,L,NE\]/);
-  assert.match(file, /index\\\.html\$ \/\$1 \[R=301,L,NE\]/);
+  assert.match(file, /index\\\.html\$ (?:\/[\w-]+)?\/\$1 \[R=301,L,NE\]/); // with or without a base path (GitHub Pages preview)
   assert.match(file, /Strict-Transport-Security "max-age=31536000"/);
 });
 
