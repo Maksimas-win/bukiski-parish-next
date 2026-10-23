@@ -19,6 +19,7 @@ import { lightboxDialog as galleryLightbox } from './lib/pages/article.mjs';
 import { notesPage } from './lib/pages/notes.mjs';
 import { libraryPage, newsPage } from './lib/pages/library.mjs';
 import { articlePage, lightboxDialog } from './lib/pages/article.mjs';
+import { gpmPage, gpmMeta } from './lib/pages/gpm.mjs';
 import { documentPage, loadDocument } from './lib/pages/document.mjs';
 import * as outputs from './lib/outputs.mjs';
 
@@ -120,16 +121,19 @@ function addCorePages() {
       library: () => libraryPage(site, catalog, lang, t),
       notes: () => notesPage(site, lang, t),
       support: () => supportPage(site, lang, t),
+      gpm: () => gpmPage(site, lang, t),
       privacy: () => privacyPage(site, lang, t)
     };
+    const gpm = gpmMeta(site, lang);
     for (const pageId of CORE_PAGES) {
       addRoute({
         lang,
         pageId,
-        title: pageId === 'home' ? t.name : (pageId === 'history' ? site.histories[lang].title : t[pageId]),
-        description: pageId === 'home' ? t.heroIntro : (pageId === 'history' ? site.histories[lang].intro : (t[`${pageId}Intro`] || t[`${pageId}Teaser`] || t[pageId])),
+        title: pageId === 'home' ? t.name : (pageId === 'history' ? site.histories[lang].title : pageId === 'gpm' ? gpm.title : t[pageId]),
+        description: pageId === 'home' ? t.heroIntro : (pageId === 'history' ? site.histories[lang].intro : pageId === 'gpm' ? gpm.description : (t[`${pageId}Intro`] || t[`${pageId}Teaser`] || t[pageId])),
         body: bodies[pageId](),
         path: site.route(lang, pageId),
+        faq: pageId === 'gpm' ? gpm.faq : undefined,
         trail: pageId === 'home' ? undefined : [{ name: t[pageId], path: site.route(lang, pageId) }],
         alternates: site.languages.map(code => ({ lang: code, path: site.route(code, pageId) })),
         extraDialogs: ['gallery', 'history', 'contacts'].includes(pageId) ? galleryLightbox(t, lang) : ''

@@ -1,0 +1,471 @@
+{
+  "title": "1.2% GPM — how to direct part of your tax to the parish",
+  "description": "How to allocate up to 1.2% of Lithuanian personal income tax (GPM) for {taxYear} through FR0512 in the VMI EDS: three starting points, a calculator, a step-by-step helper, answers to common questions and the Bukiškis parish details.",
+  "eyebrow": "Lithuania · A share of income tax · {filingYear} campaign",
+  "hero": {
+    "title": [
+      "Give your support",
+      "a meaningful direction."
+    ],
+    "lead": "Up to 1.2% of income tax you have already paid can go to the parish — at no extra cost. Here we explain what that means, how to complete FR0512 in the official VMI system and whom your choice helps.",
+    "figure": "1.2%",
+    "figureNote": "a three-dimensional “1.2%” — the symbol of the tax share",
+    "primary": "Choose your starting point",
+    "secondary": "Calculate the amount",
+    "caption": "Parish information section · Not a VMI service · Applications are filed only in EDS"
+  },
+  "phase": {
+    "title": "Campaign status",
+    "before": {
+      "label": "Filing has not opened yet",
+      "text": "FR0512 applications for {taxYear} income are accepted from {start} to {deadline}. This is the time to understand the process, prepare your details and save the checklist."
+    },
+    "during": {
+      "label": "Applications are being accepted",
+      "text": "The application for {taxYear} income is filed in EDS by {deadline} inclusive. Prepare with the guide below and file in the official system.",
+      "action": "Open EDS (official VMI system)"
+    },
+    "after": {
+      "label": "The filing period has ended",
+      "text": "The deadline for initial applications for {taxYear} income passed on {deadline}. Check the VMI website for the rules on correcting an application you already filed and for the next campaign dates — they are not announced here without verification."
+    },
+    "verify": "Before filing, check the recipient in EDS by code {code}: religious communities regain the right to this support from {filingYear}, and the parish’s presence in the recipient list is confirmed only in the VMI system."
+  },
+  "facts": [
+    [
+      "Tax year",
+      "{taxYear}"
+    ],
+    [
+      "Filing period",
+      "{start} — {deadline}"
+    ],
+    [
+      "Form",
+      "FR0512 in EDS"
+    ],
+    [
+      "Can be allocated",
+      "up to {lastTaxYear}"
+    ]
+  ],
+  "scenarios": {
+    "title": "Where would you like to start?",
+    "intro": "Pick the option closest to your situation and the section opens at the right place.",
+    "items": [
+      {
+        "id": "learn",
+        "title": "I want to understand it",
+        "text": "What the GPM share is, who can allocate it and how it differs from a donation.",
+        "action": "Explain it simply",
+        "target": "basics"
+      },
+      {
+        "id": "first",
+        "title": "I am filing for the first time",
+        "text": "Step-by-step helper: signing in to EDS, form FR0512, choosing the recipient, share and period, review.",
+        "action": "Open the helper",
+        "target": "steps"
+      },
+      {
+        "id": "again",
+        "title": "I have filed before",
+        "text": "How to check a valid application, whether you need to file again and how to correct it.",
+        "action": "See what to do",
+        "target": "again"
+      }
+    ]
+  },
+  "basics": {
+    "title": "The basics in a minute",
+    "intro": "GPM (gyventojų pajamų mokestis) is Lithuanian personal income tax. The law lets you ask VMI to transfer part of the tax you have already paid to a recipient of your choice. It is not a new payment and not a further deduction from your salary.",
+    "items": [
+      [
+        "Not a share of your salary",
+        "The share is calculated from the year’s GPM, not from income. Example: €1,000 GPM × 0.012 = €12."
+      ],
+      [
+        "Nothing extra to pay",
+        "The money has already been paid to the state. You only decide where up to 1.2% of it goes. Without an application the whole amount stays in the budget."
+      ],
+      [
+        "Apply only in EDS",
+        "This section helps you prepare. Form FR0512 is completed in the official VMI declaration system, not on the parish website."
+      ],
+      [
+        "Keep the years apart",
+        "The {filingYear} campaign concerns tax on income received in {taxYear}. Filing period: {start} — {deadline}."
+      ]
+    ],
+    "who": {
+      "title": "Who this is for",
+      "text": "Permanent residents of Lithuania for tax purposes (nuolatiniai Lietuvos gyventojai) with income subject to GPM in {taxYear}: salary, self-employment or other taxable income. Citizenship alone neither grants nor removes the right. A pensioner or someone temporarily out of work can take part if GPM was calculated or withheld on their income during the year; if the tax is zero, there is nothing to allocate. You can check your own situation with VMI."
+    },
+    "difference": {
+      "title": "How it differs from a donation",
+      "items": [
+        [
+          "GPM share",
+          "Part of tax already paid. Transferred by VMI, usually between {transferFrom} and {transferTo}. Filed as FR0512 in EDS. Your wallet is unchanged."
+        ],
+        [
+          "Bank donation",
+          "Your own money, transferred to the parish account at any time. The details are in a separate block below. One way does not exclude the other."
+        ]
+      ]
+    }
+  },
+  "calculator": {
+    "title": "How much is that in money?",
+    "intro": "Enter your income tax (GPM) for {taxYear}. This is not your salary: the tax amount appears in the annual GPM311 return in EDS, in your employer’s statement or in Mano VMI. The calculation runs in your browser and is not sent anywhere.",
+    "inputLabel": "GPM for {taxYear}, €",
+    "inputHint": "For example 1,000 or 1,850.50",
+    "unknownToggle": "I don’t know my GPM amount",
+    "unknownIntro": "These are teaching examples, not an estimate of your tax. VMI determines the real amount; yours may be higher or lower.",
+    "examples": [
+      {
+        "label": "Illustrative example A",
+        "amount": "600"
+      },
+      {
+        "label": "Illustrative example B",
+        "amount": "1500"
+      },
+      {
+        "label": "Illustrative example C",
+        "amount": "3000"
+      }
+    ],
+    "exampleBadge": "teaching example",
+    "peopleLabel": "People in the example",
+    "peopleHint": "The group scenario is an illustration, not a counter of funds received.",
+    "result": "1.2% of the amount entered",
+    "formula": "Formula: GPM × 0.012",
+    "formulaLine": "€{amount} × 0.012 = €{result}",
+    "together": "Together in this example ({people} people with the same amount)",
+    "approx": "Approximate calculation. VMI calculates and transfers the final amount.",
+    "belowMinimum": "An amount below €3 to one recipient for a tax year is not transferred. In this example each participant’s share is below the threshold, so the amount transferred is €0.",
+    "minimumNote": "The €3 threshold applies to each person’s share separately: small amounts from several people are not added together to reach it.",
+    "invalid": "Enter an amount from 0 to 100,000,000 with no more than two decimal places.",
+    "local": "All calculations are performed locally. The values you enter are neither stored nor transmitted."
+  },
+  "steps": {
+    "title": "FR0512 helper",
+    "intro": "Five short steps. EDS menu items are given in Lithuanian, as they appear in the system, with an explanation. The site only helps you prepare: the application is filed in the official EDS.",
+    "progress": "Step {n} of {total}",
+    "prev": "Back",
+    "next": "Next",
+    "finish": "To the checklist",
+    "showAll": "Show all steps at once",
+    "showOne": "Show one step at a time",
+    "whereLabel": "Where",
+    "edsLabel": "In EDS",
+    "copyCode": "Copy the parish code",
+    "copied": "Code {code} copied",
+    "openEds": "Open EDS",
+    "diagramNote": "The diagram is a teaching illustration, not a VMI screen. The EDS interface may differ.",
+    "items": [
+      {
+        "title": "Sign in to EDS",
+        "action": "Open the official VMI declaration system and sign in as usual: through your bank, Smart-ID, mobile signature or another method the system itself offers.",
+        "where": "deklaravimas.vmi.lt — only on the VMI website. The parish website does not ask for your passwords, Smart-ID, personal identification code or tax documents.",
+        "eds": [
+          [
+            "Prisijungti",
+            "Sign in"
+          ],
+          [
+            "Elektroninio deklaravimo sistema (EDS)",
+            "Electronic Declaration System"
+          ]
+        ]
+      },
+      {
+        "title": "Find form FR0512",
+        "action": "In the menu choose form completion and find the application for allocating support. The form opens in the electronic wizard.",
+        "where": "The main EDS menu after signing in.",
+        "eds": [
+          [
+            "Deklaravimas",
+            "Declaration"
+          ],
+          [
+            "Pildyti formą",
+            "Complete a form"
+          ],
+          [
+            "Dažniausiai pildomos formos",
+            "Most frequently completed forms"
+          ],
+          [
+            "Prašymas skirti paramą (FR0512)",
+            "Application to allocate support"
+          ]
+        ]
+      },
+      {
+        "title": "Choose the recipient",
+        "action": "Enter the recipient code and check the full name. For the Bukiškis parish: {code} — {name}. If the recipient cannot be found, do not pick a similar-sounding name: check it in the VMI data or contact the parish.",
+        "where": "The recipient section of the application.",
+        "eds": [
+          [
+            "Paramos gavėjo identifikacinis numeris (kodas)",
+            "Recipient identification number (code)"
+          ],
+          [
+            "Paramos gavėjo pavadinimas",
+            "Recipient name"
+          ]
+        ],
+        "copy": true
+      },
+      {
+        "title": "Set the share and period",
+        "action": "Enter a share of up to 1.2% (less if part goes to other recipients in the same category). Set the tax period: for the {filingYear} campaign the first year is {taxYear}. You can allocate up to {lastTaxYear} inclusive at once, so you do not need to file every year.",
+        "where": "The share and period fields in the same application.",
+        "eds": [
+          [
+            "Mokesčio dalies dydis (procentais)",
+            "Size of the tax share (per cent)"
+          ],
+          [
+            "Mokestinis laikotarpis",
+            "Tax period"
+          ],
+          [
+            "Prašymą pateikiu už … iki …",
+            "I file the application for … until … (allocation period)"
+          ]
+        ]
+      },
+      {
+        "title": "Check and submit",
+        "action": "Re-check the code, name, share and years, then submit the application. Confirmation of receipt appears only in EDS — in the document status and in notifications. Clicks on this website send nothing to VMI.",
+        "where": "The submit button in EDS, then the list of filed documents.",
+        "eds": [
+          [
+            "Pateikti",
+            "Submit"
+          ],
+          [
+            "Pateikti dokumentai",
+            "Filed documents"
+          ],
+          [
+            "Pranešimai",
+            "Notifications"
+          ]
+        ]
+      }
+    ],
+    "checklist": {
+      "title": "Before submitting, check",
+      "items": [
+        "The recipient code {code} and the name {name} match what EDS shows.",
+        "The share is no more than 1.2% (in total for all recipients in this category).",
+        "The first tax period is {taxYear}; the last is no later than {lastTaxYear}.",
+        "If you must file the annual GPM311 return, it has been filed on time — otherwise the support is not transferred.",
+        "After submitting, the application status is visible in EDS: Pateikti dokumentai and Pranešimai. VMI transfers the money later, usually between {transferFrom} and {transferTo}."
+      ],
+      "note": "The checklist is for self-checking. The parish website cannot see your application or confirm that it was received."
+    }
+  },
+  "again": {
+    "title": "If you have filed an application before",
+    "intro": "A multi-year application usually remains in force, but it is worth checking — especially if the recipient was unavailable last year.",
+    "items": [
+      [
+        "Check that it is still valid",
+        "In EDS open your filed documents (Pateikti dokumentai) and find the latest FR0512: which years and which recipient it names. If the period covers {taxYear} and the recipient is correct, no new application is needed."
+      ],
+      [
+        "If the recipient was not on the list",
+        "Religious communities regain the right to support from {filingYear}. If your earlier application named another recipient or was rejected, file a new application for {taxYear} during the filing period."
+      ],
+      [
+        "If you need to change it",
+        "A new application for the same period replaces the previous one. An application already filed for {taxYear} can be corrected in EDS until {correction}: change the recipient, share or period. This is a correction deadline, not an extension for filing."
+      ],
+      [
+        "Where to see the result",
+        "In EDS notifications (Pranešimai) and in Mano VMI. Acceptance does not yet mean a transfer: VMI usually transfers support between {transferFrom} and {transferTo}."
+      ]
+    ],
+    "action": "Go to the helper steps"
+  },
+  "recipient": {
+    "title": "Recipient details for FR0512",
+    "intro": "The application uses the legal entity code. The name is kept in Lithuanian, as it is recorded in the register.",
+    "codeLabel": "Recipient code",
+    "nameLabel": "Recipient name",
+    "copyCode": "Copy the code",
+    "edsHint": "In EDS enter the code in the field Paramos gavėjo identifikacinis numeris (kodas) and check the name.",
+    "verify": "Before submitting, check that the recipient with this code is available in EDS for the {filingYear} campaign. If it is not on the list, write to the parish — we will work it out together.",
+    "search": "Recipient search on the VMI website"
+  },
+  "help": {
+    "title": "Whom your choice helps",
+    "intro": "The recipient is the Bukiškis Orthodox Parish of the Nativity of Christ: the house church of the former Bukiškis manor (second half of the 19th century) in the Vilnius district, rebuilt from ruins, where services have been held again since 2011, and the small community that maintains it. Support goes to the upkeep of the church and to letting parish life — services, shared meals, meetings, feasts — take place in dignified conditions.",
+    "statusLabels": {
+      "ongoing": "Ongoing needs",
+      "progress": "In progress",
+      "planned": "Project · planned",
+      "done": "Completed"
+    },
+    "projects": [
+      {
+        "id": "parish",
+        "title": "The church and parish life",
+        "text": "Heating, electricity, water and waste collection; care of the building and grounds; liturgical expenses; meals after services. These are the costs without which the church cannot be open every day."
+      },
+      {
+        "id": "kitchen",
+        "title": "The parish kitchen",
+        "text": "A small room where tea and coffee are made after services, along with meals and festive treats. The walls, work area and storage need to be put in order. Stage one prepares the room; stage two installs the new kitchen.",
+        "link": "Kitchen project page"
+      },
+      {
+        "id": "shelter",
+        "title": "Shelter with a storage room",
+        "text": "In August 2026 a tree brought down by a squall destroyed the parish outbuilding. The decision was made not merely to rebuild the storage but to build a covered shelter for gatherings after services, for families and children — with a storage room for equipment.",
+        "link": "Shelter project page"
+      }
+    ],
+    "budget": {
+      "label": "According to the project page on {asOf}",
+      "total": "Estimated cost",
+      "raised": "Raised so far",
+      "note": "The amounts are shown on the project pages and may be revised. Support allocated through GPM reaches the parish as a whole and is spent on current needs, not automatically on a particular project."
+    },
+    "conceptLabel": "Concept · projected result, not completed work",
+    "done": {
+      "title": "What has already been done",
+      "text": "The church building was repaired by 2007 and services have been held in it since 2011. In 2021–2026 the parish worked on the staircase, the turrets, the sanctuary, the roof and the interior — details and photographs are in the history section. The funds raised for the kitchen (according to the project page) allow its first stage to begin."
+    },
+    "appeal": {
+      "heading": "A word from the rector",
+      "paragraphs": [
+        "Dear friends, our church lives thanks to those who come to services, help with their hands and support the parish — often unnoticed by others.",
+        "Allocating a share of your tax costs you nothing personally, but for a small community it is tangible help: heating paid for in winter, a kitchen ready for feasts, an outbuilding rebuilt after the storm.",
+        "If you decide to direct your 1.2% to the parish — thank you. If you have questions, call or write: we will work it out together, but we will never ask for passwords or codes."
+      ],
+      "signature": "Fr Maksim Krutolevich, rector"
+    },
+    "contact": "Contact the parish",
+    "historyLink": "History of the church",
+    "nowLabel": "Now"
+  },
+  "donate": {
+    "title": "Donation by bank transfer",
+    "intro": "This is a separate way to help, unrelated to GPM. A transfer can be made from your own account at any time.",
+    "fields": {
+      "recipient": "Beneficiary",
+      "code": "Organisation code",
+      "bank": "Bank",
+      "iban": "Account · IBAN",
+      "bic": "BIC / SWIFT",
+      "purpose": "Payment reference"
+    },
+    "purposeExplain": "Donation to the parish",
+    "copyIban": "Copy IBAN",
+    "copyAll": "Copy all details",
+    "note": "Before confirming the transfer, check the beneficiary and IBAN in your bank. Fees and timing depend on the bank.",
+    "safety": "The parish never asks you to enter card details, banking passwords, Smart-ID codes or a personal identification code on the website."
+  },
+  "faq": {
+    "title": "Answers to your questions",
+    "intro": "Short answers to real difficulties. The search runs in your browser over the content of this page.",
+    "searchLabel": "Find an answer",
+    "searchPlaceholder": "For example: several recipients",
+    "noMatch": "No exact answer. See all the questions below or contact the parish.",
+    "showAll": "Show all questions",
+    "items": [
+      {
+        "q": "Do I have to pay anything extra?",
+        "a": "No. FR0512 allocates part of the income tax you have already paid. Nothing is debited from your account and your salary is not reduced. A bank transfer is a separate, voluntary way to help.",
+        "link": "basics"
+      },
+      {
+        "q": "What is the 1.2% calculated from?",
+        "a": "From the annual GPM for {taxYear} according to the return (or the tax withheld by the employer if no return is required), not from salary. VMI determines the exact base. The calculator only multiplies the amount entered by 0.012.",
+        "link": "calculator"
+      },
+      {
+        "q": "What if I don’t know my tax amount?",
+        "a": "Look at the annual GPM311 return for {taxYear} in EDS or the data in Mano VMI; your employer issues a statement of tax withheld. To get a sense of scale, the calculator has an “I don’t know my GPM amount” mode with teaching examples — it is not an estimate of your tax.",
+        "link": "calculator"
+      },
+      {
+        "q": "Does this apply to someone in my situation?",
+        "a": "If you are a permanent resident of Lithuania for tax purposes and GPM was calculated or withheld on your income in {taxYear} — yes, regardless of citizenship or age. If there was no taxable income and the tax is zero, there is nothing to allocate. If in doubt, check with VMI.",
+        "link": "basics"
+      },
+      {
+        "q": "Can I choose several recipients?",
+        "a": "Yes. Shares for recipients in this category must total no more than 1.2%. Separately and in addition you can allocate up to 0.6% to political organisations and up to 0.6% to trade unions. An amount below €3 to one recipient for a year is not transferred.",
+        "link": "steps"
+      },
+      {
+        "q": "Can I allocate support for several years?",
+        "a": "Yes. FR0512 includes a period: for the {filingYear} campaign the first tax year is {taxYear} and the last is no later than {lastTaxYear}. Such an application applies to all the years named, as long as the recipient remains eligible.",
+        "link": "steps"
+      },
+      {
+        "q": "Do I need to file every year?",
+        "a": "No, if a valid application covers the relevant year and the right recipient. If you named only one year, file again in the next campaign. A new application for the same period replaces the previous one.",
+        "link": "again"
+      },
+      {
+        "q": "How do I check an application I filed earlier?",
+        "a": "In EDS open Pateikti dokumentai, find the latest FR0512 and look at the recipient, share and years. An application for {taxYear} can be corrected until {correction}. This website cannot see your application.",
+        "link": "again"
+      },
+      {
+        "q": "What if the recipient cannot be found?",
+        "a": "Check that you are entering the code {code} without spaces and compare the name {name}. Do not choose a similar name of another organisation. VMI publishes recipient data; if the parish is not on the list, tell us and we will find out why.",
+        "link": "recipient"
+      },
+      {
+        "q": "How do I know the application was accepted?",
+        "a": "Only in EDS: in the document status and in notifications (Pranešimai). Acceptance does not yet mean a transfer — VMI usually transfers support between {transferFrom} and {transferTo}. If you must file GPM311 and did not file it on time, the support is not transferred.",
+        "link": "steps"
+      },
+      {
+        "q": "How does GPM differ from a bank transfer?",
+        "a": "The GPM share is part of tax already paid, transferred by VMI on your application. A bank transfer is your own money sent directly to the parish at any time. You can do both.",
+        "link": "donate"
+      },
+      {
+        "q": "Who can help me work it out?",
+        "a": "The parish — by phone or messenger: we will explain the steps, but we will not log in to your bank or EDS on your behalf and will not ask for passwords. Official explanations and advice come from VMI: the pages in the sources section and the VMI helpline.",
+        "link": "help"
+      }
+    ]
+  },
+  "sources": {
+    "title": "Official sources and verification",
+    "intro": "The section is based on VMI explanations and the Law on Charity and Sponsorship in the wording in force from 1 January {filingYear}. Where they differ, current VMI information prevails.",
+    "checked": "VMI information checked: {checked}. Text edited: {edited}. The date changes only after a new substantive review, not when the site is rebuilt.",
+    "law": "Amendment to the Law on Charity and Sponsorship: No. {lawNumber} of {lawDate}, TAR {lawRegister}, in force from {lawEffective}.",
+    "items": {
+      "rules": "VMI: allocating the GPM share, periods and recipient categories",
+      "changes2027": "VMI: legal changes from {filingYear} (religious communities and other recipients)",
+      "filing": "VMI: how to file FR0512 through EDS",
+      "gpm311": "VMI: FR0512 and the annual GPM311 return",
+      "correction": "VMI: filing and correcting FR0512 (2026 explanation, PDF)",
+      "recipients": "VMI: support recipient data",
+      "law": "Law on Charity and Sponsorship (TAR, editions)"
+    },
+    "disclaimer": "This section was prepared by the parish as information and is not an official VMI service."
+  },
+  "actions": {
+    "share": "Share",
+    "shared": "Link copied",
+    "shareTitle": "1.2% GPM — the Bukiškis parish guide",
+    "print": "Print the checklist",
+    "printNote": "Printable guide: steps, checklist and bank details. The application is still filed in EDS.",
+    "top": "Back to top"
+  },
+  "noJs": "All the text is available without JavaScript. The calculator, step mode and question search need JavaScript; without it all steps are shown at once.",
+  "standalone": "Standalone edition of the guide: hram.lt"
+}

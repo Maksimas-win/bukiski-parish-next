@@ -1,0 +1,471 @@
+{
+  "title": "1,2 % GPM — kaip skirti mokesčio dalį parapijai",
+  "description": "Kaip skirti iki 1,2 % gyventojų pajamų mokesčio (GPM) už {taxYear} m. per FR0512 VMI EDS sistemoje: trys scenarijai, skaičiuoklė, nuoseklus vedlys, atsakymai į klausimus ir Bukiškio parapijos rekvizitai.",
+  "eyebrow": "Lietuva · Pajamų mokesčio dalis · {filingYear} m. kampanija",
+  "hero": {
+    "title": [
+      "Suteikite paramai",
+      "prasmingą kryptį."
+    ],
+    "lead": "Iki 1,2 % jau sumokėto pajamų mokesčio galima skirti parapijai — be papildomų išlaidų. Čia paaiškiname, ką tai reiškia, kaip užpildyti FR0512 oficialioje VMI sistemoje ir kam padeda jūsų pasirinkimas.",
+    "figure": "1,2 %",
+    "figureNote": "erdvinis skaičius „1,2 %“ — mokesčio dalies simbolis",
+    "primary": "Pasirinkti savo scenarijų",
+    "secondary": "Apskaičiuoti sumą",
+    "caption": "Parapijos informacinis skyrius · Ne VMI paslauga · Prašymas teikiamas tik EDS"
+  },
+  "phase": {
+    "title": "Kampanijos būsena",
+    "before": {
+      "label": "Prašymų priėmimas dar neprasidėjo",
+      "text": "FR0512 prašymai už {taxYear} m. pajamas priimami nuo {start} iki {deadline}. Dabar tinkamas metas susipažinti, pasiruošti duomenis ir išsisaugoti atmintinę."
+    },
+    "during": {
+      "label": "Priimami prašymai",
+      "text": "Prašymas už {taxYear} m. pajamas teikiamas EDS iki {deadline} imtinai. Pasiruoškite pagal instrukciją žemiau ir pateikite prašymą oficialioje sistemoje.",
+      "action": "Atverti EDS (oficiali VMI sistema)"
+    },
+    "after": {
+      "label": "Teikimo laikotarpis baigėsi",
+      "text": "Pirminio prašymo už {taxYear} m. pajamas teikimo terminas baigėsi {deadline}. Jau pateikto prašymo tikslinimo sąlygas ir kitos kampanijos terminus tikrinkite VMI svetainėje — čia jie neskelbiami be patikros."
+    },
+    "verify": "Prieš teikdami patikrinkite gavėją EDS pagal kodą {code}: religinių bendruomenių teisė gauti šią paramą grąžinama nuo {filingYear} m., o parapijos buvimas gavėjų sąraše patvirtinamas tik VMI sistemoje."
+  },
+  "facts": [
+    [
+      "Mokestiniai metai",
+      "{taxYear}"
+    ],
+    [
+      "Teikimo laikotarpis",
+      "{start} — {deadline}"
+    ],
+    [
+      "Forma",
+      "FR0512 EDS sistemoje"
+    ],
+    [
+      "Galima skirti",
+      "iki {lastTaxYear} m."
+    ]
+  ],
+  "scenarios": {
+    "title": "Nuo ko pradėti?",
+    "intro": "Pasirinkite, kas artimiausia jūsų situacijai — skyrius atsivers reikiamoje vietoje.",
+    "items": [
+      {
+        "id": "learn",
+        "title": "Noriu suprasti",
+        "text": "Kas yra GPM dalis, kas gali ją skirti ir kuo ji skiriasi nuo aukos.",
+        "action": "Paaiškinti paprastai",
+        "target": "basics"
+      },
+      {
+        "id": "first",
+        "title": "Teikiu pirmą kartą",
+        "text": "Nuoseklus vedlys: prisijungimas prie EDS, forma FR0512, gavėjo pasirinkimas, dalis ir laikotarpis, patikra.",
+        "action": "Atverti vedlį",
+        "target": "steps"
+      },
+      {
+        "id": "again",
+        "title": "Jau esu teikęs anksčiau",
+        "text": "Kaip patikrinti galiojantį prašymą, ar reikia teikti iš naujo ir kaip jį patikslinti.",
+        "action": "Sužinoti, ką daryti",
+        "target": "again"
+      }
+    ]
+  },
+  "basics": {
+    "title": "Svarbiausia per minutę",
+    "intro": "GPM — gyventojų pajamų mokestis. Įstatymas leidžia paprašyti VMI pervesti dalį jau sumokėto mokesčio pasirinktam gavėjui. Tai nėra naujas mokėjimas ir ne papildomas atskaitymas iš atlyginimo.",
+    "items": [
+      [
+        "Ne nuo atlyginimo",
+        "Dalis skaičiuojama nuo metinės GPM sumos, o ne nuo pajamų. Pavyzdys: 1 000 € GPM × 0,012 = 12 €."
+      ],
+      [
+        "Be priemokos",
+        "Pinigai jau sumokėti valstybei. Jūs tik nusprendžiate, kam skirti iki 1,2 % iš jų. Jei prašymo nėra, visa suma lieka biudžete."
+      ],
+      [
+        "Prašymas — tik EDS",
+        "Šis skyrius padeda pasiruošti. Forma FR0512 pildoma oficialioje VMI deklaravimo sistemoje, ne parapijos svetainėje."
+      ],
+      [
+        "Nepainiokite metų",
+        "{filingYear} m. kampanijoje kalbama apie mokestį nuo {taxYear} m. pajamų. Teikimo laikotarpis: {start} — {deadline}."
+      ]
+    ],
+    "who": {
+      "title": "Kam tai tinka",
+      "text": "Nuolatiniams Lietuvos gyventojams mokesčių prasme, kurie {taxYear} m. gavo GPM apmokestinamų pajamų: atlyginimą, individualios veiklos ar kitų apmokestinamų pajamų. Vien pilietybė šios teisės nesuteikia ir neatima. Pensininkas ar laikinai nedirbantis žmogus gali dalyvauti, jei per metus nuo jo pajamų buvo apskaičiuotas ar išskaičiuotas GPM; jei mokestis lygus nuliui, nėra ko skirti. Savo situaciją galima pasitikslinti VMI."
+    },
+    "difference": {
+      "title": "Kuo tai skiriasi nuo aukos",
+      "items": [
+        [
+          "GPM dalis",
+          "Jau sumokėto mokesčio dalis. Perveda VMI, paprastai nuo {transferFrom} iki {transferTo}. Teikiama FR0512 EDS sistemoje. Jūsų piniginė nesikeičia."
+        ],
+        [
+          "Banko auka",
+          "Jūsų nuosavos lėšos, pervestos į parapijos sąskaitą bet kuriuo metu. Rekvizitai — atskirame bloke žemiau. Vienas būdas neatmeta kito."
+        ]
+      ]
+    }
+  },
+  "calculator": {
+    "title": "Kiek tai pinigais?",
+    "intro": "Įveskite pajamų mokesčio (GPM) sumą už {taxYear} m. Tai ne atlyginimas: mokesčio sumą rasite metinėje deklaracijoje GPM311 EDS sistemoje, darbdavio pažymoje arba Mano VMI. Skaičiuojama jūsų naršyklėje ir niekur nesiunčiama.",
+    "inputLabel": "GPM suma už {taxYear} m., €",
+    "inputHint": "Pavyzdžiui, 1 000 arba 1 850,50",
+    "unknownToggle": "Nežinau savo GPM sumos",
+    "unknownIntro": "Tai mokomieji pavyzdžiai, o ne jūsų mokesčio įvertis. Tikrąją sumą nustato VMI; jūsų gali būti didesnė arba mažesnė.",
+    "examples": [
+      {
+        "label": "Sąlyginis pavyzdys A",
+        "amount": "600"
+      },
+      {
+        "label": "Sąlyginis pavyzdys B",
+        "amount": "1500"
+      },
+      {
+        "label": "Sąlyginis pavyzdys C",
+        "amount": "3000"
+      }
+    ],
+    "exampleBadge": "mokomasis pavyzdys",
+    "peopleLabel": "Dalyvių pavyzdyje",
+    "peopleHint": "Grupės scenarijus — iliustracija, o ne surinktų lėšų skaitiklis.",
+    "result": "1,2 % nuo nurodytos sumos",
+    "formula": "Formulė: GPM × 0,012",
+    "formulaLine": "{amount} € × 0,012 = {result} €",
+    "together": "Kartu šiame pavyzdyje ({people} žm. su tokia pat suma)",
+    "approx": "Orientacinis skaičiavimas. Galutinę sumą apskaičiuoja ir perveda VMI.",
+    "belowMinimum": "Mažesnė kaip 3 € suma vienam gavėjui už mokestinius metus nepervedama. Šiame pavyzdyje kiekvieno dalyvio dalis nesiekia ribos, todėl pervestina suma — 0 €.",
+    "minimumNote": "3 € riba taikoma kiekvieno žmogaus daliai atskirai: kelių dalyvių mažos sumos nesumuojamos, kad ją pasiektų.",
+    "invalid": "Įveskite sumą nuo 0 iki 100 000 000 su ne daugiau kaip dviem skaitmenimis po kablelio.",
+    "local": "Visi skaičiavimai atliekami vietoje. Įvestos reikšmės nesaugomos ir neperduodamos."
+  },
+  "steps": {
+    "title": "FR0512 vedlys",
+    "intro": "Penki trumpi žingsniai. EDS punktų pavadinimai pateikti lietuviškai, kaip sistemoje. Svetainė tik padeda pasiruošti: prašymas teikiamas oficialioje EDS.",
+    "progress": "{n} žingsnis iš {total}",
+    "prev": "Atgal",
+    "next": "Toliau",
+    "finish": "Į kontrolinį sąrašą",
+    "showAll": "Rodyti visus žingsnius iš karto",
+    "showOne": "Rodyti po vieną žingsnį",
+    "whereLabel": "Kur",
+    "edsLabel": "EDS sistemoje",
+    "copyCode": "Kopijuoti parapijos kodą",
+    "copied": "Kodas {code} nukopijuotas",
+    "openEds": "Atverti EDS",
+    "diagramNote": "Schema — mokomoji iliustracija, ne VMI ekranas. EDS sąsaja gali skirtis.",
+    "items": [
+      {
+        "title": "Prisijunkite prie EDS",
+        "action": "Atverkite oficialią VMI deklaravimo sistemą ir prisijunkite įprastu būdu: per banką, Smart-ID, mobilųjį parašą ar kitą priemonę, kurią siūlo pati sistema.",
+        "where": "deklaravimas.vmi.lt — tik VMI svetainėje. Parapijos svetainė neprašo jūsų slaptažodžių, Smart-ID, asmens kodo ar mokesčių dokumentų.",
+        "eds": [
+          [
+            "Prisijungti",
+            "Prisijungimas prie sistemos"
+          ],
+          [
+            "Elektroninio deklaravimo sistema (EDS)",
+            "Oficiali VMI deklaravimo sistema"
+          ]
+        ]
+      },
+      {
+        "title": "Raskite formą FR0512",
+        "action": "Meniu pasirinkite formos pildymą ir suraskite prašymą skirti paramą. Forma atsiveria elektroniniame vedlyje.",
+        "where": "Pagrindinis EDS meniu po prisijungimo.",
+        "eds": [
+          [
+            "Deklaravimas",
+            "Deklaracijų ir prašymų skyrius"
+          ],
+          [
+            "Pildyti formą",
+            "Naujos formos pildymas"
+          ],
+          [
+            "Dažniausiai pildomos formos",
+            "Populiariausių formų sąrašas"
+          ],
+          [
+            "Prašymas skirti paramą (FR0512)",
+            "Prašymo forma mokesčio daliai skirti"
+          ]
+        ]
+      },
+      {
+        "title": "Pasirinkite gavėją",
+        "action": "Įveskite gavėjo kodą ir patikrinkite visą pavadinimą. Bukiškio parapija: {code} — {name}. Jei gavėjas nerandamas, nerinkite panašaus pavadinimo: patikrinkite jį VMI duomenyse arba susisiekite su parapija.",
+        "where": "Prašymo dalis su gavėjo duomenimis.",
+        "eds": [
+          [
+            "Paramos gavėjo identifikacinis numeris (kodas)",
+            "Juridinio asmens kodas"
+          ],
+          [
+            "Paramos gavėjo pavadinimas",
+            "Gavėjo pavadinimas, kaip registre"
+          ]
+        ],
+        "copy": true
+      },
+      {
+        "title": "Nurodykite dalį ir laikotarpį",
+        "action": "Įveskite dalį iki 1,2 % (galima mažiau, jei dalį skiriate kitiems tos pačios kategorijos gavėjams). Nurodykite mokestinį laikotarpį: {filingYear} m. kampanijoje pirmasis — {taxYear}. Galima skirti iš karto iki {lastTaxYear} m. imtinai, tada prašymo kasmet teikti nereikia.",
+        "where": "Dalies ir laikotarpio laukai tame pačiame prašyme.",
+        "eds": [
+          [
+            "Mokesčio dalies dydis (procentais)",
+            "Skiriama dalis procentais"
+          ],
+          [
+            "Mokestinis laikotarpis",
+            "Metai, už kuriuos skiriama dalis"
+          ],
+          [
+            "Prašymą pateikiu už … iki …",
+            "Skyrimo laikotarpis keleriems metams"
+          ]
+        ]
+      },
+      {
+        "title": "Patikrinkite ir pateikite",
+        "action": "Dar kartą patikrinkite kodą, pavadinimą, dalį ir metus, tada pateikite prašymą. Priėmimo patvirtinimas rodomas tik EDS — dokumento būsenoje ir pranešimuose. Paspaudimai šioje svetainėje nieko VMI nesiunčia.",
+        "where": "Pateikimo mygtukas EDS, tada pateiktų dokumentų sąrašas.",
+        "eds": [
+          [
+            "Pateikti",
+            "Prašymo išsiuntimas"
+          ],
+          [
+            "Pateikti dokumentai",
+            "Pateiktų dokumentų sąrašas ir būsena"
+          ],
+          [
+            "Pranešimai",
+            "VMI pranešimai jums"
+          ]
+        ]
+      }
+    ],
+    "checklist": {
+      "title": "Prieš pateikdami patikrinkite",
+      "items": [
+        "Gavėjo kodas {code} ir pavadinimas {name} sutampa su tuo, ką rodo EDS.",
+        "Dalis ne didesnė kaip 1,2 % (bendrai visiems šios kategorijos gavėjams).",
+        "Pirmasis mokestinis laikotarpis — {taxYear}; paskutinis — ne vėliau kaip {lastTaxYear}.",
+        "Jei privalote teikti metinę deklaraciją GPM311, ji pateikta laiku — kitaip parama nepervedama.",
+        "Pateikus prašymo būsena matoma EDS: Pateikti dokumentai ir Pranešimai. Lėšas VMI perveda vėliau, paprastai nuo {transferFrom} iki {transferTo}."
+      ],
+      "note": "Kontrolinis sąrašas skirtas savikontrolei. Parapijos svetainė jūsų prašymo nemato ir negali patvirtinti jo priėmimo."
+    }
+  },
+  "again": {
+    "title": "Jei jau esate teikę prašymą",
+    "intro": "Kelerių metų prašymas paprastai galioja toliau, bet jį verta patikrinti — ypač jei praėjusiais metais gavėjas buvo neprieinamas.",
+    "items": [
+      [
+        "Patikrinkite galiojimą",
+        "EDS atverkite pateiktus dokumentus (Pateikti dokumentai) ir raskite paskutinį FR0512: kokie metai ir koks gavėjas jame nurodyti. Jei laikotarpis apima {taxYear} m. ir gavėjas teisingas, naujo prašymo nereikia."
+      ],
+      [
+        "Jei gavėjo nebuvo sąraše",
+        "Religinių bendruomenių teisė gauti paramą grąžinama nuo {filingYear} m. Jei ankstesniame prašyme nurodėte kitą gavėją arba jis buvo atmestas, pateikite naują prašymą už {taxYear} m. teikimo laikotarpiu."
+      ],
+      [
+        "Jei reikia pakeisti",
+        "Naujas prašymas už tą patį laikotarpį pakeičia ankstesnį. Jau pateiktą prašymą už {taxYear} m. galima patikslinti EDS iki {correction}: pakeisti gavėją, dalį ar laikotarpį. Tai tikslinimo, o ne pratęstas teikimo terminas."
+      ],
+      [
+        "Kur matyti rezultatą",
+        "EDS pranešimuose (Pranešimai) ir Mano VMI. Prašymo priėmimas dar nereiškia pervedimo: paramą VMI perveda paprastai nuo {transferFrom} iki {transferTo}."
+      ]
+    ],
+    "action": "Pereiti prie vedlio žingsnių"
+  },
+  "recipient": {
+    "title": "Gavėjo duomenys FR0512 prašymui",
+    "intro": "Prašyme nurodomas juridinio asmens kodas. Pavadinimas — toks, koks įrašytas registre.",
+    "codeLabel": "Gavėjo kodas",
+    "nameLabel": "Gavėjo pavadinimas",
+    "copyCode": "Kopijuoti kodą",
+    "edsHint": "EDS įveskite kodą į lauką Paramos gavėjo identifikacinis numeris (kodas) ir patikrinkite pavadinimą.",
+    "verify": "Prieš pateikdami patikrinkite, ar gavėjas šiuo kodu prieinamas EDS {filingYear} m. kampanijai. Jei jo sąraše nėra, parašykite parapijai — išsiaiškinsime kartu.",
+    "search": "Gavėjų paieška VMI svetainėje"
+  },
+  "help": {
+    "title": "Kam padeda jūsų pasirinkimas",
+    "intro": "Gavėjas — Bukiškio stačiatikių Kristaus Gimimo parapija: buvusio Bukiškių dvaro namų cerkvė (XIX a. antroji pusė) Vilniaus rajone, atkurta iš griuvėsių, kurioje nuo 2011 m. vėl vyksta pamaldos, ir nedidelė bendruomenė, kuri ją išlaiko. Parama skiriama cerkvės išlaikymui ir tam, kad parapijos gyvenimas — pamaldos, agapės, susitikimai, šventės — vyktų orioje aplinkoje.",
+    "statusLabels": {
+      "ongoing": "Nuolatiniai poreikiai",
+      "progress": "Vykdoma",
+      "planned": "Projektas · planuojama",
+      "done": "Atlikta"
+    },
+    "projects": [
+      {
+        "id": "parish",
+        "title": "Cerkvė ir parapijos gyvenimas",
+        "text": "Šildymas, elektra, vanduo ir atliekų išvežimas; pastato ir teritorijos priežiūra; liturginės išlaidos; agapės po pamaldų. Tai išlaidos, be kurių cerkvė negali būti atvira kasdien."
+      },
+      {
+        "id": "kitchen",
+        "title": "Parapijos virtuvė",
+        "text": "Nedidelė patalpa, kurioje po pamaldų ruošiama arbata ir kava, vaišės ir šventiniai pietūs. Reikia sutvarkyti sienas, darbo zoną ir laikymą. Pirmas etapas — patalpos paruošimas, antras — naujos virtuvės įrengimas.",
+        "link": "Virtuvės projekto puslapis"
+      },
+      {
+        "id": "shelter",
+        "title": "Pavėsinė su ūkine patalpa",
+        "text": "2026 m. rugpjūtį per škvalą nuvirtęs medis sunaikino parapijos ūkinį statinį. Nuspręsta ne tik atkurti sandėlį, bet pastatyti dengtą pavėsinę susitikimams po pamaldų, šeimoms ir vaikams — su ūkine patalpa inventoriui.",
+        "link": "Pavėsinės projekto puslapis"
+      }
+    ],
+    "budget": {
+      "label": "Projekto puslapio duomenimis {asOf}",
+      "total": "Orientacinė vertė",
+      "raised": "Jau surinkta",
+      "note": "Sumos nurodytos projektų puslapiuose ir gali būti tikslinamos. Per GPM skirta parama ateina parapijai kaip visumai ir paskirstoma pagal esamus poreikius, o ne automatiškai konkrečiam projektui."
+    },
+    "conceptLabel": "Koncepcija · projektuojamas rezultatas, ne atlikti darbai",
+    "done": {
+      "title": "Kas jau padaryta",
+      "text": "Cerkvės pastatas suremontuotas iki 2007 m., nuo 2011 m. jame vyksta pamaldos. 2021–2026 m. parapija tvarkė laiptus, bokštelius, altorių, stogą ir interjerą — išsamiau ir nuotraukos istorijos skyriuje. Virtuvei surinktos lėšos (projekto puslapio duomenimis) leidžia pradėti pirmąjį jos etapą."
+    },
+    "appeal": {
+      "heading": "Klebono žodis",
+      "paragraphs": [
+        "Mieli bičiuliai! Mūsų cerkvė gyvuoja dėl tų, kurie ateina į pamaldas, padeda rankomis ir remia parapiją — dažnai nepastebimai kitiems.",
+        "Mokesčio dalies skyrimas jums asmeniškai nieko nekainuoja, tačiau nedidelei bendruomenei tai apčiuopiama pagalba: apmokėtas šildymas žiemą, šventėms paruošta virtuvė, po audros atkurtas ūkinis statinys.",
+        "Jei nuspręsite skirti savo 1,2 % parapijai — ačiū. Jei kyla klausimų, skambinkite ar rašykite: išsiaiškinsime kartu, bet slaptažodžių ar kodų niekada neprašysime."
+      ],
+      "signature": "kun. Maksim Krutolevič, klebonas"
+    },
+    "contact": "Susisiekti su parapija",
+    "historyLink": "Cerkvės istorija",
+    "nowLabel": "Dabar"
+  },
+  "donate": {
+    "title": "Auka banko pavedimu",
+    "intro": "Tai atskiras pagalbos būdas, nesusijęs su GPM. Pavedimą galima atlikti bet kuriuo metu iš savo sąskaitos.",
+    "fields": {
+      "recipient": "Gavėjas",
+      "code": "Juridinio asmens kodas",
+      "bank": "Bankas",
+      "iban": "Sąskaita · IBAN",
+      "bic": "BIC / SWIFT",
+      "purpose": "Mokėjimo paskirtis"
+    },
+    "purposeExplain": "Auka parapijai",
+    "copyIban": "Kopijuoti IBAN",
+    "copyAll": "Kopijuoti visus rekvizitus",
+    "note": "Prieš patvirtindami pavedimą patikrinkite gavėją ir IBAN savo banke. Mokesčiai ir terminai priklauso nuo banko.",
+    "safety": "Parapija niekada neprašo svetainėje įvesti kortelės duomenų, banko slaptažodžių, Smart-ID kodų ar asmens kodo."
+  },
+  "faq": {
+    "title": "Atsakymai į klausimus",
+    "intro": "Trumpi atsakymai į tikrus sunkumus. Paieška veikia naršyklėje pagal šio puslapio medžiagą.",
+    "searchLabel": "Rasti atsakymą",
+    "searchPlaceholder": "Pavyzdžiui: keli gavėjai",
+    "noMatch": "Tikslaus atsakymo nėra. Peržiūrėkite visus klausimus žemiau arba susisiekite su parapija.",
+    "showAll": "Rodyti visus klausimus",
+    "items": [
+      {
+        "q": "Ar reikia mokėti papildomai?",
+        "a": "Ne. FR0512 skiria jau sumokėto pajamų mokesčio dalį. Iš jūsų sąskaitos niekas nenurašoma, atlyginimas nemažėja. Banko pavedimas — atskiras, savanoriškas pagalbos būdas.",
+        "link": "basics"
+      },
+      {
+        "q": "Nuo kokios sumos skaičiuojami 1,2 %?",
+        "a": "Nuo metinės GPM sumos už {taxYear} m. pagal deklaraciją (arba darbdavio išskaičiuotos, jei deklaracijos teikti nereikia), ne nuo atlyginimo. Tikslią bazę nustato VMI. Skaičiuoklė tik daugina įvestą sumą iš 0,012.",
+        "link": "calculator"
+      },
+      {
+        "q": "Ką daryti, jei nežinau mokesčio sumos?",
+        "a": "Pažiūrėkite metinę deklaraciją GPM311 už {taxYear} m. EDS arba duomenis Mano VMI; darbdavys išduoda pažymą apie išskaičiuotą mokestį. Dydžiui suprasti skaičiuoklėje yra režimas „Nežinau savo GPM sumos“ su mokomaisiais pavyzdžiais — tai ne jūsų mokesčio įvertis.",
+        "link": "calculator"
+      },
+      {
+        "q": "Ar tai tinka mano situacijai?",
+        "a": "Jei esate nuolatinis Lietuvos gyventojas mokesčių prasme ir {taxYear} m. nuo jūsų pajamų apskaičiuotas ar išskaičiuotas GPM — taip, nepriklausomai nuo pilietybės ir amžiaus. Jei apmokestinamų pajamų nebuvo ir mokestis lygus nuliui, nėra ko skirti. Abejojate — pasitikslinkite VMI.",
+        "link": "basics"
+      },
+      {
+        "q": "Ar galima pasirinkti kelis gavėjus?",
+        "a": "Taip. Šios kategorijos gavėjams skiriamos dalys kartu negali viršyti 1,2 %. Atskirai ir papildomai galima skirti iki 0,6 % politinėms organizacijoms ir iki 0,6 % profesinėms sąjungoms. Mažesnė kaip 3 € suma vienam gavėjui už metus nepervedama.",
+        "link": "steps"
+      },
+      {
+        "q": "Ar galima skirti paramą keleriems metams?",
+        "a": "Taip. FR0512 nurodomas laikotarpis: {filingYear} m. kampanijoje pirmieji mokestiniai metai — {taxYear}, paskutiniai — ne vėliau kaip {lastTaxYear}. Toks prašymas galioja visus nurodytus metus, kol gavėjas turi teisę gauti paramą.",
+        "link": "steps"
+      },
+      {
+        "q": "Ar prašymą reikia teikti kasmet?",
+        "a": "Ne, jei galiojantis prašymas apima reikiamus metus ir teisingą gavėją. Jei nurodėte tik vienerius metus — teikite vėl kitoje kampanijoje. Naujas prašymas už tą patį laikotarpį pakeičia ankstesnį.",
+        "link": "again"
+      },
+      {
+        "q": "Kaip patikrinti anksčiau pateiktą prašymą?",
+        "a": "EDS atverkite Pateikti dokumentai, raskite paskutinį FR0512 ir pažiūrėkite gavėją, dalį ir metus. Prašymą už {taxYear} m. patikslinti galima iki {correction}. Ši svetainė jūsų prašymo nemato.",
+        "link": "again"
+      },
+      {
+        "q": "Ką daryti, jei gavėjas nerandamas?",
+        "a": "Patikrinkite, ar kodą {code} įvedate be tarpų, ir sutikrinkite pavadinimą {name}. Nerinkite panašaus kitos organizacijos pavadinimo. Gavėjų duomenis skelbia VMI; jei parapijos sąraše nėra — praneškite mums, išsiaiškinsime priežastį.",
+        "link": "recipient"
+      },
+      {
+        "q": "Kaip sužinoti, kad prašymas priimtas?",
+        "a": "Tik EDS: dokumento būsenoje ir pranešimuose (Pranešimai). Prašymo priėmimas dar nereiškia pervedimo — paramą VMI perveda paprastai nuo {transferFrom} iki {transferTo}. Jei privalote teikti GPM311 ir jos laiku nepateikėte, parama nepervedama.",
+        "link": "steps"
+      },
+      {
+        "q": "Kuo GPM skiriasi nuo pavedimo į banko sąskaitą?",
+        "a": "GPM dalis — jau sumokėto mokesčio dalis, kurią pagal jūsų prašymą perveda VMI. Banko pavedimas — jūsų nuosavi pinigai, išsiųsti parapijai tiesiogiai bet kuriuo metu. Galima daryti ir viena, ir kita.",
+        "link": "donate"
+      },
+      {
+        "q": "Kas gali padėti išsiaiškinti?",
+        "a": "Parapija — telefonu ar žinute: paaiškinsime veiksmų tvarką, bet neprisijungsime prie banko ar EDS jūsų vardu ir neprašysime slaptažodžių. Oficialius išaiškinimus ir konsultacijas teikia VMI: puslapiai šaltinių skyriuje ir VMI konsultacijų telefonas.",
+        "link": "help"
+      }
+    ]
+  },
+  "sources": {
+    "title": "Oficialūs šaltiniai ir patikra",
+    "intro": "Skyriaus pagrindas — VMI išaiškinimai ir Labdaros ir paramos įstatymo redakcija, galiojanti nuo {filingYear} m. sausio 1 d. Esant neatitikimų, pirmenybė teikiama aktualiai VMI informacijai.",
+    "checked": "VMI duomenys patikrinti: {checked}. Teksto redakcija: {edited}. Data atnaujinama tik po naujos turinio patikros, o ne techninio svetainės perrinkimo metu.",
+    "law": "Labdaros ir paramos įstatymo pakeitimas: Nr. {lawNumber}, priimtas {lawDate}, TAR {lawRegister}, įsigalioja {lawEffective}.",
+    "items": {
+      "rules": "VMI: GPM dalies skyrimas, laikotarpiai ir gavėjų kategorijos",
+      "changes2027": "VMI: įstatymo pakeitimai nuo {filingYear} m. (religinės bendruomenės ir kiti gavėjai)",
+      "filing": "VMI: kaip pateikti FR0512 per EDS",
+      "gpm311": "VMI: FR0512 ir metinė deklaracija GPM311",
+      "correction": "VMI: FR0512 pateikimas ir tikslinimas (2026 m. paaiškinimas, PDF)",
+      "recipients": "VMI: paramos gavėjų duomenys",
+      "law": "Labdaros ir paramos įstatymas (TAR, redakcijos)"
+    },
+    "disclaimer": "Skyrių parapija parengė kaip informacinę pagalbą; tai nėra oficiali VMI paslauga."
+  },
+  "actions": {
+    "share": "Dalintis",
+    "shared": "Nuoroda nukopijuota",
+    "shareTitle": "1,2 % GPM — Bukiškio parapijos instrukcija",
+    "print": "Spausdinti atmintinę",
+    "printNote": "Spausdinama atmintinė: žingsniai, kontrolinis sąrašas ir rekvizitai. Prašymas vis tiek teikiamas EDS.",
+    "top": "Į pradžią"
+  },
+  "noJs": "Visas tekstas prieinamas be JavaScript. Skaičiuoklė, žingsnių režimas ir klausimų paieška veikia įjungus JavaScript; be jo visi žingsniai rodomi iš karto.",
+  "standalone": "Atskira gido versija: hram.lt"
+}

@@ -1,0 +1,103 @@
+{
+  "_comment": "Single place for every GPM figure shown on /<lang>/gpm.html. Texts live in content/gpm/<lang>.json. Dates are Vilnius calendar dates. Change a period or a requisite here, never in the six text files. The two *Verified flags are owner statements, not UI switches: they stay false until the owner confirms the fact behind them.",
+  "campaign": {
+    "taxYear": 2026,
+    "filingYear": 2027,
+    "filingStart": "2027-01-01",
+    "filingDeadline": "2027-05-03",
+    "correctionDeadline": "2027-06-30",
+    "lastTaxYear": 2030,
+    "transferFrom": "2027-07-01",
+    "transferTo": "2027-11-15",
+    "maxShare": 1.2,
+    "minimumTransferCents": 300,
+    "recipientVerified": false,
+    "gpmBankAccountVerified": false
+  },
+  "review": {
+    "sourcesCheckedOn": "2026-10-05",
+    "editedOn": "2026-10-23",
+    "law": {
+      "number": "XV-785",
+      "adopted": "2026-04-07",
+      "register": "2026-05832",
+      "effective": "2027-01-01"
+    }
+  },
+  "links": {
+    "eds": "https://deklaravimas.vmi.lt/",
+    "edsSelfService": "https://www.vmi.lt/evmi/mano-vmi",
+    "recipientSearch": "https://www.vmi.lt/evmi/paramos-gaveju-ir-politiniu-organizaciju-duomenys",
+    "standalone": "https://hram.lt/",
+    "kitchen": "https://maksimas-win.github.io/bukiskis-virtuve/",
+    "shelter": "https://maksimas-win.github.io/bukiskis-pavesine/"
+  },
+  "bank": {
+    "name": "AB SEB bankas",
+    "bic": "CBVILT2X",
+    "purpose": "Auka parapijai"
+  },
+  "sources": [
+    {
+      "id": "rules",
+      "url": "https://www.vmi.lt/evmi/paramos-skyrimas-34-str.-1"
+    },
+    {
+      "id": "changes2027",
+      "url": "https://www.vmi.lt/evmi/labdaros-ir-paramos-istatymo-pakeitimai-nuo-2027-m."
+    },
+    {
+      "id": "filing",
+      "url": "https://www.vmi.lt/evmi/kaip-galiu-paskirti-pajamu-mokescio-dali-pasirinktam-paramos-gavejui-ir-/-ar-politinei-organizacijai"
+    },
+    {
+      "id": "gpm311",
+      "url": "https://www.vmi.lt/evmi/ar-kartu-su-prasymu-fr0512-privalau-pateikti-metine-pajam%C5%B3-mokescio-deklaracija-gpm311"
+    },
+    {
+      "id": "correction",
+      "url": "https://www.vmi.lt/evmi/documents/20142/737112/R-780.pdf"
+    },
+    {
+      "id": "recipients",
+      "url": "https://www.vmi.lt/evmi/paramos-gaveju-ir-politiniu-organizaciju-duomenys"
+    },
+    {
+      "id": "law",
+      "url": "https://www.e-tar.lt/portal/lt/legalActEditions/TAR.C0FF21832A85"
+    }
+  ],
+  "projects": [
+    {
+      "id": "parish",
+      "status": "ongoing",
+      "emblem": "church"
+    },
+    {
+      "id": "kitchen",
+      "status": "planned",
+      "emblem": "house",
+      "link": "kitchen",
+      "image": "/assets/img/gpm/kitchen-concept.webp",
+      "budget": {
+        "total": 6200,
+        "raised": 1500
+      },
+      "now": "/assets/img/gpm/kitchen-now.webp"
+    },
+    {
+      "id": "shelter",
+      "status": "planned",
+      "emblem": "anvil",
+      "link": "shelter",
+      "image": "/assets/img/gpm/shelter-concept.webp",
+      "budget": {
+        "total": 6100,
+        "raised": 1300
+      },
+      "now": "/assets/img/gpm/shelter-site.webp"
+    }
+  ],
+  "_budgetNote": "Figures copied from the owner's project pages (git commit of 2026-10-21). Update budgetAsOf together with the numbers.",
+  "budgetAsOf": "2026-10-21"
+}

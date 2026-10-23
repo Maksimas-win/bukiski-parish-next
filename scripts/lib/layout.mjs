@@ -21,7 +21,7 @@ export function contentSecurityPolicy(site) {
 }
 
 const NAVIGATION = ['schedule', 'history', 'sacraments', 'library', 'notes', 'contacts'];
-const FOOTER_NAVIGATION = ['schedule', 'notes', 'sacraments', 'gallery', 'support', 'news', 'library', 'privacy'];
+const FOOTER_NAVIGATION = ['schedule', 'notes', 'sacraments', 'gallery', 'support', 'gpm', 'news', 'library', 'privacy'];
 const OG_LOCALES = { ru: 'ru_RU', lt: 'lt_LT', en: 'en_GB', pl: 'pl_PL', de: 'de_DE', uk: 'uk_UA' };
 
 /** Every site language, each in its own name, linking to this page in that language. */

@@ -20,6 +20,7 @@
 - Служба, которой нет в календаре (или стоит без времени) → `content/schedule-additions.json`. Лучше всё же поставить службу с временем в Google-календаре: тогда она появится и на .org.
 - Фотографии → `content/photos.json` и папка `assets/img/parish/`.
 - Ответы помощника на сайте → `assets/js/assistant/knowledge.js` (и такой же файл в репозитории .org).
+- Раздел «1,2 % GPM» (сроки кампании, год, дата проверки VMI, суммы проектов) → `content/gpm/config.json`; тексты шести языков → `content/gpm/<язык>.json`. Подробнее — `docs/EDITING.md`, раздел «1,2 % GPM».
 
 ## Если пришло письмо от GitHub
 

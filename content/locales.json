@@ -136,8 +136,8 @@
     "recipient": "Получатель",
     "bank": "Банковский счёт",
     "orgCode": "Код организации",
-    "gpm": "Информация о 1,2 % GPM",
-    "gpmNote": "Условия и сроки проверяйте на сайте VMI. Исходный приходской гид сохранён отдельно.",
+    "gpm": "1,2 % GPM",
+    "gpmNote": "Часть уже уплаченного подоходного налога можно направить приходу. Калькулятор, пошаговый помощник по FR0512 и ответы на вопросы — в отдельном разделе.",
     "privacyIntro": "Сайт не использует аналитику, рекламные пиксели и встраиваемые карты. Все основные материалы доступны без регистрации.",
     "privacyItems": [
       [
@@ -346,7 +346,8 @@
     "gpmTextEdition": "Здесь сохранена текстовая версия приходского гида. Калькулятор, пошаговая инструкция и поиск ответов доступны на bukiski-hram.org.",
     "gpmInteractiveLink": "Открыть интерактивный гид и калькулятор",
     "storyEditorialTitle": "Примечание редакции сайта",
-    "storyEditorialNote": "Исследование публикуется в авторской редакции; редакция сайта в текст не вмешивалась. Две официальные литовские записи дополняют авторскую хронологию: Регистр культурных ценностей Литвы (код 32784) датирует ремонт здания 2007 годом и по-прежнему именует его церковью Покрова Божией Матери, а справка Вильнюсского районного самоуправления относит восстановление храма к 2007 году и называет среди попечителей, наряду с митрополитом Хризостомом, католического архиепископа Вильнюсского кардинала Аудриса Юозаса Бачкиса. Точная дата и чин освящения 2011 года в доступных нам документах не указаны. Подробности и ссылки на источники — на странице истории храма."
+    "storyEditorialNote": "Исследование публикуется в авторской редакции; редакция сайта в текст не вмешивалась. Две официальные литовские записи дополняют авторскую хронологию: Регистр культурных ценностей Литвы (код 32784) датирует ремонт здания 2007 годом и по-прежнему именует его церковью Покрова Божией Матери, а справка Вильнюсского районного самоуправления относит восстановление храма к 2007 году и называет среди попечителей, наряду с митрополитом Хризостомом, католического архиепископа Вильнюсского кардинала Аудриса Юозаса Бачкиса. Точная дата и чин освящения 2011 года в доступных нам документах не указаны. Подробности и ссылки на источники — на странице истории храма.",
+    "gpmOpen": "Открыть раздел о 1,2 % GPM"
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -485,8 +486,8 @@
     "recipient": "Gavėjas",
     "bank": "Banko sąskaita",
     "orgCode": "Organizacijos kodas",
-    "gpm": "Informacija apie 1,2 % GPM",
-    "gpmNote": "Sąlygas ir terminus tikrinkite VMI svetainėje. Ankstesnis parapijos gidas išsaugotas atskirai.",
+    "gpm": "1,2 % GPM",
+    "gpmNote": "Dalį jau sumokėto pajamų mokesčio galima skirti parapijai. Skaičiuoklė, FR0512 vedlys ir atsakymai į klausimus — atskirame skyriuje.",
     "privacyIntro": "Svetainėje nenaudojama analitika, reklamos pikseliai ar įterptieji žemėlapiai. Pagrindinis turinys prieinamas be registracijos.",
     "privacyItems": [
       [
@@ -695,7 +696,8 @@
     "gpmTextEdition": "Čia išsaugota parapijos gido tekstinė versija. Skaičiuoklę, nuoseklią instrukciją ir atsakymų paiešką rasite bukiski-hram.org.",
     "gpmInteractiveLink": "Atverti interaktyvų gidą ir skaičiuoklę",
     "storyEditorialTitle": "Svetainės redakcijos pastaba",
-    "storyEditorialNote": "Tyrimas skelbiamas autorės redakcija; svetainės redakcija į tekstą nesikišo. Du oficialūs Lietuvos įrašai papildo autorės chronologiją: Lietuvos kultūros vertybių registras (kodas 32784) pastato remontą datuoja 2007 m. ir tebevadina jį Dievo Motinos Globėjos cerkve, o Vilniaus rajono savivaldybės pažyma cerkvės atstatymą priskiria 2007 m. ir tarp globėjų, greta metropolito Chrizostomo, mini Vilniaus arkivyskupą kardinolą Audrį Juozą Bačkį. Tiksli 2011 m. pašventinimo data ir apeigos mums prieinamuose dokumentuose nenurodytos. Smulkmenos ir nuorodos į šaltinius – cerkvės istorijos puslapyje."
+    "storyEditorialNote": "Tyrimas skelbiamas autorės redakcija; svetainės redakcija į tekstą nesikišo. Du oficialūs Lietuvos įrašai papildo autorės chronologiją: Lietuvos kultūros vertybių registras (kodas 32784) pastato remontą datuoja 2007 m. ir tebevadina jį Dievo Motinos Globėjos cerkve, o Vilniaus rajono savivaldybės pažyma cerkvės atstatymą priskiria 2007 m. ir tarp globėjų, greta metropolito Chrizostomo, mini Vilniaus arkivyskupą kardinolą Audrį Juozą Bačkį. Tiksli 2011 m. pašventinimo data ir apeigos mums prieinamuose dokumentuose nenurodytos. Smulkmenos ir nuorodos į šaltinius – cerkvės istorijos puslapyje.",
+    "gpmOpen": "Atverti 1,2 % GPM skyrių"
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -834,8 +836,8 @@
     "recipient": "Recipient",
     "bank": "Bank account",
     "orgCode": "Organisation code",
-    "gpm": "Information about 1.2% GPM",
-    "gpmNote": "Check the conditions and deadlines with VMI. The original parish guide is preserved separately.",
+    "gpm": "1.2% GPM",
+    "gpmNote": "Part of the income tax you have already paid can be allocated to the parish. The calculator, FR0512 helper and answers are in a dedicated section.",
     "privacyIntro": "This website uses no analytics, advertising pixels or embedded maps. Its main content is available without registration.",
     "privacyItems": [
       [
@@ -1044,7 +1046,8 @@
     "gpmTextEdition": "This is the preserved text edition of the parish guide. The calculator, step-by-step guide and answer search are available at bukiski-hram.org.",
     "gpmInteractiveLink": "Open the interactive guide and calculator",
     "storyEditorialTitle": "Editorial note",
-    "storyEditorialNote": "The study is published in the author’s own wording; the site editors have not altered the text. Two official Lithuanian records supplement the author’s chronology: the Register of Cultural Property of Lithuania (code 32784) dates the repair of the building to 2007 and still lists it as the Church of the Protection of the Mother of God, and the Vilnius District Municipality’s note places the restoration in 2007 and names, alongside Metropolitan Chrysostomos, the Catholic Archbishop of Vilnius, Cardinal Audrys Juozas Bačkis, among those who cared for it. The exact date and rite of the 2011 consecration are not given in the documents available to us. Details and source links are on the church history page."
+    "storyEditorialNote": "The study is published in the author’s own wording; the site editors have not altered the text. Two official Lithuanian records supplement the author’s chronology: the Register of Cultural Property of Lithuania (code 32784) dates the repair of the building to 2007 and still lists it as the Church of the Protection of the Mother of God, and the Vilnius District Municipality’s note places the restoration in 2007 and names, alongside Metropolitan Chrysostomos, the Catholic Archbishop of Vilnius, Cardinal Audrys Juozas Bačkis, among those who cared for it. The exact date and rite of the 2011 consecration are not given in the documents available to us. Details and source links are on the church history page.",
+    "gpmOpen": "Open the 1.2% GPM section"
   },
   "pl": {
     "name": "Cerkiew Narodzenia Pańskiego",
@@ -1183,8 +1186,8 @@
     "recipient": "Odbiorca",
     "bank": "Rachunek bankowy",
     "orgCode": "Kod organizacji",
-    "gpm": "Informacja o 1,2% GPM",
-    "gpmNote": "Warunki i terminy sprawdź na stronie VMI. Pierwotny poradnik parafii zachowano osobno.",
+    "gpm": "1,2% GPM",
+    "gpmNote": "Część już zapłaconego podatku dochodowego można przekazać parafii. Kalkulator, asystent FR0512 i odpowiedzi na pytania znajdziesz w osobnym dziale.",
     "privacyIntro": "Strona nie korzysta z analityki, pikseli reklamowych ani osadzonych map. Główne treści są dostępne bez rejestracji.",
     "privacyItems": [
       [
@@ -1393,7 +1396,8 @@
     "gpmTextEdition": "To zachowana tekstowa wersja poradnika parafii. Kalkulator, instrukcja krok po kroku i wyszukiwarka odpowiedzi są dostępne na bukiski-hram.org.",
     "gpmInteractiveLink": "Otwórz interaktywny poradnik i kalkulator",
     "storyEditorialTitle": "Uwaga redakcji strony",
-    "storyEditorialNote": "Opracowanie publikowane jest w redakcji autorskiej; redakcja strony nie ingerowała w tekst. Dwa oficjalne litewskie zapisy uzupełniają chronologię autorki: Rejestr Dóbr Kultury Litwy (kod 32784) datuje remont budynku na 2007 rok i nadal nazywa go cerkwią Opieki Matki Bożej, a informacja Samorządu Rejonu Wileńskiego odnosi odbudowę do 2007 roku i wymienia wśród opiekunów, obok metropolity Chryzostoma, katolickiego arcybiskupa wileńskiego kardynała Audrysa Juozasa Bačkisa. Dokładna data i obrzęd poświęcenia w 2011 roku nie są podane w dostępnych nam dokumentach. Szczegóły i odsyłacze do źródeł – na stronie historii cerkwi."
+    "storyEditorialNote": "Opracowanie publikowane jest w redakcji autorskiej; redakcja strony nie ingerowała w tekst. Dwa oficjalne litewskie zapisy uzupełniają chronologię autorki: Rejestr Dóbr Kultury Litwy (kod 32784) datuje remont budynku na 2007 rok i nadal nazywa go cerkwią Opieki Matki Bożej, a informacja Samorządu Rejonu Wileńskiego odnosi odbudowę do 2007 roku i wymienia wśród opiekunów, obok metropolity Chryzostoma, katolickiego arcybiskupa wileńskiego kardynała Audrysa Juozasa Bačkisa. Dokładna data i obrzęd poświęcenia w 2011 roku nie są podane w dostępnych nam dokumentach. Szczegóły i odsyłacze do źródeł – na stronie historii cerkwi.",
+    "gpmOpen": "Otwórz dział o 1,2% GPM"
   },
   "de": {
     "name": "Kirche der Geburt Christi",
@@ -1532,8 +1536,8 @@
     "recipient": "Empfänger",
     "bank": "Bankkonto",
     "orgCode": "Organisationscode",
-    "gpm": "Informationen zu 1,2 % GPM",
-    "gpmNote": "Bedingungen und Fristen prüfen Sie bitte auf der Website der VMI. Der ursprüngliche Leitfaden der Gemeinde ist gesondert erhalten.",
+    "gpm": "1,2 % GPM",
+    "gpmNote": "Ein Teil der bereits gezahlten Einkommensteuer kann der Gemeinde zugewiesen werden. Rechner, FR0512-Hilfe und Antworten finden Sie in einem eigenen Bereich.",
     "privacyIntro": "Diese Website verwendet keine Analysewerkzeuge, Werbepixel oder eingebetteten Karten. Die Hauptinhalte sind ohne Registrierung zugänglich.",
     "privacyItems": [
       [
@@ -1742,7 +1746,8 @@
     "gpmTextEdition": "Hier finden Sie die gespeicherte Textfassung des Gemeindeleitfadens. Rechner, Schritt-für-Schritt-Anleitung und Antwortsuche stehen auf bukiski-hram.org bereit.",
     "gpmInteractiveLink": "Interaktiven Leitfaden und Rechner öffnen",
     "storyEditorialTitle": "Anmerkung der Redaktion",
-    "storyEditorialNote": "Die Studie erscheint im Wortlaut der Autorin; die Redaktion der Website hat den Text nicht verändert. Zwei amtliche litauische Einträge ergänzen die Chronologie der Autorin: Das Register der Kulturgüter Litauens (Code 32784) datiert die Instandsetzung des Gebäudes auf 2007 und führt es weiterhin als Kirche des Schutzes der Gottesmutter, und die Notiz der Rajongemeinde Vilnius setzt die Wiederherstellung in das Jahr 2007 und nennt neben Metropolit Chrysostomos den katholischen Erzbischof von Vilnius, Kardinal Audrys Juozas Bačkis, unter denen, die sich darum kümmerten. Das genaue Datum und der Ritus der Weihe von 2011 sind in den uns zugänglichen Dokumenten nicht angegeben. Einzelheiten und Quellenverweise stehen auf der Seite zur Geschichte der Kirche."
+    "storyEditorialNote": "Die Studie erscheint im Wortlaut der Autorin; die Redaktion der Website hat den Text nicht verändert. Zwei amtliche litauische Einträge ergänzen die Chronologie der Autorin: Das Register der Kulturgüter Litauens (Code 32784) datiert die Instandsetzung des Gebäudes auf 2007 und führt es weiterhin als Kirche des Schutzes der Gottesmutter, und die Notiz der Rajongemeinde Vilnius setzt die Wiederherstellung in das Jahr 2007 und nennt neben Metropolit Chrysostomos den katholischen Erzbischof von Vilnius, Kardinal Audrys Juozas Bačkis, unter denen, die sich darum kümmerten. Das genaue Datum und der Ritus der Weihe von 2011 sind in den uns zugänglichen Dokumenten nicht angegeben. Einzelheiten und Quellenverweise stehen auf der Seite zur Geschichte der Kirche.",
+    "gpmOpen": "Bereich zu 1,2 % GPM öffnen"
   },
   "uk": {
     "name": "Храм Різдва Христового",
@@ -1881,8 +1886,8 @@
     "recipient": "Отримувач",
     "bank": "Банківський рахунок",
     "orgCode": "Код організації",
-    "gpm": "Інформація про 1,2 % GPM",
-    "gpmNote": "Умови і терміни перевіряйте на сайті VMI. Первинний парафіяльний посібник збережено окремо.",
+    "gpm": "1,2 % GPM",
+    "gpmNote": "Частину вже сплаченого податку на доходи можна спрямувати парафії. Калькулятор, помічник з FR0512 і відповіді на запитання — в окремому розділі.",
     "privacyIntro": "Сайт не використовує аналітики, рекламних пікселів і вбудованих карт. Основний вміст доступний без реєстрації.",
     "privacyItems": [
       [
@@ -2091,6 +2096,7 @@
     "gpmTextEdition": "Тут збережено текстову версію парафіяльного посібника. Калькулятор, покрокова інструкція та пошук відповідей доступні на bukiski-hram.org.",
     "gpmInteractiveLink": "Відкрити інтерактивний посібник і калькулятор",
     "storyEditorialTitle": "Примітка редакції сайту",
-    "storyEditorialNote": "Дослідження публікується в авторській редакції; редакція сайту в текст не втручалася. Два офіційні литовські записи доповнюють авторську хронологію: Реєстр культурних цінностей Литви (код 32784) датує ремонт будівлі 2007 роком і досі іменує її церквою Покрови Божої Матері, а довідка Вільнюського районного самоврядування відносить відновлення храму до 2007 року і називає серед опікунів, поряд із митрополитом Хризостомом, католицького архієпископа Вільнюського кардинала Аудріса Юозаса Бачкіса. Точна дата і чин освячення 2011 року в доступних нам документах не вказані. Подробиці та посилання на джерела — на сторінці історії храму."
+    "storyEditorialNote": "Дослідження публікується в авторській редакції; редакція сайту в текст не втручалася. Два офіційні литовські записи доповнюють авторську хронологію: Реєстр культурних цінностей Литви (код 32784) датує ремонт будівлі 2007 роком і досі іменує її церквою Покрови Божої Матері, а довідка Вільнюського районного самоврядування відносить відновлення храму до 2007 року і називає серед опікунів, поряд із митрополитом Хризостомом, католицького архієпископа Вільнюського кардинала Аудріса Юозаса Бачкіса. Точна дата і чин освячення 2011 року в доступних нам документах не вказані. Подробиці та посилання на джерела — на сторінці історії храму.",
+    "gpmOpen": "Відкрити розділ про 1,2 % GPM"
   }
 }
