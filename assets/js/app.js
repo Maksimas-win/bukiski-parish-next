@@ -2,10 +2,10 @@
 // this entry point wires up controls and loads a feature module only on the
 // pages that contain its markup.
 
-import { initCopyButtons } from './ui/copy.js?v=e1e0695f8e';
-import { initLanguageMenu, initMenu } from './ui/menu.js?v=e1e0695f8e';
-import { initPreferences } from './ui/preferences.js?v=e1e0695f8e';
-import { initTilt } from './ui/tilt.js?v=e1e0695f8e';
+import { initCopyButtons } from './ui/copy.js?v=11e2aaab33';
+import { initLanguageMenu, initMenu } from './ui/menu.js?v=11e2aaab33';
+import { initPreferences } from './ui/preferences.js?v=11e2aaab33';
+import { initTilt } from './ui/tilt.js?v=11e2aaab33';
 
 document.documentElement.classList.add('js');
 
@@ -16,15 +16,15 @@ initCopyButtons();
 initTilt();
 
 const features = [
-  ['[data-schedule]', () => import('./features/schedule.js?v=e1e0695f8e')],
-  ['[data-library]', () => import('./features/library.js?v=e1e0695f8e')],
-  ['[data-notes]', () => import('./features/notes.js?v=e1e0695f8e')],
-  ['[data-article]', () => import('./features/article.js?v=e1e0695f8e')],
-  ['[data-story]', () => import('./features/story.js?v=e1e0695f8e')],
-  ['[data-lightbox]', () => import('./features/lightbox.js?v=e1e0695f8e')],
-  ['[data-gpm]', () => import('./features/gpm.js?v=e1e0695f8e')],
-  ['[data-home-gpm]', () => import('./features/home-gpm.js?v=e1e0695f8e')],
-  ['[data-document-download]', () => import('./document-downloads.js?v=e1e0695f8e')]
+  ['[data-schedule]', () => import('./features/schedule.js?v=11e2aaab33')],
+  ['[data-library]', () => import('./features/library.js?v=11e2aaab33')],
+  ['[data-notes]', () => import('./features/notes.js?v=11e2aaab33')],
+  ['[data-article]', () => import('./features/article.js?v=11e2aaab33')],
+  ['[data-story]', () => import('./features/story.js?v=11e2aaab33')],
+  ['[data-lightbox]', () => import('./features/lightbox.js?v=11e2aaab33')],
+  ['[data-gpm]', () => import('./features/gpm.js?v=11e2aaab33')],
+  ['[data-home-gpm]', () => import('./features/home-gpm.js?v=11e2aaab33')],
+  ['[data-document-download]', () => import('./document-downloads.js?v=11e2aaab33')]
 ];
 
 for (const [selector, load] of features) {

@@ -3922,14 +3922,23 @@ input[type='email']:user-invalid {
 .gpm-band {
   position: relative;
   padding-block: clamp(2rem, 4vw, 2.75rem);
-  color: var(--band-ink);
+  color: var(--ink);
   background:
-    radial-gradient(42rem 20rem at 8% 50%, rgb(231 201 138 / 0.16), transparent 65%),
-    linear-gradient(120deg, var(--dome-deep), var(--band-bg) 60%, #1a3542);
+    radial-gradient(40rem 18rem at 10% 50%, rgb(185 151 89 / 0.16), transparent 65%),
+    var(--surface-tint);
+}
+
+/* A gilt hairline separates the band from the deep-blue services above it. */
+.gpm-band::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gilt), rgb(185 151 89 / 0.25) 70%, transparent);
 }
 
 .gpm-band .eyebrow {
-  color: var(--band-accent);
+  color: var(--label);
 }
 
 .gpm-band__inner {
@@ -3952,24 +3961,25 @@ input[type='email']:user-invalid {
   margin: 0 0 0.6rem;
   font-size: clamp(1.5rem, 1.2rem + 1.3vw, 2.1rem);
   line-height: 1.15;
-  color: #fff;
+  color: var(--ink);
   text-wrap: balance;
 }
 
 .gpm-band__text {
   max-width: 52ch;
   margin: 0 0 1.1rem;
-  color: var(--band-ink);
+  color: var(--ink-soft);
 }
 
 
 .gpm-example {
   display: grid;
   gap: 0.6rem;
-  padding: 0.9rem 1rem;
-  border-radius: var(--radius-m);
-  background: rgb(255 255 255 / 0.07);
-  border: 1px solid rgb(255 255 255 / 0.14);
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-l);
+  color: var(--band-ink);
+  background: linear-gradient(150deg, var(--dome-deep), var(--band-bg));
+  box-shadow: var(--shadow);
 }
 
 .gpm-example__label {
@@ -4079,13 +4089,6 @@ input[type='email']:user-invalid {
   gap: 0.75rem 1.25rem;
 }
 
-.gpm-band__actions .link {
-  color: #fff;
-}
-
-.gpm-band__actions .link:hover {
-  color: var(--band-accent);
-}
 
 .gpm-band__open .icon {
   transition: transform 0.2s ease;
