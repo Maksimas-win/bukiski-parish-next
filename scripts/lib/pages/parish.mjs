@@ -5,6 +5,7 @@ import { html, attrs } from '../html.mjs';
 import { icon, emblem } from '../icons.mjs';
 import { formatDate } from '../site.mjs';
 import { churchImage, copyButton, externalLink, pageHead, phoneLink, siteLink, socialCards } from '../components.mjs';
+import { registrationCard } from '../parish-media.mjs';
 
 /** «Сверено с приходским сайтом: 10 октября 2026 г.» */
 const reviewed = (site, lang, t, sourceUrl) => html`<p class="hint meta-row"><span>${t.checked}: <time datetime="${site.settings.reviewedOn}">${formatDate(lang, `${site.settings.reviewedOn}T12:00:00Z`, { dateStyle: 'long' })}</time></span>${externalLink(t, sourceUrl, t.source)}</p>`;
@@ -60,6 +61,7 @@ export function contactsPage(site, lang, t) {
       <figcaption>${addressParts.street}, ${addressParts.locality}</figcaption>
     </figure>
   </section>
+  ${registrationCard(site, lang, t)}
   <section class="shell contact-social" aria-labelledby="contact-social-title">
     <div class="section-title">
       <p class="eyebrow">${t.eyebrowSocial}</p>

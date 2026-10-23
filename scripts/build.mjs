@@ -132,7 +132,7 @@ function addCorePages() {
         path: site.route(lang, pageId),
         trail: pageId === 'home' ? undefined : [{ name: t[pageId], path: site.route(lang, pageId) }],
         alternates: site.languages.map(code => ({ lang: code, path: site.route(code, pageId) })),
-        extraDialogs: ['gallery', 'history'].includes(pageId) ? galleryLightbox(t, lang) : ''
+        extraDialogs: ['gallery', 'history', 'contacts'].includes(pageId) ? galleryLightbox(t, lang) : ''
       });
     }
   }
