@@ -5768,6 +5768,1179 @@ input[type='email']:user-invalid {
   .parish-registration__document { justify-items: start; }
 }
 
+/* 49-gpm.css */
+/* 1,2 % GPM section ---------------------------------------------------------
+   Theme of the section: percentages, participation and a clear result. No
+   decorative crosses; church photographs appear only in the parish part. */
+
+.gpm {
+  --gpm-gold: #e7c98a;
+  --gpm-gold-deep: #b99759;
+  --gpm-green: #2f7d4f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .gpm {
+    --gpm-green: #8fd3a8;
+  }
+}
+
+:root[data-theme='dark'] .gpm {
+  --gpm-green: #8fd3a8;
+}
+
+.gpm-section {
+  padding-block: clamp(2.25rem, 5vw, 3.75rem);
+  border-top: 1px solid var(--line);
+}
+
+.gpm-section__head {
+  max-width: 46rem;
+  margin-bottom: 1.5rem;
+}
+
+.gpm-section__head h2 {
+  font-size: clamp(1.7rem, 1.3rem + 1.6vw, 2.4rem);
+  line-height: 1.15;
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.gpm-section__head h2:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+.gpm-section__head .lead {
+  margin-top: 0.75rem;
+}
+
+.gpm-section h3 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.gpm [id] {
+  scroll-margin-top: calc(var(--header-height) + 0.5rem);
+}
+
+/* Hero ---------------------------------------------------------------------- */
+
+.gpm-hero {
+  position: relative;
+  overflow: hidden;
+  color: var(--band-ink);
+  background:
+    radial-gradient(60rem 30rem at 80% -10%, rgb(231 201 138 / 0.22), transparent 60%),
+    radial-gradient(40rem 24rem at 10% 110%, rgb(91 15 25 / 0.35), transparent 60%),
+    linear-gradient(160deg, var(--dome-deep), var(--band-bg) 55%, #1a3542);
+}
+
+.gpm-hero__grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  padding-block: clamp(2.5rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+}
+
+.gpm-hero__title {
+  margin: 0.5rem 0 0;
+  font-size: clamp(2rem, 1.3rem + 3.4vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: #fff;
+  text-wrap: balance;
+}
+
+.gpm-hero__title span:last-child {
+  color: var(--gpm-gold);
+}
+
+.gpm-hero__lead {
+  max-width: 36rem;
+  margin-top: 1.1rem;
+  font-size: clamp(1.05rem, 1rem + 0.3vw, 1.2rem);
+  line-height: 1.55;
+  color: var(--band-ink);
+}
+
+.gpm-hero__actions {
+  margin-top: 1.5rem;
+}
+
+.gpm-hero__caption {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--band-soft);
+}
+
+.button--ghost {
+  color: #fff;
+  background: transparent;
+  border: 1.5px solid rgb(255 255 255 / 0.55);
+}
+
+.button--ghost:hover {
+  color: #fff;
+  background: rgb(255 255 255 / 0.12);
+  border-color: #fff;
+}
+
+.gpm-hero__figure {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: clamp(9rem, 30vw, 17rem);
+}
+
+.gpm-hero__canvas {
+  position: absolute;
+  inset: -12% -6%;
+  width: 112%;
+  height: 124%;
+  display: none;
+  filter: drop-shadow(0 24px 30px rgb(0 0 0 / 0.45));
+}
+
+.gpm-hero.has-webgl .gpm-hero__canvas {
+  display: block;
+}
+
+.gpm-hero.has-webgl .gpm-hero__static {
+  visibility: hidden;
+}
+
+/* The static figure: embossed gilt type, enough on its own without WebGL. */
+.gpm-figure {
+  font-family: var(--font-serif);
+  font-size: clamp(5rem, 4rem + 11vw, 11rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  color: var(--gpm-gold);
+  background: linear-gradient(170deg, #fbecc3 0%, #e7c98a 40%, #b99759 70%, #f1d9a4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 0 rgb(120 90 30 / 0.7)) drop-shadow(0 18px 24px rgb(0 0 0 / 0.45));
+}
+
+/* Phones: the figure sits above the title, compact, so the first screen still
+   shows the promise and the two actions. */
+@media (max-width: 51.99rem) {
+  .gpm-hero__grid {
+    padding-block: 1.25rem 2rem;
+    gap: 0.5rem;
+  }
+
+  .gpm-hero__figure {
+    order: -1;
+    min-height: 6.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .gpm-figure {
+    font-size: clamp(3.6rem, 2.5rem + 9vw, 5.5rem);
+  }
+
+  .gpm-hero__lead {
+    margin-top: 0.75rem;
+    font-size: 1.02rem;
+  }
+
+  .gpm-hero__actions {
+    margin-top: 1.1rem;
+  }
+}
+
+@media (min-width: 52rem) {
+  .gpm-hero__grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 2.5rem;
+  }
+
+  .gpm-hero__figure {
+    min-height: 20rem;
+  }
+}
+
+/* Campaign state, facts and toolbar ---------------------------------------- */
+
+.gpm-phase {
+  padding-block: 1.5rem 0.5rem;
+}
+
+.gpm-phase__grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.gpm-status {
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--radius-l);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-inline-start: 5px solid var(--gpm-gold-deep);
+}
+
+.gpm-status--during {
+  border-inline-start-color: var(--gpm-green);
+}
+
+.gpm-status--after {
+  border-inline-start-color: var(--line-strong);
+}
+
+.gpm-status__label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+  color: var(--label);
+}
+
+.gpm-status .actions {
+  margin-top: 0.9rem;
+}
+
+.gpm-phase__verify {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-m);
+  background: var(--warning-bg);
+  border-inline-start: 4px solid var(--warning-line);
+  font-size: 0.95rem;
+}
+
+.gpm-phase__verify .icon {
+  flex: none;
+  margin-top: 0.15rem;
+  color: var(--warning-line);
+}
+
+.gpm-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.gpm-facts div {
+  padding: 0.8rem 0.95rem;
+  border-radius: var(--radius-m);
+  background: var(--surface-tint);
+}
+
+.gpm-facts dt {
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+.gpm-facts dd {
+  margin-top: 0.2rem;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.gpm-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--line);
+}
+
+.gpm-toolbar .hint {
+  flex: 1 1 16rem;
+  margin: 0;
+}
+
+@media (min-width: 52rem) {
+  .gpm-phase__grid {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+    align-items: start;
+  }
+}
+
+/* Scenarios ---------------------------------------------------------------- */
+
+.gpm-scenarios {
+  border-top: 0;
+}
+
+.gpm-scenarios__list {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gpm-scenario {
+  display: grid;
+  gap: 0.5rem;
+  height: 100%;
+  padding: 1.4rem 1.4rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  background: var(--surface);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.gpm-scenario:hover,
+.gpm-scenario:focus-visible {
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.gpm-scenario__badge {
+  display: inline-grid;
+  place-items: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  margin-bottom: 0.35rem;
+  border-radius: 50%;
+  background: var(--surface-tint);
+}
+
+.gpm-scenario__title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.gpm-scenario__text {
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.gpm-scenario__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+  font-weight: 650;
+  color: var(--accent);
+}
+
+@media (min-width: 46rem) {
+  .gpm-scenarios__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Grids -------------------------------------------------------------------- */
+
+.gpm-grid {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gpm-grid--two > *,
+.gpm-grid--four > * {
+  margin: 0;
+}
+
+.gpm-basics__more,
+.gpm-help__more {
+  margin-top: 1rem;
+}
+
+.gpm-compare div + div {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.gpm-compare dt {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 40rem) {
+  .gpm-grid--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gpm-grid--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .gpm-grid--four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Calculator --------------------------------------------------------------- */
+
+.gpm-calc {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.gpm-calc__inputs {
+  display: grid;
+  gap: 1rem;
+}
+
+.gpm-calc .input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--line-strong);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.gpm-calc .input:focus-visible {
+  border-color: var(--focus);
+  outline-offset: 0;
+}
+
+.gpm-calc .input[aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.gpm-calc .field .hint {
+  margin-top: 0.4rem;
+}
+
+.gpm-calc__examples {
+  margin-top: 0.75rem;
+}
+
+.gpm-calc__example-list,
+.gpm-calc__static {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+}
+
+.gpm-calc__example-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gpm-calc__static {
+  display: grid;
+  gap: 0.35rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.js .gpm-calc__static {
+  display: none;
+}
+
+.gpm-chip {
+  min-height: 2.6rem;
+  padding: 0.45rem 0.9rem;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.gpm-chip:hover,
+.gpm-chip[aria-pressed='true'] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.gpm-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--surface-tint);
+  color: var(--label);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+}
+
+.gpm-badge--ongoing { color: var(--dome); }
+.gpm-badge--planned { color: var(--label); }
+.gpm-badge--progress { color: var(--gpm-green); }
+
+.form-error {
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-s);
+  background: var(--warning-bg);
+  border-inline-start: 4px solid var(--danger);
+  color: var(--ink);
+}
+
+.gpm-calc__result {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-l);
+  color: var(--band-ink);
+  background: linear-gradient(150deg, var(--dome-deep), var(--band-bg));
+}
+
+.gpm-calc__label {
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--band-soft);
+}
+
+.gpm-calc__value {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 1.6rem + 2.5vw, 3.4rem);
+  line-height: 1.1;
+  color: var(--gpm-gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.gpm-calc__value--small {
+  font-size: clamp(1.6rem, 1.3rem + 1.4vw, 2.3rem);
+}
+
+.gpm-calc__formula {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--band-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.gpm-calc__group {
+  padding-top: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 0.18);
+}
+
+.gpm-calc__group .hint {
+  color: var(--band-soft);
+}
+
+@media (min-width: 40rem) {
+  .gpm-calc__inputs {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+
+  .gpm-calc__result {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  }
+
+  .gpm-calc__group {
+    padding: 0 0 0 1.25rem;
+    border-top: 0;
+    border-inline-start: 1px solid rgb(255 255 255 / 0.18);
+  }
+}
+
+/* Steps -------------------------------------------------------------------- */
+
+.gpm-steps__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.gpm-steps__progress {
+  flex: 1 1 14rem;
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 650;
+}
+
+.gpm-steps__bar {
+  display: block;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--surface-tint);
+  overflow: hidden;
+}
+
+.gpm-steps__bar > span {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--gpm-gold-deep), var(--gpm-gold));
+  transition: width 0.3s ease;
+}
+
+.gpm-steps {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: none;
+}
+
+.gpm-step {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem 1rem;
+  margin: 0;
+}
+
+.gpm-step__number {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--band-bg);
+  color: var(--gpm-gold);
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+}
+
+.gpm-step__title {
+  margin-top: 0.3rem;
+}
+
+.gpm-step__action {
+  margin-top: 0.4rem;
+}
+
+.gpm-step__where {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.gpm-eds {
+  margin-top: 0.9rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-m);
+  background: var(--surface-tint);
+}
+
+.gpm-eds dt {
+  margin-bottom: 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+.gpm-eds dd {
+  display: grid;
+  gap: 0.1rem 0.75rem;
+  padding: 0.35rem 0;
+}
+
+.gpm-eds dd + dd {
+  border-top: 1px solid var(--line);
+}
+
+.gpm-eds code {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.gpm-eds dd span {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.gpm-step .actions {
+  margin-top: 0.9rem;
+}
+
+.gpm-code {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-s);
+  background: var(--surface-tint);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+
+.gpm-code--large {
+  font-size: 1.5rem;
+  padding: 0.4rem 0.9rem;
+}
+
+.gpm-step__diagram {
+  display: none;
+}
+
+.gpm-diagram {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+.gpm-diagram rect,
+.gpm-diagram circle {
+  fill: var(--surface-tint);
+  stroke: var(--line-strong);
+  stroke-width: 1.5;
+}
+
+.gpm-diagram .d-accent {
+  fill: var(--gpm-gold);
+  stroke: var(--gpm-gold-deep);
+}
+
+.gpm-diagram .d-check {
+  fill: none;
+  stroke: var(--gpm-green);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.gpm-steps__nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gpm-steps__nav [data-steps-prev] .icon {
+  transform: scaleX(-1);
+}
+
+/* With JavaScript: one step at a time unless the visitor asks for all. */
+.js [data-gpm-steps]:not(.is-all) .gpm-step:not(.is-current) {
+  display: none;
+}
+
+.gpm-checklist {
+  margin-top: 1.5rem;
+}
+
+.gpm-checklist__list {
+  display: grid;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.gpm-checklist__list li {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.gpm-checklist__list .icon {
+  flex: none;
+  margin-top: 0.2rem;
+  color: var(--gpm-green);
+}
+
+@media (min-width: 46rem) {
+  .gpm-step {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .gpm-step__diagram {
+    display: block;
+  }
+
+  .gpm-eds dd {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+/* Already filed ------------------------------------------------------------- */
+
+.gpm-again li {
+  position: relative;
+}
+
+.gpm-again__number {
+  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--gpm-gold-deep);
+}
+
+/* Recipient ----------------------------------------------------------------- */
+
+.gpm-recipient__list {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gpm-recipient__list dt {
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+.gpm-recipient__list dd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.gpm-recipient .notice--warning {
+  margin-top: 1rem;
+}
+
+/* Projects ------------------------------------------------------------------ */
+
+.gpm-projects {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gpm-project {
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+  margin: 0;
+}
+
+.gpm-project__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.gpm-project__head .card__badge {
+  margin-bottom: 0;
+}
+
+.gpm-project__media {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0.5rem 0 0;
+}
+
+.gpm-project__shot img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+}
+
+.gpm-project__shot figcaption {
+  margin-top: 0.3rem;
+  font-size: 0.8125rem;
+  color: var(--ink-soft);
+}
+
+.gpm-project__shot--concept img {
+  outline: 2px dashed var(--gpm-gold-deep);
+  outline-offset: -2px;
+}
+
+.gpm-budget {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1rem;
+  margin-top: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-m);
+  background: var(--surface-tint);
+}
+
+.gpm-budget dt {
+  font-size: 0.8125rem;
+  color: var(--label);
+  font-weight: 650;
+}
+
+.gpm-budget dd {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+}
+
+.gpm-budget .hint {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.gpm-projects__note {
+  margin-top: 1rem;
+}
+
+.gpm-appeal p + p {
+  margin-top: 0.75rem;
+}
+
+.gpm-appeal__signature {
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.gpm-appeal .actions {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 40rem) {
+  .gpm-project__media {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .gpm-projects {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Donation ------------------------------------------------------------------ */
+
+.gpm-requisites {
+  display: grid;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.gpm-requisites div {
+  display: grid;
+  gap: 0.2rem 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.gpm-requisites dt {
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+.gpm-requisites dd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.5rem;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 46rem) {
+  .gpm-requisites div {
+    grid-template-columns: 11rem minmax(0, 1fr);
+    align-items: center;
+  }
+}
+
+/* FAQ ----------------------------------------------------------------------- */
+
+.gpm-faq__search {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 40rem;
+  margin-bottom: 1rem;
+}
+
+.gpm-faq__search label {
+  font-weight: 650;
+}
+
+.gpm-faq {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.gpm-faq__item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+}
+
+.gpm-faq__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.1rem;
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+
+.gpm-faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.gpm-faq__item summary .icon {
+  flex: none;
+  transition: transform 0.2s ease;
+}
+
+.gpm-faq__item[open] summary .icon {
+  transform: rotate(180deg);
+}
+
+.gpm-faq__answer {
+  padding: 0 1.1rem 1rem;
+}
+
+.gpm-faq__answer p + p {
+  margin-top: 0.5rem;
+}
+
+.gpm-faq__answer .link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+@media (min-width: 40rem) {
+  .gpm-faq__search {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+
+  .gpm-faq__search label {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Sources ------------------------------------------------------------------- */
+
+.gpm-sources__list {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.gpm-sources__checked {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-m);
+  background: var(--surface-tint);
+}
+
+.gpm-sources__checked .icon {
+  flex: none;
+  margin-top: 0.15rem;
+  color: var(--gpm-green);
+}
+
+.gpm-sources .hint {
+  margin-top: 1rem;
+}
+
+/* Reduced motion, large text ------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .gpm-scenario,
+  .gpm-steps__bar > span,
+  .gpm-faq__item summary .icon {
+    transition: none;
+  }
+}
+
+html.large-text .gpm-figure {
+  font-size: clamp(4rem, 3rem + 9vw, 9rem);
+}
+
+/* Print: the checklist itself ---------------------------------------------- */
+
+@media print {
+  .gpm-hero {
+    color: #000;
+    background: none;
+    border-bottom: 1px solid #000;
+  }
+
+  .gpm-hero__title,
+  .gpm-hero__title span:last-child,
+  .gpm-hero__lead,
+  .gpm-hero__caption {
+    color: #000;
+  }
+
+  .gpm-hero__figure,
+  .gpm-hero__actions,
+  .gpm-toolbar,
+  .gpm-scenarios,
+  .gpm-calc__unknown,
+  .gpm-steps__controls,
+  .gpm-steps__nav,
+  .gpm-step__diagram,
+  .gpm-faq__search,
+  [data-gpm-copy],
+  .gpm-project__media,
+  .gpm-sources .actions {
+    display: none !important;
+  }
+
+  .js [data-gpm-steps] .gpm-step {
+    display: grid !important;
+  }
+
+  .gpm-section,
+  .gpm-step,
+  .gpm-checklist,
+  .gpm-recipient,
+  .gpm-donate {
+    break-inside: avoid;
+  }
+
+  .gpm-calc__result {
+    color: #000;
+    background: none;
+    border: 1px solid #000;
+  }
+
+  .gpm-calc__value,
+  .gpm-calc__label,
+  .gpm-calc__formula {
+    color: #000;
+  }
+
+  .gpm-faq__item {
+    break-inside: avoid;
+  }
+
+  .gpm-faq__item .gpm-faq__answer {
+    display: block;
+  }
+}
+
 /* 80-accessibility.css */
 /* Reading preferences chosen in «Настройки чтения». */
 
