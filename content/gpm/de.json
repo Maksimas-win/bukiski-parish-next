@@ -1,0 +1,471 @@
+{
+  "title": "1,2 % GPM — wie Sie einen Teil Ihrer Steuer der Gemeinde zuweisen",
+  "description": "Wie Sie bis zu 1,2 % der litauischen Einkommensteuer (GPM) für {taxYear} über FR0512 im EDS der VMI zuweisen: drei Einstiege, Rechner, Schritt-für-Schritt-Hilfe, Antworten auf häufige Fragen und die Daten der Gemeinde Bukiškis.",
+  "eyebrow": "Litauen · Anteil der Einkommensteuer · Kampagne {filingYear}",
+  "hero": {
+    "title": [
+      "Geben Sie Ihrer Hilfe",
+      "die richtige Richtung."
+    ],
+    "lead": "Bis zu 1,2 % der bereits gezahlten Einkommensteuer können der Gemeinde zugewiesen werden — ohne zusätzliche Kosten. Hier erklären wir, was das bedeutet, wie Sie FR0512 im offiziellen VMI-System ausfüllen und wem Ihre Entscheidung hilft.",
+    "figure": "1,2 %",
+    "figureNote": "eine räumliche „1,2 %“ — das Symbol des Steueranteils",
+    "primary": "Einstieg wählen",
+    "secondary": "Betrag berechnen",
+    "caption": "Informationsbereich der Gemeinde · Kein VMI-Dienst · Der Antrag wird nur in EDS gestellt"
+  },
+  "phase": {
+    "title": "Stand der Kampagne",
+    "before": {
+      "label": "Die Antragstellung ist noch nicht eröffnet",
+      "text": "FR0512-Anträge für Einkünfte des Jahres {taxYear} werden vom {start} bis {deadline} angenommen. Jetzt ist die richtige Zeit, das Verfahren zu verstehen, Daten vorzubereiten und die Checkliste zu speichern."
+    },
+    "during": {
+      "label": "Anträge werden angenommen",
+      "text": "Der Antrag für Einkünfte des Jahres {taxYear} wird bis einschließlich {deadline} in EDS gestellt. Bereiten Sie sich mit der Anleitung unten vor und stellen Sie den Antrag im offiziellen System.",
+      "action": "EDS öffnen (offizielles VMI-System)"
+    },
+    "after": {
+      "label": "Der Antragszeitraum ist beendet",
+      "text": "Die Frist für Erstanträge für Einkünfte des Jahres {taxYear} ist am {deadline} abgelaufen. Die Regeln für die Berichtigung eines bereits gestellten Antrags und die Termine der nächsten Kampagne prüfen Sie auf der VMI-Website — hier werden sie nicht ohne Prüfung angekündigt."
+    },
+    "verify": "Prüfen Sie vor dem Antrag den Empfänger in EDS anhand der Kennnummer {code}: Religiöse Gemeinschaften erhalten das Recht auf diese Unterstützung ab {filingYear} zurück, und ob die Gemeinde in der Empfängerliste steht, bestätigt nur das VMI-System."
+  },
+  "facts": [
+    [
+      "Steuerjahr",
+      "{taxYear}"
+    ],
+    [
+      "Antragszeitraum",
+      "{start} — {deadline}"
+    ],
+    [
+      "Formular",
+      "FR0512 in EDS"
+    ],
+    [
+      "Zuweisung möglich",
+      "bis {lastTaxYear}"
+    ]
+  ],
+  "scenarios": {
+    "title": "Womit möchten Sie beginnen?",
+    "intro": "Wählen Sie, was Ihrer Situation am nächsten kommt — der Bereich öffnet sich an der passenden Stelle.",
+    "items": [
+      {
+        "id": "learn",
+        "title": "Ich möchte es verstehen",
+        "text": "Was der GPM-Anteil ist, wer ihn zuweisen kann und wie er sich von einer Spende unterscheidet.",
+        "action": "Einfach erklären",
+        "target": "basics"
+      },
+      {
+        "id": "first",
+        "title": "Ich stelle zum ersten Mal einen Antrag",
+        "text": "Schritt-für-Schritt-Hilfe: Anmeldung in EDS, Formular FR0512, Empfängerwahl, Anteil und Zeitraum, Prüfung.",
+        "action": "Hilfe öffnen",
+        "target": "steps"
+      },
+      {
+        "id": "again",
+        "title": "Ich habe schon einmal beantragt",
+        "text": "Wie Sie einen gültigen Antrag prüfen, ob ein neuer nötig ist und wie Sie ihn berichtigen.",
+        "action": "Nachsehen, was zu tun ist",
+        "target": "again"
+      }
+    ]
+  },
+  "basics": {
+    "title": "Das Wichtigste in einer Minute",
+    "intro": "GPM (gyventojų pajamų mokestis) ist die litauische Einkommensteuer. Das Gesetz erlaubt, die VMI zu bitten, einen Teil der bereits gezahlten Steuer an einen Empfänger Ihrer Wahl zu überweisen. Es ist keine neue Zahlung und kein weiterer Abzug vom Gehalt.",
+    "items": [
+      [
+        "Nicht vom Gehalt",
+        "Der Anteil wird vom GPM des Jahres berechnet, nicht vom Einkommen. Beispiel: 1 000 € GPM × 0,012 = 12 €."
+      ],
+      [
+        "Ohne Zuzahlung",
+        "Das Geld ist bereits an den Staat gezahlt. Sie entscheiden nur, wohin bis zu 1,2 % davon gehen. Ohne Antrag bleibt der gesamte Betrag im Haushalt."
+      ],
+      [
+        "Antrag nur in EDS",
+        "Dieser Bereich hilft bei der Vorbereitung. Das Formular FR0512 wird im offiziellen Erklärungssystem der VMI ausgefüllt, nicht auf der Gemeindewebsite."
+      ],
+      [
+        "Jahre auseinanderhalten",
+        "In der Kampagne {filingYear} geht es um die Steuer auf Einkünfte des Jahres {taxYear}. Antragszeitraum: {start} — {deadline}."
+      ]
+    ],
+    "who": {
+      "title": "Für wen es geeignet ist",
+      "text": "Für steuerlich in Litauen ansässige Personen (nuolatiniai Lietuvos gyventojai) mit GPM-pflichtigen Einkünften im Jahr {taxYear}: Gehalt, selbständige Tätigkeit oder andere steuerpflichtige Einkünfte. Die Staatsangehörigkeit allein begründet oder nimmt das Recht nicht. Rentner oder vorübergehend nicht Erwerbstätige können teilnehmen, wenn im Jahr GPM auf ihre Einkünfte berechnet oder einbehalten wurde; ist die Steuer null, gibt es nichts zuzuweisen. Ihre Situation können Sie bei der VMI klären."
+    },
+    "difference": {
+      "title": "Worin der Unterschied zu einer Spende liegt",
+      "items": [
+        [
+          "GPM-Anteil",
+          "Teil der bereits gezahlten Steuer. Überweist die VMI, in der Regel vom {transferFrom} bis {transferTo}. Beantragt mit FR0512 in EDS. Ihr Geldbeutel bleibt unverändert."
+        ],
+        [
+          "Banküberweisung",
+          "Ihr eigenes Geld, jederzeit auf das Gemeindekonto überwiesen. Die Daten stehen in einem eigenen Block unten. Das eine schließt das andere nicht aus."
+        ]
+      ]
+    }
+  },
+  "calculator": {
+    "title": "Wie viel ist das in Geld?",
+    "intro": "Geben Sie Ihre Einkommensteuer (GPM) für {taxYear} ein. Das ist nicht das Gehalt: Der Steuerbetrag steht in der Jahreserklärung GPM311 in EDS, in der Bescheinigung des Arbeitgebers oder in Mano VMI. Die Berechnung läuft in Ihrem Browser und wird nirgendwohin gesendet.",
+    "inputLabel": "GPM für {taxYear}, €",
+    "inputHint": "Zum Beispiel 1 000 oder 1 850,50",
+    "unknownToggle": "Ich kenne meinen GPM-Betrag nicht",
+    "unknownIntro": "Das sind Lehrbeispiele, keine Schätzung Ihrer Steuer. Den tatsächlichen Betrag bestimmt die VMI; Ihrer kann höher oder niedriger sein.",
+    "examples": [
+      {
+        "label": "Fiktives Beispiel A",
+        "amount": "600"
+      },
+      {
+        "label": "Fiktives Beispiel B",
+        "amount": "1500"
+      },
+      {
+        "label": "Fiktives Beispiel C",
+        "amount": "3000"
+      }
+    ],
+    "exampleBadge": "Lehrbeispiel",
+    "peopleLabel": "Teilnehmer im Beispiel",
+    "peopleHint": "Das Gruppenszenario ist eine Illustration, kein Zähler eingegangener Mittel.",
+    "result": "1,2 % des eingegebenen Betrags",
+    "formula": "Formel: GPM × 0,012",
+    "formulaLine": "{amount} € × 0,012 = {result} €",
+    "together": "Zusammen in diesem Beispiel ({people} Personen mit demselben Betrag)",
+    "approx": "Näherungsrechnung. Den endgültigen Betrag berechnet und überweist die VMI.",
+    "belowMinimum": "Ein Betrag unter 3 € an einen Empfänger für ein Steuerjahr wird nicht überwiesen. In diesem Beispiel liegt der Anteil jedes Teilnehmers unter der Grenze, daher werden 0 € überwiesen.",
+    "minimumNote": "Die 3-€-Grenze gilt für den Anteil jeder Person einzeln: Kleine Beträge mehrerer Personen werden nicht zusammengerechnet, um sie zu erreichen.",
+    "invalid": "Geben Sie einen Betrag von 0 bis 100 000 000 mit höchstens zwei Nachkommastellen ein.",
+    "local": "Alle Berechnungen erfolgen lokal. Eingegebene Werte werden weder gespeichert noch übertragen."
+  },
+  "steps": {
+    "title": "FR0512-Hilfe",
+    "intro": "Fünf kurze Schritte. Die EDS-Menüpunkte sind auf Litauisch angegeben, wie im System, mit Erläuterung. Die Website hilft nur bei der Vorbereitung: Der Antrag wird im offiziellen EDS gestellt.",
+    "progress": "Schritt {n} von {total}",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "finish": "Zur Checkliste",
+    "showAll": "Alle Schritte auf einmal zeigen",
+    "showOne": "Einen Schritt nach dem anderen zeigen",
+    "whereLabel": "Wo",
+    "edsLabel": "In EDS",
+    "copyCode": "Kennnummer der Gemeinde kopieren",
+    "copied": "Kennnummer {code} kopiert",
+    "openEds": "EDS öffnen",
+    "diagramNote": "Das Schema ist eine Lehrillustration, kein VMI-Bildschirm. Die EDS-Oberfläche kann abweichen.",
+    "items": [
+      {
+        "title": "In EDS anmelden",
+        "action": "Öffnen Sie das offizielle Erklärungssystem der VMI und melden Sie sich wie gewohnt an: über Ihre Bank, Smart-ID, mobile Signatur oder ein anderes Verfahren, das das System selbst anbietet.",
+        "where": "deklaravimas.vmi.lt — nur auf der VMI-Website. Die Gemeindewebsite fragt nicht nach Passwörtern, Smart-ID, persönlicher Kennnummer oder Steuerunterlagen.",
+        "eds": [
+          [
+            "Prisijungti",
+            "Anmelden"
+          ],
+          [
+            "Elektroninio deklaravimo sistema (EDS)",
+            "Elektronisches Erklärungssystem"
+          ]
+        ]
+      },
+      {
+        "title": "Formular FR0512 finden",
+        "action": "Wählen Sie im Menü das Ausfüllen eines Formulars und suchen Sie den Antrag auf Zuweisung von Unterstützung. Das Formular öffnet sich im elektronischen Assistenten.",
+        "where": "Das Hauptmenü von EDS nach der Anmeldung.",
+        "eds": [
+          [
+            "Deklaravimas",
+            "Erklärung"
+          ],
+          [
+            "Pildyti formą",
+            "Formular ausfüllen"
+          ],
+          [
+            "Dažniausiai pildomos formos",
+            "Am häufigsten ausgefüllte Formulare"
+          ],
+          [
+            "Prašymas skirti paramą (FR0512)",
+            "Antrag auf Zuweisung von Unterstützung"
+          ]
+        ]
+      },
+      {
+        "title": "Empfänger wählen",
+        "action": "Geben Sie die Kennnummer des Empfängers ein und prüfen Sie den vollständigen Namen. Für die Gemeinde Bukiškis: {code} — {name}. Wird der Empfänger nicht gefunden, wählen Sie keinen ähnlich klingenden Namen: Prüfen Sie ihn in den VMI-Daten oder wenden Sie sich an die Gemeinde.",
+        "where": "Der Abschnitt des Antrags mit den Empfängerdaten.",
+        "eds": [
+          [
+            "Paramos gavėjo identifikacinis numeris (kodas)",
+            "Identifikationsnummer (Kennnummer) des Empfängers"
+          ],
+          [
+            "Paramos gavėjo pavadinimas",
+            "Name des Empfängers"
+          ]
+        ],
+        "copy": true
+      },
+      {
+        "title": "Anteil und Zeitraum festlegen",
+        "action": "Geben Sie einen Anteil bis 1,2 % ein (weniger, wenn ein Teil an andere Empfänger derselben Kategorie geht). Legen Sie den Steuerzeitraum fest: Für die Kampagne {filingYear} ist das erste Jahr {taxYear}. Sie können gleich bis einschließlich {lastTaxYear} zuweisen; dann müssen Sie nicht jedes Jahr neu beantragen.",
+        "where": "Die Felder für Anteil und Zeitraum im selben Antrag.",
+        "eds": [
+          [
+            "Mokesčio dalies dydis (procentais)",
+            "Höhe des Steueranteils (in Prozent)"
+          ],
+          [
+            "Mokestinis laikotarpis",
+            "Steuerzeitraum"
+          ],
+          [
+            "Prašymą pateikiu už … iki …",
+            "Ich stelle den Antrag für … bis … (Zuweisungszeitraum)"
+          ]
+        ]
+      },
+      {
+        "title": "Prüfen und absenden",
+        "action": "Prüfen Sie Kennnummer, Name, Anteil und Jahre noch einmal und senden Sie den Antrag ab. Die Bestätigung des Eingangs erscheint nur in EDS — im Dokumentstatus und in den Mitteilungen. Klicks auf dieser Website senden nichts an die VMI.",
+        "where": "Die Absenden-Schaltfläche in EDS, danach die Liste der eingereichten Dokumente.",
+        "eds": [
+          [
+            "Pateikti",
+            "Absenden"
+          ],
+          [
+            "Pateikti dokumentai",
+            "Eingereichte Dokumente"
+          ],
+          [
+            "Pranešimai",
+            "Mitteilungen"
+          ]
+        ]
+      }
+    ],
+    "checklist": {
+      "title": "Vor dem Absenden prüfen",
+      "items": [
+        "Die Kennnummer {code} und der Name {name} stimmen mit dem überein, was EDS anzeigt.",
+        "Der Anteil beträgt höchstens 1,2 % (insgesamt für alle Empfänger dieser Kategorie).",
+        "Der erste Steuerzeitraum ist {taxYear}; der letzte spätestens {lastTaxYear}.",
+        "Wenn Sie die Jahreserklärung GPM311 abgeben müssen, ist sie fristgerecht eingereicht — sonst wird die Unterstützung nicht überwiesen.",
+        "Nach dem Absenden ist der Antragsstatus in EDS sichtbar: Pateikti dokumentai und Pranešimai. Das Geld überweist die VMI später, in der Regel vom {transferFrom} bis {transferTo}."
+      ],
+      "note": "Die Checkliste dient der Selbstkontrolle. Die Gemeindewebsite sieht Ihren Antrag nicht und kann seinen Eingang nicht bestätigen."
+    }
+  },
+  "again": {
+    "title": "Wenn Sie schon einmal einen Antrag gestellt haben",
+    "intro": "Ein Mehrjahresantrag bleibt in der Regel gültig, sollte aber geprüft werden — besonders wenn der Empfänger im Vorjahr nicht verfügbar war.",
+    "items": [
+      [
+        "Gültigkeit prüfen",
+        "Öffnen Sie in EDS die eingereichten Dokumente (Pateikti dokumentai) und suchen Sie das letzte FR0512: welche Jahre und welcher Empfänger darin stehen. Umfasst der Zeitraum {taxYear} und ist der Empfänger richtig, ist kein neuer Antrag nötig."
+      ],
+      [
+        "Wenn der Empfänger nicht in der Liste war",
+        "Religiöse Gemeinschaften erhalten das Recht auf Unterstützung ab {filingYear} zurück. Nannte Ihr früherer Antrag einen anderen Empfänger oder wurde er abgelehnt, stellen Sie im Antragszeitraum einen neuen Antrag für {taxYear}."
+      ],
+      [
+        "Wenn Sie etwas ändern müssen",
+        "Ein neuer Antrag für denselben Zeitraum ersetzt den vorherigen. Ein bereits gestellter Antrag für {taxYear} kann in EDS bis zum {correction} berichtigt werden: Empfänger, Anteil oder Zeitraum ändern. Das ist eine Berichtigungsfrist, keine Verlängerung der Antragstellung."
+      ],
+      [
+        "Wo Sie das Ergebnis sehen",
+        "In den EDS-Mitteilungen (Pranešimai) und in Mano VMI. Die Annahme bedeutet noch keine Überweisung: Die VMI überweist die Unterstützung in der Regel vom {transferFrom} bis {transferTo}."
+      ]
+    ],
+    "action": "Zu den Schritten der Hilfe"
+  },
+  "recipient": {
+    "title": "Empfängerdaten für FR0512",
+    "intro": "Im Antrag wird die Kennnummer der juristischen Person angegeben. Der Name bleibt auf Litauisch — so ist er im Register eingetragen.",
+    "codeLabel": "Kennnummer des Empfängers",
+    "nameLabel": "Name des Empfängers",
+    "copyCode": "Kennnummer kopieren",
+    "edsHint": "Geben Sie in EDS die Kennnummer im Feld Paramos gavėjo identifikacinis numeris (kodas) ein und prüfen Sie den Namen.",
+    "verify": "Prüfen Sie vor dem Absenden, ob der Empfänger mit dieser Kennnummer in EDS für die Kampagne {filingYear} verfügbar ist. Steht er nicht in der Liste, schreiben Sie der Gemeinde — wir klären es gemeinsam.",
+    "search": "Empfängersuche auf der VMI-Website"
+  },
+  "help": {
+    "title": "Wem Ihre Entscheidung hilft",
+    "intro": "Empfänger ist die orthodoxe Gemeinde der Geburt Christi in Bukiškis: die Hauskirche des ehemaligen Gutes Bukiškis (zweite Hälfte des 19. Jahrhunderts) im Bezirk Vilnius, aus Ruinen wiederaufgebaut, in der seit 2011 wieder Gottesdienste gefeiert werden, und die kleine Gemeinschaft, die sie unterhält. Die Unterstützung dient dem Erhalt der Kirche und dazu, dass das Gemeindeleben — Gottesdienste, gemeinsame Mahlzeiten, Treffen, Feste — unter würdigen Bedingungen stattfindet.",
+    "statusLabels": {
+      "ongoing": "Laufender Bedarf",
+      "progress": "In Arbeit",
+      "planned": "Projekt · geplant",
+      "done": "Abgeschlossen"
+    },
+    "projects": [
+      {
+        "id": "parish",
+        "title": "Kirche und Gemeindeleben",
+        "text": "Heizung, Strom, Wasser und Müllabfuhr; Pflege von Gebäude und Gelände; liturgische Ausgaben; Mahlzeiten nach dem Gottesdienst. Das sind die Kosten, ohne die die Kirche nicht jeden Tag geöffnet sein kann."
+      },
+      {
+        "id": "kitchen",
+        "title": "Gemeindeküche",
+        "text": "Ein kleiner Raum, in dem nach dem Gottesdienst Tee und Kaffee, Mahlzeiten und Festtagsbewirtung vorbereitet werden. Wände, Arbeitsbereich und Stauraum müssen in Ordnung gebracht werden. Die erste Stufe bereitet den Raum vor, die zweite installiert die neue Küche.",
+        "link": "Projektseite der Küche"
+      },
+      {
+        "id": "shelter",
+        "title": "Pavillon mit Abstellraum",
+        "text": "Im August 2026 zerstörte ein bei einer Sturmböe umgestürzter Baum das Wirtschaftsgebäude der Gemeinde. Es wurde beschlossen, nicht nur den Lagerraum wiederherzustellen, sondern einen überdachten Pavillon für Treffen nach dem Gottesdienst, für Familien und Kinder zu bauen — mit einem Abstellraum für Geräte.",
+        "link": "Projektseite des Pavillons"
+      }
+    ],
+    "budget": {
+      "label": "Laut Projektseite, Stand {asOf}",
+      "total": "Geschätzte Kosten",
+      "raised": "Bisher gesammelt",
+      "note": "Die Beträge stehen auf den Projektseiten und können angepasst werden. Über GPM zugewiesene Unterstützung kommt der Gemeinde als Ganzes zugute und wird nach dem laufenden Bedarf verwendet, nicht automatisch für ein bestimmtes Projekt."
+    },
+    "conceptLabel": "Konzept · geplantes Ergebnis, keine ausgeführten Arbeiten",
+    "done": {
+      "title": "Was bereits geschehen ist",
+      "text": "Das Kirchengebäude wurde bis 2007 instand gesetzt; seit 2011 werden darin Gottesdienste gefeiert. In den Jahren 2021–2026 kümmerte sich die Gemeinde um Treppe, Türmchen, Altarraum, Dach und Innenraum — Einzelheiten und Fotos im Geschichtsbereich. Die für die Küche gesammelten Mittel (laut Projektseite) erlauben den Beginn ihrer ersten Stufe."
+    },
+    "appeal": {
+      "heading": "Ein Wort des Pfarrers",
+      "paragraphs": [
+        "Liebe Freunde! Unsere Kirche lebt dank derer, die zum Gottesdienst kommen, mit ihren Händen helfen und die Gemeinde unterstützen — oft unbemerkt von anderen.",
+        "Die Zuweisung eines Steueranteils kostet Sie persönlich nichts, für eine kleine Gemeinschaft aber ist sie spürbare Hilfe: bezahlte Heizung im Winter, eine für die Feste bereite Küche, ein nach dem Sturm wiederaufgebautes Wirtschaftsgebäude.",
+        "Wenn Sie sich entscheiden, Ihre 1,2 % der Gemeinde zuzuweisen — danke. Bei Fragen rufen Sie an oder schreiben Sie: Wir klären es gemeinsam, aber nach Passwörtern oder Codes werden wir nie fragen."
+      ],
+      "signature": "Priester Maksim Krutolevič, Pfarrer"
+    },
+    "contact": "Gemeinde kontaktieren",
+    "historyLink": "Geschichte der Kirche",
+    "nowLabel": "Jetzt"
+  },
+  "donate": {
+    "title": "Spende per Banküberweisung",
+    "intro": "Das ist eine eigene Form der Hilfe, unabhängig von GPM. Eine Überweisung ist jederzeit vom eigenen Konto möglich.",
+    "fields": {
+      "recipient": "Empfänger",
+      "code": "Kennnummer der Organisation",
+      "bank": "Bank",
+      "iban": "Konto · IBAN",
+      "bic": "BIC / SWIFT",
+      "purpose": "Verwendungszweck"
+    },
+    "purposeExplain": "Spende an die Gemeinde",
+    "copyIban": "IBAN kopieren",
+    "copyAll": "Alle Daten kopieren",
+    "note": "Prüfen Sie vor der Bestätigung Empfänger und IBAN in Ihrer Bank. Gebühren und Fristen hängen von der Bank ab.",
+    "safety": "Die Gemeinde bittet nie darum, auf der Website Kartendaten, Bankpasswörter, Smart-ID-Codes oder eine persönliche Kennnummer einzugeben."
+  },
+  "faq": {
+    "title": "Antworten auf Ihre Fragen",
+    "intro": "Kurze Antworten auf echte Schwierigkeiten. Die Suche läuft im Browser über den Inhalt dieser Seite.",
+    "searchLabel": "Antwort finden",
+    "searchPlaceholder": "Zum Beispiel: mehrere Empfänger",
+    "noMatch": "Keine genaue Antwort. Sehen Sie alle Fragen unten an oder wenden Sie sich an die Gemeinde.",
+    "showAll": "Alle Fragen zeigen",
+    "items": [
+      {
+        "q": "Muss ich zusätzlich etwas zahlen?",
+        "a": "Nein. FR0512 weist einen Teil der bereits gezahlten Einkommensteuer zu. Von Ihrem Konto wird nichts abgebucht, das Gehalt wird nicht geringer. Eine Banküberweisung ist eine eigene, freiwillige Form der Hilfe.",
+        "link": "basics"
+      },
+      {
+        "q": "Wovon werden die 1,2 % berechnet?",
+        "a": "Vom jährlichen GPM für {taxYear} laut Erklärung (oder vom Arbeitgeber einbehalten, wenn keine Erklärung nötig ist), nicht vom Gehalt. Die genaue Grundlage bestimmt die VMI. Der Rechner multipliziert den eingegebenen Betrag nur mit 0,012.",
+        "link": "calculator"
+      },
+      {
+        "q": "Was, wenn ich meinen Steuerbetrag nicht kenne?",
+        "a": "Sehen Sie in die Jahreserklärung GPM311 für {taxYear} in EDS oder in die Daten in Mano VMI; der Arbeitgeber stellt eine Bescheinigung über die einbehaltene Steuer aus. Für die Größenordnung hat der Rechner den Modus „Ich kenne meinen GPM-Betrag nicht“ mit Lehrbeispielen — das ist keine Schätzung Ihrer Steuer.",
+        "link": "calculator"
+      },
+      {
+        "q": "Gilt das für jemanden in meiner Situation?",
+        "a": "Wenn Sie steuerlich in Litauen ansässig sind und {taxYear} GPM auf Ihre Einkünfte berechnet oder einbehalten wurde — ja, unabhängig von Staatsangehörigkeit und Alter. Gab es keine steuerpflichtigen Einkünfte und ist die Steuer null, gibt es nichts zuzuweisen. Im Zweifel fragen Sie bei der VMI nach.",
+        "link": "basics"
+      },
+      {
+        "q": "Kann ich mehrere Empfänger wählen?",
+        "a": "Ja. Die Anteile für Empfänger dieser Kategorie dürfen zusammen höchstens 1,2 % betragen. Getrennt und zusätzlich können bis zu 0,6 % an politische Organisationen und bis zu 0,6 % an Gewerkschaften gehen. Ein Betrag unter 3 € an einen Empfänger für ein Jahr wird nicht überwiesen.",
+        "link": "steps"
+      },
+      {
+        "q": "Kann ich die Unterstützung für mehrere Jahre zuweisen?",
+        "a": "Ja. In FR0512 wird ein Zeitraum angegeben: Für die Kampagne {filingYear} ist das erste Steuerjahr {taxYear}, das letzte spätestens {lastTaxYear}. Ein solcher Antrag gilt für alle genannten Jahre, solange der Empfänger berechtigt bleibt.",
+        "link": "steps"
+      },
+      {
+        "q": "Muss ich jedes Jahr einen Antrag stellen?",
+        "a": "Nein, wenn ein gültiger Antrag das betreffende Jahr und den richtigen Empfänger umfasst. Haben Sie nur ein Jahr angegeben, beantragen Sie in der nächsten Kampagne erneut. Ein neuer Antrag für denselben Zeitraum ersetzt den vorherigen.",
+        "link": "again"
+      },
+      {
+        "q": "Wie prüfe ich einen früher gestellten Antrag?",
+        "a": "Öffnen Sie in EDS Pateikti dokumentai, suchen Sie das letzte FR0512 und sehen Sie Empfänger, Anteil und Jahre an. Ein Antrag für {taxYear} kann bis zum {correction} berichtigt werden. Diese Website sieht Ihren Antrag nicht.",
+        "link": "again"
+      },
+      {
+        "q": "Was, wenn der Empfänger nicht gefunden wird?",
+        "a": "Prüfen Sie, ob Sie die Kennnummer {code} ohne Leerzeichen eingeben, und vergleichen Sie den Namen {name}. Wählen Sie keinen ähnlichen Namen einer anderen Organisation. Die Empfängerdaten veröffentlicht die VMI; steht die Gemeinde nicht in der Liste, sagen Sie uns Bescheid, und wir klären den Grund.",
+        "link": "recipient"
+      },
+      {
+        "q": "Woher weiß ich, dass der Antrag angenommen wurde?",
+        "a": "Nur in EDS: im Dokumentstatus und in den Mitteilungen (Pranešimai). Die Annahme bedeutet noch keine Überweisung — die VMI überweist die Unterstützung in der Regel vom {transferFrom} bis {transferTo}. Müssen Sie GPM311 abgeben und haben es nicht fristgerecht getan, wird die Unterstützung nicht überwiesen.",
+        "link": "steps"
+      },
+      {
+        "q": "Worin unterscheidet sich GPM von einer Überweisung auf das Bankkonto?",
+        "a": "Der GPM-Anteil ist ein Teil der bereits gezahlten Steuer, den die VMI auf Ihren Antrag überweist. Eine Banküberweisung ist Ihr eigenes Geld, das Sie der Gemeinde jederzeit direkt senden. Beides ist möglich.",
+        "link": "donate"
+      },
+      {
+        "q": "Wer kann mir beim Verstehen helfen?",
+        "a": "Die Gemeinde — per Telefon oder Messenger: Wir erklären die Schritte, melden uns aber nicht in Ihrem Namen bei Bank oder EDS an und fragen nicht nach Passwörtern. Offizielle Erläuterungen und Beratung gibt die VMI: die Seiten im Quellenbereich und die VMI-Hotline.",
+        "link": "help"
+      }
+    ]
+  },
+  "sources": {
+    "title": "Offizielle Quellen und Prüfung",
+    "intro": "Grundlage des Bereichs sind die Erläuterungen der VMI und das Gesetz über Wohltätigkeit und Unterstützung in der ab 1. Januar {filingYear} geltenden Fassung. Bei Abweichungen gilt die aktuelle Information der VMI.",
+    "checked": "VMI-Angaben geprüft: {checked}. Textfassung: {edited}. Das Datum ändert sich nur nach einer neuen inhaltlichen Prüfung, nicht beim technischen Neuaufbau der Website.",
+    "law": "Änderung des Gesetzes über Wohltätigkeit und Unterstützung: Nr. {lawNumber} vom {lawDate}, TAR {lawRegister}, in Kraft ab {lawEffective}.",
+    "items": {
+      "rules": "VMI: Zuweisung des GPM-Anteils, Zeiträume und Empfängerkategorien",
+      "changes2027": "VMI: Gesetzesänderungen ab {filingYear} (religiöse Gemeinschaften und weitere Empfänger)",
+      "filing": "VMI: FR0512 über EDS einreichen",
+      "gpm311": "VMI: FR0512 und die Jahreserklärung GPM311",
+      "correction": "VMI: FR0512 einreichen und berichtigen (Erläuterung 2026, PDF)",
+      "recipients": "VMI: Daten der Unterstützungsempfänger",
+      "law": "Gesetz über Wohltätigkeit und Unterstützung (TAR, Fassungen)"
+    },
+    "disclaimer": "Der Bereich wurde von der Gemeinde als Information erstellt und ist kein offizieller VMI-Dienst."
+  },
+  "actions": {
+    "share": "Teilen",
+    "shared": "Link kopiert",
+    "shareTitle": "1,2 % GPM — Anleitung der Gemeinde Bukiškis",
+    "print": "Merkblatt drucken",
+    "printNote": "Druckfassung: Schritte, Checkliste und Bankverbindung. Der Antrag wird trotzdem in EDS gestellt.",
+    "top": "Zum Anfang"
+  },
+  "noJs": "Der gesamte Text ist ohne JavaScript verfügbar. Rechner, Schrittmodus und Fragensuche benötigen JavaScript; ohne es werden alle Schritte auf einmal angezeigt.",
+  "standalone": "Eigenständige Fassung der Anleitung: hram.lt"
+}

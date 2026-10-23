@@ -12,7 +12,7 @@ export const DIST = resolve(ROOT, 'dist');
 if (relative(ROOT, DIST) !== 'dist') throw new Error('Unsafe output path');
 
 /** Sections that exist in every site language, in navigation order. */
-export const CORE_PAGES = ['home', 'schedule', 'history', 'sacraments', 'gallery', 'news', 'contacts', 'library', 'notes', 'support', 'privacy'];
+export const CORE_PAGES = ['home', 'schedule', 'history', 'sacraments', 'gallery', 'news', 'contacts', 'library', 'notes', 'support', 'gpm', 'privacy'];
 
 const DOCUMENT_DELIVERY = ['envelope', 'direct'];
 
@@ -48,6 +48,7 @@ export async function loadSite(env = process.env) {
     readJSON('description-overrides.json'),
     readFile(resolve(ROOT, 'index.html'), 'utf8')
   ]);
+  const gpm = await loadGpm();
 
   if (settings.timezone !== TIMEZONE) throw new Error(`settings.timezone must be ${TIMEZONE}`);
   if (settings.locales.join() !== SITE_LANGUAGES.join()) throw new Error('settings.locales must match the supported site languages');
@@ -96,6 +97,8 @@ export async function loadSite(env = process.env) {
     titleOverrides: titleOverrides.titles,
     /** Editorial descriptions without changing the preserved source records. */
     descriptionOverrides: descriptionOverrides.descriptions,
+    /** The 1.2 % GPM section: one config for every figure, texts per language. */
+    gpm,
     template,
     schedule,
     origin,
@@ -112,6 +115,45 @@ export async function loadSite(env = process.env) {
     /** Path of a core section in a language. */
     route: (lang, page) => `/${lang}/${page === 'home' ? '' : `${page}.html`}`
   };
+}
+
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+
+/** Shape of a JSON value: keys sorted, array lengths kept, so six translations can be compared. */
+function shapeOf(value) {
+  if (Array.isArray(value)) return `[${value.length}:${value.length ? shapeOf(value[0]) : ''}]`;
+  if (value && typeof value === 'object') return `{${Object.keys(value).sort().map(key => `${key}:${shapeOf(value[key])}`).join(',')}}`;
+  return typeof value;
+}
+
+/**
+ * Loads content/gpm/config.json and the six text files, validating that every
+ * figure the texts rely on is present and that the translations share one structure.
+ */
+export async function loadGpm() {
+  const config = await readJSON('gpm/config.json');
+  const { campaign, review } = config;
+  for (const key of ['filingStart', 'filingDeadline', 'correctionDeadline', 'transferFrom', 'transferTo']) {
+    if (!ISO_DATE.test(campaign[key] || '')) throw new Error(`gpm config: campaign.${key} must be an ISO date`);
+  }
+  if (!(campaign.filingStart < campaign.filingDeadline && campaign.filingDeadline < campaign.correctionDeadline)) throw new Error('gpm config: filing dates out of order');
+  if (campaign.taxYear + 1 !== campaign.filingYear) throw new Error('gpm config: filingYear must follow taxYear');
+  if (!Number.isInteger(campaign.lastTaxYear) || campaign.lastTaxYear < campaign.taxYear) throw new Error('gpm config: lastTaxYear');
+  if (typeof campaign.recipientVerified !== 'boolean' || typeof campaign.gpmBankAccountVerified !== 'boolean') throw new Error('gpm config: verification flags must be booleans');
+  for (const key of ['sourcesCheckedOn', 'editedOn']) if (!ISO_DATE.test(review[key] || '')) throw new Error(`gpm config: review.${key}`);
+  for (const key of ['adopted', 'effective']) if (!ISO_DATE.test(review.law?.[key] || '')) throw new Error(`gpm config: review.law.${key}`);
+  if (!ISO_DATE.test(config.budgetAsOf || '')) throw new Error('gpm config: budgetAsOf');
+  for (const source of config.sources) if (!safeExternalURL(source.url)) throw new Error(`gpm config: source ${source.id}`);
+
+  const texts = Object.fromEntries(await Promise.all(SITE_LANGUAGES.map(async lang => [lang, await readJSON(`gpm/${lang}.json`)])));
+  const reference = shapeOf(texts.ru);
+  for (const lang of SITE_LANGUAGES) {
+    if (shapeOf(texts[lang]) !== reference) throw new Error(`content/gpm/${lang}.json differs in structure from ru.json`);
+    for (const source of config.sources) if (!texts[lang].sources.items[source.id]) throw new Error(`content/gpm/${lang}.json: missing source title ${source.id}`);
+    const ids = texts[lang].help.projects.map(project => project.id).join();
+    if (ids !== config.projects.map(project => project.id).join()) throw new Error(`content/gpm/${lang}.json: project order must match config`);
+  }
+  return { config, texts };
 }
 
 /** Formats an instant for readers in a site language, always on the Vilnius clock. */

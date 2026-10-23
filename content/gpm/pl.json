@@ -1,0 +1,471 @@
+{
+  "title": "1,2% GPM — jak przekazać część podatku parafii",
+  "description": "Jak przekazać do 1,2% litewskiego podatku dochodowego (GPM) za {taxYear} r. przez FR0512 w systemie EDS VMI: trzy scenariusze, kalkulator, asystent krok po kroku, odpowiedzi na pytania i dane parafii w Bukiszkach.",
+  "eyebrow": "Litwa · Część podatku dochodowego · Kampania {filingYear}",
+  "hero": {
+    "title": [
+      "Nadaj pomocy",
+      "właściwy kierunek."
+    ],
+    "lead": "Do 1,2% już zapłaconego podatku dochodowego można przekazać parafii — bez dodatkowych kosztów. Wyjaśniamy, co to znaczy, jak wypełnić FR0512 w oficjalnym systemie VMI i komu pomaga Twój wybór.",
+    "figure": "1,2%",
+    "figureNote": "przestrzenna cyfra „1,2%” — symbol części podatku",
+    "primary": "Wybierz swój scenariusz",
+    "secondary": "Oblicz kwotę",
+    "caption": "Dział informacyjny parafii · Nie jest usługą VMI · Wniosek składa się wyłącznie w EDS"
+  },
+  "phase": {
+    "title": "Stan kampanii",
+    "before": {
+      "label": "Składanie wniosków jeszcze się nie rozpoczęło",
+      "text": "Wnioski FR0512 za dochody z {taxYear} r. są przyjmowane od {start} do {deadline}. To dobry moment, aby zrozumieć zasady, przygotować dane i zapisać ściągawkę."
+    },
+    "during": {
+      "label": "Trwa przyjmowanie wniosków",
+      "text": "Wniosek za dochody z {taxYear} r. składa się w EDS do {deadline} włącznie. Przygotuj się według instrukcji poniżej i złóż wniosek w oficjalnym systemie.",
+      "action": "Otwórz EDS (oficjalny system VMI)"
+    },
+    "after": {
+      "label": "Okres składania wniosków zakończył się",
+      "text": "Termin złożenia pierwszego wniosku za dochody z {taxYear} r. minął {deadline}. Zasady korekty złożonego wniosku i terminy kolejnej kampanii sprawdź na stronie VMI — tutaj nie są ogłaszane bez weryfikacji."
+    },
+    "verify": "Przed złożeniem sprawdź odbiorcę w EDS po kodzie {code}: prawo wspólnot religijnych do tego wsparcia wraca od {filingYear} r., a obecność parafii na liście odbiorców potwierdza wyłącznie system VMI."
+  },
+  "facts": [
+    [
+      "Rok podatkowy",
+      "{taxYear}"
+    ],
+    [
+      "Okres składania",
+      "{start} — {deadline}"
+    ],
+    [
+      "Formularz",
+      "FR0512 w EDS"
+    ],
+    [
+      "Można wskazać",
+      "do {lastTaxYear} r."
+    ]
+  ],
+  "scenarios": {
+    "title": "Od czego zacząć?",
+    "intro": "Wybierz, co jest najbliższe Twojej sytuacji — dział otworzy się we właściwym miejscu.",
+    "items": [
+      {
+        "id": "learn",
+        "title": "Chcę zrozumieć",
+        "text": "Czym jest część GPM, kto może ją przekazać i czym różni się od darowizny.",
+        "action": "Wyjaśnij prostymi słowami",
+        "target": "basics"
+      },
+      {
+        "id": "first",
+        "title": "Składam po raz pierwszy",
+        "text": "Asystent krok po kroku: logowanie do EDS, formularz FR0512, wybór odbiorcy, udział i okres, sprawdzenie.",
+        "action": "Otwórz asystenta",
+        "target": "steps"
+      },
+      {
+        "id": "again",
+        "title": "Składałem już wcześniej",
+        "text": "Jak sprawdzić obowiązujący wniosek, czy trzeba składać ponownie i jak go poprawić.",
+        "action": "Sprawdź, co zrobić",
+        "target": "again"
+      }
+    ]
+  },
+  "basics": {
+    "title": "Najważniejsze w minutę",
+    "intro": "GPM (gyventojų pajamų mokestis) to litewski podatek dochodowy od osób fizycznych. Ustawa pozwala poprosić VMI o przekazanie części już zapłaconego podatku wybranemu odbiorcy. To nie jest nowa płatność ani dodatkowe potrącenie z pensji.",
+    "items": [
+      [
+        "Nie od pensji",
+        "Udział oblicza się od rocznej kwoty GPM, a nie od dochodu. Przykład: 1 000 € GPM × 0,012 = 12 €."
+      ],
+      [
+        "Bez dopłaty",
+        "Pieniądze zostały już zapłacone państwu. Ty tylko decydujesz, dokąd trafi do 1,2% z nich. Bez wniosku cała kwota zostaje w budżecie."
+      ],
+      [
+        "Wniosek — tylko w EDS",
+        "Ten dział pomaga się przygotować. Formularz FR0512 wypełnia się w oficjalnym systemie deklaracji VMI, a nie na stronie parafii."
+      ],
+      [
+        "Nie myl lat",
+        "W kampanii {filingYear} chodzi o podatek od dochodów z {taxYear} r. Okres składania: {start} — {deadline}."
+      ]
+    ],
+    "who": {
+      "title": "Dla kogo to jest",
+      "text": "Dla stałych rezydentów podatkowych Litwy (nuolatiniai Lietuvos gyventojai), którzy w {taxYear} r. uzyskali dochody opodatkowane GPM: pensję, działalność indywidualną lub inne dochody opodatkowane. Samo obywatelstwo nie daje ani nie odbiera tego prawa. Emeryt lub osoba czasowo niepracująca może uczestniczyć, jeśli w ciągu roku od jej dochodów naliczono lub potrącono GPM; jeśli podatek wynosi zero, nie ma czego przekazać. Swoją sytuację można wyjaśnić w VMI."
+    },
+    "difference": {
+      "title": "Czym to się różni od darowizny",
+      "items": [
+        [
+          "Część GPM",
+          "Część już zapłaconego podatku. Przekazuje VMI, zwykle od {transferFrom} do {transferTo}. Składa się FR0512 w EDS. Twój portfel się nie zmienia."
+        ],
+        [
+          "Darowizna bankowa",
+          "Twoje własne środki przelane na konto parafii w dowolnym czasie. Dane są w osobnym bloku poniżej. Jedno nie wyklucza drugiego."
+        ]
+      ]
+    }
+  },
+  "calculator": {
+    "title": "Ile to w pieniądzach?",
+    "intro": "Wpisz kwotę podatku dochodowego (GPM) za {taxYear} r. To nie pensja: kwotę podatku znajdziesz w rocznej deklaracji GPM311 w EDS, w zaświadczeniu pracodawcy lub w Mano VMI. Obliczenie wykonuje się w Twojej przeglądarce i nigdzie nie jest wysyłane.",
+    "inputLabel": "Kwota GPM za {taxYear} r., €",
+    "inputHint": "Na przykład 1 000 lub 1 850,50",
+    "unknownToggle": "Nie znam swojej kwoty GPM",
+    "unknownIntro": "To przykłady poglądowe, a nie szacunek Twojego podatku. Rzeczywistą kwotę ustala VMI; Twoja może być większa lub mniejsza.",
+    "examples": [
+      {
+        "label": "Przykład umowny A",
+        "amount": "600"
+      },
+      {
+        "label": "Przykład umowny B",
+        "amount": "1500"
+      },
+      {
+        "label": "Przykład umowny C",
+        "amount": "3000"
+      }
+    ],
+    "exampleBadge": "przykład poglądowy",
+    "peopleLabel": "Uczestników w przykładzie",
+    "peopleHint": "Scenariusz grupowy to ilustracja, a nie licznik zebranych środków.",
+    "result": "1,2% od podanej kwoty",
+    "formula": "Wzór: GPM × 0,012",
+    "formulaLine": "{amount} € × 0,012 = {result} €",
+    "together": "Razem w tym przykładzie ({people} os. z taką samą kwotą)",
+    "approx": "Obliczenie orientacyjne. Ostateczną kwotę oblicza i przekazuje VMI.",
+    "belowMinimum": "Kwota poniżej 3 € dla jednego odbiorcy za rok podatkowy nie jest przekazywana. W tym przykładzie udział każdego uczestnika jest poniżej progu, dlatego do przekazania — 0 €.",
+    "minimumNote": "Próg 3 € stosuje się do udziału każdej osoby osobno: małe kwoty kilku uczestników nie sumują się, aby go przekroczyć.",
+    "invalid": "Wpisz kwotę od 0 do 100 000 000 z nie więcej niż dwoma miejscami po przecinku.",
+    "local": "Wszystkie obliczenia wykonywane są lokalnie. Wpisane wartości nie są zapisywane ani przesyłane."
+  },
+  "steps": {
+    "title": "Asystent FR0512",
+    "intro": "Pięć krótkich kroków. Nazwy pozycji EDS podano po litewsku, tak jak w systemie, z objaśnieniem. Strona tylko pomaga się przygotować: wniosek składa się w oficjalnym EDS.",
+    "progress": "Krok {n} z {total}",
+    "prev": "Wstecz",
+    "next": "Dalej",
+    "finish": "Do listy kontrolnej",
+    "showAll": "Pokaż wszystkie kroki naraz",
+    "showOne": "Pokazuj po jednym kroku",
+    "whereLabel": "Gdzie",
+    "edsLabel": "W EDS",
+    "copyCode": "Skopiuj kod parafii",
+    "copied": "Kod {code} skopiowany",
+    "openEds": "Otwórz EDS",
+    "diagramNote": "Schemat to ilustracja poglądowa, nie ekran VMI. Interfejs EDS może się różnić.",
+    "items": [
+      {
+        "title": "Zaloguj się do EDS",
+        "action": "Otwórz oficjalny system deklaracji VMI i zaloguj się jak zwykle: przez bank, Smart-ID, podpis mobilny lub inny sposób oferowany przez sam system.",
+        "where": "deklaravimas.vmi.lt — wyłącznie na stronie VMI. Strona parafii nie prosi o hasła, Smart-ID, numer identyfikacyjny ani dokumenty podatkowe.",
+        "eds": [
+          [
+            "Prisijungti",
+            "Zaloguj się"
+          ],
+          [
+            "Elektroninio deklaravimo sistema (EDS)",
+            "Elektroniczny system deklaracji"
+          ]
+        ]
+      },
+      {
+        "title": "Znajdź formularz FR0512",
+        "action": "W menu wybierz wypełnianie formularza i znajdź wniosek o przekazanie wsparcia. Formularz otwiera się w elektronicznym kreatorze.",
+        "where": "Główne menu EDS po zalogowaniu.",
+        "eds": [
+          [
+            "Deklaravimas",
+            "Deklarowanie"
+          ],
+          [
+            "Pildyti formą",
+            "Wypełnij formularz"
+          ],
+          [
+            "Dažniausiai pildomos formos",
+            "Najczęściej wypełniane formularze"
+          ],
+          [
+            "Prašymas skirti paramą (FR0512)",
+            "Wniosek o przekazanie wsparcia"
+          ]
+        ]
+      },
+      {
+        "title": "Wybierz odbiorcę",
+        "action": "Wpisz kod odbiorcy i sprawdź pełną nazwę. Parafia w Bukiszkach: {code} — {name}. Jeśli odbiorcy nie ma, nie wybieraj podobnej nazwy: sprawdź go w danych VMI lub skontaktuj się z parafią.",
+        "where": "Część wniosku z danymi odbiorcy.",
+        "eds": [
+          [
+            "Paramos gavėjo identifikacinis numeris (kodas)",
+            "Numer identyfikacyjny (kod) odbiorcy"
+          ],
+          [
+            "Paramos gavėjo pavadinimas",
+            "Nazwa odbiorcy"
+          ]
+        ],
+        "copy": true
+      },
+      {
+        "title": "Wskaż udział i okres",
+        "action": "Wpisz udział do 1,2% (może być mniej, jeśli część przekazujesz innym odbiorcom tej samej kategorii). Wskaż okres podatkowy: w kampanii {filingYear} pierwszy to {taxYear}. Można od razu wskazać okres do {lastTaxYear} r. włącznie, wtedy nie trzeba składać wniosku co roku.",
+        "where": "Pola udziału i okresu w tym samym wniosku.",
+        "eds": [
+          [
+            "Mokesčio dalies dydis (procentais)",
+            "Wysokość części podatku (w procentach)"
+          ],
+          [
+            "Mokestinis laikotarpis",
+            "Okres podatkowy"
+          ],
+          [
+            "Prašymą pateikiu už … iki …",
+            "Składam wniosek za … do … (okres wskazania)"
+          ]
+        ]
+      },
+      {
+        "title": "Sprawdź i wyślij",
+        "action": "Sprawdź ponownie kod, nazwę, udział i lata, a następnie wyślij wniosek. Potwierdzenie przyjęcia pojawia się tylko w EDS — w stanie dokumentu i w powiadomieniach. Kliknięcia na tej stronie niczego nie wysyłają do VMI.",
+        "where": "Przycisk wysyłania w EDS, następnie lista złożonych dokumentów.",
+        "eds": [
+          [
+            "Pateikti",
+            "Wyślij"
+          ],
+          [
+            "Pateikti dokumentai",
+            "Złożone dokumenty"
+          ],
+          [
+            "Pranešimai",
+            "Powiadomienia"
+          ]
+        ]
+      }
+    ],
+    "checklist": {
+      "title": "Przed wysłaniem sprawdź",
+      "items": [
+        "Kod odbiorcy {code} i nazwa {name} zgadzają się z tym, co pokazuje EDS.",
+        "Udział nie przekracza 1,2% (łącznie dla wszystkich odbiorców tej kategorii).",
+        "Pierwszy okres podatkowy to {taxYear}; ostatni — nie później niż {lastTaxYear}.",
+        "Jeśli masz obowiązek złożyć roczną deklarację GPM311, została złożona w terminie — inaczej wsparcie nie zostanie przekazane.",
+        "Po wysłaniu stan wniosku widać w EDS: Pateikti dokumentai i Pranešimai. Pieniądze VMI przekazuje później, zwykle od {transferFrom} do {transferTo}."
+      ],
+      "note": "Lista kontrolna służy do samodzielnego sprawdzenia. Strona parafii nie widzi Twojego wniosku i nie może potwierdzić jego przyjęcia."
+    }
+  },
+  "again": {
+    "title": "Jeśli składałeś już wniosek",
+    "intro": "Wniosek wieloletni zwykle nadal obowiązuje, ale warto go sprawdzić — zwłaszcza jeśli w zeszłym roku odbiorca był niedostępny.",
+    "items": [
+      [
+        "Sprawdź ważność",
+        "W EDS otwórz złożone dokumenty (Pateikti dokumentai) i znajdź ostatni FR0512: jakie lata i jaki odbiorca są w nim wskazane. Jeśli okres obejmuje {taxYear} r., a odbiorca jest właściwy, nowy wniosek nie jest potrzebny."
+      ],
+      [
+        "Jeśli odbiorcy nie było na liście",
+        "Prawo wspólnot religijnych do wsparcia wraca od {filingYear} r. Jeśli Twój wcześniejszy wniosek wskazywał innego odbiorcę lub został odrzucony, złóż nowy wniosek za {taxYear} r. w okresie składania."
+      ],
+      [
+        "Jeśli trzeba zmienić",
+        "Nowy wniosek za ten sam okres zastępuje poprzedni. Złożony już wniosek za {taxYear} r. można poprawić w EDS do {correction}: zmienić odbiorcę, udział lub okres. To termin korekty, a nie przedłużenie składania."
+      ],
+      [
+        "Gdzie zobaczyć wynik",
+        "W powiadomieniach EDS (Pranešimai) i w Mano VMI. Przyjęcie wniosku nie oznacza jeszcze przelewu: VMI przekazuje wsparcie zwykle od {transferFrom} do {transferTo}."
+      ]
+    ],
+    "action": "Przejdź do kroków asystenta"
+  },
+  "recipient": {
+    "title": "Dane odbiorcy do FR0512",
+    "intro": "We wniosku wskazuje się kod osoby prawnej. Nazwa pozostaje po litewsku — tak jest zapisana w rejestrze.",
+    "codeLabel": "Kod odbiorcy",
+    "nameLabel": "Nazwa odbiorcy",
+    "copyCode": "Skopiuj kod",
+    "edsHint": "W EDS wpisz kod w polu Paramos gavėjo identifikacinis numeris (kodas) i sprawdź nazwę.",
+    "verify": "Przed wysłaniem sprawdź, czy odbiorca z tym kodem jest dostępny w EDS na kampanię {filingYear}. Jeśli nie ma go na liście, napisz do parafii — wyjaśnimy to razem.",
+    "search": "Wyszukiwarka odbiorców na stronie VMI"
+  },
+  "help": {
+    "title": "Komu pomaga Twój wybór",
+    "intro": "Odbiorcą jest prawosławna parafia Narodzenia Chrystusa w Bukiszkach: cerkiew domowa dawnego dworu Bukiszki (druga połowa XIX w.) w rejonie wileńskim, odbudowana z ruin, w której od 2011 r. znów odprawiane są nabożeństwa, oraz niewielka wspólnota, która ją utrzymuje. Wsparcie idzie na utrzymanie cerkwi i na to, by życie parafialne — nabożeństwa, wspólne posiłki, spotkania, święta — toczyło się w godnych warunkach.",
+    "statusLabels": {
+      "ongoing": "Stałe potrzeby",
+      "progress": "W toku",
+      "planned": "Projekt · planowany",
+      "done": "Wykonane"
+    },
+    "projects": [
+      {
+        "id": "parish",
+        "title": "Cerkiew i życie parafii",
+        "text": "Ogrzewanie, prąd, woda i wywóz odpadów; dbanie o budynek i teren; wydatki liturgiczne; posiłki po nabożeństwie. To koszty, bez których cerkiew nie może być otwarta codziennie."
+      },
+      {
+        "id": "kitchen",
+        "title": "Kuchnia parafialna",
+        "text": "Niewielkie pomieszczenie, w którym po nabożeństwie przygotowuje się herbatę i kawę, posiłki i świąteczny poczęstunek. Trzeba uporządkować ściany, strefę roboczą i przechowywanie. Pierwszy etap to przygotowanie pomieszczenia, drugi — montaż nowej kuchni.",
+        "link": "Strona projektu kuchni"
+      },
+      {
+        "id": "shelter",
+        "title": "Altana z pomieszczeniem gospodarczym",
+        "text": "W sierpniu 2026 r. drzewo powalone przez nawałnicę zniszczyło budynek gospodarczy parafii. Postanowiono nie tylko odtworzyć magazyn, ale zbudować zadaszoną altanę na spotkania po nabożeństwie, dla rodzin i dzieci — z pomieszczeniem gospodarczym na sprzęt.",
+        "link": "Strona projektu altany"
+      }
+    ],
+    "budget": {
+      "label": "Według strony projektu na {asOf}",
+      "total": "Orientacyjny koszt",
+      "raised": "Już zebrano",
+      "note": "Kwoty podano na stronach projektów i mogą być aktualizowane. Wsparcie przekazane przez GPM trafia do parafii jako całości i jest przeznaczane na bieżące potrzeby, a nie automatycznie na konkretny projekt."
+    },
+    "conceptLabel": "Koncepcja · projektowany rezultat, nie wykonane prace",
+    "done": {
+      "title": "Co już zrobiono",
+      "text": "Budynek cerkwi wyremontowano do 2007 r., od 2011 r. odprawiane są w nim nabożeństwa. W latach 2021–2026 parafia zajmowała się schodami, wieżyczkami, prezbiterium, dachem i wnętrzem — szczegóły i zdjęcia w dziale historii. Środki zebrane na kuchnię (według strony projektu) pozwalają rozpocząć jej pierwszy etap."
+    },
+    "appeal": {
+      "heading": "Słowo proboszcza",
+      "paragraphs": [
+        "Drodzy przyjaciele! Nasza cerkiew żyje dzięki tym, którzy przychodzą na nabożeństwa, pomagają własnymi rękami i wspierają parafię — często niezauważalnie dla innych.",
+        "Wskazanie części podatku nic Was osobiście nie kosztuje, a dla małej wspólnoty to odczuwalna pomoc: opłacone ogrzewanie zimą, gotowa na święta kuchnia, odbudowany po burzy budynek gospodarczy.",
+        "Jeśli zdecydujecie się przekazać swoje 1,2% parafii — dziękuję. Jeśli macie pytania, dzwońcie lub piszcie: wyjaśnimy wszystko razem, ale nigdy nie poprosimy o hasła ani kody."
+      ],
+      "signature": "ks. Maksim Krutolevič, proboszcz"
+    },
+    "contact": "Skontaktuj się z parafią",
+    "historyLink": "Historia cerkwi",
+    "nowLabel": "Teraz"
+  },
+  "donate": {
+    "title": "Darowizna przelewem bankowym",
+    "intro": "To osobny sposób pomocy, niezwiązany z GPM. Przelew można wykonać w dowolnym czasie z własnego konta.",
+    "fields": {
+      "recipient": "Odbiorca",
+      "code": "Kod organizacji",
+      "bank": "Bank",
+      "iban": "Rachunek · IBAN",
+      "bic": "BIC / SWIFT",
+      "purpose": "Tytuł przelewu"
+    },
+    "purposeExplain": "Darowizna dla parafii",
+    "copyIban": "Skopiuj IBAN",
+    "copyAll": "Skopiuj wszystkie dane",
+    "note": "Przed zatwierdzeniem przelewu sprawdź odbiorcę i IBAN w swoim banku. Opłaty i terminy zależą od banku.",
+    "safety": "Parafia nigdy nie prosi o wpisywanie na stronie danych karty, haseł bankowych, kodów Smart-ID ani numeru identyfikacyjnego."
+  },
+  "faq": {
+    "title": "Odpowiedzi na pytania",
+    "intro": "Krótkie odpowiedzi na realne trudności. Wyszukiwanie działa w przeglądarce na podstawie treści tej strony.",
+    "searchLabel": "Znajdź odpowiedź",
+    "searchPlaceholder": "Na przykład: kilku odbiorców",
+    "noMatch": "Brak dokładnej odpowiedzi. Zobacz wszystkie pytania poniżej lub skontaktuj się z parafią.",
+    "showAll": "Pokaż wszystkie pytania",
+    "items": [
+      {
+        "q": "Czy trzeba płacić dodatkowo?",
+        "a": "Nie. FR0512 przekazuje część już zapłaconego podatku dochodowego. Z Twojego konta nic nie jest pobierane, pensja się nie zmniejsza. Przelew bankowy to osobny, dobrowolny sposób pomocy.",
+        "link": "basics"
+      },
+      {
+        "q": "Od jakiej kwoty liczy się 1,2%?",
+        "a": "Od rocznej kwoty GPM za {taxYear} r. według deklaracji (lub potrąconej przez pracodawcę, jeśli deklaracja nie jest wymagana), a nie od pensji. Dokładną podstawę ustala VMI. Kalkulator tylko mnoży wpisaną kwotę przez 0,012.",
+        "link": "calculator"
+      },
+      {
+        "q": "Co zrobić, jeśli nie znam kwoty podatku?",
+        "a": "Sprawdź roczną deklarację GPM311 za {taxYear} r. w EDS lub dane w Mano VMI; pracodawca wystawia zaświadczenie o potrąconym podatku. Aby poznać rząd wielkości, kalkulator ma tryb „Nie znam swojej kwoty GPM” z przykładami poglądowymi — to nie jest szacunek Twojego podatku.",
+        "link": "calculator"
+      },
+      {
+        "q": "Czy to pasuje do mojej sytuacji?",
+        "a": "Jeśli jesteś stałym rezydentem podatkowym Litwy i w {taxYear} r. od Twoich dochodów naliczono lub potrącono GPM — tak, niezależnie od obywatelstwa i wieku. Jeśli nie było dochodów opodatkowanych i podatek wynosi zero, nie ma czego przekazać. W razie wątpliwości zapytaj w VMI.",
+        "link": "basics"
+      },
+      {
+        "q": "Czy można wybrać kilku odbiorców?",
+        "a": "Tak. Udziały dla odbiorców tej kategorii łącznie nie mogą przekroczyć 1,2%. Osobno i dodatkowo można przekazać do 0,6% organizacjom politycznym i do 0,6% związkom zawodowym. Kwota poniżej 3 € dla jednego odbiorcy za rok nie jest przekazywana.",
+        "link": "steps"
+      },
+      {
+        "q": "Czy można wskazać wsparcie na kilka lat?",
+        "a": "Tak. W FR0512 wskazuje się okres: w kampanii {filingYear} pierwszy rok podatkowy to {taxYear}, ostatni — nie później niż {lastTaxYear}. Taki wniosek obowiązuje przez wszystkie wskazane lata, dopóki odbiorca zachowuje prawo do wsparcia.",
+        "link": "steps"
+      },
+      {
+        "q": "Czy trzeba składać wniosek co roku?",
+        "a": "Nie, jeśli obowiązujący wniosek obejmuje potrzebny rok i właściwego odbiorcę. Jeśli wskazano tylko jeden rok — złóż ponownie w kolejnej kampanii. Nowy wniosek za ten sam okres zastępuje poprzedni.",
+        "link": "again"
+      },
+      {
+        "q": "Jak sprawdzić wcześniej złożony wniosek?",
+        "a": "W EDS otwórz Pateikti dokumentai, znajdź ostatni FR0512 i sprawdź odbiorcę, udział i lata. Wniosek za {taxYear} r. można poprawić do {correction}. Ta strona nie widzi Twojego wniosku.",
+        "link": "again"
+      },
+      {
+        "q": "Co zrobić, jeśli odbiorcy nie można znaleźć?",
+        "a": "Sprawdź, czy wpisujesz kod {code} bez spacji, i porównaj nazwę {name}. Nie wybieraj podobnej nazwy innej organizacji. Dane odbiorców publikuje VMI; jeśli parafii nie ma na liście — daj nam znać, a wyjaśnimy przyczynę.",
+        "link": "recipient"
+      },
+      {
+        "q": "Skąd wiadomo, że wniosek został przyjęty?",
+        "a": "Tylko z EDS: ze stanu dokumentu i z powiadomień (Pranešimai). Przyjęcie wniosku nie oznacza jeszcze przelewu — VMI przekazuje wsparcie zwykle od {transferFrom} do {transferTo}. Jeśli masz obowiązek złożyć GPM311 i nie złożyłeś jej w terminie, wsparcie nie zostanie przekazane.",
+        "link": "steps"
+      },
+      {
+        "q": "Czym GPM różni się od przelewu na konto bankowe?",
+        "a": "Część GPM to część już zapłaconego podatku, którą na Twój wniosek przekazuje VMI. Przelew bankowy to Twoje własne pieniądze wysłane parafii bezpośrednio w dowolnym czasie. Można zrobić jedno i drugie.",
+        "link": "donate"
+      },
+      {
+        "q": "Kto może pomóc to zrozumieć?",
+        "a": "Parafia — telefonicznie lub przez komunikator: wyjaśnimy kolejność działań, ale nie zalogujemy się do banku ani EDS w Twoim imieniu i nie poprosimy o hasła. Oficjalne wyjaśnienia i konsultacje daje VMI: strony w dziale źródeł i infolinia VMI.",
+        "link": "help"
+      }
+    ]
+  },
+  "sources": {
+    "title": "Oficjalne źródła i weryfikacja",
+    "intro": "Podstawą działu są wyjaśnienia VMI i ustawa o dobroczynności i wsparciu w brzmieniu obowiązującym od 1 stycznia {filingYear} r. W razie rozbieżności pierwszeństwo mają aktualne informacje VMI.",
+    "checked": "Informacje VMI sprawdzono: {checked}. Redakcja tekstu: {edited}. Data zmienia się tylko po nowej merytorycznej weryfikacji, a nie przy technicznej przebudowie strony.",
+    "law": "Nowelizacja ustawy o dobroczynności i wsparciu: nr {lawNumber} z {lawDate}, TAR {lawRegister}, wchodzi w życie {lawEffective}.",
+    "items": {
+      "rules": "VMI: przekazanie części GPM, okresy i kategorie odbiorców",
+      "changes2027": "VMI: zmiany w ustawie od {filingYear} r. (wspólnoty religijne i inni odbiorcy)",
+      "filing": "VMI: jak złożyć FR0512 przez EDS",
+      "gpm311": "VMI: FR0512 a roczna deklaracja GPM311",
+      "correction": "VMI: składanie i korekta FR0512 (wyjaśnienie z 2026 r., PDF)",
+      "recipients": "VMI: dane odbiorców wsparcia",
+      "law": "Ustawa o dobroczynności i wsparciu (TAR, wersje)"
+    },
+    "disclaimer": "Dział przygotowała parafia jako pomoc informacyjną; nie jest to oficjalna usługa VMI."
+  },
+  "actions": {
+    "share": "Udostępnij",
+    "shared": "Link skopiowany",
+    "shareTitle": "1,2% GPM — instrukcja parafii w Bukiszkach",
+    "print": "Wydrukuj ściągawkę",
+    "printNote": "Wersja do druku: kroki, lista kontrolna i dane bankowe. Wniosek i tak składa się w EDS.",
+    "top": "Na początek"
+  },
+  "noJs": "Cały tekst jest dostępny bez JavaScript. Kalkulator, tryb krok po kroku i wyszukiwanie pytań wymagają JavaScript; bez niego wszystkie kroki są pokazane od razu.",
+  "standalone": "Osobna wersja przewodnika: hram.lt"
+}

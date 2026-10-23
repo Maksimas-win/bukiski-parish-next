@@ -152,8 +152,8 @@ export function supportPage(site, lang, t) {
       <h2>${t.gpm}</h2>
       <p>${t.gpmNote}</p>
       <p class="actions">
+        ${siteLink(site, site.route(lang, 'gpm'), t.gpmOpen, 'button')}
         ${externalLink(t, settings.links.vmi, 'VMI', 'button button--quiet')}
-        ${siteLink(site, `/${lang}/gpm.html`, t.archiveOriginal)}
       </p>
     </article>
   </section>`;
