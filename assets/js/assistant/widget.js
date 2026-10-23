@@ -31,10 +31,21 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   const root = node('div', 'parish-assistant');
   root.dataset.parishAssistant = '';
   root.lang = language;
-  const launcher = button('pa-launcher', t.open);
+  // A round launcher with an icon; the visible words live in the hint bubble beside it.
+  const launcher = button('pa-launcher');
+  launcher.setAttribute('aria-label', t.open);
   launcher.setAttribute('aria-haspopup', 'dialog');
   launcher.setAttribute('aria-expanded', 'false');
   launcher.setAttribute('aria-controls', 'parish-assistant-dialog');
+  launcher.setAttribute('aria-describedby', 'pa-hint');
+  // The icons are drawn in CSS (a speech bubble, a cross): no markup from strings, no SVG namespace.
+  const glyph = className => { const span = node('span', `pa-launcher__icon ${className}`); span.setAttribute('aria-hidden', 'true'); return span; };
+  launcher.append(glyph('pa-launcher__icon--open'), glyph('pa-launcher__icon--close'));
+  const hint = node('div', 'pa-hint');
+  hint.id = 'pa-hint'; hint.setAttribute('role', 'tooltip'); hint.hidden = true;
+  const hintTitle = node('p', 'pa-hint__title', t.hint);
+  const hintLines = node('p', 'pa-hint__lines', t.hintLines);
+  hint.append(hintTitle, hintLines);
   const dialog = node('dialog', 'pa-dialog');
   dialog.id = 'parish-assistant-dialog';
   dialog.setAttribute('aria-labelledby', 'pa-title');
@@ -86,7 +97,7 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   foot.append(suggestions, status, form, privacy);
   const online = node('div', 'pa-online-toolbar');
   dialog.append(head, toolbar, online, mode, transcript, foot);
-  root.append(launcher, dialog);
+  root.append(hint, launcher, dialog);
   parent.append(root);
 
   function renderSuggestions() {
@@ -160,8 +171,8 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     form.hidden = false; suggestions.hidden = false; mode.textContent = t.mode;
     busy = false; send.disabled = false; input.disabled = false;
     transcript.replaceChildren(); input.value = ''; status.textContent = '';
-    const welcome = entry(t.intro);
-    welcome.append(node('p', 'pa-text', WEB_UI[language].intro));
+    const welcome = entry(t.greeting);
+    welcome.append(node('p', 'pa-text', t.intro), node('p', 'pa-text', WEB_UI[language].intro));
     addMessage(welcome);
   }
   function showPanel() {
@@ -253,20 +264,37 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   });
   select.addEventListener('change', () => {
     language = localeOf(select.value); t = UI[language]; root.lang = language;
-    launcher.textContent = t.open; title.textContent = t.title; eyebrow.textContent = t.subtitle;
+    launcher.setAttribute('aria-label', t.open); hintTitle.textContent = t.hint; hintLines.textContent = t.hintLines; title.textContent = t.title; eyebrow.textContent = t.subtitle;
     close.setAttribute('aria-label', t.close); select.setAttribute('aria-label', t.language); languageText.textContent = t.language;
     clear.textContent = t.clear; mode.textContent = t.mode; label.textContent = t.label;
     input.placeholder = t.placeholder; send.textContent = t.send; privacy.textContent = WEB_UI[language].privacy;
     renderSuggestions(); renderOnline(); reset();
   });
   clear.addEventListener('click', () => { reset(); status.textContent = t.cleared; input.focus(); });
+  // The hint: on hover or keyboard focus, never on touch (a tap opens the assistant at once).
+  let lastPointer = ''; let hideTimer;
+  const placeHint = () => {
+    const rect = launcher.getBoundingClientRect();
+    hint.classList.toggle('pa-hint--above', rect.left < 300);
+  };
+  const showHint = () => { if (dialog.open) {return;} clearTimeout(hideTimer); placeHint(); hint.hidden = false; root.classList.add('pa-hinting'); };
+  const hideHint = (delay = 0) => { clearTimeout(hideTimer); hideTimer = setTimeout(() => { hint.hidden = true; root.classList.remove('pa-hinting'); }, delay); };
+  launcher.addEventListener('pointerdown', event => { lastPointer = event.pointerType; });
+  launcher.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') {showHint();} });
+  launcher.addEventListener('pointerleave', () => hideHint(160));
+  hint.addEventListener('pointerenter', () => { clearTimeout(hideTimer); });
+  hint.addEventListener('pointerleave', () => hideHint(160));
+  launcher.addEventListener('focus', () => { if (lastPointer !== 'touch') {showHint();} });
+  launcher.addEventListener('blur', () => hideHint());
+  launcher.addEventListener('keydown', event => { if (event.key === 'Escape' && !hint.hidden) { event.preventDefault(); hideHint(); } });
   launcher.addEventListener('click', () => {
     // Prevent competing site dialogs from sharing the top layer.
     if (document.querySelector('dialog[open]')) {return;}
-    dialog.showModal(); launcher.setAttribute('aria-expanded', 'true'); input.focus();
+    hideHint(); lastPointer = '';
+    dialog.showModal(); launcher.setAttribute('aria-expanded', 'true'); root.classList.add('pa-open'); input.focus();
   });
   close.addEventListener('click', () => dialog.close());
-  dialog.addEventListener('close', () => { launcher.setAttribute('aria-expanded', 'false'); launcher.focus({ preventScroll: true }); });
+  dialog.addEventListener('close', () => { launcher.setAttribute('aria-expanded', 'false'); root.classList.remove('pa-open'); lastPointer = 'touch'; launcher.focus({ preventScroll: true }); setTimeout(() => { lastPointer = ''; }, 300); });
   dialog.addEventListener('click', event => { if (event.target === dialog) {
     const rect = dialog.getBoundingClientRect();
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) {dialog.close();}

@@ -2,13 +2,11 @@
    Only colours and the title typeface change; the widget's layout and the
    shared stylesheet stay untouched so both parish sites keep one module. */
 
-.parish-assistant .pa-launcher,
 .parish-assistant .pa-header,
 .parish-assistant .pa-send {
   background: var(--wine);
 }
 
-.parish-assistant .pa-launcher:hover,
 .parish-assistant .pa-send:hover {
   background: #7a1823;
 }
@@ -29,11 +27,290 @@
   outline-color: var(--gilt);
 }
 
-/* On phones the launcher stays small so it hides less of the page beneath it. */
-@media (max-width: 40rem) {
-  .parish-assistant .pa-launcher {
-    right: 14px;
-    padding: 10px 16px;
-    font-size: 0.875rem;
+/* The launcher: a round wine button with a gilt rim, a soft highlight on top
+   and a diffused shadow below. Volume comes from gradients and inset shadows;
+   the only movement is the hover lift and the press. */
+.parish-assistant {
+  --pa-size: 64px;
+  --pa-offset-x: 22px;
+  --pa-offset-y: 22px;
+}
+
+.parish-assistant .pa-launcher {
+  position: fixed;
+  z-index: 900;
+  right: var(--pa-offset-x);
+  bottom: max(var(--pa-offset-y), calc(env(safe-area-inset-bottom) + 12px));
+  display: grid;
+  place-items: center;
+  width: var(--pa-size);
+  height: var(--pa-size);
+  min-height: 0;
+  max-width: none;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgb(255 255 255 / 0.28), transparent 48%),
+    radial-gradient(90% 70% at 50% 110%, rgb(0 0 0 / 0.35), transparent 60%),
+    linear-gradient(170deg, #7a1823 0%, var(--wine) 55%, #3f0a11 100%);
+  box-shadow:
+    0 0 0 1.5px rgb(185 151 89 / 0.9),
+    0 0 0 4px rgb(185 151 89 / 0.18),
+    inset 0 1px 0 rgb(255 255 255 / 0.25),
+    inset 0 -3px 6px rgb(0 0 0 / 0.35),
+    0 10px 24px -8px rgb(40 8 12 / 0.65),
+    0 2px 6px rgb(0 0 0 / 0.25);
+  transform: translateZ(0);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.parish-assistant .pa-launcher:hover,
+.parish-assistant .pa-launcher:focus-visible {
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgb(255 255 255 / 0.28), transparent 48%),
+    radial-gradient(90% 70% at 50% 110%, rgb(0 0 0 / 0.35), transparent 60%),
+    linear-gradient(170deg, #7a1823 0%, var(--wine) 55%, #3f0a11 100%);
+}
+
+.parish-assistant .pa-launcher:focus-visible {
+  outline: 3px solid var(--gilt);
+  outline-offset: 4px;
+}
+
+.parish-assistant .pa-launcher__icon {
+  position: relative;
+  grid-area: 1 / 1;
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.35));
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* The speech bubble: a rounded outline with a small tail at the bottom left. */
+.parish-assistant .pa-launcher__icon--open::before {
+  content: '';
+  position: absolute;
+  inset: 3px 1px 8px 1px;
+  border: 2px solid #fdf6e6;
+  border-radius: 9px;
+}
+
+.parish-assistant .pa-launcher__icon--open::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  bottom: 5px;
+  width: 7px;
+  height: 7px;
+  border-left: 2px solid #fdf6e6;
+  border-bottom: 2px solid #fdf6e6;
+  background: #5b0f19;
+  transform: rotate(-45deg);
+}
+
+/* The cross: two bars. */
+.parish-assistant .pa-launcher__icon--close::before,
+.parish-assistant .pa-launcher__icon--close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  margin: -1px 0 0 -10px;
+  border-radius: 2px;
+  background: #fdf6e6;
+  transform: rotate(45deg);
+}
+
+.parish-assistant .pa-launcher__icon--close::after {
+  transform: rotate(-45deg);
+}
+
+.parish-assistant .pa-launcher__icon--close {
+  opacity: 0;
+  transform: rotate(-45deg) scale(0.6);
+}
+
+.parish-assistant.pa-open .pa-launcher__icon--open {
+  opacity: 0;
+  transform: rotate(45deg) scale(0.6);
+}
+
+.parish-assistant.pa-open .pa-launcher__icon--close {
+  opacity: 1;
+  transform: none;
+}
+
+/* A single soft sheen that runs once over the button on hover. */
+.parish-assistant .pa-launcher::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(115deg, transparent 35%, rgb(255 255 255 / 0.35) 50%, transparent 65%);
+  background-size: 250% 100%;
+  background-position: 120% 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .parish-assistant .pa-launcher:hover {
+    transform: translateY(-2px) rotate(-3deg);
+    box-shadow:
+      0 0 0 1.5px rgb(185 151 89 / 1),
+      0 0 0 4px rgb(185 151 89 / 0.24),
+      inset 0 1px 0 rgb(255 255 255 / 0.3),
+      inset 0 -3px 6px rgb(0 0 0 / 0.35),
+      0 14px 28px -8px rgb(40 8 12 / 0.7),
+      0 3px 8px rgb(0 0 0 / 0.25);
   }
+
+  .parish-assistant .pa-launcher:hover::after {
+    animation: pa-sheen 0.7s ease-out 1 forwards;
+  }
+}
+
+.parish-assistant .pa-launcher:active {
+  transform: translateY(1px) scale(0.96);
+  transition-duration: 0.1s;
+  box-shadow:
+    0 0 0 1.5px rgb(185 151 89 / 0.9),
+    0 0 0 3px rgb(185 151 89 / 0.16),
+    inset 0 2px 6px rgb(0 0 0 / 0.45),
+    0 4px 10px -4px rgb(40 8 12 / 0.6);
+}
+
+@keyframes pa-sheen {
+  from { opacity: 0.9; background-position: 120% 0; }
+  to { opacity: 0; background-position: -20% 0; }
+}
+
+/* The hint bubble: left of the button, or above it when there is no room. */
+.parish-assistant .pa-hint {
+  position: fixed;
+  z-index: 901;
+  right: calc(var(--pa-offset-x) + var(--pa-size) + 14px);
+  bottom: max(var(--pa-offset-y), calc(env(safe-area-inset-bottom) + 12px));
+  max-width: min(18rem, calc(100vw - var(--pa-size) - var(--pa-offset-x) - 40px));
+  padding: 0.7rem 0.95rem;
+  border-radius: 14px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 30px -10px rgb(0 0 0 / 0.35), 0 1px 3px rgb(0 0 0 / 0.1);
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  pointer-events: auto;
+}
+
+.parish-assistant .pa-hint::after {
+  content: '';
+  position: absolute;
+  right: -7px;
+  bottom: calc(var(--pa-size) / 2 - 7px);
+  width: 12px;
+  height: 12px;
+  background: var(--surface);
+  border-right: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  transform: rotate(45deg);
+}
+
+.parish-assistant .pa-hint--above {
+  right: var(--pa-offset-x);
+  bottom: calc(max(var(--pa-offset-y), calc(env(safe-area-inset-bottom) + 12px)) + var(--pa-size) + 12px);
+  max-width: min(18rem, calc(100vw - 2 * var(--pa-offset-x)));
+}
+
+.parish-assistant .pa-hint--above::after {
+  right: calc(var(--pa-size) / 2 - 6px);
+  bottom: -7px;
+  border-right: 1px solid var(--line);
+  border-top: 0;
+  border-bottom: 1px solid var(--line);
+  transform: rotate(45deg);
+}
+
+.parish-assistant .pa-hint__title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.parish-assistant .pa-hint__lines {
+  margin: 0.15rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--ink-soft);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .parish-assistant .pa-hint {
+    animation: pa-hint-in 0.2s ease-out;
+  }
+}
+
+@keyframes pa-hint-in {
+  from { opacity: 0; transform: translateY(4px); }
+}
+
+/* Phones: a little smaller, closer to the corner, above the home indicator. */
+@media (max-width: 40rem) {
+  .parish-assistant {
+    --pa-size: 58px;
+    --pa-offset-x: 14px;
+    --pa-offset-y: 14px;
+  }
+}
+
+/* Home: at the widths where the quick links reach the right gutter, leave a
+   lane for the launcher so the «Call» tile is not covered at load. */
+@media (min-width: 62rem) and (max-width: 90rem) {
+  .quick {
+    padding-inline-end: 3.5rem;
+  }
+}
+
+/* The FR0512 helper's «Next» button sits where the launcher floats: keep a
+   lane free for the button on the right. */
+.gpm-steps__nav {
+  padding-inline-end: 5.75rem;
+}
+
+@media (max-width: 40rem) {
+  .gpm-steps__nav {
+    padding-inline-end: 4.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parish-assistant .pa-launcher,
+  .parish-assistant .pa-launcher__icon,
+  .parish-assistant .pa-hint {
+    transition: none;
+    animation: none;
+  }
+
+  .parish-assistant .pa-launcher:hover {
+    transform: none;
+  }
+
+  .parish-assistant .pa-launcher:hover::after {
+    animation: none;
+  }
+}
+
+/* High contrast: a solid button with a clear rim. */
+html.high-contrast .parish-assistant .pa-launcher {
+  background: var(--wine);
+  box-shadow: 0 0 0 2px var(--gilt), 0 4px 12px rgb(0 0 0 / 0.4);
+}
+
+/* While the folded menu is open the launcher steps aside: the menu's last
+   tiles and the reading settings must stay reachable. */
+body:has(.site-menu.is-open) .parish-assistant .pa-launcher,
+body:has(.site-menu.is-open) .parish-assistant .pa-hint {
+  display: none;
 }
