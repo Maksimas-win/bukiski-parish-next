@@ -31,15 +31,15 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Cerkiew Narodzenia Pańskiego w Bukiszkach, widok od strony wejścia">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="/assets/img/cross.svg?v=d88596e415" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/cross.svg?v=8cebb2077c" type="image/svg+xml">
   <link rel="icon" href="/assets/img/icon-180.png" type="image/png" sizes="180x180">
   <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
   <link rel="preload" href="/assets/fonts/source-sans-3/source-sans-3-roman-v3.052.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/source-serif-4/source-serif-4-display-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/site.css?v=d88596e415">
-  <script src="/assets/js/theme-init.js?v=d88596e415"></script>
-  <script src="/assets/js/app.js?v=d88596e415" type="module"></script>
-  <script type="module" src="/assets/js/parish-assistant.js?v=d88596e415" data-parish-assistant-entry data-assistant-site="net" data-assistant-schedule="data/assistant-services.json"></script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=8cebb2077c">
+  <script src="/assets/js/theme-init.js?v=8cebb2077c"></script>
+  <script src="/assets/js/app.js?v=8cebb2077c" type="module"></script>
+  <script type="module" src="/assets/js/parish-assistant.js?v=8cebb2077c" data-parish-assistant-entry data-assistant-site="net" data-assistant-schedule="data/assistant-services.json"></script>
 </head>
 <body data-locale="pl" data-root="/" data-page="contacts" data-label-copied="Skopiowano" data-label-copy-failed="Nie udało się skopiować. Zaznacz tekst i skopiuj ręcznie.">
   <a href="#main" class="skip-link">Przejdź do treści</a>
@@ -112,6 +112,24 @@
       <img class="photo" src="/assets/img/church-1280.webp" srcset="/assets/img/church-640.webp 640w, /assets/img/church-1280.webp 1280w, /assets/img/church-1920.webp 1600w" sizes="(max-width: 860px) 100vw, 46vw" width="1280" height="720" loading="lazy" decoding="async" alt="Cerkiew Narodzenia Pańskiego w Bukiszkach, widok od strony wejścia">
       <figcaption>Sodų g. 8, Bukiškis</figcaption>
     </figure>
+  </section>
+  <section class="shell parish-registration" aria-labelledby="parish-registration-title">
+    <div class="card parish-registration__card">
+      <div>
+        <h2 id="parish-registration-title">Dokumenty i dane parafii</h2>
+        <dl class="facts">
+          <div><dt>Odbiorca</dt><dd lang="lt">Bukiškio stačiatikių Kristaus Gimimo parapija</dd></div>
+          <div><dt>Kod organizacji</dt><dd>301004570</dd></div>
+          <div><dt>Data wydania zaświadczenia</dt><dd><time datetime="2007-08-13">13 sierpnia 2007</time></dd></div>
+        </dl>
+      </div>
+      <div class="parish-registration__document">
+        <a class="parish-registration__preview" href="/assets/img/parish/parish-registration-2007.jpg" data-lightbox data-width="1077" data-height="1536" aria-label="Otwórz większe zdjęcie: Zaświadczenie o rejestracji parafii">
+          <img src="/assets/img/parish/parish-registration-2007.jpg" width="1077" height="1536" loading="lazy" decoding="async" alt="Zaświadczenie o rejestracji parafii" lang="lt">
+        </a>
+        <a class="with-icon" href="/assets/img/parish/parish-registration-2007.jpg" download="parapijos-registravimo-pazymejimas-2007.jpg"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 4v11 M7 11l5 5 5-5 M5 20h14"/></svg>Zaświadczenie o rejestracji parafii (JPG)</a>
+      </div>
+    </div>
   </section>
   <section class="shell contact-social" aria-labelledby="contact-social-title">
     <div class="section-title">
@@ -213,6 +231,11 @@
     <label class="toggle"><input type="checkbox" data-preference="contrast"><span>Wysoki kontrast</span></label>
     <button type="button" class="button button--quiet" data-preferences-reset>Przywróć ustawienia</button>
   </dialog>
-  <div class="toast-region" data-toasts role="status" aria-live="polite" lang="pl"></div>
+  <div class="toast-region" data-toasts role="status" aria-live="polite" lang="pl"></div><dialog class="lightbox" id="lightbox" lang="pl" aria-label="Zdjęcia">
+    <button type="button" class="icon-button lightbox__close" data-dialog-close aria-label="Zamknij"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M6 6l12 12 M18 6L6 18"/></svg></button>
+    <button type="button" class="icon-button lightbox__step lightbox__step--previous" data-lightbox-previous aria-label="Poprzednie zdjęcie"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <img class="lightbox__image" data-lightbox-image alt="">
+    <button type="button" class="icon-button lightbox__step lightbox__step--next" data-lightbox-next aria-label="Następne zdjęcie"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></button>
+  </dialog>
 </body>
 </html>

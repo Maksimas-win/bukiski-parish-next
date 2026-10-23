@@ -1,7 +1,7 @@
 // Validation shared by the build, the publication check and the browser for
 // documents delivered inside an HTML page. No browser storage is used.
 
-import { SITE_LANGUAGES } from './domain.js?v=d88596e415';
+import { SITE_LANGUAGES } from './domain.js?v=8cebb2077c';
 
 const TYPES = { pdf: 'application/pdf', doc: 'application/msword' };
 const SIGNATURES = {
