@@ -9,6 +9,7 @@ import { html, attrs } from '../html.mjs';
 import { icon, emblem } from '../icons.mjs';
 import { formatDate } from '../site.mjs';
 import { externalLink, siteLink } from '../components.mjs';
+import { familyPhotograph } from '../parish-media.mjs';
 
 const paragraphs = list => (list || []).map(text => html`<p>${text}</p>`);
 
@@ -140,6 +141,7 @@ function chapter(site, story, item, index, t, uiLocale) {
         ${item.stats && stats(item, t, uiLocale)}
         ${paragraphs(item.closing)}
         ${item.people && people(item)}
+        ${item.id === 'children' && familyPhotograph(site, uiLocale, t)}
         ${item.timeline && timeline(item)}
       </div>
     </div>

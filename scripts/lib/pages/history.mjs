@@ -3,6 +3,7 @@
 import { html, attrs } from '../html.mjs';
 import { icon } from '../icons.mjs';
 import { externalLink, pageHead, siteLink } from '../components.mjs';
+import { familyPhotograph } from '../parish-media.mjs';
 
 /** Photographs a chapter may show, by the key used in content/history/<lang>.json → photos. */
 const PHOTOS = {
@@ -72,6 +73,7 @@ export function historyPage(site, lang, t, archivePath, articles = []) {
           <h2 id="${section.id}-title" tabindex="-1">${section.title}</h2>
           ${section.paragraphs.map(text => html`<p>${text}</p>`)}
           ${citations(history, section)}
+          ${section.id === 'founders' && familyPhotograph(site, lang, t)}
           ${section.photo && photograph(site, history, story, section.photo)}
         </section>`)}
       </article>
