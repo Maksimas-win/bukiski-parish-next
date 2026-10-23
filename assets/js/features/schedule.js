@@ -4,9 +4,9 @@
 //
 // Every service is already in the HTML. Nothing is fetched.
 
-import { calendarDaysBetween, icsCalendar, isStale, localDate } from '../domain.js?v=865c754a6b';
-import { $, $$, show, downloadText } from '../ui/dom.js?v=865c754a6b';
-import { toast } from '../ui/toast.js?v=865c754a6b';
+import { calendarDaysBetween, icsCalendar, isStale, localDate } from '../domain.js?v=e1e0695f8e';
+import { $, $$, show, downloadText } from '../ui/dom.js?v=e1e0695f8e';
+import { toast } from '../ui/toast.js?v=e1e0695f8e';
 
 const REFRESH_MS = 60000;
 /** How far ahead the featured service is labelled with «через N дней». */

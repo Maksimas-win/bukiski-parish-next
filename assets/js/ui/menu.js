@@ -1,4 +1,4 @@
-import { $, show } from './dom.js?v=865c754a6b';
+import { $, show } from './dom.js?v=e1e0695f8e';
 
 /** Mobile menu as a disclosure. Without JavaScript the links stay visible. */
 export function initMenu() {

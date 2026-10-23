@@ -32,15 +32,15 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Kristaus Gimimo cerkvė Bukiškyje, vaizdas nuo įėjimo pusės">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="/assets/img/cross.svg?v=865c754a6b" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/cross.svg?v=e1e0695f8e" type="image/svg+xml">
   <link rel="icon" href="/assets/img/icon-180.png" type="image/png" sizes="180x180">
   <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
   <link rel="preload" href="/assets/fonts/source-sans-3/source-sans-3-roman-v3.052.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/source-serif-4/source-serif-4-display-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/site.css?v=865c754a6b">
-  <script src="/assets/js/theme-init.js?v=865c754a6b"></script>
-  <script src="/assets/js/app.js?v=865c754a6b" type="module"></script>
-  <script type="module" src="/assets/js/parish-assistant.js?v=865c754a6b" data-parish-assistant-entry data-assistant-site="net" data-assistant-schedule="data/assistant-services.json"></script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=e1e0695f8e">
+  <script src="/assets/js/theme-init.js?v=e1e0695f8e"></script>
+  <script src="/assets/js/app.js?v=e1e0695f8e" type="module"></script>
+  <script type="module" src="/assets/js/parish-assistant.js?v=e1e0695f8e" data-parish-assistant-entry data-assistant-site="net" data-assistant-schedule="data/assistant-services.json"></script>
 </head>
 <body data-locale="lt" data-root="/" data-page="home" data-label-copied="Nukopijuota" data-label-copy-failed="Nepavyko nukopijuoti. Pažymėkite tekstą ir nukopijuokite rankiniu būdu.">
   <a href="#main" class="skip-link">Pereiti prie turinio</a>
@@ -66,6 +66,7 @@
         <nav class="site-nav" aria-label="Meniu">
           <a class="site-nav__home" href="/lt/" aria-current="page"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5 M5.5 9.5V20h4.5v-5.5h4V20h4.5V9.5"/></svg><span>Pradžia</span></a>
           <a href="/lt/schedule.html">Pamaldos</a><a href="/lt/history.html">Apie cerkvę</a><a href="/lt/sacraments.html">Sakramentai</a><a href="/lt/library.html">Skaitiniai</a><a href="/lt/notes.html">Maldos rašteliai</a><a href="/lt/contacts.html">Kontaktai</a>
+          <a class="site-nav__gpm" href="/lt/gpm.html">1,2 % GPM</a>
         </nav>
         <section class="menu-langs" aria-label="Pasirinkti kalbą">
           <p class="menu-langs__title"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M3 12h18 M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9 M12 3c-2.5 2.6-3.8 5.6-3.8 9s1.3 6.4 3.8 9"/></svg>Pasirinkti kalbą</p>
@@ -81,9 +82,21 @@
     <img class="hero__photo" src="/assets/img/hero-autumn-1600.webp" srcset="/assets/img/hero-autumn-960.webp 960w, /assets/img/hero-autumn-1600.webp 1600w, /assets/img/hero-autumn-2400.webp 2400w" sizes="100vw" width="2400" height="1351" fetchpriority="high" decoding="async" alt="Kristaus Gimimo cerkvė Bukiškyje, vaizdas nuo įėjimo pusės">
     <div class="hero__shade" aria-hidden="true"></div>
     <div class="shell hero__content">
-      <p class="hero__kicker">Stačiatikių cerkvė</p>
-      <h1 id="hero-title" class="hero__title">Kristaus Gimimo cerkvė</h1>
-      <p class="hero__place">Bukiškis · Vilniaus rajonas</p>
+      <div class="hero__text">
+        <p class="hero__kicker">Stačiatikių cerkvė</p>
+        <h1 id="hero-title" class="hero__title">Kristaus Gimimo cerkvė</h1>
+        <p class="hero__place">Bukiškis · Vilniaus rajonas</p>
+      </div>
+      <aside class="hero-gpm" aria-labelledby="hero-gpm-title" data-gpm-state data-filing-start="2027-01-01" data-filing-deadline="2027-05-03">
+    <p class="hero-gpm__kicker">Parama parapijai</p>
+    <p class="hero-gpm__figure" aria-hidden="true"><span class="gpm-relief">1,2 %</span><span class="hero-gpm__unit">GPM</span></p>
+    <div class="hero-gpm__body">
+      <h2 id="hero-gpm-title" class="hero-gpm__title"><span class="visually-hidden">1,2 % GPM. </span>Jūsų pasirinkimas padeda cerkvei</h2>
+      <p class="hero-gpm__text">Sužinokite, kaip skirti dalį pajamų mokesčio parapijos gyvenimui.</p>
+      <a class="button hero-gpm__action" href="/lt/gpm.html">Sužinoti, kaip padėti<svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M5 12h14 M13 6l6 6-6 6"/></svg></a>
+      <p class="hero-gpm__state" data-phase="before">Prašymų priėmimas dar neprasidėjo</p><p class="hero-gpm__state" data-phase="during" hidden>Priimami prašymai</p><p class="hero-gpm__state" data-phase="after" hidden>Teikimo laikotarpis baigėsi</p>
+    </div>
+  </aside>
     </div>
   </section><nav class="shell quick" aria-label="Greitos nuorodos">
     <ul class="quick__list">
@@ -525,7 +538,31 @@
         </p>
       </footer>
     </div>
-  </dialog><section class="shell home-photos" aria-labelledby="photos-title">
+  </dialog><section class="gpm-band" aria-labelledby="gpm-band-title">
+    <div class="shell gpm-band__inner" data-home-gpm>
+      <p class="gpm-band__figure" aria-hidden="true"><span class="gpm-relief gpm-relief--large">1,2 %</span></p>
+      <div class="gpm-band__copy">
+        <p class="eyebrow">1,2 % GPM</p>
+        <h2 id="gpm-band-title">Nedidelė mokesčio dalis — apčiuopiama pagalba parapijai</h2>
+        <p class="gpm-band__text">Iki 1,2 % pajamų mokesčio už 2026 m. galima skirti parapijai paremti — be papildomų išlaidų. Pažiūrėkite pavyzdį ir sužinokite, kaip 2027 m. pateikti prašymą FR0512.</p>
+      </div>
+      <div class="gpm-example" role="group" aria-labelledby="gpm-example-title">
+        <p id="gpm-example-title" class="gpm-example__label">Kaip tai atrodo skaičiais</p>
+        <div class="gpm-example__chips">
+          <button type="button" class="gpm-chip" data-gpm-example="600" data-result="7,20 €" aria-pressed="true">600 € GPM per metus</button><button type="button" class="gpm-chip" data-gpm-example="1500" data-result="18,00 €" aria-pressed="false">1 500 € GPM per metus</button><button type="button" class="gpm-chip" data-gpm-example="3000" data-result="36,00 €" aria-pressed="false">3 000 € GPM per metus</button>
+        </div>
+        <p class="gpm-example__result"><output class="gpm-example__value" data-gpm-example-result aria-live="polite">7,20 €</output><span class="gpm-example__caption">Sąlyginis metinės paramos pavyzdys</span></p>
+        <ul class="gpm-example__static">
+          <li>600 € GPM per metus → <strong>7,20 €</strong></li><li>1 500 € GPM per metus → <strong>18,00 €</strong></li><li>3 000 € GPM per metus → <strong>36,00 €</strong></li>
+        </ul>
+        <p class="gpm-example__note">Skaičiuojama nuo pajamų mokesčio sumos. Galutinę sumą nustato VMI.</p>
+      </div>
+      <div class="gpm-band__actions">
+        <a class="button gpm-band__open" href="/lt/gpm.html#steps">Atverti nuoseklią instrukciją<svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M5 12h14 M13 6l6 6-6 6"/></svg></a>
+        <a class="link link--arrow" href="/lt/gpm.html#calculator">Apskaičiuoti savo pavyzdį<svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M5 12h14 M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section><section class="shell home-photos" aria-labelledby="photos-title">
     <div class="section-head">
       <div class="section-title">
     <p class="eyebrow">Parapijos gyvenimas</p>
