@@ -2,7 +2,7 @@
 import { html, attrs } from './html.mjs';
 import { icon } from './icons.mjs';
 
-const FAMILY = '/assets/img/parish/bozheryanov-family.svg';
+const FAMILY = '/assets/img/parish/bozheryanov-family.jpg';
 const CERTIFICATE = '/assets/img/parish/parish-registration-2007.jpg';
 
 const LABELS = {
