@@ -319,7 +319,11 @@ test('The home page opens with the church photograph and its name, with no sloga
     assert.match(hero, new RegExp(`<h1 id="hero-title" class="hero__title">${locales[lang].name}</h1>`), lang);
     assert.ok(photos.hero.every(size => hero.includes(`${size.file} ${size.width}w`)), lang);
     assert.match(hero, /fetchpriority="high"/);
-    assert.doesNotMatch(hero, /class="button/, 'the hero has no call-to-action buttons');
+    // The only call to action on the photograph is the owner's 1,2 % GPM card (October 2026); the title block itself has no slogan.
+    const titleBlock = hero.slice(hero.indexOf('<div class="hero__text">'), hero.indexOf('</div>', hero.indexOf('<div class="hero__text">')));
+    assert.doesNotMatch(titleBlock, /class="button/, 'the title block has no call-to-action buttons');
+    assert.equal((hero.match(/class="button/g) || []).length, 1, 'one action in the hero: the GPM card');
+    assert.match(hero, new RegExp(`<aside class="hero-gpm"[^>]*>[\\s\\S]*href="[^"]*/${lang}/gpm\\.html"`), `${lang}: GPM card links to the section in its language`);
     assert.equal((home.match(/class="mosaic__item"/g) || []).length, photos.homeMosaic.length, lang);
     assert.equal((home.match(/class="social-card social-card--/g) || []).length, settings.social.length, lang);
     for (const item of settings.social) assert.ok(home.includes(`href="${item.url}"`), item.url);

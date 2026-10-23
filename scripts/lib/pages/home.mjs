@@ -2,6 +2,11 @@ import { upcomingEvents } from '../../../assets/js/domain.js';
 import { html, attrs } from '../html.mjs';
 import { icon, emblem } from '../icons.mjs';
 import { copyButton, externalLink, phoneLink, scheduleData, scheduleStatus, serviceRow, siteLink, socialCards } from '../components.mjs';
+import { gpmSummary, fill } from './gpm.mjs';
+import { supportCents, formatCents } from '../../../assets/js/features/gpm/math.js';
+
+const UI_LOCALES = { ru: 'ru-RU', lt: 'lt-LT', en: 'en-GB', pl: 'pl-PL', de: 'de-DE', uk: 'uk-UA' };
+const HOME_EXAMPLES = [600, 1500, 3000];
 
 /** Rows rendered into the page; the browser shows the first few that are still ahead. */
 const RENDERED_SERVICES = 8;
@@ -28,9 +33,68 @@ function hero(site, lang, t) {
     })}>
     <div class="hero__shade" aria-hidden="true"></div>
     <div class="shell hero__content">
-      <p class="hero__kicker">${t.heroKicker}</p>
-      <h1 id="hero-title" class="hero__title">${t.name}</h1>
-      <p class="hero__place">${t.heroPlace}</p>
+      <div class="hero__text">
+        <p class="hero__kicker">${t.heroKicker}</p>
+        <h1 id="hero-title" class="hero__title">${t.name}</h1>
+        <p class="hero__place">${t.heroPlace}</p>
+      </div>
+      ${gpmCard(site, lang, t)}
+    </div>
+  </section>`;
+}
+
+/**
+ * The 1,2 % GPM card on the first screen: one invitation, the campaign state
+ * from content/gpm/config.json, one link to the section in this language.
+ */
+function gpmCard(site, lang, t) {
+  const gpm = gpmSummary(site, lang);
+  return html`<aside class="hero-gpm" aria-labelledby="hero-gpm-title" data-gpm-state data-filing-start="${gpm.filingStart}" data-filing-deadline="${gpm.filingDeadline}">
+    <p class="hero-gpm__kicker">${t.homeGpmKicker}</p>
+    <p class="hero-gpm__figure" aria-hidden="true"><span class="gpm-relief">${t.homeGpmFigure}</span><span class="hero-gpm__unit">GPM</span></p>
+    <div class="hero-gpm__body">
+      <h2 id="hero-gpm-title" class="hero-gpm__title"><span class="visually-hidden">${t.homeGpmFigure} GPM. </span>${t.homeGpmTitle}</h2>
+      <p class="hero-gpm__text">${t.homeGpmText}</p>
+      <a class="button hero-gpm__action" href="${site.url(site.route(lang, 'gpm'))}">${t.homeGpmAction}${icon('arrow-right')}</a>
+      ${Object.entries(gpm.phaseLabels).map(([state, label]) => html`<p class="hero-gpm__state" data-phase="${state}"${attrs({ hidden: state !== gpm.phase })}>${label}</p>`)}
+    </div>
+  </aside>`;
+}
+
+/**
+ * After the services: what the share means, a three-button example that
+ * uses the section's own arithmetic, and the way into the step-by-step helper.
+ */
+function gpmBand(site, lang, t) {
+  const gpm = gpmSummary(site, lang);
+  const locale = UI_LOCALES[lang] || lang;
+  const money = cents => `${formatCents(cents, locale)} €`;
+  const whole = amount => new Intl.NumberFormat(locale).format(amount);
+  const examples = HOME_EXAMPLES.map(amount => ({ amount, label: `${whole(amount)} ${t.homeGpmExampleUnit}`, result: money(supportCents(amount * 100)) }));
+  const page = site.url(site.route(lang, 'gpm'));
+  return html`<section class="gpm-band" aria-labelledby="gpm-band-title">
+    <div class="shell gpm-band__inner" data-home-gpm>
+      <p class="gpm-band__figure" aria-hidden="true"><span class="gpm-relief gpm-relief--large">${t.homeGpmFigure}</span></p>
+      <div class="gpm-band__copy">
+        <p class="eyebrow">${t.homeGpmBandEyebrow}</p>
+        <h2 id="gpm-band-title">${t.homeGpmBandTitle}</h2>
+        <p class="gpm-band__text">${fill(t.homeGpmBandText, gpm.values)}</p>
+      </div>
+      <div class="gpm-example" role="group" aria-labelledby="gpm-example-title">
+        <p id="gpm-example-title" class="gpm-example__label">${t.homeGpmExample}</p>
+        <div class="gpm-example__chips">
+          ${examples.map((example, index) => html`<button type="button" class="gpm-chip" data-gpm-example="${example.amount}" data-result="${example.result}" aria-pressed="${index === 0 ? 'true' : 'false'}">${example.label}</button>`)}
+        </div>
+        <p class="gpm-example__result"><output class="gpm-example__value" data-gpm-example-result aria-live="polite">${examples[0].result}</output><span class="gpm-example__caption">${t.homeGpmResult}</span></p>
+        <ul class="gpm-example__static">
+          ${examples.map(example => html`<li>${example.label} → <strong>${example.result}</strong></li>`)}
+        </ul>
+        <p class="gpm-example__note">${t.homeGpmResultNote}</p>
+      </div>
+      <div class="gpm-band__actions">
+        <a class="button gpm-band__open" href="${page}#steps">${t.homeGpmOpen}${icon('arrow-right')}</a>
+        <a class="link link--arrow" href="${page}#calculator">${t.homeGpmCalc}${icon('arrow-right')}</a>
+      </div>
     </div>
   </section>`;
 }
@@ -208,5 +272,5 @@ function support(site, lang, t) {
 }
 
 export function homePage(site, lang, t) {
-  return html`${hero(site, lang, t)}${quickLinks(site, lang, t)}${services(site, lang, t)}${photos(site, lang, t)}${visit(site, lang, t)}${social(site, lang, t)}${explore(site, lang, t)}${support(site, lang, t)}`;
+  return html`${hero(site, lang, t)}${quickLinks(site, lang, t)}${services(site, lang, t)}${gpmBand(site, lang, t)}${photos(site, lang, t)}${visit(site, lang, t)}${social(site, lang, t)}${explore(site, lang, t)}${support(site, lang, t)}`;
 }

@@ -51,6 +51,7 @@ function header(site, t, lang, uiLocale, pageId, languageTargets) {
         <nav class="site-nav" aria-label="${t.menu}">
           <a${attrs({ class: 'site-nav__home', href: site.url(site.route(uiLocale, 'home')), 'aria-current': pageId === 'home' ? 'page' : null })}>${icon('home')}<span>${t.home}</span></a>
           ${NAVIGATION.map(id => html`<a href="${site.url(site.route(uiLocale, id))}"${attrs({ 'aria-current': pageId === id ? 'page' : null })}>${t.nav[id]}</a>`)}
+          <a class="site-nav__gpm" href="${site.url(site.route(uiLocale, 'gpm'))}"${attrs({ 'aria-current': pageId === 'gpm' ? 'page' : null })}>${t.nav.gpm}</a>
         </nav>
         <section class="menu-langs" aria-label="${t.languages}">
           <p class="menu-langs__title">${icon('globe')}${t.languages}</p>

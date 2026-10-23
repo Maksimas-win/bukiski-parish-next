@@ -121,3 +121,25 @@ test('projects: figures only with their date, concepts labelled, no promise of a
     assert.ok(html.includes(texts[lang].help.budget.note), `${lang}: budget note`);
   }
 });
+
+test('the home page invites once: hero card, one band after the services, one navigation item', async () => {
+  for (const lang of SITE_LANGUAGES) {
+    const home = await read(`dist/${lang}/index.html`);
+    assert.equal((home.match(/class="hero-gpm"/g) || []).length, 1, lang);
+    assert.equal((home.match(/class="gpm-band"/g) || []).length, 1, lang);
+    assert.equal((home.match(/class="site-nav__gpm"/g) || []).length, 1, lang);
+    assert.ok(home.indexOf('class="services-band"') < home.indexOf('class="gpm-band"') && home.indexOf('class="gpm-band"') < home.indexOf('class="shell home-photos"'), `${lang}: band sits between services and photographs`);
+    for (const anchor of ['#steps', '#calculator']) assert.ok(home.includes(`/${lang}/gpm.html${anchor}"`), `${lang}: link to ${anchor}`);
+    // The example uses the section's arithmetic: 600 → 7,20, 1 500 → 18, 3 000 → 36.
+    const results = [...home.matchAll(/data-gpm-example="(\d+)" data-result="([^"]+)"/g)].map(match => [Number(match[1]), match[2].replace(/\s/g, '').replace(',', '.')]);
+    assert.deepEqual(results.map(([amount]) => amount), [600, 1500, 3000], lang);
+    for (const [amount, text] of results) assert.equal(Number.parseFloat(text), supportCents(amount * 100) / 100, `${lang}: ${amount}`);
+    // The card shows the configured campaign state, never an internal flag or a filing promise before the window.
+    const card = home.slice(home.indexOf('<aside class="hero-gpm"'), home.indexOf('</aside>', home.indexOf('<aside class="hero-gpm"')));
+    assert.doesNotMatch(card, /deklaravimas\.vmi\.lt|recipientVerified/, lang);
+    const visibleStates = [...card.matchAll(/class="hero-gpm__state" data-phase="(\w+)"([^>]*)>/g)].filter(match => !match[2].includes('hidden'));
+    assert.equal(visibleStates.length, 1, `${lang}: one campaign state`);
+    assert.match(home, /data-gpm-state data-filing-start="\d{4}-\d{2}-\d{2}" data-filing-deadline="\d{4}-\d{2}-\d{2}"/, lang);
+    assert.ok(home.includes(`>${config.campaign.taxYear}`) || home.includes(`${config.campaign.taxYear} `), `${lang}: tax year from config in the band text`);
+  }
+});

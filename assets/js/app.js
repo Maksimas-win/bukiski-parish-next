@@ -23,6 +23,7 @@ const features = [
   ['[data-story]', () => import('./features/story.js')],
   ['[data-lightbox]', () => import('./features/lightbox.js')],
   ['[data-gpm]', () => import('./features/gpm.js')],
+  ['[data-home-gpm]', () => import('./features/home-gpm.js')],
   ['[data-document-download]', () => import('./document-downloads.js')]
 ];
 

@@ -182,7 +182,8 @@
       "sacraments": "Таинства",
       "library": "Библиотека",
       "notes": "Записки",
-      "contacts": "Контакты"
+      "contacts": "Контакты",
+      "gpm": "1,2 % GPM"
     },
     "footerNavigation": "Разделы сайта",
     "external": "внешний сайт",
@@ -347,7 +348,21 @@
     "gpmInteractiveLink": "Открыть интерактивный гид и калькулятор",
     "storyEditorialTitle": "Примечание редакции сайта",
     "storyEditorialNote": "Исследование публикуется в авторской редакции; редакция сайта в текст не вмешивалась. Две официальные литовские записи дополняют авторскую хронологию: Регистр культурных ценностей Литвы (код 32784) датирует ремонт здания 2007 годом и по-прежнему именует его церковью Покрова Божией Матери, а справка Вильнюсского районного самоуправления относит восстановление храма к 2007 году и называет среди попечителей, наряду с митрополитом Хризостомом, католического архиепископа Вильнюсского кардинала Аудриса Юозаса Бачкиса. Точная дата и чин освящения 2011 года в доступных нам документах не указаны. Подробности и ссылки на источники — на странице истории храма.",
-    "gpmOpen": "Открыть раздел о 1,2 % GPM"
+    "gpmOpen": "Открыть раздел о 1,2 % GPM",
+    "homeGpmKicker": "Поддержка прихода",
+    "homeGpmFigure": "1,2 %",
+    "homeGpmTitle": "Ваш выбор помогает храму",
+    "homeGpmText": "Узнайте, как направить часть подоходного налога на жизнь прихода.",
+    "homeGpmAction": "Узнать, как помочь",
+    "homeGpmBandEyebrow": "1,2 % GPM",
+    "homeGpmBandTitle": "Небольшая доля налога — ощутимая помощь приходу",
+    "homeGpmBandText": "До 1,2 % подоходного налога за {taxYear} год можно направить на поддержку прихода — без дополнительных расходов. Посмотрите пример и узнайте порядок подачи заявления FR0512 в {filingYear} году.",
+    "homeGpmExample": "Как это выглядит в цифрах",
+    "homeGpmExampleUnit": "€ GPM за год",
+    "homeGpmResult": "Условный пример поддержки за год",
+    "homeGpmResultNote": "Расчёт от суммы подоходного налога. Окончательную сумму определяет VMI.",
+    "homeGpmOpen": "Открыть пошаговую инструкцию",
+    "homeGpmCalc": "Рассчитать свой пример"
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -532,7 +547,8 @@
       "sacraments": "Sakramentai",
       "library": "Skaitiniai",
       "notes": "Maldos rašteliai",
-      "contacts": "Kontaktai"
+      "contacts": "Kontaktai",
+      "gpm": "1,2 % GPM"
     },
     "footerNavigation": "Svetainės skyriai",
     "external": "išorinė svetainė",
@@ -697,7 +713,21 @@
     "gpmInteractiveLink": "Atverti interaktyvų gidą ir skaičiuoklę",
     "storyEditorialTitle": "Svetainės redakcijos pastaba",
     "storyEditorialNote": "Tyrimas skelbiamas autorės redakcija; svetainės redakcija į tekstą nesikišo. Du oficialūs Lietuvos įrašai papildo autorės chronologiją: Lietuvos kultūros vertybių registras (kodas 32784) pastato remontą datuoja 2007 m. ir tebevadina jį Dievo Motinos Globėjos cerkve, o Vilniaus rajono savivaldybės pažyma cerkvės atstatymą priskiria 2007 m. ir tarp globėjų, greta metropolito Chrizostomo, mini Vilniaus arkivyskupą kardinolą Audrį Juozą Bačkį. Tiksli 2011 m. pašventinimo data ir apeigos mums prieinamuose dokumentuose nenurodytos. Smulkmenos ir nuorodos į šaltinius – cerkvės istorijos puslapyje.",
-    "gpmOpen": "Atverti 1,2 % GPM skyrių"
+    "gpmOpen": "Atverti 1,2 % GPM skyrių",
+    "homeGpmKicker": "Parama parapijai",
+    "homeGpmFigure": "1,2 %",
+    "homeGpmTitle": "Jūsų pasirinkimas padeda cerkvei",
+    "homeGpmText": "Sužinokite, kaip skirti dalį pajamų mokesčio parapijos gyvenimui.",
+    "homeGpmAction": "Sužinoti, kaip padėti",
+    "homeGpmBandEyebrow": "1,2 % GPM",
+    "homeGpmBandTitle": "Nedidelė mokesčio dalis — apčiuopiama pagalba parapijai",
+    "homeGpmBandText": "Iki 1,2 % pajamų mokesčio už {taxYear} m. galima skirti parapijai paremti — be papildomų išlaidų. Pažiūrėkite pavyzdį ir sužinokite, kaip {filingYear} m. pateikti prašymą FR0512.",
+    "homeGpmExample": "Kaip tai atrodo skaičiais",
+    "homeGpmExampleUnit": "€ GPM per metus",
+    "homeGpmResult": "Sąlyginis metinės paramos pavyzdys",
+    "homeGpmResultNote": "Skaičiuojama nuo pajamų mokesčio sumos. Galutinę sumą nustato VMI.",
+    "homeGpmOpen": "Atverti nuoseklią instrukciją",
+    "homeGpmCalc": "Apskaičiuoti savo pavyzdį"
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -882,7 +912,8 @@
       "sacraments": "Sacraments",
       "library": "Reading",
       "notes": "Prayer requests",
-      "contacts": "Contact"
+      "contacts": "Contact",
+      "gpm": "1.2% GPM"
     },
     "footerNavigation": "Site sections",
     "external": "external site",
@@ -1047,7 +1078,21 @@
     "gpmInteractiveLink": "Open the interactive guide and calculator",
     "storyEditorialTitle": "Editorial note",
     "storyEditorialNote": "The study is published in the author’s own wording; the site editors have not altered the text. Two official Lithuanian records supplement the author’s chronology: the Register of Cultural Property of Lithuania (code 32784) dates the repair of the building to 2007 and still lists it as the Church of the Protection of the Mother of God, and the Vilnius District Municipality’s note places the restoration in 2007 and names, alongside Metropolitan Chrysostomos, the Catholic Archbishop of Vilnius, Cardinal Audrys Juozas Bačkis, among those who cared for it. The exact date and rite of the 2011 consecration are not given in the documents available to us. Details and source links are on the church history page.",
-    "gpmOpen": "Open the 1.2% GPM section"
+    "gpmOpen": "Open the 1.2% GPM section",
+    "homeGpmKicker": "Supporting the parish",
+    "homeGpmFigure": "1.2%",
+    "homeGpmTitle": "Your choice helps the church",
+    "homeGpmText": "Find out how to direct part of your income tax to parish life.",
+    "homeGpmAction": "See how to help",
+    "homeGpmBandEyebrow": "1.2% GPM",
+    "homeGpmBandTitle": "A small share of tax — tangible help for the parish",
+    "homeGpmBandText": "Up to 1.2% of your income tax for {taxYear} can go to supporting the parish — at no extra cost. See an example and learn how to file form FR0512 in {filingYear}.",
+    "homeGpmExample": "What it looks like in numbers",
+    "homeGpmExampleUnit": "€ GPM per year",
+    "homeGpmResult": "Illustrative yearly support",
+    "homeGpmResultNote": "Calculated from the income tax amount. VMI determines the final sum.",
+    "homeGpmOpen": "Open the step-by-step guide",
+    "homeGpmCalc": "Calculate your own example"
   },
   "pl": {
     "name": "Cerkiew Narodzenia Pańskiego",
@@ -1232,7 +1277,8 @@
       "sacraments": "Sakramenty",
       "library": "Biblioteka",
       "notes": "Karteczki",
-      "contacts": "Kontakt"
+      "contacts": "Kontakt",
+      "gpm": "1,2% GPM"
     },
     "footerNavigation": "Działy strony",
     "external": "strona zewnętrzna",
@@ -1397,7 +1443,21 @@
     "gpmInteractiveLink": "Otwórz interaktywny poradnik i kalkulator",
     "storyEditorialTitle": "Uwaga redakcji strony",
     "storyEditorialNote": "Opracowanie publikowane jest w redakcji autorskiej; redakcja strony nie ingerowała w tekst. Dwa oficjalne litewskie zapisy uzupełniają chronologię autorki: Rejestr Dóbr Kultury Litwy (kod 32784) datuje remont budynku na 2007 rok i nadal nazywa go cerkwią Opieki Matki Bożej, a informacja Samorządu Rejonu Wileńskiego odnosi odbudowę do 2007 roku i wymienia wśród opiekunów, obok metropolity Chryzostoma, katolickiego arcybiskupa wileńskiego kardynała Audrysa Juozasa Bačkisa. Dokładna data i obrzęd poświęcenia w 2011 roku nie są podane w dostępnych nam dokumentach. Szczegóły i odsyłacze do źródeł – na stronie historii cerkwi.",
-    "gpmOpen": "Otwórz dział o 1,2% GPM"
+    "gpmOpen": "Otwórz dział o 1,2% GPM",
+    "homeGpmKicker": "Wsparcie parafii",
+    "homeGpmFigure": "1,2%",
+    "homeGpmTitle": "Twój wybór pomaga cerkwi",
+    "homeGpmText": "Dowiedz się, jak przekazać część podatku dochodowego na życie parafii.",
+    "homeGpmAction": "Zobacz, jak pomóc",
+    "homeGpmBandEyebrow": "1,2% GPM",
+    "homeGpmBandTitle": "Niewielka część podatku — odczuwalna pomoc dla parafii",
+    "homeGpmBandText": "Do 1,2% podatku dochodowego za {taxYear} r. można przekazać na wsparcie parafii — bez dodatkowych kosztów. Zobacz przykład i poznaj sposób złożenia wniosku FR0512 w {filingYear} r.",
+    "homeGpmExample": "Jak to wygląda w liczbach",
+    "homeGpmExampleUnit": "€ GPM rocznie",
+    "homeGpmResult": "Umowny przykład rocznego wsparcia",
+    "homeGpmResultNote": "Obliczenie od kwoty podatku dochodowego. Ostateczną kwotę ustala VMI.",
+    "homeGpmOpen": "Otwórz instrukcję krok po kroku",
+    "homeGpmCalc": "Oblicz własny przykład"
   },
   "de": {
     "name": "Kirche der Geburt Christi",
@@ -1582,7 +1642,8 @@
       "sacraments": "Sakramente",
       "library": "Bibliothek",
       "notes": "Gebetsanliegen",
-      "contacts": "Kontakt"
+      "contacts": "Kontakt",
+      "gpm": "1,2 % GPM"
     },
     "footerNavigation": "Bereiche der Website",
     "external": "externe Website",
@@ -1747,7 +1808,21 @@
     "gpmInteractiveLink": "Interaktiven Leitfaden und Rechner öffnen",
     "storyEditorialTitle": "Anmerkung der Redaktion",
     "storyEditorialNote": "Die Studie erscheint im Wortlaut der Autorin; die Redaktion der Website hat den Text nicht verändert. Zwei amtliche litauische Einträge ergänzen die Chronologie der Autorin: Das Register der Kulturgüter Litauens (Code 32784) datiert die Instandsetzung des Gebäudes auf 2007 und führt es weiterhin als Kirche des Schutzes der Gottesmutter, und die Notiz der Rajongemeinde Vilnius setzt die Wiederherstellung in das Jahr 2007 und nennt neben Metropolit Chrysostomos den katholischen Erzbischof von Vilnius, Kardinal Audrys Juozas Bačkis, unter denen, die sich darum kümmerten. Das genaue Datum und der Ritus der Weihe von 2011 sind in den uns zugänglichen Dokumenten nicht angegeben. Einzelheiten und Quellenverweise stehen auf der Seite zur Geschichte der Kirche.",
-    "gpmOpen": "Bereich zu 1,2 % GPM öffnen"
+    "gpmOpen": "Bereich zu 1,2 % GPM öffnen",
+    "homeGpmKicker": "Unterstützung der Gemeinde",
+    "homeGpmFigure": "1,2 %",
+    "homeGpmTitle": "Ihre Wahl hilft der Kirche",
+    "homeGpmText": "Erfahren Sie, wie ein Teil Ihrer Einkommensteuer dem Gemeindeleben zugutekommt.",
+    "homeGpmAction": "So können Sie helfen",
+    "homeGpmBandEyebrow": "1,2 % GPM",
+    "homeGpmBandTitle": "Ein kleiner Steueranteil — spürbare Hilfe für die Gemeinde",
+    "homeGpmBandText": "Bis zu 1,2 % der Einkommensteuer für {taxYear} können der Gemeinde zugewiesen werden — ohne zusätzliche Kosten. Sehen Sie ein Beispiel und erfahren Sie, wie Sie {filingYear} den Antrag FR0512 stellen.",
+    "homeGpmExample": "So sieht es in Zahlen aus",
+    "homeGpmExampleUnit": "€ GPM pro Jahr",
+    "homeGpmResult": "Fiktives Beispiel der Jahresunterstützung",
+    "homeGpmResultNote": "Berechnet vom Einkommensteuerbetrag. Den endgültigen Betrag bestimmt die VMI.",
+    "homeGpmOpen": "Schritt-für-Schritt-Anleitung öffnen",
+    "homeGpmCalc": "Eigenes Beispiel berechnen"
   },
   "uk": {
     "name": "Храм Різдва Христового",
@@ -1932,7 +2007,8 @@
       "sacraments": "Таїнства",
       "library": "Бібліотека",
       "notes": "Записки",
-      "contacts": "Контакти"
+      "contacts": "Контакти",
+      "gpm": "1,2 % GPM"
     },
     "footerNavigation": "Розділи сайту",
     "external": "зовнішній сайт",
@@ -2097,6 +2173,20 @@
     "gpmInteractiveLink": "Відкрити інтерактивний посібник і калькулятор",
     "storyEditorialTitle": "Примітка редакції сайту",
     "storyEditorialNote": "Дослідження публікується в авторській редакції; редакція сайту в текст не втручалася. Два офіційні литовські записи доповнюють авторську хронологію: Реєстр культурних цінностей Литви (код 32784) датує ремонт будівлі 2007 роком і досі іменує її церквою Покрови Божої Матері, а довідка Вільнюського районного самоврядування відносить відновлення храму до 2007 року і називає серед опікунів, поряд із митрополитом Хризостомом, католицького архієпископа Вільнюського кардинала Аудріса Юозаса Бачкіса. Точна дата і чин освячення 2011 року в доступних нам документах не вказані. Подробиці та посилання на джерела — на сторінці історії храму.",
-    "gpmOpen": "Відкрити розділ про 1,2 % GPM"
+    "gpmOpen": "Відкрити розділ про 1,2 % GPM",
+    "homeGpmKicker": "Підтримка парафії",
+    "homeGpmFigure": "1,2 %",
+    "homeGpmTitle": "Ваш вибір допомагає храму",
+    "homeGpmText": "Дізнайтеся, як спрямувати частину податку на доходи на життя парафії.",
+    "homeGpmAction": "Дізнатися, як допомогти",
+    "homeGpmBandEyebrow": "1,2 % GPM",
+    "homeGpmBandTitle": "Невелика частка податку — відчутна допомога парафії",
+    "homeGpmBandText": "До 1,2 % податку на доходи за {taxYear} рік можна спрямувати на підтримку парафії — без додаткових витрат. Перегляньте приклад і дізнайтеся порядок подання заяви FR0512 у {filingYear} році.",
+    "homeGpmExample": "Як це виглядає в цифрах",
+    "homeGpmExampleUnit": "€ GPM за рік",
+    "homeGpmResult": "Умовний приклад підтримки за рік",
+    "homeGpmResultNote": "Розрахунок від суми податку на доходи. Остаточну суму визначає VMI.",
+    "homeGpmOpen": "Відкрити покрокову інструкцію",
+    "homeGpmCalc": "Розрахувати свій приклад"
   }
 }
