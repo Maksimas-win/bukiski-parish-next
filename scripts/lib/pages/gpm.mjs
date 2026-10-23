@@ -120,7 +120,7 @@ function phaseBlock(site, lang, t, f) {
 }
 
 function scenarios(t) {
-  const emblems = { learn: 'book', first: 'route', again: 'calendar' };
+  const emblems = { learn: 'user', first: 'route', again: 'calendar' };
   return html`<section class="shell gpm-section gpm-scenarios" id="scenarios" aria-labelledby="scenarios-title">
     ${sectionHead(null, t.scenarios.title, t.scenarios.intro, 'scenarios')}
     <ul class="gpm-scenarios__list">
