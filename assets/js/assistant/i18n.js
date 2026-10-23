@@ -10,7 +10,8 @@ export const TELEGRAM_UI = {
 export const UI = {
   ru: {
     title: 'Помощник прихода', subtitle: 'Храм Рождества Христова · Букишки', open: 'Спросить помощника', close: 'Закрыть помощника',
-    intro: 'Здравствуйте! Помогу найти расписание богослужений, контакты и ответы на частые вопросы о приходе.',
+    intro: 'Помогу найти расписание богослужений, контакты и ответы на частые вопросы о приходе.',
+    greeting: 'Здравствуйте! Чем могу помочь?', hint: 'Чем могу помочь?', hintLines: 'Расписание · Записки · Контакты',
     mode: 'Ответы по справочнику прихода', privacy: 'Вопросы обрабатываются в вашем браузере. Переписка не сохраняется и не отправляется в приход. Не вводите личные сведения.',
     label: 'Ваш вопрос', placeholder: 'Например: когда ближайшая служба?', send: 'Отправить', clear: 'Очистить диалог', language: 'Язык помощника',
     suggestions: ['Ближайшие службы', 'Есть ли служба завтра?', 'Как добраться?', 'Как связаться?'],
@@ -27,7 +28,8 @@ export const UI = {
   },
   lt: {
     title: 'Parapijos pagalbininkas', subtitle: 'Kristaus Gimimo cerkvė · Bukiškis', open: 'Paklausti pagalbininko', close: 'Uždaryti pagalbininką',
-    intro: 'Sveiki! Padėsiu rasti pamaldų tvarkaraštį, kontaktus ir atsakymus į dažnus klausimus apie parapiją.',
+    intro: 'Padėsiu rasti pamaldų tvarkaraštį, kontaktus ir atsakymus į dažnus klausimus apie parapiją.',
+    greeting: 'Sveiki! Kuo galiu padėti?', hint: 'Kuo galiu padėti?', hintLines: 'Tvarkaraštis · Prašymai · Kontaktai',
     mode: 'Atsakymai pagal parapijos informaciją', privacy: 'Klausimai apdorojami jūsų naršyklėje. Pokalbis nesaugomas ir parapijai nesiunčiamas. Neįrašykite asmeninių duomenų.',
     label: 'Jūsų klausimas', placeholder: 'Pavyzdžiui: kada artimiausios pamaldos?', send: 'Siųsti', clear: 'Išvalyti pokalbį', language: 'Pagalbininko kalba',
     suggestions: ['Artimiausios pamaldos', 'Ar rytoj bus pamaldos?', 'Kaip atvykti?', 'Kaip susisiekti?'],
@@ -43,7 +45,8 @@ export const UI = {
   },
   en: {
     title: 'Parish assistant', subtitle: 'Church of the Nativity of Christ · Bukiškis', open: 'Ask the assistant', close: 'Close assistant',
-    intro: 'Hello! I can help you find service times, contact details and answers to common questions about the parish.',
+    intro: 'I can help you find the service schedule, contact details and answers to common questions about the parish.',
+    greeting: 'Hello! How can I help?', hint: 'How can I help?', hintLines: 'Schedule · Prayer requests · Contacts',
     mode: 'Answers from the parish guide', privacy: 'Questions are processed in your browser. This conversation is not saved or sent to the parish. Please do not enter personal information.',
     label: 'Your question', placeholder: 'For example: when is the next service?', send: 'Send', clear: 'Clear conversation', language: 'Assistant language',
     suggestions: ['Upcoming services', 'Is there a service tomorrow?', 'How do I get there?', 'How can I contact the parish?'],
@@ -59,7 +62,8 @@ export const UI = {
   },
   pl: {
     title: 'Pomocnik parafii', subtitle: 'Cerkiew Narodzenia Chrystusa · Bukiškis', open: 'Zapytaj pomocnika', close: 'Zamknij pomocnika',
-    intro: 'Witaj! Pomogę znaleźć terminy nabożeństw, dane kontaktowe i odpowiedzi na częste pytania o parafię.',
+    intro: 'Pomogę znaleźć rozkład nabożeństw, dane kontaktowe i odpowiedzi na częste pytania o parafię.',
+    greeting: 'Dzień dobry! W czym mogę pomóc?', hint: 'W czym mogę pomóc?', hintLines: 'Nabożeństwa · Intencje · Kontakt',
     mode: 'Odpowiedzi z informatora parafii', privacy: 'Pytania są przetwarzane w przeglądarce. Rozmowa nie jest zapisywana ani wysyłana do parafii. Nie podawaj danych osobowych.',
     label: 'Twoje pytanie', placeholder: 'Na przykład: kiedy najbliższe nabożeństwo?', send: 'Wyślij', clear: 'Wyczyść rozmowę', language: 'Język pomocnika',
     suggestions: ['Najbliższe nabożeństwa', 'Czy jutro jest nabożeństwo?', 'Jak dojechać?', 'Jak się skontaktować?'],
@@ -75,7 +79,8 @@ export const UI = {
   },
   de: {
     title: 'Gemeindeassistent', subtitle: 'Christi-Geburtskirche · Bukiškis', open: 'Assistenten fragen', close: 'Assistenten schließen',
-    intro: 'Willkommen! Ich helfe bei Gottesdienstzeiten, Kontakten und häufigen Fragen zur Gemeinde.',
+    intro: 'Ich helfe Ihnen, die Gottesdienstzeiten, Kontaktdaten und Antworten auf häufige Fragen zur Gemeinde zu finden.',
+    greeting: 'Guten Tag! Wie kann ich helfen?', hint: 'Wie kann ich helfen?', hintLines: 'Gottesdienste · Gebetsanliegen · Kontakt',
     mode: 'Antworten aus dem Gemeindeführer', privacy: 'Fragen werden in Ihrem Browser verarbeitet. Der Verlauf wird nicht gespeichert oder an die Gemeinde gesendet. Bitte keine persönlichen Daten eingeben.',
     label: 'Ihre Frage', placeholder: 'Zum Beispiel: Wann ist der nächste Gottesdienst?', send: 'Senden', clear: 'Gespräch löschen', language: 'Sprache des Assistenten',
     suggestions: ['Nächste Gottesdienste', 'Gibt es morgen einen Gottesdienst?', 'Wie komme ich hin?', 'Wie erreiche ich die Gemeinde?'],
@@ -91,7 +96,8 @@ export const UI = {
   },
   uk: {
     title: 'Помічник парафії', subtitle: 'Храм Різдва Христового · Букішки', open: 'Запитати помічника', close: 'Закрити помічника',
-    intro: 'Вітаю! Допоможу знайти розклад богослужінь, контакти та відповіді на поширені запитання про парафію.',
+    intro: 'Допоможу знайти розклад богослужінь, контакти та відповіді на часті запитання про парафію.',
+    greeting: 'Вітаю! Чим можу допомогти?', hint: 'Чим можу допомогти?', hintLines: 'Розклад · Записки · Контакти',
     mode: 'Відповіді за довідником парафії', privacy: 'Запитання обробляються у вашому браузері. Листування не зберігається й не надсилається до парафії. Не вводьте особисті відомості.',
     label: 'Ваше запитання', placeholder: 'Наприклад: коли найближча служба?', send: 'Надіслати', clear: 'Очистити діалог', language: 'Мова помічника',
     suggestions: ['Найближчі служби', 'Чи є служба завтра?', 'Як дістатися?', "Як зв’язатися?"],
