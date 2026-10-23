@@ -2,10 +2,10 @@
 // this entry point wires up controls and loads a feature module only on the
 // pages that contain its markup.
 
-import { initCopyButtons } from './ui/copy.js?v=ec940d9e7b';
-import { initLanguageMenu, initMenu } from './ui/menu.js?v=ec940d9e7b';
-import { initPreferences } from './ui/preferences.js?v=ec940d9e7b';
-import { initTilt } from './ui/tilt.js?v=ec940d9e7b';
+import { initCopyButtons } from './ui/copy.js?v=c3e363155e';
+import { initLanguageMenu, initMenu } from './ui/menu.js?v=c3e363155e';
+import { initPreferences } from './ui/preferences.js?v=c3e363155e';
+import { initTilt } from './ui/tilt.js?v=c3e363155e';
 
 document.documentElement.classList.add('js');
 
@@ -16,13 +16,13 @@ initCopyButtons();
 initTilt();
 
 const features = [
-  ['[data-schedule]', () => import('./features/schedule.js?v=ec940d9e7b')],
-  ['[data-library]', () => import('./features/library.js?v=ec940d9e7b')],
-  ['[data-notes]', () => import('./features/notes.js?v=ec940d9e7b')],
-  ['[data-article]', () => import('./features/article.js?v=ec940d9e7b')],
-  ['[data-story]', () => import('./features/story.js?v=ec940d9e7b')],
-  ['[data-lightbox]', () => import('./features/lightbox.js?v=ec940d9e7b')],
-  ['[data-document-download]', () => import('./document-downloads.js?v=ec940d9e7b')]
+  ['[data-schedule]', () => import('./features/schedule.js?v=c3e363155e')],
+  ['[data-library]', () => import('./features/library.js?v=c3e363155e')],
+  ['[data-notes]', () => import('./features/notes.js?v=c3e363155e')],
+  ['[data-article]', () => import('./features/article.js?v=c3e363155e')],
+  ['[data-story]', () => import('./features/story.js?v=c3e363155e')],
+  ['[data-lightbox]', () => import('./features/lightbox.js?v=c3e363155e')],
+  ['[data-document-download]', () => import('./document-downloads.js?v=c3e363155e')]
 ];
 
 for (const [selector, load] of features) {

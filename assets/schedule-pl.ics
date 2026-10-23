@@ -7,7 +7,7 @@ X-WR-CALNAME:Cerkiew Narodzenia Pańskiego
 X-WR-TIMEZONE:Europe/Vilnius
 BEGIN:VEVENT
 UID:svc-db6c1ace6265c076ed10@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261018T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -16,7 +16,7 @@ DESCRIPTION:20. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-13ee7c62cfc8e9ed2a22@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261025T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -25,7 +25,7 @@ DESCRIPTION:21. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-3fb67d558df4f94b9a27@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261101T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -34,7 +34,7 @@ DESCRIPTION:22. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:add-2026-11-07-dimitrievskaya@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261107T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -43,7 +43,7 @@ DESCRIPTION:Dymitrowska sobota zaduszna\nPlik jest kopią opublikowanych
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-df71f5a86086445f65e9@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261108T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -52,7 +52,7 @@ DESCRIPTION:23. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-791286fb58dd61374dad@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261115T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -61,7 +61,7 @@ DESCRIPTION:24. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-142ac08220b6d32070b0@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261122T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -70,7 +70,7 @@ DESCRIPTION:25. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-03eaf1010ec5c66215c9@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261129T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -79,7 +79,7 @@ DESCRIPTION:26. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-67202f07ad81d38b891d@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261204T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -88,7 +88,7 @@ DESCRIPTION:Wprowadzenie Bogurodzicy do Świątyni\nPlik jest kopią opub
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-ff973fe3690d4f1d844c@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261206T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -97,7 +97,7 @@ DESCRIPTION:27. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-1822e6872f250c6e280c@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261213T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -106,7 +106,7 @@ DESCRIPTION:28. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-cbe317db75849e6c1bc1@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261219T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -115,7 +115,7 @@ DESCRIPTION:Plik jest kopią opublikowanych wydarzeń i nie aktualizuje s
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-76eec744248119bcf883@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261220T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -124,7 +124,7 @@ DESCRIPTION:29. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-82b83469f9c26886c81f@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20261227T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -133,7 +133,7 @@ DESCRIPTION:30. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-9af349ea03c2d7e9d9f5@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270103T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -142,7 +142,7 @@ DESCRIPTION:31. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-1c1b4b605be048a0f9c7@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270106T150000Z
 SUMMARY:Całonocne czuwanie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -151,7 +151,7 @@ DESCRIPTION:Plik jest kopią opublikowanych wydarzeń i nie aktualizuje s
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-5f8b381166ab426f7b39@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270106T214500Z
 SUMMARY:Godziny i nocna Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -160,7 +160,7 @@ DESCRIPTION:Narodzenie Chrystusa\nPlik jest kopią opublikowanych wydarze
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-f4d625bf2216d125a124@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270107T070000Z
 SUMMARY:Obiednica
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -169,7 +169,7 @@ DESCRIPTION:Narodzenie Chrystusa\nPlik jest kopią opublikowanych wydarze
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-07b8b11891d3d436932b@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270110T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -178,7 +178,7 @@ DESCRIPTION:32. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-8b3c0961236599a92c83@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270117T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -187,7 +187,7 @@ DESCRIPTION:33. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-b5991b06180cba6be8c0@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270119T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -196,7 +196,7 @@ DESCRIPTION:Chrzest Pański. Objawienie Pańskie\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-3c34aae5307e935f29bb@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270124T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -205,7 +205,7 @@ DESCRIPTION:34. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-653f48a1c9b9c77fe600@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270131T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -214,7 +214,7 @@ DESCRIPTION:35. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-10396f12c8873b45238c@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270207T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -223,7 +223,7 @@ DESCRIPTION:36. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-8cbac427d3fd986ad787@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270214T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -232,7 +232,7 @@ DESCRIPTION:37. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-98ceb2c5b6ba8ce04c22@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270215T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -241,7 +241,7 @@ DESCRIPTION:Spotkanie Pańskie\nPlik jest kopią opublikowanych wydarzeń
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-ffcf1a36c5601dfcf50c@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270221T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -250,7 +250,7 @@ DESCRIPTION:Niedziela o celniku i faryzeuszu\nPlik jest kopią opublikowa
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-9a468aaf7729d4ad5c0e@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270228T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -259,7 +259,7 @@ DESCRIPTION:Niedziela o synu marnotrawnym\nPlik jest kopią opublikowanyc
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-720e38b086d3a46fb023@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270307T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -268,7 +268,7 @@ DESCRIPTION:Niedziela o Sądzie Ostatecznym\nPlik jest kopią opublikowan
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-2f5863fbd2fe295df1c0@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270314T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -277,7 +277,7 @@ DESCRIPTION:Niedziela przebaczenia\nPlik jest kopią opublikowanych wydar
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-1a29fc8ce7b3bfe53853@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270321T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -286,7 +286,7 @@ DESCRIPTION:1. niedziela Wielkiego Postu. Triumf Prawosławia\nPlik jest
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-17344e988f9dd264a85c@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270328T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -295,7 +295,7 @@ DESCRIPTION:2. niedziela Wielkiego Postu. Św. Grzegorza Palamasa\nPlik j
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-a7f71a15ad0a27a6d21d@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270404T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -304,7 +304,7 @@ DESCRIPTION:3. niedziela Wielkiego Postu. Adoracja Krzyża\nPlik jest kop
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-2b0bf13632b3d7db7412@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270407T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -313,7 +313,7 @@ DESCRIPTION:Zwiastowanie Bogurodzicy\nPlik jest kopią opublikowanych wyd
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-5e0621ac2deed0ff226c@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270411T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -322,7 +322,7 @@ DESCRIPTION:4. niedziela Wielkiego Postu. Św. Jana Klimaka\nPlik jest ko
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-bf2b223528ae706eafe8@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270418T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -331,7 +331,7 @@ DESCRIPTION:5. niedziela Wielkiego Postu. Św. Marii Egipcjanki\nPlik jes
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-287b84c1f329e9b96f7e@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270425T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -340,7 +340,7 @@ DESCRIPTION:Wjazd Pański do Jerozolimy\nPlik jest kopią opublikowanych
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-affb6ea909183b39d00b@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270501T203000Z
 SUMMARY:Paschalna połunoszcznica\, procesja i nocne nabożeństwo
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -349,7 +349,7 @@ DESCRIPTION:Zmartwychwstanie Chrystusa. Pascha\nPlik jest kopią opubliko
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-c765f636b5603fe52e27@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270502T060000Z
 SUMMARY:Obiednica
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -358,7 +358,7 @@ DESCRIPTION:Zmartwychwstanie Chrystusa. Pascha\nPlik jest kopią opubliko
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-144ad02352ba5dd4fa18@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270509T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -367,7 +367,7 @@ DESCRIPTION:2. niedziela Paschy. Apostoła Tomasza\nPlik jest kopią opub
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-0b7fc37e15f873f82330@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270516T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -376,7 +376,7 @@ DESCRIPTION:3. niedziela Paschy. Niewiast niosących wonności\nPlik jest
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-dfd12ac05a7259f6374a@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270523T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -385,7 +385,7 @@ DESCRIPTION:4. niedziela Paschy. O paralityku\nPlik jest kopią opublikow
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-a99f04995287a1b92cd9@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270530T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -394,7 +394,7 @@ DESCRIPTION:5. niedziela Paschy. O Samarytance\nPlik jest kopią opubliko
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-8ef565ebf322ca479ebb@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270606T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -403,7 +403,7 @@ DESCRIPTION:6. niedziela Paschy. O niewidomym\nPlik jest kopią opublikow
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-e4f175b711d41c62d12e@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270610T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -412,7 +412,7 @@ DESCRIPTION:Wniebowstąpienie Pańskie\nPlik jest kopią opublikowanych w
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-b36cc6c5100be7b41b47@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270613T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -421,7 +421,7 @@ DESCRIPTION:7. niedziela Paschy. Ojców I Soboru Powszechnego\nPlik jest
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-4cfa39b1715068a6ff0e@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270620T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -430,7 +430,7 @@ DESCRIPTION:Dzień Świętej Trójcy. Pięćdziesiątnica\nPlik jest kopi
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-b1613e44f7934a75b98a@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270627T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -439,7 +439,7 @@ DESCRIPTION:1. niedziela po Pięćdziesiątnicy\nPlik jest kopią opublik
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-f85a53b49e95e83e3d4e@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270704T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -448,7 +448,7 @@ DESCRIPTION:2. niedziela po Pięćdziesiątnicy\nPlik jest kopią opublik
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-2f8286832a0fb1fc59ea@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270711T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -457,7 +457,7 @@ DESCRIPTION:3. niedziela po Pięćdziesiątnicy\nPlik jest kopią opublik
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-6fe2592f5ce85847bf4c@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270718T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -466,7 +466,7 @@ DESCRIPTION:4. niedziela po Pięćdziesiątnicy\nPlik jest kopią opublik
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-350114999562e82d0c2c@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270725T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -475,7 +475,7 @@ DESCRIPTION:5. niedziela po Pięćdziesiątnicy\nPlik jest kopią opublik
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-db6aa92d2a1c0c367b76@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270801T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -484,7 +484,7 @@ DESCRIPTION:6. niedziela po Pięćdziesiątnicy\nPlik jest kopią opublik
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-fdcc0350daff9756d7e4@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270808T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -493,7 +493,7 @@ DESCRIPTION:7. niedziela po Pięćdziesiątnicy\nPlik jest kopią opublik
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-319961af294ca3318f36@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270815T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -502,7 +502,7 @@ DESCRIPTION:8. niedziela po Pięćdziesiątnicy\nPlik jest kopią opublik
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-58857e8d95bbcf819eb3@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270819T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -511,7 +511,7 @@ DESCRIPTION:Przemienienie Pańskie\nPlik jest kopią opublikowanych wydar
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-6490a8b83a06d71aedad@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270822T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -520,7 +520,7 @@ DESCRIPTION:9. niedziela po Pięćdziesiątnicy\nPlik jest kopią opublik
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-a7bc7598d17afc0ab947@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270828T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -529,7 +529,7 @@ DESCRIPTION:Zaśnięcie Bogurodzicy\nPlik jest kopią opublikowanych wyda
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-198e91ec976174326c9c@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270829T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -538,7 +538,7 @@ DESCRIPTION:10. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-c56fb27019a288f526b4@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270905T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -547,7 +547,7 @@ DESCRIPTION:11. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-56a2e64ae7a518606b2e@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270912T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -556,7 +556,7 @@ DESCRIPTION:12. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-135c0697977ac8b46f18@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270919T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -565,7 +565,7 @@ DESCRIPTION:13. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-135fb590e8cb16c236ab@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270921T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -574,7 +574,7 @@ DESCRIPTION:Narodzenie Bogurodzicy\nPlik jest kopią opublikowanych wydar
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-5617e8eefe969ef4068c@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270926T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -583,7 +583,7 @@ DESCRIPTION:14. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-4539bdc413e2f2aa789b@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20270927T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -592,7 +592,7 @@ DESCRIPTION:Podwyższenie Krzyża Pańskiego\nPlik jest kopią opublikowa
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-bed2f1831c857afdbfd4@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20271003T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -601,7 +601,7 @@ DESCRIPTION:15. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-16b09a5571ec243dcedc@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20271010T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -610,7 +610,7 @@ DESCRIPTION:16. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-44ea4e713dd53489e615@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20271014T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -619,7 +619,7 @@ DESCRIPTION:Opieka Bogurodzicy\nPlik jest kopią opublikowanych wydarzeń
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-81492d2a320a795e8b9e@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20271017T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -628,7 +628,7 @@ DESCRIPTION:17. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-1f6575169141472d35df@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20271024T050000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -637,7 +637,7 @@ DESCRIPTION:18. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-6df679a79b28dd16749f@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20271031T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -646,7 +646,7 @@ DESCRIPTION:19. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-f7ffb3558afdacae4afa@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20271107T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -655,7 +655,7 @@ DESCRIPTION:20. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-96c63b33f86a84c2b981@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20271114T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -664,7 +664,7 @@ DESCRIPTION:21. niedziela po Pięćdziesiątnicy\nPlik jest kopią opubli
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-6226a186f513bc587899@bukiski-hram.net
-DTSTAMP:20261023T093257Z
+DTSTAMP:20261023T133011Z
 DTSTART:20271121T060000Z
 SUMMARY:Boska Liturgia
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
