@@ -46,11 +46,11 @@
     ],
     "discover": "Приход рядом с вами",
     "discoverIntro": "Для молитвы, знакомства и добрых дел",
-    "historyTeaser": "Память места, восстановление храма и возвращение приходской жизни.",
+    "historyTeaser": "Домовая церковь генеральской усадьбы, годы запустения, восстановление и новая жизнь прихода — по документам, с указанием источников.",
     "notesTeaser": "Подайте записку онлайн или подготовьте её к печати.",
     "libraryTeaser": "Сохранённые статьи о вере, богослужении и христианской жизни.",
-    "historyHeading": "История храма Рождества Христова",
-    "historyIntro": "От семейной святыни в старом имении Букишки до живого православного прихода: история людей, утрат и бережного восстановления.",
+    "historyHeading": "История храма Рождества Христова в Букишках",
+    "historyIntro": "Домовая церковь генеральской усадьбы, разорённая усыпальница, склад училища, десять лет восстановления и новая жизнь прихода. Рассказ о небольшом храме под Вильнюсом по архивным документам, официальным справкам и свидетельствам самого прихода.",
     "timeline": [
       [
         "1866",
@@ -344,7 +344,9 @@
     "calendarSourceLabel": "Источник календаря",
     "openSchedule": "Открыть расписание",
     "gpmTextEdition": "Здесь сохранена текстовая версия приходского гида. Калькулятор, пошаговая инструкция и поиск ответов доступны на bukiski-hram.org.",
-    "gpmInteractiveLink": "Открыть интерактивный гид и калькулятор"
+    "gpmInteractiveLink": "Открыть интерактивный гид и калькулятор",
+    "storyEditorialTitle": "Примечание редакции сайта",
+    "storyEditorialNote": "Исследование публикуется в авторской редакции; редакция сайта в текст не вмешивалась. Две официальные литовские записи дополняют авторскую хронологию: Регистр культурных ценностей Литвы (код 32784) датирует ремонт здания 2007 годом и по-прежнему именует его церковью Покрова Божией Матери, а справка Вильнюсского районного самоуправления относит восстановление храма к 2007 году и называет среди попечителей, наряду с митрополитом Хризостомом, католического архиепископа Вильнюсского кардинала Аудриса Юозаса Бачкиса. Точная дата и чин освящения 2011 года в доступных нам документах не указаны. Подробности и ссылки на источники — на странице истории храма."
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -393,11 +395,11 @@
     ],
     "discover": "Parapija šalia jūsų",
     "discoverIntro": "Maldai, pažinčiai ir geriems darbams",
-    "historyTeaser": "Vietos atmintis, cerkvės atkūrimas ir parapijos gyvenimo atgimimas.",
+    "historyTeaser": "Generolo dvaro namų cerkvė, apleistumo metai, atstatymas ir naujas parapijos gyvenimas – pagal dokumentus, nurodant šaltinius.",
     "notesTeaser": "Pateikite raštelį internetu arba paruoškite jį spausdinti.",
     "libraryTeaser": "Išsaugoti straipsniai apie tikėjimą, pamaldas ir krikščionišką gyvenimą.",
-    "historyHeading": "Kristaus Gimimo bažnyčios istorija",
-    "historyIntro": "Nuo šeimos šventovės senajame Bukiškio dvare iki gyvos stačiatikių parapijos: žmonių, praradimų ir rūpestingo atkūrimo istorija.",
+    "historyHeading": "Kristaus Gimimo cerkvės Bukiškyje istorija",
+    "historyIntro": "Generolo dvaro namų cerkvė, išplėštas šeimos kapas, mokyklos sandėlis, dešimt metų atstatymo ir naujas parapijos gyvenimas. Pasakojimas apie nedidelę cerkvę prie Vilniaus pagal archyvo dokumentus, oficialias pažymas ir pačios parapijos liudijimus.",
     "timeline": [
       [
         "1866",
@@ -691,7 +693,9 @@
     "calendarSourceLabel": "Kalendoriaus šaltinis",
     "openSchedule": "Atidaryti tvarkaraštį",
     "gpmTextEdition": "Čia išsaugota parapijos gido tekstinė versija. Skaičiuoklę, nuoseklią instrukciją ir atsakymų paiešką rasite bukiski-hram.org.",
-    "gpmInteractiveLink": "Atverti interaktyvų gidą ir skaičiuoklę"
+    "gpmInteractiveLink": "Atverti interaktyvų gidą ir skaičiuoklę",
+    "storyEditorialTitle": "Svetainės redakcijos pastaba",
+    "storyEditorialNote": "Tyrimas skelbiamas autorės redakcija; svetainės redakcija į tekstą nesikišo. Du oficialūs Lietuvos įrašai papildo autorės chronologiją: Lietuvos kultūros vertybių registras (kodas 32784) pastato remontą datuoja 2007 m. ir tebevadina jį Dievo Motinos Globėjos cerkve, o Vilniaus rajono savivaldybės pažyma cerkvės atstatymą priskiria 2007 m. ir tarp globėjų, greta metropolito Chrizostomo, mini Vilniaus arkivyskupą kardinolą Audrį Juozą Bačkį. Tiksli 2011 m. pašventinimo data ir apeigos mums prieinamuose dokumentuose nenurodytos. Smulkmenos ir nuorodos į šaltinius – cerkvės istorijos puslapyje."
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -740,11 +744,11 @@
     ],
     "discover": "A parish close to you",
     "discoverIntro": "For prayer, discovery and acts of kindness",
-    "historyTeaser": "The memory of this place, its restoration and the return of parish life.",
+    "historyTeaser": "A general’s estate church, years of neglect, restoration and the new life of the parish, told from documents with sources cited.",
     "notesTeaser": "Send a prayer request online or prepare it for printing.",
     "libraryTeaser": "Preserved articles about faith, worship and Christian life.",
-    "historyHeading": "History of the Church of the Nativity of Christ",
-    "historyIntro": "From a family place of worship on the old Bukiškis estate to a living Orthodox parish: a story of people, loss and careful restoration.",
+    "historyHeading": "History of the Church of the Nativity of Christ in Bukiškis",
+    "historyIntro": "A general's private estate church, a looted family vault, a school storehouse, ten years of restoration and the new life of a parish. The story of a small church outside Vilnius, told from archival documents, official records and the parish's own testimony.",
     "timeline": [
       [
         "1866",
@@ -1038,7 +1042,9 @@
     "calendarSourceLabel": "Calendar source",
     "openSchedule": "Open the schedule",
     "gpmTextEdition": "This is the preserved text edition of the parish guide. The calculator, step-by-step guide and answer search are available at bukiski-hram.org.",
-    "gpmInteractiveLink": "Open the interactive guide and calculator"
+    "gpmInteractiveLink": "Open the interactive guide and calculator",
+    "storyEditorialTitle": "Editorial note",
+    "storyEditorialNote": "The study is published in the author’s own wording; the site editors have not altered the text. Two official Lithuanian records supplement the author’s chronology: the Register of Cultural Property of Lithuania (code 32784) dates the repair of the building to 2007 and still lists it as the Church of the Protection of the Mother of God, and the Vilnius District Municipality’s note places the restoration in 2007 and names, alongside Metropolitan Chrysostomos, the Catholic Archbishop of Vilnius, Cardinal Audrys Juozas Bačkis, among those who cared for it. The exact date and rite of the 2011 consecration are not given in the documents available to us. Details and source links are on the church history page."
   },
   "pl": {
     "name": "Cerkiew Narodzenia Pańskiego",
@@ -1087,11 +1093,11 @@
     ],
     "discover": "Parafia blisko ciebie",
     "discoverIntro": "Dla modlitwy, poznania i dobrych uczynków",
-    "historyTeaser": "Pamięć miejsca, odbudowa cerkwi i powrót życia parafialnego.",
+    "historyTeaser": "Domowa cerkiew generalskiego majątku, lata zaniedbania, odbudowa i nowe życie parafii – według dokumentów, ze wskazaniem źródeł.",
     "notesTeaser": "Złóż karteczkę z imionami przez internet lub przygotuj ją do wydruku.",
     "libraryTeaser": "Zachowane artykuły o wierze, nabożeństwach i życiu chrześcijańskim.",
-    "historyHeading": "Historia cerkwi Narodzenia Chrystusa",
-    "historyIntro": "Od rodzinnej świątyni w dawnym majątku Bukiszki do żywej wspólnoty prawosławnej: dzieje ludzi, utraty i troskliwej odbudowy.",
+    "historyHeading": "Historia cerkwi Narodzenia Chrystusa w Bukiszkach",
+    "historyIntro": "Domowa cerkiew generalskiego majątku, splądrowany grobowiec rodzinny, magazyn szkoły, dziesięć lat odbudowy i nowe życie parafii. Opowieść o niewielkiej cerkwi pod Wilnem według dokumentów archiwalnych, oficjalnych informacji i świadectw samej parafii.",
     "timeline": [
       [
         "1866",
@@ -1385,7 +1391,9 @@
     "calendarSourceLabel": "Źródło kalendarza",
     "openSchedule": "Otwórz porządek nabożeństw",
     "gpmTextEdition": "To zachowana tekstowa wersja poradnika parafii. Kalkulator, instrukcja krok po kroku i wyszukiwarka odpowiedzi są dostępne na bukiski-hram.org.",
-    "gpmInteractiveLink": "Otwórz interaktywny poradnik i kalkulator"
+    "gpmInteractiveLink": "Otwórz interaktywny poradnik i kalkulator",
+    "storyEditorialTitle": "Uwaga redakcji strony",
+    "storyEditorialNote": "Opracowanie publikowane jest w redakcji autorskiej; redakcja strony nie ingerowała w tekst. Dwa oficjalne litewskie zapisy uzupełniają chronologię autorki: Rejestr Dóbr Kultury Litwy (kod 32784) datuje remont budynku na 2007 rok i nadal nazywa go cerkwią Opieki Matki Bożej, a informacja Samorządu Rejonu Wileńskiego odnosi odbudowę do 2007 roku i wymienia wśród opiekunów, obok metropolity Chryzostoma, katolickiego arcybiskupa wileńskiego kardynała Audrysa Juozasa Bačkisa. Dokładna data i obrzęd poświęcenia w 2011 roku nie są podane w dostępnych nam dokumentach. Szczegóły i odsyłacze do źródeł – na stronie historii cerkwi."
   },
   "de": {
     "name": "Kirche der Geburt Christi",
@@ -1434,11 +1442,11 @@
     ],
     "discover": "Eine Gemeinde in Ihrer Nähe",
     "discoverIntro": "Für Gebet, Begegnung und gute Werke",
-    "historyTeaser": "Die Erinnerung an diesen Ort, die Wiederherstellung der Kirche und die Rückkehr des Gemeindelebens.",
+    "historyTeaser": "Hauskirche eines Generalsguts, Jahre des Verfalls, Wiederaufbau und das neue Leben der Gemeinde – nach Dokumenten, mit Quellenangaben.",
     "notesTeaser": "Reichen Sie ein Gebetsanliegen online ein oder bereiten Sie es zum Ausdrucken vor.",
     "libraryTeaser": "Bewahrte Artikel über Glauben, Gottesdienst und christliches Leben.",
-    "historyHeading": "Geschichte der Kirche Christi Geburt",
-    "historyIntro": "Vom Familienheiligtum auf dem alten Gut Bukiškis zu einer lebendigen orthodoxen Gemeinde: eine Geschichte von Menschen, Verlust und behutsamem Wiederaufbau.",
+    "historyHeading": "Geschichte der Christi-Geburt-Kirche in Bukiškis",
+    "historyIntro": "Hauskirche eines Generalsguts, geplünderte Familiengruft, Lagerraum einer Schule, zehn Jahre Wiederaufbau und das neue Leben einer Gemeinde. Die Geschichte einer kleinen Kirche bei Vilnius nach Archivdokumenten, amtlichen Angaben und den Zeugnissen der Gemeinde selbst.",
     "timeline": [
       [
         "1866",
@@ -1732,7 +1740,9 @@
     "calendarSourceLabel": "Quelle des Kalenders",
     "openSchedule": "Gottesdienstplan öffnen",
     "gpmTextEdition": "Hier finden Sie die gespeicherte Textfassung des Gemeindeleitfadens. Rechner, Schritt-für-Schritt-Anleitung und Antwortsuche stehen auf bukiski-hram.org bereit.",
-    "gpmInteractiveLink": "Interaktiven Leitfaden und Rechner öffnen"
+    "gpmInteractiveLink": "Interaktiven Leitfaden und Rechner öffnen",
+    "storyEditorialTitle": "Anmerkung der Redaktion",
+    "storyEditorialNote": "Die Studie erscheint im Wortlaut der Autorin; die Redaktion der Website hat den Text nicht verändert. Zwei amtliche litauische Einträge ergänzen die Chronologie der Autorin: Das Register der Kulturgüter Litauens (Code 32784) datiert die Instandsetzung des Gebäudes auf 2007 und führt es weiterhin als Kirche des Schutzes der Gottesmutter, und die Notiz der Rajongemeinde Vilnius setzt die Wiederherstellung in das Jahr 2007 und nennt neben Metropolit Chrysostomos den katholischen Erzbischof von Vilnius, Kardinal Audrys Juozas Bačkis, unter denen, die sich darum kümmerten. Das genaue Datum und der Ritus der Weihe von 2011 sind in den uns zugänglichen Dokumenten nicht angegeben. Einzelheiten und Quellenverweise stehen auf der Seite zur Geschichte der Kirche."
   },
   "uk": {
     "name": "Храм Різдва Христового",
@@ -1781,11 +1791,11 @@
     ],
     "discover": "Парафія поруч із вами",
     "discoverIntro": "Для молитви, знайомства і добрих справ",
-    "historyTeaser": "Пам’ять місця, відновлення храму і повернення парафіяльного життя.",
+    "historyTeaser": "Домова церква генеральської садиби, роки занепаду, відновлення і нове життя парафії — за документами, із зазначенням джерел.",
     "notesTeaser": "Подайте записку онлайн або підготуйте її до друку.",
     "libraryTeaser": "Збережені статті про віру, богослужіння і християнське життя.",
-    "historyHeading": "Історія храму Різдва Христового",
-    "historyIntro": "Від родинної святині в давньому маєтку Букішки до живої православної парафії: історія людей, втрат і дбайливого відновлення.",
+    "historyHeading": "Історія храму Різдва Христового в Букішках",
+    "historyIntro": "Домова церква генеральської садиби, розграбована усипальниця, склад училища, десять років відновлення і нове життя парафії. Розповідь про невеликий храм під Вільнюсом за архівними документами, офіційними довідками та свідченнями самої парафії.",
     "timeline": [
       [
         "1866",
@@ -2079,6 +2089,8 @@
     "calendarSourceLabel": "Джерело календаря",
     "openSchedule": "Відкрити розклад",
     "gpmTextEdition": "Тут збережено текстову версію парафіяльного посібника. Калькулятор, покрокова інструкція та пошук відповідей доступні на bukiski-hram.org.",
-    "gpmInteractiveLink": "Відкрити інтерактивний посібник і калькулятор"
+    "gpmInteractiveLink": "Відкрити інтерактивний посібник і калькулятор",
+    "storyEditorialTitle": "Примітка редакції сайту",
+    "storyEditorialNote": "Дослідження публікується в авторській редакції; редакція сайту в текст не втручалася. Два офіційні литовські записи доповнюють авторську хронологію: Реєстр культурних цінностей Литви (код 32784) датує ремонт будівлі 2007 роком і досі іменує її церквою Покрови Божої Матері, а довідка Вільнюського районного самоврядування відносить відновлення храму до 2007 року і називає серед опікунів, поряд із митрополитом Хризостомом, католицького архієпископа Вільнюського кардинала Аудріса Юозаса Бачкіса. Точна дата і чин освячення 2011 року в доступних нам документах не вказані. Подробиці та посилання на джерела — на сторінці історії храму."
   }
 }
