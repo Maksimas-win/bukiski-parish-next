@@ -4097,8 +4097,8 @@ input[type='email']:user-invalid {
   margin: 0 0 1.1rem;
   font-size: 1.125rem;
   line-height: 1.8;
-  text-align: justify;
-  hyphens: auto;
+  text-align: start;
+  hyphens: manual;
   overflow-wrap: break-word;
 }
 
@@ -4112,7 +4112,9 @@ input[type='email']:user-invalid {
   font-size: 0.875rem;
 }
 
-.history-narrative__citations a { padding: 0.3rem; }
+.history-narrative__citations a { padding: 0.2rem 0.45rem; border-radius: var(--radius-s); background: var(--surface-tint); text-decoration: none; font-variant-numeric: tabular-nums; }
+.history-narrative__citations a:hover,
+.history-narrative__citations a:focus-visible { color: var(--on-accent); background: var(--accent); }
 
 .history-narrative__photo { margin: 1.75rem 0 0; }
 .history-narrative__photo a { display: block; }
@@ -4177,7 +4179,6 @@ input[type='email']:user-invalid {
   .history-milestones ol,
   .history-study { grid-template-columns: minmax(0, 1fr); }
   .history-contents li a { padding-block: 0.4rem; }
-  .history-narrative__chapter > p:not([class]) { text-align: start; hyphens: none; }
   .history-study > img { height: auto; max-height: 15rem; }
 }
 
@@ -4186,6 +4187,17 @@ input[type='email']:user-invalid {
   .history-contents { display: none; }
   .history-study { break-inside: avoid; }
   .history-narrative h2 { break-after: avoid; }
+}
+
+/* Editorial note on the author study: the site's own words, visually separate from the author's text. */
+.story-editorial {
+  margin-top: 1.5rem;
+  border-left: 4px solid var(--gilt);
+}
+
+.story-editorial__title {
+  margin-bottom: 0.4rem;
+  font-weight: 700;
 }
 
 /* 45-story.css */
