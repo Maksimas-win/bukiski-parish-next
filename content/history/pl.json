@@ -1,175 +1,133 @@
 {
-  "title": "Historia cerkwi Narodzenia Chrystusa",
-  "intro": "Od rodzinnej świątyni w dawnym majątku Bukiszki do żywej wspólnoty prawosławnej: dzieje ludzi, utraty i troskliwej odbudowy.",
+  "title": "Historia cerkwi Narodzenia Chrystusa w Bukiszkach",
+  "intro": "Domowa cerkiew generalskiego majątku, splądrowany grobowiec rodzinny, magazyn szkoły, dziesięć lat odbudowy i nowe życie parafii. Opowieść o niewielkiej cerkwi pod Wilnem według dokumentów archiwalnych, oficjalnych informacji i świadectw samej parafii.",
   "contentsTitle": "Na tej stronie",
-  "chronologyTitle": "Najważniejsze wydarzenia",
-  "sourcesTitle": "Źródła i świadectwa",
-  "sourceLinkLabel": "Źródła tej części",
-  "studyLabel": "Osobne opracowanie autorskie",
-  "studyDescription": "Praca N. J. Iwanowej poświęcona rodzinie fundatorów cerkwi, majątkowi i jego mieszkańcom. Tekst autorki, odsyłacze do archiwów i szczegółowe informacje historyczne znajdują się w osobnej publikacji w języku rosyjskim.",
-  "studyRead": "Przeczytaj opracowanie N. J. Iwanowej",
+  "chronologyTitle": "Daty i etapy",
+  "sourcesTitle": "Źródła",
+  "sourceLinkLabel": "Źródła rozdziału",
+  "studyLabel": "Osobne opracowanie",
+  "studyDescription": "N. J. Iwanowa, nauczycielka historii i metodyczka, odtworzyła na podstawie akt Litewskiego Państwowego Archiwum Historycznego dzieje rodziny Bożerianowów: kim byli generał i jego żona, jak był urządzony majątek, co stało się z dziećmi i dworem w XX wieku. Publikacja w języku rosyjskim, w redakcji autorskiej, z odsyłaczami archiwalnymi.",
+  "studyRead": "Czytaj opracowanie N. J. Iwanowej (po rosyjsku)",
   "archiveTitle": "Wcześniejsze publikacje parafii",
-  "sourceNote": "Tekst opracowano na podstawie badań historycznych N. J. Iwanowej, opublikowanych informacji o Bukiszkach i materiałów parafialnych. Informacje o pracach z ostatnich lat przekazała parafia. Daty zakupu majątku, odbudowy budynku i wznowienia nabożeństw dotyczą odrębnych wydarzeń.",
+  "sourceNote": "Skąd co wiadomo. Informacje o rodzinie Bożerianowów, majątku i losie grobowca pochodzą z archiwalnego opracowania N. J. Iwanowej. Datowanie budowy, zniszczenia wojenne, wykorzystanie budynku jako magazynu i remont w 2007 roku – z Rejestru Dóbr Kultury Litwy i informacji Samorządu Rejonu Wileńskiego. Daty zwrotu budynku, rozpoczęcia prac, wznowienia nabożeństw i remontów ostatnich lat podała parafia. Rok zakupu majątku (1866), rok rozpoczęcia odbudowy (2002), rok remontu budynku (2007) i rok wznowienia nabożeństw (2011) dotyczą różnych wydarzeń.",
   "photos": {
-    "before": "Cerkiew przed odbudową. Fotografia ze zbiorów parafialnych.",
-    "after": "Odbudowana cerkiew Narodzenia Chrystusa w Bukiszkach."
+    "works": "Cerkiew w czasie prac odbudowy: ściany w rusztowaniach, dach jeszcze nieukończony. Fotografia ze zbioru parafii; data wykonania nieustalona.",
+    "vault": "Sklepienia porośnięte mchem – tak budynek wyglądał od wewnątrz przed rozpoczęciem prac. Fotografia ze zbioru parafii; data wykonania nieustalona.",
+    "domes": "Pięć kopuł odbudowanej cerkwi: centralna i cztery boczne, z ośmiobocznymi hełmami.",
+    "after": "Cerkiew Narodzenia Chrystusa dzisiaj. Nabożeństwa wznowiono w 2011 roku."
   },
   "sections": [
     {
       "id": "place",
-      "title": "Świątynia w dziejach Bukiszek",
+      "title": "Cerkiew przy starym majątku",
       "paragraphs": [
-        "Niedaleko Wilna, w Bukiszkach, stoi niewielka prawosławna cerkiew Narodzenia Chrystusa. Jej historia łączy dzieje dawnego majątku, pamięć o rodzinie fundatorów i życie dzisiejszej parafii. W ciągu swoich dziejów świątynia przetrwała zmiany właścicieli otaczającego ją majątku, wojnę, długie użytkowanie do celów gospodarczych i odbudowę.",
-        "Dziś wierni przychodzą tu na nabożeństwa, chrzczą dzieci, zawierają małżeństwa, modlą się za bliskich i wspominają zmarłych. Za znajomym obrazem czynnej cerkwi kryje się jednak trud kilku pokoleń. Aby zrozumieć znaczenie tego miejsca, warto pamiętać zarówno o tych, którzy wznieśli świątynię, jak i o tych, którzy po dziesięcioleciach pomogli przywrócić jej pierwotne przeznaczenie."
+        "Na północ od Wilna, w Bukiszkach – miejscowości gminy Awiżenie w rejonie wileńskim – stoi niewielka murowana cerkiew z pięcioma kopułami. To cerkiew Narodzenia Chrystusa. Zbudowano ją w drugiej połowie XIX wieku jako domową cerkiew generalskiego majątku; przetrwała wojnę i pół wieku zaniedbania, a znów czynna stała się dopiero w 2011 roku.",
+        "Jej historia jest dobrze udokumentowana: majątek i rodzina fundatorów opisane są według akt Litewskiego Państwowego Archiwum Historycznego, budynek wpisano do Rejestru Dóbr Kultury Litwy, a ostatnie dziesięciolecia pamiętają sami parafianie. Ta strona łączy te wiadomości w jedną opowieść i w każdym rozdziale wskazuje, skąd są znane. Szczegółowa historia rodziny właścicieli znajduje się w osobnym opracowaniu N. J. Iwanowej."
       ],
-      "sources": [
-        "study",
-        "parish",
-        "municipality"
-      ]
+      "sources": ["register", "municipality", "study"]
     },
     {
       "id": "founders",
-      "title": "Majątek i rodzina fundatorów",
+      "title": "Bożerianowowie i majątek Bukiszki",
       "paragraphs": [
-        "Historia cerkwi wiąże się z Aleksandrem Michajłowiczem Bożerianowem i jego żoną Praskowią Nikołajewną. Według badań archiwalnych N. J. Iwanowej to właśnie Praskowia Nikołajewna nabyła majątek Bukiszki w 1866 roku. Data ta oznacza przejście majątku w ręce rodziny; nie należy jej uznawać za ustalony rok budowy cerkwi.",
-        "W drugiej połowie XIX wieku z inicjatywy Aleksandra Michajłowicza w majątku wzniesiono świątynię. Służyła rodzinnej modlitwie i stała się miejscem pamięci o fundatorach. Pierwotnie cerkiew poświęcono Opiece Przenajświętszej Bogurodzicy.",
-        "Cerkiew stanowiła część zespołu dworskiego. W opracowaniu opisano dom właścicieli, zabudowania gospodarcze, park i jeziora. Z biegiem czasu zmieniały się zarówno miejscowość, jak i otaczający ją krajobraz, lecz świątynia zachowała związek z dawnymi dziejami tego miejsca. Szczegóły dotyczące właścicieli majątku i ich potomków przedstawiono w osobnej pracy N. J. Iwanowej."
+        "W 1866 roku Praskowia Nikołajewna Bożerianowa, ziemianka z powiatu toropieckiego guberni pskowskiej, kupiła majątek Bukiszki w powiecie trockim – 222 dziesięciny ziemi. Akt kupna zachował się w archiwum; majątek należał do żony, a w jednym z dokumentów jej mąż wprost nazywa go „majątkiem żony”. Tak podaje opracowanie N. J. Iwanowej; data ta jest rokiem zakupu majątku, a nie budowy cerkwi.",
+        "Mąż Praskowii Nikołajewny, Aleksander Michajłowicz Bożerianow (1825–1905), był zawodowym wojskowym: służył w lejbgwardyjskim pułku siemionowskim, dowodził batalionem strzelców, brał udział w tłumieniu powstania 1863 roku, potem dowodził pułkiem piechoty, w 1874 roku awansował na generała majora, uczestniczył w wojnie rosyjsko-tureckiej 1877–1878 i został ranny pod Plewną. Po przejściu w stan spoczynku osiadł w Bukiszkach i mieszkał tu do końca życia. W 1871 roku prawa rodziny do dziedzicznego szlachectwa potwierdził Senat, a Bukiszki uznano za majątek rodowy.",
+        "Dwór zajmował ponad pięć dziesięcin. W środku stał dwupiętrowy dom z kamiennym parterem i głębokimi piwnicami, wodę doprowadzano do niego rurami z jeziora; wokół – park w stylu angielskim, dwa jeziora połączone kanałami, kuźnia, łaźnia, wozownia, dom służby. Ziemię uprawiali chłopi z sąsiednich wsi; w gospodarstwie siano żyto, pszenicę, jęczmień, owies, grykę, len. Kuźnia i część zabudowań gospodarczych zachowały się do dziś. Rodzinę, gospodarstwo i losy dzieci Bożerianowów opracowanie Iwanowej opisuje szczegółowo – z sygnaturami akt archiwalnych."
       ],
-      "sources": [
-        "study",
-        "municipality"
-      ]
+      "sources": ["study"]
+    },
+    {
+      "id": "church",
+      "title": "Cerkiew Opieki Matki Bożej: domowa świątynia i grobowiec rodzinny",
+      "paragraphs": [
+        "Cerkiew w majątku zbudowano z inicjatywy generała w drugiej połowie XIX wieku – tak datują ją Rejestr Dóbr Kultury, informacja samorządu i opracowanie Iwanowej. Dokładniejszego roku nie podaje żadne z dostępnych źródeł, dlatego i my go nie podajemy. Cerkiew poświęcono ku czci Opieki Przenajświętszej Bogurodzicy (Pokrow); według danych archiwalnych majątek zaczęto potem nawet nazywać Pokrowskoje.",
+        "Była to cerkiew domowa – świątynia przy dworze, przeznaczona przede wszystkim dla rodziny właścicieli – a zarazem grobowiec rodzinny. Generał, zmarły w 1905 roku, został pochowany pod ołtarzem; tu później spoczęli także Praskowia Nikołajewna i synowie. Według podania spisanego od miejscowych mieszkańców cerkiew nie stała pusta nawet w katolickim otoczeniu: generał obdarowywał przychodzących na nabożeństwa.",
+        "Starszy syn, Aleksander Aleksandrowicz, odziedziczył majątek, mieszkał w Wilnie, był starostą cerkwi św. Konstantyna i Michała i ofiarowywał dary cerkwiom kraju. Córka Maria wyszła za mąż i wyjechała do guberni twerskiej; w 1931 roku aresztowano ją w sprawie organizacji cerkiewnej i ograniczono jej prawo wyboru miejsca zamieszkania. Według opowieści starszych mieszkańców po drugiej wojnie światowej pewna kobieta prosiła władze o przekazanie cerkwi Pokrowskiej Cerkwi prawosławnej i otrzymała odmowę – Iwanowa ostrożnie przypuszcza, że mogła to być Maria Aleksandrowna."
+      ],
+      "sources": ["study", "register", "municipality"]
     },
     {
       "id": "architecture",
-      "title": "Cerkiew Opieki Bogurodzicy: modlitwa i pamięć",
+      "title": "Jaki jest ten budynek",
       "paragraphs": [
-        "Cerkiew zbudowano w stylu neobizantyjskim. Niewielka bryła, łukowe otwory i zwieńczenie kopułą nadawały świątyni dworskiej odrębny, rozpoznawalny wygląd. Wezwanie Opieki Przenajświętszej Bogurodzicy wyrażało zakorzenioną w tradycji prawosławnej modlitwę o Jej wstawiennictwo i pomoc.",
-        "Pierwotnie była to cerkiew domowa. Znajdował się w niej grobowiec rodzinny Bożerianowów: modlitwa żyjących łączyła się tu z pamięcią o zmarłych członkach rodziny. Świątynia miała zatem znaczenie zarówno liturgiczne, jak i pamiątkowe.",
-        "Wiadomości o układzie majątku i rodzinnych pochówkach przetrwały w dokumentach, opracowaniach badawczych i wspomnieniach miejscowych mieszkańców. Świadectwa te pozwalają dostrzec za architekturą ludzkie losy. Tam, gdzie nie ustalono dokładnej daty lub okoliczności, sama pamięć o miejscu wymaga uważnego i pełnego troski podejścia."
+        "Rejestr Dóbr Kultury opisuje cerkiew tak: na planie prostokąta, z przedsionkiem od północnego zachodu i apsydą od południowego wschodu, z kopułą centralną i czterema bocznymi o ośmiobocznych hełmach; cokół z ciosanych bloków kamiennych, ściany ceglane, okna prostokątne, okrągłe, łukowe i odcinkowe, fasady z niszami. Styl określono jako historyzm; w tradycji rosyjskiej takie cerkwie nazywa się neobizantyjskimi. Cerkiew stoi na wzgórzu, południowo-zachodni skraj dziedzińca obsadzony jest drzewami liściastymi.",
+        "Budynek wpisano do Rejestru Dóbr Kultury Litwy 26 marca 2009 roku jako obiekt o znaczeniu lokalnym (kod unikalny 32784), cenny zarówno jako typ architektoniczny, jak i jako budowla sakralna. W zapisie rejestru odnotowano, że kompozycja bryły została wyremontowana w 2007 roku i jest w dobrym stanie."
       ],
-      "sources": [
-        "study"
-      ]
+      "sources": ["register"],
+      "photo": "domes"
     },
     {
-      "id": "trials",
-      "title": "Wojna i lata zaniedbania",
+      "id": "twentieth",
+      "title": "XX wiek: od dworu do magazynu",
       "paragraphs": [
-        "W XX wieku dawny sposób życia majątku uległ zmianie. Budynki dworskie otrzymały nowe przeznaczenie, a los cerkwi okazał się szczególnie trudny. Według informacji samorządu rejonu wileńskiego świątynia została poważnie uszkodzona podczas II wojny światowej.",
-        "Następnie przez wiele lat służyła jako magazyn placówki oświatowej. Opracowanie historyczne opisuje zniszczenie rodzinnego grobowca i ustawienie generatora w podziemiu. Wibracje, wilgoć i brak należytej opieki pogarszały stan budynku. Budowla popadała w ruinę i przez wiele lat nie była wykorzystywana do odprawiania nabożeństw.",
-        "Zachowane fotografie ukazują uszkodzone ściany, dach i sklepienia wystawione na działanie czasu i niepogody. Pozwalają wyobrazić sobie skalę późniejszej odbudowy. Ten okres historii pozostaje przede wszystkim świadectwem utraty świątyni oraz przypomnieniem o odpowiedzialności, jakiej wymaga ochrona dziedzictwa kulturowego i duchowego."
+        "Po pierwszej wojnie światowej Wileńszczyzna przypadła Polsce, a ziemie rosyjskiej szlachty znacjonalizowano. W dworze umieszczono szkołę rolniczą. W latach drugiej wojny światowej, według opracowania Iwanowej, niemieckie władze okupacyjne wykorzystywały piwnice dworu jako więzienie przejściowe dla ludności żydowskiej. Sama cerkiew, według informacji Samorządu Rejonu Wileńskiego, została w czasie wojny poważnie zniszczona.",
+        "W 1944 roku w Bukiszkach otwarto pierwszą na Litwie szkołę zawodową kształcącą traktorzystów i operatorów koparek. Pozostałości cerkwi na długie lata stały się magazynem tej szkoły – tak podają i samorząd, i Rejestr Dóbr Kultury, wśród którego źródeł są dokumenty z 1962 roku z Litewskiego Centralnego Archiwum Państwowego, w tym tajny raport dla organów partyjnych.",
+        "W dziesięcioleciach sowieckich splądrowano grobowiec rodzinny. Według opracowania Iwanowej do grobu generała pod ołtarzem rabusie nie dotarli, ale pochówki Praskowii Nikołajewny i synów zostały zniszczone; szczątki pochowano ponownie na dziedzińcu cerkwi, za ołtarzem. W piwnicy zainstalowano generator, którego wibracje dalej rujnowały ściany. Jak podaje informacja samorządu, z cerkwi pozostały ruiny i piwnice, w których – jak się przypuszcza – pochowana była rodzina generała."
       ],
-      "sources": [
-        "municipality",
-        "study"
-      ],
-      "photo": "before"
+      "sources": ["study", "municipality", "register"],
+      "photo": "vault"
     },
     {
-      "id": "restoration",
-      "title": "Odzyskanie i odbudowa",
+      "id": "return",
+      "title": "Zwrot i odbudowa",
       "paragraphs": [
-        "Pod koniec lat 90. XX wieku budynek zwrócono Kościołowi Prawosławnemu. Rozpoczął się nowy etap jego dziejów: należało zachować to, co ocalało, i przywrócić możliwość sprawowania nabożeństw. Materiały parafialne datują początek prac restauratorskich na 2002 rok.",
-        "Szczególne miejsce w odrodzeniu cerkwi zajmuje metropolita Chryzostom (Martiszkin), którego troska i wytrwałe zaangażowanie pomogły doprowadzić to dzieło do skutku. Prace opierały się na zachowanych informacjach o wyglądzie budynku i rysunkach przygotowanych do odbudowy. Przywrócenie świątyni do życia wymagało czasu, środków i pracy ludzi, którym jej los nie był obojętny.",
-        "Odbudowa budynku i powrót regularnej modlitwy stanowiły kolejne etapy. Pracom budowlanym towarzyszył szerszy cel: umożliwić świątyni, by znów stała się miejscem spotkań wspólnoty, sprawowania sakramentów i modlitwy za tych, których życie było związane z Bukiszkami."
+        "Około 1990 roku, jeszcze przed zwrotem budynku, przygotowano rysunki odbudowy cerkwi Pokrowskiej – informuje o tym samorząd. Pod koniec lat 90. państwo zwróciło cerkiew Cerkwi prawosławnej. Według parafii prace odbudowy rozpoczęły się w 2002 roku i prowadzono je według tych dawnych rysunków.",
+        "Prace toczyły się przy czynnym udziale metropolity wileńskiego i litewskiego Chryzostoma (Martiszkina), który kierował diecezją w latach 1990–2010; szkic parafialny przypisuje jego trosce decydującą rolę. Informacja samorządu i źródła litewskie odnotowują, że świątynię odbudowano staraniem dwóch hierarchów – prawosławnego metropolity Chryzostoma i katolickiego arcybiskupa wileńskiego, kardynała Audrysa Juozasa Bačkisa. Remont budynku rejestr datuje na 2007 rok; w tym samym roku, według samorządu, niewielka świątynia została odbudowana.",
+        "Od zwrotu ruin do pierwszego nabożeństwa minęło ponad dziesięć lat. Była to praca wielu ludzi – budowniczych, ofiarodawców, diecezji – a dostępne nam źródła nie wymieniają wszystkich ich imion. Jeśli zachowały się u Państwa dokumenty lub fotografie z tamtych lat, parafia będzie wdzięczna za możliwość uzupełnienia tej opowieści."
       ],
-      "sources": [
-        "study",
-        "parish"
-      ]
+      "sources": ["parish", "municipality", "register"],
+      "photo": "works"
     },
     {
       "id": "worship",
-      "title": "Rok 2011: początek nowego życia parafialnego",
+      "title": "Rok 2011: cerkiew Narodzenia Chrystusa",
       "paragraphs": [
-        "Latem 2011 roku w odbudowanej cerkwi wznowiono życie liturgiczne. Według świadectwa parafii nabożeństwa rozpoczęły się z błogosławieństwa arcybiskupa Innocentego. Od tego czasu posługę duszpasterską pełni tu ksiądz Maksim Krutolevič.",
-        "Odrodzona świątynia nosi wezwanie Narodzenia Chrystusa. Pamięć o pierwotnym wezwaniu Opieki Bogurodzicy pozostaje częścią jej historii. Dzisiejsze wezwanie kieruje wspólnotę ku ewangelicznemu wydarzeniu Narodzenia Zbawiciela, a sam powrót do życia kościelnego stał się dla tego miejsca nowym początkiem.",
-        "Wokół nabożeństw stopniowo kształtowała się codzienność parafii. Niedzielna Liturgia, wielkie święta cerkiewne, chrzty, śluby oraz modlitwa za żyjących i zmarłych ponownie wypełniły odbudowany budynek jego najważniejszym sensem. Do cerkwi zaczęły przychodzić rodziny, dla których stała się ona bliskim miejscem modlitwy i duchowego wsparcia."
+        "Latem 2011 roku w odbudowanej cerkwi rozpoczęły się nabożeństwa – z błogosławieństwa arcybiskupa wileńskiego i litewskiego Innocentego, obecnie metropolity. Od tego czasu proboszczem cerkwi jest ksiądz Maksim Krutolevič, który sprawuje tu Liturgię w niedziele i święta.",
+        "Odrodzona cerkiew nosi wezwanie Narodzenia Chrystusa; w opracowaniu Iwanowej czytamy, że w 2011 roku cerkiew została poświęcona ku jego czci. Dokładna data, obrzęd poświęcenia i jego uczestnicy nie są podani w dostępnych nam dokumentach, dlatego podajemy tylko rok. Dawne wezwanie Opieki Matki Bożej pozostaje częścią historii cerkwi, a w litewskim Rejestrze Dóbr Kultury budynek nadal figuruje jako cerkiew Opieki Matki Bożej. Szkic parafialny proponuje także duchowe wyjaśnienie zmiany wezwania – odrodzenie z ruin; to obraz, a nie udokumentowana przyczyna.",
+        "W tym samym 2011 roku potomkowie Bożerianowów przekazali cerkwi fotografię rodzinną i niektóre dokumenty – więź z fundatorami nie została zerwana."
       ],
-      "sources": [
-        "parish"
-      ],
+      "sources": ["parish", "study", "register"],
       "photo": "after"
     },
     {
       "id": "care",
-      "title": "Troska o świątynię trwa",
+      "title": "Troska o cerkiew trwa",
       "paragraphs": [
-        "Po wznowieniu nabożeństw opieka nad budynkiem i jego otoczeniem stała się stałym, wspólnym dziełem parafii i dobroczyńców. W 2021 roku wymieniono okładzinę schodów przed wejściem. W 2023 roku odnowiono uszkodzone ceglane elementy wieżyczek po południowej i północnej stronie cerkwi. W 2024 roku pomalowano ściany w prezbiterium.",
-        "W 2026 roku zakończono malowanie dachu, odnowiono ściany i część kopułową wnętrza, prezbiterium i przedsionek oraz pomalowano drzwi wejściowe. Prace te służą zachowaniu budynku i zapewnieniu odpowiednich warunków do sprawowania nabożeństw. Za każdym takim przedsięwzięciem stoją konkretni ludzie, ich czas, środki i dobrowolna praca.",
-        "Trwa również urządzanie pomieszczeń służących spotkaniom parafialnym. Świątynia potrzebuje regularnej opieki, dlatego jej historia obejmuje nie tylko wielkie etapy odbudowy, lecz także codzienną troskę: w porę zauważone uszkodzenie, uporządkowany teren czy pomoc w przygotowaniu święta."
+        "Odbudowany budynek wymaga stałej opieki, którą parafia zapewnia własnymi siłami i z pomocą dobroczyńców. Według parafii w 2021 roku wymieniono okładzinę schodów przed wejściem; w 2023 roku odtworzono uszkodzone ceglane elementy wieżyczek od strony południowej i północnej; w 2024 roku pomalowano ściany w prezbiterium.",
+        "W 2026 roku pomalowano dach, odnowiono ściany i część kopułową wewnątrz cerkwi, prezbiterium i przedsionek, pomalowano drzwi wejściowe; trwa urządzanie pomieszczeń na spotkania parafialne. Za każdą z tych prac stoją konkretni ludzie – ich czas, środki i dobrowolna praca. Parafia przyjmuje pomoc na utrzymanie cerkwi; dane znajdują się na stronie „Pomoc parafii”."
       ],
-      "sources": [
-        "parish-memory"
-      ]
+      "sources": ["parish-memory"]
     },
     {
       "id": "today",
-      "title": "Żywa historia parafii",
+      "title": "Parafia dzisiaj",
       "paragraphs": [
-        "Dziś cerkiew Narodzenia Chrystusa w Bukiszkach gromadzi parafian i gości przyjeżdżających z okolicy i z Wilna. Sprawowane są tu nabożeństwa, sakramenty i posługi religijne, udzielana jest pomoc duszpasterska. Aktualny harmonogram pozwala wcześniej sprawdzić godzinę nabożeństwa i przygotować się do wizyty.",
-        "Parafia zachowuje historyczne fotografie i materiały, opowiada o wierze i życiu Kościoła na swojej stronie internetowej oraz w mediach społecznościowych. To dalszy ciąg tej samej troski o pamięć: udostępnianie dziejów cerkwi zarówno osobom już z nią związanym, jak i tym, które dopiero poznają to miejsce.",
-        "W losach cerkwi w Bukiszkach splatają się budowanie, utrata i odbudowa. Zachowywać tę historię znaczy pamiętać o fundatorach, dziękować tym, którzy pomogli przywrócić świątynię do życia, i troszczyć się o ludzi przychodzących do niej dzisiaj. Dzieje parafii toczą się dalej w modlitwie, wspólnocie i dobrych czynach."
+        "Dziś do cerkwi przyjeżdżają z Bukiszek, okolicznych miejscowości i Wilna. Sprawowane są tu Liturgia, chrzty, śluby, panichidy i inne posługi; rozkład nabożeństw na stronie aktualizowany jest z kalendarza parafialnego. Parafia przechowuje fotografie z odbudowy, zbiera wspomnienia i publikuje materiały o cerkwi na tej stronie i w mediach społecznościowych.",
+        "Jeśli jesteś tu po raz pierwszy, zacznij od rozkładu nabożeństw i strony o odwiedzinach: tam znajdziesz adres, autobusy z Wilna i telefon parafii. A jeśli zainteresowała Cię rodzina, która zbudowała tę cerkiew – przeczytaj opracowanie N. J. Iwanowej (po rosyjsku): mówi o Bożerianowach to, czego nie ma w żadnej encyklopedii."
       ],
-      "sources": [
-        "parish",
-        "parish-memory"
-      ]
+      "sources": ["parish"]
     }
   ],
   "timeline": [
-    [
-      "1866",
-      "Zakup majątku",
-      "Praskowia Nikołajewna Bożerianowa nabywa Bukiszki."
-    ],
-    [
-      "Druga połowa XIX wieku",
-      "Cerkiew Opieki Bogurodzicy",
-      "W majątku powstaje cerkiew domowa z rodzinnym grobowcem."
-    ],
-    [
-      "XX wiek",
-      "Zniszczenia i zaniedbanie",
-      "Uszkodzenia wojenne i wieloletnie wykorzystywanie budynku jako magazynu."
-    ],
-    [
-      "2002",
-      "Prace restauratorskie",
-      "Początek odbudowy według parafialnych materiałów historycznych."
-    ],
-    [
-      "2011",
-      "Wznowienie nabożeństw",
-      "Latem rozpoczyna się nowy okres życia liturgicznego cerkwi Narodzenia Chrystusa."
-    ],
-    [
-      "2021–2026",
-      "Dalsza troska o świątynię",
-      "Remont wejścia i wieżyczek, odnowienie prezbiterium, dachu i malowanie wnętrza."
-    ]
+    ["1866", "Zakup majątku", "Praskowia Nikołajewna Bożerianowa kupuje majątek Bukiszki (opracowanie Iwanowej, LVIA)."],
+    ["Druga połowa XIX wieku", "Cerkiew Opieki Matki Bożej", "W majątku z inicjatywy generała A. M. Bożerianowa powstaje cerkiew domowa z grobowcem rodzinnym (rejestr, samorząd, Iwanowa)."],
+    ["1905", "Śmierć fundatora", "Generał Bożerianow umiera w Bukiszkach i zostaje pochowany pod ołtarzem cerkwi (Iwanowa)."],
+    ["Lata 1920.", "Nacjonalizacja", "Ziemie majątku znacjonalizowano, w dworze otwarto szkołę rolniczą (Iwanowa)."],
+    ["1939–1944", "Wojna", "Cerkiew poważnie zniszczona (samorząd); piwnice dworu wykorzystywane jako więzienie przejściowe (Iwanowa)."],
+    ["Po 1944", "Magazyn szkoły", "Pozostałości budynku przez długie lata służą jako magazyn szkoły mechanizatorów; grobowiec splądrowany (samorząd, rejestr, Iwanowa)."],
+    ["ok. 1990", "Rysunki odbudowy", "Przygotowano rysunki odbudowy cerkwi Pokrowskiej (samorząd)."],
+    ["Koniec lat 1990.", "Zwrot budynku", "Cerkiew zwrócona Cerkwi prawosławnej (parafia, Iwanowa)."],
+    ["2002", "Początek prac", "Początek prac odbudowy według dawnych rysunków (parafia)."],
+    ["2007", "Remont budynku", "Budynek wyremontowany; odbudowany staraniem metropolity Chryzostoma i kardynała Bačkisa (rejestr, samorząd)."],
+    ["2009", "Zabytek", "Cerkiew wpisana do Rejestru Dóbr Kultury Litwy, kod 32784 (rejestr)."],
+    ["2011", "Wznowienie nabożeństw", "Latem rozpoczynają się nabożeństwa; cerkiew nosi wezwanie Narodzenia Chrystusa (parafia, Iwanowa)."],
+    ["2021–2026", "Bieżące prace", "Schody, wieżyczki, prezbiterium, dach, wnętrze; urządzanie pomieszczeń trwa (parafia)."]
   ],
   "sources": [
-    {
-      "id": "study",
-      "label": "N. J. Iwanowa. «Букишские помещики Божерьяновы»",
-      "path": "/ru/library/istoriya-o-hrame.html"
-    },
-    {
-      "id": "parish",
-      "label": "Opracowanie parafialne «Храм в Букишках — история веры и памяти»",
-      "path": "/ru/library/o-nashem-hrame.html"
-    },
-    {
-      "id": "municipality",
-      "label": "Samorząd rejonu wileńskiego: zarys historii gminy Awiżenie",
-      "url": "https://vrsa.lt/administracine-informacija/seniunijos/3/avizieniu-1"
-    },
-    {
-      "id": "parish-memory",
-      "label": "Informacje parafii o życiu liturgicznym i wykonanych pracach w latach 2021–2026"
-    }
+    { "id": "study", "label": "N. J. Iwanowa, „Bukiszscy ziemianie Bożerianowowie” (po rosyjsku). Opracowanie na podstawie materiałów Litewskiego Państwowego Archiwum Historycznego (LVIA)", "path": "/ru/library/istoriya-o-hrame.html" },
+    { "id": "register", "label": "Rejestr Dóbr Kultury Republiki Litewskiej: „Bukiškio Dievo Motinos Globėjos cerkvė”, kod unikalny 32784, wpis z 26.03.2009 (po litewsku)", "url": "https://kvr.kpd.lt/#/static-heritage-detail/1057bf14-a7d2-4be0-b780-9785834a19ab" },
+    { "id": "municipality", "label": "Samorząd Rejonu Wileńskiego: informacja historyczna o gminie Awiżenie (po litewsku)", "url": "https://vrsa.lt/administracine-informacija/seniunijos/3/avizieniu-1" },
+    { "id": "parish", "label": "Szkic parafialny „Cerkiew w Bukiszkach – historia wiary i pamięci” (wcześniejsza publikacja parafii, po rosyjsku)", "path": "/ru/library/o-nashem-hrame.html" },
+    { "id": "parish-memory", "label": "Informacje parafii o życiu liturgicznym i wykonanych pracach, lata 2021–2026" }
   ]
 }

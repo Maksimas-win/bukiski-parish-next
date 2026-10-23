@@ -198,6 +198,11 @@ function closing(site, story, entry, t, uiLocale) {
       <summary>${story.sources.title}</summary>
       <ul>${story.sources.items.map(item => html`<li>${item}</li>`)}</ul>
     </details>
+    <aside class="notice story-editorial" lang="${uiLocale}" aria-labelledby="story-editorial-title">
+      <p class="story-editorial__title" id="story-editorial-title">${t.storyEditorialTitle}</p>
+      <p>${t.storyEditorialNote}</p>
+      <p>${siteLink(site, site.route(uiLocale, 'history'), site.histories[uiLocale].title)}</p>
+    </aside>
     <aside class="notice notice--archive" lang="${uiLocale}">
       <p>${t.archiveNotice}</p>
       <p class="meta-row">${externalLink(t, entry.url, `${t.source}: ${entry.host}`)}<span>${t.savedOn}: <time datetime="${entry.page.fetchedOn}">${formatDate(uiLocale, `${entry.page.fetchedOn}T12:00:00Z`, { dateStyle: 'long' })}</time></span></p>

@@ -1,175 +1,133 @@
 {
-  "title": "Geschichte der Kirche Christi Geburt",
-  "intro": "Vom Familienheiligtum auf dem alten Gut Bukiškis zu einer lebendigen orthodoxen Gemeinde: eine Geschichte von Menschen, Verlust und behutsamem Wiederaufbau.",
+  "title": "Geschichte der Christi-Geburt-Kirche in Bukiškis",
+  "intro": "Hauskirche eines Generalsguts, geplünderte Familiengruft, Lagerraum einer Schule, zehn Jahre Wiederaufbau und das neue Leben einer Gemeinde. Die Geschichte einer kleinen Kirche bei Vilnius nach Archivdokumenten, amtlichen Angaben und den Zeugnissen der Gemeinde selbst.",
   "contentsTitle": "Auf dieser Seite",
-  "chronologyTitle": "Wichtige Stationen",
-  "sourcesTitle": "Quellen und Zeugnisse",
-  "sourceLinkLabel": "Quellen dieses Abschnitts",
-  "studyLabel": "Eigenständige historische Untersuchung",
-  "studyDescription": "Die Arbeit von N. Ja. Iwanowa über die Gründerfamilie der Kirche, das Gut und seine Bewohner. Der Text der Autorin, Archivnachweise und historische Einzelheiten sind in einer eigenständigen Veröffentlichung auf Russisch zugänglich.",
-  "studyRead": "Die Untersuchung von N. Ja. Iwanowa lesen",
+  "chronologyTitle": "Daten und Etappen",
+  "sourcesTitle": "Quellen",
+  "sourceLinkLabel": "Quellen des Abschnitts",
+  "studyLabel": "Eigenständige Studie",
+  "studyDescription": "N. J. Iwanowa, Geschichtslehrerin und Methodikerin, hat aus den Akten des Litauischen Staatlichen Historischen Archivs die Geschichte der Familie Boscherjanow zusammengetragen: wer der General und seine Frau waren, wie das Gut eingerichtet war, was aus den Kindern und dem Herrenhaus im 20. Jahrhundert wurde. Veröffentlicht auf Russisch im Wortlaut der Autorin, mit Archivverweisen.",
+  "studyRead": "Studie von N. J. Iwanowa lesen (Russisch)",
   "archiveTitle": "Frühere Veröffentlichungen der Gemeinde",
-  "sourceNote": "Diese Darstellung beruht auf der historischen Untersuchung von N. Ja. Iwanowa, veröffentlichten Informationen über Bukiškis und Unterlagen der Gemeinde. Die Angaben zu den Arbeiten der letzten Jahre stammen von der Gemeinde. Der Erwerb des Gutes, die Wiederherstellung des Gebäudes und die Wiederaufnahme der Gottesdienste sind unterschiedliche Ereignisse mit jeweils eigenen Datierungen.",
+  "sourceNote": "Woher was bekannt ist. Die Angaben zur Familie Boscherjanow, zum Gut und zum Schicksal der Gruft stammen aus der Archivstudie von N. J. Iwanowa. Die Datierung des Baus, die Kriegsschäden, die Nutzung als Lager und die Instandsetzung von 2007 aus dem Register der Kulturgüter Litauens und der historischen Notiz der Rajongemeinde Vilnius. Die Daten der Rückgabe des Gebäudes, des Beginns der Arbeiten, der Wiederaufnahme der Gottesdienste und der Reparaturen der letzten Jahre hat die Gemeinde mitgeteilt. Der Kauf des Guts (1866), der Beginn des Wiederaufbaus (2002), die Instandsetzung des Gebäudes (2007) und die Wiederaufnahme der Gottesdienste (2011) sind verschiedene Ereignisse.",
   "photos": {
-    "before": "Die Kirche vor der Wiederherstellung. Aufnahme aus der Sammlung der Gemeinde.",
-    "after": "Die wiederhergestellte Kirche Christi Geburt in Bukiškis."
+    "works": "Die Kirche während der Wiederaufbauarbeiten: eingerüstete Wände, das Dach noch unvollendet. Fotografie aus der Sammlung der Gemeinde; Aufnahmedatum nicht ermittelt.",
+    "vault": "Moosbewachsene Gewölbe: So sah das Gebäude vor Beginn der Arbeiten von innen aus. Fotografie aus der Sammlung der Gemeinde; Aufnahmedatum nicht ermittelt.",
+    "domes": "Die fünf Kuppeln der wiederhergestellten Kirche: eine mittlere und vier seitliche, mit achteckigen Helmen.",
+    "after": "Die Christi-Geburt-Kirche heute. Die Gottesdienste wurden 2011 wieder aufgenommen."
   },
   "sections": [
     {
       "id": "place",
-      "title": "Ein Gotteshaus in der Geschichte von Bukiškis",
+      "title": "Eine Kirche beim alten Gut",
       "paragraphs": [
-        "Unweit von Vilnius steht in Bukiškis die kleine orthodoxe Kirche Christi Geburt. Ihre Geschichte verbindet das Schicksal des alten Gutes mit der Erinnerung an die Gründerfamilie und dem Leben der heutigen Gemeinde. Im Laufe ihrer Geschichte erlebte die Kirche wechselnde Besitzer des umliegenden Anwesens, Krieg, eine lange Nutzung für wirtschaftliche Zwecke und schließlich ihre Wiederherstellung.",
-        "Heute kommen Menschen hierher zum Gottesdienst, lassen ihre Kinder taufen, heiraten kirchlich, beten für ihre Angehörigen und gedenken der Verstorbenen. Hinter dem vertrauten Bild einer genutzten Kirche steht jedoch die Arbeit mehrerer Generationen. Um die Bedeutung dieses Ortes zu verstehen, gilt es sowohl an die Erbauer zu erinnern als auch an jene, die Jahrzehnte später dazu beitrugen, dem Gotteshaus seine ursprüngliche Bestimmung zurückzugeben."
+        "Nördlich von Vilnius, in Bukiškis – einem Ort des Amtsbezirks Avižieniai im Rajon Vilnius – steht eine kleine Backsteinkirche mit fünf Kuppeln. Es ist die Christi-Geburt-Kirche. Sie wurde in der zweiten Hälfte des 19. Jahrhunderts als Hauskirche eines Generalsguts gebaut, überstand den Krieg und ein halbes Jahrhundert des Verfalls und ist erst seit 2011 wieder eine Kirche, in der Gottesdienst gefeiert wird.",
+        "Ihre Geschichte ist gut belegt: Das Gut und die Familie der Erbauer sind nach den Akten des Litauischen Staatlichen Historischen Archivs beschrieben, das Gebäude ist im Register der Kulturgüter Litauens eingetragen, und an die letzten Jahrzehnte erinnern sich die Gemeindemitglieder selbst. Diese Seite fasst diese Angaben zu einer Erzählung zusammen und nennt in jedem Abschnitt, woher sie stammen. Die ausführliche Geschichte der Besitzerfamilie steht in einer eigenen Studie von N. J. Iwanowa."
       ],
-      "sources": [
-        "study",
-        "parish",
-        "municipality"
-      ]
+      "sources": ["register", "municipality", "study"]
     },
     {
       "id": "founders",
-      "title": "Das Gut und die Gründerfamilie",
+      "title": "Die Boscherjanows und das Gut Bukiškis",
       "paragraphs": [
-        "Die Geschichte der Kirche ist mit Alexander Michailowitsch Boscherjanow und seiner Frau Praskowja Nikolajewna verbunden. Nach der Archivstudie von N. Ja. Iwanowa war es Praskowja Nikolajewna, die das Gut Bukiškis 1866 erwarb. Dieses Datum bezeichnet den Übergang des Anwesens in den Besitz der Familie; es darf nicht als gesichertes Baujahr der Kirche gelten.",
-        "In der zweiten Hälfte des 19. Jahrhunderts wurde auf Initiative von Alexander Michailowitsch auf dem Gut eine Kirche errichtet. Sie war für das gemeinsame Gebet der Familie bestimmt und wurde zu einem Ort des Gedenkens an ihre Gründer. Ursprünglich war sie dem Schutz der Allerheiligsten Gottesmutter geweiht.",
-        "Die Kirche gehörte zum Gebäudeensemble des Gutes. Die Untersuchung beschreibt das Herrenhaus, Wirtschaftsgebäude, den Park und die Seen. Siedlung und Landschaft veränderten sich allmählich, doch die Kirche bewahrte ihre Verbindung zur frühen Geschichte dieses Ortes. Einzelheiten über die Gutseigentümer und ihre Nachkommen finden sich in der gesonderten Arbeit von N. Ja. Iwanowa."
+        "1866 kaufte Praskowja Nikolajewna Boscherjanowa, eine Gutsbesitzerin aus dem Kreis Toropez im Gouvernement Pskow, das Gut Bukiškis im Kreis Trakai: 222 Desjatinen Land. Der Kaufvertrag ist im Archiv erhalten; das Gut lief auf den Namen der Frau, und in einem Dokument nennt ihr Mann es ausdrücklich das „Gut meiner Frau“. So die Studie von N. J. Iwanowa; das Datum ist das des Kaufs, nicht das des Kirchenbaus.",
+        "Ihr Mann, Alexander Michailowitsch Boscherjanow (1825–1905), war Berufsoffizier: Er diente im Leibgarde-Semjonow-Regiment, führte ein Schützenbataillon, nahm an der Niederschlagung des Aufstands von 1863 teil, führte dann ein Infanterieregiment, wurde 1874 zum Generalmajor befördert, kämpfte im Russisch-Türkischen Krieg 1877–1878 und wurde bei Plewna verwundet. Nach seinem Abschied ließ er sich in Bukiškis nieder und lebte dort bis zu seinem Tod. 1871 bestätigte der Senat den erblichen Adel der Familie, und Bukiškis wurde als Familiengut anerkannt.",
+        "Das Gutsgelände umfasste mehr als fünf Desjatinen. In der Mitte stand ein zweistöckiges Haus mit steinernem Erdgeschoss und tiefen Kellern, das Wasser kam durch Rohre vom See; ringsum ein Park im englischen Stil, zwei durch Kanäle verbundene Seen, eine Schmiede, ein Badehaus, eine Remise, ein Haus für das Gesinde. Das Land bestellten Bauern der Nachbardörfer; angebaut wurden Roggen, Weizen, Gerste, Hafer, Buchweizen und Flachs. Die Schmiede und ein Teil der Wirtschaftsgebäude sind bis heute erhalten. Familie, Gutswirtschaft und das Schicksal der Kinder beschreibt Iwanowas Studie ausführlich – mit den Nummern der Archivakten."
       ],
-      "sources": [
-        "study",
-        "municipality"
-      ]
+      "sources": ["study"]
+    },
+    {
+      "id": "church",
+      "title": "Die Pokrow-Kirche: Hauskirche und Familiengruft",
+      "paragraphs": [
+        "Die Kirche auf dem Gut wurde auf Initiative des Generals in der zweiten Hälfte des 19. Jahrhunderts gebaut – so datieren sie das Register der Kulturgüter, die Notiz der Rajongemeinde und Iwanowas Studie. Ein genaueres Jahr nennt keine der verfügbaren Quellen, deshalb nennen auch wir keines. Geweiht wurde die Kirche zu Ehren des Schutzes der Gottesmutter (Pokrow); nach den Archivangaben wurde das Gut danach sogar Pokrowskoje genannt.",
+        "Es war eine Hauskirche – eine Kirche beim Gutshof, vor allem für die Besitzerfamilie bestimmt – und zugleich die Familiengruft. Der 1905 gestorbene General wurde unter dem Altar beigesetzt; später fanden hier auch Praskowja Nikolajewna und die Söhne ihre letzte Ruhe. Nach einer von Dorfbewohnern überlieferten Erzählung stand die Kirche auch in katholischer Umgebung nicht leer: Der General beschenkte die, die zum Gottesdienst kamen.",
+        "Der ältere Sohn Alexander Alexandrowitsch erbte das Gut, lebte in Vilnius, war Kirchenältester der Konstantin-und-Michael-Kirche und stiftete für Kirchen der Region. Die Tochter Maria heiratete und zog ins Gouvernement Twer; 1931 wurde sie in einem Verfahren gegen eine kirchliche Organisation verhaftet und in ihrem Wohnrecht beschränkt. Alte Dorfbewohner erzählen, nach dem Zweiten Weltkrieg habe eine Frau die Behörden gebeten, die Pokrow-Kirche der Orthodoxen Kirche zu übergeben, und sei abgewiesen worden; Iwanowa vermutet vorsichtig, dass es Maria Alexandrowna gewesen sein könnte."
+      ],
+      "sources": ["study", "register", "municipality"]
     },
     {
       "id": "architecture",
-      "title": "Die Kirche zum Schutz der Gottesmutter: Gebet und Erinnerung",
+      "title": "Wie das Gebäude beschaffen ist",
       "paragraphs": [
-        "Die Kirche wurde im neobyzantinischen Stil erbaut. Ihr kleiner Baukörper, die Bogenöffnungen und die bekrönende Kuppel verliehen der Gutskirche ein eigenständiges, wiedererkennbares Erscheinungsbild. Die Weihe an den Schutz der Allerheiligsten Gottesmutter brachte das in der orthodoxen Tradition vertraute Gebet um ihre Fürsprache und Hilfe zum Ausdruck.",
-        "Ursprünglich diente das Gotteshaus als Hauskirche. Es beherbergte die Familiengruft der Boscherjanows: Das Gebet der Lebenden verband sich hier mit dem Gedenken an die verstorbenen Angehörigen. So hatte die Kirche zugleich eine liturgische Funktion und die Bedeutung einer Gedenkstätte.",
-        "Angaben zur Anlage des Gutes und zu den Familiengräbern sind durch Dokumente, Forschungsarbeit und Erinnerungen der Ortsbewohner überliefert. Diese Zeugnisse machen hinter der Architektur menschliche Lebenswege sichtbar. Wo ein genaues Datum oder die Umstände nicht geklärt sind, verlangt die Erinnerung an den Ort selbst einen behutsamen und aufmerksamen Umgang."
+        "Das Register der Kulturgüter beschreibt die Kirche so: rechteckiger Grundriss, Vorhalle im Nordwesten und Apsis im Südosten, eine mittlere und vier seitliche Kuppeln mit achteckigen Helmen; Sockel aus behauenen Steinblöcken, Backsteinwände, rechteckige, runde, bogen- und segmentförmige Fenster, Fassaden mit Nischen. Der Stil ist als Historismus eingeordnet; in der russischen Tradition nennt man solche Kirchen neobyzantinisch. Die Kirche steht auf einem Hügel, der südwestliche Rand des Kirchhofs ist mit Laubbäumen bepflanzt.",
+        "Das Gebäude wurde am 26. März 2009 als Objekt von örtlicher Bedeutung (eindeutiger Code 32784) in das Register der Kulturgüter Litauens eingetragen, wertvoll als Architekturtyp wie als Sakralbau. Im Registereintrag ist vermerkt, dass der Baukörper 2007 instand gesetzt wurde und in gutem Zustand ist."
       ],
-      "sources": [
-        "study"
-      ]
+      "sources": ["register"],
+      "photo": "domes"
     },
     {
-      "id": "trials",
-      "title": "Krieg und Jahre des Verfalls",
+      "id": "twentieth",
+      "title": "Das 20. Jahrhundert: vom Gut zum Lager",
       "paragraphs": [
-        "Im 20. Jahrhundert veränderte sich das bisherige Leben auf dem Gut. Die Gutsgebäude erhielten neue Aufgaben, während die Kirche ein besonders schweres Schicksal erlitt. Nach Angaben der Verwaltung des Bezirks Vilnius wurde sie im Zweiten Weltkrieg stark beschädigt.",
-        "Anschließend diente sie viele Jahre als Lager einer Bildungseinrichtung. Die historische Untersuchung berichtet von der Verwüstung der Familiengruft und der Aufstellung eines Generators im Keller. Erschütterungen, Feuchtigkeit und mangelnde Pflege verschlechterten den Zustand des Gebäudes weiter. Es verfiel und wurde über viele Jahre nicht für Gottesdienste genutzt.",
-        "Erhaltene Fotografien zeigen beschädigte Mauern, Dächer und Gewölbe, die den Einflüssen der Zeit und der Witterung ausgesetzt waren. Sie lassen den Umfang der späteren Wiederherstellung erahnen. Dieser Abschnitt der Geschichte erinnert vor allem an den Verlust eines Gotteshauses und an die Verantwortung, die mit der Bewahrung des kulturellen und geistlichen Erbes verbunden ist."
+        "Nach dem Ersten Weltkrieg fiel das Vilniuser Gebiet an Polen, der Landbesitz russischer Adliger wurde verstaatlicht. Im Herrenhaus wurde eine Landwirtschaftsschule untergebracht. Im Zweiten Weltkrieg nutzten die deutschen Besatzungsbehörden nach Iwanowas Studie die Keller des Herrenhauses als Durchgangsgefängnis für Juden. Die Kirche selbst wurde nach Angaben der Rajongemeinde Vilnius im Krieg schwer beschädigt.",
+        "1944 wurde in Bukiškis die erste Berufsschule Litauens eröffnet, die Traktoristen und Baggerführer ausbildete. Die Reste der Kirche dienten dieser Schule viele Jahre als Lager – so sagen es die Rajongemeinde und das Register der Kulturgüter, zu dessen Quellen Dokumente von 1962 aus dem Litauischen Zentralen Staatsarchiv gehören, darunter ein geheimer Bericht an Parteistellen.",
+        "In den sowjetischen Jahrzehnten wurde die Familiengruft geplündert. Nach Iwanowas Studie kamen die Plünderer nicht bis zum Grab des Generals unter dem Altar, die Gräber von Praskowja Nikolajewna und der Söhne aber wurden aufgebrochen; die Gebeine wurden im Kirchhof hinter dem Altar neu bestattet. Im Keller stellte man einen Generator auf, dessen Vibration die Wände weiter zerstörte. Nach der Notiz der Rajongemeinde blieben von der Kirche Ruinen und Keller, in denen vermutlich die Familie des Generals bestattet war."
       ],
-      "sources": [
-        "municipality",
-        "study"
-      ],
-      "photo": "before"
+      "sources": ["study", "municipality", "register"],
+      "photo": "vault"
     },
     {
-      "id": "restoration",
-      "title": "Rückgabe und Wiederherstellung",
+      "id": "return",
+      "title": "Rückgabe und Wiederaufbau",
       "paragraphs": [
-        "Ende der 1990er-Jahre wurde das Gebäude der Orthodoxen Kirche zurückgegeben. Ein neuer Abschnitt seiner Geschichte begann: Das Erhaltene musste gesichert und die Möglichkeit geschaffen werden, hier wieder Gottesdienste zu feiern. In den Unterlagen der Gemeinde wird der Beginn der Wiederherstellungsarbeiten auf 2002 datiert.",
-        "Eine besondere Rolle bei der Erneuerung der Kirche spielte Metropolit Chrysostomos (Martischkin). Seine Fürsorge und sein beharrliches Engagement trugen dazu bei, das Vorhaben zu verwirklichen. Die Arbeiten stützten sich auf erhaltene Angaben zum Erscheinungsbild des Gebäudes und auf Pläne für die Wiederherstellung. Sie erforderten Zeit, finanzielle Mittel und die Arbeit von Menschen, denen das Schicksal der kleinen Kirche am Herzen lag.",
-        "Die Wiederherstellung des Gebäudes und die Rückkehr zum regelmäßigen Gebet waren aufeinanderfolgende Schritte. Hinter den Bauarbeiten stand ein weiter reichendes Anliegen: Die Kirche sollte wieder ein Ort der Begegnung für die Gemeinde werden, ein Ort der Sakramente und des Gedenkens an Menschen, deren Leben mit Bukiškis verbunden war."
+        "Um 1990, noch vor der Rückgabe des Gebäudes, wurden Zeichnungen für den Wiederaufbau der Pokrow-Kirche angefertigt – das berichtet die Notiz der Rajongemeinde. Ende der 1990er Jahre gab der Staat die Kirche an die Orthodoxe Kirche zurück. Nach Angaben der Gemeinde begannen die Wiederaufbauarbeiten 2002 und folgten diesen alten Zeichnungen.",
+        "Die Arbeiten geschahen unter tätiger Beteiligung des Metropoliten Chrysostomos (Martischkin) von Vilnius und Litauen, der die Diözese von 1990 bis 2010 leitete; der Gemeindeaufsatz misst seiner Fürsorge die entscheidende Rolle bei. Die Notiz der Rajongemeinde und litauische Quellen halten fest, dass die Kirche durch die Sorge zweier Hierarchen wiederhergestellt wurde – des orthodoxen Metropoliten Chrysostomos und des katholischen Erzbischofs von Vilnius, Kardinal Audrys Juozas Bačkis. Die Instandsetzung des Gebäudes datiert das Register auf 2007; im selben Jahr wurde nach der Rajongemeinde das kleine Gotteshaus wiederhergestellt.",
+        "Zwischen der Rückgabe der Ruine und dem ersten Gottesdienst vergingen mehr als zehn Jahre. Es war die Arbeit vieler Menschen – Bauleute, Spender, die Diözese –, und die uns vorliegenden Quellen nennen nicht alle ihre Namen. Wenn Sie Dokumente oder Fotografien aus jenen Jahren besitzen, wäre die Gemeinde für die Möglichkeit dankbar, diese Erzählung zu ergänzen."
       ],
-      "sources": [
-        "study",
-        "parish"
-      ]
+      "sources": ["parish", "municipality", "register"],
+      "photo": "works"
     },
     {
       "id": "worship",
-      "title": "2011: der Beginn eines neuen Gemeindelebens",
+      "title": "2011: die Christi-Geburt-Kirche",
       "paragraphs": [
-        "Im Sommer 2011 begann in der wiederhergestellten Kirche erneut das gottesdienstliche Leben. Nach dem Zeugnis der Gemeinde wurden die Gottesdienste mit dem Segen von Erzbischof Innozenz aufgenommen. Seit dieser Zeit versieht Priester Maksim Krutolevič hier seinen seelsorglichen Dienst.",
-        "Die erneuerte Kirche ist der Geburt Christi geweiht. Die Erinnerung an ihre ursprüngliche Weihe an den Schutz der Gottesmutter bleibt Teil ihrer Geschichte. Ihr heutiger Name verweist die Gemeinde auf die Geburt des Erlösers im Evangelium; die Rückkehr zum kirchlichen Leben selbst wurde für diesen Ort zu einem neuen Anfang.",
-        "Um den Gottesdienst herum entwickelte sich nach und nach der Alltag der Gemeinde. Die sonntägliche Liturgie, die großen kirchlichen Feste, Taufen, Trauungen und das Gebet für Lebende und Verstorbene erfüllten das wiederhergestellte Gebäude erneut mit seiner eigentlichen Bestimmung. Familien kamen in die Kirche, für die sie zu einem vertrauten Ort des Gebets und geistlichen Beistands wurde."
+        "Im Sommer 2011 begannen in der wiederhergestellten Kirche die Gottesdienste – mit dem Segen des Erzbischofs Innokentij von Vilnius und Litauen, heute Metropolit. Seither ist Priester Maksim Krutolevič Vorsteher der Kirche und feiert hier an Sonn- und Feiertagen die Liturgie.",
+        "Die wiedererstandene Kirche trägt den Namen Christi Geburt; in Iwanowas Studie heißt es, die Kirche sei 2011 zu seinen Ehren geweiht worden. Das genaue Datum, der Ritus der Weihe und die Beteiligten sind in den uns zugänglichen Dokumenten nicht angegeben, deshalb nennen wir nur das Jahr. Das frühere Pokrow-Patrozinium bleibt Teil der Geschichte der Kirche, und im litauischen Register der Kulturgüter wird das Gebäude weiterhin als Kirche des Schutzes der Gottesmutter geführt. Der Gemeindeaufsatz bietet auch eine geistliche Deutung des Namenswechsels an – die Wiedergeburt aus Ruinen; das ist ein Bild, kein dokumentierter Grund.",
+        "Im selben Jahr 2011 übergaben Nachkommen der Boscherjanows der Kirche ein Familienfoto und einige Dokumente – die Verbindung zu den Gründern ist nicht abgerissen."
       ],
-      "sources": [
-        "parish"
-      ],
+      "sources": ["parish", "study", "register"],
       "photo": "after"
     },
     {
       "id": "care",
       "title": "Die Sorge um die Kirche geht weiter",
       "paragraphs": [
-        "Nach der Wiederaufnahme der Gottesdienste wurde die Pflege des Gebäudes und des Geländes zu einer dauerhaften gemeinsamen Aufgabe der Gemeinde und ihrer Förderer. 2021 wurde der Belag der Treppe vor dem Eingang erneuert. 2023 wurden beschädigte Ziegelbauteile der Türmchen an der Süd- und Nordseite der Kirche wiederhergestellt. 2024 erhielten die Wände im Altarraum einen neuen Anstrich.",
-        "2026 wurden die Dachanstricharbeiten abgeschlossen, die Wände und der Kuppelbereich im Inneren sowie Altarraum und Vorhalle erneuert und die Eingangstür gestrichen. Diese Arbeiten helfen, das Gebäude zu erhalten und gute Voraussetzungen für die Gottesdienste zu schaffen. Hinter jedem solchen Vorhaben stehen konkrete Menschen, ihre Zeit, ihre Mittel und ihr freiwilliger Einsatz.",
-        "Auch die Einrichtung von Räumen für das Gemeindeleben wird fortgesetzt. Die Kirche braucht regelmäßige Pflege. Ihre Geschichte umfasst deshalb neben den großen Phasen der Wiederherstellung auch die tägliche Aufmerksamkeit: einen rechtzeitig bemerkten Schaden, ein gepflegtes Gelände oder Hilfe bei der Vorbereitung eines Festes."
+        "Ein wiederhergestelltes Gebäude braucht ständige Pflege, und die Gemeinde leistet sie aus eigener Kraft und mit Hilfe von Wohltätern. Nach Angaben der Gemeinde wurde 2021 der Belag der Treppe vor dem Eingang erneuert; 2023 wurden beschädigte Backsteinelemente der Türmchen an der Süd- und Nordseite wiederhergestellt; 2024 wurden die Wände im Altarraum gestrichen.",
+        "2026 wurde das Dach gestrichen, Wände und Kuppelraum im Inneren der Kirche, Altarraum und Vorhalle wurden erneuert, die Eingangstür gestrichen; der Ausbau von Räumen für Gemeindetreffen geht weiter. Hinter jeder dieser Arbeiten stehen konkrete Menschen – ihre Zeit, ihr Geld und ihre freiwillige Arbeit. Die Gemeinde nimmt Hilfe für den Unterhalt der Kirche an; die Angaben stehen auf der Seite „Der Gemeinde helfen“."
       ],
-      "sources": [
-        "parish-memory"
-      ]
+      "sources": ["parish-memory"]
     },
     {
       "id": "today",
-      "title": "Die lebendige Geschichte der Gemeinde",
+      "title": "Die Gemeinde heute",
       "paragraphs": [
-        "Heute führt die Kirche Christi Geburt in Bukiškis Gemeindemitglieder und Gäste aus der Umgebung und aus Vilnius zusammen. Hier werden Gottesdienste und Sakramente gefeiert, kirchliche Segens- und Gedenkfeiern gehalten und seelsorgliche Hilfe angeboten. Der aktuelle Gottesdienstplan ermöglicht es, die Zeiten im Voraus zu erfahren und sich auf einen Besuch vorzubereiten.",
-        "Die Gemeinde bewahrt historische Fotografien und Unterlagen und berichtet auf ihrer Website und in den sozialen Medien über den Glauben und das kirchliche Leben. Darin setzt sich dieselbe Sorge um die Erinnerung fort: Die Geschichte der Kirche soll sowohl Menschen zugänglich sein, die bereits mit ihr verbunden sind, als auch jenen, die diesen Ort erst entdecken.",
-        "In der Geschichte der Kirche von Bukiškis stehen Errichtung, Verlust und Wiederherstellung nebeneinander. Diese Geschichte zu bewahren bedeutet, sich an die Gründer zu erinnern, den Menschen zu danken, die dem Gotteshaus zu neuem Leben verholfen haben, und für jene da zu sein, die heute hierherkommen. Im Gebet, in der Gemeinschaft und in den guten Werken der Gemeinde wird diese Geschichte weitergeschrieben."
+        "Heute kommen Menschen aus Bukiškis, den umliegenden Orten und Vilnius in die Kirche. Hier werden die Liturgie, Taufen, Trauungen, Totengedenken und andere Amtshandlungen gefeiert; der Gottesdienstplan auf der Website wird aus dem Gemeindekalender aktualisiert. Die Gemeinde bewahrt Fotografien des Wiederaufbaus, sammelt Erinnerungen und veröffentlicht Material über die Kirche auf dieser Website und in sozialen Netzwerken.",
+        "Wenn Sie zum ersten Mal hier sind, beginnen Sie mit dem Gottesdienstplan und der Seite zum Besuch: Dort finden Sie die Adresse, die Busse aus Vilnius und die Telefonnummer der Gemeinde. Und wenn Sie die Familie interessiert, die diese Kirche gebaut hat – lesen Sie die Studie von N. J. Iwanowa (Russisch): Sie erzählt über die Boscherjanows, was in keiner Enzyklopädie steht."
       ],
-      "sources": [
-        "parish",
-        "parish-memory"
-      ]
+      "sources": ["parish"]
     }
   ],
   "timeline": [
-    [
-      "1866",
-      "Erwerb des Gutes",
-      "Praskowja Nikolajewna Boscherjanowa erwirbt Bukiškis."
-    ],
-    [
-      "Zweite Hälfte des 19. Jahrhunderts",
-      "Kirche zum Schutz der Gottesmutter",
-      "Auf dem Gut wird eine Hauskirche mit Familiengruft errichtet."
-    ],
-    [
-      "20. Jahrhundert",
-      "Beschädigung und Verfall",
-      "Kriegsschäden und langjährige Nutzung des Gebäudes als Lager."
-    ],
-    [
-      "2002",
-      "Wiederherstellungsarbeiten",
-      "Beginn der Wiederherstellung nach den historischen Unterlagen der Gemeinde."
-    ],
-    [
-      "2011",
-      "Wiederaufnahme der Gottesdienste",
-      "Im Sommer beginnt das neue gottesdienstliche Leben in der Kirche Christi Geburt."
-    ],
-    [
-      "2021–2026",
-      "Fortgesetzte Pflege",
-      "Instandsetzung des Eingangs und der Türmchen, Erneuerung des Altarraums sowie Dach- und Innenanstriche."
-    ]
+    ["1866", "Kauf des Guts", "Praskowja Nikolajewna Boscherjanowa kauft das Gut Bukiškis (Iwanowas Studie, LVIA)."],
+    ["Zweite Hälfte des 19. Jahrhunderts", "Die Pokrow-Kirche", "Auf dem Gut entsteht auf Initiative von General A. M. Boscherjanow eine Hauskirche mit Familiengruft (Register, Rajongemeinde, Iwanowa)."],
+    ["1905", "Tod des Gründers", "General Boscherjanow stirbt in Bukiškis und wird unter dem Altar der Kirche beigesetzt (Iwanowa)."],
+    ["1920er Jahre", "Verstaatlichung", "Das Land des Guts wird verstaatlicht, im Herrenhaus eine Landwirtschaftsschule eröffnet (Iwanowa)."],
+    ["1939–1944", "Krieg", "Die Kirche wird schwer beschädigt (Rajongemeinde); die Keller des Guts dienen als Durchgangsgefängnis (Iwanowa)."],
+    ["Nach 1944", "Lager der Schule", "Die Reste des Gebäudes dienen viele Jahre als Lager der Mechanisatorenschule; die Gruft wird geplündert (Rajongemeinde, Register, Iwanowa)."],
+    ["um 1990", "Zeichnungen für den Wiederaufbau", "Zeichnungen für den Wiederaufbau der Pokrow-Kirche werden angefertigt (Rajongemeinde)."],
+    ["Ende der 1990er Jahre", "Rückgabe des Gebäudes", "Die Kirche wird der Orthodoxen Kirche zurückgegeben (Gemeinde, Iwanowa)."],
+    ["2002", "Beginn der Arbeiten", "Beginn der Wiederaufbauarbeiten nach den alten Zeichnungen (Gemeinde)."],
+    ["2007", "Instandsetzung des Gebäudes", "Das Gebäude wird instand gesetzt; wiederhergestellt durch die Sorge von Metropolit Chrysostomos und Kardinal Bačkis (Register, Rajongemeinde)."],
+    ["2009", "Kulturdenkmal", "Die Kirche wird in das Register der Kulturgüter Litauens eingetragen, Code 32784 (Register)."],
+    ["2011", "Wiederaufnahme der Gottesdienste", "Im Sommer beginnen die Gottesdienste; die Kirche trägt den Namen Christi Geburt (Gemeinde, Iwanowa)."],
+    ["2021–2026", "Laufende Arbeiten", "Treppe, Türmchen, Altarraum, Dach, Innenraum; der Ausbau von Räumen geht weiter (Gemeinde)."]
   ],
   "sources": [
-    {
-      "id": "study",
-      "label": "N. Ja. Iwanowa. «Букишские помещики Божерьяновы»",
-      "path": "/ru/library/istoriya-o-hrame.html"
-    },
-    {
-      "id": "parish",
-      "label": "Darstellung der Gemeinde «Храм в Букишках — история веры и памяти»",
-      "path": "/ru/library/o-nashem-hrame.html"
-    },
-    {
-      "id": "municipality",
-      "label": "Verwaltung des Bezirks Vilnius: historischer Überblick zum Amtsbezirk Avižieniai",
-      "url": "https://vrsa.lt/administracine-informacija/seniunijos/3/avizieniu-1"
-    },
-    {
-      "id": "parish-memory",
-      "label": "Angaben der Gemeinde zum gottesdienstlichen Leben und zu den ausgeführten Arbeiten, 2021–2026"
-    }
+    { "id": "study", "label": "N. J. Iwanowa, „Die Gutsbesitzer von Bukiškis, die Boscherjanows“ (Russisch). Studie nach Materialien des Litauischen Staatlichen Historischen Archivs (LVIA)", "path": "/ru/library/istoriya-o-hrame.html" },
+    { "id": "register", "label": "Register der Kulturgüter der Republik Litauen: „Bukiškio Dievo Motinos Globėjos cerkvė“, eindeutiger Code 32784, eingetragen am 26.03.2009 (Litauisch)", "url": "https://kvr.kpd.lt/#/static-heritage-detail/1057bf14-a7d2-4be0-b780-9785834a19ab" },
+    { "id": "municipality", "label": "Rajongemeinde Vilnius: historische Notiz zum Amtsbezirk Avižieniai (Litauisch)", "url": "https://vrsa.lt/administracine-informacija/seniunijos/3/avizieniu-1" },
+    { "id": "parish", "label": "Gemeindeaufsatz „Die Kirche in Bukiškis – eine Geschichte von Glauben und Gedächtnis“ (frühere Veröffentlichung der Gemeinde, Russisch)", "path": "/ru/library/o-nashem-hrame.html" },
+    { "id": "parish-memory", "label": "Angaben der Gemeinde zum gottesdienstlichen Leben und zu den ausgeführten Arbeiten, 2021–2026" }
   ]
 }

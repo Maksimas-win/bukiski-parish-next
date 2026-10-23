@@ -1,175 +1,133 @@
 {
-  "title": "Kristaus Gimimo bažnyčios istorija",
-  "intro": "Nuo šeimos šventovės senajame Bukiškio dvare iki gyvos stačiatikių parapijos: žmonių, praradimų ir rūpestingo atkūrimo istorija.",
+  "title": "Kristaus Gimimo cerkvės Bukiškyje istorija",
+  "intro": "Generolo dvaro namų cerkvė, išplėštas šeimos kapas, mokyklos sandėlis, dešimt metų atstatymo ir naujas parapijos gyvenimas. Pasakojimas apie nedidelę cerkvę prie Vilniaus pagal archyvo dokumentus, oficialias pažymas ir pačios parapijos liudijimus.",
   "contentsTitle": "Šiame puslapyje",
-  "chronologyTitle": "Svarbiausi etapai",
-  "sourcesTitle": "Šaltiniai ir liudijimai",
+  "chronologyTitle": "Datos ir etapai",
+  "sourcesTitle": "Šaltiniai",
   "sourceLinkLabel": "Skyriaus šaltiniai",
-  "studyLabel": "Atskiras autorinis tyrimas",
-  "studyDescription": "N. J. Ivanovos tyrimas apie bažnyčios steigėjų šeimą, dvarą ir jo gyventojus. Autorės tekstas, archyvinės nuorodos ir išsamesni istoriniai duomenys pateikiami atskiroje publikacijoje rusų kalba.",
-  "studyRead": "Skaityti N. J. Ivanovos tyrimą",
+  "studyLabel": "Atskiras tyrimas",
+  "studyDescription": "N. J. Ivanova, istorijos mokytoja metodininkė, pagal Lietuvos valstybės istorijos archyvo dokumentus surinko Božerianovų šeimos istoriją: kas buvo generolas ir jo žmona, kaip buvo sutvarkytas dvaras, kas nutiko vaikams ir sodybai XX amžiuje. Skelbiama rusų kalba autorės redakcija su archyvinėmis nuorodomis.",
+  "studyRead": "Skaityti N. J. Ivanovos tyrimą (rusų k.)",
   "archiveTitle": "Ankstesnės parapijos publikacijos",
-  "sourceNote": "Apžvalga parengta remiantis N. J. Ivanovos istoriniu tyrimu, paskelbtais duomenimis apie Bukiškį ir parapijos medžiaga. Informaciją apie pastarųjų metų darbus pateikė parapija. Dvaro įsigijimas, pastato atkūrimas ir pamaldų atnaujinimas yra skirtingi įvykiai, turintys atskiras datas.",
+  "sourceNote": "Iš kur kas žinoma. Žinios apie Božerianovų šeimą, dvarą ir šeimos kapo likimą – iš N. J. Ivanovos archyvinio tyrimo. Statybos datavimas, karo padaryta žala, pastato naudojimas sandėliui ir 2007 m. remontas – iš Lietuvos kultūros vertybių registro ir Vilniaus rajono savivaldybės pažymos. Pastato grąžinimo, darbų pradžios, pamaldų atnaujinimo ir pastarųjų metų remontų datas pateikė parapija. Dvaro pirkimo metai (1866), atstatymo pradžia (2002), pastato remontas (2007) ir pamaldų atnaujinimas (2011) – skirtingi įvykiai.",
   "photos": {
-    "before": "Bažnyčia prieš atkūrimą. Nuotrauka iš parapijos rinkinio.",
-    "after": "Atkurta Kristaus Gimimo bažnyčia Bukiškyje."
+    "works": "Cerkvė atstatymo darbų metu: sienos pastoliuose, stogas dar neužbaigtas. Nuotrauka iš parapijos rinkinio; fotografavimo data nenustatyta.",
+    "vault": "Samanomis apaugę skliautai – taip pastatas atrodė iš vidaus prieš darbų pradžią. Nuotrauka iš parapijos rinkinio; fotografavimo data nenustatyta.",
+    "domes": "Penki atstatytos cerkvės kupolai: centrinis ir keturi šoniniai, su aštuonkampiais šalmais.",
+    "after": "Kristaus Gimimo cerkvė šiandien. Pamaldos atnaujintos 2011 m."
   },
   "sections": [
     {
       "id": "place",
-      "title": "Šventovė Bukiškio istorijoje",
+      "title": "Cerkvė prie senojo dvaro",
       "paragraphs": [
-        "Netoli Vilniaus, Bukiškyje, stovi nedidelė stačiatikių Kristaus Gimimo bažnyčia. Jos istorija sieja senojo dvaro likimą, steigėjų šeimos atminimą ir dabartinės parapijos gyvenimą. Per savo istoriją bažnyčia patyrė aplinkinio dvaro savininkų kaitą, karą, ilgus naudojimo ūkinėms reikmėms metus ir atkūrimą.",
-        "Šiandien žmonės čia ateina į pamaldas, krikštija vaikus, tuokiasi, meldžiasi už artimuosius ir mini mirusiuosius. Tačiau už įprasto veikiančios bažnyčios vaizdo slypi kelių kartų darbas. Norint suprasti šios vietos reikšmę, svarbu prisiminti ir tuos, kurie bažnyčią pastatė, ir tuos, kurie po daugelio dešimtmečių padėjo sugrąžinti jai pirminę paskirtį."
+        "Į šiaurę nuo Vilniaus, Bukiškyje – Vilniaus rajono Avižienių seniūnijos gyvenvietėje – stovi nedidelė mūrinė cerkvė su penkiais kupolais. Tai Kristaus Gimimo cerkvė. Ji pastatyta XIX a. antrojoje pusėje kaip generolo dvaro namų cerkvė, išgyveno karą ir pusę amžiaus apleistumo, o veikianti vėl tapo tik 2011 m.",
+        "Jos istorija gerai dokumentuota: dvaras ir įkūrėjų šeima aprašyti pagal Lietuvos valstybės istorijos archyvo bylas, pastatas įtrauktas į Lietuvos kultūros vertybių registrą, o pastaruosius dešimtmečius prisimena patys parapijiečiai. Šis puslapis sujungia šias žinias į vieną pasakojimą ir kiekviename skyriuje nurodo, iš kur jos žinomos. Išsami savininkų šeimos istorija pateikta atskirame N. J. Ivanovos tyrime."
       ],
-      "sources": [
-        "study",
-        "parish",
-        "municipality"
-      ]
+      "sources": ["register", "municipality", "study"]
     },
     {
       "id": "founders",
-      "title": "Dvaras ir steigėjų šeima",
+      "title": "Božerianovai ir Bukiškio dvaras",
       "paragraphs": [
-        "Bažnyčios istorija susijusi su Aleksandru Michailovičiumi Božerianovu ir jo žmona Praskovja Nikolajevna. Remiantis N. J. Ivanovos archyviniu tyrimu, Bukiškio dvarą 1866 metais įsigijo būtent Praskovja Nikolajevna. Ši data žymi dvaro perėjimą šeimos nuosavybėn; jos nereikėtų laikyti nustatyta bažnyčios pastatymo data.",
-        "XIX amžiaus antroje pusėje Aleksandro Michailovičiaus iniciatyva dvare buvo pastatyta bažnyčia. Ji buvo skirta šeimos maldai ir tapo steigėjų atminimo vieta. Iš pradžių bažnyčia buvo pašventinta Švč. Dievo Motinos Globos garbei.",
-        "Bažnyčia buvo dvaro ansamblio dalis. Tyrime aprašomas gyvenamasis dvaro pastatas, ūkiniai statiniai, parkas ir ežerai. Ilgainiui keitėsi ir gyvenvietė, ir aplinkinis kraštovaizdis, tačiau bažnyčia išsaugojo ryšį su ankstyvąja šios vietos istorija. Išsamiau apie dvaro savininkus ir jų palikuonis pasakojama atskirame N. J. Ivanovos darbe."
+        "1866 m. Praskovja Nikolajevna Božerianova, dvarininkė iš Pskovo gubernijos Toropeco apskrities, nupirko Bukiškio dvarą Trakų apskrityje – 222 dešimtines žemės. Pirkimo aktas išliko archyve; dvaras priklausė žmonai, ir viename dokumente jos vyras tiesiai vadina jį „žmonos dvaru“. Taip nurodo N. J. Ivanovos tyrimas; ši data – dvaro pirkimo, o ne cerkvės statybos metai.",
+        "Praskovjos Nikolajevnos vyras Aleksandras Michailovičius Božerianovas (1825–1905) buvo kadrinis karininkas: tarnavo leibgvardijos Semionovo pulke, vadovavo šaulių batalionui, dalyvavo malšinant 1863 m. sukilimą, vėliau vadovavo pėstininkų pulkui, 1874 m. pakeltas generolu majoru, dalyvavo 1877–1878 m. Rusijos ir Turkijos kare ir buvo sužeistas prie Plevnos. Išėjęs į atsargą apsigyveno Bukiškyje ir čia gyveno iki gyvenimo pabaigos. 1871 m. šeimos teises į paveldimą bajorystę patvirtino Senatas, o Bukiškis pripažintas giminės dvaru.",
+        "Sodyba užėmė daugiau kaip penkias dešimtines. Centre stovėjo dviaukštis namas su akmeniniu pirmu aukštu ir giliais rūsiais, vanduo į jį buvo tiekiamas vamzdžiais iš ežero; aplink – angliško stiliaus parkas, du kanalais sujungti ežerai, kalvė, pirtis, karietinė, tarnų namas. Žemes dirbo aplinkinių kaimų valstiečiai; ūkyje sėta rugiai, kviečiai, miežiai, avižos, grikiai, linai. Kalvė ir dalis ūkinių pastatų išliko iki mūsų dienų. Božerianovų šeimą, ūkį ir vaikų likimą Ivanovos tyrimas aprašo išsamiai – su archyvo bylų numeriais."
       ],
-      "sources": [
-        "study",
-        "municipality"
-      ]
+      "sources": ["study"]
+    },
+    {
+      "id": "church",
+      "title": "Dievo Motinos Globėjos cerkvė: namų šventovė ir šeimos kapas",
+      "paragraphs": [
+        "Cerkvė dvare pastatyta generolo iniciatyva XIX a. antrojoje pusėje – taip ją datuoja ir Kultūros vertybių registras, ir savivaldybės pažyma, ir Ivanovos tyrimas. Tikslesnių metų nė vienas prieinamas šaltinis nenurodo, todėl jų nenurodome ir mes. Cerkvė pašventinta Švč. Dievo Motinos Globos (Pokrovo) garbei; archyvo duomenimis, dvaras po to net imtas vadinti Pokrovskoje.",
+        "Tai buvo namų cerkvė – šventovė prie dvaro, skirta pirmiausia savininkų šeimai, – ir kartu šeimos kapas. 1905 m. miręs generolas palaidotas po altoriumi; čia vėliau atgulė ir Praskovja Nikolajevna bei sūnūs. Pagal iš vietos gyventojų užrašytą padavimą, cerkvė nebuvo tuščia ir katalikiškoje aplinkoje: generolas apdovanodavo ateinančius į pamaldas.",
+        "Vyresnysis sūnus Aleksandras Aleksandrovičius paveldėjo dvarą, gyveno Vilniuje, buvo Šv. Konstantino ir Michailo cerkvės seniūnas ir aukojo krašto cerkvėms. Duktė Marija ištekėjo ir išvyko į Tverės guberniją; 1931 m. ji buvo suimta bažnytinės organizacijos byloje ir apribota jos teisė pasirinkti gyvenamąją vietą. Senbuvių pasakojimu, po Antrojo pasaulinio karo kažkokia moteris prašė valdžios perduoti Pokrovo cerkvę Stačiatikių Bažnyčiai ir gavo neigiamą atsakymą – Ivanova atsargiai spėja, kad tai galėjo būti Marija Aleksandrovna."
+      ],
+      "sources": ["study", "register", "municipality"]
     },
     {
       "id": "architecture",
-      "title": "Dievo Motinos Globos bažnyčia: malda ir atminimas",
+      "title": "Koks tai pastatas",
       "paragraphs": [
-        "Bažnyčia pastatyta neobizantiniu stiliumi. Nedidelis tūris, arkinės angos ir kupolas suteikė dvaro bažnyčiai savitą, atpažįstamą išvaizdą. Pašventinimas Švč. Dievo Motinos Globos garbei išreiškė stačiatikių tradicijai būdingą maldą prašant Jos užtarimo ir pagalbos.",
-        "Iš pradžių tai buvo privati šeimos bažnyčia. Joje buvo įrengta Božerianovų šeimos laidojimo kripta: gyvųjų malda čia jungėsi su mirusių šeimos narių atminimu. Todėl bažnyčia turėjo ir liturginę, ir memorialinę paskirtį.",
-        "Žinios apie dvaro sandarą ir šeimos palaidojimus mus pasiekė per dokumentus, tyrėjų darbą ir vietos gyventojų prisiminimus. Šie liudijimai padeda už architektūros pamatyti žmonių likimus. Ten, kur tiksli data ar aplinkybės nėra nustatytos, pati vietos atmintis ragina elgtis rūpestingai ir atidžiai."
+        "Kultūros vertybių registras cerkvę aprašo taip: stačiakampio plano, su prieangiu iš šiaurės vakarų ir apside iš pietryčių, su centriniu ir keturiais šoniniais kupolais, kurių šalmai aštuonkampiai; cokolis iš tašyto akmens blokų, sienos plytų mūro, langai stačiakampiai, apskriti, arkiniai ir segmentiniai, fasadai su nišomis. Stilius apibrėžtas kaip istorizmas; rusų tradicijoje tokios cerkvės vadinamos neobizantinėmis. Cerkvė stovi ant kalvos, šventoriaus pietvakarių kraštinė apsodinta lapuočiais.",
+        "Pastatas įrašytas į Lietuvos kultūros vertybių registrą 2009 m. kovo 26 d. kaip vietinės reikšmės objektas (unikalus kodas 32784), vertingas ir kaip architektūros tipas, ir kaip sakralinis statinys. Registro įraše pažymėta, kad tūrinė erdvinė kompozicija remontuota 2007 m. ir yra geros būklės."
       ],
-      "sources": [
-        "study"
-      ]
+      "sources": ["register"],
+      "photo": "domes"
     },
     {
-      "id": "trials",
-      "title": "Karas ir apleidimo metai",
+      "id": "twentieth",
+      "title": "XX amžius: nuo dvaro iki sandėlio",
       "paragraphs": [
-        "XX amžiuje ankstesnis dvaro gyvenimas pasikeitė. Dvaro pastatai įgijo naują paskirtį, o bažnyčios likimas buvo ypač sunkus. Vilniaus rajono savivaldybės duomenimis, per Antrąjį pasaulinį karą bažnyčia buvo smarkiai apgadinta.",
-        "Vėliau ji daugelį metų buvo naudojama kaip mokymo įstaigos sandėlis. Istoriniame tyrime aprašytas šeimos laidojimo kriptos išniekinimas ir rūsyje įrengtas generatorius. Vibracija, drėgmė ir tinkamos priežiūros stoka blogino pastato būklę. Pastatas nyko ir daugelį metų nebuvo naudojamas pamaldoms.",
-        "Išlikusiose nuotraukose matyti pažeistos sienos, stogas ir skliautai, neapsaugoti nuo laiko ir nepalankių orų poveikio. Jos leidžia įsivaizduoti vėlesnio atkūrimo mastą. Šis istorijos tarpsnis pirmiausia svarbus kaip šventovės praradimo atminimas ir priminimas, kokios atsakomybės reikalauja kultūrinio bei dvasinio paveldo išsaugojimas."
+        "Po Pirmojo pasaulinio karo Vilniaus kraštas atiteko Lenkijai, rusų bajorų žemės buvo nacionalizuotos. Dvaro rūmuose įkurdinta žemės ūkio mokykla. Antrojo pasaulinio karo metais, Ivanovos tyrimo duomenimis, dvaro rūmų rūsius vokiečių okupacinė valdžia naudojo kaip tranzitinį kalėjimą žydams. Pati cerkvė, pagal Vilniaus rajono savivaldybės pažymą, karo metu buvo labai apgriauta.",
+        "1944 m. Bukiškyje atidaryta pirmoji Lietuvoje profesinė technikos mokykla, rengusi traktorininkus ir ekskavatorininkus. Cerkvės likučiai ilgiems metams tapo šios mokyklos sandėliu – taip teigia ir savivaldybė, ir Kultūros vertybių registras, tarp kurio šaltinių – 1962 m. dokumentai iš Lietuvos centrinio valstybės archyvo, įskaitant slaptą pranešimą partijos organams.",
+        "Sovietmečiu buvo išplėštas šeimos kapas. Pagal Ivanovos tyrimą, iki generolo kapo po altoriumi plėšikai nepasiekė, o Praskovjos Nikolajevnos ir sūnų palaidojimai buvo išdraskyti; palaikai perlaidoti cerkvės kieme, už altoriaus. Rūsyje įrengtas generatorius, nuo kurio vibracijos sienos toliau iro. Pagal savivaldybės pažymą, iš cerkvės liko griuvėsiai ir rūsiai, kuriuose, kaip spėjama, ir buvo palaidota generolo šeima."
       ],
-      "sources": [
-        "municipality",
-        "study"
-      ],
-      "photo": "before"
+      "sources": ["study", "municipality", "register"],
+      "photo": "vault"
     },
     {
-      "id": "restoration",
-      "title": "Sugrąžinimas ir atkūrimas",
+      "id": "return",
+      "title": "Grąžinimas ir atstatymas",
       "paragraphs": [
-        "XX amžiaus dešimtojo dešimtmečio pabaigoje pastatas buvo grąžintas Stačiatikių Bažnyčiai. Prasidėjo naujas jo istorijos etapas: reikėjo išsaugoti tai, kas išliko, ir vėl sudaryti sąlygas pamaldoms. Parapijos istorinėje medžiagoje atkūrimo darbų pradžia siejama su 2002 metais.",
-        "Ypatinga vieta bažnyčios atgimimo istorijoje tenka metropolitui Chrizostomui (Martiškinui), kurio rūpestis ir nuoseklus dalyvavimas padėjo įgyvendinti šį sumanymą. Darbai buvo grindžiami išlikusiais duomenimis apie pastato išvaizdą ir atkūrimo brėžiniais. Atgimimui prireikė laiko, lėšų ir žmonių, kuriems nedidelės bažnyčios likimas buvo svarbus, darbo.",
-        "Pastato atkūrimas ir nuolatinių pamaldų sugrįžimas buvo vienas po kito sekę etapai. Statybos darbai turėjo platesnį tikslą: suteikti bažnyčiai galimybę vėl tapti bendruomenės susitikimo, sakramentų teikimo ir maldos už tuos, kurių gyvenimas susijęs su Bukiškiu, vieta."
+        "Apie 1990 m., dar prieš pastato grąžinimą, buvo parengti Pokrovo cerkvės atstatymo brėžiniai – apie tai praneša savivaldybės pažyma. 1990-ųjų pabaigoje valstybė grąžino cerkvę Stačiatikių Bažnyčiai. Parapijos duomenimis, atstatymo darbai prasidėjo 2002 m. ir buvo vykdomi pagal tuos senus brėžinius.",
+        "Darbai vyko aktyviai dalyvaujant Vilniaus ir Lietuvos metropolitui Chrizostomui (Martiškinui), vadovavusiam vyskupijai 1990–2010 m.; parapijos apybraižoje jo rūpesčiui skiriamas lemiamas vaidmuo. Savivaldybės pažyma ir lietuviški šaltiniai pažymi, kad šventovė atstatyta dviejų hierarchų – stačiatikių metropolito Chrizostomo ir Vilniaus arkivyskupo kardinolo Audrio Juozo Bačkio – rūpesčiu. Pastato remontą registras datuoja 2007 m.; tais pačiais metais, pagal savivaldybės pažymą, nedidelė šventovė buvo atstatyta.",
+        "Nuo griuvėsių grąžinimo iki pirmųjų pamaldų praėjo daugiau kaip dešimt metų. Tai buvo daugelio žmonių – statybininkų, aukotojų, vyskupijos – darbas, ir mūsų turimi šaltiniai nemini visų jų vardų. Jei išsaugojote tų metų dokumentų ar nuotraukų, parapija būtų dėkinga už galimybę papildyti šį pasakojimą."
       ],
-      "sources": [
-        "study",
-        "parish"
-      ]
+      "sources": ["parish", "municipality", "register"],
+      "photo": "works"
     },
     {
       "id": "worship",
-      "title": "2011 metai: naujo parapijos gyvenimo pradžia",
+      "title": "2011 metai: Kristaus Gimimo cerkvė",
       "paragraphs": [
-        "2011 metų vasarą atkurtoje bažnyčioje vėl prasidėjo pamaldos. Parapijos liudijimu, jos pradėtos arkivyskupo Inokentijaus palaiminimu. Nuo tada čia tarnauja kunigas Maksim Krutolevič.",
-        "Atgimusi bažnyčia pašvęsta Kristaus Gimimui. Pirminis pašventinimas Dievo Motinos Globos garbei lieka jos istorijos dalimi. Dabartinis vardas kreipia parapiją į Evangelijoje pasakojamą Išganytojo gimimą, o pats bažnytinio gyvenimo sugrįžimas šiai vietai tapo nauja pradžia.",
-        "Aplink pamaldas pamažu kūrėsi kasdienis parapijos gyvenimas. Sekmadienio liturgija, didžiosios bažnytinės šventės, krikštas, santuoka, malda už gyvuosius ir mirusiuosius vėl suteikė atkurtam pastatui jo pagrindinę prasmę. Į bažnyčią atėjo šeimos, kurioms ji tapo artima maldos ir dvasinės pagalbos vieta."
+        "2011 m. vasarą atstatytoje cerkvėje prasidėjo pamaldos – Vilniaus ir Lietuvos arkivyskupo Inokentijaus, dabar metropolito, palaiminimu. Nuo to laiko cerkvės klebonas – kunigas Maksimas Krutolevičius, čia aukojantis Liturgiją sekmadieniais ir per šventes.",
+        "Atgimusi cerkvė vadinasi Kristaus Gimimo vardu; Ivanovos tyrime sakoma, kad 2011 m. cerkvė buvo pašventinta jo garbei. Tiksli data, pašventinimo apeigos ir dalyviai mums prieinamuose dokumentuose nenurodyti, todėl pateikiame tik metus. Ankstesnis Dievo Motinos Globos titulas lieka cerkvės istorijos dalimi, o Lietuvos kultūros vertybių registre pastatas tebevadinamas Dievo Motinos Globėjos cerkve. Parapijos apybraiža siūlo ir dvasinį vardo pakeitimo aiškinimą – atgimimą iš griuvėsių; tai vaizdinys, o ne dokumentais nustatyta priežastis.",
+        "Tais pačiais 2011 m. Božerianovų palikuonys perdavė cerkvei šeimos nuotrauką ir kai kuriuos dokumentus – ryšys su įkūrėjais nenutrūko."
       ],
-      "sources": [
-        "parish"
-      ],
+      "sources": ["parish", "study", "register"],
       "photo": "after"
     },
     {
       "id": "care",
-      "title": "Rūpinimasis bažnyčia tęsiasi",
+      "title": "Rūpestis cerkve tęsiasi",
       "paragraphs": [
-        "Atnaujinus pamaldas, rūpinimasis pastatu ir jo aplinka tapo nuolatiniu bendru parapijos ir geradarių darbu. 2021 metais pakeista laiptų priešais įėjimą apdaila. 2023 metais atkurti pažeisti pietinėje ir šiaurinėje bažnyčios pusėse esančių bokštelių plytiniai elementai. 2024 metais nudažytos sienos altoriaus erdvėje.",
-        "2026 metais baigtas dažyti stogas, atnaujintos bažnyčios vidaus sienos ir kupolo dalis, altoriaus erdvė bei prieangis, nudažytos įėjimo durys. Šie darbai padeda išsaugoti pastatą ir palaikyti tinkamas sąlygas pamaldoms. Šiuos darbus padeda atlikti žmonės, kurie skiria savo laiką, lėšas ir dirba savanoriškai.",
-        "Toliau tvarkomos ir parapijos bendravimui skirtos patalpos. Bažnyčiai reikia nuolatinės priežiūros, todėl jos istoriją sudaro ir dideli atkūrimo etapai, ir kasdienis dėmesys: laiku pastebėtas pažeidimas, sutvarkyta aplinka, pagalba ruošiantis šventei."
+        "Atstatytam pastatui reikia nuolatinės priežiūros, ir parapija ja rūpinasi savo bei geradarių jėgomis. Parapijos duomenimis, 2021 m. pakeista laiptų prieš įėjimą danga; 2023 m. atkurti pažeisti bokštelių mūro elementai pietinėje ir šiaurinėje pusėse; 2024 m. nudažytos altoriaus sienos.",
+        "2026 m. nudažytas stogas, atnaujintos sienos ir kupolo dalis cerkvės viduje, altorius ir prieangis, nudažytos įėjimo durys; tęsiamas patalpų parapijos susitikimams įrengimas. Už kiekvieno iš šių darbų stovi konkretūs žmonės – jų laikas, lėšos ir savanoriškas darbas. Parapija priima paramą cerkvės išlaikymui; rekvizitai pateikti puslapyje „Padėti parapijai“."
       ],
-      "sources": [
-        "parish-memory"
-      ]
+      "sources": ["parish-memory"]
     },
     {
       "id": "today",
-      "title": "Gyva parapijos istorija",
+      "title": "Parapija šiandien",
       "paragraphs": [
-        "Šiandien Bukiškio Kristaus Gimimo bažnyčia suburia parapijiečius ir svečius iš apylinkių bei Vilniaus. Čia vyksta pamaldos, teikiami sakramentai, atliekamos religinės apeigos, teikiama sielovadinė pagalba. Aktualus tvarkaraštis padeda iš anksto sužinoti pamaldų laiką ir pasiruošti apsilankymui.",
-        "Parapija saugo istorines nuotraukas ir medžiagą, apie tikėjimą bei bažnytinį gyvenimą pasakoja savo svetainėje ir socialiniuose tinkluose. Tai to paties rūpinimosi atmintimi tąsa: padaryti bažnyčios istoriją prieinamą ir tiems, kurie jau su ja susiję, ir tiems, kurie šią vietą tik atranda.",
-        "Bukiškio bažnyčios likime susipina kūrimas, praradimas ir atkūrimas. Saugoti šią istoriją reiškia prisiminti steigėjus, dėkoti tiems, kurie padėjo atgaivinti šventovę, ir rūpintis šiandien čia ateinančiais žmonėmis. Istorija tęsiasi parapijos maldoje, bendravime ir geruose darbuose."
+        "Šiandien į cerkvę atvyksta iš Bukiškio, aplinkinių gyvenviečių ir Vilniaus. Čia aukojama Liturgija, krikštijama, tuokiama, laikomos panichidos ir kitos apeigos; tvarkaraštis svetainėje atnaujinamas iš parapijos kalendoriaus. Parapija saugo atstatymo nuotraukas, renka prisiminimus ir skelbia medžiagą apie cerkvę šioje svetainėje ir socialiniuose tinkluose.",
+        "Jei čia pirmą kartą, pradėkite nuo tvarkaraščio ir apsilankymo puslapio: ten adresas, autobusai iš Vilniaus ir parapijos telefonas. O jei jus sudomino šią cerkvę pastačiusi šeima – perskaitykite N. J. Ivanovos tyrimą (rusų k.): jame apie Božerianovus pasakojama tai, ko nėra nė vienoje enciklopedijoje."
       ],
-      "sources": [
-        "parish",
-        "parish-memory"
-      ]
+      "sources": ["parish"]
     }
   ],
   "timeline": [
-    [
-      "1866",
-      "Dvaro įsigijimas",
-      "Praskovja Nikolajevna Božerianova įsigyja Bukiškio dvarą."
-    ],
-    [
-      "XIX amžiaus antroji pusė",
-      "Dievo Motinos Globos bažnyčia",
-      "Dvare pastatoma privati šeimos bažnyčia su laidojimo kripta."
-    ],
-    [
-      "XX amžius",
-      "Sugriovimai ir apleidimas",
-      "Karo padaryta žala ir ilgalaikis pastato naudojimas sandėliui."
-    ],
-    [
-      "2002",
-      "Atkūrimo darbai",
-      "Parapijos istorinėje medžiagoje nurodyta atkūrimo pradžia."
-    ],
-    [
-      "2011",
-      "Pamaldų atnaujinimas",
-      "Vasarą Kristaus Gimimo bažnyčioje prasideda naujas liturginio gyvenimo etapas."
-    ],
-    [
-      "2021–2026",
-      "Tęstinė priežiūra",
-      "Įėjimo ir bokštelių remontas, altoriaus erdvės, stogo ir vidaus dažymas."
-    ]
+    ["1866", "Dvaro pirkimas", "Praskovja Nikolajevna Božerianova nuperka Bukiškio dvarą (Ivanovos tyrimas, LVIA)."],
+    ["XIX a. antroji pusė", "Dievo Motinos Globėjos cerkvė", "Dvare generolo A. M. Božerianovo iniciatyva pastatyta namų cerkvė su šeimos kapu (registras, savivaldybė, Ivanova)."],
+    ["1905", "Įkūrėjo mirtis", "Generolas Božerianovas miršta Bukiškyje ir palaidojamas po cerkvės altoriumi (Ivanova)."],
+    ["1920-ieji", "Nacionalizacija", "Dvaro žemės nacionalizuotos, dvaro rūmuose atidaryta žemės ūkio mokykla (Ivanova)."],
+    ["1939–1944", "Karas", "Cerkvė labai apgriauta (savivaldybė); dvaro rūsiai naudoti kaip tranzitinis kalėjimas (Ivanova)."],
+    ["Po 1944", "Mokyklos sandėlis", "Pastato likučiai ilgus metus tarnauja mechanizatorių mokyklos sandėliu; šeimos kapas išplėštas (savivaldybė, registras, Ivanova)."],
+    ["apie 1990", "Atstatymo brėžiniai", "Parengti Pokrovo cerkvės atstatymo brėžiniai (savivaldybė)."],
+    ["1990-ųjų pabaiga", "Pastato grąžinimas", "Cerkvė grąžinta Stačiatikių Bažnyčiai (parapija, Ivanova)."],
+    ["2002", "Darbų pradžia", "Atstatymo darbų pradžia pagal senus brėžinius (parapija)."],
+    ["2007", "Pastato remontas", "Pastatas suremontuotas; atstatytas metropolito Chrizostomo ir kardinolo Bačkio rūpesčiu (registras, savivaldybė)."],
+    ["2009", "Kultūros paminklas", "Cerkvė įrašyta į Lietuvos kultūros vertybių registrą, kodas 32784 (registras)."],
+    ["2011", "Pamaldų atnaujinimas", "Vasarą prasideda pamaldos; cerkvė vadinasi Kristaus Gimimo vardu (parapija, Ivanova)."],
+    ["2021–2026", "Dabartiniai darbai", "Laiptai, bokšteliai, altorius, stogas, interjeras; patalpų įrengimas tęsiasi (parapija)."]
   ],
   "sources": [
-    {
-      "id": "study",
-      "label": "N. J. Ivanova. «Букишские помещики Божерьяновы»",
-      "path": "/ru/library/istoriya-o-hrame.html"
-    },
-    {
-      "id": "parish",
-      "label": "Parapijos apžvalga „Bažnyčia Bukiškyje – tikėjimo ir atminties istorija“ (rusų kalba)",
-      "path": "/ru/library/o-nashem-hrame.html"
-    },
-    {
-      "id": "municipality",
-      "label": "Vilniaus rajono savivaldybė: Avižienių seniūnijos istorijos apžvalga",
-      "url": "https://vrsa.lt/administracine-informacija/seniunijos/3/avizieniu-1"
-    },
-    {
-      "id": "parish-memory",
-      "label": "Parapijos duomenys apie pamaldas ir atliktus darbus 2021–2026 metais"
-    }
+    { "id": "study", "label": "N. J. Ivanova. „Bukiškio dvarininkai Božerianovai“ (rusų k.). Tyrimas pagal Lietuvos valstybės istorijos archyvo (LVIA) medžiagą", "path": "/ru/library/istoriya-o-hrame.html" },
+    { "id": "register", "label": "Lietuvos Respublikos kultūros vertybių registras: „Bukiškio Dievo Motinos Globėjos cerkvė“, unikalus kodas 32784, įregistruota 2009-03-26", "url": "https://kvr.kpd.lt/#/static-heritage-detail/1057bf14-a7d2-4be0-b780-9785834a19ab" },
+    { "id": "municipality", "label": "Vilniaus rajono savivaldybė: Avižienių seniūnijos istorinė pažyma", "url": "https://vrsa.lt/administracine-informacija/seniunijos/3/avizieniu-1" },
+    { "id": "parish", "label": "Parapijos apybraiža „Cerkvė Bukiškyje – tikėjimo ir atminties istorija“ (ankstesnė parapijos publikacija, rusų k.)", "path": "/ru/library/o-nashem-hrame.html" },
+    { "id": "parish-memory", "label": "Parapijos žinios apie pamaldų gyvenimą ir atliktus darbus, 2021–2026 m." }
   ]
 }

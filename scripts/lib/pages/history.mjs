@@ -4,11 +4,21 @@ import { html, attrs } from '../html.mjs';
 import { icon } from '../icons.mjs';
 import { externalLink, pageHead, siteLink } from '../components.mjs';
 
+/** Photographs a chapter may show, by the key used in content/history/<lang>.json → photos. */
+const PHOTOS = {
+  works: ['restoration', 'ruin-05'],
+  vault: ['restoration', 'ruin-13'],
+  domes: ['gallery', 'domes'],
+  after: ['gallery', 'church-autumn']
+};
+
 function photograph(site, history, story, kind) {
-  const photo = kind === 'before'
-    ? story.restoration.photos.find(item => item.id === story.restoration.before)
-    : site.photos.gallery.find(item => item.id === 'church-autumn');
-  if (!photo) return '';
+  const [collection, id] = PHOTOS[kind] || [];
+  const photo = collection === 'restoration'
+    ? story.restoration.photos.find(item => item.id === id)
+    : site.photos.gallery.find(item => item.id === id);
+  if (!photo) throw new Error(`Unknown history photograph: ${kind}`);
+  if (!history.photos[kind]) throw new Error(`content/history: missing caption for photograph ${kind}`);
   return html`<figure class="history-narrative__photo">
     <a${attrs({ href: site.url(`/${photo.web}`), 'data-lightbox': true, 'data-width': photo.width, 'data-height': photo.height })}>
       <img${attrs({ src: site.url(`/${photo.web}`), srcset: `${site.url(`/${photo.thumb}`)} ${photo.thumbWidth}w, ${site.url(`/${photo.web}`)} ${photo.width}w`, sizes: '(max-width: 50rem) 100vw, 48rem', width: photo.width, height: photo.height, loading: 'lazy', decoding: 'async', alt: history.photos[kind] })}>
