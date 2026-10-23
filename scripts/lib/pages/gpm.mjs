@@ -418,6 +418,20 @@ export function gpmPage(site, lang, ui) {
   </div>`;
 }
 
+/** What the home page needs from the section: the campaign state and the year figures. */
+export function gpmSummary(site, lang) {
+  const { campaign } = site.gpm.config;
+  const phase = campaignPhaseOf(vilniusDate(site.buildTime), campaign);
+  return {
+    phase,
+    phaseLabel: site.gpm.texts[lang].phase[phase].label,
+    values: placeholders(site, lang),
+    filingStart: campaign.filingStart,
+    filingDeadline: campaign.filingDeadline,
+    phaseLabels: Object.fromEntries(['before', 'during', 'after'].map(state => [state, site.gpm.texts[lang].phase[state].label]))
+  };
+}
+
 /** Title, description and FAQ entries for the route and its structured data. */
 export function gpmMeta(site, lang) {
   const texts = site.gpm.texts[lang];

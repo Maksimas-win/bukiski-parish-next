@@ -362,3 +362,51 @@ main > .support-band:last-child {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* The permanent «1,2 % GPM» item: a compact framed link at the end of the menu. */
+.site-nav .site-nav__gpm {
+  padding: 0.35rem 0.8rem;
+  border: 1.5px solid var(--gilt);
+  border-radius: 999px;
+  font-weight: 650;
+  color: var(--ink);
+  box-shadow: none;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.site-nav .site-nav__gpm:hover {
+  background: var(--surface-tint);
+  border-color: var(--accent);
+  box-shadow: none;
+}
+
+.site-nav .site-nav__gpm[aria-current='page'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+  box-shadow: none;
+}
+
+@media (max-width: 72rem) {
+  .js .site-nav .site-nav__gpm {
+    padding: 0.85rem 0;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    background: none;
+    color: var(--accent);
+  }
+
+  .js .site-nav .site-nav__gpm[aria-current='page'] {
+    padding-inline-start: 0.85rem;
+    color: var(--accent);
+    box-shadow: inset 3px 0 var(--accent);
+  }
+}
+
+/* Between the folded menu and wide screens the seven items sit a little closer. */
+@media (min-width: 72.01rem) and (max-width: 86rem) {
+  .site-nav {
+    gap: 0.25rem 1.05rem;
+  }
+}

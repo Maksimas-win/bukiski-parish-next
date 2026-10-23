@@ -552,3 +552,439 @@
     transform: translate(0.3rem, -50%);
   }
 }
+
+/* 1,2 % GPM on the home page ----------------------------------------------
+   One invitation on the first screen, one explanatory band after the services,
+   one item in the navigation. The relief figure is pure CSS: no WebGL here. */
+
+.gpm-relief {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  color: #b99759;
+  background: linear-gradient(168deg, #f7e3b4 0%, #d9b46e 38%, #a9843f 66%, #efd59f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter:
+    drop-shadow(0 1px 0 rgb(255 248 230 / 0.9))
+    drop-shadow(0 2px 0 rgb(120 90 30 / 0.55))
+    drop-shadow(0 10px 14px rgb(60 40 10 / 0.28));
+}
+
+.gpm-relief--large {
+  /* background-image, not the shorthand: the shorthand would reset background-clip. */
+  background-image: linear-gradient(168deg, #fbecc3 0%, #e7c98a 40%, #b99759 70%, #f1d9a4 100%);
+  filter:
+    drop-shadow(0 2px 0 rgb(120 90 30 / 0.7))
+    drop-shadow(0 16px 22px rgb(0 0 0 / 0.42));
+}
+
+/* Hero: the church name keeps the lead; the card takes the free right side. */
+.hero__content {
+  display: grid;
+  gap: 1.5rem;
+  align-items: end;
+}
+
+.hero__text {
+  min-width: 0;
+}
+
+.hero-gpm {
+  position: relative;
+  display: grid;
+  gap: 0.35rem;
+  width: min(100%, 21.25rem);
+  padding: 1.35rem 1.4rem 1.4rem;
+  border-radius: var(--radius-l);
+  color: #1f262b;
+  background: rgb(253 251 246 / 0.96);
+  box-shadow: 0 18px 40px -18px rgb(0 0 0 / 0.55), 0 1px 0 rgb(255 255 255 / 0.6) inset;
+  justify-self: end;
+}
+
+.hero-gpm__kicker {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7a5a1c;
+}
+
+.hero-gpm__figure {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  margin: 0.15rem 0 0.4rem;
+}
+
+.hero-gpm__figure .gpm-relief {
+  font-size: 3.4rem;
+}
+
+.hero-gpm__unit {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: #5b0f19;
+}
+
+.hero-gpm__body {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.hero-gpm__title {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1f262b;
+}
+
+.hero-gpm__text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4d575e;
+}
+
+.hero-gpm__action {
+  justify-self: start;
+  margin-top: 0.4rem;
+}
+
+.hero-gpm__action .icon {
+  transition: transform 0.2s ease;
+}
+
+.hero-gpm__action:hover .icon,
+.gpm-band__open:hover .icon {
+  transform: translateX(3px);
+}
+
+.hero-gpm__state {
+  margin: 0.2rem 0 0;
+  font-size: 0.8125rem;
+  color: #4d575e;
+}
+
+.hero-gpm__state::before {
+  content: '';
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-inline-end: 0.45rem;
+  border-radius: 50%;
+  background: #b99759;
+  vertical-align: 0.05em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-gpm {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .hero-gpm:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 46px -18px rgb(0 0 0 / 0.6), 0 1px 0 rgb(255 255 255 / 0.6) inset;
+  }
+}
+
+@media (min-width: 60rem) {
+  .hero__content {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 2.5rem;
+  }
+}
+
+/* Phones and small tablets: a horizontal strip between the place and the quick links. */
+@media (max-width: 59.99rem) {
+  .hero-gpm {
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 1rem;
+    width: 100%;
+    padding: 1rem 1.1rem;
+    justify-self: stretch;
+  }
+
+  .hero-gpm__kicker {
+    grid-column: 1 / -1;
+  }
+
+  .hero-gpm__figure {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin: 0;
+    align-self: center;
+  }
+
+  .hero-gpm__figure .gpm-relief {
+    font-size: 2.6rem;
+  }
+
+  .hero-gpm__unit {
+    font-size: 1rem;
+  }
+
+  .hero-gpm__body {
+    gap: 0.3rem;
+  }
+
+  .hero-gpm__title {
+    font-size: 1.02rem;
+  }
+
+  .hero-gpm__text {
+    font-size: 0.875rem;
+  }
+
+  .hero-gpm__action {
+    margin-top: 0.2rem;
+    padding-block: 0.55rem;
+    font-size: 0.95rem;
+  }
+
+  .hero-gpm__state {
+    display: none;
+  }
+
+  .hero {
+    min-height: clamp(30rem, 78svh, 56rem);
+  }
+
+  .hero__content {
+    padding-top: 4.5rem;
+  }
+}
+
+@media (max-width: 26rem) {
+  .hero-gpm__text {
+    display: none;
+  }
+}
+
+/* The band after the services: deep blue like the schedule, gilt figure, one example. */
+.gpm-band {
+  position: relative;
+  padding-block: clamp(2rem, 4vw, 2.75rem);
+  color: var(--band-ink);
+  background:
+    radial-gradient(42rem 20rem at 8% 50%, rgb(231 201 138 / 0.16), transparent 65%),
+    linear-gradient(120deg, var(--dome-deep), var(--band-bg) 60%, #1a3542);
+}
+
+.gpm-band .eyebrow {
+  color: var(--band-accent);
+}
+
+.gpm-band__inner {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.gpm-band__figure {
+  margin: 0;
+  text-align: center;
+}
+
+.gpm-band__figure .gpm-relief {
+  font-size: clamp(4.5rem, 3rem + 6vw, 7.5rem);
+}
+
+.gpm-band h2 {
+  max-width: 24ch;
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.5rem, 1.2rem + 1.3vw, 2.1rem);
+  line-height: 1.15;
+  color: #fff;
+  text-wrap: balance;
+}
+
+.gpm-band__text {
+  max-width: 52ch;
+  margin: 0 0 1.1rem;
+  color: var(--band-ink);
+}
+
+
+.gpm-example {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-m);
+  background: rgb(255 255 255 / 0.07);
+  border: 1px solid rgb(255 255 255 / 0.14);
+}
+
+.gpm-example__label {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--band-soft);
+}
+
+.gpm-example__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gpm-band .gpm-chip {
+  border-color: rgb(255 255 255 / 0.4);
+  background: transparent;
+  color: #fff;
+}
+
+.gpm-band .gpm-chip:hover {
+  border-color: var(--band-accent);
+  color: var(--band-accent);
+}
+
+.gpm-band .gpm-chip[aria-pressed='true'] {
+  border-color: var(--band-accent);
+  background: var(--band-accent);
+  color: #1a1408;
+  font-weight: 700;
+}
+
+.gpm-band .gpm-chip:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+.gpm-example__result {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.8rem;
+  margin: 0;
+}
+
+.gpm-example__value {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  line-height: 1.1;
+  color: var(--band-accent);
+  font-variant-numeric: tabular-nums;
+  transition: opacity 0.12s ease, transform 0.12s ease;
+}
+
+.gpm-example__value.is-changing {
+  opacity: 0;
+  transform: translateY(0.2rem);
+}
+
+.gpm-example__caption {
+  font-size: 0.95rem;
+  color: var(--band-soft);
+}
+
+.gpm-example__static {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.95rem;
+  color: var(--band-soft);
+}
+
+.gpm-example__static strong {
+  color: #fff;
+}
+
+/* With the script the chips drive the result; without it the static list carries all three values. */
+.gpm-example__chips,
+.gpm-example__result,
+.is-interactive .gpm-example__static {
+  display: none;
+}
+
+.is-interactive .gpm-example__chips {
+  display: flex;
+}
+
+.is-interactive .gpm-example__result {
+  display: flex;
+}
+
+.gpm-example__note {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--band-soft);
+}
+
+.gpm-band__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.gpm-band__actions .link {
+  color: #fff;
+}
+
+.gpm-band__actions .link:hover {
+  color: var(--band-accent);
+}
+
+.gpm-band__open .icon {
+  transition: transform 0.2s ease;
+}
+
+.gpm-band + .home-photos {
+  padding-top: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+@media (min-width: 56rem) {
+  .gpm-band__inner {
+    grid-template-columns: auto minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+    grid-template-areas:
+      'figure copy example'
+      'figure actions example';
+    gap: 0.75rem 2.5rem;
+    align-items: start;
+  }
+
+  .gpm-band__figure { grid-area: figure; align-self: center; }
+  .gpm-band__copy { grid-area: copy; }
+  .gpm-band__actions { grid-area: actions; }
+  .gpm-example { grid-area: example; align-self: center; }
+}
+
+@media (min-width: 56rem) and (max-width: 70rem) {
+  .gpm-band__figure .gpm-relief {
+    font-size: 4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-gpm,
+  .hero-gpm__action .icon,
+  .gpm-band__open .icon,
+  .gpm-example__value {
+    transition: none;
+  }
+}
+
+html.large-text .hero-gpm__figure .gpm-relief {
+  font-size: 2.8rem;
+}
+
+/* Dark theme: the card stays warm white on the photograph; the band already is dark. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .hero-gpm {
+    background: rgb(246 240 227 / 0.97);
+  }
+}
