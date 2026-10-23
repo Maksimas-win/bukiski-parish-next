@@ -1,0 +1,175 @@
+{
+  "title": "Historia cerkwi Narodzenia Chrystusa",
+  "intro": "Od rodzinnej świątyni w dawnym majątku Bukiszki do żywej wspólnoty prawosławnej: dzieje ludzi, utraty i troskliwej odbudowy.",
+  "contentsTitle": "Na tej stronie",
+  "chronologyTitle": "Najważniejsze wydarzenia",
+  "sourcesTitle": "Źródła i świadectwa",
+  "sourceLinkLabel": "Źródła tej części",
+  "studyLabel": "Osobne opracowanie autorskie",
+  "studyDescription": "Praca N. J. Iwanowej poświęcona rodzinie fundatorów cerkwi, majątkowi i jego mieszkańcom. Tekst autorki, odsyłacze do archiwów i szczegółowe informacje historyczne znajdują się w osobnej publikacji w języku rosyjskim.",
+  "studyRead": "Przeczytaj opracowanie N. J. Iwanowej",
+  "archiveTitle": "Wcześniejsze publikacje parafii",
+  "sourceNote": "Tekst opracowano na podstawie badań historycznych N. J. Iwanowej, opublikowanych informacji o Bukiszkach i materiałów parafialnych. Informacje o pracach z ostatnich lat przekazała parafia. Daty zakupu majątku, odbudowy budynku i wznowienia nabożeństw dotyczą odrębnych wydarzeń.",
+  "photos": {
+    "before": "Cerkiew przed odbudową. Fotografia ze zbiorów parafialnych.",
+    "after": "Odbudowana cerkiew Narodzenia Chrystusa w Bukiszkach."
+  },
+  "sections": [
+    {
+      "id": "place",
+      "title": "Świątynia w dziejach Bukiszek",
+      "paragraphs": [
+        "Niedaleko Wilna, w Bukiszkach, stoi niewielka prawosławna cerkiew Narodzenia Chrystusa. Jej historia łączy dzieje dawnego majątku, pamięć o rodzinie fundatorów i życie dzisiejszej parafii. W ciągu swoich dziejów świątynia przetrwała zmiany właścicieli otaczającego ją majątku, wojnę, długie użytkowanie do celów gospodarczych i odbudowę.",
+        "Dziś wierni przychodzą tu na nabożeństwa, chrzczą dzieci, zawierają małżeństwa, modlą się za bliskich i wspominają zmarłych. Za znajomym obrazem czynnej cerkwi kryje się jednak trud kilku pokoleń. Aby zrozumieć znaczenie tego miejsca, warto pamiętać zarówno o tych, którzy wznieśli świątynię, jak i o tych, którzy po dziesięcioleciach pomogli przywrócić jej pierwotne przeznaczenie."
+      ],
+      "sources": [
+        "study",
+        "parish",
+        "municipality"
+      ]
+    },
+    {
+      "id": "founders",
+      "title": "Majątek i rodzina fundatorów",
+      "paragraphs": [
+        "Historia cerkwi wiąże się z Aleksandrem Michajłowiczem Bożerianowem i jego żoną Praskowią Nikołajewną. Według badań archiwalnych N. J. Iwanowej to właśnie Praskowia Nikołajewna nabyła majątek Bukiszki w 1866 roku. Data ta oznacza przejście majątku w ręce rodziny; nie należy jej uznawać za ustalony rok budowy cerkwi.",
+        "W drugiej połowie XIX wieku z inicjatywy Aleksandra Michajłowicza w majątku wzniesiono świątynię. Służyła rodzinnej modlitwie i stała się miejscem pamięci o fundatorach. Pierwotnie cerkiew poświęcono Opiece Przenajświętszej Bogurodzicy.",
+        "Cerkiew stanowiła część zespołu dworskiego. W opracowaniu opisano dom właścicieli, zabudowania gospodarcze, park i jeziora. Z biegiem czasu zmieniały się zarówno miejscowość, jak i otaczający ją krajobraz, lecz świątynia zachowała związek z dawnymi dziejami tego miejsca. Szczegóły dotyczące właścicieli majątku i ich potomków przedstawiono w osobnej pracy N. J. Iwanowej."
+      ],
+      "sources": [
+        "study",
+        "municipality"
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Cerkiew Opieki Bogurodzicy: modlitwa i pamięć",
+      "paragraphs": [
+        "Cerkiew zbudowano w stylu neobizantyjskim. Niewielka bryła, łukowe otwory i zwieńczenie kopułą nadawały świątyni dworskiej odrębny, rozpoznawalny wygląd. Wezwanie Opieki Przenajświętszej Bogurodzicy wyrażało zakorzenioną w tradycji prawosławnej modlitwę o Jej wstawiennictwo i pomoc.",
+        "Pierwotnie była to cerkiew domowa. Znajdował się w niej grobowiec rodzinny Bożerianowów: modlitwa żyjących łączyła się tu z pamięcią o zmarłych członkach rodziny. Świątynia miała zatem znaczenie zarówno liturgiczne, jak i pamiątkowe.",
+        "Wiadomości o układzie majątku i rodzinnych pochówkach przetrwały w dokumentach, opracowaniach badawczych i wspomnieniach miejscowych mieszkańców. Świadectwa te pozwalają dostrzec za architekturą ludzkie losy. Tam, gdzie nie ustalono dokładnej daty lub okoliczności, sama pamięć o miejscu wymaga uważnego i pełnego troski podejścia."
+      ],
+      "sources": [
+        "study"
+      ]
+    },
+    {
+      "id": "trials",
+      "title": "Wojna i lata zaniedbania",
+      "paragraphs": [
+        "W XX wieku dawny sposób życia majątku uległ zmianie. Budynki dworskie otrzymały nowe przeznaczenie, a los cerkwi okazał się szczególnie trudny. Według informacji samorządu rejonu wileńskiego świątynia została poważnie uszkodzona podczas II wojny światowej.",
+        "Następnie przez wiele lat służyła jako magazyn placówki oświatowej. Opracowanie historyczne opisuje zniszczenie rodzinnego grobowca i ustawienie generatora w podziemiu. Wibracje, wilgoć i brak należytej opieki pogarszały stan budynku. Budowla popadała w ruinę i przez wiele lat nie była wykorzystywana do odprawiania nabożeństw.",
+        "Zachowane fotografie ukazują uszkodzone ściany, dach i sklepienia wystawione na działanie czasu i niepogody. Pozwalają wyobrazić sobie skalę późniejszej odbudowy. Ten okres historii pozostaje przede wszystkim świadectwem utraty świątyni oraz przypomnieniem o odpowiedzialności, jakiej wymaga ochrona dziedzictwa kulturowego i duchowego."
+      ],
+      "sources": [
+        "municipality",
+        "study"
+      ],
+      "photo": "before"
+    },
+    {
+      "id": "restoration",
+      "title": "Odzyskanie i odbudowa",
+      "paragraphs": [
+        "Pod koniec lat 90. XX wieku budynek zwrócono Kościołowi Prawosławnemu. Rozpoczął się nowy etap jego dziejów: należało zachować to, co ocalało, i przywrócić możliwość sprawowania nabożeństw. Materiały parafialne datują początek prac restauratorskich na 2002 rok.",
+        "Szczególne miejsce w odrodzeniu cerkwi zajmuje metropolita Chryzostom (Martiszkin), którego troska i wytrwałe zaangażowanie pomogły doprowadzić to dzieło do skutku. Prace opierały się na zachowanych informacjach o wyglądzie budynku i rysunkach przygotowanych do odbudowy. Przywrócenie świątyni do życia wymagało czasu, środków i pracy ludzi, którym jej los nie był obojętny.",
+        "Odbudowa budynku i powrót regularnej modlitwy stanowiły kolejne etapy. Pracom budowlanym towarzyszył szerszy cel: umożliwić świątyni, by znów stała się miejscem spotkań wspólnoty, sprawowania sakramentów i modlitwy za tych, których życie było związane z Bukiszkami."
+      ],
+      "sources": [
+        "study",
+        "parish"
+      ]
+    },
+    {
+      "id": "worship",
+      "title": "Rok 2011: początek nowego życia parafialnego",
+      "paragraphs": [
+        "Latem 2011 roku w odbudowanej cerkwi wznowiono życie liturgiczne. Według świadectwa parafii nabożeństwa rozpoczęły się z błogosławieństwa arcybiskupa Innocentego. Od tego czasu posługę duszpasterską pełni tu ksiądz Maksim Krutolevič.",
+        "Odrodzona świątynia nosi wezwanie Narodzenia Chrystusa. Pamięć o pierwotnym wezwaniu Opieki Bogurodzicy pozostaje częścią jej historii. Dzisiejsze wezwanie kieruje wspólnotę ku ewangelicznemu wydarzeniu Narodzenia Zbawiciela, a sam powrót do życia kościelnego stał się dla tego miejsca nowym początkiem.",
+        "Wokół nabożeństw stopniowo kształtowała się codzienność parafii. Niedzielna Liturgia, wielkie święta cerkiewne, chrzty, śluby oraz modlitwa za żyjących i zmarłych ponownie wypełniły odbudowany budynek jego najważniejszym sensem. Do cerkwi zaczęły przychodzić rodziny, dla których stała się ona bliskim miejscem modlitwy i duchowego wsparcia."
+      ],
+      "sources": [
+        "parish"
+      ],
+      "photo": "after"
+    },
+    {
+      "id": "care",
+      "title": "Troska o świątynię trwa",
+      "paragraphs": [
+        "Po wznowieniu nabożeństw opieka nad budynkiem i jego otoczeniem stała się stałym, wspólnym dziełem parafii i dobroczyńców. W 2021 roku wymieniono okładzinę schodów przed wejściem. W 2023 roku odnowiono uszkodzone ceglane elementy wieżyczek po południowej i północnej stronie cerkwi. W 2024 roku pomalowano ściany w prezbiterium.",
+        "W 2026 roku zakończono malowanie dachu, odnowiono ściany i część kopułową wnętrza, prezbiterium i przedsionek oraz pomalowano drzwi wejściowe. Prace te służą zachowaniu budynku i zapewnieniu odpowiednich warunków do sprawowania nabożeństw. Za każdym takim przedsięwzięciem stoją konkretni ludzie, ich czas, środki i dobrowolna praca.",
+        "Trwa również urządzanie pomieszczeń służących spotkaniom parafialnym. Świątynia potrzebuje regularnej opieki, dlatego jej historia obejmuje nie tylko wielkie etapy odbudowy, lecz także codzienną troskę: w porę zauważone uszkodzenie, uporządkowany teren czy pomoc w przygotowaniu święta."
+      ],
+      "sources": [
+        "parish-memory"
+      ]
+    },
+    {
+      "id": "today",
+      "title": "Żywa historia parafii",
+      "paragraphs": [
+        "Dziś cerkiew Narodzenia Chrystusa w Bukiszkach gromadzi parafian i gości przyjeżdżających z okolicy i z Wilna. Sprawowane są tu nabożeństwa, sakramenty i posługi religijne, udzielana jest pomoc duszpasterska. Aktualny harmonogram pozwala wcześniej sprawdzić godzinę nabożeństwa i przygotować się do wizyty.",
+        "Parafia zachowuje historyczne fotografie i materiały, opowiada o wierze i życiu Kościoła na swojej stronie internetowej oraz w mediach społecznościowych. To dalszy ciąg tej samej troski o pamięć: udostępnianie dziejów cerkwi zarówno osobom już z nią związanym, jak i tym, które dopiero poznają to miejsce.",
+        "W losach cerkwi w Bukiszkach splatają się budowanie, utrata i odbudowa. Zachowywać tę historię znaczy pamiętać o fundatorach, dziękować tym, którzy pomogli przywrócić świątynię do życia, i troszczyć się o ludzi przychodzących do niej dzisiaj. Dzieje parafii toczą się dalej w modlitwie, wspólnocie i dobrych czynach."
+      ],
+      "sources": [
+        "parish",
+        "parish-memory"
+      ]
+    }
+  ],
+  "timeline": [
+    [
+      "1866",
+      "Zakup majątku",
+      "Praskowia Nikołajewna Bożerianowa nabywa Bukiszki."
+    ],
+    [
+      "Druga połowa XIX wieku",
+      "Cerkiew Opieki Bogurodzicy",
+      "W majątku powstaje cerkiew domowa z rodzinnym grobowcem."
+    ],
+    [
+      "XX wiek",
+      "Zniszczenia i zaniedbanie",
+      "Uszkodzenia wojenne i wieloletnie wykorzystywanie budynku jako magazynu."
+    ],
+    [
+      "2002",
+      "Prace restauratorskie",
+      "Początek odbudowy według parafialnych materiałów historycznych."
+    ],
+    [
+      "2011",
+      "Wznowienie nabożeństw",
+      "Latem rozpoczyna się nowy okres życia liturgicznego cerkwi Narodzenia Chrystusa."
+    ],
+    [
+      "2021–2026",
+      "Dalsza troska o świątynię",
+      "Remont wejścia i wieżyczek, odnowienie prezbiterium, dachu i malowanie wnętrza."
+    ]
+  ],
+  "sources": [
+    {
+      "id": "study",
+      "label": "N. J. Iwanowa. «Букишские помещики Божерьяновы»",
+      "path": "/ru/library/istoriya-o-hrame.html"
+    },
+    {
+      "id": "parish",
+      "label": "Opracowanie parafialne «Храм в Букишках — история веры и памяти»",
+      "path": "/ru/library/o-nashem-hrame.html"
+    },
+    {
+      "id": "municipality",
+      "label": "Samorząd rejonu wileńskiego: zarys historii gminy Awiżenie",
+      "url": "https://vrsa.lt/administracine-informacija/seniunijos/3/avizieniu-1"
+    },
+    {
+      "id": "parish-memory",
+      "label": "Informacje parafii o życiu liturgicznym i wykonanych pracach w latach 2021–2026"
+    }
+  ]
+}

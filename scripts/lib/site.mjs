@@ -30,7 +30,7 @@ function resolveBasePath(value) {
 }
 
 export async function loadSite(env = process.env) {
-  const [settings, locales, pages, assets, documents, sourceLinks, rawSchedule, imageManifest, photos, historyStory, liturgicalTerms, scheduleAdditions, titleOverrides, descriptionOverrides, template] = await Promise.all([
+  const [settings, locales, pages, assets, documents, sourceLinks, rawSchedule, imageManifest, photos, historyStory, historyTexts, liturgicalTerms, scheduleAdditions, titleOverrides, descriptionOverrides, template] = await Promise.all([
     readJSON('settings.json'),
     readJSON('locales.json'),
     readJSON('source-pages.json'),
@@ -41,6 +41,7 @@ export async function loadSite(env = process.env) {
     readJSON('image-manifest.json'),
     readJSON('photos.json'),
     readJSON('stories/istoriya-o-hrame.json'),
+    Promise.all(SITE_LANGUAGES.map(lang => readJSON(`history/${lang}.json`))),
     readJSON('liturgical-terms.json'),
     readJSON('schedule-additions.json'),
     readJSON('title-overrides.json'),
@@ -89,6 +90,8 @@ export async function loadSite(env = process.env) {
     photos,
     /** Articles shown with a dedicated layout, by source URL. */
     stories: new Map([[historyStory.source, historyStory]]),
+    /** Complete parish history, distinct from preserved original-language studies. */
+    histories: Object.fromEntries(SITE_LANGUAGES.map((lang, index) => [lang, historyTexts[index]])),
     /** Readable titles for articles whose old <title> was in capitals; see content/title-overrides.json. */
     titleOverrides: titleOverrides.titles,
     /** Editorial descriptions without changing the preserved source records. */

@@ -333,9 +333,9 @@
     "source": "https://bukiski-hram.net/istoriya-o-hrame",
     "status": 200,
     "language": "ru",
-    "title": "Псковские и Виленские помещики Божеряновы",
+    "title": "Букишские помещики Божерьяновы",
     "target": "/ru/library/istoriya-o-hrame.html",
-    "archive": "/ru/library/istoriya-o-hrame.html",
+    "archive": "/archive/fd23a11c4d305e90.html",
     "textCharacters": 9530,
     "contentHash": "37ceba6c2cb83c59",
     "strategy": "301-on-old-host"

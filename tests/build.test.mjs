@@ -359,14 +359,19 @@ test('The illustrated history keeps the source wording and shows the photographs
   const sources = await readJSON('content/source-pages.json');
   const source = sources.find(candidate => candidate.url === historyStory.source);
   const texts = new Set(source.blocks.map(block => block.text));
-  // Every sentence of the story comes verbatim from the source page.
+  // The owner changed only these three header fields. The historical body,
+  // author and references still come verbatim from the preserved publication.
   const strings = [];
   const walk = (value, key) => {
     if (typeof value === 'string') { if (!['source', 'heroPhoto', 'id', 'icon', 'before', 'web', 'thumb'].includes(key) && key !== 'caption') strings.push(value); }
     else if (Array.isArray(value)) value.forEach(item => walk(item, key));
     else if (value && typeof value === 'object') for (const [name, item] of Object.entries(value)) if (name !== 'restoration' && name !== 'caption') walk(item, name);
   };
-  walk(historyStory);
+  const { kicker, title, subtitle, ...authorContent } = historyStory;
+  assert.equal(title, 'Букишские помещики Божерьяновы');
+  assert.equal(kicker, 'Авторское исследование Н. Я. Ивановой');
+  assert.equal(subtitle, 'Семья основателей храма и история имения Букишки');
+  walk(authorContent);
   for (const text of strings) assert.ok(texts.has(text), `Not in the source: ${text.slice(0, 60)}`);
   for (const stat of historyStory.chapters.flatMap(chapter => chapter.stats || [])) assert.ok(texts.has(String(stat.value)));
   for (const text of historyStory.decorative) assert.ok(!/[\p{L}]{3,}/u.test(text), `Only glyphs may be left out: ${text}`);
@@ -380,6 +385,30 @@ test('The illustrated history keeps the source wording and shows the photographs
     assert.ok(await exists(resolve(dist, photo.web)), photo.web);
   }
   assert.doesNotMatch(story, / style=/, 'no inline styles under the CSP');
+});
+
+test('Every language shows the complete parish history separately from the author study', async () => {
+  const reference = await readJSON('content/history/ru.json');
+  for (const lang of settings.locales) {
+    const history = await readJSON(`content/history/${lang}.json`);
+    const output = await page(`/${lang}/history.html`);
+    assert.deepEqual(history.sections.map(section => section.id), reference.sections.map(section => section.id), lang);
+    assert.deepEqual(history.timeline.map(item => item[0].match(/\d{4}/g)), reference.timeline.map(item => item[0].match(/\d{4}/g)), lang);
+    assert.ok(output.includes(`<h1>${escapeHTML(history.title)}</h1>`), lang);
+    for (const section of history.sections) {
+      assert.ok(output.includes(`href="#${section.id}"`), `${lang}: contents link`);
+      for (const paragraph of section.paragraphs) assert.ok(output.includes(`<p>${escapeHTML(paragraph)}</p>`), `${lang}: full static narrative`);
+      for (const id of section.sources) assert.ok(history.sources.some(source => source.id === id), `${lang}: ${id}`);
+    }
+    assert.ok(output.includes(`href="${base}/ru/library/istoriya-o-hrame.html"`), lang);
+    assert.ok(output.includes(escapeHTML(historyStory.title)), lang);
+    assert.ok(!output.includes(escapeHTML(historyStory.lead)), 'the original study is a separate article');
+  }
+  const migration = await readJSON('content/migration.json');
+  const study = migration.find(record => record.source === historyStory.source);
+  assert.notEqual(study.archive, study.target, 'original author headings retain their own archive');
+  assert.match(await page(study.archive), /name="robots" content="noindex,follow"/);
+  assert.ok((await page(study.target)).includes(`href="${base}${study.archive}"`));
 });
 
 test('Polish, German and Ukrainian pages exist and every service title is translated', async () => {
@@ -454,7 +483,7 @@ test('Structured data describes only confirmed parish facts and matches the page
   assert.ok(!graph.some(node => node['@type'] === 'Event'), 'no events are invented');
   const article = await page('/ru/library/istoriya-o-hrame.html');
   const articleGraph = JSON.parse(article.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'];
-  assert.equal(articleGraph.find(node => node['@type'] === 'Article').headline, 'Псковские и Виленские помещики Божеряновы');
+  assert.equal(articleGraph.find(node => node['@type'] === 'Article').headline, 'Букишские помещики Божерьяновы');
   assert.equal(articleGraph.find(node => node['@type'] === 'BreadcrumbList').itemListElement.length, 3);
   const noindex = pages.find(({ file, html }) => file.startsWith('archive/') && /noindex/.test(html));
   assert.ok(noindex && !noindex.html.includes('application/ld+json'), 'archive copies carry no structured data');

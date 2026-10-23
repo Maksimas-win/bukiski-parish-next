@@ -2,8 +2,8 @@
 //
 // Each source page gets a `target` (where a visitor of the old URL should land)
 // and an `archive` (where the preserved original text can be read). For library
-// articles these are the same page; an extra /archive/ copy exists only when the
-// target is a rewritten core section, so the old wording is not lost.
+// articles these are usually the same page; a separate /archive/ copy also
+// preserves original wording when a study receives owner-approved editorial metadata.
 
 import { createHash } from 'node:crypto';
 import { CORE_PAGES } from './site.mjs';
@@ -98,7 +98,7 @@ export function createCatalog(site) {
       target,
       /** True when the preserved text is published at `target` itself. */
       ownsTarget,
-      archive: ownsTarget ? target : `/archive/${hash(page.url)}.html`,
+      archive: ownsTarget && !site.stories.get(page.url)?.preserveOriginal ? target : `/archive/${hash(page.url)}.html`,
       cover,
       gallery: cover ? images.slice(1) : images,
       minutes: Math.max(1, Math.round(page.text.split(/\s+/).filter(Boolean).length / WORDS_PER_MINUTE))

@@ -126,13 +126,13 @@ function addCorePages() {
       addRoute({
         lang,
         pageId,
-        title: pageId === 'home' ? t.name : t[pageId],
-        description: pageId === 'home' ? t.heroIntro : (t[`${pageId}Intro`] || t[`${pageId}Teaser`] || t[pageId]),
+        title: pageId === 'home' ? t.name : (pageId === 'history' ? site.histories[lang].title : t[pageId]),
+        description: pageId === 'home' ? t.heroIntro : (pageId === 'history' ? site.histories[lang].intro : (t[`${pageId}Intro`] || t[`${pageId}Teaser`] || t[pageId])),
         body: bodies[pageId](),
         path: site.route(lang, pageId),
         trail: pageId === 'home' ? undefined : [{ name: t[pageId], path: site.route(lang, pageId) }],
         alternates: site.languages.map(code => ({ lang: code, path: site.route(code, pageId) })),
-        extraDialogs: pageId === 'gallery' ? galleryLightbox(t, lang) : ''
+        extraDialogs: ['gallery', 'history'].includes(pageId) ? galleryLightbox(t, lang) : ''
       });
     }
   }
@@ -200,11 +200,16 @@ function addArticlePages() {
         path: entry.target,
         alternates: orgTranslations(entry)
       });
-    } else {
-      // The old wording of a section that now has a rewritten page.
+    }
+    if (!entry.ownsTarget || entry.archive !== entry.target) {
+      // Preserve original headings as well as body text when editorial metadata changes.
+      const archiveEntry = site.stories.get(entry.url)?.preserveOriginal
+        ? { ...entry, title: entry.page.blocks.find(block => block.tag === 'h1')?.text || entry.page.title.split(' | ')[0].trim() }
+        : entry;
       addRoute({
         ...common,
-        body: articlePage(site, catalog, entry, t, uiLocale, { archiveOnly: true }),
+        title: archiveEntry.title,
+        body: articlePage(site, catalog, archiveEntry, t, uiLocale, { archiveOnly: true }),
         path: entry.archive,
         noindex: true
       });

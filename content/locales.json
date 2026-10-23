@@ -49,33 +49,38 @@
     "historyTeaser": "Память места, восстановление храма и возвращение приходской жизни.",
     "notesTeaser": "Подайте записку онлайн или подготовьте её к печати.",
     "libraryTeaser": "Сохранённые статьи о вере, богослужении и христианской жизни.",
-    "historyHeading": "Храм, к которому возвращаются",
-    "historyIntro": "История храма в Букишках связана с семьёй Божеряновых, годами запустения и трудом людей, вернувших святыню к жизни.",
+    "historyHeading": "История храма Рождества Христова",
+    "historyIntro": "От семейной святыни в старом имении Букишки до живого православного прихода: история людей, утрат и бережного восстановления.",
     "timeline": [
       [
         "1866",
-        "Имение Букишки",
-        "Прасковья Николаевна Божерянова приобретает имение Букишки, позднее признанное родовым имением семьи."
+        "Приобретение имения",
+        "Прасковья Николаевна Божерянова приобретает Букишки."
       ],
       [
         "Вторая половина XIX века",
-        "Строительство храма",
-        "Храм возведён по замыслу генерала Александра Михайловича Божерянова и освящён в честь Покрова Пресвятой Богородицы. Точная дата строительства требует архивной проверки."
+        "Покровский храм",
+        "В усадьбе возведена домовая церковь с фамильной усыпальницей."
       ],
       [
         "XX век",
-        "Годы забвения",
-        "После революции храм был закрыт, родовая усыпальница осквернена, а в советское время здание использовали как склад."
+        "Повреждения и запустение",
+        "Военное разрушение и длительное использование здания как склада."
       ],
       [
         "2002",
-        "Восстановление",
-        "Начались работы по восстановлению храма."
+        "Восстановительные работы",
+        "Начало восстановления по приходским историческим материалам."
       ],
       [
         "2011",
         "Возвращение богослужений",
-        "Летом возобновилась богослужебная жизнь."
+        "Летом начинается новая богослужебная жизнь храма Рождества Христова."
+      ],
+      [
+        "2021–2026",
+        "Продолжение заботы",
+        "Ремонт входа и башенок, обновление алтаря, кровли и внутренней окраски."
       ]
     ],
     "historicalSource": "Источник: «Православная Литва», январь 2025, стр. 8",
@@ -391,33 +396,38 @@
     "historyTeaser": "Vietos atmintis, cerkvės atkūrimas ir parapijos gyvenimo atgimimas.",
     "notesTeaser": "Pateikite raštelį internetu arba paruoškite jį spausdinti.",
     "libraryTeaser": "Išsaugoti straipsniai apie tikėjimą, pamaldas ir krikščionišką gyvenimą.",
-    "historyHeading": "Cerkvė, į kurią sugrįžtama",
-    "historyIntro": "Bukiškio cerkvės istorija susijusi su Božerianovų šeima, apleidimo metais ir žmonėmis, sugrąžinusiais jai gyvenimą.",
+    "historyHeading": "Kristaus Gimimo bažnyčios istorija",
+    "historyIntro": "Nuo šeimos šventovės senajame Bukiškio dvare iki gyvos stačiatikių parapijos: žmonių, praradimų ir rūpestingo atkūrimo istorija.",
     "timeline": [
       [
         "1866",
-        "Bukiškio dvaras",
-        "Praskovja Nikolajevna Božerianova įsigyja Bukiškio dvarą, vėliau pripažintą šeimos giminės dvaru."
+        "Dvaro įsigijimas",
+        "Praskovja Nikolajevna Božerianova įsigyja Bukiškio dvarą."
       ],
       [
-        "XIX a. antroji pusė",
-        "Cerkvės statyba",
-        "Cerkvė pastatyta generolo Aleksandro Michailovičiaus Božerianovo sumanymu ir pašventinta Švenčiausiosios Dievo Gimdytojos Globos garbei. Tiksli statybos data dar turi būti patikrinta archyvuose."
+        "XIX amžiaus antroji pusė",
+        "Dievo Motinos Globos bažnyčia",
+        "Dvare pastatoma privati šeimos bažnyčia su laidojimo kripta."
       ],
       [
-        "XX a.",
-        "Užmaršties metai",
-        "Po revoliucijos cerkvė buvo uždaryta, giminės kapavietė išniekinta, o sovietmečiu pastatas naudotas kaip sandėlis."
+        "XX amžius",
+        "Sugriovimai ir apleidimas",
+        "Karo padaryta žala ir ilgalaikis pastato naudojimas sandėliui."
       ],
       [
         "2002",
-        "Atstatymas",
-        "Prasidėjo cerkvės atstatymo darbai."
+        "Atkūrimo darbai",
+        "Parapijos istorinėje medžiagoje nurodyta atkūrimo pradžia."
       ],
       [
         "2011",
-        "Pamaldų atgimimas",
-        "Vasarą atsinaujino liturginis gyvenimas."
+        "Pamaldų atnaujinimas",
+        "Vasarą Kristaus Gimimo bažnyčioje prasideda naujas liturginio gyvenimo etapas."
+      ],
+      [
+        "2021–2026",
+        "Tęstinė priežiūra",
+        "Įėjimo ir bokštelių remontas, altoriaus erdvės, stogo ir vidaus dažymas."
       ]
     ],
     "historicalSource": "Šaltinis: „Православная Литва“, 2025 m. sausis, p. 8",
@@ -733,33 +743,38 @@
     "historyTeaser": "The memory of this place, its restoration and the return of parish life.",
     "notesTeaser": "Send a prayer request online or prepare it for printing.",
     "libraryTeaser": "Preserved articles about faith, worship and Christian life.",
-    "historyHeading": "A church to come home to",
-    "historyIntro": "The history of the church in Bukiškis is linked to the Bozheryanov family, years of neglect and the people who brought it back to life.",
+    "historyHeading": "History of the Church of the Nativity of Christ",
+    "historyIntro": "From a family place of worship on the old Bukiškis estate to a living Orthodox parish: a story of people, loss and careful restoration.",
     "timeline": [
       [
         "1866",
-        "The Bukiškis estate",
-        "Praskovya Nikolaevna Bozheryanova buys the Bukiškis estate, later recognised as the family estate."
+        "Acquisition of the estate",
+        "Praskovya Nikolayevna Bozheryanova purchases Bukiškis."
       ],
       [
-        "Second half of the 19th century",
-        "Building the church",
-        "The church is built on the initiative of General Alexander Mikhailovich Bozheryanov and consecrated in honour of the Protection of the Mother of God. The exact date of construction still needs archival confirmation."
+        "Second half of the nineteenth century",
+        "Church of the Protection",
+        "A private family church with a burial vault is built on the estate."
       ],
       [
-        "20th century",
-        "Years of neglect",
-        "After the revolution the church was closed and the family crypt desecrated; in Soviet times the building was used as a warehouse."
+        "Twentieth century",
+        "Damage and neglect",
+        "Wartime damage and many years of use as a storehouse."
       ],
       [
         "2002",
-        "Restoration",
-        "Restoration work on the church began."
+        "Restoration work",
+        "The beginning of restoration, as recorded in parish historical accounts."
       ],
       [
         "2011",
-        "Services resume",
-        "Liturgical life resumed in the summer."
+        "Worship resumes",
+        "A new chapter of worship at the Church of the Nativity of Christ begins in the summer."
+      ],
+      [
+        "2021–2026",
+        "Continuing care",
+        "Repairs to the entrance and turrets, and the repainting of the sanctuary, roof and interior."
       ]
     ],
     "historicalSource": "Source: Pravoslavnaya Litva, January 2025, p. 8",
@@ -1075,33 +1090,38 @@
     "historyTeaser": "Pamięć miejsca, odbudowa cerkwi i powrót życia parafialnego.",
     "notesTeaser": "Złóż karteczkę z imionami przez internet lub przygotuj ją do wydruku.",
     "libraryTeaser": "Zachowane artykuły o wierze, nabożeństwach i życiu chrześcijańskim.",
-    "historyHeading": "Cerkiew, do której się wraca",
-    "historyIntro": "Historia cerkwi w Bukiszkach wiąże się z rodziną Bożerianowów, latami zapomnienia i pracą ludzi, którzy przywrócili świątynię do życia.",
+    "historyHeading": "Historia cerkwi Narodzenia Chrystusa",
+    "historyIntro": "Od rodzinnej świątyni w dawnym majątku Bukiszki do żywej wspólnoty prawosławnej: dzieje ludzi, utraty i troskliwej odbudowy.",
     "timeline": [
       [
         "1866",
-        "Majątek Bukiszki",
-        "Praskowia Nikołajewna Bożerianowa kupuje majątek Bukiszki, później uznany za majątek rodowy."
+        "Zakup majątku",
+        "Praskowia Nikołajewna Bożerianowa nabywa Bukiszki."
       ],
       [
         "Druga połowa XIX wieku",
-        "Budowa cerkwi",
-        "Cerkiew zostaje zbudowana z inicjatywy generała Aleksandra Michajłowicza Bożerianowa i poświęcona ku czci Opieki Przenajświętszej Bogurodzicy. Dokładna data budowy wymaga potwierdzenia w archiwach."
+        "Cerkiew Opieki Bogurodzicy",
+        "W majątku powstaje cerkiew domowa z rodzinnym grobowcem."
       ],
       [
         "XX wiek",
-        "Lata zapomnienia",
-        "Po rewolucji cerkiew zamknięto, a rodową kryptę zbezczeszczono; w czasach sowieckich budynek służył jako magazyn."
+        "Zniszczenia i zaniedbanie",
+        "Uszkodzenia wojenne i wieloletnie wykorzystywanie budynku jako magazynu."
       ],
       [
         "2002",
-        "Odbudowa",
-        "Rozpoczęto prace przy odbudowie cerkwi."
+        "Prace restauratorskie",
+        "Początek odbudowy według parafialnych materiałów historycznych."
       ],
       [
         "2011",
-        "Powrót nabożeństw",
-        "Latem odnowiło się życie liturgiczne."
+        "Wznowienie nabożeństw",
+        "Latem rozpoczyna się nowy okres życia liturgicznego cerkwi Narodzenia Chrystusa."
+      ],
+      [
+        "2021–2026",
+        "Dalsza troska o świątynię",
+        "Remont wejścia i wieżyczek, odnowienie prezbiterium, dachu i malowanie wnętrza."
       ]
     ],
     "historicalSource": "Źródło: „Prawosławna Litwa” (ros.), styczeń 2025, s. 8",
@@ -1417,33 +1437,38 @@
     "historyTeaser": "Die Erinnerung an diesen Ort, die Wiederherstellung der Kirche und die Rückkehr des Gemeindelebens.",
     "notesTeaser": "Reichen Sie ein Gebetsanliegen online ein oder bereiten Sie es zum Ausdrucken vor.",
     "libraryTeaser": "Bewahrte Artikel über Glauben, Gottesdienst und christliches Leben.",
-    "historyHeading": "Eine Kirche, zu der man zurückkehrt",
-    "historyIntro": "Die Geschichte der Kirche in Bukiškis ist mit der Familie Boscherjanow verbunden, mit Jahren des Verfalls und mit den Menschen, die das Heiligtum wieder zum Leben erweckt haben.",
+    "historyHeading": "Geschichte der Kirche Christi Geburt",
+    "historyIntro": "Vom Familienheiligtum auf dem alten Gut Bukiškis zu einer lebendigen orthodoxen Gemeinde: eine Geschichte von Menschen, Verlust und behutsamem Wiederaufbau.",
     "timeline": [
       [
         "1866",
-        "Das Gut Bukiškis",
-        "Praskowja Nikolajewna Boscherjanowa kauft das Gut Bukiškis, das später als Familiengut anerkannt wird."
+        "Erwerb des Gutes",
+        "Praskowja Nikolajewna Boscherjanowa erwirbt Bukiškis."
       ],
       [
         "Zweite Hälfte des 19. Jahrhunderts",
-        "Bau der Kirche",
-        "Die Kirche wird auf Initiative von General Alexander Michailowitsch Boscherjanow erbaut und zu Ehren des Schutzes der Gottesgebärerin geweiht. Das genaue Baudatum muss noch archivalisch bestätigt werden."
+        "Kirche zum Schutz der Gottesmutter",
+        "Auf dem Gut wird eine Hauskirche mit Familiengruft errichtet."
       ],
       [
         "20. Jahrhundert",
-        "Jahre des Verfalls",
-        "Nach der Revolution wurde die Kirche geschlossen und die Familiengruft geschändet; in sowjetischer Zeit diente das Gebäude als Lager."
+        "Beschädigung und Verfall",
+        "Kriegsschäden und langjährige Nutzung des Gebäudes als Lager."
       ],
       [
         "2002",
-        "Wiederherstellung",
-        "Die Arbeiten zur Wiederherstellung der Kirche begannen."
+        "Wiederherstellungsarbeiten",
+        "Beginn der Wiederherstellung nach den historischen Unterlagen der Gemeinde."
       ],
       [
         "2011",
-        "Rückkehr der Gottesdienste",
-        "Im Sommer lebte das gottesdienstliche Leben wieder auf."
+        "Wiederaufnahme der Gottesdienste",
+        "Im Sommer beginnt das neue gottesdienstliche Leben in der Kirche Christi Geburt."
+      ],
+      [
+        "2021–2026",
+        "Fortgesetzte Pflege",
+        "Instandsetzung des Eingangs und der Türmchen, Erneuerung des Altarraums sowie Dach- und Innenanstriche."
       ]
     ],
     "historicalSource": "Quelle: „Prawoslawnaja Litwa“ (russ.), Januar 2025, S. 8",
@@ -1759,33 +1784,38 @@
     "historyTeaser": "Пам’ять місця, відновлення храму і повернення парафіяльного життя.",
     "notesTeaser": "Подайте записку онлайн або підготуйте її до друку.",
     "libraryTeaser": "Збережені статті про віру, богослужіння і християнське життя.",
-    "historyHeading": "Храм, до якого повертаються",
-    "historyIntro": "Історія храму в Букішках пов’язана з родиною Божерянових, роками запустіння і працею людей, які повернули святиню до життя.",
+    "historyHeading": "Історія храму Різдва Христового",
+    "historyIntro": "Від родинної святині в давньому маєтку Букішки до живої православної парафії: історія людей, втрат і дбайливого відновлення.",
     "timeline": [
       [
         "1866",
-        "Маєток Букішки",
-        "Парасковія Миколаївна Божерянова купує маєток Букішки, згодом визнаний родовим маєтком сім’ї."
+        "Придбання маєтку",
+        "Прасковія Миколаївна Божерянова купує Букішки."
       ],
       [
         "Друга половина XIX століття",
-        "Будівництво храму",
-        "Храм збудовано за задумом генерала Олександра Михайловича Божерянова й освячено на честь Покрови Пресвятої Богородиці. Точна дата будівництва потребує архівного підтвердження."
+        "Покровський храм",
+        "У садибі зведено домову церкву з родинною усипальницею."
       ],
       [
         "XX століття",
-        "Роки забуття",
-        "Після революції храм закрили, родову усипальницю осквернили, а в радянський час будівлю використовували як склад."
+        "Пошкодження і занепад",
+        "Воєнні руйнування та тривале використання будівлі як складу."
       ],
       [
         "2002",
-        "Відновлення",
-        "Розпочалися роботи з відновлення храму."
+        "Відновлювальні роботи",
+        "Початок відновлення за парафіяльними історичними матеріалами."
       ],
       [
         "2011",
-        "Повернення богослужінь",
-        "Улітку відновилося богослужбове життя."
+        "Поновлення богослужінь",
+        "Улітку розпочинається нове богослужбове життя храму Різдва Христового."
+      ],
+      [
+        "2021–2026",
+        "Продовження турботи",
+        "Ремонт входу й башточок, оновлення вівтаря, покрівлі та внутрішнього фарбування."
       ]
     ],
     "historicalSource": "Джерело: «Православная Литва» (рос.), січень 2025, с. 8",

@@ -1,0 +1,175 @@
+{
+  "title": "Kristaus Gimimo bažnyčios istorija",
+  "intro": "Nuo šeimos šventovės senajame Bukiškio dvare iki gyvos stačiatikių parapijos: žmonių, praradimų ir rūpestingo atkūrimo istorija.",
+  "contentsTitle": "Šiame puslapyje",
+  "chronologyTitle": "Svarbiausi etapai",
+  "sourcesTitle": "Šaltiniai ir liudijimai",
+  "sourceLinkLabel": "Skyriaus šaltiniai",
+  "studyLabel": "Atskiras autorinis tyrimas",
+  "studyDescription": "N. J. Ivanovos tyrimas apie bažnyčios steigėjų šeimą, dvarą ir jo gyventojus. Autorės tekstas, archyvinės nuorodos ir išsamesni istoriniai duomenys pateikiami atskiroje publikacijoje rusų kalba.",
+  "studyRead": "Skaityti N. J. Ivanovos tyrimą",
+  "archiveTitle": "Ankstesnės parapijos publikacijos",
+  "sourceNote": "Apžvalga parengta remiantis N. J. Ivanovos istoriniu tyrimu, paskelbtais duomenimis apie Bukiškį ir parapijos medžiaga. Informaciją apie pastarųjų metų darbus pateikė parapija. Dvaro įsigijimas, pastato atkūrimas ir pamaldų atnaujinimas yra skirtingi įvykiai, turintys atskiras datas.",
+  "photos": {
+    "before": "Bažnyčia prieš atkūrimą. Nuotrauka iš parapijos rinkinio.",
+    "after": "Atkurta Kristaus Gimimo bažnyčia Bukiškyje."
+  },
+  "sections": [
+    {
+      "id": "place",
+      "title": "Šventovė Bukiškio istorijoje",
+      "paragraphs": [
+        "Netoli Vilniaus, Bukiškyje, stovi nedidelė stačiatikių Kristaus Gimimo bažnyčia. Jos istorija sieja senojo dvaro likimą, steigėjų šeimos atminimą ir dabartinės parapijos gyvenimą. Per savo istoriją bažnyčia patyrė aplinkinio dvaro savininkų kaitą, karą, ilgus naudojimo ūkinėms reikmėms metus ir atkūrimą.",
+        "Šiandien žmonės čia ateina į pamaldas, krikštija vaikus, tuokiasi, meldžiasi už artimuosius ir mini mirusiuosius. Tačiau už įprasto veikiančios bažnyčios vaizdo slypi kelių kartų darbas. Norint suprasti šios vietos reikšmę, svarbu prisiminti ir tuos, kurie bažnyčią pastatė, ir tuos, kurie po daugelio dešimtmečių padėjo sugrąžinti jai pirminę paskirtį."
+      ],
+      "sources": [
+        "study",
+        "parish",
+        "municipality"
+      ]
+    },
+    {
+      "id": "founders",
+      "title": "Dvaras ir steigėjų šeima",
+      "paragraphs": [
+        "Bažnyčios istorija susijusi su Aleksandru Michailovičiumi Božerianovu ir jo žmona Praskovja Nikolajevna. Remiantis N. J. Ivanovos archyviniu tyrimu, Bukiškio dvarą 1866 metais įsigijo būtent Praskovja Nikolajevna. Ši data žymi dvaro perėjimą šeimos nuosavybėn; jos nereikėtų laikyti nustatyta bažnyčios pastatymo data.",
+        "XIX amžiaus antroje pusėje Aleksandro Michailovičiaus iniciatyva dvare buvo pastatyta bažnyčia. Ji buvo skirta šeimos maldai ir tapo steigėjų atminimo vieta. Iš pradžių bažnyčia buvo pašventinta Švč. Dievo Motinos Globos garbei.",
+        "Bažnyčia buvo dvaro ansamblio dalis. Tyrime aprašomas gyvenamasis dvaro pastatas, ūkiniai statiniai, parkas ir ežerai. Ilgainiui keitėsi ir gyvenvietė, ir aplinkinis kraštovaizdis, tačiau bažnyčia išsaugojo ryšį su ankstyvąja šios vietos istorija. Išsamiau apie dvaro savininkus ir jų palikuonis pasakojama atskirame N. J. Ivanovos darbe."
+      ],
+      "sources": [
+        "study",
+        "municipality"
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Dievo Motinos Globos bažnyčia: malda ir atminimas",
+      "paragraphs": [
+        "Bažnyčia pastatyta neobizantiniu stiliumi. Nedidelis tūris, arkinės angos ir kupolas suteikė dvaro bažnyčiai savitą, atpažįstamą išvaizdą. Pašventinimas Švč. Dievo Motinos Globos garbei išreiškė stačiatikių tradicijai būdingą maldą prašant Jos užtarimo ir pagalbos.",
+        "Iš pradžių tai buvo privati šeimos bažnyčia. Joje buvo įrengta Božerianovų šeimos laidojimo kripta: gyvųjų malda čia jungėsi su mirusių šeimos narių atminimu. Todėl bažnyčia turėjo ir liturginę, ir memorialinę paskirtį.",
+        "Žinios apie dvaro sandarą ir šeimos palaidojimus mus pasiekė per dokumentus, tyrėjų darbą ir vietos gyventojų prisiminimus. Šie liudijimai padeda už architektūros pamatyti žmonių likimus. Ten, kur tiksli data ar aplinkybės nėra nustatytos, pati vietos atmintis ragina elgtis rūpestingai ir atidžiai."
+      ],
+      "sources": [
+        "study"
+      ]
+    },
+    {
+      "id": "trials",
+      "title": "Karas ir apleidimo metai",
+      "paragraphs": [
+        "XX amžiuje ankstesnis dvaro gyvenimas pasikeitė. Dvaro pastatai įgijo naują paskirtį, o bažnyčios likimas buvo ypač sunkus. Vilniaus rajono savivaldybės duomenimis, per Antrąjį pasaulinį karą bažnyčia buvo smarkiai apgadinta.",
+        "Vėliau ji daugelį metų buvo naudojama kaip mokymo įstaigos sandėlis. Istoriniame tyrime aprašytas šeimos laidojimo kriptos išniekinimas ir rūsyje įrengtas generatorius. Vibracija, drėgmė ir tinkamos priežiūros stoka blogino pastato būklę. Pastatas nyko ir daugelį metų nebuvo naudojamas pamaldoms.",
+        "Išlikusiose nuotraukose matyti pažeistos sienos, stogas ir skliautai, neapsaugoti nuo laiko ir nepalankių orų poveikio. Jos leidžia įsivaizduoti vėlesnio atkūrimo mastą. Šis istorijos tarpsnis pirmiausia svarbus kaip šventovės praradimo atminimas ir priminimas, kokios atsakomybės reikalauja kultūrinio bei dvasinio paveldo išsaugojimas."
+      ],
+      "sources": [
+        "municipality",
+        "study"
+      ],
+      "photo": "before"
+    },
+    {
+      "id": "restoration",
+      "title": "Sugrąžinimas ir atkūrimas",
+      "paragraphs": [
+        "XX amžiaus dešimtojo dešimtmečio pabaigoje pastatas buvo grąžintas Stačiatikių Bažnyčiai. Prasidėjo naujas jo istorijos etapas: reikėjo išsaugoti tai, kas išliko, ir vėl sudaryti sąlygas pamaldoms. Parapijos istorinėje medžiagoje atkūrimo darbų pradžia siejama su 2002 metais.",
+        "Ypatinga vieta bažnyčios atgimimo istorijoje tenka metropolitui Chrizostomui (Martiškinui), kurio rūpestis ir nuoseklus dalyvavimas padėjo įgyvendinti šį sumanymą. Darbai buvo grindžiami išlikusiais duomenimis apie pastato išvaizdą ir atkūrimo brėžiniais. Atgimimui prireikė laiko, lėšų ir žmonių, kuriems nedidelės bažnyčios likimas buvo svarbus, darbo.",
+        "Pastato atkūrimas ir nuolatinių pamaldų sugrįžimas buvo vienas po kito sekę etapai. Statybos darbai turėjo platesnį tikslą: suteikti bažnyčiai galimybę vėl tapti bendruomenės susitikimo, sakramentų teikimo ir maldos už tuos, kurių gyvenimas susijęs su Bukiškiu, vieta."
+      ],
+      "sources": [
+        "study",
+        "parish"
+      ]
+    },
+    {
+      "id": "worship",
+      "title": "2011 metai: naujo parapijos gyvenimo pradžia",
+      "paragraphs": [
+        "2011 metų vasarą atkurtoje bažnyčioje vėl prasidėjo pamaldos. Parapijos liudijimu, jos pradėtos arkivyskupo Inokentijaus palaiminimu. Nuo tada čia tarnauja kunigas Maksim Krutolevič.",
+        "Atgimusi bažnyčia pašvęsta Kristaus Gimimui. Pirminis pašventinimas Dievo Motinos Globos garbei lieka jos istorijos dalimi. Dabartinis vardas kreipia parapiją į Evangelijoje pasakojamą Išganytojo gimimą, o pats bažnytinio gyvenimo sugrįžimas šiai vietai tapo nauja pradžia.",
+        "Aplink pamaldas pamažu kūrėsi kasdienis parapijos gyvenimas. Sekmadienio liturgija, didžiosios bažnytinės šventės, krikštas, santuoka, malda už gyvuosius ir mirusiuosius vėl suteikė atkurtam pastatui jo pagrindinę prasmę. Į bažnyčią atėjo šeimos, kurioms ji tapo artima maldos ir dvasinės pagalbos vieta."
+      ],
+      "sources": [
+        "parish"
+      ],
+      "photo": "after"
+    },
+    {
+      "id": "care",
+      "title": "Rūpinimasis bažnyčia tęsiasi",
+      "paragraphs": [
+        "Atnaujinus pamaldas, rūpinimasis pastatu ir jo aplinka tapo nuolatiniu bendru parapijos ir geradarių darbu. 2021 metais pakeista laiptų priešais įėjimą apdaila. 2023 metais atkurti pažeisti pietinėje ir šiaurinėje bažnyčios pusėse esančių bokštelių plytiniai elementai. 2024 metais nudažytos sienos altoriaus erdvėje.",
+        "2026 metais baigtas dažyti stogas, atnaujintos bažnyčios vidaus sienos ir kupolo dalis, altoriaus erdvė bei prieangis, nudažytos įėjimo durys. Šie darbai padeda išsaugoti pastatą ir palaikyti tinkamas sąlygas pamaldoms. Šiuos darbus padeda atlikti žmonės, kurie skiria savo laiką, lėšas ir dirba savanoriškai.",
+        "Toliau tvarkomos ir parapijos bendravimui skirtos patalpos. Bažnyčiai reikia nuolatinės priežiūros, todėl jos istoriją sudaro ir dideli atkūrimo etapai, ir kasdienis dėmesys: laiku pastebėtas pažeidimas, sutvarkyta aplinka, pagalba ruošiantis šventei."
+      ],
+      "sources": [
+        "parish-memory"
+      ]
+    },
+    {
+      "id": "today",
+      "title": "Gyva parapijos istorija",
+      "paragraphs": [
+        "Šiandien Bukiškio Kristaus Gimimo bažnyčia suburia parapijiečius ir svečius iš apylinkių bei Vilniaus. Čia vyksta pamaldos, teikiami sakramentai, atliekamos religinės apeigos, teikiama sielovadinė pagalba. Aktualus tvarkaraštis padeda iš anksto sužinoti pamaldų laiką ir pasiruošti apsilankymui.",
+        "Parapija saugo istorines nuotraukas ir medžiagą, apie tikėjimą bei bažnytinį gyvenimą pasakoja savo svetainėje ir socialiniuose tinkluose. Tai to paties rūpinimosi atmintimi tąsa: padaryti bažnyčios istoriją prieinamą ir tiems, kurie jau su ja susiję, ir tiems, kurie šią vietą tik atranda.",
+        "Bukiškio bažnyčios likime susipina kūrimas, praradimas ir atkūrimas. Saugoti šią istoriją reiškia prisiminti steigėjus, dėkoti tiems, kurie padėjo atgaivinti šventovę, ir rūpintis šiandien čia ateinančiais žmonėmis. Istorija tęsiasi parapijos maldoje, bendravime ir geruose darbuose."
+      ],
+      "sources": [
+        "parish",
+        "parish-memory"
+      ]
+    }
+  ],
+  "timeline": [
+    [
+      "1866",
+      "Dvaro įsigijimas",
+      "Praskovja Nikolajevna Božerianova įsigyja Bukiškio dvarą."
+    ],
+    [
+      "XIX amžiaus antroji pusė",
+      "Dievo Motinos Globos bažnyčia",
+      "Dvare pastatoma privati šeimos bažnyčia su laidojimo kripta."
+    ],
+    [
+      "XX amžius",
+      "Sugriovimai ir apleidimas",
+      "Karo padaryta žala ir ilgalaikis pastato naudojimas sandėliui."
+    ],
+    [
+      "2002",
+      "Atkūrimo darbai",
+      "Parapijos istorinėje medžiagoje nurodyta atkūrimo pradžia."
+    ],
+    [
+      "2011",
+      "Pamaldų atnaujinimas",
+      "Vasarą Kristaus Gimimo bažnyčioje prasideda naujas liturginio gyvenimo etapas."
+    ],
+    [
+      "2021–2026",
+      "Tęstinė priežiūra",
+      "Įėjimo ir bokštelių remontas, altoriaus erdvės, stogo ir vidaus dažymas."
+    ]
+  ],
+  "sources": [
+    {
+      "id": "study",
+      "label": "N. J. Ivanova. «Букишские помещики Божерьяновы»",
+      "path": "/ru/library/istoriya-o-hrame.html"
+    },
+    {
+      "id": "parish",
+      "label": "Parapijos apžvalga „Bažnyčia Bukiškyje – tikėjimo ir atminties istorija“ (rusų kalba)",
+      "path": "/ru/library/o-nashem-hrame.html"
+    },
+    {
+      "id": "municipality",
+      "label": "Vilniaus rajono savivaldybė: Avižienių seniūnijos istorijos apžvalga",
+      "url": "https://vrsa.lt/administracine-informacija/seniunijos/3/avizieniu-1"
+    },
+    {
+      "id": "parish-memory",
+      "label": "Parapijos duomenys apie pamaldas ir atliktus darbus 2021–2026 metais"
+    }
+  ]
+}
