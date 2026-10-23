@@ -1,5 +1,5 @@
 {
-  "note": "Readable titles for preserved articles whose old <title> was typed in capitals, in lower case or as a search-engine string. Only letter case and punctuation change; the wording is the page's own (its heading or first line). Keyed by source URL.",
+  "note": "Readable titles for preserved articles. Usually only case and punctuation change. The owner-approved 2026-10-23 title for the Bozheryanov study is editorial; the original title and full publication remain in a separate archive. Keyed by source URL.",
   "titles": {
     "https://bukiski-hram.net/boroda-i-brite-v-drevnosti-istoriya-kultura-i-bibleiskii-smysl": "Борода и бритьё в древности: история, культура и библейский смысл",
     "https://bukiski-hram.net/eshe-uspeem-chast-i-u-menya-bog-v-dushe": "Ещё успеем. Часть I. «У меня Бог в душе»",
@@ -7,7 +7,7 @@
     "https://bukiski-hram.net/eshe-uspeem-chast-iii-hram-ne-obyazannost-a-dyhanie-dushi": "Ещё успеем. Часть III. Храм — не обязанность, а дыхание души",
     "https://bukiski-hram.net/evangelie-o-bludnom-syne-dver-pokayaniya-pered-velikim-postom": "Евангелие о блудном сыне: дверь покаяния перед Великим постом",
     "https://bukiski-hram.net/hristianskii-brak-ot-vethogo-zaveta-do-nashih-dnei": "Христианский брак: от Ветхого Завета до наших дней",
-    "https://bukiski-hram.net/istoriya-o-hrame": "Псковские и Виленские помещики Божеряновы",
+    "https://bukiski-hram.net/istoriya-o-hrame": "Букишские помещики Божерьяновы",
     "https://bukiski-hram.net/kak-maloe-zlo-razzhigaet-velikii-pozhar": "Как малое зло разжигает великий пожар",
     "https://bukiski-hram.net/kaledu-pasninkas-kelias-i-tylia-betliejaus-sviesa": "Kalėdų pasninkas: kelias į tylią Betliejaus šviesą",
     "https://bukiski-hram.net/kniga-chisel-kotoraya-na-samom-dele-v-pustyne": "Книга Чисел, которая на самом деле «В пустыне»",

@@ -1,8 +1,9 @@
 // A preserved article given a dedicated, illustrated layout.
 //
 // The structure lives in content/stories/<slug>.json. Every sentence there is
-// copied verbatim from the source page (tests/build.test.mjs checks this);
-// only the arrangement, photographs and interface labels are added here.
+// copied verbatim from the source page (tests/build.test.mjs checks this).
+// The owner-approved title, kicker and subtitle are editorial metadata; the
+// original publication including its original headings has a separate archive.
 
 import { html, attrs } from '../html.mjs';
 import { icon, emblem } from '../icons.mjs';
@@ -186,7 +187,7 @@ function restoration(site, story, t, uiLocale) {
   </section>`;
 }
 
-function closing(story, entry, t, uiLocale) {
+function closing(site, story, entry, t, uiLocale) {
   return html`<footer class="shell story-end">
     <div class="story-author">
       <p class="story-author__label" lang="${uiLocale}">${t.storyAuthor}</p>
@@ -200,7 +201,9 @@ function closing(story, entry, t, uiLocale) {
     <aside class="notice notice--archive" lang="${uiLocale}">
       <p>${t.archiveNotice}</p>
       <p class="meta-row">${externalLink(t, entry.url, `${t.source}: ${entry.host}`)}<span>${t.savedOn}: <time datetime="${entry.page.fetchedOn}">${formatDate(uiLocale, `${entry.page.fetchedOn}T12:00:00Z`, { dateStyle: 'long' })}</time></span></p>
+      ${entry.archive !== entry.target && html`<p>${siteLink(site, entry.archive, t.archiveOriginal)}</p>`}
     </aside>
+    <p>${siteLink(site, site.route(uiLocale, 'history'), html`${icon('chevron-left')}${site.histories[uiLocale].title}`, 'link link--back')}</p>
   </footer>`;
 }
 
@@ -211,7 +214,7 @@ export function storyPage(site, story, entry, t, uiLocale) {
     <div class="shell story-intro"><p class="story-lead">${story.lead}</p></div>
     ${story.chapters.map((item, index) => chapter(site, story, item, index, t, uiLocale))}
     ${restoration(site, story, t, uiLocale)}
-    ${closing(story, entry, t, uiLocale)}
+    ${closing(site, story, entry, t, uiLocale)}
   </article>
   <progress class="reading-progress" max="100" value="0" data-reading-progress hidden aria-hidden="true"></progress>
   <button type="button" class="icon-button to-top" data-to-top hidden aria-label="${t.backToTop}" title="${t.backToTop}" lang="${uiLocale}">${icon('arrow-up')}</button>`;
