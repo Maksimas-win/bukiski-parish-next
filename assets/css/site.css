@@ -4093,13 +4093,27 @@ input[type='email']:user-invalid {
   text-wrap: balance;
 }
 
+/* Book typography: justified lines with hyphenation, a first-line indent on
+   every paragraph after the first of a chapter, and no blank line between
+   paragraphs — the indent does the separating, as on a printed page. */
 .history-narrative__chapter > p:not([class]) {
-  margin: 0 0 1.1rem;
+  margin: 0;
   font-size: 1.125rem;
-  line-height: 1.8;
-  text-align: start;
-  hyphens: manual;
+  line-height: 1.75;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 7 3 3;
   overflow-wrap: break-word;
+}
+
+.history-narrative__chapter > p:not([class]) + p:not([class]) {
+  text-indent: 1.75em;
+}
+
+.history-narrative__chapter > p:not([class]) + .history-narrative__citations {
+  margin-top: 1.1rem;
 }
 
 .history-narrative__citations {
