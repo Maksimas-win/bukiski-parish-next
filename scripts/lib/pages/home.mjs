@@ -76,7 +76,7 @@ function gpmBand(site, lang, t) {
     <div class="shell gpm-band__inner" data-home-gpm>
       <p class="gpm-band__figure" aria-hidden="true"><span class="gpm-relief gpm-relief--large">${t.homeGpmFigure}</span></p>
       <div class="gpm-band__copy">
-        <p class="eyebrow">${t.homeGpmBandEyebrow}</p>
+        <p class="eyebrow">${t.homeGpmKicker}</p>
         <h2 id="gpm-band-title">${t.homeGpmBandTitle}</h2>
         <p class="gpm-band__text">${fill(t.homeGpmBandText, gpm.values)}</p>
       </div>
