@@ -1,4 +1,6 @@
 // Date words are matched against a small, explicit vocabulary; no date is guessed.
+// Fold vocabulary and questions alike, including Polish ł and Cyrillic й.
+const fold = value => String(value).normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().replace(/ё/g, 'е').replace(/ł/g, 'l').replace(/[’']/g, '');
 const monthNames = [
   'января|январь|січня|січень|january|sausio|stycznia|styczen|januar',
   'февраля|февраль|лютого|лютий|february|vasario|lutego|luty|februar',
@@ -22,14 +24,13 @@ const weekdayNames = [
   'пятница|пятницу|пятниці|пятницю|penktadieni|friday|piatek|freitag',
   'суббота|субботу|суботу|sestadieni|saturday|sobote|samstag'
 ];
-const months = new Map(monthNames.flatMap((names, i) => names.split('|').map(name => [name, i + 1])));
+const months = new Map(monthNames.flatMap((names, i) => names.split('|').map(name => [fold(name), i + 1])));
 const monthPattern = [...months.keys()].sort((a, b) => b.length - a.length).join('|');
 const boundaryStart = '(?<![\\p{L}\\d])';
 const boundaryEnd = '(?![\\p{L}\\d])';
 const namedDay = new RegExp(`${boundaryStart}(\\d{1,2})\\.?\\s+(${monthPattern})(?:\\s+(\\d{4}))?${boundaryEnd}`, 'gu');
 const monthFirst = new RegExp(`${boundaryStart}(${monthPattern})\\s+(\\d{1,2})(?:st|nd|rd|th|\\s+d\\.)?(?:,?\\s+(\\d{4}))?${boundaryEnd}`, 'gu');
-const weekdays = weekdayNames.map(names => new RegExp(`${boundaryStart}(?:${names})${boundaryEnd}`, 'u'));
-const fold = value => String(value).normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().replace(/ё/g, 'е').replace(/[’']/g, '');
+const weekdays = weekdayNames.map(names => new RegExp(`${boundaryStart}(?:${fold(names)})${boundaryEnd}`, 'u'));
 const valid = date => Number.isFinite(Date.parse(`${date}T12:00:00Z`)) && new Date(`${date}T12:00:00Z`).toISOString().slice(0, 10) === date;
 
 /** Missing years use this Vilnius calendar year, as numeric dates already do. */

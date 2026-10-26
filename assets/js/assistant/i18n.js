@@ -62,20 +62,20 @@ export const UI = {
   },
   pl: {
     title: 'Pomocnik parafii', subtitle: 'Cerkiew Narodzenia Chrystusa · Bukiškis', open: 'Zapytaj pomocnika', close: 'Zamknij pomocnika',
-    intro: 'Pomogę znaleźć rozkład nabożeństw, dane kontaktowe i odpowiedzi na częste pytania o parafię.',
+    intro: 'Pomogę znaleźć porządek nabożeństw, dane kontaktowe i odpowiedzi na częste pytania o parafię.',
     greeting: 'Dzień dobry! W czym mogę pomóc?', hint: 'W czym mogę pomóc?', hintLines: 'Nabożeństwa · Intencje · Kontakt',
     mode: 'Odpowiedzi z informatora parafii', privacy: 'Pytania są przetwarzane w przeglądarce. Rozmowa nie jest zapisywana ani wysyłana do parafii. Nie podawaj danych osobowych.',
     label: 'Twoje pytanie', placeholder: 'Na przykład: kiedy najbliższe nabożeństwo?', send: 'Wyślij', clear: 'Wyczyść rozmowę', language: 'Język pomocnika',
     suggestions: ['Najbliższe nabożeństwa', 'Czy jutro jest nabożeństwo?', 'Jak dojechać?', 'Jak się skontaktować?'],
-    loading: 'Sprawdzam opublikowany harmonogram…', you: 'Ty', bot: 'Pomocnik', cleared: 'Rozmowa wyczyszczona.',
+    loading: 'Sprawdzam opublikowany porządek nabożeństw…', you: 'Ty', bot: 'Pomocnik', cleared: 'Rozmowa wyczyszczona.',
     unknown: 'Na razie pomagam w sprawie nabożeństw, kontaktów, odwiedzin i działów strony. Z tym pytaniem proszę zwrócić się do parafii.',
-    fresh: 'Źródło zaktualizowano:', stale: 'Harmonogram jest nieaktualny lub ma nieprawidłową datę. Proszę potwierdzić godziny w parafii.',
-    unavailable: 'Nie udało się wczytać harmonogramu. Otwórz stronę nabożeństw lub zadzwoń do parafii.',
-    noEvents: 'Brak pasujących wpisów w opublikowanym harmonogramie. Nie oznacza to braku nabożeństwa: proszę zapytać w parafii.',
+    fresh: 'Źródło zaktualizowano:', stale: 'Porządek nabożeństw jest nieaktualny lub ma nieprawidłową datę. Proszę potwierdzić godziny w parafii.',
+    unavailable: 'Nie udało się wczytać porządku nabożeństw. Otwórz stronę nabożeństw lub zadzwoń do parafii.',
+    noEvents: 'Brak pasujących wpisów w opublikowanym porządku nabożeństw. Nie oznacza to braku nabożeństwa: proszę zapytać w parafii.',
     upcoming: 'Najbliższe opublikowane nabożeństwa:', selected: 'Nabożeństwa w wybranym dniu:', time: 'Czas wileński', pending: 'Godzina do potwierdzenia', past: 'Godzina rozpoczęcia już minęła',
     invalidDate: 'Podaj datę, np. 14.10.2026, „dzisiaj”, „jutro” lub „w niedzielę”.',
-    schedule: 'Otwórz harmonogram', contacts: 'Kontakt z parafią', call: 'Zadzwoń do parafii', map: 'Wyznacz trasę', source: 'Więcej na stronie',
-    more: 'Wszystkie nabożeństwa znajdziesz w pełnym harmonogramie.', original: 'Tytuł w języku źródła', empty: 'Wpisz pytanie lub wybierz podpowiedź.', welcomeBack: 'Możesz zadać kolejne pytanie lub wybrać podpowiedź.'
+    schedule: 'Otwórz porządek nabożeństw', contacts: 'Kontakt z parafią', call: 'Zadzwoń do parafii', map: 'Wyznacz trasę', source: 'Więcej na stronie',
+    more: 'Wszystkie nabożeństwa znajdziesz w pełnym porządku nabożeństw.', original: 'Tytuł w języku źródła', empty: 'Wpisz pytanie lub wybierz podpowiedź.', welcomeBack: 'Możesz zadać kolejne pytanie lub wybrać podpowiedź.'
   },
   de: {
     title: 'Gemeindeassistent', subtitle: 'Christi-Geburtskirche · Bukiškis', open: 'Assistenten fragen', close: 'Assistenten schließen',

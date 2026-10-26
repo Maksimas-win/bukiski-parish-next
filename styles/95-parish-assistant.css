@@ -60,7 +60,9 @@
   max-height: calc(100dvh - 40px);
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   color: #26332e;
   background: #faf8f3;
   border: 1px solid #c7cec8;
@@ -78,6 +80,9 @@
 }
 
 .parish-assistant .pa-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   flex-shrink: 0;
   align-items: flex-start;
@@ -383,11 +388,6 @@
 }
 
 @media (max-height: 520px) {
-  .parish-assistant .pa-dialog {
-    overflow-y: auto;
-    overscroll-behavior: contain;
-  }
-
   .parish-assistant .pa-privacy, .parish-assistant .pa-eyebrow, .parish-assistant .pa-mode {
     display: none;
   }
@@ -402,9 +402,6 @@
   }
 
   .parish-assistant .pa-header {
-    position: sticky;
-    top: 0;
-    z-index: 1;
     padding: 8px 14px;
   }
 }

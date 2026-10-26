@@ -100,12 +100,15 @@
 }
 
 .quick__text {
+  max-width: 100%;
+  grid-template-columns: minmax(0, 1fr);
   display: grid;
   gap: 0.15rem;
   min-width: 0;
 }
 
 .quick__title {
+  overflow-wrap: anywhere;
   font-weight: 700;
   font-size: 1.0625rem;
   line-height: 1.25;
@@ -634,6 +637,8 @@
 }
 
 .hero-gpm__body {
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
   display: grid;
   gap: 0.5rem;
 }
@@ -655,6 +660,9 @@
 }
 
 .hero-gpm__action {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
   justify-self: start;
   margin-top: 0.4rem;
 }

@@ -425,6 +425,7 @@
 
 .schedule {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
   padding-top: 0.5rem;
 }
@@ -437,6 +438,11 @@
   display: grid;
   gap: 1rem;
   align-content: start;
+}
+
+.schedule__aside .button {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .schedule__aside .actions {
