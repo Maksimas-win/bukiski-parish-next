@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-26T19:13:30.933Z",
+  "generatedAt": "2026-10-26T20:27:22.109Z",
   "production": true,
   "basePath": "",
   "documentDelivery": "envelope",
-  "assetVersion": "b39ccbf01f",
+  "assetVersion": "97d6b3fbe5",
   "sourcePages": 127,
   "generatedPages": 323,
   "documents": 4,
   "confirmedServices": 74,
-  "sourceUpdatedAt": "2026-10-26T18:57:21.864Z"
+  "sourceUpdatedAt": "2026-10-26T19:28:42.326Z"
 }

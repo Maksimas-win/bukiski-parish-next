@@ -4,8 +4,8 @@
 // Nothing is stored or transmitted; without this module the page already shows
 // every example value and the links.
 
-import { $, $$, show, prefersReducedMotion } from '../ui/dom.js?v=b39ccbf01f';
-import { campaignPhase } from './gpm/math.js?v=b39ccbf01f';
+import { $, $$, show, prefersReducedMotion } from '../ui/dom.js?v=97d6b3fbe5';
+import { campaignPhase } from './gpm/math.js?v=97d6b3fbe5';
 
 function vilniusToday() {
   try {

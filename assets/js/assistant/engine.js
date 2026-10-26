@@ -1,12 +1,12 @@
-import { UI } from './i18n.js?v=b39ccbf01f';
-import { FAQ, PARISH } from './knowledge.js?v=b39ccbf01f';
-import { namedCalendarDate, isCalendarFollowUp } from './calendar-requests.js?v=b39ccbf01f';
+import { UI } from './i18n.js?v=97d6b3fbe5';
+import { FAQ, PARISH } from './knowledge.js?v=97d6b3fbe5';
+import { namedCalendarDate, isCalendarFollowUp } from './calendar-requests.js?v=97d6b3fbe5';
 
 export const TIMEZONE = 'Europe/Vilnius';
 export const MAX_QUESTION = 500;
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const INSTANT = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/;
-export const fold = value => String(value).normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().replace(/ё/g, 'е');
+export const fold = value => String(value).normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().replace(/ё/g, 'е').replace(/ł/g, 'l');
 export const localeOf = value => Object.hasOwn(UI, value) ? value : 'ru';
 
 export function localParts(now) {
@@ -29,7 +29,7 @@ function shiftDate(date, days) {
 export function intentOf(question) {
   const q = fold(question).slice(0, MAX_QUESTION);
   if (/крещ|хрещ|венчан|вінчан|испов|спов|причаст|причащ|таинств|таінств|krikst|santuok|ispaz|komun|sakrament|baptis|wedding|marriage|confess|communion|sacrament|chrz|slub|spowiedz|taufe|trauung|beichte|панихид|панахид|помин|поминан|отпев/.test(q)) {return 'sacraments';}
-  if (/записк|rašt|rastel|prayer note|kartk|gebetszett/.test(q)) {return 'notes';}
+  if (/записк|rastel|prayer (?:note|request)|kart(?:k|ecz)|intencj|gebets(?:zett|anliegen)/.test(q)) {return 'notes';}
   if (/открыт|закрыт|відкрит|зачин|atidary|uzdary|opening|open(?:s|ing)?\b|closed|otwar|offnung|geoffnet/.test(q)) {return 'hours';}
   if (/контакт|телефон|позвон|звонить|связа|связь|зв.яз|настоятель|священник|kunig|klebon|susisiek|kontakt|telefon|skamb|contact|phone|call|priest|rector|pfarrer|erreich/.test(q)) {return 'contacts';}
   if (/адрес|добрат|доехать|дістат|проехать|автобус|atvykt|adres|autobus|address|direction|where|get there|bus (?:route|number)|dojech|anfahrt|komme.*hin|\bwo\b/.test(q)) {return 'directions';}

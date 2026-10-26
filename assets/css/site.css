@@ -2553,6 +2553,7 @@ input[type='email']:user-invalid {
 
 .schedule {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
   padding-top: 0.5rem;
 }
@@ -2565,6 +2566,11 @@ input[type='email']:user-invalid {
   display: grid;
   gap: 1rem;
   align-content: start;
+}
+
+.schedule__aside .button {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .schedule__aside .actions {
@@ -3529,12 +3535,15 @@ input[type='email']:user-invalid {
 }
 
 .quick__text {
+  max-width: 100%;
+  grid-template-columns: minmax(0, 1fr);
   display: grid;
   gap: 0.15rem;
   min-width: 0;
 }
 
 .quick__title {
+  overflow-wrap: anywhere;
   font-weight: 700;
   font-size: 1.0625rem;
   line-height: 1.25;
@@ -4063,6 +4072,8 @@ input[type='email']:user-invalid {
 }
 
 .hero-gpm__body {
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
   display: grid;
   gap: 0.5rem;
 }
@@ -4084,6 +4095,9 @@ input[type='email']:user-invalid {
 }
 
 .hero-gpm__action {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
   justify-self: start;
   margin-top: 0.4rem;
 }
@@ -7958,7 +7972,9 @@ html.high-contrast .site-nav a {
   max-height: calc(100dvh - 40px);
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   color: #26332e;
   background: #faf8f3;
   border: 1px solid #c7cec8;
@@ -7976,6 +7992,9 @@ html.high-contrast .site-nav a {
 }
 
 .parish-assistant .pa-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   flex-shrink: 0;
   align-items: flex-start;
@@ -8281,11 +8300,6 @@ html.high-contrast .site-nav a {
 }
 
 @media (max-height: 520px) {
-  .parish-assistant .pa-dialog {
-    overflow-y: auto;
-    overscroll-behavior: contain;
-  }
-
   .parish-assistant .pa-privacy, .parish-assistant .pa-eyebrow, .parish-assistant .pa-mode {
     display: none;
   }
@@ -8300,9 +8314,6 @@ html.high-contrast .site-nav a {
   }
 
   .parish-assistant .pa-header {
-    position: sticky;
-    top: 0;
-    z-index: 1;
     padding: 8px 14px;
   }
 }
