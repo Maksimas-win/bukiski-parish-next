@@ -12,6 +12,11 @@ export function initMenu() {
     menu.classList.toggle('is-open', open);
   };
   const isOpen = () => menu.classList.contains('is-open');
+  const folded = window.matchMedia('(max-width: 72rem)');
+  // Desktop navigation is always visible; don't retain a hidden mobile state.
+  folded.addEventListener('change', () => {
+    if (!folded.matches) setOpen(false);
+  });
 
   toggle.addEventListener('click', () => setOpen(!isOpen()));
   document.addEventListener('keydown', event => {

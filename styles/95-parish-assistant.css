@@ -383,6 +383,11 @@
 }
 
 @media (max-height: 520px) {
+  .parish-assistant .pa-dialog {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
   .parish-assistant .pa-privacy, .parish-assistant .pa-eyebrow, .parish-assistant .pa-mode {
     display: none;
   }
@@ -397,6 +402,9 @@
   }
 
   .parish-assistant .pa-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     padding: 8px 14px;
   }
 }
