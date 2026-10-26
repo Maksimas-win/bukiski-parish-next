@@ -514,6 +514,10 @@ mark {
 
   .js .site-menu {
     display: none;
+    max-height: calc(100dvh - var(--header-height) - 1rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
     padding-bottom: 1rem;
   }
 
@@ -582,7 +586,8 @@ mark {
 /* Footer ------------------------------------------------------------------ */
 
 .site-footer {
-  padding-block: 3.5rem 1.5rem;
+  /* Reserve room below the legal text for the fixed assistant launcher. */
+  padding-block: 3.5rem max(6.25rem, calc(5.5rem + env(safe-area-inset-bottom)));
   background: var(--dome-deep);
   color: #f0eadc;
 
@@ -8276,6 +8281,11 @@ html.high-contrast .site-nav a {
 }
 
 @media (max-height: 520px) {
+  .parish-assistant .pa-dialog {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
   .parish-assistant .pa-privacy, .parish-assistant .pa-eyebrow, .parish-assistant .pa-mode {
     display: none;
   }
@@ -8290,6 +8300,9 @@ html.high-contrast .site-nav a {
   }
 
   .parish-assistant .pa-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     padding: 8px 14px;
   }
 }

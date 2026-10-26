@@ -7,7 +7,7 @@ X-WR-CALNAME:Kirche der Geburt Christi
 X-WR-TIMEZONE:Europe/Vilnius
 BEGIN:VEVENT
 UID:svc-13ee7c62cfc8e9ed2a22@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261025T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -16,7 +16,7 @@ DESCRIPTION:21. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-3fb67d558df4f94b9a27@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261101T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -25,7 +25,7 @@ DESCRIPTION:22. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-1e61d40fab638aa77e14@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261107T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -34,7 +34,7 @@ DESCRIPTION:Die Datei ist eine Momentaufnahme der veröffentlichten Termi
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-df71f5a86086445f65e9@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261108T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -43,7 +43,7 @@ DESCRIPTION:23. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-791286fb58dd61374dad@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261115T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -52,7 +52,7 @@ DESCRIPTION:24. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-142ac08220b6d32070b0@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261122T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -61,7 +61,7 @@ DESCRIPTION:25. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-03eaf1010ec5c66215c9@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261129T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -70,7 +70,7 @@ DESCRIPTION:26. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-67202f07ad81d38b891d@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261204T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -80,7 +80,7 @@ DESCRIPTION:Einführung der Allheiligen Gottesgebärerin in den Tempel\nD
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-ff973fe3690d4f1d844c@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261206T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -89,7 +89,7 @@ DESCRIPTION:27. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-1822e6872f250c6e280c@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261213T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -98,7 +98,7 @@ DESCRIPTION:28. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-cbe317db75849e6c1bc1@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261219T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -107,7 +107,7 @@ DESCRIPTION:Die Datei ist eine Momentaufnahme der veröffentlichten Termi
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-76eec744248119bcf883@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261220T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -116,7 +116,7 @@ DESCRIPTION:29. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-82b83469f9c26886c81f@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20261227T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -125,7 +125,7 @@ DESCRIPTION:30. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-9af349ea03c2d7e9d9f5@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270103T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -134,7 +134,7 @@ DESCRIPTION:31. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-1c1b4b605be048a0f9c7@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270106T150000Z
 SUMMARY:Ganznächtliche Vigil
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -143,7 +143,7 @@ DESCRIPTION:Die Datei ist eine Momentaufnahme der veröffentlichten Termi
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-5f8b381166ab426f7b39@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270106T214500Z
 SUMMARY:Horen und nächtliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -152,7 +152,7 @@ DESCRIPTION:Geburt Christi\nDie Datei ist eine Momentaufnahme der veröff
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-f4d625bf2216d125a124@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270107T070000Z
 SUMMARY:Typika
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -161,7 +161,7 @@ DESCRIPTION:Geburt Christi\nDie Datei ist eine Momentaufnahme der veröff
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-07b8b11891d3d436932b@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270110T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -170,7 +170,7 @@ DESCRIPTION:32. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-8b3c0961236599a92c83@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270117T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -179,7 +179,7 @@ DESCRIPTION:33. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-b5991b06180cba6be8c0@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270119T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -188,7 +188,7 @@ DESCRIPTION:Theophanie. Taufe des Herrn\nDie Datei ist eine Momentaufnahm
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-3c34aae5307e935f29bb@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270124T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -197,7 +197,7 @@ DESCRIPTION:34. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-653f48a1c9b9c77fe600@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270131T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -206,7 +206,7 @@ DESCRIPTION:35. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-10396f12c8873b45238c@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270207T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -215,7 +215,7 @@ DESCRIPTION:36. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-8cbac427d3fd986ad787@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270214T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -224,7 +224,7 @@ DESCRIPTION:37. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-98ceb2c5b6ba8ce04c22@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270215T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -233,7 +233,7 @@ DESCRIPTION:Begegnung des Herrn\nDie Datei ist eine Momentaufnahme der ve
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-ffcf1a36c5601dfcf50c@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270221T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -243,7 +243,7 @@ DESCRIPTION:Sonntag vom Zöllner und Pharisäer\nDie Datei ist eine Momen
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-9a468aaf7729d4ad5c0e@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270228T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -252,7 +252,7 @@ DESCRIPTION:Sonntag vom verlorenen Sohn\nDie Datei ist eine Momentaufnahm
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-720e38b086d3a46fb023@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270307T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -262,7 +262,7 @@ DESCRIPTION:Sonntag vom Jüngsten Gericht\nDie Datei ist eine Momentaufna
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-2f5863fbd2fe295df1c0@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270314T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -271,7 +271,7 @@ DESCRIPTION:Sonntag der Vergebung\nDie Datei ist eine Momentaufnahme der
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-1a29fc8ce7b3bfe53853@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270321T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -281,7 +281,7 @@ DESCRIPTION:1. Sonntag der Großen Fastenzeit. Sonntag der Orthodoxie\nDi
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-17344e988f9dd264a85c@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270328T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -291,7 +291,7 @@ DESCRIPTION:2. Sonntag der Großen Fastenzeit. Hl. Gregor Palamas\nDie Da
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-a7f71a15ad0a27a6d21d@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270404T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -301,7 +301,7 @@ DESCRIPTION:3. Sonntag der Großen Fastenzeit. Kreuzverehrung\nDie Datei
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-2b0bf13632b3d7db7412@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270407T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -311,7 +311,7 @@ DESCRIPTION:Verkündigung an die Allheilige Gottesgebärerin\nDie Datei i
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-5e0621ac2deed0ff226c@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270411T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -321,7 +321,7 @@ DESCRIPTION:4. Sonntag der Großen Fastenzeit. Hl. Johannes Klimakos\nDie
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-bf2b223528ae706eafe8@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270418T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -331,7 +331,7 @@ DESCRIPTION:5. Sonntag der Großen Fastenzeit. Hl. Maria von Ägypten\nDi
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-287b84c1f329e9b96f7e@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270425T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -341,7 +341,7 @@ DESCRIPTION:Einzug des Herrn in Jerusalem\nDie Datei ist eine Momentaufna
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-affb6ea909183b39d00b@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270501T203000Z
 SUMMARY:Österliches Mitternachtsamt\, Prozession und nächtlicher Gottes
  dienst
@@ -352,7 +352,7 @@ DESCRIPTION:Heilige Auferstehung Christi. Pascha\nDie Datei ist eine Mome
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-c765f636b5603fe52e27@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270502T060000Z
 SUMMARY:Typika
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -362,7 +362,7 @@ DESCRIPTION:Heilige Auferstehung Christi. Pascha\nDie Datei ist eine Mome
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-144ad02352ba5dd4fa18@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270509T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -372,7 +372,7 @@ DESCRIPTION:2. Sonntag nach Pascha. Apostel Thomas\nDie Datei ist eine Mo
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-0b7fc37e15f873f82330@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270516T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -382,7 +382,7 @@ DESCRIPTION:3. Sonntag nach Pascha. Myrrhenträgerinnen\nDie Datei ist ei
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-dfd12ac05a7259f6374a@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270523T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -392,7 +392,7 @@ DESCRIPTION:4. Sonntag nach Pascha. Vom Gelähmten\nDie Datei ist eine Mo
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-a99f04995287a1b92cd9@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270530T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -402,7 +402,7 @@ DESCRIPTION:5. Sonntag nach Pascha. Von der Samariterin\nDie Datei ist ei
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-8ef565ebf322ca479ebb@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270606T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -412,7 +412,7 @@ DESCRIPTION:6. Sonntag nach Pascha. Vom Blindgeborenen\nDie Datei ist ein
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-e4f175b711d41c62d12e@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270610T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -421,7 +421,7 @@ DESCRIPTION:Himmelfahrt des Herrn\nDie Datei ist eine Momentaufnahme der
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-b36cc6c5100be7b41b47@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270613T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -431,7 +431,7 @@ DESCRIPTION:7. Sonntag nach Pascha. Väter des Ersten Ökumenischen Konzi
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-4cfa39b1715068a6ff0e@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270620T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -440,7 +440,7 @@ DESCRIPTION:Heilige Dreiheit. Pfingsten\nDie Datei ist eine Momentaufnahm
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-b1613e44f7934a75b98a@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270627T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -449,7 +449,7 @@ DESCRIPTION:1. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-f85a53b49e95e83e3d4e@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270704T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -458,7 +458,7 @@ DESCRIPTION:2. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-2f8286832a0fb1fc59ea@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270711T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -467,7 +467,7 @@ DESCRIPTION:3. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-6fe2592f5ce85847bf4c@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270718T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -476,7 +476,7 @@ DESCRIPTION:4. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-350114999562e82d0c2c@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270725T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -485,7 +485,7 @@ DESCRIPTION:5. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-db6aa92d2a1c0c367b76@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270801T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -494,7 +494,7 @@ DESCRIPTION:6. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-fdcc0350daff9756d7e4@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270808T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -503,7 +503,7 @@ DESCRIPTION:7. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-319961af294ca3318f36@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270815T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -512,7 +512,7 @@ DESCRIPTION:8. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-58857e8d95bbcf819eb3@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270819T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -521,7 +521,7 @@ DESCRIPTION:Verklärung des Herrn\nDie Datei ist eine Momentaufnahme der
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-6490a8b83a06d71aedad@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270822T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -530,7 +530,7 @@ DESCRIPTION:9. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-a7bc7598d17afc0ab947@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270828T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -540,7 +540,7 @@ DESCRIPTION:Entschlafen der Allheiligen Gottesgebärerin\nDie Datei ist e
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-198e91ec976174326c9c@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270829T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -549,7 +549,7 @@ DESCRIPTION:10. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-c56fb27019a288f526b4@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270905T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -558,7 +558,7 @@ DESCRIPTION:11. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-56a2e64ae7a518606b2e@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270912T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -567,7 +567,7 @@ DESCRIPTION:12. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-135c0697977ac8b46f18@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270919T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -576,7 +576,7 @@ DESCRIPTION:13. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-135fb590e8cb16c236ab@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270921T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -586,7 +586,7 @@ DESCRIPTION:Geburt der Allheiligen Gottesgebärerin\nDie Datei ist eine M
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-5617e8eefe969ef4068c@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270926T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -595,7 +595,7 @@ DESCRIPTION:14. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-4539bdc413e2f2aa789b@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20270927T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -604,7 +604,7 @@ DESCRIPTION:Kreuzerhöhung\nDie Datei ist eine Momentaufnahme der veröff
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-bed2f1831c857afdbfd4@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20271003T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -613,7 +613,7 @@ DESCRIPTION:15. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-16b09a5571ec243dcedc@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20271010T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -622,7 +622,7 @@ DESCRIPTION:16. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-44ea4e713dd53489e615@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20271014T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -632,7 +632,7 @@ DESCRIPTION:Schutz der Allheiligen Gottesgebärerin\nDie Datei ist eine M
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-81492d2a320a795e8b9e@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20271017T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -641,7 +641,7 @@ DESCRIPTION:17. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-1f6575169141472d35df@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20271024T050000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -650,7 +650,7 @@ DESCRIPTION:18. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-6df679a79b28dd16749f@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20271031T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -659,7 +659,7 @@ DESCRIPTION:19. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-f7ffb3558afdacae4afa@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20271107T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -668,7 +668,7 @@ DESCRIPTION:20. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-96c63b33f86a84c2b981@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20271114T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -677,7 +677,7 @@ DESCRIPTION:21. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-6226a186f513bc587899@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20271121T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva
@@ -686,7 +686,7 @@ DESCRIPTION:22. Sonntag nach Pfingsten\nDie Datei ist eine Momentaufnahme
 END:VEVENT
 BEGIN:VEVENT
 UID:svc-457f4d31dd8156497493@bukiski-hram.net
-DTSTAMP:20261026T172903Z
+DTSTAMP:20261026T185721Z
 DTSTART:20271128T060000Z
 SUMMARY:Göttliche Liturgie
 LOCATION:Sodų g. 8\, Bukiškis\, LT-14180\, Lietuva

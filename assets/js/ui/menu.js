@@ -1,4 +1,4 @@
-import { $, show } from './dom.js?v=4bf6e21e5f';
+import { $, show } from './dom.js?v=b39ccbf01f';
 
 /** Mobile menu as a disclosure. Without JavaScript the links stay visible. */
 export function initMenu() {
@@ -12,6 +12,11 @@ export function initMenu() {
     menu.classList.toggle('is-open', open);
   };
   const isOpen = () => menu.classList.contains('is-open');
+  const folded = window.matchMedia('(max-width: 72rem)');
+  // Desktop navigation is always visible; don't retain a hidden mobile state.
+  folded.addEventListener('change', () => {
+    if (!folded.matches) setOpen(false);
+  });
 
   toggle.addEventListener('click', () => setOpen(!isOpen()));
   document.addEventListener('keydown', event => {
