@@ -7,8 +7,14 @@
   "slug": "lpc-info",
   "requestedBy": "Коммуникационно-издательский отдел Литовской Православной Церкви, письмо настоятелям храмов, октябрь 2026",
   "sources": [
-    { "id": "site", "url": "https://www.orthodoxy.lt/" },
-    { "id": "facebook", "url": "https://www.facebook.com/orthodoxy.lt" }
+    {
+      "id": "site",
+      "url": "https://www.orthodoxy.lt/"
+    },
+    {
+      "id": "facebook",
+      "url": "https://www.facebook.com/orthodoxy.lt"
+    }
   ],
   "materials": [
     {
@@ -41,7 +47,18 @@
     }
   ],
   "videos": [
-    { "id": "prayerReel", "url": "https://www.facebook.com/reel/1495650425726732" }
+    {
+      "id": "metropolitanCall",
+      "url": "https://fb.watch/v/flYZEbxrf/"
+    },
+    {
+      "id": "councilReading",
+      "url": "https://fb.watch/v/5KNKPkHNJ/"
+    },
+    {
+      "id": "prayerReel",
+      "url": "https://www.facebook.com/reel/1495650425726732"
+    }
   ],
   "texts": {
     "ru": {
@@ -68,7 +85,10 @@
         "sourcesTitle": "Официальные источники",
         "signature": "Приход храма Рождества Христова в Букишках"
       },
-      "readIn": { "ru": "На русском", "lt": "На литовском" },
+      "readIn": {
+        "ru": "На русском",
+        "lt": "На литовском"
+      },
       "materials": {
         "council": "Состоялось экстренное заседание Совета Литовской Православной Церкви",
         "metropolitan": "Митрополит Виленский и Литовский Иннокентий обратился к высшим руководителям государства",
@@ -78,7 +98,11 @@
       "notes": {
         "seimas": "Пресс-конференция Литовской Православной Церкви; обращения братии Свято-Духова монастыря и прихожан Пятницкого храма."
       },
-      "videos": { "prayerReel": "Призыв митрополита Иннокентия к сугубой молитве" },
+      "videos": {
+        "metropolitanCall": "Призыв митрополита Иннокентия к сугубой молитве",
+        "councilReading": "Во всех храмах зачитано сообщение об экстренном заседании Совета Литовской Православной Церкви",
+        "prayerReel": "Ещё один призыв митрополита Иннокентия к сугубой молитве"
+      },
       "sources": {
         "site": "orthodoxy.lt — официальный сайт Литовской Православной Церкви",
         "facebook": "Литовская Православная Церковь в Facebook"
@@ -108,7 +132,10 @@
         "sourcesTitle": "Oficialūs šaltiniai",
         "signature": "Bukiškio Kristaus Gimimo parapija"
       },
-      "readIn": { "ru": "Rusiškai", "lt": "Lietuviškai" },
+      "readIn": {
+        "ru": "Rusiškai",
+        "lt": "Lietuviškai"
+      },
       "materials": {
         "council": "Įvyko neeilinis Lietuvos Stačiatikių Bažnyčios Tarybos posėdis",
         "metropolitan": "Vilniaus ir Lietuvos metropolitas Inokentijus kreipėsi į aukščiausius valstybės vadovus",
@@ -118,7 +145,11 @@
       "notes": {
         "seimas": "Lietuvos Stačiatikių Bažnyčios spaudos konferencija; Šventosios Dvasios vienuolyno brolijos ir Šv. Paraskevos parapijos tikinčiųjų kreipimaisi."
       },
-      "videos": { "prayerReel": "Metropolito Inokentijaus raginimas sustiprinti maldą" },
+      "videos": {
+        "metropolitanCall": "Metropolito Inokentijaus raginimas sustiprinti maldą",
+        "councilReading": "Visose bažnyčiose perskaitytas pranešimas apie neeilinį Lietuvos Stačiatikių Bažnyčios Tarybos posėdį",
+        "prayerReel": "Dar vienas metropolito Inokentijaus raginimas sustiprinti maldą"
+      },
       "sources": {
         "site": "orthodoxy.lt – oficiali Lietuvos Stačiatikių Bažnyčios svetainė",
         "facebook": "Lietuvos Stačiatikių Bažnyčia Facebook"
@@ -148,7 +179,10 @@
         "sourcesTitle": "Official sources",
         "signature": "Parish of the Nativity of Christ, Bukiškis"
       },
-      "readIn": { "ru": "In Russian", "lt": "In Lithuanian" },
+      "readIn": {
+        "ru": "In Russian",
+        "lt": "In Lithuanian"
+      },
       "materials": {
         "council": "Extraordinary meeting of the Council of the Lithuanian Orthodox Church",
         "metropolitan": "Metropolitan Innokenty of Vilnius and Lithuania appeals to the country's highest leaders",
@@ -158,7 +192,11 @@
       "notes": {
         "seimas": "Press conference of the Lithuanian Orthodox Church; appeals from the brethren of the Holy Spirit Monastery and the parishioners of St Paraskeva Church."
       },
-      "videos": { "prayerReel": "Metropolitan Innokenty's call to more fervent prayer" },
+      "videos": {
+        "metropolitanCall": "Metropolitan Innokenty's call to more fervent prayer",
+        "councilReading": "The statement on the extraordinary Council meeting was read in all churches",
+        "prayerReel": "Another call by Metropolitan Innokenty to more fervent prayer"
+      },
       "sources": {
         "site": "orthodoxy.lt, official website of the Lithuanian Orthodox Church",
         "facebook": "Lithuanian Orthodox Church on Facebook"
@@ -188,7 +226,10 @@
         "sourcesTitle": "Oficjalne źródła",
         "signature": "Parafia Narodzenia Pańskiego w Bukiszkach"
       },
-      "readIn": { "ru": "Po rosyjsku", "lt": "Po litewsku" },
+      "readIn": {
+        "ru": "Po rosyjsku",
+        "lt": "Po litewsku"
+      },
       "materials": {
         "council": "Nadzwyczajne posiedzenie Rady Litewskiego Kościoła Prawosławnego",
         "metropolitan": "Metropolita wileński i litewski Innocenty zwrócił się do najwyższych władz państwa",
@@ -198,7 +239,11 @@
       "notes": {
         "seimas": "Konferencja prasowa Litewskiego Kościoła Prawosławnego; apele braci monasteru Świętego Ducha i parafian cerkwi św. Paraskiewy."
       },
-      "videos": { "prayerReel": "Wezwanie metropolity Innocentego do gorliwszej modlitwy" },
+      "videos": {
+        "metropolitanCall": "Wezwanie metropolity Innocentego do gorliwszej modlitwy",
+        "councilReading": "We wszystkich cerkwiach odczytano komunikat o nadzwyczajnym posiedzeniu Rady Litewskiego Kościoła Prawosławnego",
+        "prayerReel": "Kolejne wezwanie metropolity Innocentego do gorliwszej modlitwy"
+      },
       "sources": {
         "site": "orthodoxy.lt – oficjalna strona Litewskiego Kościoła Prawosławnego",
         "facebook": "Litewski Kościół Prawosławny na Facebooku"
@@ -228,7 +273,10 @@
         "sourcesTitle": "Offizielle Quellen",
         "signature": "Gemeinde der Geburt Christi, Bukiškis"
       },
-      "readIn": { "ru": "Auf Russisch", "lt": "Auf Litauisch" },
+      "readIn": {
+        "ru": "Auf Russisch",
+        "lt": "Auf Litauisch"
+      },
       "materials": {
         "council": "Außerordentliche Sitzung des Rates der Litauischen Orthodoxen Kirche",
         "metropolitan": "Metropolit Innokentij von Vilnius und Litauen wendet sich an die höchsten Repräsentanten des Staates",
@@ -238,7 +286,11 @@
       "notes": {
         "seimas": "Pressekonferenz der Litauischen Orthodoxen Kirche; Aufrufe der Bruderschaft des Heilig-Geist-Klosters und der Gemeinde der Paraskeva-Kirche."
       },
-      "videos": { "prayerReel": "Aufruf von Metropolit Innokentij zu inständigem Gebet" },
+      "videos": {
+        "metropolitanCall": "Aufruf von Metropolit Innokentij zu inständigem Gebet",
+        "councilReading": "In allen Kirchen wurde die Mitteilung über die außerordentliche Sitzung des Kirchenrates verlesen",
+        "prayerReel": "Ein weiterer Aufruf von Metropolit Innokentij zu inständigem Gebet"
+      },
       "sources": {
         "site": "orthodoxy.lt, offizielle Website der Litauischen Orthodoxen Kirche",
         "facebook": "Litauische Orthodoxe Kirche auf Facebook"
@@ -268,7 +320,10 @@
         "sourcesTitle": "Офіційні джерела",
         "signature": "Парафія храму Різдва Христового в Букішках"
       },
-      "readIn": { "ru": "Російською", "lt": "Литовською" },
+      "readIn": {
+        "ru": "Російською",
+        "lt": "Литовською"
+      },
       "materials": {
         "council": "Відбулося позачергове засідання Ради Литовської Православної Церкви",
         "metropolitan": "Митрополит Віленський і Литовський Інокентій звернувся до вищих керівників держави",
@@ -278,7 +333,11 @@
       "notes": {
         "seimas": "Пресконференція Литовської Православної Церкви; звернення братії Свято-Духового монастиря та парафіян П'ятницького храму."
       },
-      "videos": { "prayerReel": "Заклик митрополита Інокентія до посиленої молитви" },
+      "videos": {
+        "metropolitanCall": "Заклик митрополита Інокентія до посиленої молитви",
+        "councilReading": "У всіх храмах зачитано повідомлення про позачергове засідання Ради Литовської Православної Церкви",
+        "prayerReel": "Ще один заклик митрополита Інокентія до посиленої молитви"
+      },
       "sources": {
         "site": "orthodoxy.lt — офіційний сайт Литовської Православної Церкви",
         "facebook": "Литовська Православна Церква у Facebook"
