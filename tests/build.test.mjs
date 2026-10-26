@@ -469,7 +469,14 @@ test('A service confirmed by the rector appears with its note in every language 
       const schedule = await page(`/${lang}/schedule.html`);
       assert.ok(schedule.includes(escapeHTML(item.note[lang])), `${lang} ${item.id}`);
     }
-    assert.ok((await read('dist/assets/schedule-ru.ics')).includes(item.id));
+    // Once the parish calendar carries a service at the same time, that service
+    // takes the addition's place (scripts/lib/additions.mjs) and keeps its note.
+    const merged = await readJSON('dist/data/assistant-services.json');
+    const shown = merged.events.find(event => event.id === item.id)
+      || merged.events.find(event => event.date === item.date && event.startTime === item.startTime);
+    assert.ok(shown, `${item.id} is in the merged schedule`);
+    if (item.note) assert.deepEqual(shown.note, item.note, `${item.id} keeps its note`);
+    assert.ok((await read('dist/assets/schedule-ru.ics')).includes(shown.id), `${shown.id} is in the calendar file`);
   }
 });
 
