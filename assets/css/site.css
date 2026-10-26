@@ -1143,131 +1143,6 @@ main > .support-band:last-child {
   }
 }
 
-/* 23-thanks.css */
-/* Thank-you dialog ------------------------------------------------------------
-   A warm, quiet card with the words of thanks at its centre. Opens by itself on
-   the home page (see content/thanks.json) and from the footer link anywhere. */
-
-.thanks {
-  --thanks-cross: url('../img/cross.svg');
-
-  width: min(36rem, 100vw - 2rem);
-  max-height: calc(100dvh - 2rem);
-  padding: 0;
-  overflow: auto;
-  overscroll-behavior: contain;
-  border-color: var(--line-strong);
-  background:
-    radial-gradient(120% 70% at 50% 0%, var(--surface-tint) 0%, transparent 60%),
-    var(--surface);
-}
-
-.thanks::backdrop {
-  background: rgb(8 16 20 / 62%);
-}
-
-.thanks__card {
-  position: relative;
-  padding: clamp(1.5rem, 5vw, 2.75rem);
-  text-align: center;
-}
-
-.thanks__close {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  color: var(--ink-soft);
-}
-
-.thanks__cross {
-  display: block;
-  width: 1.75rem;
-  height: 2.5rem;
-  margin: 0 auto 1rem;
-  background: var(--accent);
-  -webkit-mask: var(--thanks-cross) center / contain no-repeat;
-  mask: var(--thanks-cross) center / contain no-repeat;
-}
-
-.thanks .thanks__eyebrow {
-  justify-content: center;
-  margin-bottom: 0.75rem;
-}
-
-.thanks .thanks__eyebrow::before {
-  display: none;
-}
-
-.thanks__title {
-  margin: 0 0 1.25rem;
-  font-family: var(--font-serif);
-  font-size: clamp(1.75rem, 1.3rem + 2vw, 2.4rem);
-  line-height: 1.15;
-  text-wrap: balance;
-}
-
-.thanks__body {
-  text-align: start;
-  font-size: 1.0625rem;
-  line-height: 1.6;
-}
-
-.thanks__body p + p {
-  margin-top: 0.9rem;
-}
-
-.thanks__body .thanks__signature {
-  margin-top: 1.4rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
-  color: var(--ink-soft);
-  font-style: italic;
-}
-
-.thanks .thanks__actions {
-  margin: 1.5rem 0 0;
-}
-
-.thanks .thanks__actions .button {
-  margin-top: 0;
-  min-width: 12rem;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .thanks[open] {
-    animation: thanks-in 0.25s ease-out both;
-  }
-
-  @keyframes thanks-in {
-    from {
-      opacity: 0;
-      transform: translateY(0.75rem);
-    }
-
-    to {
-      opacity: 1;
-      transform: none;
-    }
-  }
-}
-
-/* The footer link looks like the other footer text, not like a button. */
-.site-footer__thanks {
-  padding: 0;
-  border: 0;
-  background: none;
-  color: #f0eadc;
-  font: inherit;
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
-  cursor: pointer;
-}
-
-.site-footer__thanks:hover {
-  color: #ecd29b;
-}
-
 /* 30-components.css */
 /* Buttons and links ------------------------------------------------------- */
 
@@ -2105,6 +1980,144 @@ input[type='email']:user-invalid {
 
 .section-title {
   margin-bottom: 1.5rem;
+}
+
+/* 31-thanks.css */
+/* Thank-you dialog ------------------------------------------------------------
+   A warm, quiet card with the words of thanks at its centre. Opens by itself on
+   the home page (see content/thanks.json) and from the footer link anywhere.
+   The card is sized to fit a laptop screen without scrolling; on shorter
+   screens only the inner text scrolls, with a thin bar inside the card so the
+   rounded frame and the close button stay intact. */
+
+.thanks {
+  --thanks-cross: url('../img/cross.svg');
+
+  display: none;
+  width: min(40rem, 100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  padding: 0;
+  overflow: hidden;
+  border-color: var(--line-strong);
+  background: var(--surface);
+}
+
+.thanks[open] {
+  display: grid;
+}
+
+.thanks::backdrop {
+  background: rgb(8 16 20 / 62%);
+}
+
+.thanks__card {
+  position: relative;
+  max-height: calc(100dvh - 2rem);
+  padding: 1.75rem clamp(1.25rem, 5vw, 2.5rem) 1.75rem;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+  text-align: center;
+  background:
+    radial-gradient(110% 55% at 50% 0%, var(--surface-tint) 0%, transparent 65%),
+    var(--surface);
+}
+
+.thanks__close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--ink-soft);
+}
+
+.thanks__cross {
+  display: block;
+  width: 1.5rem;
+  height: 2.25rem;
+  margin: 0 auto 0.75rem;
+  background: var(--accent);
+  -webkit-mask: var(--thanks-cross) center / contain no-repeat;
+  mask: var(--thanks-cross) center / contain no-repeat;
+}
+
+.thanks .thanks__eyebrow {
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.thanks .thanks__eyebrow::before {
+  display: none;
+}
+
+.thanks__title {
+  margin: 0 0 1rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.1rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.thanks__body {
+  text-align: start;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.thanks__body p + p {
+  margin-top: 0.7rem;
+}
+
+.thanks__body .thanks__signature {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.thanks .thanks__actions {
+  margin: 1.25rem 0 0;
+}
+
+.thanks .thanks__actions .button {
+  margin-top: 0;
+  min-width: 11rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .thanks[open] {
+    animation: thanks-in 0.25s ease-out both;
+  }
+
+  @keyframes thanks-in {
+    from {
+      opacity: 0;
+      transform: translateY(0.75rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* The footer link looks like the other footer links: plain, underlined on hover. */
+.site-footer .site-footer__thanks {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #f0eadc;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.site-footer .site-footer__thanks:hover {
+  text-decoration: underline;
 }
 
 /* 40-pages.css */
