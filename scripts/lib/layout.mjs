@@ -5,6 +5,7 @@ import { icon, socialIcon, svgDefs } from './icons.mjs';
 import { LANGUAGE_NAMES } from './pages/library.mjs';
 import { structuredData } from './structured-data.mjs';
 import { externalLink, siteLink } from './components.mjs';
+import { announcementStrip } from './announcement.mjs';
 
 /**
  * Reviewed opt-in services: the parish assistant and the existing prayer form.
@@ -165,7 +166,7 @@ export function renderDocument(site, page) {
     svgDefs: svgDefs(),
     alternates: raw(alternateLinks.join('\n  ')),
     bodyAttributes: attrs({ 'data-label-copied': t.copied, 'data-label-copy-failed': t.copyFailed }),
-    header: header(site, t, lang, uiLocale, pageId, languageTargets),
+    header: html`${header(site, t, lang, uiLocale, pageId, languageTargets)}${announcementStrip(site, uiLocale, pageId)}`,
     footer: footer(site, t, uiLocale),
     dialogs: html`${dialogs(t, uiLocale)}${extraDialogs}`,
     body

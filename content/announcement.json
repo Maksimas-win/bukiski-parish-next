@@ -1,0 +1,288 @@
+{
+  "_comment": "Parish announcement: a slim strip under the header on every page and a page with official materials. Set enabled to false, or let showUntil pass, to remove it. Dates are Vilnius calendar days, inclusive.",
+  "id": "lpc-bills-2026-10",
+  "enabled": true,
+  "showFrom": "2026-10-26",
+  "showUntil": "2026-12-31",
+  "slug": "lpc-info",
+  "requestedBy": "Коммуникационно-издательский отдел Литовской Православной Церкви, письмо настоятелям храмов, октябрь 2026",
+  "sources": [
+    { "id": "site", "url": "https://www.orthodoxy.lt/" },
+    { "id": "facebook", "url": "https://www.facebook.com/orthodoxy.lt" }
+  ],
+  "materials": [
+    {
+      "id": "council",
+      "urls": {
+        "ru": "https://www.orthodoxy.lt/novosti/ekstrennoe-zasedanie-soveta-litovskoi-pravoslavnoi-cerkvi",
+        "lt": "https://www.orthodoxy.lt/novosti/ivyko-neeilinis-lietuvos-staciatikiu-baznycios-tarybos-posedis-spalio-17-2026"
+      }
+    },
+    {
+      "id": "metropolitan",
+      "urls": {
+        "ru": "https://www.orthodoxy.lt/novosti/mitropolit-obratilsia-k-rukovoditeliam-litvy",
+        "lt": "https://www.orthodoxy.lt/novosti/vilniaus-ir-lietuvos-metropolitas-inokentijus-kreipesi-i-auksciausius-valstybes-vadovus"
+      }
+    },
+    {
+      "id": "seimas",
+      "urls": {
+        "ru": "https://www.orthodoxy.lt/novosti/obespokoennye-pravoslavnye-veruiushhie-obratilis-k-rukovodstvu-i-deputatam-seima",
+        "lt": "https://www.orthodoxy.lt/novosti/susirupine-staciatikiai-kreipesi-i-seimo-vadovybe-ir-narius"
+      }
+    },
+    {
+      "id": "constitution",
+      "urls": {
+        "ru": "https://www.orthodoxy.lt/novosti/obrashhenie-mitropolita-innokentiia-po-slucaiu-dnia-konstitucii-2026",
+        "lt": "https://www.orthodoxy.lt/novosti/metropolito-inokentijaus-kreipimasis-konstitucijos-dienos-proga-2026"
+      }
+    }
+  ],
+  "videos": [
+    { "id": "prayerReel", "url": "https://www.facebook.com/reel/1495650425726732" }
+  ],
+  "texts": {
+    "ru": {
+      "strip": {
+        "label": "Важно",
+        "text": "Официальная информация Литовской Православной Церкви о законопроектах, касающихся её храмов и прав верующих.",
+        "link": "Подробнее"
+      },
+      "page": {
+        "title": "О законопроектах, касающихся Литовской Православной Церкви",
+        "description": "Официальные сообщения и обращения Литовской Православной Церкви в связи с законопроектами, внесёнными в Сейм Литвы. Собраны приходом храма Рождества Христова в Букишках.",
+        "eyebrow": "Объявление прихода",
+        "lead": "Официальные сообщения и обращения нашей Церкви — в одном месте.",
+        "greeting": "Дорогие братья и сестры!",
+        "paragraphs": [
+          "В Сейм Литовской Республики внесены два законопроекта, касающиеся Литовской Православной Церкви. По оценке Совета Церкви, они предусматривают возможность изъятия у неё ряда исторических храмов — в том числе Свято-Духова монастыря и Пречистенского кафедрального собора в Вильнюсе — и создают предпосылки для исключения Литовской Православной Церкви из числа традиционных религиозных общин Литвы.",
+          "Чтобы вы получали достоверные сведения из первых рук, ниже собраны официальные публикации Церкви. Пожалуйста, опирайтесь прежде всего на официальные источники: сайт orthodoxy.lt и страницу Литовской Православной Церкви в Facebook."
+        ],
+        "materialsTitle": "Официальные публикации",
+        "videosTitle": "Видео",
+        "videosMore": "Другие видеообращения публикуются на странице Церкви в Facebook.",
+        "prayerTitle": "Молитва",
+        "prayer": "По благословению митрополита Виленского и Литовского Иннокентия во всех приходах и монастырях Литовской Православной Церкви еженедельно совершаются молебны и акафисты Божией Матери. Призываем всех к усиленной молитве — в храме и дома — о мире Церкви, о Литве, её народе и властях. О времени молебна в нашем храме можно узнать по телефону прихода.",
+        "sourcesTitle": "Официальные источники",
+        "signature": "Приход храма Рождества Христова в Букишках"
+      },
+      "readIn": { "ru": "На русском", "lt": "На литовском" },
+      "materials": {
+        "council": "Состоялось экстренное заседание Совета Литовской Православной Церкви",
+        "metropolitan": "Митрополит Виленский и Литовский Иннокентий обратился к высшим руководителям государства",
+        "seimas": "Обеспокоенные православные верующие обратились к руководству и депутатам Сейма",
+        "constitution": "В День Конституции Литовской Республики митрополит Иннокентий обратился к верующим и всем гражданам Литвы"
+      },
+      "notes": {
+        "seimas": "Пресс-конференция Литовской Православной Церкви; обращения братии Свято-Духова монастыря и прихожан Пятницкого храма."
+      },
+      "videos": { "prayerReel": "Призыв митрополита Иннокентия к сугубой молитве" },
+      "sources": {
+        "site": "orthodoxy.lt — официальный сайт Литовской Православной Церкви",
+        "facebook": "Литовская Православная Церковь в Facebook"
+      }
+    },
+    "lt": {
+      "strip": {
+        "label": "Svarbu",
+        "text": "Oficiali Lietuvos Stačiatikių Bažnyčios informacija apie įstatymų projektus, susijusius su jos šventovėmis ir tikinčiųjų teisėmis.",
+        "link": "Plačiau"
+      },
+      "page": {
+        "title": "Apie įstatymų projektus, susijusius su Lietuvos Stačiatikių Bažnyčia",
+        "description": "Oficialūs Lietuvos Stačiatikių Bažnyčios pranešimai ir kreipimaisi dėl Lietuvos Respublikos Seimui pateiktų įstatymų projektų. Surinko Bukiškio Kristaus Gimimo parapija.",
+        "eyebrow": "Parapijos pranešimas",
+        "lead": "Oficialūs mūsų Bažnyčios pranešimai ir kreipimaisi – vienoje vietoje.",
+        "greeting": "Brangūs broliai ir seserys!",
+        "paragraphs": [
+          "Lietuvos Respublikos Seimui pateikti du įstatymų projektai, susiję su Lietuvos Stačiatikių Bažnyčia. Bažnyčios Tarybos vertinimu, jais numatoma galimybė paimti iš jos keletą istorinių šventovių, tarp jų Šventosios Dvasios vienuolyną ir Skaisčiausiosios Dievo Motinos katedrą Vilniuje, ir sudaromos prielaidos išbraukti Lietuvos Stačiatikių Bažnyčią iš tradicinių Lietuvos religinių bendruomenių sąrašo.",
+          "Kad gautumėte patikimą informaciją iš pirminių šaltinių, žemiau pateikiame oficialius Bažnyčios pranešimus. Prašome pirmiausia remtis oficialiais šaltiniais: svetaine orthodoxy.lt ir Lietuvos Stačiatikių Bažnyčios Facebook puslapiu. Pranešimai skelbiami lietuvių ir rusų kalbomis."
+        ],
+        "materialsTitle": "Oficialūs pranešimai",
+        "videosTitle": "Vaizdo įrašai",
+        "videosMore": "Daugiau vaizdo kreipimųsi skelbiama Bažnyčios Facebook puslapyje.",
+        "prayerTitle": "Malda",
+        "prayer": "Vilniaus ir Lietuvos metropolito Inokentijaus palaiminimu visose Lietuvos Stačiatikių Bažnyčios parapijose ir vienuolynuose kas savaitę meldžiamasi Dievo Motinai: aukojami molebenai ir giedami akatistai. Kviečiame visus sustiprinti maldą bažnyčioje ir namuose – už Bažnyčios taiką, už Lietuvą, jos žmones ir valdžią. Apie molebeno laiką mūsų bažnyčioje galima pasiteirauti parapijos telefonu.",
+        "sourcesTitle": "Oficialūs šaltiniai",
+        "signature": "Bukiškio Kristaus Gimimo parapija"
+      },
+      "readIn": { "ru": "Rusiškai", "lt": "Lietuviškai" },
+      "materials": {
+        "council": "Įvyko neeilinis Lietuvos Stačiatikių Bažnyčios Tarybos posėdis",
+        "metropolitan": "Vilniaus ir Lietuvos metropolitas Inokentijus kreipėsi į aukščiausius valstybės vadovus",
+        "seimas": "Susirūpinę stačiatikiai kreipėsi į Seimo vadovybę ir narius",
+        "constitution": "Lietuvos Respublikos Konstitucijos dieną metropolitas Inokentijus kreipėsi į tikinčiuosius ir visus Lietuvos piliečius"
+      },
+      "notes": {
+        "seimas": "Lietuvos Stačiatikių Bažnyčios spaudos konferencija; Šventosios Dvasios vienuolyno brolijos ir Šv. Paraskevos parapijos tikinčiųjų kreipimaisi."
+      },
+      "videos": { "prayerReel": "Metropolito Inokentijaus raginimas sustiprinti maldą" },
+      "sources": {
+        "site": "orthodoxy.lt – oficiali Lietuvos Stačiatikių Bažnyčios svetainė",
+        "facebook": "Lietuvos Stačiatikių Bažnyčia Facebook"
+      }
+    },
+    "en": {
+      "strip": {
+        "label": "Important",
+        "text": "Official information from the Lithuanian Orthodox Church about draft laws concerning its churches and the rights of believers.",
+        "link": "Read more"
+      },
+      "page": {
+        "title": "Draft laws concerning the Lithuanian Orthodox Church",
+        "description": "Official statements and appeals of the Lithuanian Orthodox Church regarding draft laws submitted to the Seimas of Lithuania, collected by the parish of the Nativity of Christ in Bukiškis.",
+        "eyebrow": "Parish notice",
+        "lead": "Official statements and appeals of our Church in one place.",
+        "greeting": "Dear brothers and sisters,",
+        "paragraphs": [
+          "Two draft laws concerning the Lithuanian Orthodox Church have been submitted to the Seimas of the Republic of Lithuania. In the assessment of the Church Council, they would make it possible to take several historic churches from it, among them the Monastery of the Holy Spirit and the Cathedral of the Theotokos in Vilnius, and would prepare the ground for removing the Lithuanian Orthodox Church from Lithuania's traditional religious communities.",
+          "So that you receive reliable information first-hand, the Church's official publications are listed below. Please rely above all on official sources: the website orthodoxy.lt and the Facebook page of the Lithuanian Orthodox Church. The publications are available in Russian and Lithuanian."
+        ],
+        "materialsTitle": "Official publications",
+        "videosTitle": "Video",
+        "videosMore": "Further video appeals are published on the Church's Facebook page.",
+        "prayerTitle": "Prayer",
+        "prayer": "With the blessing of Metropolitan Innokenty of Vilnius and Lithuania, molebens and akathists to the Mother of God are served every week in all parishes and monasteries of the Lithuanian Orthodox Church. We invite everyone to pray more fervently, in church and at home, for the peace of the Church and for Lithuania, its people and its authorities. Please call the parish for the time of the moleben in our church.",
+        "sourcesTitle": "Official sources",
+        "signature": "Parish of the Nativity of Christ, Bukiškis"
+      },
+      "readIn": { "ru": "In Russian", "lt": "In Lithuanian" },
+      "materials": {
+        "council": "Extraordinary meeting of the Council of the Lithuanian Orthodox Church",
+        "metropolitan": "Metropolitan Innokenty of Vilnius and Lithuania appeals to the country's highest leaders",
+        "seimas": "Concerned Orthodox believers appeal to the leadership and members of the Seimas",
+        "constitution": "Metropolitan Innokenty's Constitution Day address to believers and all citizens of Lithuania"
+      },
+      "notes": {
+        "seimas": "Press conference of the Lithuanian Orthodox Church; appeals from the brethren of the Holy Spirit Monastery and the parishioners of St Paraskeva Church."
+      },
+      "videos": { "prayerReel": "Metropolitan Innokenty's call to more fervent prayer" },
+      "sources": {
+        "site": "orthodoxy.lt, official website of the Lithuanian Orthodox Church",
+        "facebook": "Lithuanian Orthodox Church on Facebook"
+      }
+    },
+    "pl": {
+      "strip": {
+        "label": "Ważne",
+        "text": "Oficjalne informacje Litewskiego Kościoła Prawosławnego o projektach ustaw dotyczących jego świątyń i praw wiernych.",
+        "link": "Więcej"
+      },
+      "page": {
+        "title": "O projektach ustaw dotyczących Litewskiego Kościoła Prawosławnego",
+        "description": "Oficjalne komunikaty i apele Litewskiego Kościoła Prawosławnego w związku z projektami ustaw złożonymi w Sejmie Litwy. Zebrane przez parafię Narodzenia Pańskiego w Bukiszkach.",
+        "eyebrow": "Ogłoszenie parafii",
+        "lead": "Oficjalne komunikaty i apele naszego Kościoła w jednym miejscu.",
+        "greeting": "Drodzy Bracia i Siostry!",
+        "paragraphs": [
+          "Do Sejmu Republiki Litewskiej wniesiono dwa projekty ustaw dotyczące Litewskiego Kościoła Prawosławnego. W ocenie Rady Kościoła przewidują one możliwość odebrania mu kilku historycznych świątyń, w tym monasteru Świętego Ducha i soboru Przeczystej Bogurodzicy w Wilnie, oraz tworzą przesłanki do wykreślenia Litewskiego Kościoła Prawosławnego z grona tradycyjnych wspólnot religijnych Litwy.",
+          "Aby otrzymywać rzetelne informacje z pierwszej ręki, poniżej zebraliśmy oficjalne publikacje Kościoła. Prosimy opierać się przede wszystkim na źródłach oficjalnych: stronie orthodoxy.lt i stronie Litewskiego Kościoła Prawosławnego na Facebooku. Publikacje są dostępne w języku rosyjskim i litewskim."
+        ],
+        "materialsTitle": "Oficjalne publikacje",
+        "videosTitle": "Wideo",
+        "videosMore": "Kolejne nagrania publikowane są na stronie Kościoła na Facebooku.",
+        "prayerTitle": "Modlitwa",
+        "prayer": "Z błogosławieństwa metropolity wileńskiego i litewskiego Innocentego we wszystkich parafiach i monasterach Litewskiego Kościoła Prawosławnego co tydzień odprawiane są molebny i akatysty do Bogurodzicy. Zachęcamy wszystkich do gorliwszej modlitwy, w cerkwi i w domu, o pokój Kościoła oraz za Litwę, jej naród i władze. O godzinę molebnu w naszej cerkwi można zapytać telefonicznie w parafii.",
+        "sourcesTitle": "Oficjalne źródła",
+        "signature": "Parafia Narodzenia Pańskiego w Bukiszkach"
+      },
+      "readIn": { "ru": "Po rosyjsku", "lt": "Po litewsku" },
+      "materials": {
+        "council": "Nadzwyczajne posiedzenie Rady Litewskiego Kościoła Prawosławnego",
+        "metropolitan": "Metropolita wileński i litewski Innocenty zwrócił się do najwyższych władz państwa",
+        "seimas": "Zaniepokojeni wierni prawosławni zwrócili się do kierownictwa i posłów Sejmu",
+        "constitution": "Orędzie metropolity Innocentego do wiernych i wszystkich obywateli Litwy w Dniu Konstytucji"
+      },
+      "notes": {
+        "seimas": "Konferencja prasowa Litewskiego Kościoła Prawosławnego; apele braci monasteru Świętego Ducha i parafian cerkwi św. Paraskiewy."
+      },
+      "videos": { "prayerReel": "Wezwanie metropolity Innocentego do gorliwszej modlitwy" },
+      "sources": {
+        "site": "orthodoxy.lt – oficjalna strona Litewskiego Kościoła Prawosławnego",
+        "facebook": "Litewski Kościół Prawosławny na Facebooku"
+      }
+    },
+    "de": {
+      "strip": {
+        "label": "Wichtig",
+        "text": "Offizielle Informationen der Litauischen Orthodoxen Kirche zu Gesetzentwürfen, die ihre Kirchen und die Rechte der Gläubigen betreffen.",
+        "link": "Mehr erfahren"
+      },
+      "page": {
+        "title": "Gesetzentwürfe zur Litauischen Orthodoxen Kirche",
+        "description": "Offizielle Mitteilungen und Aufrufe der Litauischen Orthodoxen Kirche zu den im litauischen Seimas eingebrachten Gesetzentwürfen, zusammengestellt von der Gemeinde der Geburt Christi in Bukiškis.",
+        "eyebrow": "Mitteilung der Gemeinde",
+        "lead": "Offizielle Mitteilungen und Aufrufe unserer Kirche an einem Ort.",
+        "greeting": "Liebe Brüder und Schwestern,",
+        "paragraphs": [
+          "Im Seimas der Republik Litauen wurden zwei Gesetzentwürfe eingebracht, die die Litauische Orthodoxe Kirche betreffen. Nach Einschätzung des Kirchenrates sehen sie die Möglichkeit vor, ihr mehrere historische Kirchen zu entziehen, darunter das Heilig-Geist-Kloster und die Kathedrale der Allreinen Gottesmutter in Vilnius, und schaffen Voraussetzungen dafür, die Litauische Orthodoxe Kirche aus dem Kreis der traditionellen Religionsgemeinschaften Litauens auszuschließen.",
+          "Damit Sie verlässliche Informationen aus erster Hand erhalten, finden Sie unten die offiziellen Veröffentlichungen der Kirche. Bitte stützen Sie sich vor allem auf die offiziellen Quellen: die Website orthodoxy.lt und die Facebook-Seite der Litauischen Orthodoxen Kirche. Die Veröffentlichungen liegen auf Russisch und Litauisch vor."
+        ],
+        "materialsTitle": "Offizielle Veröffentlichungen",
+        "videosTitle": "Video",
+        "videosMore": "Weitere Videobotschaften erscheinen auf der Facebook-Seite der Kirche.",
+        "prayerTitle": "Gebet",
+        "prayer": "Mit dem Segen von Metropolit Innokentij von Vilnius und Litauen werden in allen Gemeinden und Klöstern der Litauischen Orthodoxen Kirche wöchentlich Bittgottesdienste (Moleben) und Akathistoi zur Gottesmutter gefeiert. Wir laden alle ein, inständiger zu beten, in der Kirche und zu Hause, für den Frieden der Kirche und für Litauen, sein Volk und seine Obrigkeit. Die Zeit des Moleben in unserer Kirche erfahren Sie telefonisch bei der Gemeinde.",
+        "sourcesTitle": "Offizielle Quellen",
+        "signature": "Gemeinde der Geburt Christi, Bukiškis"
+      },
+      "readIn": { "ru": "Auf Russisch", "lt": "Auf Litauisch" },
+      "materials": {
+        "council": "Außerordentliche Sitzung des Rates der Litauischen Orthodoxen Kirche",
+        "metropolitan": "Metropolit Innokentij von Vilnius und Litauen wendet sich an die höchsten Repräsentanten des Staates",
+        "seimas": "Besorgte orthodoxe Gläubige wenden sich an die Leitung und die Abgeordneten des Seimas",
+        "constitution": "Botschaft von Metropolit Innokentij an die Gläubigen und alle Bürger Litauens zum Tag der Verfassung"
+      },
+      "notes": {
+        "seimas": "Pressekonferenz der Litauischen Orthodoxen Kirche; Aufrufe der Bruderschaft des Heilig-Geist-Klosters und der Gemeinde der Paraskeva-Kirche."
+      },
+      "videos": { "prayerReel": "Aufruf von Metropolit Innokentij zu inständigem Gebet" },
+      "sources": {
+        "site": "orthodoxy.lt, offizielle Website der Litauischen Orthodoxen Kirche",
+        "facebook": "Litauische Orthodoxe Kirche auf Facebook"
+      }
+    },
+    "uk": {
+      "strip": {
+        "label": "Важливо",
+        "text": "Офіційна інформація Литовської Православної Церкви про законопроєкти, що стосуються її храмів і прав вірян.",
+        "link": "Докладніше"
+      },
+      "page": {
+        "title": "Про законопроєкти, що стосуються Литовської Православної Церкви",
+        "description": "Офіційні повідомлення та звернення Литовської Православної Церкви у зв'язку із законопроєктами, внесеними до Сейму Литви. Зібрано парафією храму Різдва Христового в Букішках.",
+        "eyebrow": "Оголошення парафії",
+        "lead": "Офіційні повідомлення та звернення нашої Церкви — в одному місці.",
+        "greeting": "Дорогі брати і сестри!",
+        "paragraphs": [
+          "До Сейму Литовської Республіки внесено два законопроєкти, що стосуються Литовської Православної Церкви. На думку Ради Церкви, вони передбачають можливість вилучення в неї низки історичних храмів — зокрема Свято-Духового монастиря та Пречистенського кафедрального собору у Вільнюсі — і створюють передумови для виключення Литовської Православної Церкви з переліку традиційних релігійних громад Литви.",
+          "Щоб ви отримували достовірні відомості з перших рук, нижче зібрано офіційні публікації Церкви. Будь ласка, спирайтеся насамперед на офіційні джерела: сайт orthodoxy.lt і сторінку Литовської Православної Церкви у Facebook. Публікації доступні російською та литовською мовами."
+        ],
+        "materialsTitle": "Офіційні публікації",
+        "videosTitle": "Відео",
+        "videosMore": "Інші відеозвернення публікуються на сторінці Церкви у Facebook.",
+        "prayerTitle": "Молитва",
+        "prayer": "З благословення митрополита Віленського і Литовського Інокентія в усіх парафіях і монастирях Литовської Православної Церкви щотижня звершуються молебні та акафісти Божій Матері. Закликаємо всіх до посиленої молитви — у храмі та вдома — про мир Церкви, про Литву, її народ і владу. Про час молебню в нашому храмі можна дізнатися за телефоном парафії.",
+        "sourcesTitle": "Офіційні джерела",
+        "signature": "Парафія храму Різдва Христового в Букішках"
+      },
+      "readIn": { "ru": "Російською", "lt": "Литовською" },
+      "materials": {
+        "council": "Відбулося позачергове засідання Ради Литовської Православної Церкви",
+        "metropolitan": "Митрополит Віленський і Литовський Інокентій звернувся до вищих керівників держави",
+        "seimas": "Стурбовані православні віряни звернулися до керівництва і депутатів Сейму",
+        "constitution": "Звернення митрополита Інокентія до вірян і всіх громадян Литви в День Конституції"
+      },
+      "notes": {
+        "seimas": "Пресконференція Литовської Православної Церкви; звернення братії Свято-Духового монастиря та парафіян П'ятницького храму."
+      },
+      "videos": { "prayerReel": "Заклик митрополита Інокентія до посиленої молитви" },
+      "sources": {
+        "site": "orthodoxy.lt — офіційний сайт Литовської Православної Церкви",
+        "facebook": "Литовська Православна Церква у Facebook"
+      }
+    }
+  }
+}

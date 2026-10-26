@@ -1,0 +1,136 @@
+/* Parish announcement --------------------------------------------------------
+   A slim strip in the page flow under the sticky header. It pushes the page
+   down by a line or two and never overlaps content. Colours are existing
+   tokens, so contrast is covered by tests/design.test.mjs in both themes. */
+
+.announcement {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-tint);
+  color: var(--ink);
+}
+
+.announcement[hidden] {
+  display: none;
+}
+
+.announcement__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  padding-block: 0.55rem;
+}
+
+.announcement__text {
+  flex: 1;
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+
+.announcement__label {
+  margin-inline-end: 0.15rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.announcement__label .icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-inline-end: 0.3rem;
+  vertical-align: -0.18em;
+}
+
+.announcement__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  white-space: nowrap;
+}
+
+.announcement__link:hover {
+  color: var(--accent-hover);
+}
+
+.announcement__link .icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (max-width: 40rem) {
+  .announcement__inner {
+    padding-block: 0.5rem;
+  }
+}
+
+/* The announcement page ----------------------------------------------------- */
+
+.announcement-page {
+  padding-bottom: var(--section);
+}
+
+.announcement-page__greeting {
+  font-weight: 700;
+}
+
+.prose .announcement-materials,
+.prose .announcement-videos,
+.prose .announcement-sources {
+  padding: 0;
+  list-style: none;
+}
+
+.announcement-materials {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.announcement-material {
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line);
+  border-inline-start: 4px solid var(--accent);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+}
+
+.announcement-material p {
+  margin: 0;
+}
+
+.announcement-material__title {
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.announcement-material .announcement-material__note {
+  margin-top: 0.3rem;
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+}
+
+.announcement-material .announcement-material__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.announcement-videos li + li,
+.announcement-sources li + li {
+  margin-top: 0.4rem;
+}
+
+.announcement-page__signature {
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+@media print {
+  .announcement {
+    display: none;
+  }
+}

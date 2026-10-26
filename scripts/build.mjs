@@ -22,6 +22,7 @@ import { articlePage, lightboxDialog } from './lib/pages/article.mjs';
 import { gpmPage, gpmMeta } from './lib/pages/gpm.mjs';
 import { documentPage, loadDocument } from './lib/pages/document.mjs';
 import * as outputs from './lib/outputs.mjs';
+import { announcementActive, announcementPage, announcementPath } from './lib/announcement.mjs';
 
 const site = await loadSite();
 
@@ -228,6 +229,25 @@ function addArticlePages() {
   }
 }
 
+/** The page behind the announcement strip, in every site language, while it is shown. */
+function addAnnouncementPages() {
+  const { announcement } = site;
+  if (!announcementActive(announcement, site.buildTime)) return;
+  for (const lang of site.languages) {
+    const page = announcement.texts[lang].page;
+    addRoute({
+      lang,
+      pageId: 'announcement',
+      title: page.title,
+      description: page.description,
+      body: announcementPage(site, lang, site.locales[lang]),
+      path: announcementPath(announcement, lang),
+      trail: [{ name: page.title, path: announcementPath(announcement, lang) }],
+      alternates: site.languages.map(code => ({ lang: code, path: announcementPath(announcement, code) }))
+    });
+  }
+}
+
 function addNotFoundPage() {
   const t = site.locales.ru;
   addRoute({
@@ -260,6 +280,7 @@ await versionScripts(site.assetVersion);
 addCorePages();
 const documentFiles = await addDocumentPages();
 addArticlePages();
+addAnnouncementPages();
 addNotFoundPage();
 for (const [path, route] of routes) await writeOutput(outputPathOf(path), route.html);
 
