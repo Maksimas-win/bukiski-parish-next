@@ -6,6 +6,7 @@ import { LANGUAGE_NAMES } from './pages/library.mjs';
 import { structuredData } from './structured-data.mjs';
 import { externalLink, siteLink } from './components.mjs';
 import { announcementStrip } from './announcement.mjs';
+import { thanksDialog, thanksFooterLink } from './thanks.mjs';
 
 /**
  * Reviewed opt-in services: the parish assistant and the existing prayer form.
@@ -73,6 +74,7 @@ function footer(site, t, uiLocale) {
         <p>${t.footerLine}</p>
         <p class="site-footer__social" aria-label="${t.footerSocial}">${settings.social.map(item => externalLink(t, item.url, html`${socialIcon(item.id)}${item.label}`))}</p>
         <p>${externalLink(t, settings.links.church.url, settings.links.church.label[uiLocale])}</p>
+        <p>${thanksFooterLink(site, uiLocale)}</p>
       </div>
       <div>
         <h2>${t.contacts}</h2>
@@ -92,7 +94,7 @@ function footer(site, t, uiLocale) {
   </footer>`;
 }
 
-function dialogs(t, uiLocale) {
+function dialogs(site, t, uiLocale, pageId) {
   const themes = [['auto', t.themeAuto], ['light', t.themeLight], ['dark', t.themeDark]];
   return html`<dialog class="dialog" id="preferences" lang="${uiLocale}" aria-labelledby="preferences-title">
     <div class="dialog__head">
@@ -109,6 +111,7 @@ function dialogs(t, uiLocale) {
     <label class="toggle"><input type="checkbox" data-preference="contrast"><span>${t.contrast}</span></label>
     <button type="button" class="button button--quiet" data-preferences-reset>${t.reset}</button>
   </dialog>
+  ${thanksDialog(site, uiLocale, pageId)}
   <div class="toast-region" data-toasts role="status" aria-live="polite" lang="${uiLocale}"></div>`;
 }
 
@@ -168,7 +171,7 @@ export function renderDocument(site, page) {
     bodyAttributes: attrs({ 'data-label-copied': t.copied, 'data-label-copy-failed': t.copyFailed }),
     header: html`${header(site, t, lang, uiLocale, pageId, languageTargets)}${announcementStrip(site, uiLocale, pageId)}`,
     footer: footer(site, t, uiLocale),
-    dialogs: html`${dialogs(t, uiLocale)}${extraDialogs}`,
+    dialogs: html`${dialogs(site, t, uiLocale, pageId)}${extraDialogs}`,
     body
   };
   const document = site.template.replace(/\{\{(\w+)\}\}/g, (_, key) => {

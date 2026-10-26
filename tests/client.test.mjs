@@ -23,12 +23,16 @@ test('No script builds markup from strings, evaluates code or contacts third par
   }
 });
 
-test('Only reading preferences are stored in the browser', () => {
-  const writers = [...sources].filter(([, source]) => /localStorage\.setItem|sessionStorage|indexedDB|document\.cookie/.test(source)).map(([name]) => name);
-  assert.deepEqual(writers, ['ui/preferences.js']);
+test('Only reading preferences and the day the thank-you dialog last opened are stored in the browser', () => {
+  const writers = [...sources].filter(([, source]) => /localStorage\.setItem|sessionStorage|indexedDB|document\.cookie/.test(source)).map(([name]) => name).sort();
+  assert.deepEqual(writers, ['ui/preferences.js', 'ui/thanks.js']);
   assert.equal((sources.get('ui/preferences.js').match(/localStorage\.setItem/g) || []).length, 1);
+  // The thank-you dialog stores one timestamp under its own key and nothing else.
+  const thanks = sources.get('ui/thanks.js');
+  assert.equal((thanks.match(/localStorage\.setItem/g) || []).length, 1);
+  assert.match(thanks, /localStorage\.setItem\(STORAGE_KEY, new Date\(\)\.toISOString\(\)\)/);
   const readers = [...sources].filter(([, source]) => source.includes('localStorage')).map(([name]) => name).sort();
-  assert.deepEqual(readers, ['theme-init.js', 'ui/preferences.js']);
+  assert.deepEqual(readers, ['theme-init.js', 'ui/preferences.js', 'ui/thanks.js']);
   // Both files must agree on the storage key.
   const key = sources.get('ui/preferences.js').match(/STORAGE_KEY = '([^']+)'/)[1];
   assert.ok(sources.get('theme-init.js').includes(`'${key}'`));

@@ -7,6 +7,7 @@ import { TIMEZONE, SITE_LANGUAGES, FEED_LANGUAGES, normalizeSchedule, safeExtern
 import { localizeSchedule } from './liturgical.mjs';
 import { mergeAdditions } from './additions.mjs';
 import { validateAnnouncement } from './announcement.mjs';
+import { validateThanks } from './thanks.mjs';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const DIST = resolve(ROOT, 'dist');
@@ -52,6 +53,8 @@ export async function loadSite(env = process.env) {
   const gpm = await loadGpm();
   const announcement = await readJSON('announcement.json');
   validateAnnouncement(announcement, settings.locales);
+  const thanks = await readJSON('thanks.json');
+  validateThanks(thanks, settings.locales);
 
   if (settings.timezone !== TIMEZONE) throw new Error(`settings.timezone must be ${TIMEZONE}`);
   if (settings.locales.join() !== SITE_LANGUAGES.join()) throw new Error('settings.locales must match the supported site languages');
@@ -104,6 +107,8 @@ export async function loadSite(env = process.env) {
     gpm,
     /** Parish announcement strip and its page; see content/announcement.json. */
     announcement,
+    /** The thank-you dialog; see content/thanks.json. */
+    thanks,
     template,
     schedule,
     origin,

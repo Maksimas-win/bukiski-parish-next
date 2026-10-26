@@ -10,7 +10,7 @@
 - Never invent services, feast-day times, priest contacts, historical dates, accessibility facilities or publication dates.
 - Keep parish-confirmed events distinct from regular patterns and church-calendar commemorations.
 - Translate core content consistently across RU/LT/EN. Preserve original-language articles and identify missing translations.
-- Do not put prayer names, private messages or credentials into Git, logs, URLs or browser storage.
+- Do not put prayer names, private messages or credentials into Git, logs, URLs or browser storage. Browser storage holds only the reading preferences and the day the thank-you dialog last opened by itself (`tests/client.test.mjs` lists the writers).
 - Keep CSP free of unsafe-inline and avoid third-party runtime requests. The reviewed exceptions are the prayer-request form service in `settings.notes.endpoint` and the owner-approved parish assistant at `https://bukiski-hram.org/integrations/telegram/website.php`. Only send assistant messages after explicit opt-in, and requests after preview and confirmation. Add no other endpoints.
 - Before suggesting changes, explain briefly, show PATCH PLAN, then provide the code or exact changed source files.
 
