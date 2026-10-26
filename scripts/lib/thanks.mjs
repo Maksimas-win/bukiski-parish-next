@@ -60,5 +60,5 @@ export function thanksDialog(site, uiLocale, pageId) {
 /** Footer link that opens the dialog; hidden until JavaScript can open it. */
 export function thanksFooterLink(site, uiLocale) {
   const t = site.thanks.texts[uiLocale] || site.thanks.texts.en;
-  return html`<button type="button" class="link site-footer__thanks" data-thanks-open hidden aria-haspopup="dialog">${t.footerLink}</button>`;
+  return html`<button type="button" class="site-footer__thanks" data-thanks-open hidden aria-haspopup="dialog">${t.footerLink}</button>`;
 }
