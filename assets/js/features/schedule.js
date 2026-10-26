@@ -4,9 +4,9 @@
 //
 // Every service is already in the HTML. Nothing is fetched.
 
-import { calendarDaysBetween, icsCalendar, isStale, localDate } from '../domain.js?v=a9793508ec';
-import { $, $$, show, downloadText } from '../ui/dom.js?v=a9793508ec';
-import { toast } from '../ui/toast.js?v=a9793508ec';
+import { calendarDaysBetween, icsCalendar, isStale, localDate } from '../domain.js?v=4bf6e21e5f';
+import { $, $$, show, downloadText } from '../ui/dom.js?v=4bf6e21e5f';
+import { toast } from '../ui/toast.js?v=4bf6e21e5f';
 
 const REFRESH_MS = 60000;
 /** How far ahead the featured service is labelled with «через N дней». */
@@ -87,16 +87,35 @@ function setup(container) {
     $('h2', firstNew)?.scrollIntoView({ block: 'start' });
   });
 
-  // A month chip must work even when its month is still folded.
+  function revealMonth(month) {
+    const position = months.filter(item => $$('[data-service]', item).some(element => !element.hidden)).indexOf(month);
+    if (position >= state.openMonths) {
+      state.openMonths = position + 1;
+      render();
+    }
+  }
+
+  // Unfold before the browser follows a month chip, including a repeated hash.
   for (const link of $$('[data-month-link]', container)) {
-    link.addEventListener('click', () => {
-      const position = months.filter(month => $$('[data-service]', month).some(element => !element.hidden))
-        .findIndex(month => month.dataset.month === link.dataset.monthLink);
-      if (position >= state.openMonths) {
-        state.openMonths = position + 1;
-        render();
-      }
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      revealMonth(months.find(month => month.dataset.month === link.dataset.monthLink));
     });
+  }
+
+  function revealHashTarget() {
+    let id;
+    try {
+      id = decodeURIComponent(location.hash.slice(1));
+    } catch {
+      return; // A malformed fragment must not stop the schedule controls.
+    }
+    const target = document.getElementById(id);
+    const month = target?.closest('[data-month]');
+    if (!month || !months.includes(month)) return;
+    revealMonth(month);
+    // Initial fragment scrolling may have happened before enhancement hid months.
+    if (!month.hidden) target.scrollIntoView({ block: 'start' });
   }
 
   for (const service of services) {
@@ -120,6 +139,10 @@ function setup(container) {
   }
 
   render();
+  if (months.length) {
+    revealHashTarget();
+    window.addEventListener('hashchange', revealHashTarget);
+  }
   setInterval(() => {
     if (document.visibilityState === 'visible') render();
   }, REFRESH_MS);

@@ -1,7 +1,7 @@
 // Full-screen viewer for article photographs, built on the native <dialog>.
 // Without it the links simply open the image file.
 
-import { $, $$ } from '../ui/dom.js?v=a9793508ec';
+import { $, $$ } from '../ui/dom.js?v=4bf6e21e5f';
 
 export function init() {
   const dialog = $('#lightbox');
