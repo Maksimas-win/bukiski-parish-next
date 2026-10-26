@@ -1,0 +1,96 @@
+{
+  "_comment": "The parish's thank-you dialog. Texts per language; behaviour in `behaviour`. The same texts are used by bukiski-hram-org (data/thanks.json).",
+  "behaviour": {
+    "autoShowOnHome": true,
+    "delaySeconds": 20,
+    "minScrollPixels": 200,
+    "repeatDays": 30,
+    "pauseWhileAnnouncement": true
+  },
+  "texts": {
+    "ru": {
+      "eyebrow": "От всего прихода",
+      "title": "Спасибо, что вы рядом",
+      "paragraphs": [
+        "Сердечно благодарим всех, кто помогал и помогает храму Рождества Христова в Букишках.",
+        "Спасибо за пожертвования и за труд: за помощь в ремонте и уборке, за заботу о храме и церковном дворе, за молитву, за участие в жизни прихода и за готовность откликнуться, когда нужна помощь.",
+        "Мы ценим каждое доброе дело — и то, что на виду у многих, и тихую заботу, о которой знают немногие. Вашим участием храм живёт, и в нём есть место для каждого, кто сюда приходит.",
+        "Да укрепит вас Господь, да подаст мир и силы на добрые дела."
+      ],
+      "signature": ["С благодарностью,", "приход храма Рождества Христова в Букишках"],
+      "continue": "Продолжить",
+      "close": "Закрыть",
+      "footerLink": "Слова благодарности"
+    },
+    "lt": {
+      "eyebrow": "Nuo visos parapijos",
+      "title": "Ačiū, kad esate kartu",
+      "paragraphs": [
+        "Nuoširdžiai dėkojame visiems, kurie padėjo ir padeda Bukiškio Kristaus Gimimo bažnyčiai.",
+        "Ačiū už aukas ir už darbą: už pagalbą remontuojant ir tvarkant, už rūpestį bažnyčia ir šventoriumi, už maldą, už dalyvavimą parapijos gyvenime ir už pasirengimą atsiliepti, kai reikia pagalbos.",
+        "Branginame kiekvieną gerą darbą – ir tą, kurį mato daugelis, ir tylų rūpestį, apie kurį žino nedaugelis. Jūsų dėka bažnyčia gyvuoja, ir joje yra vietos kiekvienam, kuris čia ateina.",
+        "Tesustiprina jus Viešpats, tesuteikia ramybės ir jėgų geriems darbams."
+      ],
+      "signature": ["Su dėkingumu,", "Bukiškio Kristaus Gimimo parapija"],
+      "continue": "Tęsti",
+      "close": "Užverti",
+      "footerLink": "Padėkos žodžiai"
+    },
+    "en": {
+      "eyebrow": "From the whole parish",
+      "title": "Thank you for being with us",
+      "paragraphs": [
+        "We thank with all our heart everyone who has helped, and still helps, the Church of the Nativity of Christ in Bukiškis.",
+        "Thank you for your gifts and your work: for help with repairs and cleaning, for caring for the church and its grounds, for your prayer, for taking part in parish life and for being ready to respond whenever help is needed.",
+        "We treasure every good deed, both the ones many people see and the quiet care that few know about. Through your part in it the church lives, and there is a place in it for everyone who comes.",
+        "May the Lord strengthen you and grant you peace and strength for good works."
+      ],
+      "signature": ["With gratitude,", "the parish of the Nativity of Christ, Bukiškis"],
+      "continue": "Continue",
+      "close": "Close",
+      "footerLink": "Words of thanks"
+    },
+    "pl": {
+      "eyebrow": "Od całej parafii",
+      "title": "Dziękujemy, że jesteście z nami",
+      "paragraphs": [
+        "Z całego serca dziękujemy wszystkim, którzy pomagali i pomagają cerkwi Narodzenia Pańskiego w Bukiszkach.",
+        "Dziękujemy za ofiary i za pracę: za pomoc przy remontach i sprzątaniu, za troskę o cerkiew i jej otoczenie, za modlitwę, za udział w życiu parafii i za gotowość, by odpowiedzieć, gdy potrzebna jest pomoc.",
+        "Cenimy każdy dobry uczynek — i ten, który widzi wielu, i cichą troskę, o której wie niewielu. Dzięki waszemu udziałowi cerkiew żyje, a w niej jest miejsce dla każdego, kto tu przychodzi.",
+        "Niech Pan was umacnia i daje pokój oraz siły do dobrych dzieł."
+      ],
+      "signature": ["Z wdzięcznością,", "parafia Narodzenia Pańskiego w Bukiszkach"],
+      "continue": "Dalej",
+      "close": "Zamknij",
+      "footerLink": "Słowa podziękowania"
+    },
+    "de": {
+      "eyebrow": "Von der ganzen Gemeinde",
+      "title": "Danke, dass Sie bei uns sind",
+      "paragraphs": [
+        "Wir danken von Herzen allen, die der Kirche der Geburt Christi in Bukiškis geholfen haben und weiterhin helfen.",
+        "Danke für Ihre Spenden und Ihre Arbeit: für die Hilfe bei Reparaturen und beim Aufräumen, für die Sorge um die Kirche und den Kirchhof, für Ihr Gebet, für die Teilnahme am Gemeindeleben und für Ihre Bereitschaft, zu helfen, wenn Hilfe gebraucht wird.",
+        "Wir schätzen jede gute Tat, die, die viele sehen, und die stille Fürsorge, von der nur wenige wissen. Durch Ihre Anteilnahme lebt die Kirche, und in ihr ist Platz für jeden, der hierher kommt.",
+        "Der Herr stärke Sie und schenke Ihnen Frieden und Kraft zu guten Werken."
+      ],
+      "signature": ["In Dankbarkeit,", "die Gemeinde der Geburt Christi in Bukiškis"],
+      "continue": "Weiter",
+      "close": "Schließen",
+      "footerLink": "Worte des Dankes"
+    },
+    "uk": {
+      "eyebrow": "Від усієї парафії",
+      "title": "Дякуємо, що ви поруч",
+      "paragraphs": [
+        "Сердечно дякуємо всім, хто допомагав і допомагає храму Різдва Христового в Букішках.",
+        "Дякуємо за пожертви і за працю: за допомогу в ремонті та прибиранні, за турботу про храм і церковне подвір'я, за молитву, за участь у житті парафії та за готовність відгукнутися, коли потрібна допомога.",
+        "Ми цінуємо кожну добру справу — і ту, що на виду в багатьох, і тиху турботу, про яку знають небагато хто. Вашою участю храм живе, і в ньому є місце для кожного, хто сюди приходить.",
+        "Нехай Господь зміцнює вас, подає мир і сили на добрі справи."
+      ],
+      "signature": ["З вдячністю,", "парафія храму Різдва Христового в Букішках"],
+      "continue": "Продовжити",
+      "close": "Закрити",
+      "footerLink": "Слова подяки"
+    }
+  }
+}
