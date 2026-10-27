@@ -489,6 +489,13 @@ mark {
   order: 4;
 }
 
+/* Keep translated names readable before long desktop navigation wraps. */
+@media (min-width: 72.01rem) {
+  .brand {
+    min-width: 11rem;
+  }
+}
+
 /* Below this width the menu folds into a panel opened by the menu button.
    Without JavaScript the links simply wrap onto a second row. */
 @media (max-width: 72rem) {
@@ -780,8 +787,8 @@ main > .support-band:last-child {
   }
 }
 
-/* Between the folded menu and wide screens the seven items sit a little closer. */
-@media (min-width: 72.01rem) and (max-width: 86rem) {
+/* The header has a capped width, so wide viewports need the same compact gaps. */
+@media (min-width: 72.01rem) {
   .site-nav {
     gap: 0.25rem 1.05rem;
   }
@@ -2636,6 +2643,22 @@ input[type='email']:user-invalid {
   border-bottom: 1px solid var(--line-strong);
   background: var(--bg);
   font-size: 1.75rem;
+}
+
+/* Long translated names can make the desktop header taller than one row. */
+@media (min-width: 72.01rem) {
+  .month,
+  .month__title {
+    scroll-margin-top: 2rem;
+  }
+
+  .month__title {
+    top: calc(var(--header-height) + 2rem);
+  }
+
+  .schedule__aside {
+    top: calc(var(--header-height) + 3rem);
+  }
 }
 
 .schedule__more {
