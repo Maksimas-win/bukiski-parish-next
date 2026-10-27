@@ -80,7 +80,7 @@
 }
 
 .parish-assistant .pa-header {
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 1;
   display: flex;
@@ -127,11 +127,17 @@
 
 .parish-assistant .pa-toolbar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
   padding: 8px 14px;
   border-bottom: 1px solid #d9dfd7;
+}
+
+.parish-assistant .pa-language {
+  min-width: 0;
+  flex: 1 1 9rem;
 }
 
 .parish-assistant .pa-language select {
@@ -141,7 +147,8 @@
   color: #26332e;
   padding: 6px;
   min-height: 40px;
-  max-width: 145px;
+  width: 100%;
+  max-width: 100%;
   font-size: 0.875rem;
 }
 
@@ -168,11 +175,11 @@
   padding: 16px;
 }
 
-/* Keep close and send controls visible when the available height shrinks. */
+/* Preserve a readable answer area; the dialog can scroll when text grows. */
 .parish-assistant .pa-content {
   position: relative;
   flex: 1 1 auto;
-  min-height: 0;
+  min-height: min(6rem, 30dvh);
   overflow: hidden auto;
   overscroll-behavior: contain;
 }
@@ -365,8 +372,8 @@
     inset: auto 8px max(8px, env(safe-area-inset-bottom));
     width: auto;
     max-width: none;
-    height: calc(100dvh - 16px);
-    max-height: calc(100dvh - 16px);
+    height: calc(100% - 16px);
+    max-height: calc(100% - 16px);
     border-radius: 16px;
   }
 
@@ -440,6 +447,13 @@
   gap: 6px;
   padding: 8px 14px 0;
   flex-shrink: 0;
+}
+
+.parish-assistant .pa-online-toolbar .pa-chip {
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .parish-assistant .pa-online-panel {

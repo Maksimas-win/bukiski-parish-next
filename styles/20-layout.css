@@ -422,3 +422,16 @@ main > .support-band:last-child {
     gap: 0.25rem 1.05rem;
   }
 }
+
+/* Do not let enlarged footer text widen every page and its fixed dialogs. */
+.site-footer__grid > * {
+  min-width: 0;
+}
+
+.site-footer__name,
+.site-footer a,
+.site-footer button {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
