@@ -435,6 +435,7 @@
 }
 
 .schedule__aside {
+  grid-template-columns: minmax(0, 1fr);
   display: grid;
   gap: 1rem;
   align-content: start;
@@ -1238,4 +1239,20 @@
 
 .notes textarea#note-comment {
   min-height: 6rem;
+}
+
+.schedule__aside > *,
+.schedule__aside .button > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.schedule__aside .nowrap {
+  white-space: normal;
+}
+
+.schedule__tools .chip {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }

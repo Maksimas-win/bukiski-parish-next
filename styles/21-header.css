@@ -129,7 +129,7 @@
 .lang-menu__list,
 .menu-langs__list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
   gap: 0.4rem;
   margin: 0;
   padding: 0;
@@ -217,5 +217,40 @@
     overflow: hidden;
     clip-path: inset(50%);
     white-space: nowrap;
+  }
+}
+
+/* Enlarged navigation labels may wrap without widening the menu. */
+@media (max-width: 72rem) {
+  .brand {
+    flex-basis: min(10rem, 100%);
+  }
+
+  .brand__text {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .js .site-nav a {
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .js .preferences-button {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .js .preferences-button span {
+    min-width: 0;
+    white-space: normal;
+  }
+}
+
+@media (max-height: 520px) {
+  .site-header {
+    position: relative;
   }
 }
