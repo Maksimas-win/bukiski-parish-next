@@ -1,8 +1,8 @@
-import { UI, LANGUAGES } from './i18n.js?v=70f5a1cba2';
-import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js?v=70f5a1cba2';
-import { WEB_UI } from './web-i18n.js?v=70f5a1cba2';
-import { createWebApi } from './web-api.js?v=70f5a1cba2';
-import { mountRequestForm } from './request-form.js?v=70f5a1cba2';
+import { UI, LANGUAGES } from './i18n.js?v=5ef072de56';
+import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js?v=5ef072de56';
+import { WEB_UI } from './web-i18n.js?v=5ef072de56';
+import { createWebApi } from './web-api.js?v=5ef072de56';
+import { mountRequestForm } from './request-form.js?v=5ef072de56';
 
 /** Static-hosting compatible UI; online actions are opt-in, with no browser persistence. */
 export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 'ru', parent = document.body } = {}) {
@@ -96,7 +96,9 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   const foot = node('footer', 'pa-footer');
   foot.append(suggestions, status, form, privacy);
   const online = node('div', 'pa-online-toolbar');
-  dialog.append(head, toolbar, online, mode, transcript, foot);
+  const content = node('div', 'pa-content');
+  content.append(toolbar, online, mode, transcript);
+  dialog.append(head, content, foot);
   root.append(hint, launcher, dialog);
   parent.append(root);
 
@@ -118,7 +120,7 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     transcript.append(article);
     while (transcript.children.length > 30) {transcript.firstElementChild.remove();}
     // Start at the new answer, so a long service card does not hide its first event.
-    transcript.scrollTop = article.offsetTop;
+    content.scrollTop = transcript.offsetTop + article.offsetTop;
   }
   function renderAnswer(answer) {
     const message = entry();
@@ -174,6 +176,7 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     const welcome = entry(t.greeting);
     welcome.append(node('p', 'pa-text', t.intro), node('p', 'pa-text', WEB_UI[language].intro));
     addMessage(welcome);
+    content.scrollTop = 0;
   }
   function showPanel() {
     reset(); transcript.replaceChildren(); form.hidden = true; suggestions.hidden = true;
