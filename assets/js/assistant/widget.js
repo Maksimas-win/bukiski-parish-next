@@ -96,7 +96,9 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   const foot = node('footer', 'pa-footer');
   foot.append(suggestions, status, form, privacy);
   const online = node('div', 'pa-online-toolbar');
-  dialog.append(head, toolbar, online, mode, transcript, foot);
+  const content = node('div', 'pa-content');
+  content.append(toolbar, online, mode, transcript);
+  dialog.append(head, content, foot);
   root.append(hint, launcher, dialog);
   parent.append(root);
 
@@ -118,7 +120,7 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     transcript.append(article);
     while (transcript.children.length > 30) {transcript.firstElementChild.remove();}
     // Start at the new answer, so a long service card does not hide its first event.
-    transcript.scrollTop = article.offsetTop;
+    content.scrollTop = transcript.offsetTop + article.offsetTop;
   }
   function renderAnswer(answer) {
     const message = entry();
@@ -174,6 +176,7 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     const welcome = entry(t.greeting);
     welcome.append(node('p', 'pa-text', t.intro), node('p', 'pa-text', WEB_UI[language].intro));
     addMessage(welcome);
+    content.scrollTop = 0;
   }
   function showPanel() {
     reset(); transcript.replaceChildren(); form.hidden = true; suggestions.hidden = true;
