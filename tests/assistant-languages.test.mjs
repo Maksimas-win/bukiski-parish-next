@@ -55,3 +55,23 @@ test('a Polish weekday returns only published services for that day', () => {
   assert.deepEqual(result.events.map(event => event.id), ['monday']);
   assert.equal(result.events[0].past, true);
 });
+
+
+test('liturgy questions select the published schedule in every assistant language', () => {
+  const questions = {
+    ru: 'Когда ближайшая литургия?', lt: 'Kada artimiausia liturgija?',
+    en: 'When is the next liturgy?', pl: 'Kiedy najbliższa liturgia?',
+    de: 'Wann ist die nächste Liturgie?', uk: 'Коли найближча літургія?'
+  };
+  const schedule = normalizeSchedule({ schemaVersion: 1, timezone: 'Europe/Vilnius',
+    sourceUpdatedAt: new Date(now).toISOString(), events: [{
+      id: 'published', date: '2026-11-01', start: '2026-11-01T06:00:00Z', startTime: '08:00',
+      source: 'parish-confirmed', title: Object.fromEntries(Object.keys(questions).map(locale => [locale, 'Published liturgy']))
+    }] });
+  for (const [locale, question] of Object.entries(questions)) {
+    assert.equal(intentOf(question), 'schedule', locale);
+    const answer = answerQuestion(question, { locale, schedule, now });
+    assert.deepEqual(answer.events.map(event => event.id), ['published'], locale);
+    assert.equal(answer.links[0].href, '/' + locale + '/schedule.html', locale);
+  }
+});

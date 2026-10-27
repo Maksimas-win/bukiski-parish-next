@@ -35,7 +35,7 @@ export function intentOf(question) {
   if (/адрес|добрат|доехать|дістат|проехать|автобус|atvykt|adres|autobus|address|direction|where|get there|bus (?:route|number)|dojech|anfahrt|komme.*hin|\bwo\b/.test(q)) {return 'directions';}
   if (/истори|істор|istor|history|histori|geschichte/.test(q)) {return 'history';}
   if (/впервые|первый раз|вперше|pirma kart|first visit|first time|pierwszy|erster besuch/.test(q)) {return 'visit';}
-  if (/распис|розклад|служб|литург|богослуж|лiтург|pamald|tvarkar|liturg|service|schedule|nabozen|gottesdienst|пасх|покров|рождеств|різдв|easter|christmas|velyk|kaled|wielkanoc|ostern|weihnacht/.test(q)) {return 'schedule';}
+  if (/распис|розклад|служб|литург|богослуж|літург|лiтург|pamald|tvarkar|liturg|service|schedule|nabozen|gottesdienst|пасх|покров|рождеств|різдв|easter|christmas|velyk|kaled|wielkanoc|ostern|weihnacht/.test(q)) {return 'schedule';}
   if (/^(?:(?:а|а на|на|в|and|what about)\s+)?(?:сегодня|сьогодн[іи]|завтра|послезавтра|післязавтра|воскресенье|нед[іи]лю|siandien|rytoj|poryt|sekmadieni|today|tomorrow|day after tomorrow|sunday|dzisiaj|jutro|pojutrze|niedziele|heute|morgen|ubermorgen|sonntag|\d{4}-\d{2}-\d{2}|\d{1,2}[./]\d{1,2}(?:[./]\d{4})?)[?!.\s]*$/.test(q)) {return 'schedule';}
   return isCalendarFollowUp(q) ? 'schedule' : 'unknown';
 }

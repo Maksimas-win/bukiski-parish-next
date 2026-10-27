@@ -118,6 +118,13 @@
   order: 4;
 }
 
+/* Keep translated names readable before long desktop navigation wraps. */
+@media (min-width: 72.01rem) {
+  .brand {
+    min-width: 11rem;
+  }
+}
+
 /* Below this width the menu folds into a panel opened by the menu button.
    Without JavaScript the links simply wrap onto a second row. */
 @media (max-width: 72rem) {
@@ -409,8 +416,8 @@ main > .support-band:last-child {
   }
 }
 
-/* Between the folded menu and wide screens the seven items sit a little closer. */
-@media (min-width: 72.01rem) and (max-width: 86rem) {
+/* The header has a capped width, so wide viewports need the same compact gaps. */
+@media (min-width: 72.01rem) {
   .site-nav {
     gap: 0.25rem 1.05rem;
   }
