@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "siteUrl": "https://bukiski-hram.net",
+  "timezone": "Europe/Vilnius",
+  "supportedLocales": [
+    "ru",
+    "lt",
+    "en",
+    "pl",
+    "de",
+    "uk"
+  ],
+  "parish": {
+    "name": {
+      "ru": "Храм Рождества Христова",
+      "lt": "Kristaus Gimimo cerkvė",
+      "en": "Church of the Nativity of Christ",
+      "pl": "Cerkiew Narodzenia Pańskiego",
+      "de": "Kirche der Geburt Christi",
+      "uk": "Храм Різдва Христового"
+    },
+    "address": "Sodų g. 8, Bukiškis, LT-14180, Lietuva",
+    "phone": {
+      "display": "+370 636 93506",
+      "href": "tel:+37063693506"
+    },
+    "coordinates": {
+      "latitude": 54.76091,
+      "longitude": 25.207621
+    },
+    "rector": {
+      "name": {
+        "ru": "свящ. Максим Крутолевич",
+        "lt": "kun. Maksim Krutolevič",
+        "en": "Fr Maksim Krutolevich",
+        "pl": "ks. Maksim Krutolevič",
+        "de": "Priester Maksim Krutolevič",
+        "uk": "свящ. Максим Крутолевич"
+      }
+    }
+  },
+  "routes": {
+    "ru": {
+      "home": "https://bukiski-hram.net/ru/",
+      "schedule": "https://bukiski-hram.net/ru/schedule.html",
+      "notes": "https://bukiski-hram.net/ru/notes.html",
+      "contacts": "https://bukiski-hram.net/ru/contacts.html"
+    },
+    "lt": {
+      "home": "https://bukiski-hram.net/lt/",
+      "schedule": "https://bukiski-hram.net/lt/schedule.html",
+      "notes": "https://bukiski-hram.net/lt/notes.html",
+      "contacts": "https://bukiski-hram.net/lt/contacts.html"
+    },
+    "en": {
+      "home": "https://bukiski-hram.net/en/",
+      "schedule": "https://bukiski-hram.net/en/schedule.html",
+      "notes": "https://bukiski-hram.net/en/notes.html",
+      "contacts": "https://bukiski-hram.net/en/contacts.html"
+    },
+    "pl": {
+      "home": "https://bukiski-hram.net/pl/",
+      "schedule": "https://bukiski-hram.net/pl/schedule.html",
+      "notes": "https://bukiski-hram.net/pl/notes.html",
+      "contacts": "https://bukiski-hram.net/pl/contacts.html"
+    },
+    "de": {
+      "home": "https://bukiski-hram.net/de/",
+      "schedule": "https://bukiski-hram.net/de/schedule.html",
+      "notes": "https://bukiski-hram.net/de/notes.html",
+      "contacts": "https://bukiski-hram.net/de/contacts.html"
+    },
+    "uk": {
+      "home": "https://bukiski-hram.net/uk/",
+      "schedule": "https://bukiski-hram.net/uk/schedule.html",
+      "notes": "https://bukiski-hram.net/uk/notes.html",
+      "contacts": "https://bukiski-hram.net/uk/contacts.html"
+    }
+  },
+  "schedule": {
+    "sourceUpdatedAt": "2026-11-02T06:38:48.496Z",
+    "maxAgeHours": 48,
+    "stale": false,
+    "items": [
+      {
+        "id": "svc-1e61d40fab638aa77e14",
+        "start": "2026-11-07T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "note": {
+          "ru": "После Литургии — общая панихида.",
+          "lt": "Po liturgijos – bendra panichida.",
+          "en": "After the Liturgy, a general memorial service (panikhida).",
+          "pl": "Po Liturgii — wspólna panichida.",
+          "de": "Nach der Liturgie: allgemeine Panichida (Totengedenken).",
+          "uk": "Після Літургії — загальна панахида."
+        }
+      },
+      {
+        "id": "svc-df71f5a86086445f65e9",
+        "start": "2026-11-08T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Неделя 23-я по Пятидесятнице",
+          "lt": "23-asis sekmadienis po Sekminių",
+          "en": "23rd Sunday after Pentecost",
+          "pl": "23. niedziela po Pięćdziesiątnicy",
+          "de": "23. Sonntag nach Pfingsten",
+          "uk": "Неділя 23-тя по П’ятидесятниці"
+        }
+      },
+      {
+        "id": "svc-791286fb58dd61374dad",
+        "start": "2026-11-15T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Неделя 24-я по Пятидесятнице",
+          "lt": "24-asis sekmadienis po Sekminių",
+          "en": "24th Sunday after Pentecost",
+          "pl": "24. niedziela po Pięćdziesiątnicy",
+          "de": "24. Sonntag nach Pfingsten",
+          "uk": "Неділя 24-та по П’ятидесятниці"
+        }
+      },
+      {
+        "id": "svc-142ac08220b6d32070b0",
+        "start": "2026-11-22T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Неделя 25-я по Пятидесятнице",
+          "lt": "25-asis sekmadienis po Sekminių",
+          "en": "25th Sunday after Pentecost",
+          "pl": "25. niedziela po Pięćdziesiątnicy",
+          "de": "25. Sonntag nach Pfingsten",
+          "uk": "Неділя 25-та по П’ятидесятниці"
+        }
+      },
+      {
+        "id": "svc-03eaf1010ec5c66215c9",
+        "start": "2026-11-29T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Неделя 26-я по Пятидесятнице",
+          "lt": "26-asis sekmadienis po Sekminių",
+          "en": "26th Sunday after Pentecost",
+          "pl": "26. niedziela po Pięćdziesiątnicy",
+          "de": "26. Sonntag nach Pfingsten",
+          "uk": "Неділя 26-та по П’ятидесятниці"
+        }
+      },
+      {
+        "id": "svc-67202f07ad81d38b891d",
+        "start": "2026-12-04T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Введение во храм Пресвятой Богородицы",
+          "lt": "Švenčiausiosios Dievo Gimdytojos Įvedimas į Šventyklą",
+          "en": "Entry of the Mother of God into the Temple",
+          "pl": "Wprowadzenie Bogurodzicy do Świątyni",
+          "de": "Einführung der Allheiligen Gottesgebärerin in den Tempel",
+          "uk": "Введення в храм Пресвятої Богородиці"
+        }
+      },
+      {
+        "id": "svc-ff973fe3690d4f1d844c",
+        "start": "2026-12-06T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Неделя 27-я по Пятидесятнице",
+          "lt": "27-asis sekmadienis po Sekminių",
+          "en": "27th Sunday after Pentecost",
+          "pl": "27. niedziela po Pięćdziesiątnicy",
+          "de": "27. Sonntag nach Pfingsten",
+          "uk": "Неділя 27-ма по П’ятидесятниці"
+        }
+      },
+      {
+        "id": "svc-1822e6872f250c6e280c",
+        "start": "2026-12-13T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Неделя 28-я по Пятидесятнице",
+          "lt": "28-asis sekmadienis po Sekminių",
+          "en": "28th Sunday after Pentecost",
+          "pl": "28. niedziela po Pięćdziesiątnicy",
+          "de": "28. Sonntag nach Pfingsten",
+          "uk": "Неділя 28-ма по П’ятидесятниці"
+        }
+      },
+      {
+        "id": "svc-cbe317db75849e6c1bc1",
+        "start": "2026-12-19T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        }
+      },
+      {
+        "id": "svc-76eec744248119bcf883",
+        "start": "2026-12-20T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Неделя 29-я по Пятидесятнице",
+          "lt": "29-asis sekmadienis po Sekminių",
+          "en": "29th Sunday after Pentecost",
+          "pl": "29. niedziela po Pięćdziesiątnicy",
+          "de": "29. Sonntag nach Pfingsten",
+          "uk": "Неділя 29-та по П’ятидесятниці"
+        }
+      },
+      {
+        "id": "svc-82b83469f9c26886c81f",
+        "start": "2026-12-27T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Неделя 30-я по Пятидесятнице",
+          "lt": "30-asis sekmadienis po Sekminių",
+          "en": "30th Sunday after Pentecost",
+          "pl": "30. niedziela po Pięćdziesiątnicy",
+          "de": "30. Sonntag nach Pfingsten",
+          "uk": "Неділя 30-та по П’ятидесятниці"
+        }
+      },
+      {
+        "id": "svc-9af349ea03c2d7e9d9f5",
+        "start": "2027-01-03T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Неделя 31-я по Пятидесятнице",
+          "lt": "31-asis sekmadienis po Sekminių",
+          "en": "31st Sunday after Pentecost",
+          "pl": "31. niedziela po Pięćdziesiątnicy",
+          "de": "31. Sonntag nach Pfingsten",
+          "uk": "Неділя 31-ша по П’ятидесятниці"
+        }
+      }
+    ]
+  }
+}
