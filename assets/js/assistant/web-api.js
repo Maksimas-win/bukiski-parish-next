@@ -4,8 +4,10 @@ export function createWebApi(transport = fetch) {
   let token = '';
   let generation = 0;
   let opening;
+  const requests = new Set();
   async function post(body, sessionToken = token, keepalive = false) {
     const controller = new AbortController();
+    if (!keepalive) {requests.add(controller);}
     const timer = setTimeout(() => controller.abort(), 28000);
     try {
       const response = await transport(ENDPOINT, {
@@ -16,9 +18,9 @@ export function createWebApi(transport = fetch) {
       const text = await response.text();
       if (text.length > 20000 || !response.headers.get('content-type')?.includes('json')) {throw new Error('network');}
       const data = JSON.parse(text);
-      if (!response.ok || data.ok !== true) {throw new Error(data.error || 'unavailable');}
+      if (!response.ok || data?.ok !== true) {throw new Error(typeof data?.error === 'string' ? data.error : 'unavailable');}
       return data;
-    } finally { clearTimeout(timer); }
+    } finally { clearTimeout(timer); requests.delete(controller); }
   }
   async function ready() {
     if (token) {return;}
@@ -32,9 +34,17 @@ export function createWebApi(transport = fetch) {
   }
   return {
     ready,
-    async call(body) { await ready(); return post(body); },
+    async call(body) {
+      const current = generation;
+      await ready();
+      // A reset while opening a session must not send the old question afterwards.
+      if (current !== generation) {throw new Error('session');}
+      return post(body);
+    },
     forget() {
       const old = token; generation++; token = ''; opening = undefined;
+      for (const controller of requests) {controller.abort();}
+      requests.clear();
       if (old) {return post({ action: 'forget' }, old, true).catch(() => {});}
       return Promise.resolve();
     }
