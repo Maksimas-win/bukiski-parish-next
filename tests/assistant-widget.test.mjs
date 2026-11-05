@@ -60,7 +60,7 @@ test('a failed AI question stays editable; an explicit retry reuses its ID and a
     return json({ ok: true, ai: true, answer: 'First paragraph.\n\nSecond paragraph.' });
   });
   page.assistant.open();
-  page.button('Поговорить с ИИ').click(); page.button('Согласен, включить ИИ').click();
+  page.button('Поговорить с ИИ').click(); await tick(); page.button('Согласен, включить ИИ').click();
   page.input.value = 'How can I learn patience?'; page.form.requestSubmit();
   await tick();
   assert.equal(page.input.value, 'How can I learn patience?');
@@ -85,7 +85,7 @@ test('clearing the dialog while AI is pending discards late text and the restore
     if (action === 'forget') {return json({ ok: true });}
     await gate; return json({ ok: true, ai: true, answer: 'Late private answer' });
   });
-  page.button('Поговорить с ИИ').click(); page.button('Согласен, включить ИИ').click();
+  page.button('Поговорить с ИИ').click(); await tick(); page.button('Согласен, включить ИИ').click();
   page.input.value = 'How can I learn patience?'; page.form.requestSubmit(); await tick();
   page.button('Очистить диалог').click(); resolve(); await tick();
   assert.equal(page.input.value, '');
@@ -101,4 +101,28 @@ test('opening on a touch screen does not force the software keyboard', t => {
   const enter = new Event('keydown', { cancelable: true }); Object.defineProperty(enter, 'key', { value: 'Enter' });
   page.input.dispatchEvent(enter);
   assert.equal(submissions, 0); assert.equal(enter.defaultPrevented, false);
+});
+
+test('Claude notice precedes consent and the question carries the accepted provider', async t => {
+  const calls=[];
+  const page=fixture(t,async (_,options)=>{
+    const body=JSON.parse(options.body); calls.push(body);
+    if(body.action==='session') {return json({ok:true,token:'a'.repeat(64),provider:'anthropic'});}
+    return json({ok:true,ai:true,answer:'Welcome.'});
+  });
+  page.button('Поговорить с ИИ').click(); await tick();
+  assert.deepEqual(calls.map(x=>x.action),['session']);
+  assert.ok(page.all.some(x=>x.textContent.includes('будут передаваться Anthropic (Claude)')));
+  page.button('Согласен, включить ИИ').click();
+  page.input.value='How can I learn patience?'; page.form.requestSubmit(); await tick();
+  assert.equal(calls.find(x=>x.action==='ai').provider,'anthropic');
+});
+
+test('cancelling while provider metadata loads cannot re-enable a discarded dialog', async t => {
+  let resolve; const gate=new Promise(done=>{resolve=done;});
+  const page=fixture(t,async ()=>{await gate; return json({ok:true,token:'a'.repeat(64),provider:'anthropic'});});
+  page.button('Поговорить с ИИ').click();
+  page.button('Вернуться к вопросам').click(); resolve(); await tick();
+  assert.equal(page.button('Согласен, включить ИИ'),undefined);
+  assert.equal(page.form.hidden,false);
 });
