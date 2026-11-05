@@ -778,6 +778,56 @@
   }
 }
 
+/* On phones, size the hero to its content so the first quick-link row is
+   visible below the header and announcement. Keep the GPM invitation in flow
+   and let translated/enlarged text grow instead of clipping it to a viewport. */
+@media (max-width: 40rem) {
+  .hero {
+    min-height: 0;
+  }
+
+  .hero__content {
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: calc(3.25rem + 0.25rem);
+  }
+
+  .hero__shade {
+    background: linear-gradient(to bottom, rgb(10 14 22 / 0.64), rgb(10 14 22 / 0.8));
+  }
+
+  .hero__title {
+    font-size: clamp(2.25rem, 1.5rem + 3vw, 2.6rem);
+  }
+
+  .hero__kicker {
+    margin-bottom: 0.5rem;
+  }
+
+  .hero__place {
+    margin-top: 0.5rem;
+  }
+
+  .hero-gpm {
+    column-gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .quick__tile {
+    gap: 0.375rem;
+    padding: 0.75rem;
+  }
+
+  .quick__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .quick__note {
+    font-size: 1rem;
+  }
+}
+
 /* The band after the services: deep blue like the schedule, gilt figure, one example. */
 .gpm-band {
   position: relative;

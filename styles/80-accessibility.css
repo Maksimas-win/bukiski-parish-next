@@ -62,6 +62,55 @@ html.high-contrast .site-nav a {
   text-decoration: underline;
 }
 
+/* Larger contact labels and touch targets on phones and touch-screen tablets.
+   Standalone links get their own space; inline prose links keep normal flow. */
+@media (max-width: 40rem), (pointer: coarse) {
+  .copy-button {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .announcement__link,
+  .church-day summary,
+  .facts__phone,
+  .site-footer a,
+  .site-footer button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+  }
+
+  .site-footer__links {
+    gap: 0.25rem;
+  }
+
+  .site-footer__links a {
+    width: 100%;
+  }
+
+  .contact__details .facts dt {
+    font-size: 1rem;
+  }
+
+  .contact__details {
+    min-width: 0;
+  }
+
+  .contact__details .facts dd {
+    flex-wrap: wrap;
+  }
+
+  .contact__details .facts address {
+    flex: 1 1 12rem;
+    min-width: 0;
+  }
+
+  .contact__details .facts__phone {
+    max-width: 100%;
+    white-space: normal;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
