@@ -1,8 +1,9 @@
-import { UI, LANGUAGES } from './i18n.js?v=631b07643e';
-import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js?v=631b07643e';
-import { WEB_UI } from './web-i18n.js?v=631b07643e';
-import { createWebApi } from './web-api.js?v=631b07643e';
-import { mountRequestForm } from './request-form.js?v=631b07643e';
+import { UI, LANGUAGES } from './i18n.js?v=cc092d6bb2';
+import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js?v=cc092d6bb2';
+import { WEB_UI } from './web-i18n.js?v=cc092d6bb2';
+import { providerCopy, allProviderPolicy } from './provider-copy.js?v=cc092d6bb2';
+import { createWebApi } from './web-api.js?v=cc092d6bb2';
+import { mountRequestForm } from './request-form.js?v=cc092d6bb2';
 
 /** Static-hosting compatible UI; online actions are opt-in, with no browser persistence. */
 export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 'ru', parent = document.body } = {}) {
@@ -16,6 +17,7 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   let activeRequest;
   const api = createWebApi();
   let aiEnabled = false;
+  let aiProvider = null;
   let disposeRequest;
   let pendingAi;
   const touchLayout = () => globalThis.matchMedia?.('(pointer: coarse)').matches === true;
@@ -173,7 +175,7 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     pendingAi = undefined;
     activeRequest?.abort();
     disposeRequest?.(); disposeRequest = undefined;
-    api.forget(); aiEnabled = false;
+    api.forget(); aiEnabled = false; aiProvider = null;
     form.hidden = false; suggestions.hidden = false; mode.textContent = t.mode;
     busy = false; send.disabled = false; input.disabled = false;
     transcript.setAttribute('aria-busy', 'false');
@@ -187,18 +189,31 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     reset(); transcript.replaceChildren(); form.hidden = true; suggestions.hidden = true;
     const panel = node('div', 'pa-online-panel'); transcript.append(panel); return panel;
   }
-  function offerAi() {
-    const panel = showPanel(); const copy = WEB_UI[language];
-    mode.textContent = copy.ai;
-    panel.append(node('p', 'pa-text', copy.consent), node('p', 'pa-meta', copy.privacy));
-    const details = node('details', 'pa-data'); details.append(node('summary', '', copy.data), node('p', 'pa-meta', copy.policy)); panel.append(details);
-    const enable = button('pa-send', copy.enable);
-    enable.addEventListener('click', () => {
-      aiEnabled = true; panel.remove(); form.hidden = false; suggestions.hidden = false;
-      mode.textContent = copy.active; addMessage(entry(copy.active)); input.focus();
-    });
-    const cancel = button('pa-clear', copy.cancel); cancel.addEventListener('click', () => { reset(); input.focus(); });
-    panel.append(enable, cancel); enable.focus();
+  async function offerAi() {
+    const panel = showPanel(); const turn = session;
+    mode.textContent = WEB_UI[language].ai;
+    const waiting = node('p', 'pa-text', WEB_UI[language].thinking);
+    const cancel = button('pa-clear', WEB_UI[language].cancel);
+    cancel.addEventListener('click', () => { reset(); input.focus(); });
+    panel.append(waiting, cancel); cancel.focus();
+    try {
+      // Read only provider metadata. No question is sent until this notice is accepted.
+      const provider = await api.ready();
+      if (turn !== session) {return;}
+      const copy = providerCopy(language, provider);
+      waiting.textContent = copy.consent;
+      panel.append(node('p', 'pa-meta', copy.privacy));
+      const details = node('details', 'pa-data');
+      details.append(node('summary', '', copy.data), node('p', 'pa-meta', copy.policy));
+      const enable = button('pa-send', copy.enable);
+      enable.addEventListener('click', () => {
+        aiEnabled = true; aiProvider = provider; panel.remove(); form.hidden = false; suggestions.hidden = false;
+        mode.textContent = copy.active; addMessage(entry(copy.active)); input.focus();
+      });
+      panel.append(details, enable); enable.focus();
+    } catch {
+      if (turn === session) {waiting.textContent = WEB_UI[language].error;}
+    }
   }
   function renderOnline() {
     online.replaceChildren();
@@ -212,7 +227,7 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     });
     const data = button('pa-clear', copy.data);
     data.addEventListener('click', () => {
-      const panel = showPanel(); panel.append(node('p', 'pa-text', copy.policy));
+      const panel = showPanel(); panel.append(node('p', 'pa-text', allProviderPolicy(language)));
       mode.textContent = copy.data;
       const back = button('pa-clear', copy.cancel); back.addEventListener('click', () => { reset(); input.focus(); }); panel.append(back); back.focus();
     });
@@ -255,7 +270,7 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     transcript.setAttribute('aria-busy', 'true');
     status.textContent = useAi ? WEB_UI[language].thinking : scheduleNeeded ? t.loading : '';
     if (useAi) {
-      if (!retry) {pendingAi = { action: 'ai', id: globalThis.crypto.randomUUID(), question, language, consent: true };}
+      if (!retry) {pendingAi = { action: 'ai', id: globalThis.crypto.randomUUID(), question, language, consent: true, provider: aiProvider };}
       try {
         const result = await api.call(pendingAi);
         if (turn !== session) {return;}

@@ -1,4 +1,4 @@
-import { mountAssistant } from './assistant/widget.js?v=631b07643e';
+import { mountAssistant } from './assistant/widget.js?v=cc092d6bb2';
 
 const script = document.querySelector('script[data-parish-assistant-entry]');
 if (script && typeof HTMLDialogElement !== 'undefined') {
