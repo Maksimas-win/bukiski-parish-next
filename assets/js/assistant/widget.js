@@ -1,8 +1,8 @@
-import { UI, LANGUAGES } from './i18n.js?v=97d5bbf5c0';
-import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js?v=97d5bbf5c0';
-import { WEB_UI } from './web-i18n.js?v=97d5bbf5c0';
-import { createWebApi } from './web-api.js?v=97d5bbf5c0';
-import { mountRequestForm } from './request-form.js?v=97d5bbf5c0';
+import { UI, LANGUAGES } from './i18n.js?v=631b07643e';
+import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js?v=631b07643e';
+import { WEB_UI } from './web-i18n.js?v=631b07643e';
+import { createWebApi } from './web-api.js?v=631b07643e';
+import { mountRequestForm } from './request-form.js?v=631b07643e';
 
 /** Static-hosting compatible UI; online actions are opt-in, with no browser persistence. */
 export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 'ru', parent = document.body } = {}) {
@@ -17,6 +17,8 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   const api = createWebApi();
   let aiEnabled = false;
   let disposeRequest;
+  let pendingAi;
+  const touchLayout = () => globalThis.matchMedia?.('(pointer: coarse)').matches === true;
   const origin = location.origin;
   const feed = new URL(scheduleURL || `${base}/data/services.json`, origin);
   if (feed.origin !== origin || !['http:', 'https:'].includes(feed.protocol)) {throw new Error('Schedule must be same-origin');}
@@ -77,6 +79,7 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   transcript.setAttribute('role', 'log');
   transcript.setAttribute('aria-live', 'polite');
   transcript.setAttribute('aria-relevant', 'additions');
+  transcript.setAttribute('aria-busy', 'false');
   const suggestions = node('div', 'pa-suggestions');
   const status = node('p', 'pa-status');
   status.setAttribute('role', 'status');
@@ -84,8 +87,8 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   form.noValidate = true;
   const label = node('label', 'pa-sr-only', t.label);
   label.htmlFor = 'pa-question';
-  const input = node('input', 'pa-input');
-  input.id = 'pa-question'; input.type = 'text'; input.maxLength = MAX_QUESTION;
+  const input = node('textarea', 'pa-input pa-composer');
+  input.id = 'pa-question'; input.rows = 2; input.maxLength = MAX_QUESTION;
   input.autocomplete = 'off'; input.placeholder = t.placeholder;
   input.setAttribute('aria-describedby', 'pa-privacy');
   const send = node('button', 'pa-send', t.send);
@@ -94,10 +97,10 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   const privacy = node('p', 'pa-privacy', WEB_UI[language].privacy);
   privacy.id = 'pa-privacy';
   const foot = node('footer', 'pa-footer');
-  foot.append(suggestions, status, form, privacy);
+  foot.append(suggestions, status, form);
   const online = node('div', 'pa-online-toolbar');
   const content = node('div', 'pa-content');
-  content.append(toolbar, online, mode, transcript);
+  content.append(toolbar, online, mode, privacy, transcript);
   dialog.append(head, content, foot);
   root.append(hint, launcher, dialog);
   parent.append(root);
@@ -167,11 +170,13 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   }
   function reset() {
     session += 1;
+    pendingAi = undefined;
     activeRequest?.abort();
     disposeRequest?.(); disposeRequest = undefined;
     api.forget(); aiEnabled = false;
     form.hidden = false; suggestions.hidden = false; mode.textContent = t.mode;
     busy = false; send.disabled = false; input.disabled = false;
+    transcript.setAttribute('aria-busy', 'false');
     transcript.replaceChildren(); input.value = ''; status.textContent = '';
     const welcome = entry(t.greeting);
     welcome.append(node('p', 'pa-text', t.intro), node('p', 'pa-text', WEB_UI[language].intro));
@@ -215,10 +220,11 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   }
   async function schedule() {
     if (cachedSchedule && Date.now() - fetchedAt < 60000) {return cachedSchedule;}
-    activeRequest = new AbortController();
-    const timeout = setTimeout(() => activeRequest?.abort(), 8000);
+    const controller = new AbortController();
+    activeRequest = controller;
+    const timeout = setTimeout(() => controller.abort(), 8000);
     try {
-      const response = await fetch(feed.href, { cache: 'no-store', credentials: 'omit', redirect: 'error', signal: activeRequest.signal });
+      const response = await fetch(feed.href, { cache: 'no-store', credentials: 'omit', redirect: 'error', signal: controller.signal });
       if (!response.ok || !response.headers.get('content-type')?.includes('json')) {throw new Error('Schedule unavailable');}
       const body = await response.text();
       if (body.length > 2500000) {throw new Error('Schedule too large');}
@@ -226,8 +232,13 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
       cachedSchedule = result; fetchedAt = Date.now();
       return result;
     } catch { return null; }
-    finally { clearTimeout(timeout); }
+    finally { clearTimeout(timeout); if (activeRequest === controller) {activeRequest = undefined;} }
   }
+  input.addEventListener('keydown', event => {
+    if (event.key === 'Enter' && !event.shiftKey && !event.isComposing && !touchLayout()) {
+      event.preventDefault(); form.requestSubmit();
+    }
+  });
   form.addEventListener('submit', async event => {
     event.preventDefault();
     const question = input.value.trim().slice(0, MAX_QUESTION);
@@ -237,23 +248,39 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     const intent = intentOf(question);
     const scheduleNeeded = intent === 'schedule';
     const useAi = aiEnabled && ['unknown', 'visit', 'sacraments', 'history'].includes(intent);
-    addMessage(entry(question, true)); input.value = '';
+    const retry = useAi && pendingAi?.question === question && pendingAi.language === language;
+    if (!retry) {addMessage(entry(question, true));}
+    input.value = '';
     busy = true; send.disabled = true; input.disabled = true;
+    transcript.setAttribute('aria-busy', 'true');
     status.textContent = useAi ? WEB_UI[language].thinking : scheduleNeeded ? t.loading : '';
     if (useAi) {
+      if (!retry) {pendingAi = { action: 'ai', id: globalThis.crypto.randomUUID(), question, language, consent: true };}
       try {
-        const result = await api.call({ action: 'ai', id: globalThis.crypto.randomUUID(), question, language, consent: true });
+        const result = await api.call(pendingAi);
         if (turn !== session) {return;}
-        const article = entry(result.ai && typeof result.answer === 'string' ? result.answer : WEB_UI[language].error);
-        if (result.ai) {article.querySelector('.pa-author').textContent = WEB_UI[language].label;}
+        if (!result.ai || typeof result.answer !== 'string' || !result.answer.trim()) {throw new Error('unavailable');}
+        pendingAi = undefined;
+        const article = entry(result.answer);
+        article.querySelector('.pa-author').textContent = WEB_UI[language].label;
         addMessage(article);
       } catch {
-        if (turn === session) {addMessage(entry(WEB_UI[language].error));}
+        if (turn === session) {
+          addMessage(entry(WEB_UI[language].error));
+          input.value = question;
+          status.textContent = WEB_UI[language].draftRestored;
+        }
       } finally {
-        if (turn === session) {busy = false; send.disabled = false; input.disabled = false; status.textContent = ''; if (dialog.open) {input.focus();}}
+        if (turn === session) {
+          busy = false; send.disabled = false; input.disabled = false;
+          transcript.setAttribute('aria-busy', 'false');
+          if (!pendingAi) {status.textContent = '';}
+          if (dialog.open && !touchLayout()) {input.focus({ preventScroll: true });}
+        }
       }
       return;
     }
+    pendingAi = undefined;
     const data = scheduleNeeded ? await schedule() : null;
     if (turn !== session) {return;}
     const answer = answerQuestion(question, { locale: language, schedule: data, site, base });
@@ -263,7 +290,8 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
       enable.addEventListener('click', offerAi); prompt.append(enable); addMessage(prompt);
     }
     busy = false; send.disabled = false; input.disabled = false; status.textContent = '';
-    if (dialog.open) {input.focus({ preventScroll: true });}
+    transcript.setAttribute('aria-busy', 'false');
+    if (dialog.open && !touchLayout()) {input.focus({ preventScroll: true });}
   });
   select.addEventListener('change', () => {
     language = localeOf(select.value); t = UI[language]; root.lang = language;
@@ -293,8 +321,11 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   launcher.addEventListener('click', () => {
     // Prevent competing site dialogs from sharing the top layer.
     if (document.querySelector('dialog[open]')) {return;}
+    const openedByTouch = lastPointer === 'touch' || touchLayout();
     hideHint(); lastPointer = '';
-    dialog.showModal(); launcher.setAttribute('aria-expanded', 'true'); root.classList.add('pa-open'); input.focus();
+    dialog.showModal(); launcher.setAttribute('aria-expanded', 'true'); root.classList.add('pa-open');
+    // The phone keyboard should open only when the visitor chooses to type.
+    if (!openedByTouch) {input.focus();}
   });
   close.addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => { launcher.setAttribute('aria-expanded', 'false'); root.classList.remove('pa-open'); lastPointer = 'touch'; launcher.focus({ preventScroll: true }); setTimeout(() => { lastPointer = ''; }, 300); });
@@ -306,6 +337,6 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
   globalThis.addEventListener('pagehide', erase);
   globalThis.addEventListener('pageshow', erase);
   renderSuggestions(); renderOnline(); reset();
-  return { open: () => launcher.click(), destroy: () => { activeRequest?.abort(); disposeRequest?.(); api.forget(); globalThis.removeEventListener('pagehide', erase); globalThis.removeEventListener('pageshow', erase); root.remove(); } };
+  return { open: () => launcher.click(), destroy: () => { session += 1; pendingAi = undefined; clearTimeout(hideTimer); activeRequest?.abort(); disposeRequest?.(); api.forget(); globalThis.removeEventListener('pagehide', erase); globalThis.removeEventListener('pageshow', erase); root.remove(); } };
 }
 

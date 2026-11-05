@@ -1,5 +1,6 @@
 export const WEB_UI = {
   ru: {
+    draftRestored: 'Вопрос возвращён в поле ввода. Можно исправить его или отправить позже.',
     ai: 'Поговорить с ИИ', request: 'Обратиться к священнику', data: 'О данных', cancel: 'Вернуться к вопросам', enable: 'Согласен, включить ИИ',
     intro: 'Здесь можно поговорить с ИИ или отправить обращение священнику. Telegram и регистрация не нужны.',
     privacy: 'ИИ и отправка обращения включаются с вашего согласия. Не пишите содержание исповеди, сведения о здоровье и данные других людей.',
@@ -17,6 +18,7 @@ export const WEB_UI = {
     policy: 'Оператор: Bukiškio stačiatikių Kristaus Gimimo parapija, +370 636 93506. Черновик формы остаётся в этой вкладке до подтверждения. Текст и контакт отправляются через сервер прихода в личный Telegram свящ. Максима; в ИИ они не передаются. На сервере остаются только номер, статус и защитный отпечаток до суток, копия текста — в Telegram у получателя. Для удаления этой копии обратитесь к священнику. Короткий контекст ИИ хранится вне публичной папки до 30 минут бездействия; очистка происходит при следующем запросе. «Очистить» удаляет его с сервера при доступном соединении; при уходе со страницы отправляется такой же запрос. Служебные счётчики защиты — до суток. Переписка не записывается в хранилище браузера. Для OpenAI используется store:false, но журналы безопасности могут храниться до 30 дней.'
   },
   lt: {
+    draftRestored: 'Klausimas grąžintas į įvesties lauką. Galite jį pataisyti arba išsiųsti vėliau.',
     ai: 'Kalbėtis su DI', request: 'Kreiptis į kunigą', data: 'Apie duomenis', cancel: 'Grįžti prie klausimų', enable: 'Sutinku, įjungti DI',
     intro: 'Kalbėkitės su DI arba siųskite prašymą kunigui čia. Telegram ir registracija nereikalingi.',
     privacy: 'DI ir prašymo siuntimui reikia jūsų sutikimo. Nerašykite išpažinties, sveikatos ar kitų žmonių duomenų.',
@@ -34,6 +36,7 @@ export const WEB_UI = {
     policy: 'Duomenų valdytojas: Bukiškio stačiatikių Kristaus Gimimo parapija, +370 636 93506. Formos juodraštis lieka šiame skirtuke iki patvirtinimo. Tekstas ir kontaktas per parapijos serverį siunčiami į asmeninį kun. Maksimo Telegram, ne DI. Serveryje numeris, būsena ir apsauginis kontrolinis kodas lieka iki paros, teksto kopija – pas gavėją Telegram; dėl jos ištrynimo kreipkitės į kunigą. Trumpas DI kontekstas privačiai laikomas iki 30 minučių neveiklumo ir išvalomas gavus kitą užklausą. Valymo mygtukas ir išėjimas iš puslapio siunčia pašalinimo užklausą, kai yra ryšys. Apsaugos skaitikliai laikomi iki paros. Pokalbis naršyklės saugykloje nesaugomas. OpenAI naudojama store:false, tačiau saugos žurnalai gali būti laikomi iki 30 dienų.'
   },
   en: {
+    draftRestored: 'Your question is back in the text field. You can edit it or send it later.',
     ai: 'Talk to AI', request: 'Contact the priest', data: 'About your data', cancel: 'Back to questions', enable: 'I agree, enable AI',
     intro: 'Talk to AI or send a request to the priest here. No Telegram account or registration is needed.',
     privacy: 'AI and sending a request require your consent. Do not enter confessions, health information or other people’s personal data.',
@@ -51,6 +54,7 @@ export const WEB_UI = {
     policy: 'Controller: Bukiškio stačiatikių Kristaus Gimimo parapija, +370 636 93506. The form draft stays in this tab until confirmation. Your text and contact go through the parish server to Fr Maksim’s personal Telegram, never to AI. Only a reference, status and security fingerprint remain on the server for up to one day; the recipient’s copy remains in Telegram. Contact the priest to delete that copy. Short AI context is kept privately for 30 minutes of inactivity and removed on the next request. Clearing or leaving the page requests its deletion when a connection is available. Security counters last up to one day. No chat is saved in browser storage. OpenAI uses store:false, but may retain abuse-monitoring logs for up to 30 days.'
   },
   pl: {
+    draftRestored: 'Pytanie wróciło do pola tekstowego. Możesz je poprawić lub wysłać później.',
     ai: 'Porozmawiaj z AI', request: 'Napisz do kapłana', data: 'O danych', cancel: 'Wróć do pytań', enable: 'Zgadzam się, włącz AI',
     intro: 'Porozmawiaj z AI lub wyślij prośbę do kapłana tutaj. Telegram ani rejestracja nie są potrzebne.',
     privacy: 'AI i wysłanie prośby wymagają zgody. Nie wpisuj treści spowiedzi, danych zdrowotnych ani danych innych osób.',
@@ -68,6 +72,7 @@ export const WEB_UI = {
     policy: 'Administrator: Bukiškio stačiatikių Kristaus Gimimo parapija, +370 636 93506. Szkic pozostaje w tej karcie do potwierdzenia. Tekst i kontakt trafiają przez serwer parafii do osobistego Telegrama ks. Maksima, nigdy do AI. Numer, status i skrót zabezpieczający pozostają na serwerze do doby, kopia tekstu – w Telegramie odbiorcy. O jej usunięcie poproś kapłana. Krótki kontekst AI wygasa po 30 minutach bezczynności i jest usuwany przy kolejnym żądaniu. Wyczyszczenie lub opuszczenie strony zleca usunięcie przy dostępnym połączeniu. Liczniki ochrony: do doby. Rozmowa nie jest zapisywana w pamięci przeglądarki. OpenAI używa store:false, ale dzienniki bezpieczeństwa mogą pozostać do 30 dni.'
   },
   de: {
+    draftRestored: 'Ihre Frage steht wieder im Eingabefeld. Sie können sie bearbeiten oder später senden.',
     ai: 'Mit KI sprechen', request: 'Den Priester kontaktieren', data: 'Über Ihre Daten', cancel: 'Zurück zu Fragen', enable: 'Ich stimme zu, KI aktivieren',
     intro: 'Sprechen Sie hier mit KI oder senden Sie eine Anfrage an den Priester. Telegram und Registrierung sind nicht erforderlich.',
     privacy: 'KI und das Senden einer Anfrage benötigen Ihre Zustimmung. Keine Beichtinhalte, Gesundheitsdaten oder Daten anderer Personen eingeben.',
@@ -85,6 +90,7 @@ export const WEB_UI = {
     policy: 'Verantwortlich: Bukiškio stačiatikių Kristaus Gimimo parapija, +370 636 93506. Der Entwurf bleibt bis zur Bestätigung in diesem Tab. Text und Kontakt gehen über den Gemeindeserver an den persönlichen Telegram-Chat von Priester Maksim, nie an KI. Nummer, Status und Sicherheitsprüfsumme bleiben höchstens einen Tag auf dem Server; die Textkopie bleibt beim Empfänger in Telegram. Zur Löschung wenden Sie sich an den Priester. Kurzer KI-Kontext verfällt nach 30 Minuten Inaktivität und wird bei der nächsten Anfrage gelöscht. Leeren oder Verlassen der Seite fordert die Löschung bei verfügbarer Verbindung an. Schutz-Zähler: höchstens ein Tag. Kein Chat im Browserspeicher. OpenAI nutzt store:false; Sicherheitsprotokolle können bis zu 30 Tage bestehen bleiben.'
   },
   uk: {
+    draftRestored: 'Запитання повернуто в поле введення. Можна виправити його або надіслати пізніше.',
     ai: 'Поговорити з ШІ', request: 'Звернутися до священника', data: 'Про дані', cancel: 'Повернутися до запитань', enable: 'Погоджуюсь, увімкнути ШІ',
     intro: 'Тут можна поговорити з ШІ або надіслати звернення священнику. Telegram і реєстрація не потрібні.',
     privacy: 'ШІ та надсилання звернення вмикаються за вашою згодою. Не пишіть зміст сповіді, відомості про здоров’я й дані інших людей.',

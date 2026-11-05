@@ -3,9 +3,9 @@
 // form service (data-notes-endpoint). They are never stored in the browser,
 // logged or placed in a URL, and they are erased when the page is left.
 
-import { MAX_NAMES, MAX_NAME_LENGTH, validateNames } from '../domain.js?v=97d5bbf5c0';
-import { $, $$, show, create, fill, downloadText } from '../ui/dom.js?v=97d5bbf5c0';
-import { toast } from '../ui/toast.js?v=97d5bbf5c0';
+import { MAX_NAMES, MAX_NAME_LENGTH, validateNames } from '../domain.js?v=631b07643e';
+import { $, $$, show, create, fill, downloadText } from '../ui/dom.js?v=631b07643e';
+import { toast } from '../ui/toast.js?v=631b07643e';
 
 export function init() {
   const root = $('[data-notes]');
