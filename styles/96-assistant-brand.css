@@ -1,6 +1,51 @@
-/* The shared assistant widget in this site's own colours (wine, gilt, serif).
-   Only colours and the title typeface change; the widget's layout and the
-   shared stylesheet stay untouched so both parish sites keep one module. */
+/* The shared assistant uses this site's reading preferences and theme. */
+
+.parish-assistant {
+  color-scheme: inherit;
+  font-family: var(--font-sans);
+  color: var(--ink);
+}
+
+.parish-assistant .pa-dialog,
+.parish-assistant .pa-footer {
+  background: var(--bg);
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.parish-assistant .pa-message,
+.parish-assistant .pa-input,
+.parish-assistant .pa-language select,
+.parish-assistant .pa-chip {
+  background: var(--surface);
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+
+.parish-assistant .pa-message--user,
+.parish-assistant .pa-chip:hover {
+  background: var(--surface-tint);
+}
+
+.parish-assistant .pa-text,
+.parish-assistant .pa-event-title {
+  color: var(--ink);
+}
+
+.parish-assistant .pa-mode,
+.parish-assistant .pa-author,
+.parish-assistant .pa-event-date,
+.parish-assistant .pa-event-note,
+.parish-assistant .pa-meta,
+.parish-assistant .pa-status,
+.parish-assistant .pa-privacy,
+.parish-assistant .pa-input::placeholder {
+  color: var(--ink-soft);
+}
+
+.parish-assistant .pa-toolbar { border-color: var(--line); }
+.parish-assistant .pa-link,
+.parish-assistant .pa-clear { color: var(--accent); }
 
 .parish-assistant .pa-header,
 .parish-assistant .pa-send {
@@ -16,7 +61,7 @@
 }
 
 .parish-assistant .pa-chip {
-  color: var(--wine);
+  color: var(--accent);
 }
 
 .parish-assistant .pa-title {
