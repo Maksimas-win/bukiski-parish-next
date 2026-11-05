@@ -2,6 +2,7 @@
 const ENDPOINT = 'https://bukiski-hram.org/integrations/telegram/website.php';
 export function createWebApi(transport = fetch) {
   let token = '';
+  let provider = null;
   let generation = 0;
   let opening;
   const requests = new Set();
@@ -23,12 +24,15 @@ export function createWebApi(transport = fetch) {
     } finally { clearTimeout(timer); requests.delete(controller); }
   }
   async function ready() {
-    if (token) {return;}
+    if (token) {return provider;}
     if (opening) {return opening;}
     const current = generation;
     opening = post({ action: 'session' }, '').then(data => {
       if (current !== generation || !/^[a-f0-9]{64}$/.test(data.token)) {throw new Error('session');}
-      token = data.token;
+      const selected = data.provider === undefined ? 'openai' : data.provider;
+      if (selected !== null && !['openai', 'anthropic'].includes(selected)) {throw new Error('provider');}
+      token = data.token; provider = selected;
+      return provider;
     }).finally(() => { if (current === generation) {opening = undefined;} });
     return opening;
   }
@@ -42,7 +46,7 @@ export function createWebApi(transport = fetch) {
       return post(body);
     },
     forget() {
-      const old = token; generation++; token = ''; opening = undefined;
+      const old = token; generation++; token = ''; provider = null; opening = undefined;
       for (const controller of requests) {controller.abort();}
       requests.clear();
       if (old) {return post({ action: 'forget' }, old, true).catch(() => {});}
