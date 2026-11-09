@@ -15,6 +15,7 @@
 
 import { writeFile, appendFile } from 'node:fs/promises';
 import { setTimeout as delay } from 'node:timers/promises';
+import { validateBootstrap } from './bootstrap-health.mjs';
 
 const MODE = process.env.MODE || 'health';
 const TIMEOUT_MS = 15000;
@@ -79,6 +80,11 @@ async function checkAsset(site, path, type) {
 }
 
 async function checkNet(expectedVersion) {
+  const bootstrap = await request('https://bukiski-hram.net/api/v1/bootstrap.json');
+  const bootstrapHealth = validateBootstrap(bootstrap, Date.now());
+  failures.push(...bootstrapHealth.failures);
+  notes.push(...bootstrapHealth.notes);
+
   const info = await request(`${SITES.net.origin}/build-info.json`);
   let build = null;
   try { build = JSON.parse(info.body); } catch { /* reported below */ }
