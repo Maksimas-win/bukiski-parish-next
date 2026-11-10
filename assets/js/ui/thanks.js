@@ -1,4 +1,4 @@
-import { $, $$, show } from './dom.js?v=2cd9ef31d5';
+import { $, $$, show } from './dom.js?v=e8fc9cdf22';
 
 // The only thing stored: the day the thank-you dialog last opened by itself,
 // so it does not come back for `data-repeat-days`. Nothing personal.

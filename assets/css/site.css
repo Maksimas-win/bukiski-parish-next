@@ -3521,22 +3521,12 @@ input[type='email']:user-invalid {
 }
 
 /* 41-publications.css */
-/* Editorial articles reuse the site's long-form reading layout. */
+/* Parish publications keep their established URLs and text. The photographic
+   treatment is scoped to the feature template; ordinary archive pages retain
+   the existing article layout. */
 .publication__lead {
   max-width: 54ch;
   margin-top: 1.5rem;
-}
-
-.publication__documents h2 {
-  margin-top: 0;
-}
-
-.publication__documents p + ul {
-  margin-top: 1rem;
-}
-
-.publication__documents .hint {
-  margin-top: 0.35rem;
 }
 
 .publication__citation {
@@ -3544,12 +3534,725 @@ input[type='email']:user-invalid {
 }
 
 .publication [id^="source-"],
-.publication [id^="document-"] {
-  scroll-margin-top: calc(var(--header-height) + 1rem);
+.publication [id^="document-"],
+.publication [id^="s-"] {
+  scroll-margin-top: calc(var(--header-height) + 1.25rem);
 }
 
 .publication__signature {
   font-weight: 650;
+}
+
+/* The gradient is a reading scrim over the real photograph. Its darker area
+   follows the copy width, leaving the church on the right visible. */
+.publication--feature .publication__hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  min-height: 34rem;
+  overflow: hidden;
+  color: #ffffff;
+  background: #14221e;
+}
+
+.publication__hero-photo,
+.publication__hero-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.publication__hero-photo {
+  z-index: -2;
+  object-fit: cover;
+  object-position: 58% 32%;
+}
+
+.publication__hero-shade {
+  z-index: -1;
+  background: linear-gradient(90deg, rgb(8 18 16 / 87%) 0%, rgb(8 18 16 / 78%) 30%, rgb(8 18 16 / 67%) 54%, rgb(8 18 16 / 32%) 70%, rgb(8 18 16 / 8%) 100%);
+}
+
+.publication--feature .publication__hero-content,
+.publication--feature .publication__layout {
+  max-width: 68rem;
+}
+
+.publication__hero-content {
+  padding-block: 3.5rem 3rem;
+}
+
+.publication__hero .article__crumb {
+  max-width: 36rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.publication__hero .link {
+  min-height: 2.75rem;
+  color: inherit;
+}
+
+.publication__hero :focus-visible {
+  outline-color: #ffffff;
+}
+
+.publication--feature .publication__title {
+  max-width: min(37rem, 57%);
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 1.55rem + 2.9vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  color: inherit;
+  text-wrap: balance;
+}
+
+.publication__title-main,
+.publication__title-detail {
+  display: block;
+}
+
+.publication__title-detail {
+  margin-top: 0.12em;
+  font-size: 0.77em;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.publication--feature .publication__meta {
+  max-width: min(37rem, 57%);
+  margin-top: 2rem;
+  gap: 0.4rem 1.1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: inherit;
+}
+
+.publication__meta .badge {
+  padding: 0.2rem 0.6rem;
+  border: 0;
+  background: #f6f0e3;
+  color: #182620;
+  font-size: 0.875rem;
+}
+
+/* A generous reading column and a quiet margin for navigation. */
+.publication__layout {
+  padding-top: 2.5rem;
+  row-gap: 1.75rem;
+}
+
+.publication--feature .publication__body {
+  max-width: 47.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75;
+}
+
+.publication__body > * + * {
+  margin-top: 1.15em;
+}
+
+.publication--feature .publication__lead {
+  max-width: none;
+  margin: 0;
+  font-size: 1.3125rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.publication__body h2 {
+  margin-top: 2.1em;
+  font-size: clamp(1.9rem, 1.55rem + 1vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--accent);
+}
+
+.publication__body h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+.publication--feature .publication__contents {
+  padding: 0 0 0 1.4rem;
+  border: 0;
+  border-inline-start: 1px solid var(--line-strong);
+  border-radius: 0;
+  background: transparent;
+}
+
+.publication__contents h2 {
+  margin-bottom: 0.65rem;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--accent);
+}
+
+.publication__contents ol {
+  gap: 0.15rem;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.publication__contents a {
+  padding: 0.5rem 0 0.5rem 0.65rem;
+  border-inline-start-width: 2px;
+  color: var(--ink-soft);
+  text-underline-offset: 0.2em;
+}
+
+.publication__contents a:hover,
+.publication__contents a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.publication__contents-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 3rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: start;
+}
+
+.publication__contents-toggle .icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.publication__contents-toggle[aria-expanded='true'] .icon {
+  transform: rotate(180deg);
+}
+
+/* Two document rows: the actual page is the illustration, and the complete
+   row remains one accessible link to the existing PDF download. */
+.publication--feature .publication__documents {
+  margin-top: 2.25rem;
+  padding-top: 2rem;
+  border-block-start: 1px solid var(--accent);
+}
+
+.publication__documents h2 {
+  margin: 0 0 0.65rem;
+}
+
+.publication__documents > p:not([data-document-status]) {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.publication--feature .publication__document-list {
+  display: block;
+  margin-top: 1.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.publication__document {
+  padding-block: 1.65rem;
+  border-block-end: 1px solid var(--line-strong);
+}
+
+.publication__document:first-child {
+  padding-top: 0;
+}
+
+.publication__document-link {
+  display: grid;
+  grid-template-columns: clamp(8rem, 13.5vw, 11rem) minmax(0, 1fr);
+  align-items: center;
+  gap: 1.8rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.publication__document-link--text {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.publication__document-preview {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 480 / 679;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 6%), 0 7px 20px rgb(0 0 0 / 9%);
+}
+
+.publication__document-copy {
+  min-width: 0;
+}
+
+.publication--feature .publication__document-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.23;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+
+.publication__document-copy .hint {
+  margin-top: 0.7rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.publication__document-action {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  margin-top: 0.75rem;
+  padding-block: 0.35rem;
+  color: var(--accent);
+  font-size: 1.0625rem;
+  font-weight: 650;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+.publication__document-action .file-type {
+  font-size: inherit;
+}
+
+.publication__document-action .icon {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.publication__document-link:hover .publication__document-action {
+  color: var(--accent-hover);
+  text-decoration-thickness: 2px;
+}
+
+.publication__document-link:hover .publication__document-preview {
+  border-color: var(--line-strong);
+}
+
+.publication__document-link[aria-busy='true'] {
+  cursor: progress;
+}
+
+.publication__documents [data-document-status] {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.publication__documents [data-document-status]:empty {
+  margin: 0;
+}
+
+/* Sources remain part of the article rather than competing with its text. */
+.publication--feature .publication__sources {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-block-start: 1px solid var(--line-strong);
+}
+
+.publication__sources h2 {
+  margin-top: 0;
+}
+
+.publication__sources ol {
+  display: block;
+  margin-top: 1rem;
+  padding-inline-start: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.publication__sources li {
+  padding: 0.8rem 0 0.8rem 0.2rem;
+  border-block-end: 1px solid var(--line);
+}
+
+.publication__sources a {
+  overflow-wrap: anywhere;
+}
+
+.publication__sources .hint {
+  margin-top: 0.4rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.publication__body .publication__citation {
+  padding-inline: 0.08em;
+  color: var(--accent);
+  font-size: 0.8em;
+}
+
+.publication--feature .publication__signature {
+  margin-top: 2.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 62rem) {
+  .publication__layout.has-contents {
+    grid-template-columns: minmax(0, 1fr) 16rem;
+    column-gap: 3.5rem;
+  }
+
+  .publication__layout.has-contents .publication__contents {
+    grid-column: 2;
+    grid-row: 1;
+    position: sticky;
+    top: calc(var(--header-height) + 1.5rem);
+    max-height: calc(100vh - var(--header-height) - 3rem);
+    align-self: start;
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+
+  .publication__layout.has-contents .publication__body {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 61.999rem) {
+  .publication--feature .publication__layout {
+    max-width: 47.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .publication--feature .publication__contents {
+    padding: 0.15rem 0 0.75rem;
+    border: 0;
+    border-block-end: 1px solid var(--line-strong);
+  }
+
+  .publication__contents a {
+    min-height: 2.75rem;
+  }
+}
+
+/* On phones the photograph occupies its own upper area, then fades into a
+   solid reading surface. Text grows naturally below it at any zoom level. */
+@media (max-width: 47.999rem) {
+  .publication--feature .publication__hero {
+    display: block;
+    min-height: 0;
+  }
+
+  .publication__hero-photo {
+    height: 19rem;
+    object-position: 65% 43%;
+  }
+
+  .publication__hero-shade {
+    background: linear-gradient(180deg, rgb(20 34 30 / 0%) 0, rgb(20 34 30 / 4%) 10rem, rgb(20 34 30 / 80%) 16rem, #14221e 19rem);
+  }
+
+  .publication__hero-content {
+    padding-block: 16.5rem 2rem;
+  }
+
+  .publication__hero .article__crumb {
+    margin-bottom: 0.8rem;
+  }
+
+  .publication--feature .publication__title {
+    max-width: none;
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    line-height: 1.1;
+  }
+
+  .publication__title-detail {
+    margin-top: 0.2em;
+    font-size: 0.8em;
+    line-height: 1.23;
+  }
+
+  .publication--feature .publication__meta {
+    max-width: none;
+    margin-top: 1.5rem;
+    gap: 0.25rem 0.9rem;
+    font-size: 0.9375rem;
+  }
+
+  .publication--feature .publication__body {
+    font-size: 1.1875rem;
+    line-height: 1.75;
+  }
+
+  .publication--feature .publication__lead {
+    font-size: 1.25rem;
+    line-height: 1.65;
+  }
+
+  .publication__body h2 {
+    margin-top: 1.8em;
+    font-size: 1.875rem;
+  }
+
+  .publication--feature .publication__documents {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+  }
+
+  .publication__documents h2,
+  .publication__sources h2 {
+    margin-top: 0;
+  }
+
+  .publication__documents > p:not([data-document-status]) {
+    font-size: 1.0625rem;
+  }
+
+  .publication__document {
+    padding-block: 1.4rem;
+  }
+
+  .publication__document-link {
+    grid-template-columns: clamp(4.25rem, 23vw, 6rem) minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .publication__document-link--text {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .publication--feature .publication__document-title {
+    font-size: 1.375rem;
+    line-height: 1.25;
+  }
+
+  .publication__document-copy .hint {
+    margin-top: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .publication__document-action {
+    margin-top: 0.55rem;
+    font-size: 1rem;
+  }
+
+  .publication--feature .publication__sources {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+/* The visitor's reading settings take precedence over the photographic style. */
+html.high-contrast .publication__hero {
+  min-height: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+html.high-contrast .publication__hero-photo,
+html.high-contrast .publication__hero-shade {
+  display: none;
+}
+
+html.high-contrast .publication__hero-content {
+  padding-block: 2.5rem 1rem;
+}
+
+html.high-contrast .publication__title,
+html.high-contrast .publication__meta {
+  max-width: 46rem;
+}
+
+html.high-contrast .publication__meta .badge {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+html.high-contrast .publication__hero :focus-visible {
+  outline-color: var(--focus);
+}
+
+html.high-contrast .publication__document-preview {
+  border-color: var(--line-strong);
+  box-shadow: none;
+}
+
+@media (forced-colors: active) {
+  .publication--feature .publication__hero {
+    min-height: 0;
+    background: Canvas;
+    color: CanvasText;
+  }
+
+  .publication__hero-photo,
+  .publication__hero-shade {
+    display: none;
+  }
+
+  .publication__hero-content {
+    padding-block: 2rem 1rem;
+  }
+
+  .publication--feature .publication__title,
+  .publication--feature .publication__meta {
+    max-width: none;
+  }
+
+  .publication__hero :focus-visible {
+    outline-color: Highlight;
+  }
+
+  .publication__meta .badge,
+  .publication__document-preview {
+    border: 1px solid CanvasText;
+    box-shadow: none;
+  }
+
+  .publication__document-action {
+    color: LinkText;
+  }
+}
+
+@media print {
+  .publication--feature {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-tint: #ffffff;
+    --ink: #000000;
+    --ink-soft: #333333;
+    --line: #999999;
+    --line-strong: #999999;
+    --accent: #000000;
+    --accent-hover: #000000;
+    --on-accent: #ffffff;
+    color: var(--ink);
+    background: var(--bg);
+  }
+
+  .publication--feature .publication__hero {
+    display: block;
+    min-height: 0;
+    overflow: visible;
+    background: none;
+    color: #000000;
+    break-inside: avoid;
+  }
+
+  .publication__hero-photo,
+  .publication__hero-shade,
+  .publication__hero .article__crumb,
+  .publication__meta button {
+    display: none !important;
+  }
+
+  html .publication--feature .publication__hero-content {
+    max-width: none;
+    padding: 0 0 1rem;
+  }
+
+  .publication--feature .publication__title {
+    max-width: none;
+    font-size: 24pt;
+  }
+
+  .publication__title-detail {
+    font-size: 18pt;
+  }
+
+  .publication--feature .publication__meta {
+    max-width: none;
+    margin-top: 0.7rem;
+    font-size: 10.5pt;
+  }
+
+  html .publication--feature .publication__meta .badge {
+    padding: 0;
+    background: none;
+    color: #000000;
+    font-size: inherit;
+  }
+
+  .publication--feature .publication__layout {
+    display: block;
+    max-width: none;
+    padding-top: 0;
+  }
+
+  .publication--feature .publication__body {
+    max-width: none;
+    font-size: 11.5pt;
+    line-height: 1.55;
+  }
+
+  .publication--feature .publication__lead {
+    font-size: 12pt;
+  }
+
+  .publication__body h2 {
+    font-size: 18pt;
+    color: #000000;
+    break-after: avoid;
+  }
+
+  .publication__document {
+    padding-block: 0.9rem;
+    break-inside: avoid;
+  }
+
+  .publication__document-link {
+    grid-template-columns: 5rem minmax(0, 1fr);
+    gap: 1.2rem;
+    color: #000000;
+  }
+
+  .publication__document-link--text {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .publication__document-preview {
+    box-shadow: none;
+  }
+
+  .publication--feature .publication__document-title {
+    font-size: 14pt;
+  }
+
+  .publication__document-copy .hint,
+  .publication__sources ol {
+    font-size: 10.5pt;
+  }
+
+  .publication__document-action {
+    min-height: 0;
+    font-size: 10.5pt;
+    color: #000000;
+  }
+
+  .publication__sources li {
+    break-inside: avoid;
+  }
+
+  .publication__body .publication__citation {
+    font-size: 10pt;
+  }
 }
 
 /* 42-home.css */

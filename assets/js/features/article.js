@@ -1,7 +1,7 @@
 // Reading aids for long articles: progress, contents highlight, share, back to top.
 
-import { $, $$, show, prefersReducedMotion } from '../ui/dom.js?v=2cd9ef31d5';
-import { toast } from '../ui/toast.js?v=2cd9ef31d5';
+import { $, $$, show, prefersReducedMotion } from '../ui/dom.js?v=e8fc9cdf22';
+import { toast } from '../ui/toast.js?v=e8fc9cdf22';
 
 const TO_TOP_AFTER_PX = 1200;
 
@@ -52,6 +52,32 @@ function initContents(article) {
   });
 }
 
+/** A short contents disclosure keeps the publication opening readable on phones.
+ * Without JavaScript the complete navigation remains available. */
+function initPublicationContents(article) {
+  const toggle = $('[data-publication-contents-toggle]', article);
+  if (!toggle) return;
+  const contents = toggle.closest('[data-contents]');
+  const heading = $('h2', contents);
+  const list = document.getElementById(toggle.getAttribute('aria-controls'));
+  const wide = matchMedia('(min-width: 62rem)');
+  const setExpanded = expanded => {
+    toggle.setAttribute('aria-expanded', String(expanded));
+    show(list, expanded);
+  };
+  const updateLayout = () => {
+    show(toggle, !wide.matches);
+    show(heading, wide.matches);
+    setExpanded(wide.matches);
+  };
+  toggle.addEventListener('click', () => setExpanded(toggle.getAttribute('aria-expanded') !== 'true'));
+  list.addEventListener('click', event => {
+    if (!wide.matches && event.target.closest('a')) setExpanded(false);
+  });
+  wide.addEventListener('change', updateLayout);
+  updateLayout();
+}
+
 function initShare() {
   const button = $('[data-share]');
   if (!button) return;
@@ -80,5 +106,6 @@ export function init() {
   if (!article) return;
   initProgress(article);
   initContents(article);
+  initPublicationContents(article);
   initShare();
 }
