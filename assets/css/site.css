@@ -3520,6 +3520,38 @@ input[type='email']:user-invalid {
   }
 }
 
+/* 41-publications.css */
+/* Editorial articles reuse the site's long-form reading layout. */
+.publication__lead {
+  max-width: 54ch;
+  margin-top: 1.5rem;
+}
+
+.publication__documents h2 {
+  margin-top: 0;
+}
+
+.publication__documents p + ul {
+  margin-top: 1rem;
+}
+
+.publication__documents .hint {
+  margin-top: 0.35rem;
+}
+
+.publication__citation {
+  white-space: nowrap;
+}
+
+.publication [id^="source-"],
+.publication [id^="document-"] {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.publication__signature {
+  font-weight: 650;
+}
+
 /* 42-home.css */
 /* Home: structure and section accents --------------------------------------
    Every home section opens with the same title block (a short gold label over
