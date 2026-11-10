@@ -111,7 +111,7 @@
     "lt": {
       "strip": {
         "label": "Svarbu",
-        "text": "Oficiali Lietuvos Stačiatikių Bažnyčios informacija apie įstatymų projektus, susijusius su jos šventovėmis ir tikinčiųjų teisėmis.",
+        "text": "Oficiali Lietuvos Stačiatikių Bažnyčios informacija apie įstatymų projektus, susijusius su jos bažnyčiomis ir tikinčiųjų teisėmis.",
         "link": "Plačiau"
       },
       "page": {
@@ -121,7 +121,7 @@
         "lead": "Oficialūs mūsų Bažnyčios pranešimai ir kreipimaisi – vienoje vietoje.",
         "greeting": "Brangūs broliai ir seserys!",
         "paragraphs": [
-          "Lietuvos Respublikos Seimui pateikti du įstatymų projektai, susiję su Lietuvos Stačiatikių Bažnyčia. Bažnyčios Tarybos vertinimu, jais numatoma galimybė paimti iš jos keletą istorinių šventovių, tarp jų Šventosios Dvasios vienuolyną ir Skaisčiausiosios Dievo Motinos katedrą Vilniuje, ir sudaromos prielaidos išbraukti Lietuvos Stačiatikių Bažnyčią iš tradicinių Lietuvos religinių bendruomenių sąrašo.",
+          "Lietuvos Respublikos Seimui pateikti du įstatymų projektai, susiję su Lietuvos Stačiatikių Bažnyčia. Bažnyčios Tarybos vertinimu, jais numatoma galimybė paimti iš jos keletą istorinių bažnyčių, tarp jų Šventosios Dvasios vienuolyną ir Skaisčiausiosios Dievo Motinos katedrą Vilniuje, ir sudaromos prielaidos išbraukti Lietuvos Stačiatikių Bažnyčią iš tradicinių Lietuvos religinių bendruomenių sąrašo.",
           "Kad gautumėte patikimą informaciją iš pirminių šaltinių, žemiau pateikiame oficialius Bažnyčios pranešimus. Prašome pirmiausia remtis oficialiais šaltiniais: svetaine orthodoxy.lt ir Lietuvos Stačiatikių Bažnyčios Facebook puslapiu. Pranešimai skelbiami lietuvių ir rusų kalbomis."
         ],
         "materialsTitle": "Oficialūs pranešimai",
@@ -343,5 +343,19 @@
         "facebook": "Литовська Православна Церква у Facebook"
       }
     }
-  }
+  },
+  "publicationLinks": [
+    {
+      "path": "/ru/library/obrashchenie-prihoda-v-seim-2026.html",
+      "language": "ru",
+      "labels": {
+        "ru": "Обращение нашего прихода в Сейм: документы и положение на 10 ноября 2026 года",
+        "lt": "Mūsų parapijos kreipimasis į Seimą: dokumentai ir padėtis 2026 m. lapkričio 10 d.",
+        "en": "Our parish’s appeal to the Seimas: documents and the position on 10 November 2026",
+        "pl": "Apel naszej parafii do Sejmu: dokumenty i stan na 10 listopada 2026 roku",
+        "de": "Unser Schreiben an den Seimas: Dokumente und Stand am 10. November 2026",
+        "uk": "Звернення нашої парафії до Сейму: документи та стан на 10 листопада 2026 року"
+      }
+    }
+  ]
 }

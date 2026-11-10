@@ -19,6 +19,7 @@ import { lightboxDialog as galleryLightbox } from './lib/pages/article.mjs';
 import { notesPage } from './lib/pages/notes.mjs';
 import { libraryPage, newsPage } from './lib/pages/library.mjs';
 import { articlePage, lightboxDialog } from './lib/pages/article.mjs';
+import { publicationPage } from './lib/pages/publication.mjs';
 import { gpmPage, gpmMeta } from './lib/pages/gpm.mjs';
 import { documentPage, loadDocument } from './lib/pages/document.mjs';
 import { appBootstrap } from './lib/app-bootstrap.mjs';
@@ -230,6 +231,24 @@ function addArticlePages() {
   }
 }
 
+/** Parish editorial articles remain available after temporary notices expire. */
+function addPublicationPages() {
+  for (const entry of catalog.publications) {
+    const t = site.locales[entry.language];
+    addRoute({
+      lang: entry.language,
+      pageId: 'article',
+      title: entry.title,
+      description: entry.description,
+      article: true,
+      publishedAt: entry.publishedAt,
+      path: entry.target,
+      body: publicationPage(site, entry, t),
+      trail: [{ name: t.news, path: site.route(entry.language, 'news') }, { name: entry.title, path: entry.target }]
+    });
+  }
+}
+
 /** The page behind the announcement strip, in every site language, while it is shown. */
 function addAnnouncementPages() {
   const { announcement } = site;
@@ -281,6 +300,7 @@ await versionScripts(site.assetVersion);
 addCorePages();
 const documentFiles = await addDocumentPages();
 addArticlePages();
+addPublicationPages();
 addAnnouncementPages();
 addNotFoundPage();
 for (const [path, route] of routes) await writeOutput(outputPathOf(path), route.html);

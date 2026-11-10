@@ -87,5 +87,35 @@
     "bytes": 136922,
     "sha256": "86ac4ece51ba0295832508ef3981d088174de89b78e412607b8f0742ce14ca8d",
     "originalBytesUnchanged": true
+  },
+  {
+    "source": "Обращение прихода от 8 ноября 2026 года № 261108-3 — экземпляр предоставлен приходом",
+    "sourceKind": "parish-supplied",
+    "local": "assets/documents/bukiskis-kreipimasis-2026-11-08.pdf",
+    "status": "provided",
+    "providedOn": "2026-11-10",
+    "title": "Обращение прихода от 8 ноября 2026 года № 261108-3",
+    "publicationScope": "Основной текст обращения, 2 страницы; подписные листы не публикуются.",
+    "pages": 2,
+    "bytes": 1334112,
+    "sha256": "770a0ee655c13c4ec1c09b6e07b22108e9bc732f83af3da64135edcd0807705b",
+    "links": [],
+    "originalBytesUnchanged": false,
+    "publicExcerpt": true,
+    "derivedFrom": "Основные страницы 1–2 предоставленного приходом четырёхстраничного обращения. Два подписных листа не опубликованы."
+  },
+  {
+    "source": "Ответ Канцелярии Сейма от 10 ноября 2026 года № S-2026-5150 — экземпляр предоставлен приходом",
+    "sourceKind": "parish-supplied",
+    "local": "assets/documents/seimas-atsakymas-2026-11-10.pdf",
+    "status": "provided",
+    "providedOn": "2026-11-10",
+    "title": "Ответ Канцелярии Сейма от 10 ноября 2026 года № S-2026-5150",
+    "publicationScope": "Копия электронного документа, 2 страницы.",
+    "pages": 2,
+    "bytes": 1132211,
+    "sha256": "5cf7284d2c4c2267bab5355a0dfb6d7c617b21872e7aea6cbf193428a4dd0818",
+    "links": [],
+    "originalBytesUnchanged": true
   }
 ]

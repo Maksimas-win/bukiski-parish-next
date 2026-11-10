@@ -8,6 +8,7 @@ import { localizeSchedule } from './liturgical.mjs';
 import { mergeAdditions } from './additions.mjs';
 import { validateAnnouncement } from './announcement.mjs';
 import { validateThanks } from './thanks.mjs';
+import { publicationPath, validatePublications } from './publications.mjs';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const DIST = resolve(ROOT, 'dist');
@@ -51,8 +52,13 @@ export async function loadSite(env = process.env) {
     readFile(resolve(ROOT, 'index.html'), 'utf8')
   ]);
   const gpm = await loadGpm();
+  const publications = await readJSON('publications.json');
+  validatePublications(publications, settings.locales, documents);
   const announcement = await readJSON('announcement.json');
   validateAnnouncement(announcement, settings.locales);
+  for (const link of announcement.publicationLinks || []) {
+    if (!publications.some(publication => publicationPath(publication) === link.path)) throw new Error(`announcement.json: publication does not exist: ${link.path}`);
+  }
   const thanks = await readJSON('thanks.json');
   validateThanks(thanks, settings.locales);
 
@@ -89,6 +95,8 @@ export async function loadSite(env = process.env) {
     settings,
     locales,
     pages,
+    /** New editorial publications, kept apart from the imported archive. */
+    publications,
     assets,
     documents,
     sourceLinks,
