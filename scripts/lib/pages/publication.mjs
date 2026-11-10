@@ -21,11 +21,17 @@ function publicationTitle(title) {
   return divider < 0 ? title : html`<span class="publication__title-main">${title.slice(0, divider + 1)}</span> <span class="publication__title-detail">${title.slice(divider + 1).trimStart()}</span>`;
 }
 
+/** Keep official identifiers together without altering their original text. */
+function referenceText(text) {
+  return text.split(/(№[ \u00a0]+(?:S-\d{4}-\d+|\d+(?:-\d+)*)|XVP-\d+|S-\d{4}-\d+|\d{6}-\d+)/g)
+    .map((piece, index) => index % 2 ? html`<span class="publication__reference">${piece}</span>` : piece);
+}
+
 /** Only emphasis is accepted as inline markup; every text fragment is escaped. */
 function emphasizedText(text) {
   const pieces = text.split(/(\*\*[^*]+\*\*)/g);
   return pieces.map(piece => piece.startsWith('**') && piece.endsWith('**')
-    ? html`<strong>${piece.slice(2, -2)}</strong>` : piece);
+    ? html`<strong>${referenceText(piece.slice(2, -2))}</strong>` : referenceText(piece));
 }
 
 function articleBlocks(publication) {
@@ -103,7 +109,7 @@ export function publicationPage(site, entry, t) {
         <ol id="publication-contents-list">${contents.map(heading => html`<li><a href="#${heading.id}">${heading.text}</a></li>`)}</ol>
       </nav>`}
       <div class="prose article__body publication__body">
-        <p class="lead publication__lead">${publication.lead}</p>
+        <p class="lead publication__lead">${referenceText(publication.lead)}</p>
         ${downloads.length > 0 && html`<section class="publication__documents"${attrs({
           'data-document-region': true,
           'data-document-loading': t.documentLoading,
@@ -123,7 +129,7 @@ export function publicationPage(site, entry, t) {
             })}>
               ${item.preview && html`<img class="publication__document-preview" src="${site.url(`/assets/img/publications/${item.preview.file}`)}" width="${item.preview.width}" height="${item.preview.height}" loading="lazy" decoding="async" alt="">`}
               <div class="publication__document-copy">
-                <h3 class="publication__document-title" id="document-title-${item.id}">${item.label}</h3>
+                <h3 class="publication__document-title" id="document-title-${item.id}">${referenceText(item.label)}</h3>
                 ${item.note && html`<p class="hint" id="document-note-${item.id}">${item.note}</p>`}
                 <span class="publication__document-action" id="document-action-${item.id}">${t.documentDownload} <span class="file-type">${item.local.split('.').at(-1).toUpperCase()}</span>${icon('download')}</span>
               </div>
