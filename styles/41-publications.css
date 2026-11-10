@@ -133,6 +133,25 @@
   margin-top: 1.15em;
 }
 
+/* Paragraph composition follows the parish's print-style preference: a flush
+   text block, a first-line indent and natural hyphenation in the page language. */
+.publication__body > p:not(.publication__signature),
+.publication__body > blockquote > p,
+.publication__documents > p:not([data-document-status]) {
+  text-align: justify;
+  text-align-last: start;
+  text-indent: 1.5em;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  orphans: 3;
+  widows: 3;
+}
+
+.publication__body > p + p:not(.publication__signature) {
+  margin-top: 0.65em;
+}
+
 .publication--feature .publication__lead {
   max-width: none;
   margin: 0;
