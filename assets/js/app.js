@@ -2,12 +2,12 @@
 // this entry point wires up controls and loads a feature module only on the
 // pages that contain its markup.
 
-import { initCopyButtons } from './ui/copy.js?v=e8fc9cdf22';
-import { initLanguageMenu, initMenu } from './ui/menu.js?v=e8fc9cdf22';
-import { initPreferences } from './ui/preferences.js?v=e8fc9cdf22';
-import { initTilt } from './ui/tilt.js?v=e8fc9cdf22';
-import { initAnnouncement } from './ui/announcement.js?v=e8fc9cdf22';
-import { initThanks } from './ui/thanks.js?v=e8fc9cdf22';
+import { initCopyButtons } from './ui/copy.js?v=3e6fabd6cd';
+import { initLanguageMenu, initMenu } from './ui/menu.js?v=3e6fabd6cd';
+import { initPreferences } from './ui/preferences.js?v=3e6fabd6cd';
+import { initTilt } from './ui/tilt.js?v=3e6fabd6cd';
+import { initAnnouncement } from './ui/announcement.js?v=3e6fabd6cd';
+import { initThanks } from './ui/thanks.js?v=3e6fabd6cd';
 
 document.documentElement.classList.add('js');
 
@@ -20,15 +20,15 @@ initAnnouncement();
 initThanks();
 
 const features = [
-  ['[data-schedule]', () => import('./features/schedule.js?v=e8fc9cdf22')],
-  ['[data-library]', () => import('./features/library.js?v=e8fc9cdf22')],
-  ['[data-notes]', () => import('./features/notes.js?v=e8fc9cdf22')],
-  ['[data-article]', () => import('./features/article.js?v=e8fc9cdf22')],
-  ['[data-story]', () => import('./features/story.js?v=e8fc9cdf22')],
-  ['[data-lightbox]', () => import('./features/lightbox.js?v=e8fc9cdf22')],
-  ['[data-gpm]', () => import('./features/gpm.js?v=e8fc9cdf22')],
-  ['[data-home-gpm]', () => import('./features/home-gpm.js?v=e8fc9cdf22')],
-  ['[data-document-download]', () => import('./document-downloads.js?v=e8fc9cdf22')]
+  ['[data-schedule]', () => import('./features/schedule.js?v=3e6fabd6cd')],
+  ['[data-library]', () => import('./features/library.js?v=3e6fabd6cd')],
+  ['[data-notes]', () => import('./features/notes.js?v=3e6fabd6cd')],
+  ['[data-article]', () => import('./features/article.js?v=3e6fabd6cd')],
+  ['[data-story]', () => import('./features/story.js?v=3e6fabd6cd')],
+  ['[data-lightbox]', () => import('./features/lightbox.js?v=3e6fabd6cd')],
+  ['[data-gpm]', () => import('./features/gpm.js?v=3e6fabd6cd')],
+  ['[data-home-gpm]', () => import('./features/home-gpm.js?v=3e6fabd6cd')],
+  ['[data-document-download]', () => import('./document-downloads.js?v=3e6fabd6cd')]
 ];
 
 for (const [selector, load] of features) {
