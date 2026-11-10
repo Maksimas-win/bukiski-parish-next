@@ -5,9 +5,16 @@ import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import { resolve, dirname, extname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parseArgs } from 'node:util';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../dist');
-const port = Number(process.env.PORT || 4173);
+const { values } = parseArgs({ options: {
+  host: { type: 'string', default: '127.0.0.1' },
+  port: { type: 'string' },
+  strictPort: { type: 'boolean', default: true }
+} });
+const port = Number(values.port || process.env.PORT || 4173);
+if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('Invalid preview port');
 const base = (process.env.BASE_PATH || '').replace(/\/$/, '');
 
 const TYPES = {
@@ -63,4 +70,4 @@ createServer(async (request, response) => {
     const notFound = await readFile(resolve(root, '404.html')).catch(() => 'Build the site first: npm run build');
     send(response, 404, { 'Content-Type': 'text/html; charset=utf-8' }, notFound);
   }
-}).listen(port, '127.0.0.1', () => console.log(`Local: http://127.0.0.1:${port}${base}/`));
+}).listen(port, values.host, () => console.log(`Local: http://${values.host}:${port}${base}/`));

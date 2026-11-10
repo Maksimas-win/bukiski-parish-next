@@ -8,6 +8,19 @@ import { icon } from '../icons.mjs';
 import { externalLink, siteLink } from '../components.mjs';
 import { LANGUAGE_NAMES } from './library.mjs';
 
+// Previews are rendered from the public first pages; private signature sheets
+// are never part of the website's image or document assets.
+const DOCUMENT_PREVIEWS = new Map([
+  ['assets/documents/bukiskis-kreipimasis-2026-11-08.pdf', { file: 'bukiskis-appeal-2026-11-08.webp', width: 480, height: 679 }],
+  ['assets/documents/seimas-atsakymas-2026-11-10.pdf', { file: 'seimas-reply-2026-11-10.webp', width: 480, height: 679 }]
+]);
+
+/** Keep the complete title, giving its continuation a quieter visual weight. */
+function publicationTitle(title) {
+  const divider = title.indexOf(':');
+  return divider < 0 ? title : html`<span class="publication__title-main">${title.slice(0, divider + 1)}</span> <span class="publication__title-detail">${title.slice(divider + 1).trimStart()}</span>`;
+}
+
 /** Only emphasis is accepted as inline markup; every text fragment is escaped. */
 function emphasizedText(text) {
   const pieces = text.split(/(\*\*[^*]+\*\*)/g);
@@ -50,30 +63,47 @@ export function publicationPage(site, entry, t) {
   const publication = entry.publication;
   const lang = entry.language;
   const { body, headings } = articleBlocks(publication);
-  const downloads = publication.documents.map(item => ({ ...item, document: site.documents.find(document => document.local === item.local) }));
+  const downloads = publication.documents.map(item => ({ ...item, document: site.documents.find(document => document.local === item.local), preview: DOCUMENT_PREVIEWS.get(item.local) }));
+  const hero = site.photos.hero;
+  const largest = hero.at(-1);
   const contents = [
     ...(downloads.length ? [{ id: 'documents', text: publication.documentsTitle || 'Документы' }] : []),
     ...headings,
     ...(publication.sources.length ? [{ id: 'sources', text: publication.sourcesTitle || 'Источники' }] : [])
   ];
-  return html`<article class="article publication" data-article>
-    <header class="article__head shell">
-      <p class="article__crumb">${siteLink(site, site.route(lang, 'news'), html`${icon('chevron-left')}${t.news}`, 'link link--back')}</p>
-      <h1>${publication.title}</h1>
-      <ul class="article__meta">
+  return html`<article class="article publication publication--feature" data-article>
+    <header class="publication__hero">
+      <img${attrs({
+        class: 'publication__hero-photo',
+        src: site.url(`/${hero[1].file}`),
+        srcset: hero.map(size => `${site.url(`/${size.file}`)} ${size.width}w`).join(', '),
+        sizes: '100vw',
+        width: largest.width,
+        height: largest.height,
+        fetchpriority: 'high',
+        decoding: 'async',
+        alt: t.photo
+      })}>
+      <div class="publication__hero-shade" aria-hidden="true"></div>
+      <div class="shell publication__hero-content">
+        <p class="article__crumb">${siteLink(site, site.route(lang, 'news'), html`${icon('chevron-left')}${t.news}`, 'link link--back')}</p>
+        <h1 class="publication__title">${publicationTitle(publication.title)}</h1>
+        <ul class="article__meta publication__meta">
         <li><span class="badge">${LANGUAGE_NAMES[lang]}</span></li>
         <li>${t.published} <time datetime="${publication.publishedAt}">${formatDate(lang, publication.publishedAt, { dateStyle: 'long' })}</time></li>
         <li>${icon('clock')}${t.readingTime.replace('{n}', entry.minutes)}</li>
         <li><button${attrs({ type: 'button', class: 'link link--button', 'data-share': true, 'data-share-title': publication.title, 'data-label-copied': t.linkCopied, hidden: true })}>${icon('share')}${t.share}</button></li>
-      </ul>
-      <p class="lead publication__lead">${publication.lead}</p>
+        </ul>
+      </div>
     </header>
-    <div class="shell article__layout${contents.length >= 3 ? ' has-contents' : ''}">
-      ${contents.length >= 3 && html`<nav class="contents" aria-labelledby="contents-title" data-contents>
+    <div class="shell article__layout publication__layout${contents.length >= 3 ? ' has-contents' : ''}">
+      ${contents.length >= 3 && html`<nav class="contents publication__contents" aria-labelledby="contents-title" data-contents>
         <h2 id="contents-title">${t.contents}</h2>
-        <ol>${contents.map(heading => html`<li><a href="#${heading.id}">${heading.text}</a></li>`)}</ol>
+        <button class="publication__contents-toggle" type="button" aria-expanded="true" aria-controls="publication-contents-list" data-publication-contents-toggle hidden>${t.contents}${icon('chevron-down')}</button>
+        <ol id="publication-contents-list">${contents.map(heading => html`<li><a href="#${heading.id}">${heading.text}</a></li>`)}</ol>
       </nav>`}
-      <div class="prose article__body">
+      <div class="prose article__body publication__body">
+        <p class="lead publication__lead">${publication.lead}</p>
         ${downloads.length > 0 && html`<section class="publication__documents"${attrs({
           'data-document-region': true,
           'data-document-loading': t.documentLoading,
@@ -82,14 +112,27 @@ export function publicationPage(site, entry, t) {
         })} aria-labelledby="documents">
           <h2 id="documents" tabindex="-1">${publication.documentsTitle || 'Документы'}</h2>
           ${publication.documentsIntro && html`<p>${publication.documentsIntro}</p>`}
-          <ul>${downloads.map(item => html`<li id="document-${item.id}">
-            <a${attrs({ href: site.url(documentPath(item.document, lang)), 'data-document-download': site.documentDelivery === 'envelope', rel: 'nofollow' })}>${item.label} <span class="file-type">${item.local.split('.').at(-1).toUpperCase()}</span></a>
-            ${item.note && html`<p class="hint">${item.note}</p>`}
+          <ul class="publication__document-list">${downloads.map(item => html`<li class="publication__document" id="document-${item.id}">
+            <a${attrs({
+              class: `publication__document-link${item.preview ? '' : ' publication__document-link--text'}`,
+              href: site.url(documentPath(item.document, lang)),
+              'data-document-download': site.documentDelivery === 'envelope',
+              rel: 'nofollow',
+              'aria-labelledby': `document-title-${item.id} document-action-${item.id}`,
+              'aria-describedby': item.note ? `document-note-${item.id}` : undefined
+            })}>
+              ${item.preview && html`<img class="publication__document-preview" src="${site.url(`/assets/img/publications/${item.preview.file}`)}" width="${item.preview.width}" height="${item.preview.height}" loading="lazy" decoding="async" alt="">`}
+              <div class="publication__document-copy">
+                <h3 class="publication__document-title" id="document-title-${item.id}">${item.label}</h3>
+                ${item.note && html`<p class="hint" id="document-note-${item.id}">${item.note}</p>`}
+                <span class="publication__document-action" id="document-action-${item.id}">${t.documentDownload} <span class="file-type">${item.local.split('.').at(-1).toUpperCase()}</span>${icon('download')}</span>
+              </div>
+            </a>
           </li>`)}</ul>
           <p class="hint" data-document-status role="status" aria-live="polite"></p>
         </section>`}
         ${body}
-        ${publication.sources.length > 0 && html`<section aria-labelledby="sources">
+        ${publication.sources.length > 0 && html`<section class="publication__sources" aria-labelledby="sources">
           <h2 id="sources" tabindex="-1">${publication.sourcesTitle || 'Источники'}</h2>
           <ol>${publication.sources.map(source => html`<li id="source-${source.id}">${externalLink(t, source.url, source.label)}${source.note && html`<p class="hint">${source.note}</p>`}</li>`)}</ol>
         </section>`}

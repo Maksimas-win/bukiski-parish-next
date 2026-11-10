@@ -21,10 +21,12 @@ test('Editorial publications retain their text, source links and verified docume
   for (const publication of site.publications) {
     const path = publicationPath(publication);
     const html = await readPage(path);
-    assert.match(html, /class="article publication" data-article/);
+    assert.match(html, /class="article publication(?: [^"]+)?" data-article/);
     assert.doesNotMatch(html, /notice--archive|РЕДАКТОРУ|Редакторские замечания/);
-    assert.ok(html.includes(`<h1>${escapeHTML(publication.title)}</h1>`));
+    const headingText = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)?.[1].replace(/<[^>]+>/g, '');
+    assert.equal(headingText, escapeHTML(publication.title));
     const visibleText = html.replace(/<[^>]+>/g, '');
+    assert.ok(visibleText.includes(escapeHTML(publication.lead)));
     for (const block of publication.blocks) assert.ok(visibleText.includes(escapeHTML(block.text.replace(/\*\*/g, ''))), block.text.slice(0, 80));
     for (const source of publication.sources) assert.ok(html.includes(`href="${escapeHTML(source.url)}"`));
     for (const item of publication.documents) {
@@ -56,7 +58,7 @@ test('Temporary announcement expiry leaves publications in the catalog without a
     assert.ok(catalog.articlesFor(entry.language).includes(entry));
     assert.ok(catalog.news().includes(entry));
     assert.ok(!catalog.redirects.some(redirect => redirect.to === entry.target));
-    assert.match(String(publicationPage(future, entry, future.locales[entry.language])), /class="article publication"/);
+    assert.match(String(publicationPage(future, entry, future.locales[entry.language])), /class="article publication(?: [^"]+)?"/);
   }
 });
 
