@@ -29,6 +29,10 @@ export function validateAnnouncement(announcement, languages) {
     for (const url of Object.values(material.urls)) if (!safeExternalURL(url)) throw new Error(`announcement.json: unsafe link in ${material.id}`);
   }
   for (const video of videos) if (!safeExternalURL(video.url)) throw new Error(`announcement.json: unsafe video ${video.id}`);
+  for (const publication of announcement.publicationLinks || []) {
+    if (!languages.includes(publication.language) || !new RegExp(`^/${publication.language}/library/[a-z0-9-]+\\.html$`).test(publication.path || '')) throw new Error('announcement.json: invalid publication path');
+    for (const lang of languages) if (!publication.labels?.[lang]) throw new Error(`announcement.json: missing publication label ${lang}`);
+  }
   for (const lang of languages) {
     const t = texts[lang];
     if (!t) throw new Error(`announcement.json: missing texts for ${lang}`);
@@ -87,6 +91,10 @@ export function announcementPage(site, lang, siteT) {
   <article class="shell prose prose--narrow announcement-page">
     <p class="announcement-page__greeting">${p.greeting}</p>
     ${p.paragraphs.map(text => html`<p>${text}</p>`)}
+    ${(announcement.publicationLinks || []).map(publication => html`<p class="announcement-material">
+      <a href="${site.url(publication.path)}">${publication.labels[lang]}</a>
+      <span class="hint"> (${t.readIn[publication.language]})</span>
+    </p>`)}
 
     <h2>${p.materialsTitle}</h2>
     <ol class="announcement-materials">
