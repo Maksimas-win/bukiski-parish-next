@@ -78,39 +78,10 @@
     }
   },
   "schedule": {
-    "sourceUpdatedAt": "2026-11-14T21:22:03.859Z",
+    "sourceUpdatedAt": "2026-11-15T09:22:12.187Z",
     "maxAgeHours": 48,
     "stale": false,
     "items": [
-      {
-        "id": "svc-791286fb58dd61374dad",
-        "start": "2026-11-15T06:00:00.000Z",
-        "type": "service",
-        "title": {
-          "ru": "Божественная литургия",
-          "lt": "Dieviškoji liturgija",
-          "en": "Divine Liturgy",
-          "pl": "Boska Liturgia",
-          "de": "Göttliche Liturgie",
-          "uk": "Божественна літургія"
-        },
-        "detailsUrl": {
-          "ru": "https://bukiski-hram.net/ru/schedule.html",
-          "lt": "https://bukiski-hram.net/lt/schedule.html",
-          "en": "https://bukiski-hram.net/en/schedule.html",
-          "pl": "https://bukiski-hram.net/pl/schedule.html",
-          "de": "https://bukiski-hram.net/de/schedule.html",
-          "uk": "https://bukiski-hram.net/uk/schedule.html"
-        },
-        "summary": {
-          "ru": "Неделя 24-я по Пятидесятнице",
-          "lt": "24-asis sekmadienis po Sekminių",
-          "en": "24th Sunday after Pentecost",
-          "pl": "24. niedziela po Pięćdziesiątnicy",
-          "de": "24. Sonntag nach Pfingsten",
-          "uk": "Неділя 24-та по П’ятидесятниці"
-        }
-      },
       {
         "id": "svc-eab88af99a0f31947ce2",
         "start": "2026-11-18T06:00:00.000Z",
@@ -412,6 +383,35 @@
           "pl": "https://bukiski-hram.net/pl/schedule.html",
           "de": "https://bukiski-hram.net/de/schedule.html",
           "uk": "https://bukiski-hram.net/uk/schedule.html"
+        }
+      },
+      {
+        "id": "svc-5f8b381166ab426f7b39",
+        "start": "2027-01-06T21:45:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Часы и ночная литургия",
+          "lt": "Valandos ir naktinė liturgija",
+          "en": "Hours and night Liturgy",
+          "pl": "Godziny i nocna Liturgia",
+          "de": "Horen und nächtliche Liturgie",
+          "uk": "Часи і нічна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Рождество Христово",
+          "lt": "Kristaus Gimimas",
+          "en": "Nativity of Christ",
+          "pl": "Narodzenie Chrystusa",
+          "de": "Geburt Christi",
+          "uk": "Різдво Христове"
         }
       }
     ]
