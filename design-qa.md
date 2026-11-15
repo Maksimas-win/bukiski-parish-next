@@ -1,90 +1,132 @@
 # History page — editorial design QA
 
-## Scope and intended design
+## Scope and result
+
+**Passed for the observed Chrome desktop and magnified narrow viewport.**
+No open P1/P2 findings remain. Reviewed on 2026-11-15.
 
 The selected reference is [Herbier Blanc](https://www.getlayers.ai/layer/herbier-blanc).
-This is an adaptation of its paper, crimson, serif typography and layered print
-composition for the parish history, not a reproduction of the perfume storefront.
-The source of truth for historical copy and captions remains `content/history/`
-and the existing parish photo metadata. All six locales are in scope.
+Its paper, crimson, serif typography and layered print composition are adapted
+to the parish history. Historical copy and captions remain sourced from
+`content/history/` and the existing parish photo metadata. All six locales
+(RU/LT/EN/PL/DE/UK) are retained.
 
-## Visual evidence
+## Visual evidence and comparison conditions
 
-- Source visual truth: the public Herbier Blanc preview above.
-- Source capture: `/workspace/shared/history-review/herbier-blanc-reference.jpg`.
-- Source screenshot: 1363 × 936 pixels; desktop browser; light design inside the
-  GetLayers preview shell. The preview is animated, so the captured frame is not a
-  fixed page specification.
-- Implementation URL intended for QA: `/ru/history.html` in the project preview.
-- Implementation screenshot: **not yet available**.
-- Implementation viewport/density normalization: not yet measured.
-- Full-view and focused comparison: pending a working browser-rendered preview.
-
-## Findings
-
-- **P1 — Browser validation is blocked by the Pages environment policy.**
-  The user authorized GitHub sign-in and the test publication, then manually
-  dispatched the existing Pages workflow for `codex/history-editorial-20261115`.
-  Run [43762295291](https://github.com/Maksimas-win/bukiski-parish-next/actions/runs/43762295291)
-  passed the build, tests and artifact upload for `b759f33`. GitHub rejected the
-  deployment before any deploy steps ran: this branch is not allowed to deploy
-  to `github-pages` due to environment protection rules. The environment's
-  selection mode has not been inspected. Changing access rules needs the
-  repository owner's separate authorization; do not remove protections or
-  create an alternative deployment path to bypass them.
-  The local server returns HTTP 200 within its own command environment, but
-  the cloud browser cannot reach the local preview. Running outside the isolated
-  command environment was rejected by the environment's approval policy.
-  Do not report visual QA as passed or publish the production change until the
-  rendered page has been inspected.
+- Reference: `/workspace/shared/history-review/herbier-blanc-reference.jpg`,
+  1363 × 936 pixels, desktop browser, DPR 1, light design inside the GetLayers
+  preview shell. The reference is animated; the frame is a design direction,
+  not a fixed page specification.
+- Implementation:
+  [RU preview](https://maksimas-win.github.io/bukiski-parish-next/ru/history.html)
+  and [LT preview](https://maksimas-win.github.io/bukiski-parish-next/lt/history.html).
+- Desktop CSS viewport: 1363 × 936, DPR 1. Viewport screenshot files are
+  1348 × 926 pixels after the capture surface excludes browser/scrollbar edges.
+  Reference and implementation were reviewed together with this difference
+  accounted for.
+- Narrow reflow: normal Chrome zoom at 400%, CSS viewport 340 × 234, DPR 4.
+  This is a magnified desktop browser, not a physical phone or device emulator.
+  Document scroll width equalled client width; no horizontal overflow.
+- Desktop evidence: `history-desktop-cover.jpg`,
+  `history-desktop-reading.jpg`, `history-lightbox.jpg`,
+  `history-dark-large.jpg`, `history-high-contrast.jpg`,
+  `history-study.jpg`, `history-study-page.jpg`, `history-lt-desktop.jpg`.
+- Narrow evidence: `history-narrow-fixed.jpg`,
+  `history-narrow-navigation-fixed.jpg`, `history-narrow-photos.jpg`.
+  These files are in `/workspace/shared/history-review/`.
+  The earlier `history-narrow-navigation.jpg` records the pre-fix defect.
+  Offscreen full-page capture artefacts were excluded from image-loading claims;
+  the narrow photographs were inspected in the visible viewport.
 
 ## Required fidelity surfaces
 
-These are implementation intentions, not claims of visual verification:
+| Surface | Observed result |
+| --- | --- |
+| Typography | Existing local Source Serif 4 and Source Sans 3 produce a crimson serif title and readable editorial body. Desktop wrapping and enlarged text were inspected; UI text remains at least 0.8125rem in the stylesheet. |
+| Layout rhythm | Split cover, layered real photographs, nine numbered chapters, desktop contents, compact disclosure, chronology and separate research card form a coherent reading hierarchy. Narrow reflow and anchor positions pass after the fix below. |
+| Colors | Paper and burgundy light theme inspected. Dark mode with enlarged text uses the existing dark background and gold heading tokens. High contrast with enlarged text remains readable and contained. |
+| Images | Modern church, restoration and family archive images load. The cover composition was inspected at desktop and narrow width. Archive lightbox preserves the full historical photograph and its caption. |
+| Copy | Existing content JSON is unchanged. Independent review found no lost paragraphs, headings, dates, source links or lightbox links in any of the six generated history pages. Nine chapters, chronology, five sources and Ivanova's separate study are retained. |
 
-- **Typography:** existing local Source Serif 4 and Source Sans 3; large crimson
-  heading; editorial body; UI text no smaller than 0.8125rem. Browser wrapping,
-  loaded fonts, increased text size and mobile measure still need inspection.
-- **Layout rhythm:** split cover, two real photographs, numbered chapters,
-  sticky desktop contents, compact mobile disclosure and a vertical chronology.
-  Check 1366px desktop and 360/390/430px mobile for overflow and anchor offsets.
-- **Colors:** existing theme tokens; paper tint and accent in light mode, existing
-  dark/high-contrast tokens in other modes. Verify the rendered states.
-- **Images:** existing church, restoration and Bozheryanov family photographs;
-  responsive cover sources; original archive images and captions. Inspect the
-  cover crop and full-frame archive images in the browser.
-- **Copy:** existing history JSON is unchanged. Nine chapters, chronology,
-  citations, five source records and the separate Ivanova study are retained.
+The reference-to-implementation comparison found no P1/P2 visual mismatch.
+The parish adaptation intentionally uses historical photographs and long-form
+reading rather than the reference's perfume catalogue content.
 
-## Verification completed
+## Browser interactions verified
 
-- `npm run check`: 139 tests passed, 0 failed, 0 skipped.
-- `DOCUMENT_DELIVERY=direct npm run check`: 139 tests passed, 0 failed, 0 skipped.
-- Both builds: 336 pages from 127 source records.
+- Read link and chapter links preserve native URL hashes.
+- Desktop chapter navigation updates the current chapter and reading progress;
+  heading focus moves to the destination.
+- Native Back returns to the preceding chapter anchor.
+- The compact contents disclosure closes before anchor navigation.
+- At 400% zoom, selecting chapter 05 sets `#twentieth`, focuses
+  `twentieth-title`, marks chapter 05 current and reports reading progress 47.
+- Reloading the direct `#twentieth` URL leaves the disclosure collapsed and the
+  destination heading visible.
+- Archive lightbox opens, focuses its close button, closes with Escape and
+  restores focus to its opening archive link.
+- Dark theme, enlarged text and high-contrast enlarged text were inspected.
+- The separate Ivanova research link opens the existing study page with its
+  title and editorial note intact; its shared editorial styles are preserved.
+- Language navigation exposes all six history URLs. Switching from RU to LT
+  loads the Lithuanian history with one main title, nine chapters and no
+  horizontal overflow.
+- Browser error logs contain no site errors. The observed metadata errors came
+  from the browser extension and were excluded by their chrome-extension URL.
+
+## Findings and corrective iteration
+
+### Resolved: short-viewport anchor placement
+
+At 400% zoom, global scroll padding (88px) was added to the history anchor
+clearance (168px), placing the chapter start at 256px in a 234px-high viewport.
+The destination title was below the viewport and the current-chapter indicator
+could still show the preceding chapter.
+
+Commit `6ee8e38` scopes root scroll padding to zero on the history page.
+At the existing header's short-viewport breakpoint (520px height), anchor
+clearance becomes 1rem and the compact contents scrolls with the document.
+After publishing this fix, the chapter start is at 16px and chapter 05's title
+at 57px. Click navigation and direct-link reload both passed on the published
+build, with the correct current chapter.
+
+### Resolved: test publication access
+
+The first preview deployment was rejected because the feature branch was not
+in the existing github-pages environment's selected branch list. With the
+owner's explicit authorization, the exact branch
+`codex/history-editorial-20261115` was added while retaining `main` and the
+other environment settings. No workflow or schedule changes were made.
+
+The final test publication,
+[Pages run 43764862500](https://github.com/Maksimas-win/bukiski-parish-next/actions/runs/43764862500),
+passed build, deploy and verify-publication for `6ee8e38`.
+The public preview's asset version is `13f2a57703`; the published CSS matches
+the locally built CSS and includes the anchor fix.
+
+## Automated and source verification
+
+- `npm run check` after the CSS fix: 139 passed, 0 failed, 0 skipped.
+- `DOCUMENT_DELIVERY=direct npm run check`: 139 passed, 0 failed, 0 skipped
+  on the initial executable implementation, before the CSS-only anchor fix.
+- Both build modes generated 336 pages from 127 source records.
 - Generated-file drift gate for `deploy/` and migration CSV/JSON: passed.
 - `git diff --check`: passed.
-- GitHub Actions `Verify source and export site`, run 43755536696: passed for
-  implementation commit `0f6c0d9`.
-- GitHub Pages test build, run 43762295291: build, tests and artifact upload
-  passed for `b759f33`; deployment rejected by the environment's branch policy.
-- Independent source review checked all six generated history pages and found no
-  lost paragraphs, headings, dates, source links or lightbox links.
-- Review restored the shared `.story-editorial` rules used by the separate study
-  and added keyboard-focus support to its history-page heading.
+- Required GitHub Actions
+  [verify run 43764622650](https://github.com/Maksimas-win/bukiski-parish-next/actions/runs/43764622650)
+  passed for `6ee8e38`.
+- All six public preview history URLs returned HTTP 200 with one h1, nine
+  chapters, nine contents links and the expected preview path prefix.
+- All 18 checked stylesheet, script, font and image resources returned HTTP 200
+  with the expected MIME types.
 
-## Interaction checks still required in the browser
+## Scope limits
 
-1. Contents links, current chapter, reading progress and native Back navigation.
-2. Mobile disclosure collapse before anchor scrolling; direct chapter links.
-3. Archive lightbox, keyboard dismissal and return of focus.
-4. Light/dark theme, increased type size and reduced-motion setting.
-5. Language navigation, image loading, horizontal overflow and console errors.
-
-## Comparison history
-
-No browser comparison iteration has been completed. Preview troubleshooting and
-automated tests are not a substitute for visual evidence.
+Reduced-motion behavior was checked in source: motion is enabled only under
+`prefers-reduced-motion: no-preference`. Browser emulation of reduced motion
+was not performed. Physical Android/iOS devices and Safari were not tested.
+The narrow-browser observations above describe the actual tested conditions.
 
 ## Final result
 
-final result: blocked
+final result: passed
