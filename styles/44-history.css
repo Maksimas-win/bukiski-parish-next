@@ -1,5 +1,8 @@
 /* An editorial reading experience: parish photographs, paper and restrained wine.
    Colours inherit the site's light, dark and high-contrast reading preferences. */
+/* History anchors include their own header and contents clearance; adding the
+   global scroll padding would push destinations below a magnified viewport. */
+html:has(.history-experience) { scroll-padding-top: 0; }
 .history-experience { background: var(--bg); }
 .history-cover {
   padding-block: clamp(2.5rem, 5vw, 5rem) clamp(3rem, 6vw, 5.5rem);
@@ -296,6 +299,17 @@
   .history-study__image { padding: 1rem; }
   .history-study__text { padding: 1.5rem; }
   .history-back { margin-left: 0; }
+}
+/* Match the header's short-viewport breakpoint: it scrolls away at this height,
+   and the compact contents must do the same so that anchor titles stay visible. */
+@media (max-height: 520px) {
+  .history-narrative__chapter,
+  .history-experience h2[id],
+  .history-sources li,
+  #history-top { scroll-margin-top: 1rem; }
+}
+@media (max-width: 60rem) and (max-height: 520px) {
+  .js .history-contents { position: static; }
 }
 @media print {
   .history-cover { padding: 0 0 1.5rem; border-bottom: 1px solid; background: none; }
