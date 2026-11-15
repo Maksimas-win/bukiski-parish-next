@@ -2,12 +2,12 @@
 // this entry point wires up controls and loads a feature module only on the
 // pages that contain its markup.
 
-import { initCopyButtons } from './ui/copy.js?v=13f2a57703';
-import { initLanguageMenu, initMenu } from './ui/menu.js?v=13f2a57703';
-import { initPreferences } from './ui/preferences.js?v=13f2a57703';
-import { initTilt } from './ui/tilt.js?v=13f2a57703';
-import { initAnnouncement } from './ui/announcement.js?v=13f2a57703';
-import { initThanks } from './ui/thanks.js?v=13f2a57703';
+import { initCopyButtons } from './ui/copy.js?v=777c1a0b6e';
+import { initLanguageMenu, initMenu } from './ui/menu.js?v=777c1a0b6e';
+import { initPreferences } from './ui/preferences.js?v=777c1a0b6e';
+import { initTilt } from './ui/tilt.js?v=777c1a0b6e';
+import { initAnnouncement } from './ui/announcement.js?v=777c1a0b6e';
+import { initThanks } from './ui/thanks.js?v=777c1a0b6e';
 
 document.documentElement.classList.add('js');
 
@@ -20,16 +20,16 @@ initAnnouncement();
 initThanks();
 
 const features = [
-  ['[data-schedule]', () => import('./features/schedule.js?v=13f2a57703')],
-  ['[data-library]', () => import('./features/library.js?v=13f2a57703')],
-  ['[data-notes]', () => import('./features/notes.js?v=13f2a57703')],
-  ['[data-article]', () => import('./features/article.js?v=13f2a57703')],
-  ['[data-story]', () => import('./features/story.js?v=13f2a57703')],
-  ['[data-history]', () => import('./features/history.js?v=13f2a57703')],
-  ['[data-lightbox]', () => import('./features/lightbox.js?v=13f2a57703')],
-  ['[data-gpm]', () => import('./features/gpm.js?v=13f2a57703')],
-  ['[data-home-gpm]', () => import('./features/home-gpm.js?v=13f2a57703')],
-  ['[data-document-download]', () => import('./document-downloads.js?v=13f2a57703')]
+  ['[data-schedule]', () => import('./features/schedule.js?v=777c1a0b6e')],
+  ['[data-library]', () => import('./features/library.js?v=777c1a0b6e')],
+  ['[data-notes]', () => import('./features/notes.js?v=777c1a0b6e')],
+  ['[data-article]', () => import('./features/article.js?v=777c1a0b6e')],
+  ['[data-story]', () => import('./features/story.js?v=777c1a0b6e')],
+  ['[data-history]', () => import('./features/history.js?v=777c1a0b6e')],
+  ['[data-lightbox]', () => import('./features/lightbox.js?v=777c1a0b6e')],
+  ['[data-gpm]', () => import('./features/gpm.js?v=777c1a0b6e')],
+  ['[data-home-gpm]', () => import('./features/home-gpm.js?v=777c1a0b6e')],
+  ['[data-document-download]', () => import('./document-downloads.js?v=777c1a0b6e')]
 ];
 
 for (const [selector, load] of features) {

@@ -3,9 +3,9 @@
 // form service (data-notes-endpoint). They are never stored in the browser,
 // logged or placed in a URL, and they are erased when the page is left.
 
-import { MAX_NAMES, MAX_NAME_LENGTH, validateNames } from '../domain.js?v=13f2a57703';
-import { $, $$, show, create, fill, downloadText } from '../ui/dom.js?v=13f2a57703';
-import { toast } from '../ui/toast.js?v=13f2a57703';
+import { MAX_NAMES, MAX_NAME_LENGTH, validateNames } from '../domain.js?v=777c1a0b6e';
+import { $, $$, show, create, fill, downloadText } from '../ui/dom.js?v=777c1a0b6e';
+import { toast } from '../ui/toast.js?v=777c1a0b6e';
 
 export function init() {
   const root = $('[data-notes]');
@@ -25,12 +25,22 @@ export function init() {
   const sendButton = $('[data-note-send]', root);
   const consent = $('[data-note-consent]', root);
   const message = $('[data-note-message]', root);
+  const controls = $$('input, textarea, select', form);
   const endpoint = labels.notesEndpoint;
   let note = null;
   let sending = false;
+  let activeRequest = null;
 
   const typeLabel = () => (types.find(input => input.checked).value === 'departed' ? labels.labelDeparted : labels.labelLiving);
   const noteText = () => `${note.title}\n\n${note.names.join('\n')}\n\n${labels.parishName}`;
+
+  const setSending = value => {
+    sending = value;
+    // The response belongs to this exact draft; editing it during the request
+    // would make the success message refer to different names or contact data.
+    for (const control of controls) control.disabled = value;
+    if (!value) sendButton?.removeAttribute('aria-busy');
+  };
 
   function update() {
     const { names, errors, tooMany } = validateNames(textarea.value);
@@ -56,9 +66,13 @@ export function init() {
   }
 
   const erase = () => {
+    activeRequest?.abort();
+    activeRequest = null;
+    setSending(false);
     form.reset();
     textarea.value = '';
     update();
+    say('');
     document.body.classList.remove('is-printing-note');
   };
 
@@ -97,7 +111,10 @@ export function init() {
       form.elements.email.reportValidity();
       return;
     }
-    sending = true;
+    const request = new AbortController();
+    activeRequest = request;
+    const timeout = setTimeout(() => request.abort(), 20000);
+    setSending(true);
     sendButton.disabled = true;
     sendButton.setAttribute('aria-busy', 'true');
     say(labels.labelSending);
@@ -108,19 +125,24 @@ export function init() {
         referrerPolicy: 'strict-origin-when-cross-origin',
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
         body: JSON.stringify(payload()),
-        signal: AbortSignal.timeout(20000)
+        signal: request.signal
       });
+      // Clearing the form or leaving the page retires this request. Its late
+      // response must never erase a new draft or change a newer submission.
+      if (activeRequest !== request) return;
       if (!response.ok) throw new Error(`Form service answered ${response.status}`);
-      sending = false;
       erase();
       say(labels.labelSent, 'success');
       toast(labels.labelSent);
     } catch {
-      sending = false;
-      say(labels.labelSendError, 'error');
+      if (activeRequest === request) say(labels.labelSendError, 'error');
     } finally {
-      sendButton.removeAttribute('aria-busy');
-      update();
+      clearTimeout(timeout);
+      if (activeRequest === request) {
+        activeRequest = null;
+        setSending(false);
+        update();
+      }
     }
   }
 
@@ -162,7 +184,6 @@ export function init() {
 
   $('[data-note-clear]', root).addEventListener('click', () => {
     erase();
-    say('');
     toast(labels.labelCleared);
     textarea.focus();
   });

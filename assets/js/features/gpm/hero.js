@@ -4,7 +4,7 @@
 // and the visitor has not asked for comfortable reading. Nothing here depends
 // on scrolling: the figure turns slowly by itself and follows a fine pointer.
 
-import { MESH } from './percent3d-mesh.js?v=13f2a57703';
+import { MESH } from './percent3d-mesh.js?v=777c1a0b6e';
 
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const smooth = (a, b, x) => { const t = clamp((x - a) / (b - a)); return t * t * (3 - 2 * t); };
