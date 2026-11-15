@@ -22,13 +22,19 @@ and the existing parish photo metadata. All six locales are in scope.
 
 ## Findings
 
-- **P1 — Browser validation is blocked by preview access.** The build succeeds,
-  but the local browser route returns an upstream connection error. A request to
-  run the preview outside the isolated command environment was rejected by the
-  environment's approval policy. GitHub Pages offers an existing test deployment
-  workflow, but launching it requires an authenticated workflow-dispatch path.
-  The automatic approval review also rejected the GitHub sign-in request because
-  it requires the user's explicit authorization for account authentication.
+- **P1 — Browser validation is blocked by the Pages environment policy.**
+  The user authorized GitHub sign-in and the test publication, then manually
+  dispatched the existing Pages workflow for `codex/history-editorial-20261115`.
+  Run [43762295291](https://github.com/Maksimas-win/bukiski-parish-next/actions/runs/43762295291)
+  passed the build, tests and artifact upload for `b759f33`. GitHub rejected the
+  deployment before any deploy steps ran: this branch is not allowed to deploy
+  to `github-pages` due to environment protection rules. The environment's
+  selection mode has not been inspected. Changing access rules needs the
+  repository owner's separate authorization; do not remove protections or
+  create an alternative deployment path to bypass them.
+  The local server returns HTTP 200 within its own command environment, but
+  the cloud browser cannot reach the local preview. Running outside the isolated
+  command environment was rejected by the environment's approval policy.
   Do not report visual QA as passed or publish the production change until the
   rendered page has been inspected.
 
@@ -59,6 +65,8 @@ These are implementation intentions, not claims of visual verification:
 - `git diff --check`: passed.
 - GitHub Actions `Verify source and export site`, run 43755536696: passed for
   implementation commit `0f6c0d9`.
+- GitHub Pages test build, run 43762295291: build, tests and artifact upload
+  passed for `b759f33`; deployment rejected by the environment's branch policy.
 - Independent source review checked all six generated history pages and found no
   lost paragraphs, headings, dates, source links or lightbox links.
 - Review restored the shared `.story-editorial` rules used by the separate study
