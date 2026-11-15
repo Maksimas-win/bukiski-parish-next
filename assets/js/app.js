@@ -25,6 +25,7 @@ const features = [
   ['[data-notes]', () => import('./features/notes.js')],
   ['[data-article]', () => import('./features/article.js')],
   ['[data-story]', () => import('./features/story.js')],
+  ['[data-history]', () => import('./features/history.js')],
   ['[data-lightbox]', () => import('./features/lightbox.js')],
   ['[data-gpm]', () => import('./features/gpm.js')],
   ['[data-home-gpm]', () => import('./features/home-gpm.js')],
