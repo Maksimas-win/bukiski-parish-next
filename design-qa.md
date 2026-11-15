@@ -12,7 +12,7 @@ and the existing parish photo metadata. All six locales are in scope.
 
 - Source visual truth: the public Herbier Blanc preview above.
 - Source capture: `/workspace/shared/history-review/herbier-blanc-reference.jpg`.
-- Source screenshot: 1366 × 940 pixels; desktop browser; light design inside the
+- Source screenshot: 1363 × 936 pixels; desktop browser; light design inside the
   GetLayers preview shell. The preview is animated, so the captured frame is not a
   fixed page specification.
 - Implementation URL intended for QA: `/ru/history.html` in the project preview.
@@ -27,6 +27,8 @@ and the existing parish photo metadata. All six locales are in scope.
   run the preview outside the isolated command environment was rejected by the
   environment's approval policy. GitHub Pages offers an existing test deployment
   workflow, but launching it requires an authenticated workflow-dispatch path.
+  The automatic approval review also rejected the GitHub sign-in request because
+  it requires the user's explicit authorization for account authentication.
   Do not report visual QA as passed or publish the production change until the
   rendered page has been inspected.
 
@@ -55,6 +57,8 @@ These are implementation intentions, not claims of visual verification:
 - Both builds: 336 pages from 127 source records.
 - Generated-file drift gate for `deploy/` and migration CSV/JSON: passed.
 - `git diff --check`: passed.
+- GitHub Actions `Verify source and export site`, run 43755536696: passed for
+  implementation commit `0f6c0d9`.
 - Independent source review checked all six generated history pages and found no
   lost paragraphs, headings, dates, source links or lightbox links.
 - Review restored the shared `.story-editorial` rules used by the separate study
