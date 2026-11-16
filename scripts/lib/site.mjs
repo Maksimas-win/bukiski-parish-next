@@ -8,6 +8,7 @@ import { localizeSchedule } from './liturgical.mjs';
 import { mergeAdditions } from './additions.mjs';
 import { validateAnnouncement } from './announcement.mjs';
 import { validateThanks } from './thanks.mjs';
+import { validateSpotlight } from './spotlight.mjs';
 import { publicationPath, validatePublications } from './publications.mjs';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
@@ -61,6 +62,8 @@ export async function loadSite(env = process.env) {
   }
   const thanks = await readJSON('thanks.json');
   validateThanks(thanks, settings.locales);
+  const spotlight = await readJSON('spotlight.json');
+  validateSpotlight(spotlight, publications, settings.locales);
 
   if (settings.timezone !== TIMEZONE) throw new Error(`settings.timezone must be ${TIMEZONE}`);
   if (settings.locales.join() !== SITE_LANGUAGES.join()) throw new Error('settings.locales must match the supported site languages');
@@ -117,6 +120,8 @@ export async function loadSite(env = process.env) {
     announcement,
     /** The thank-you dialog; see content/thanks.json. */
     thanks,
+    /** The home spotlight of one publication; see content/spotlight.json. */
+    spotlight,
     template,
     schedule,
     origin,

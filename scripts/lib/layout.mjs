@@ -7,6 +7,7 @@ import { structuredData } from './structured-data.mjs';
 import { externalLink, siteLink } from './components.mjs';
 import { announcementStrip } from './announcement.mjs';
 import { thanksDialog, thanksFooterLink } from './thanks.mjs';
+import { spotlightCard } from './spotlight.mjs';
 
 /**
  * Reviewed opt-in services: the parish assistant and the existing prayer form.
@@ -112,6 +113,7 @@ function dialogs(site, t, uiLocale, pageId) {
     <button type="button" class="button button--quiet" data-preferences-reset>${t.reset}</button>
   </dialog>
   ${thanksDialog(site, uiLocale, pageId)}
+  ${spotlightCard(site, uiLocale, pageId)}
   <div class="toast-region" data-toasts role="status" aria-live="polite" lang="${uiLocale}"></div>`;
 }
 

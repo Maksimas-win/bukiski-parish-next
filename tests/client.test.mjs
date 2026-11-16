@@ -23,9 +23,14 @@ test('No script builds markup from strings, evaluates code or contacts third par
   }
 });
 
-test('Only reading preferences and the day the thank-you dialog last opened are stored in the browser', () => {
+test('Only reading preferences, the day the thank-you dialog last opened and the session flag of the home spotlight are stored in the browser', () => {
   const writers = [...sources].filter(([, source]) => /localStorage\.setItem|sessionStorage|indexedDB|document\.cookie/.test(source)).map(([name]) => name).sort();
-  assert.deepEqual(writers, ['ui/preferences.js', 'ui/thanks.js']);
+  assert.deepEqual(writers, ['ui/preferences.js', 'ui/spotlight.js', 'ui/thanks.js']);
+  // The spotlight stores one session flag under its own prefix and never touches localStorage.
+  const spotlight = sources.get('ui/spotlight.js');
+  assert.equal((spotlight.match(/sessionStorage\.setItem/g) || []).length, 1);
+  assert.match(spotlight, /sessionStorage\.setItem\(STORAGE_PREFIX \+ id, '1'\)/);
+  assert.doesNotMatch(spotlight, /localStorage|indexedDB|document\.cookie/);
   assert.equal((sources.get('ui/preferences.js').match(/localStorage\.setItem/g) || []).length, 1);
   // The thank-you dialog stores one timestamp under its own key and nothing else.
   const thanks = sources.get('ui/thanks.js');

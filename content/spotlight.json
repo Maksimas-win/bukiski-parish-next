@@ -1,0 +1,16 @@
+{
+  "_comment": "Home spotlight: a compact card at the bottom of the home page that invites the visitor to open one publication. It appears once per browser session (sessionStorage), after `delayMilliseconds`, only on the home page of a language that has texts here, and never on the publication itself. Set enabled to false to remove it from the build.",
+  "enabled": true,
+  "publication": "kogo-boyalsya-kain",
+  "delayMilliseconds": 1200,
+  "texts": {
+    "ru": {
+      "label": "Анонс статьи",
+      "rubric": "Читаем Писание",
+      "title": "Кого боялся Каин?",
+      "text": "О первом убийстве, знамении защиты и милости Божией.",
+      "read": "Читать статью",
+      "close": "Закрыть анонс"
+    }
+  }
+}

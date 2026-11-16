@@ -20,6 +20,7 @@ export function validatePublications(publications, languages, documents) {
     if (paths.has(path)) fail('duplicate path');
     paths.add(path);
     for (const key of ['title', 'description', 'lead', 'author']) if (!hasText(publication[key])) fail(`missing ${key}`);
+    if (publication.rubric !== undefined && !hasText(publication.rubric)) fail('empty rubric');
     const date = publication.publishedAt;
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date || '') || !Number.isFinite(Date.parse(date)) || new Date(date).toISOString().slice(0, 10) !== date) fail('invalid publication date');
     if (!Array.isArray(publication.sources) || !Array.isArray(publication.documents)) fail('sources and documents must be arrays');

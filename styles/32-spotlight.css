@@ -1,0 +1,117 @@
+/* Home spotlight ------------------------------------------------------------
+   A compact card at the foot of the home page announcing one publication
+   (content/spotlight.json). Fixed, so it never shifts the page; it sits below
+   dialogs, never traps focus and is hidden until the browser shows it once per
+   session. Colours are existing tokens, so both themes keep their contrast. */
+
+/* Bottom left: the parish assistant launcher keeps the bottom right corner. */
+.spotlight {
+  position: fixed;
+  left: max(1.25rem, env(safe-area-inset-left, 0px));
+  bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+  width: min(26rem, 100vw - 2.5rem - 7rem);
+}
+
+.spotlight[hidden] {
+  display: none;
+}
+
+.spotlight__card {
+  position: relative;
+  padding: 1.1rem 3.25rem 1.15rem 1.25rem;
+  border: 1px solid var(--line-strong);
+  border-inline-start: 4px solid var(--accent);
+  border-radius: var(--radius-l);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  animation: spotlight-rise 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes spotlight-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.spotlight .spotlight__rubric {
+  margin: 0 0 0.4rem;
+}
+
+.spotlight__title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.spotlight__text {
+  margin: 0.4rem 0 0.9rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.spotlight .spotlight__read {
+  min-height: 2.75rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.9375rem;
+}
+
+.spotlight .spotlight__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: var(--ink-soft);
+}
+
+/* Phones: the card spans the width and stays above the assistant launcher
+   (64px button, 22px from the bottom edge or the safe area). */
+@media (max-width: 47.999rem) {
+  .spotlight {
+    right: 0.75rem;
+    left: 0.75rem;
+    bottom: calc(max(22px, env(safe-area-inset-bottom, 0px) + 12px) + 64px + 14px);
+    width: auto;
+  }
+
+  .spotlight__card {
+    padding: 1rem 3rem 1rem 1.1rem;
+  }
+
+  .spotlight__title {
+    font-size: 1.3rem;
+  }
+
+  .spotlight .spotlight__read {
+    width: 100%;
+  }
+}
+
+html.high-contrast .spotlight__card {
+  border-color: var(--ink);
+  box-shadow: none;
+}
+
+@media (forced-colors: active) {
+  .spotlight__card {
+    border: 2px solid CanvasText;
+    background: Canvas;
+    color: CanvasText;
+  }
+}
+
+@media print {
+  .spotlight {
+    display: none;
+  }
+}

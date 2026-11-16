@@ -33,14 +33,16 @@ test('Editorial publications retain their text, source links and verified docume
       const document = site.documents.find(document => document.local === item.local);
       assert.ok(html.includes(`href="${info.basePath}${documentPath(document, publication.language)}"`));
     }
-    if (info.documentDelivery === 'envelope') assert.match(html, /data-document-download rel="nofollow"/);
+    if (info.documentDelivery === 'envelope' && publication.documents.length) assert.match(html, /data-document-download rel="nofollow"/);
     assert.ok(sitemap.includes(path));
     assert.ok(search.some(entry => entry.u === path && entry.x.includes(publication.blocks[0].text.replace(/\*\*/g, ''))));
     for (const lang of site.languages.filter(lang => lang !== publication.language)) assert.ok(!html.includes(`/${lang}/library/${publication.slug}.html`), 'no invented translation URL');
     for (const lang of site.languages) {
       assert.ok((await readPage(`/${lang}/library.html`)).includes(`href="${info.basePath}${path}"`));
       assert.ok((await readPage(`/${lang}/news.html`)).includes(`href="${info.basePath}${path}"`));
-      if (announcementActive(site.announcement, Date.parse(info.generatedAt))) {
+      // Only publications the announcement names are linked from its page; other articles stay independent of it.
+      const linked = (site.announcement.publicationLinks || []).some(link => link.path === path);
+      if (linked && announcementActive(site.announcement, Date.parse(info.generatedAt))) {
         assert.ok((await readPage(`/${lang}/${site.announcement.slug}.html`)).includes(`href="${info.basePath}${path}"`));
       }
     }
@@ -63,7 +65,9 @@ test('Temporary announcement expiry leaves publications in the catalog without a
 });
 
 test('Publication validation rejects unsafe destinations, invalid dates and broken citations', () => {
-  const original = site.publications[0];
+  // The checks mutate a publication that cites both a source and a document.
+  const original = site.publications.find(publication => publication.sources.length && publication.documents.length);
+  assert.ok(original, 'a publication with sources and documents exists');
   for (const mutate of [
     publication => { publication.slug = '../escape'; },
     publication => { publication.publishedAt = '2026-02-30'; },
