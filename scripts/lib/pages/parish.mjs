@@ -6,6 +6,7 @@ import { icon, emblem } from '../icons.mjs';
 import { formatDate } from '../site.mjs';
 import { churchImage, copyButton, externalLink, pageHead, phoneLink, siteLink, socialCards } from '../components.mjs';
 import { registrationCard } from '../parish-media.mjs';
+import { ANALYTICS_TEXT } from '../analytics.mjs';
 
 /** «Сверено с приходским сайтом: 10 октября 2026 г.» */
 const reviewed = (site, lang, t, sourceUrl) => html`<p class="hint meta-row"><span>${t.checked}: <time datetime="${site.settings.reviewedOn}">${formatDate(lang, `${site.settings.reviewedOn}T12:00:00Z`, { dateStyle: 'long' })}</time></span>${externalLink(t, sourceUrl, t.source)}</p>`;
@@ -161,10 +162,14 @@ export function supportPage(site, lang, t) {
 
 export function privacyPage(site, lang, t) {
   const onGitHubPages = new URL(site.origin).hostname.endsWith('.github.io');
+  const analytics = ANALYTICS_TEXT[lang];
   return html`${pageHead({ title: t.privacy, intro: t.privacyIntro, site, page: 'privacy', t })}
   <section class="shell prose prose--narrow">
     ${onGitHubPages && html`<p>${t.githubHosting} ${externalLink(t, site.settings.links.githubPrivacy, t.hostingPolicy)}</p>`}
     ${t.privacyItems.map(([heading, text]) => html`<h2>${heading}</h2><p>${text}</p>`)}
+    <h2 id="analytics-policy">Google Analytics 4</h2>
+    <p>${analytics.policy}</p>
+    <p>${externalLink(t, 'https://policies.google.com/privacy', 'Google Privacy Policy')}</p>
     <h2>${WEB_UI[lang].ai} · ${WEB_UI[lang].request}</h2>
     <p>${WEB_UI[lang].policy}</p>
   </section>`;

@@ -9,8 +9,10 @@ import { initTilt } from './ui/tilt.js';
 import { initAnnouncement } from './ui/announcement.js';
 import { initThanks } from './ui/thanks.js';
 import { initSpotlight } from './ui/spotlight.js';
+import { initAnalytics } from './analytics.js';
 
 document.documentElement.classList.add('js');
+initAnalytics();
 
 initMenu();
 initLanguageMenu();
