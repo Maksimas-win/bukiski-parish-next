@@ -12,7 +12,7 @@
 - «Настройки аналитики» в подвале открывают выбор заново. Отказ мгновенно ставит `ga-disable`, очищает очередь и два cookies `_ga`/`_ga_RK3WMMM3V2`, удаляет script и перезагружает страницу. Отзыв в другой вкладке также останавливает учёт. Global Privacy Control запрещает запуск.
 - Google signals и рекламные согласия отключены. Не используются User-ID, адрес электронной почты, Measurement Protocol или междоменное связывание.
 - Адрес страницы берётся из canonical без query/hash; referrer ограничен origin. В payload нет имён, сообщений, содержимого форм, поисковых фраз, произвольных URL и названий ссылок. Параметры событий проходят закрытый список типов и значений.
-- Разрешены только Google-origin `www.googletagmanager.com` для скрипта и `www.google-analytics.com`, `region1.google-analytics.com` для измерения. CSP остаётся без `unsafe-inline`, `unsafe-eval` и wildcard-источников.
+- Разрешены только Google-origin `www.googletagmanager.com` для скрипта и конфигурации, `www.google-analytics.com`, `region1.google-analytics.com`, `analytics.google.com`, `region1.analytics.google.com` и `www.google.com` для конфигурации/измерения. Это явный список семейств коллекторов GA4 вместо широких wildcard из [руководства Google по CSP](https://developers.google.com/tag-platform/security/guides/csp). CSP остаётся без `unsafe-inline`, `unsafe-eval` и wildcard-источников; рекламные домены DoubleClick не добавляются.
 
 ## События
 
