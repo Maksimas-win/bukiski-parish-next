@@ -1,0 +1,152 @@
+// Permanent editorial articles. Their dates and sources come from the parish;
+// they are never labelled as imported or removed with a temporary announcement.
+
+import { documentPath } from '../../../assets/js/document-data.js';
+import { html, attrs } from '../html.mjs';
+import { formatDate } from '../site.mjs';
+import { icon } from '../icons.mjs';
+import { externalLink, siteLink } from '../components.mjs';
+import { LANGUAGE_NAMES } from './library.mjs';
+
+// Previews are rendered from the public first pages; private signature sheets
+// are never part of the website's image or document assets.
+const DOCUMENT_PREVIEWS = new Map([
+  ['assets/documents/bukiskis-kreipimasis-2026-11-08.pdf', { file: 'bukiskis-appeal-2026-11-08.webp', width: 480, height: 679 }],
+  ['assets/documents/seimas-atsakymas-2026-11-10.pdf', { file: 'seimas-reply-2026-11-10.webp', width: 480, height: 679 }]
+]);
+
+/** Keep the complete title, giving its continuation a quieter visual weight. */
+function publicationTitle(title) {
+  const divider = title.indexOf(':');
+  return divider < 0 ? title : html`<span class="publication__title-main">${title.slice(0, divider + 1)}</span> <span class="publication__title-detail">${title.slice(divider + 1).trimStart()}</span>`;
+}
+
+/** Keep official identifiers together without altering their original text. */
+function referenceText(text) {
+  return text.split(/(№[ \u00a0]+(?:S-\d{4}-\d+|\d+(?:-\d+)*)|XVP-\d+|S-\d{4}-\d+|\d{6}-\d+)/g)
+    .map((piece, index) => index % 2 ? html`<span class="publication__reference">${piece}</span>` : piece);
+}
+
+/** Only emphasis is accepted as inline markup; every text fragment is escaped. */
+function emphasizedText(text) {
+  const pieces = text.split(/(\*\*[^*]+\*\*)/g);
+  return pieces.map(piece => piece.startsWith('**') && piece.endsWith('**')
+    ? html`<strong>${referenceText(piece.slice(2, -2))}</strong>` : referenceText(piece));
+}
+
+function articleBlocks(publication) {
+  const headings = [];
+  const body = [];
+  const references = new Map([
+    ...publication.documents.map(item => [item.id, { anchor: `document-${item.id}`, label: item.label }]),
+    ...publication.sources.map((source, index) => [source.id, { anchor: `source-${source.id}`, label: `${index + 1}. ${source.label}`, number: index + 1 }])
+  ]);
+  const text = block => html`${emphasizedText(block.text)}${(block.refs || []).map(id => {
+    const ref = references.get(id);
+    return html` <a class="publication__citation" href="#${ref.anchor}" aria-label="${ref.label}">[${ref.number || 'PDF'}]</a>`;
+  })}`;
+  let index = 0;
+  while (index < publication.blocks.length) {
+    const block = publication.blocks[index++];
+    if (block.tag === 'h2') {
+      const id = `s-${headings.length + 1}`;
+      headings.push({ id, text: block.text });
+      body.push(html`<h2 id="${id}" tabindex="-1">${block.text}</h2>`);
+    } else if (block.tag === 'li') {
+      const items = [block];
+      while (publication.blocks[index]?.tag === 'li') items.push(publication.blocks[index++]);
+      body.push(html`<ul>${items.map(item => html`<li>${text(item)}</li>`)}</ul>`);
+    } else if (block.tag === 'blockquote') {
+      body.push(html`<blockquote><p>${text(block)}</p></blockquote>`);
+    } else {
+      body.push(html`<${block.tag}>${text(block)}</${block.tag}>`);
+    }
+  }
+  return { body, headings };
+}
+
+export function publicationPage(site, entry, t) {
+  const publication = entry.publication;
+  const lang = entry.language;
+  const { body, headings } = articleBlocks(publication);
+  const downloads = publication.documents.map(item => ({ ...item, document: site.documents.find(document => document.local === item.local), preview: DOCUMENT_PREVIEWS.get(item.local) }));
+  const hero = site.photos.hero;
+  const largest = hero.at(-1);
+  const contents = [
+    ...(downloads.length ? [{ id: 'documents', text: publication.documentsTitle || 'Документы' }] : []),
+    ...headings,
+    ...(publication.sources.length ? [{ id: 'sources', text: publication.sourcesTitle || 'Источники' }] : [])
+  ];
+  return html`<article class="article publication publication--feature" data-article>
+    <header class="publication__hero">
+      <img${attrs({
+        class: 'publication__hero-photo',
+        src: site.url(`/${hero[1].file}`),
+        srcset: hero.map(size => `${site.url(`/${size.file}`)} ${size.width}w`).join(', '),
+        sizes: '100vw',
+        width: largest.width,
+        height: largest.height,
+        fetchpriority: 'high',
+        decoding: 'async',
+        alt: t.photo
+      })}>
+      <div class="publication__hero-shade" aria-hidden="true"></div>
+      <div class="shell publication__hero-content">
+        <p class="article__crumb">${siteLink(site, site.route(lang, 'news'), html`${icon('chevron-left')}${t.news}`, 'link link--back')}</p>
+        ${publication.rubric && html`<p class="eyebrow publication__rubric">${publication.rubric}</p>`}
+        <h1 class="publication__title">${publicationTitle(publication.title)}</h1>
+        <ul class="article__meta publication__meta">
+        <li><span class="badge">${LANGUAGE_NAMES[lang]}</span></li>
+        <li>${t.published} <time datetime="${publication.publishedAt}">${formatDate(lang, publication.publishedAt, { dateStyle: 'long' })}</time></li>
+        <li>${icon('clock')}${t.readingTime.replace('{n}', entry.minutes)}</li>
+        <li><button${attrs({ type: 'button', class: 'link link--button', 'data-share': true, 'data-share-title': publication.title, 'data-label-copied': t.linkCopied, hidden: true })}>${icon('share')}${t.share}</button></li>
+        </ul>
+      </div>
+    </header>
+    <div class="shell article__layout publication__layout${contents.length >= 3 ? ' has-contents' : ''}">
+      ${contents.length >= 3 && html`<nav class="contents publication__contents" aria-labelledby="contents-title" data-contents>
+        <h2 id="contents-title">${t.contents}</h2>
+        <button class="publication__contents-toggle" type="button" aria-expanded="true" aria-controls="publication-contents-list" data-publication-contents-toggle hidden>${t.contents}${icon('chevron-down')}</button>
+        <ol id="publication-contents-list">${contents.map(heading => html`<li><a href="#${heading.id}">${heading.text}</a></li>`)}</ol>
+      </nav>`}
+      <div class="prose article__body publication__body">
+        <p class="lead publication__lead">${referenceText(publication.lead)}</p>
+        ${downloads.length > 0 && html`<section class="publication__documents"${attrs({
+          'data-document-region': true,
+          'data-document-loading': t.documentLoading,
+          'data-document-ready': t.documentReady,
+          'data-document-error': t.documentError
+        })} aria-labelledby="documents">
+          <h2 id="documents" tabindex="-1">${publication.documentsTitle || 'Документы'}</h2>
+          ${publication.documentsIntro && html`<p>${publication.documentsIntro}</p>`}
+          <ul class="publication__document-list">${downloads.map(item => html`<li class="publication__document" id="document-${item.id}">
+            <a${attrs({
+              class: `publication__document-link${item.preview ? '' : ' publication__document-link--text'}`,
+              href: site.url(documentPath(item.document, lang)),
+              'data-document-download': site.documentDelivery === 'envelope',
+              rel: 'nofollow',
+              'aria-labelledby': `document-title-${item.id} document-action-${item.id}`,
+              'aria-describedby': item.note ? `document-note-${item.id}` : undefined
+            })}>
+              ${item.preview && html`<img class="publication__document-preview" src="${site.url(`/assets/img/publications/${item.preview.file}`)}" width="${item.preview.width}" height="${item.preview.height}" loading="lazy" decoding="async" alt="">`}
+              <div class="publication__document-copy">
+                <h3 class="publication__document-title" id="document-title-${item.id}">${referenceText(item.label)}</h3>
+                ${item.note && html`<p class="hint" id="document-note-${item.id}">${item.note}</p>`}
+                <span class="publication__document-action" id="document-action-${item.id}">${t.documentDownload} <span class="file-type">${item.local.split('.').at(-1).toUpperCase()}</span>${icon('download')}</span>
+              </div>
+            </a>
+          </li>`)}</ul>
+          <p class="hint" data-document-status role="status" aria-live="polite"></p>
+        </section>`}
+        ${body}
+        ${publication.sources.length > 0 && html`<section class="publication__sources" aria-labelledby="sources">
+          <h2 id="sources" tabindex="-1">${publication.sourcesTitle || 'Источники'}</h2>
+          <ol>${publication.sources.map(source => html`<li id="source-${source.id}">${externalLink(t, source.url, source.label)}${source.note && html`<p class="hint">${source.note}</p>`}</li>`)}</ol>
+        </section>`}
+        <p class="publication__signature">${publication.author}</p>
+      </div>
+    </div>
+  </article>
+  <progress class="reading-progress" max="100" value="0" data-reading-progress hidden aria-hidden="true"></progress>
+  <button type="button" class="icon-button to-top" data-to-top hidden aria-label="${t.backToTop}" title="${t.backToTop}">${icon('arrow-up')}</button>`;
+}

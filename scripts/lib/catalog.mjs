@@ -7,6 +7,7 @@
 
 import { createHash } from 'node:crypto';
 import { CORE_PAGES } from './site.mjs';
+import { publicationEntry } from './publications.mjs';
 
 // The two history articles of bukiski-hram.net stay full articles in the library;
 // the history page links to them.
@@ -105,11 +106,13 @@ export function createCatalog(site) {
     };
   });
 
-  const byUrl = new Map(entries.map(entry => [entry.url, entry]));
-  const articles = entries.filter(entry => entry.ownsTarget && !POLISH_SECTION.test(entry.sourcePath));
+  const publications = (site.publications || []).map(publication => publicationEntry(site, publication));
+  const byUrl = new Map([...entries, ...publications].map(entry => [entry.url, entry]));
+  const articles = [...entries.filter(entry => entry.ownsTarget && !POLISH_SECTION.test(entry.sourcePath)), ...publications];
 
   return {
     entries,
+    publications,
     byUrl,
     corePaths,
     /** Articles for the library of one UI language: that language first, then newest first. */

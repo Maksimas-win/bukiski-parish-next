@@ -8,8 +8,11 @@ import { initPreferences } from './ui/preferences.js';
 import { initTilt } from './ui/tilt.js';
 import { initAnnouncement } from './ui/announcement.js';
 import { initThanks } from './ui/thanks.js';
+import { initSpotlight } from './ui/spotlight.js';
+import { initAnalytics } from './analytics.js';
 
 document.documentElement.classList.add('js');
+initAnalytics();
 
 initMenu();
 initLanguageMenu();
@@ -18,6 +21,7 @@ initCopyButtons();
 initTilt();
 initAnnouncement();
 initThanks();
+initSpotlight();
 
 const features = [
   ['[data-schedule]', () => import('./features/schedule.js')],
@@ -25,6 +29,7 @@ const features = [
   ['[data-notes]', () => import('./features/notes.js')],
   ['[data-article]', () => import('./features/article.js')],
   ['[data-story]', () => import('./features/story.js')],
+  ['[data-history]', () => import('./features/history.js')],
   ['[data-lightbox]', () => import('./features/lightbox.js')],
   ['[data-gpm]', () => import('./features/gpm.js')],
   ['[data-home-gpm]', () => import('./features/home-gpm.js')],

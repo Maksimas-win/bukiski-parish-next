@@ -7,19 +7,26 @@ import { structuredData } from './structured-data.mjs';
 import { externalLink, siteLink } from './components.mjs';
 import { announcementStrip } from './announcement.mjs';
 import { thanksDialog, thanksFooterLink } from './thanks.mjs';
+import { spotlightCard } from './spotlight.mjs';
+import { ANALYTICS_ID, ANALYTICS_TEXT, analyticsEnabled, analyticsConsent } from './analytics.mjs';
 
 /**
  * Reviewed opt-in services: the parish assistant and the existing prayer form.
  */
 export function contentSecurityPolicy(site) {
   const connect = ["'self'", 'https://bukiski-hram.org/integrations/telegram/website.php'];
+  const analytics = analyticsEnabled(site);
+  // GA4 can use either collector family; Google Tag also fetches its own config.
+  // Keep explicit origins rather than the broad wildcards in the vendor guide.
+  const google = ['https://www.googletagmanager.com', 'https://www.google-analytics.com', 'https://region1.google-analytics.com', 'https://analytics.google.com', 'https://region1.analytics.google.com', 'https://www.google.com'];
+  if (analytics) connect.push(...google);
   const endpoint = site.settings.notes?.endpoint;
   if (endpoint) {
     const url = new URL(endpoint);
     if (url.protocol !== 'https:' || url.username || url.password) throw new Error('settings.notes.endpoint must be an HTTPS URL without credentials');
     connect.push(url.origin);
   }
-  return `default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src ${connect.join(' ')}; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests`;
+  return `default-src 'self'; script-src 'self'${analytics ? ' https://www.googletagmanager.com' : ''}; style-src 'self'; img-src 'self'${analytics ? ' ' + google.join(' ') : ''}; font-src 'self'; connect-src ${connect.join(' ')}; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests`;
 }
 
 const NAVIGATION = ['schedule', 'history', 'sacraments', 'library', 'notes', 'contacts'];
@@ -65,7 +72,7 @@ function header(site, t, lang, uiLocale, pageId, languageTargets) {
   </header>`;
 }
 
-function footer(site, t, uiLocale) {
+function footer(site, t, uiLocale, analytics) {
   const { settings } = site;
   return html`<footer class="site-footer" lang="${uiLocale}">
     <div class="shell site-footer__grid">
@@ -90,6 +97,7 @@ function footer(site, t, uiLocale) {
     </div>
     <div class="shell site-footer__legal">
       <p>© ${new Date(site.buildTime).getUTCFullYear()} ${settings.legalName}. ${t.rights}</p>
+      ${analytics && html`<button type="button" class="analytics-manage" data-analytics-manage hidden>${ANALYTICS_TEXT[uiLocale].manage}</button>`}
     </div>
   </footer>`;
 }
@@ -112,6 +120,7 @@ function dialogs(site, t, uiLocale, pageId) {
     <button type="button" class="button button--quiet" data-preferences-reset>${t.reset}</button>
   </dialog>
   ${thanksDialog(site, uiLocale, pageId)}
+  ${spotlightCard(site, uiLocale, pageId)}
   <div class="toast-region" data-toasts role="status" aria-live="polite" lang="${uiLocale}"></div>`;
 }
 
@@ -128,6 +137,7 @@ export function renderDocument(site, page) {
     canonicalPath = path, alternates = [], noindex = false, noFollow = false, article = false, extraDialogs = ''
   } = page;
   const uiLocale = site.locales[page.uiLocale ?? lang] ? (page.uiLocale ?? lang) : 'en';
+  const analytics = analyticsEnabled(site) && !noindex && !noFollow && !['notes', 'document', 'not-found'].includes(pageId);
   const t = site.locales[uiLocale];
   const languageTargets = alternates.length
     ? alternates
@@ -168,9 +178,9 @@ export function renderDocument(site, page) {
     skip: t.skip,
     svgDefs: svgDefs(),
     alternates: raw(alternateLinks.join('\n  ')),
-    bodyAttributes: attrs({ 'data-label-copied': t.copied, 'data-label-copy-failed': t.copyFailed }),
+    bodyAttributes: attrs({ 'data-label-copied': t.copied, 'data-label-copy-failed': t.copyFailed, 'data-analytics-id': analytics ? ANALYTICS_ID : null }),
     header: html`${header(site, t, lang, uiLocale, pageId, languageTargets)}${announcementStrip(site, uiLocale, pageId)}`,
-    footer: footer(site, t, uiLocale),
+    footer: html`${footer(site, t, uiLocale, analytics)}${analytics && analyticsConsent(site, uiLocale)}`,
     dialogs: html`${dialogs(site, t, uiLocale, pageId)}${extraDialogs}`,
     body
   };

@@ -138,11 +138,11 @@
     "orgCode": "Код организации",
     "gpm": "1,2 % GPM",
     "gpmNote": "Часть уже уплаченного подоходного налога можно направить приходу. Калькулятор, пошаговый помощник по FR0512 и ответы на вопросы — в отдельном разделе.",
-    "privacyIntro": "Сайт не использует аналитику, рекламные пиксели и встраиваемые карты. Все основные материалы доступны без регистрации.",
+    "privacyIntro": "Основные материалы доступны без регистрации. Необязательная аналитика Google включается только с вашего согласия; рекламных пикселей и встроенных карт нет.",
     "privacyItems": [
       [
         "Настройки чтения",
-        "Оформление, размер текста и контрастность сохраняются в localStorage вашего браузера. Кнопка сброса удаляет эти настройки. Cookies сайта не устанавливаются."
+        "Оформление, размер текста и контрастность сохраняются в localStorage вашего браузера. Отдельно хранится ваш выбор согласия на аналитику; аналитические cookies появляются только после разрешения."
       ],
       [
         "Записки",
@@ -503,11 +503,11 @@
     "orgCode": "Organizacijos kodas",
     "gpm": "1,2 % GPM",
     "gpmNote": "Dalį jau sumokėto pajamų mokesčio galima skirti parapijai. Skaičiuoklė, FR0512 vedlys ir atsakymai į klausimus — atskirame skyriuje.",
-    "privacyIntro": "Svetainėje nenaudojama analitika, reklamos pikseliai ar įterptieji žemėlapiai. Pagrindinis turinys prieinamas be registracijos.",
+    "privacyIntro": "Pagrindinis turinys prieinamas be registracijos. Neprivaloma „Google“ analitika įjungiama tik gavus jūsų sutikimą; reklamos pikselių ir įterptųjų žemėlapių nėra.",
     "privacyItems": [
       [
         "Skaitymo nuostatos",
-        "Išvaizdos, teksto dydžio ir kontrasto nuostatos saugomos jūsų naršyklės localStorage. Atkūrimo mygtukas šias nuostatas pašalina. Svetainė slapukų nenustato."
+        "Išvaizdos, teksto dydžio ir kontrasto nuostatos saugomos naršyklės localStorage. Atskirai saugomas jūsų sutikimo dėl analitikos pasirinkimas; analitikos slapukai sukuriami tik jums leidus."
       ],
       [
         "Maldos rašteliai",
@@ -868,11 +868,11 @@
     "orgCode": "Organisation code",
     "gpm": "1.2% GPM",
     "gpmNote": "Part of the income tax you have already paid can be allocated to the parish. The calculator, FR0512 helper and answers are in a dedicated section.",
-    "privacyIntro": "This website uses no analytics, advertising pixels or embedded maps. Its main content is available without registration.",
+    "privacyIntro": "Main content is available without registration. Optional Google analytics starts only with your consent; there are no advertising pixels or embedded maps.",
     "privacyItems": [
       [
         "Reading settings",
-        "Appearance, text size and contrast preferences are saved in your browser’s localStorage. The reset button removes them. The website sets no cookies."
+        "Appearance, text size and contrast preferences are saved in your browser’s localStorage. Your analytics choice is stored separately; analytics cookies are created only after you allow them."
       ],
       [
         "Prayer requests",
@@ -1233,11 +1233,11 @@
     "orgCode": "Kod organizacji",
     "gpm": "1,2% GPM",
     "gpmNote": "Część już zapłaconego podatku dochodowego można przekazać parafii. Kalkulator, asystent FR0512 i odpowiedzi na pytania znajdziesz w osobnym dziale.",
-    "privacyIntro": "Strona nie korzysta z analityki, pikseli reklamowych ani osadzonych map. Główne treści są dostępne bez rejestracji.",
+    "privacyIntro": "Główne treści są dostępne bez rejestracji. Opcjonalna analityka Google uruchamia się tylko za twoją zgodą; nie ma pikseli reklamowych ani osadzonych map.",
     "privacyItems": [
       [
         "Ustawienia czytania",
-        "Wygląd, wielkość tekstu i kontrast zapisują się w localStorage twojej przeglądarki. Przycisk przywracania usuwa te ustawienia. Strona nie ustawia plików cookie."
+        "Wygląd, wielkość tekstu i kontrast zapisują się w localStorage przeglądarki. Oddzielnie przechowywany jest wybór dotyczący analityki; analityczne pliki cookie pojawiają się dopiero po wyrażeniu zgody."
       ],
       [
         "Karteczki",
@@ -1598,11 +1598,11 @@
     "orgCode": "Organisationscode",
     "gpm": "1,2 % GPM",
     "gpmNote": "Ein Teil der bereits gezahlten Einkommensteuer kann der Gemeinde zugewiesen werden. Rechner, FR0512-Hilfe und Antworten finden Sie in einem eigenen Bereich.",
-    "privacyIntro": "Diese Website verwendet keine Analysewerkzeuge, Werbepixel oder eingebetteten Karten. Die Hauptinhalte sind ohne Registrierung zugänglich.",
+    "privacyIntro": "Die Hauptinhalte sind ohne Registrierung zugänglich. Die optionale Google-Analyse startet nur mit Ihrer Einwilligung; es gibt keine Werbepixel oder eingebetteten Karten.",
     "privacyItems": [
       [
         "Leseeinstellungen",
-        "Darstellung, Schriftgröße und Kontrast werden im localStorage Ihres Browsers gespeichert. Die Schaltfläche zum Zurücksetzen entfernt diese Einstellungen. Die Website setzt keine Cookies."
+        "Darstellung, Schriftgröße und Kontrast werden im localStorage Ihres Browsers gespeichert. Ihre Analyse-Einwilligung wird getrennt gespeichert; Analyse-Cookies entstehen erst nach Ihrer Einwilligung."
       ],
       [
         "Gebetsanliegen",
@@ -1963,11 +1963,11 @@
     "orgCode": "Код організації",
     "gpm": "1,2 % GPM",
     "gpmNote": "Частину вже сплаченого податку на доходи можна спрямувати парафії. Калькулятор, помічник з FR0512 і відповіді на запитання — в окремому розділі.",
-    "privacyIntro": "Сайт не використовує аналітики, рекламних пікселів і вбудованих карт. Основний вміст доступний без реєстрації.",
+    "privacyIntro": "Основні матеріали доступні без реєстрації. Необов’язкова аналітика Google вмикається лише за вашою згодою; рекламних пікселів і вбудованих карт немає.",
     "privacyItems": [
       [
         "Налаштування читання",
-        "Оформлення, розмір тексту і контрастність зберігаються в localStorage вашого браузера. Кнопка скидання видаляє ці налаштування. Сайт не встановлює cookies."
+        "Оформлення, розмір тексту й контрастність зберігаються в localStorage браузера. Окремо зберігається ваш вибір щодо аналітики; аналітичні cookies з’являються лише після дозволу."
       ],
       [
         "Записки",

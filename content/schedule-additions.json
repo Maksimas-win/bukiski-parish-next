@@ -31,6 +31,29 @@
         "de": "Nach der Liturgie: allgemeine Panichida (Totengedenken).",
         "uk": "Після Літургії — загальна панахида."
       }
+    },
+    {
+      "id": "add-2026-11-18-tikhon",
+      "date": "2026-11-18",
+      "startTime": "08:00",
+      "confirmedBy": "rector",
+      "confirmedOn": "2026-11-12",
+      "title": {
+        "ru": "Божественная литургия",
+        "lt": "Dieviškoji liturgija",
+        "en": "Divine Liturgy",
+        "pl": "Boska Liturgia",
+        "de": "Göttliche Liturgie",
+        "uk": "Божественна літургія"
+      },
+      "note": {
+        "ru": "В день памяти святителя Тихона. После Литургии — молебен святителю Тихону и Отцам Поместного Собора 1917–1918 годов.",
+        "lt": "Šventojo Tichono atminimo dieną. Po liturgijos – molebenas šventajam Tichonui ir 1917–1918 m. Vietinio Bažnyčios Susirinkimo tėvams.",
+        "en": "Commemoration of Saint Tikhon. After the Liturgy, a prayer service to Saint Tikhon and the Fathers of the Local Council of 1917–1918.",
+        "pl": "W dniu wspomnienia św. Tichona. Po Liturgii — molebien ku czci św. Tichona i Ojców Soboru Lokalnego z lat 1917–1918.",
+        "de": "Am Gedenktag des heiligen Tichon. Nach der Liturgie: ein Bittgottesdienst (Moleben) zu Ehren des heiligen Tichon und der Väter des Landeskonzils von 1917–1918.",
+        "uk": "У день пам’яті святителя Тихона. Після Літургії — молебень святителю Тихону та Отцям Помісного Собору 1917–1918 років."
+      }
     }
   ]
 }

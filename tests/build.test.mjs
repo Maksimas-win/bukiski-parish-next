@@ -172,8 +172,8 @@ test('Documents can be downloaded as original bytes and stay out of search', asy
   const sitemap = await read('dist/sitemap.xml');
   const deployed = await readdir(dist, { recursive: true });
   const envelope = info.documentDelivery === 'envelope';
-  assert.equal(documents.length, 4);
-  assert.equal(info.documents, 4);
+  assert.equal(documents.filter(document => document.status === 'recovered').length, 4, 'the four recovered originals remain in the registry');
+  assert.equal(info.documents, documents.length);
 
   for (const document of documents) {
     assert.match(document.local, /^assets\/documents\/[a-z0-9-]+\.(pdf|doc)$/);
@@ -331,7 +331,7 @@ test('The home page opens with the church photograph and its name, with no sloga
   }
 });
 
-test('CSP permits only the reviewed prayer service and exact parish assistant endpoint', async () => {
+test('CSP permits reviewed services and adds only the .net analytics origins in production', async () => {
   const notes = await page('/ru/notes.html');
   assert.ok(notes.includes(`data-notes-endpoint="${settings.notes.endpoint}"`));
   assert.match(notes, /<input type="checkbox" name="consent" data-note-consent>/);
@@ -341,9 +341,12 @@ test('CSP permits only the reviewed prayer service and exact parish assistant en
   for (const { file, html } of pages) {
     const csp = html.match(/http-equiv="Content-Security-Policy" content="([^"]+)"/)[1].replaceAll('&#39;', "'");
     const assistant = 'https://bukiski-hram.org/integrations/telegram/website.php';
-    assert.equal(csp.match(/connect-src ([^;]+);/)[1], `'self' ${assistant} ${origin}`, file);
+    const analytics = process.env.PRODUCTION === 'true' && new URL(process.env.SITE_ORIGIN || settings.origin).hostname === 'bukiski-hram.net' && !base;
+    const google = analytics ? ' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://region1.analytics.google.com https://www.google.com' : '';
+    assert.equal(csp.match(/connect-src ([^;]+);/)[1], `'self' ${assistant}${google} ${origin}`, file);
     assert.match(csp, /form-action 'none'/, file);
-    assert.doesNotMatch(csp.replace(origin, '').replace(assistant, ''), /https?:/, file);
+    const reviewed = [origin, assistant, 'https://www.googletagmanager.com', 'https://www.google-analytics.com', 'https://region1.google-analytics.com', 'https://analytics.google.com', 'https://region1.analytics.google.com', 'https://www.google.com'];
+    assert.doesNotMatch(reviewed.reduce((policy, value) => policy.replaceAll(value, ''), csp), /https?:/, file);
   }
 });
 
@@ -462,20 +465,22 @@ test('Services show the church-calendar day from the feed and the home page offe
   assert.match(english, /<ul class="church-day__list" lang="ru">/);
 });
 
-test('A service confirmed by the rector appears with its note in every language and in the calendar file', async () => {
+test('A rector-confirmed service retains its note and calendar entry, and appears only while upcoming', async () => {
   const additions = await readJSON('content/schedule-additions.json');
+  const merged = await readJSON('dist/data/assistant-services.json');
   for (const item of additions.events) {
-    for (const lang of settings.locales) {
-      const schedule = await page(`/${lang}/schedule.html`);
-      assert.ok(schedule.includes(escapeHTML(item.note[lang])), `${lang} ${item.id}`);
-    }
     // Once the parish calendar carries a service at the same time, that service
     // takes the addition's place (scripts/lib/additions.mjs) and keeps its note.
-    const merged = await readJSON('dist/data/assistant-services.json');
     const shown = merged.events.find(event => event.id === item.id)
       || merged.events.find(event => event.date === item.date && event.startTime === item.startTime);
     assert.ok(shown, `${item.id} is in the merged schedule`);
     if (item.note) assert.deepEqual(shown.note, item.note, `${item.id} keeps its note`);
+    const upcoming = Date.parse(shown.start) >= Date.parse(info.generatedAt);
+    for (const lang of settings.locales) {
+      const schedule = await page(`/${lang}/schedule.html`);
+      assert.equal(schedule.includes(`data-id="${escapeHTML(shown.id)}"`), upcoming, `${lang}: only upcoming services are displayed`);
+      if (upcoming && item.note) assert.ok(schedule.includes(escapeHTML(item.note[lang])), `${lang} ${item.id}`);
+    }
     assert.ok((await read('dist/assets/schedule-ru.ics')).includes(shown.id), `${shown.id} is in the calendar file`);
   }
 });
