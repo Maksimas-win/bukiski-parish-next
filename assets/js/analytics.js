@@ -3,6 +3,7 @@
 export const CONSENT_KEY = 'bukiski-analytics-consent-v1';
 export const CONSENT_TTL = 180 * 86400000;
 const ID = 'G-RK3WMMM3V2';
+const CONTAINER_ID = 'GTM-KQFHK588';
 const HOST = 'bukiski-hram.net';
 const LANGUAGES = new Set(['ru', 'lt', 'en', 'pl', 'de', 'uk']);
 const PAGES = new Set(['home', 'schedule', 'history', 'sacraments', 'gallery', 'news', 'contacts', 'library', 'support', 'gpm', 'privacy', 'article', 'announcement']);
@@ -87,9 +88,11 @@ export function createAnalytics({ win, doc, now = () => Date.now() }) {
       win.gtag = function () { win.dataLayer.push(arguments); };
       win.gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
       win.gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
-      win.gtag('js', new Date(now()));
-      win.gtag('config', ID, {
+      // Standard GTM initialization does not apply legacy config commands.
+      // Set safe defaults before loading the dedicated .net-only container.
+      win.gtag('set', {
         send_page_view: false, page_location: pageLocation, page_referrer: referrer,
+        site_language: language, content_group: page,
         ...campaignParameters(win.location.search),
         ...(new URLSearchParams(win.location.search).get('analytics_debug') === '1' ? { debug_mode: true } : {}),
         allow_google_signals: false, allow_ad_personalization_signals: false,
@@ -97,9 +100,10 @@ export function createAnalytics({ win, doc, now = () => Date.now() }) {
         cookie_domain: 'none', cookie_expires: CONSENT_TTL / 1000,
         cookie_update: false, cookie_flags: 'SameSite=Lax;Secure'
       });
+      win.dataLayer.push({ 'gtm.start': now(), event: 'gtm.js' });
       script = doc.createElement('script');
       script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+      script.src = 'https://www.googletagmanager.com/gtm.js?id=' + CONTAINER_ID;
       script.dataset.analyticsTag = '';
       doc.head.append(script);
     }
