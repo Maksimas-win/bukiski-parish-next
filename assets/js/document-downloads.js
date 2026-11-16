@@ -2,8 +2,8 @@
 // verified original bytes to the browser. Used on hosts that cannot send an
 // X-Robots-Tag header; see scripts/lib/pages/document.mjs.
 
-import { decodeDocument } from './document-data.js?v=270543e9e7';
-import { track } from './analytics.js?v=270543e9e7';
+import { decodeDocument } from './document-data.js?v=ea9a3daa2e';
+import { track } from './analytics.js?v=ea9a3daa2e';
 
 const MAX_PAGE_LENGTH = 8 * 1024 * 1024;
 const DOCUMENT_PAGE = /^(ru|lt|en|pl|de|uk)\/documents\/[a-z0-9-]+\.html$/;

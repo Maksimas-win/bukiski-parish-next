@@ -1,4 +1,4 @@
-import { WEB_UI } from './web-i18n.js?v=270543e9e7';
+import { WEB_UI } from './web-i18n.js?v=ea9a3daa2e';
 
 export const CLAUDE_POLICY = {
   ru: 'Для Anthropic (Claude) данные API обычно удаляются в течение 30 дней. Исключения возможны для безопасности и исполнения закона. Очистка диалога на сайте не удаляет копии у провайдера.',

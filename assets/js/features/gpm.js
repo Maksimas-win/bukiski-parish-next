@@ -5,9 +5,9 @@
 // helper with progress, copy buttons with their own confirmation, the answer
 // search, share and print, and the WebGL figure when the browser allows it.
 
-import { $, $$, show, fill, prefersReducedMotion } from '../ui/dom.js?v=270543e9e7';
-import { toast } from '../ui/toast.js?v=270543e9e7';
-import { parseAmountToCents, supportCents, transferableSupportCents, campaignPhase, formatCents } from './gpm/math.js?v=270543e9e7';
+import { $, $$, show, fill, prefersReducedMotion } from '../ui/dom.js?v=ea9a3daa2e';
+import { toast } from '../ui/toast.js?v=ea9a3daa2e';
+import { parseAmountToCents, supportCents, transferableSupportCents, campaignPhase, formatCents } from './gpm/math.js?v=ea9a3daa2e';
 
 /** Today's calendar date in Lithuania, so the state flips at Vilnius midnight. */
 function vilniusToday() {
@@ -248,5 +248,5 @@ export function init() {
   initSteps();
   initFaq();
   initShare();
-  import('./gpm/hero.js?v=270543e9e7').then(hero => hero.init()).catch(() => {});
+  import('./gpm/hero.js?v=ea9a3daa2e').then(hero => hero.init()).catch(() => {});
 }
