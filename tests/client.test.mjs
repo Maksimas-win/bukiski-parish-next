@@ -8,24 +8,26 @@ const directory = new URL('../assets/js/', import.meta.url);
 const files = (await readdir(directory, { recursive: true })).filter(name => name.endsWith('.js'));
 const sources = new Map(await Promise.all(files.map(async name => [name.replaceAll('\\', '/'), await readFile(new URL(name, directory), 'utf8')])));
 
-test('No script builds markup from strings, evaluates code or contacts third parties', () => {
+test('Scripts use safe DOM operations; only the reviewed analytics module can load Google after consent', () => {
   assert.ok(sources.size >= 12);
   for (const [name, source] of sources) {
     assert.doesNotMatch(source, /innerHTML|outerHTML|insertAdjacentHTML|document\.write|\beval\(|new Function|setAttribute\(\s*['"]style/, name);
-    assert.doesNotMatch(source, /gtag\(|googletagmanager|google-analytics|facebook\.net/, name);
+    if (name !== 'analytics.js') assert.doesNotMatch(source, /gtag\(|googletagmanager|google-analytics|facebook\.net/, name);
     // The assistant's two pure data modules contain navigation links, never requests.
     if (['assistant/engine.js', 'assistant/knowledge.js'].includes(name)) {
       assert.doesNotMatch(source, /\bfetch\(|XMLHttpRequest|WebSocket|sendBeacon/, name);
     } else if (name === 'assistant/web-api.js') {
       assert.doesNotMatch(source.replace('https://bukiski-hram.org/integrations/telegram/website.php', ''), /https?:\/\//, name);
       assert.match(source, /redirect: 'error'/);
+    } else if (name === 'analytics.js') {
+      assert.doesNotMatch(source.replace('https://www.googletagmanager.com/gtag/js?id=', '').replace("'https:'", ''), /https?:\/\//, name);
     } else assert.doesNotMatch(source, /https?:\/\//, name);
   }
 });
 
-test('Only reading preferences, the day the thank-you dialog last opened and the session flag of the home spotlight are stored in the browser', () => {
+test('Browser storage is limited to preferences, consent and the reviewed display flags', () => {
   const writers = [...sources].filter(([, source]) => /localStorage\.setItem|sessionStorage|indexedDB|document\.cookie/.test(source)).map(([name]) => name).sort();
-  assert.deepEqual(writers, ['ui/preferences.js', 'ui/spotlight.js', 'ui/thanks.js']);
+  assert.deepEqual(writers, ['analytics.js', 'ui/preferences.js', 'ui/spotlight.js', 'ui/thanks.js']);
   // The spotlight stores one session flag under its own prefix and never touches localStorage.
   const spotlight = sources.get('ui/spotlight.js');
   assert.equal((spotlight.match(/sessionStorage\.setItem/g) || []).length, 1);
@@ -37,7 +39,7 @@ test('Only reading preferences, the day the thank-you dialog last opened and the
   assert.equal((thanks.match(/localStorage\.setItem/g) || []).length, 1);
   assert.match(thanks, /localStorage\.setItem\(STORAGE_KEY, new Date\(\)\.toISOString\(\)\)/);
   const readers = [...sources].filter(([, source]) => source.includes('localStorage')).map(([name]) => name).sort();
-  assert.deepEqual(readers, ['theme-init.js', 'ui/preferences.js', 'ui/thanks.js']);
+  assert.deepEqual(readers, ['analytics.js', 'theme-init.js', 'ui/preferences.js', 'ui/thanks.js']);
   // Both files must agree on the storage key.
   const key = sources.get('ui/preferences.js').match(/STORAGE_KEY = '([^']+)'/)[1];
   assert.ok(sources.get('theme-init.js').includes(`'${key}'`));

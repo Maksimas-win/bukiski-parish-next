@@ -3,6 +3,7 @@
 // X-Robots-Tag header; see scripts/lib/pages/document.mjs.
 
 import { decodeDocument } from './document-data.js';
+import { track } from './analytics.js';
 
 const MAX_PAGE_LENGTH = 8 * 1024 * 1024;
 const DOCUMENT_PAGE = /^(ru|lt|en|pl|de|uk)\/documents\/[a-z0-9-]+\.html$/;
@@ -73,6 +74,7 @@ export function enableDocumentDownloads(siteRoot) {
         anchor.hidden = true;
         document.body.append(anchor);
         anchor.click();
+        track('file_download', { file_extension: file.mime === 'application/pdf' ? 'pdf' : 'doc' });
         anchor.remove();
         // Give browsers, including mobile download managers, time to consume the blob.
         setTimeout(() => revoke(href), 60000);

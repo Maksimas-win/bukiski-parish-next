@@ -331,7 +331,7 @@ test('The home page opens with the church photograph and its name, with no sloga
   }
 });
 
-test('CSP permits only the reviewed prayer service and exact parish assistant endpoint', async () => {
+test('CSP permits reviewed services and adds only the .net analytics origins in production', async () => {
   const notes = await page('/ru/notes.html');
   assert.ok(notes.includes(`data-notes-endpoint="${settings.notes.endpoint}"`));
   assert.match(notes, /<input type="checkbox" name="consent" data-note-consent>/);
@@ -341,9 +341,11 @@ test('CSP permits only the reviewed prayer service and exact parish assistant en
   for (const { file, html } of pages) {
     const csp = html.match(/http-equiv="Content-Security-Policy" content="([^"]+)"/)[1].replaceAll('&#39;', "'");
     const assistant = 'https://bukiski-hram.org/integrations/telegram/website.php';
-    assert.equal(csp.match(/connect-src ([^;]+);/)[1], `'self' ${assistant} ${origin}`, file);
+    const analytics = process.env.PRODUCTION === 'true' && new URL(process.env.SITE_ORIGIN || settings.origin).hostname === 'bukiski-hram.net' && !base;
+    const google = analytics ? ' https://www.google-analytics.com https://region1.google-analytics.com' : '';
+    assert.equal(csp.match(/connect-src ([^;]+);/)[1], `'self' ${assistant}${google} ${origin}`, file);
     assert.match(csp, /form-action 'none'/, file);
-    assert.doesNotMatch(csp.replace(origin, '').replace(assistant, ''), /https?:/, file);
+    assert.doesNotMatch(csp.replaceAll(origin, '').replaceAll(assistant, '').replaceAll('https://www.googletagmanager.com', '').replaceAll('https://www.google-analytics.com', '').replaceAll('https://region1.google-analytics.com', ''), /https?:/, file);
   }
 });
 
