@@ -55,3 +55,16 @@
 Настройки GA4 и Search Console проверяются непосредственно в интерфейсе, а не только по этому документу. Обычные отчёты обновляются с задержкой; успешная сборка не доказывает доставку события в Google.
 
 Первичные справочники: [согласие](https://developers.google.com/tag-platform/security/concepts/consent-mode), [события GA4](https://developers.google.com/analytics/devguides/collection/ga4/events), [запрет передачи личных сведений](https://support.google.com/analytics/answer/6004245), [связь с Search Console](https://support.google.com/analytics/answer/10737381).
+
+
+## 2026-11-17: dedicated .net container
+
+The former loader, `/gtag/js?id=G-RK3WMMM3V2`, returned HTTP 404 from Google. This measurement ID existed as a destination of a migrated shared tag, but was absent from that tag's source IDs. The replacement loader uses the dedicated container `GTM-KQFHK588`. The existing GA4 property `456692884`, web stream `8625045913` and measurement ID `G-RK3WMMM3V2` are preserved.
+
+`deploy/analytics-container.json` is the reviewed import configuration for this container. It contains one native Google Analytics destination tag, using the standard Initialization trigger. Its settings disable automatic page views, Google signals and ad personalization; preserve the 180-day host-only analytics cookies; and disable URL passthrough. All automatic event detection, user-provided data collection and contact-data detection are disabled. There are no advertising destinations, cross-domain rules, custom scripts or user-defined variables.
+
+This supersedes earlier references to an on-page `config` command. Standard GTM initializes on load. Static privacy settings now live in the destination tag, and the page queues its sanitized URL, referrer, language, content group and allowed campaign/debug settings with `gtag('set', ...)` before `gtm.start`. Manual events still use `send_to: G-RK3WMMM3V2`. The script remains blocked until explicit consent; advertising consent stays denied; excluded pages and withdrawal behavior are unchanged.
+
+Import this file into `GTM-KQFHK588`, review the workspace differences, and publish the matching container version. A saved export or passing build does not verify publication or delivery. After deployment, verify the live asset version, loader HTTP 200, exactly one manual `page_view`, `schedule_modal_open`, and GA4 receipt. Check that collect requests target only GRK, omit arbitrary query strings/fragments and private content, and that no Google requests occur before consent or on prayer-request pages. Recheck withdrawal and reload. Control visits are test traffic, not audience growth.
+
+References: [standard and legacy initialization](https://support.google.com/analytics/answer/18411054), [event routing](https://developers.google.com/tag-platform/gtagjs/routing).

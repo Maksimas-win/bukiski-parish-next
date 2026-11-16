@@ -20,7 +20,7 @@ test('Scripts use safe DOM operations; only the reviewed analytics module can lo
       assert.doesNotMatch(source.replace('https://bukiski-hram.org/integrations/telegram/website.php', ''), /https?:\/\//, name);
       assert.match(source, /redirect: 'error'/);
     } else if (name === 'analytics.js') {
-      assert.doesNotMatch(source.replace('https://www.googletagmanager.com/gtag/js?id=', '').replace("'https:'", ''), /https?:\/\//, name);
+      assert.doesNotMatch(source.replace('https://www.googletagmanager.com/gtm.js?id=', '').replace("'https:'", ''), /https?:\/\//, name);
     } else assert.doesNotMatch(source, /https?:\/\//, name);
   }
 });
