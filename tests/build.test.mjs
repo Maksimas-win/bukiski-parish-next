@@ -342,10 +342,11 @@ test('CSP permits reviewed services and adds only the .net analytics origins in 
     const csp = html.match(/http-equiv="Content-Security-Policy" content="([^"]+)"/)[1].replaceAll('&#39;', "'");
     const assistant = 'https://bukiski-hram.org/integrations/telegram/website.php';
     const analytics = process.env.PRODUCTION === 'true' && new URL(process.env.SITE_ORIGIN || settings.origin).hostname === 'bukiski-hram.net' && !base;
-    const google = analytics ? ' https://www.google-analytics.com https://region1.google-analytics.com' : '';
+    const google = analytics ? ' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://region1.analytics.google.com https://www.google.com' : '';
     assert.equal(csp.match(/connect-src ([^;]+);/)[1], `'self' ${assistant}${google} ${origin}`, file);
     assert.match(csp, /form-action 'none'/, file);
-    assert.doesNotMatch(csp.replaceAll(origin, '').replaceAll(assistant, '').replaceAll('https://www.googletagmanager.com', '').replaceAll('https://www.google-analytics.com', '').replaceAll('https://region1.google-analytics.com', ''), /https?:/, file);
+    const reviewed = [origin, assistant, 'https://www.googletagmanager.com', 'https://www.google-analytics.com', 'https://region1.google-analytics.com', 'https://analytics.google.com', 'https://region1.analytics.google.com', 'https://www.google.com'];
+    assert.doesNotMatch(reviewed.reduce((policy, value) => policy.replaceAll(value, ''), csp), /https?:/, file);
   }
 });
 

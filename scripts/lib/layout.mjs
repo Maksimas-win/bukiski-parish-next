@@ -16,7 +16,9 @@ import { ANALYTICS_ID, ANALYTICS_TEXT, analyticsEnabled, analyticsConsent } from
 export function contentSecurityPolicy(site) {
   const connect = ["'self'", 'https://bukiski-hram.org/integrations/telegram/website.php'];
   const analytics = analyticsEnabled(site);
-  const google = ['https://www.google-analytics.com', 'https://region1.google-analytics.com'];
+  // GA4 can use either collector family; Google Tag also fetches its own config.
+  // Keep explicit origins rather than the broad wildcards in the vendor guide.
+  const google = ['https://www.googletagmanager.com', 'https://www.google-analytics.com', 'https://region1.google-analytics.com', 'https://analytics.google.com', 'https://region1.analytics.google.com', 'https://www.google.com'];
   if (analytics) connect.push(...google);
   const endpoint = site.settings.notes?.endpoint;
   if (endpoint) {
