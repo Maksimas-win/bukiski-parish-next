@@ -93,6 +93,7 @@ export function publicationPage(site, entry, t) {
       <div class="publication__hero-shade" aria-hidden="true"></div>
       <div class="shell publication__hero-content">
         <p class="article__crumb">${siteLink(site, site.route(lang, 'news'), html`${icon('chevron-left')}${t.news}`, 'link link--back')}</p>
+        ${publication.rubric && html`<p class="eyebrow publication__rubric">${publication.rubric}</p>`}
         <h1 class="publication__title">${publicationTitle(publication.title)}</h1>
         <ul class="article__meta publication__meta">
         <li><span class="badge">${LANGUAGE_NAMES[lang]}</span></li>

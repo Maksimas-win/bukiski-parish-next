@@ -117,6 +117,17 @@
   font-size: 0.875rem;
 }
 
+/* The optional rubric («Читаем Писание») sits above the title in the hero. */
+.publication__hero .publication__rubric {
+  max-width: min(37rem, 57%);
+  margin-bottom: 0.9rem;
+  color: var(--band-accent);
+}
+
+html.high-contrast .publication__hero .publication__rubric {
+  color: var(--accent);
+}
+
 /* A generous reading column and a quiet margin for navigation. */
 .publication__layout {
   padding-top: 2.5rem;
