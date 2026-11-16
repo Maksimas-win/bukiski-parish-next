@@ -1,7 +1,7 @@
 // Reading aids only. The complete history and its fragment links remain usable
 // without this module; no reading position or visitor data is stored.
 
-import { $, $$ } from '../ui/dom.js?v=d32bc6c124';
+import { $, $$ } from '../ui/dom.js?v=270543e9e7';
 
 const initialized = new WeakSet();
 

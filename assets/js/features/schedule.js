@@ -4,9 +4,10 @@
 //
 // Every service is already in the HTML. Nothing is fetched.
 
-import { calendarDaysBetween, icsCalendar, isStale, localDate } from '../domain.js?v=d32bc6c124';
-import { $, $$, show, downloadText } from '../ui/dom.js?v=d32bc6c124';
-import { toast } from '../ui/toast.js?v=d32bc6c124';
+import { calendarDaysBetween, icsCalendar, isStale, localDate } from '../domain.js?v=270543e9e7';
+import { $, $$, show, downloadText } from '../ui/dom.js?v=270543e9e7';
+import { toast } from '../ui/toast.js?v=270543e9e7';
+import { track } from '../analytics.js?v=270543e9e7';
 
 const REFRESH_MS = 60000;
 /** How far ahead the featured service is labelled with «через N дней». */
@@ -134,6 +135,7 @@ function setup(container) {
         uidDomain
       });
       downloadText(`service-${localDate(start)}.ics`, calendar, 'text/calendar;charset=utf-8');
+      track('calendar_download', { download_type: 'single_service', file_extension: 'ics' });
       toast(labelDownloaded);
     });
   }
@@ -160,6 +162,7 @@ function setupDialog() {
       if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       dialog.showModal();
+      track('schedule_modal_open');
       $('[data-dialog-close]', dialog)?.focus();
     });
   }

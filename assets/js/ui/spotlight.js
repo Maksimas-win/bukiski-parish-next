@@ -1,4 +1,4 @@
-import { $, show } from './dom.js?v=d32bc6c124';
+import { $, show } from './dom.js?v=270543e9e7';
 
 // The only thing stored: a session flag that the home spotlight of one
 // publication has already been shown, so it does not come back on the next
