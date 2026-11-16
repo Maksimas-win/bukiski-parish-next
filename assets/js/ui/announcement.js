@@ -1,4 +1,4 @@
-import { $, show } from './dom.js?v=777c1a0b6e';
+import { $, show } from './dom.js?v=d32bc6c124';
 
 /** Today's date in Vilnius as YYYY-MM-DD, whatever the visitor's clock zone. */
 function vilniusToday() {
