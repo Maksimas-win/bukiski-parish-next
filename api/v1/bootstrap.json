@@ -78,39 +78,10 @@
     }
   },
   "schedule": {
-    "sourceUpdatedAt": "2026-11-18T03:24:32.198Z",
+    "sourceUpdatedAt": "2026-11-18T09:23:33.786Z",
     "maxAgeHours": 48,
     "stale": false,
     "items": [
-      {
-        "id": "svc-eab88af99a0f31947ce2",
-        "start": "2026-11-18T06:00:00.000Z",
-        "type": "service",
-        "title": {
-          "ru": "Божественная литургия",
-          "lt": "Dieviškoji liturgija",
-          "en": "Divine Liturgy",
-          "pl": "Boska Liturgia",
-          "de": "Göttliche Liturgie",
-          "uk": "Божественна літургія"
-        },
-        "detailsUrl": {
-          "ru": "https://bukiski-hram.net/ru/schedule.html",
-          "lt": "https://bukiski-hram.net/lt/schedule.html",
-          "en": "https://bukiski-hram.net/en/schedule.html",
-          "pl": "https://bukiski-hram.net/pl/schedule.html",
-          "de": "https://bukiski-hram.net/de/schedule.html",
-          "uk": "https://bukiski-hram.net/uk/schedule.html"
-        },
-        "note": {
-          "ru": "В день памяти святителя Тихона. После Литургии — молебен святителю Тихону и Отцам Поместного Собора 1917–1918 годов.",
-          "lt": "Šventojo Tichono atminimo dieną. Po liturgijos – molebenas šventajam Tichonui ir 1917–1918 m. Vietinio Bažnyčios Susirinkimo tėvams.",
-          "en": "Commemoration of Saint Tikhon. After the Liturgy, a prayer service to Saint Tikhon and the Fathers of the Local Council of 1917–1918.",
-          "pl": "W dniu wspomnienia św. Tichona. Po Liturgii — molebien ku czci św. Tichona i Ojców Soboru Lokalnego z lat 1917–1918.",
-          "de": "Am Gedenktag des heiligen Tichon. Nach der Liturgie: ein Bittgottesdienst (Moleben) zu Ehren des heiligen Tichon und der Väter des Landeskonzils von 1917–1918.",
-          "uk": "У день пам’яті святителя Тихона. Після Літургії — молебень святителю Тихону та Отцям Помісного Собору 1917–1918 років."
-        }
-      },
       {
         "id": "svc-142ac08220b6d32070b0",
         "start": "2026-11-22T06:00:00.000Z",
@@ -396,6 +367,35 @@
           "pl": "Godziny i nocna Liturgia",
           "de": "Horen und nächtliche Liturgie",
           "uk": "Часи і нічна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Рождество Христово",
+          "lt": "Kristaus Gimimas",
+          "en": "Nativity of Christ",
+          "pl": "Narodzenie Chrystusa",
+          "de": "Geburt Christi",
+          "uk": "Різдво Христове"
+        }
+      },
+      {
+        "id": "svc-f4d625bf2216d125a124",
+        "start": "2027-01-07T07:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Обедница",
+          "lt": "Obednica",
+          "en": "Typica",
+          "pl": "Obiednica",
+          "de": "Typika",
+          "uk": "Обідниця"
         },
         "detailsUrl": {
           "ru": "https://bukiski-hram.net/ru/schedule.html",
