@@ -2,7 +2,8 @@
 // they are never labelled as imported or removed with a temporary announcement.
 
 import { documentPath } from '../../../assets/js/document-data.js';
-import { html, attrs } from '../html.mjs';
+import { html, attrs, raw } from '../html.mjs';
+import { publicationEssay, renderCandleEssay } from './candle-essay.mjs';
 import { formatDate } from '../site.mjs';
 import { icon } from '../icons.mjs';
 import { externalLink, siteLink } from '../components.mjs';
@@ -68,6 +69,13 @@ function articleBlocks(publication) {
 export function publicationPage(site, entry, t) {
   const publication = entry.publication;
   const lang = entry.language;
+  if (publication.layout === 'essay') return raw(renderCandleEssay(publicationEssay(publication), {
+    home: site.url(site.route(lang, 'home')),
+    back: site.url(site.route(lang, 'news')),
+    backLabel: t.news,
+    image: site.url('/assets/img/publications/candles-editorial.jpg'),
+    dateLabel: t.published
+  }));
   const { body, headings } = articleBlocks(publication);
   const downloads = publication.documents.map(item => ({ ...item, document: site.documents.find(document => document.local === item.local), preview: DOCUMENT_PREVIEWS.get(item.local) }));
   const hero = site.photos.hero;
@@ -77,7 +85,7 @@ export function publicationPage(site, entry, t) {
     ...headings,
     ...(publication.sources.length ? [{ id: 'sources', text: publication.sourcesTitle || 'Источники' }] : [])
   ];
-  return html`<article class="article publication publication--feature${publication.layout === 'essay' ? ' publication--essay' : ''}" data-article>
+  return html`<article class="article publication publication--feature" data-article>
     <header class="publication__hero">
       <img${attrs({
         class: 'publication__hero-photo',
