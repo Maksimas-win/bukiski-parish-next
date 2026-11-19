@@ -2,14 +2,14 @@
 // this entry point wires up controls and loads a feature module only on the
 // pages that contain its markup.
 
-import { initCopyButtons } from './ui/copy.js?v=ea9a3daa2e';
-import { initLanguageMenu, initMenu } from './ui/menu.js?v=ea9a3daa2e';
-import { initPreferences } from './ui/preferences.js?v=ea9a3daa2e';
-import { initTilt } from './ui/tilt.js?v=ea9a3daa2e';
-import { initAnnouncement } from './ui/announcement.js?v=ea9a3daa2e';
-import { initThanks } from './ui/thanks.js?v=ea9a3daa2e';
-import { initSpotlight } from './ui/spotlight.js?v=ea9a3daa2e';
-import { initAnalytics } from './analytics.js?v=ea9a3daa2e';
+import { initCopyButtons } from './ui/copy.js?v=a069d6adcf';
+import { initLanguageMenu, initMenu } from './ui/menu.js?v=a069d6adcf';
+import { initPreferences } from './ui/preferences.js?v=a069d6adcf';
+import { initTilt } from './ui/tilt.js?v=a069d6adcf';
+import { initAnnouncement } from './ui/announcement.js?v=a069d6adcf';
+import { initThanks } from './ui/thanks.js?v=a069d6adcf';
+import { initSpotlight } from './ui/spotlight.js?v=a069d6adcf';
+import { initAnalytics } from './analytics.js?v=a069d6adcf';
 
 document.documentElement.classList.add('js');
 initAnalytics();
@@ -24,16 +24,16 @@ initThanks();
 initSpotlight();
 
 const features = [
-  ['[data-schedule]', () => import('./features/schedule.js?v=ea9a3daa2e')],
-  ['[data-library]', () => import('./features/library.js?v=ea9a3daa2e')],
-  ['[data-notes]', () => import('./features/notes.js?v=ea9a3daa2e')],
-  ['[data-article]', () => import('./features/article.js?v=ea9a3daa2e')],
-  ['[data-story]', () => import('./features/story.js?v=ea9a3daa2e')],
-  ['[data-history]', () => import('./features/history.js?v=ea9a3daa2e')],
-  ['[data-lightbox]', () => import('./features/lightbox.js?v=ea9a3daa2e')],
-  ['[data-gpm]', () => import('./features/gpm.js?v=ea9a3daa2e')],
-  ['[data-home-gpm]', () => import('./features/home-gpm.js?v=ea9a3daa2e')],
-  ['[data-document-download]', () => import('./document-downloads.js?v=ea9a3daa2e')]
+  ['[data-schedule]', () => import('./features/schedule.js?v=a069d6adcf')],
+  ['[data-library]', () => import('./features/library.js?v=a069d6adcf')],
+  ['[data-notes]', () => import('./features/notes.js?v=a069d6adcf')],
+  ['[data-article]', () => import('./features/article.js?v=a069d6adcf')],
+  ['[data-story]', () => import('./features/story.js?v=a069d6adcf')],
+  ['[data-history]', () => import('./features/history.js?v=a069d6adcf')],
+  ['[data-lightbox]', () => import('./features/lightbox.js?v=a069d6adcf')],
+  ['[data-gpm]', () => import('./features/gpm.js?v=a069d6adcf')],
+  ['[data-home-gpm]', () => import('./features/home-gpm.js?v=a069d6adcf')],
+  ['[data-document-download]', () => import('./document-downloads.js?v=a069d6adcf')]
 ];
 
 for (const [selector, load] of features) {

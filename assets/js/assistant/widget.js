@@ -1,9 +1,9 @@
-import { UI, LANGUAGES } from './i18n.js?v=ea9a3daa2e';
-import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js?v=ea9a3daa2e';
-import { WEB_UI } from './web-i18n.js?v=ea9a3daa2e';
-import { providerCopy, allProviderPolicy } from './provider-copy.js?v=ea9a3daa2e';
-import { createWebApi } from './web-api.js?v=ea9a3daa2e';
-import { mountRequestForm } from './request-form.js?v=ea9a3daa2e';
+import { UI, LANGUAGES } from './i18n.js?v=a069d6adcf';
+import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js?v=a069d6adcf';
+import { WEB_UI } from './web-i18n.js?v=a069d6adcf';
+import { providerCopy, allProviderPolicy } from './provider-copy.js?v=a069d6adcf';
+import { createWebApi } from './web-api.js?v=a069d6adcf';
+import { mountRequestForm } from './request-form.js?v=a069d6adcf';
 
 /** Static-hosting compatible UI; online actions are opt-in, with no browser persistence. */
 export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 'ru', parent = document.body } = {}) {

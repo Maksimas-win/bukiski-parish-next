@@ -1,7 +1,7 @@
 // Reading aids for long articles: progress, contents highlight, share, back to top.
 
-import { $, $$, show, prefersReducedMotion } from '../ui/dom.js?v=ea9a3daa2e';
-import { toast } from '../ui/toast.js?v=ea9a3daa2e';
+import { $, $$, show, prefersReducedMotion } from '../ui/dom.js?v=a069d6adcf';
+import { toast } from '../ui/toast.js?v=a069d6adcf';
 
 const TO_TOP_AFTER_PX = 1200;
 
