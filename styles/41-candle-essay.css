@@ -198,3 +198,71 @@ html.high-contrast .candle-feature__chapter--welcome { background: #000; }
   .candle-feature__sources summary { font-size: 17pt; }
   .candle-feature__sources li { break-inside: avoid; font-size: 10pt; }
 }
+
+/* Prayer notes: precise HTML examples, a paper cover and native disclosures. */
+.candle-feature--prayer-notes .candle-feature__cover {
+  min-height: 37.5rem;
+  background: radial-gradient(ellipse at 85% 24%, #345649 0%, #142b25 57%, #10251e 100%);
+}
+.candle-feature--prayer-notes .candle-feature__cover::after { display: none; }
+.candle-feature--prayer-notes .candle-feature__cover-inner { position: relative; z-index: 1; }
+.candle-feature--prayer-notes .candle-feature__title { max-width: 37rem; }
+.candle-feature--prayer-notes .candle-feature__subtitle { max-width: 29rem; }
+.prayer-notes__cover-art { position: absolute; top: 5rem; right: max(4rem, calc((100% - 72.5rem) / 2)); width: 21rem; height: 30rem; }
+.prayer-notes__folio, .prayer-notes__folio-back { position: absolute; inset: 0; border: .0625rem solid #d0bf9c; }
+.prayer-notes__folio-back { inset: -.5rem .5rem .5rem -.5rem; transform: rotate(-5deg); background: #cbbda2; }
+.prayer-notes__folio { display: flex; flex-direction: column; align-items: center; padding: 2rem 1.5rem; transform: rotate(4deg); background: #f6f1e7; box-shadow: 0 1rem 2.5rem #081b1759; color: #28392c; font-family: var(--cf-serif); }
+.prayer-notes__folio img { width: 1.75rem; height: 2.625rem; }
+.prayer-notes__folio-title { margin-top: 1.25rem !important; font: 400 2rem/1.25 var(--cf-serif); }
+.prayer-notes__folio-names { width: 100%; margin-top: 1.5rem; text-align: center; font: 1.5rem/2.1 var(--cf-serif); }
+.prayer-notes__folio-prayer { margin-top: auto !important; color: #74603c; font: italic 1.25rem/1.5 var(--cf-serif); }
+.prayer-notes__folio-rule { width: 3.5rem; margin-top: 1.125rem; border-top: .0625rem solid #af9665; }
+.candle-feature__chapter--examples .candle-feature__chapter-copy { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.25rem; }
+.candle-feature__chapter--examples .candle-feature__chapter-copy > p { grid-column: 1 / -1; margin-bottom: .75rem; }
+.candle-feature .prayer-notes__sample { margin: 0; min-width: 0; padding: 1.625rem 1rem 1.25rem; border: .0625rem solid #d2c6b1; background: #fffcf5; box-shadow: 0 .375rem 1rem #5b49200d; text-align: center; break-inside: avoid; }
+.prayer-notes__cross { display: block; width: 1.5rem; height: 2.25rem; margin: 0 auto 1rem; }
+.candle-feature .prayer-notes__sample-text { font: 1.1875rem/2 var(--cf-serif); white-space: pre-line; text-align: center; text-align-last: center; text-indent: 0; hyphens: none; overflow-wrap: anywhere; }
+.candle-feature .prayer-notes__sample-text::first-line { color: var(--cf-forest); font-size: 1.5rem; font-weight: 600; line-height: 2.6; }
+.prayer-notes__sample figcaption { margin-top: 1.5rem; padding-top: .875rem; border-top: .0625rem solid #ded4c1; color: var(--cf-muted); font: .8125rem/1.5 var(--cf-sans); }
+.prayer-notes__question { padding-block: 1.125rem; border-top: .0625rem solid var(--cf-rule); }
+.prayer-notes__question:last-child { border-bottom: .0625rem solid var(--cf-rule); }
+.prayer-notes__question summary { min-height: 3rem; padding-block: .5rem; color: var(--cf-forest); cursor: pointer; font: 600 1.3125rem/1.45 var(--cf-serif); text-align: start; }
+.prayer-notes__question summary::marker { color: var(--cf-gold); font-size: .9em; }
+.candle-feature .prayer-notes__question p { margin-top: .625rem; font-size: 1.1875rem; text-indent: 0; }
+@media (max-width: 68.75rem) and (min-width: 48rem) {
+  .prayer-notes__cover-art { right: 2rem; width: 18rem; height: 27rem; top: 6.5rem; }
+  .candle-feature--prayer-notes .candle-feature__title { max-width: 57%; }
+  .candle-feature--prayer-notes .candle-feature__subtitle { max-width: 53%; }
+}
+@media (max-width: 47.9375rem) {
+  .candle-feature--prayer-notes .candle-feature__cover { display: flex; flex-direction: column; min-height: 0; }
+  .candle-feature--prayer-notes .candle-feature__cover-inner { order: 1; padding-bottom: 2.25rem; }
+  .candle-feature--prayer-notes .candle-feature__title { max-width: 100%; }
+  .candle-feature--prayer-notes .candle-feature__subtitle { max-width: 30ch; }
+  .prayer-notes__cover-art { position: relative; order: 2; inset: auto; flex: none; width: 17rem; height: 13rem; margin: 0 auto; }
+  .prayer-notes__folio, .prayer-notes__folio-back { bottom: auto; height: 27rem; }
+  .prayer-notes__folio { padding-top: 1.5rem; }
+  .prayer-notes__folio-title { font-size: 1.75rem; margin-top: .875rem !important; }
+  .prayer-notes__folio-names { margin-top: 1rem; font-size: 1.3125rem; }
+  .prayer-notes__question summary { font-size: 1.25rem; }
+}
+@media (max-width: 37.4375rem) {
+  .candle-feature__chapter--examples .candle-feature__chapter-copy { grid-template-columns: 1fr; }
+  .candle-feature .prayer-notes__sample { padding: 1.5rem 1.25rem; }
+  .candle-feature .prayer-notes__question p { font-size: 1.15625rem; }
+}
+html.high-contrast .candle-feature .prayer-notes__sample { background: #fff; border-color: #000; }
+@media (forced-colors: active) {
+  .prayer-notes__cover-art { display: none; }
+  .candle-feature .prayer-notes__sample { background: Canvas; color: CanvasText; border-color: CanvasText; }
+}
+@media print {
+  .candle-feature--prayer-notes .candle-feature__cover { display: block; min-height: 0; background: none; }
+  .prayer-notes__cover-art { display: none !important; }
+  .candle-feature__chapter--examples .candle-feature__chapter-copy { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .candle-feature .prayer-notes__sample { background: #fff; box-shadow: none; padding: 1rem; }
+  .candle-feature .prayer-notes__sample-text { font-size: 11pt; }
+  .prayer-notes__question { break-inside: avoid; }
+  .prayer-notes__question summary { font-size: 12pt; }
+  .candle-feature .prayer-notes__question p { font-size: 11.5pt; }
+}
