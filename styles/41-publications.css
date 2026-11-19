@@ -762,3 +762,40 @@ html.high-contrast .publication__document-preview {
     font-size: 10pt;
   }
 }
+
+/* Editorial essays use the local book face; navigation keeps the UI font. */
+.publication--essay .publication__body {
+  font-family: var(--font-serif);
+  font-size: 1.3125rem;
+  line-height: 1.78;
+}
+
+.publication--essay .publication__lead {
+  text-align: start;
+  text-indent: 0;
+}
+
+.publication--essay .publication__sources,
+.publication--essay .publication__signature {
+  font-family: var(--font-sans);
+}
+
+@media (max-width: 47.999rem) {
+  .publication--essay .publication__body {
+    font-size: 1.1875rem;
+    line-height: 1.75;
+  }
+
+  .publication--essay .publication__body > p:not(.publication__signature),
+  .publication--essay .publication__body > blockquote > p {
+    text-align: start;
+    hyphens: manual;
+  }
+}
+
+@media print {
+  .publication--essay .publication__body {
+    font-size: 11.5pt;
+    line-height: 1.55;
+  }
+}

@@ -77,7 +77,7 @@ export function publicationPage(site, entry, t) {
     ...headings,
     ...(publication.sources.length ? [{ id: 'sources', text: publication.sourcesTitle || 'Источники' }] : [])
   ];
-  return html`<article class="article publication publication--feature" data-article>
+  return html`<article class="article publication publication--feature${publication.layout === 'essay' ? ' publication--essay' : ''}" data-article>
     <header class="publication__hero">
       <img${attrs({
         class: 'publication__hero-photo',
