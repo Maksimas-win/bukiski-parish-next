@@ -78,39 +78,10 @@
     }
   },
   "schedule": {
-    "sourceUpdatedAt": "2026-11-22T03:25:08.062Z",
+    "sourceUpdatedAt": "2026-11-22T09:21:45.379Z",
     "maxAgeHours": 48,
     "stale": false,
     "items": [
-      {
-        "id": "svc-142ac08220b6d32070b0",
-        "start": "2026-11-22T06:00:00.000Z",
-        "type": "service",
-        "title": {
-          "ru": "Божественная литургия",
-          "lt": "Dieviškoji liturgija",
-          "en": "Divine Liturgy",
-          "pl": "Boska Liturgia",
-          "de": "Göttliche Liturgie",
-          "uk": "Божественна літургія"
-        },
-        "detailsUrl": {
-          "ru": "https://bukiski-hram.net/ru/schedule.html",
-          "lt": "https://bukiski-hram.net/lt/schedule.html",
-          "en": "https://bukiski-hram.net/en/schedule.html",
-          "pl": "https://bukiski-hram.net/pl/schedule.html",
-          "de": "https://bukiski-hram.net/de/schedule.html",
-          "uk": "https://bukiski-hram.net/uk/schedule.html"
-        },
-        "summary": {
-          "ru": "Неделя 25-я по Пятидесятнице",
-          "lt": "25-asis sekmadienis po Sekminių",
-          "en": "25th Sunday after Pentecost",
-          "pl": "25. niedziela po Pięćdziesiątnicy",
-          "de": "25. Sonntag nach Pfingsten",
-          "uk": "Неділя 25-та по П’ятидесятниці"
-        }
-      },
       {
         "id": "svc-03eaf1010ec5c66215c9",
         "start": "2026-11-29T06:00:00.000Z",
@@ -412,6 +383,35 @@
           "pl": "Narodzenie Chrystusa",
           "de": "Geburt Christi",
           "uk": "Різдво Христове"
+        }
+      },
+      {
+        "id": "svc-07b8b11891d3d436932b",
+        "start": "2027-01-10T06:00:00.000Z",
+        "type": "service",
+        "title": {
+          "ru": "Божественная литургия",
+          "lt": "Dieviškoji liturgija",
+          "en": "Divine Liturgy",
+          "pl": "Boska Liturgia",
+          "de": "Göttliche Liturgie",
+          "uk": "Божественна літургія"
+        },
+        "detailsUrl": {
+          "ru": "https://bukiski-hram.net/ru/schedule.html",
+          "lt": "https://bukiski-hram.net/lt/schedule.html",
+          "en": "https://bukiski-hram.net/en/schedule.html",
+          "pl": "https://bukiski-hram.net/pl/schedule.html",
+          "de": "https://bukiski-hram.net/de/schedule.html",
+          "uk": "https://bukiski-hram.net/uk/schedule.html"
+        },
+        "summary": {
+          "ru": "Неделя 32-я по Пятидесятнице",
+          "lt": "32-asis sekmadienis po Sekminių",
+          "en": "32nd Sunday after Pentecost",
+          "pl": "32. niedziela po Pięćdziesiątnicy",
+          "de": "32. Sonntag nach Pfingsten",
+          "uk": "Неділя 32-га по П’ятидесятниці"
         }
       }
     ]
