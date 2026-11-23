@@ -364,7 +364,16 @@
     "homeGpmOpen": "Открыть пошаговую инструкцию",
     "homeGpmCalc": "Рассчитать свой пример",
     "calendarBook": "Православный календарь 2027",
-    "calendarBookNote": "Чтения дня и праздники — книга, которую можно листать."
+    "calendarBookNote": "Чтения дня и праздники — книга, которую можно листать.",
+    "homeCalendarKicker": "Церковный календарь",
+    "homeCalendarText": "Чтения, праздники, посты и память святых на каждый день 2027 года. Книгу можно листать, как бумажную, а тексты Евангелия и Апостола открываются прямо из календаря.",
+    "homeCalendarPoints": [
+      "Листается, как бумага",
+      "Карточка каждого дня",
+      "Поиск по датам и святым"
+    ],
+    "homeCalendarAction": "Открыть календарь",
+    "homeCalendarLanguage": "На русском языке"
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -731,7 +740,16 @@
     "homeGpmOpen": "Atverti nuoseklią instrukciją",
     "homeGpmCalc": "Apskaičiuoti savo pavyzdį",
     "calendarBook": "Stačiatikių kalendorius 2027",
-    "calendarBookNote": "Dienos skaitiniai ir šventės – knyga, kurią galima vartyti (rusų kalba)."
+    "calendarBookNote": "Dienos skaitiniai ir šventės – knyga, kurią galima vartyti (rusų kalba).",
+    "homeCalendarKicker": "Bažnytinis kalendorius",
+    "homeCalendarText": "Kiekvienos 2027 metų dienos skaitiniai, šventės, pasninkai ir šventųjų minėjimai. Knygą galima vartyti kaip popierinę, o Evangelijos ir Apaštalo tekstai atsiveria tiesiai iš kalendoriaus.",
+    "homeCalendarPoints": [
+      "Vartoma kaip popierinė knyga",
+      "Kiekvienos dienos kortelė",
+      "Paieška pagal datą ir šventuosius"
+    ],
+    "homeCalendarAction": "Atverti kalendorių",
+    "homeCalendarLanguage": "Rusų kalba"
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -1098,7 +1116,16 @@
     "homeGpmOpen": "Open the step-by-step guide",
     "homeGpmCalc": "Calculate your own example",
     "calendarBook": "Orthodox calendar 2027",
-    "calendarBookNote": "Daily readings and feasts in a book you can leaf through (in Russian)."
+    "calendarBookNote": "Daily readings and feasts in a book you can leaf through (in Russian).",
+    "homeCalendarKicker": "Church calendar",
+    "homeCalendarText": "Readings, feasts, fasts and the saints of every day of 2027. Leaf through it like a printed book; the Gospel and Epistle texts open straight from the calendar.",
+    "homeCalendarPoints": [
+      "Pages turn like paper",
+      "A card for every day",
+      "Search by date or saint"
+    ],
+    "homeCalendarAction": "Open the calendar",
+    "homeCalendarLanguage": "In Russian"
   },
   "pl": {
     "name": "Cerkiew Narodzenia Pańskiego",
@@ -1465,7 +1492,16 @@
     "homeGpmOpen": "Otwórz instrukcję krok po kroku",
     "homeGpmCalc": "Oblicz własny przykład",
     "calendarBook": "Kalendarz prawosławny 2027",
-    "calendarBookNote": "Czytania na każdy dzień i święta w książce, którą można kartkować (po rosyjsku)."
+    "calendarBookNote": "Czytania na każdy dzień i święta w książce, którą można kartkować (po rosyjsku).",
+    "homeCalendarKicker": "Kalendarz cerkiewny",
+    "homeCalendarText": "Czytania, święta, posty i wspomnienia świętych na każdy dzień 2027 roku. Można go kartkować jak papierową książkę, a teksty Ewangelii i Apostoła otwierają się prosto z kalendarza.",
+    "homeCalendarPoints": [
+      "Kartki jak z papieru",
+      "Karta każdego dnia",
+      "Wyszukiwanie po dacie i świętych"
+    ],
+    "homeCalendarAction": "Otwórz kalendarz",
+    "homeCalendarLanguage": "Po rosyjsku"
   },
   "de": {
     "name": "Kirche der Geburt Christi",
@@ -1832,7 +1868,16 @@
     "homeGpmOpen": "Schritt-für-Schritt-Anleitung öffnen",
     "homeGpmCalc": "Eigenes Beispiel berechnen",
     "calendarBook": "Orthodoxer Kalender 2027",
-    "calendarBookNote": "Tageslesungen und Feste als Buch zum Durchblättern (auf Russisch)."
+    "calendarBookNote": "Tageslesungen und Feste als Buch zum Durchblättern (auf Russisch).",
+    "homeCalendarKicker": "Kirchenkalender",
+    "homeCalendarText": "Lesungen, Feste, Fastenzeiten und das Gedächtnis der Heiligen für jeden Tag des Jahres 2027. Man blättert darin wie in einem gedruckten Buch; die Texte von Evangelium und Apostel öffnen sich direkt aus dem Kalender.",
+    "homeCalendarPoints": [
+      "Blättern wie auf Papier",
+      "Eine Karte für jeden Tag",
+      "Suche nach Datum und Heiligen"
+    ],
+    "homeCalendarAction": "Kalender öffnen",
+    "homeCalendarLanguage": "Auf Russisch"
   },
   "uk": {
     "name": "Храм Різдва Христового",
@@ -2199,6 +2244,15 @@
     "homeGpmOpen": "Відкрити покрокову інструкцію",
     "homeGpmCalc": "Розрахувати свій приклад",
     "calendarBook": "Православний календар 2027",
-    "calendarBookNote": "Читання дня і свята — книга, яку можна гортати (російською мовою)."
+    "calendarBookNote": "Читання дня і свята — книга, яку можна гортати (російською мовою).",
+    "homeCalendarKicker": "Церковний календар",
+    "homeCalendarText": "Читання, свята, пости й пам’ять святих на кожен день 2027 року. Книгу можна гортати, як паперову, а тексти Євангелія та Апостола відкриваються просто з календаря.",
+    "homeCalendarPoints": [
+      "Гортається, як папір",
+      "Картка кожного дня",
+      "Пошук за датою і святими"
+    ],
+    "homeCalendarAction": "Відкрити календар",
+    "homeCalendarLanguage": "Російською мовою"
   }
 }

@@ -88,3 +88,31 @@ test('every day has a readable card whose readings lead to the Bible on Azbyka',
   assert.ok(readings > 1400, `${readings} readings`);
   assert.equal(days['0427'].special && days['0726'].special, true, '27 April and 26 July are marked');
 });
+
+test('every home page opens a window onto the book between the services and the 1,2 % band', async () => {
+  const locales = JSON.parse(await read('content/locales.json'));
+  for (const name of ['home/cover.webp', 'home/inside.webp']) await access(resolve(root, 'assets/calendar-2027', name));
+  for (const lang of settings.locales) {
+    const home = await read(`dist/${lang}/index.html`);
+    assert.equal((home.match(/class="shell calendar-window"/g) || []).length, 1, lang);
+    const start = home.indexOf('class="shell calendar-window"');
+    assert.ok(home.indexOf('class="services-band"') < start && start < home.indexOf('class="gpm-band"'), `${lang}: the window sits after the services`);
+    const section = home.slice(start, home.indexOf('</section>', start));
+    // one link, to the Russian book; the other languages say that it is in Russian
+    const links = [...section.matchAll(/<a\b[^>]*>/g)].map(match => match[0]);
+    assert.equal(links.length, 1, lang);
+    assert.ok(links[0].includes(`href="${base}${CALENDAR_BOOK_PATH}"`), lang);
+    assert.equal(links[0].includes('hreflang="ru"'), lang !== 'ru', lang);
+    assert.equal(section.includes('class="calendar-window__language"'), lang !== 'ru', lang);
+    assert.ok(section.includes(`>${locales[lang].calendarBook}</h2>`), lang);
+    assert.equal((section.match(/<li>/g) || []).length, locales[lang].homeCalendarPoints.length, lang);
+    assert.equal(locales[lang].homeCalendarPoints.length, 3, lang);
+    // the book is decoration: hidden from screen readers, images lazy and without alt text
+    assert.match(section, /class="calendar-window__stage" aria-hidden="true"/);
+    for (const image of section.match(/<img\b[^>]*>/g)) {
+      assert.match(image, /alt=""/);
+      assert.match(image, /loading="lazy"/);
+    }
+    assert.doesNotMatch(section, /\sstyle="/);
+  }
+});
