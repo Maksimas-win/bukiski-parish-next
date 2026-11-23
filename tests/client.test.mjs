@@ -21,7 +21,8 @@ test('Scripts use safe DOM operations; only the reviewed analytics module can lo
       assert.match(source, /redirect: 'error'/);
     } else if (name === 'analytics.js') {
       assert.doesNotMatch(source.replace('https://www.googletagmanager.com/gtm.js?id=', '').replace("'https:'", ''), /https?:\/\//, name);
-    } else assert.doesNotMatch(source, /https?:\/\//, name);
+    // The SVG namespace is an identifier, not an address that is ever requested.
+    } else assert.doesNotMatch(source.replaceAll('http://www.w3.org/2000/svg', ''), /https?:\/\//, name);
   }
 });
 
@@ -59,7 +60,7 @@ test('Prayer names leave the tab only on «Отправить», after consent, 
 
 test('Network requests are limited to reviewed modules and send no cookies', () => {
   const fetchers = [...sources].filter(([, source]) => /\bfetch\(/.test(source)).map(([name]) => name).sort();
-  assert.deepEqual(fetchers, ['assistant/widget.js', 'document-downloads.js', 'features/library.js', 'features/notes.js']);
+  assert.deepEqual(fetchers, ['assistant/widget.js', 'document-downloads.js', 'features/calendar-book.js', 'features/library.js', 'features/notes.js']);
   for (const name of fetchers) assert.match(sources.get(name), /credentials: 'omit'/, name);
   const assistant = sources.get('assistant/widget.js');
   assert.match(assistant, /feed\.origin !== origin/);

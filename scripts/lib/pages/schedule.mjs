@@ -3,6 +3,7 @@ import { html, attrs } from '../html.mjs';
 import { icon } from '../icons.mjs';
 import { capitalize, formatDate } from '../site.mjs';
 import { externalLink, pageHead, phoneLink, scheduleData, scheduleStatus, serviceRow, siteLink } from '../components.mjs';
+import { CALENDAR_BOOK_PATH } from './calendar-book.mjs';
 
 /** Months open on first view; the rest unfold with «Показать ещё» (all are visible without JavaScript). */
 const INITIAL_MONTHS = 3;
@@ -64,6 +65,10 @@ export function schedulePage(site, lang, t) {
     <p class="schedule__more"><button type="button" class="button button--quiet" data-show-more hidden>${t.showMore}</button></p>
     </div>
     <aside class="schedule__aside card card--tinted">
+      <a${attrs({ class: 'calendar-book-card', href: site.url(CALENDAR_BOOK_PATH), hreflang: lang === 'ru' ? null : 'ru' })}>
+        <img${attrs({ class: 'calendar-book-card__cover', src: site.url('/assets/calendar-2027/thumbs/t01.webp'), alt: '', width: 240, height: 340, loading: 'lazy', decoding: 'async' })}>
+        <span class="calendar-book-card__text"><span class="calendar-book-card__title">${t.calendarBook}</span><span class="calendar-book-card__note">${t.calendarBookNote}</span></span>
+      </a>
       ${scheduleStatus(site, lang, t)}
       <div class="actions">
         ${externalLink(t, calendarLink(site, lang), t.calendar, 'button')}
