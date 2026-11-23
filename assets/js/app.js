@@ -2,14 +2,14 @@
 // this entry point wires up controls and loads a feature module only on the
 // pages that contain its markup.
 
-import { initCopyButtons } from './ui/copy.js?v=51016eb453';
-import { initLanguageMenu, initMenu } from './ui/menu.js?v=51016eb453';
-import { initPreferences } from './ui/preferences.js?v=51016eb453';
-import { initTilt } from './ui/tilt.js?v=51016eb453';
-import { initAnnouncement } from './ui/announcement.js?v=51016eb453';
-import { initThanks } from './ui/thanks.js?v=51016eb453';
-import { initSpotlight } from './ui/spotlight.js?v=51016eb453';
-import { initAnalytics } from './analytics.js?v=51016eb453';
+import { initCopyButtons } from './ui/copy.js?v=ce988d822e';
+import { initLanguageMenu, initMenu } from './ui/menu.js?v=ce988d822e';
+import { initPreferences } from './ui/preferences.js?v=ce988d822e';
+import { initTilt } from './ui/tilt.js?v=ce988d822e';
+import { initAnnouncement } from './ui/announcement.js?v=ce988d822e';
+import { initThanks } from './ui/thanks.js?v=ce988d822e';
+import { initSpotlight } from './ui/spotlight.js?v=ce988d822e';
+import { initAnalytics } from './analytics.js?v=ce988d822e';
 
 document.documentElement.classList.add('js');
 initAnalytics();
@@ -24,17 +24,17 @@ initThanks();
 initSpotlight();
 
 const features = [
-  ['[data-schedule]', () => import('./features/schedule.js?v=51016eb453')],
-  ['[data-library]', () => import('./features/library.js?v=51016eb453')],
-  ['[data-notes]', () => import('./features/notes.js?v=51016eb453')],
-  ['[data-article]', () => import('./features/article.js?v=51016eb453')],
-  ['[data-story]', () => import('./features/story.js?v=51016eb453')],
-  ['[data-history]', () => import('./features/history.js?v=51016eb453')],
-  ['[data-lightbox]', () => import('./features/lightbox.js?v=51016eb453')],
-  ['[data-gpm]', () => import('./features/gpm.js?v=51016eb453')],
-  ['[data-flipbook]', () => import('./features/calendar-book.js?v=51016eb453')],
-  ['[data-home-gpm]', () => import('./features/home-gpm.js?v=51016eb453')],
-  ['[data-document-download]', () => import('./document-downloads.js?v=51016eb453')]
+  ['[data-schedule]', () => import('./features/schedule.js?v=ce988d822e')],
+  ['[data-library]', () => import('./features/library.js?v=ce988d822e')],
+  ['[data-notes]', () => import('./features/notes.js?v=ce988d822e')],
+  ['[data-article]', () => import('./features/article.js?v=ce988d822e')],
+  ['[data-story]', () => import('./features/story.js?v=ce988d822e')],
+  ['[data-history]', () => import('./features/history.js?v=ce988d822e')],
+  ['[data-lightbox]', () => import('./features/lightbox.js?v=ce988d822e')],
+  ['[data-gpm]', () => import('./features/gpm.js?v=ce988d822e')],
+  ['[data-flipbook]', () => import('./features/calendar-book.js?v=ce988d822e')],
+  ['[data-home-gpm]', () => import('./features/home-gpm.js?v=ce988d822e')],
+  ['[data-document-download]', () => import('./document-downloads.js?v=ce988d822e')]
 ];
 
 for (const [selector, load] of features) {

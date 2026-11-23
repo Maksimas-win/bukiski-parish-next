@@ -1,5 +1,5 @@
-import { $$, show } from './dom.js?v=51016eb453';
-import { toast } from './toast.js?v=51016eb453';
+import { $$, show } from './dom.js?v=ce988d822e';
+import { toast } from './toast.js?v=ce988d822e';
 
 /** Enables every [data-copy] button when the browser can write to the clipboard. */
 export function initCopyButtons() {

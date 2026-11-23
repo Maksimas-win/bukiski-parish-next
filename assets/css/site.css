@@ -9667,6 +9667,7 @@ html.large-text .gpm-figure {
   bottom: 0.9rem;
   left: 50%;
   z-index: 7;
+  width: max-content;
   max-width: calc(100% - 2rem);
   margin: 0;
   padding: 0.5rem 1rem;
@@ -10623,7 +10624,21 @@ html.large-text .gpm-figure {
   overflow: hidden;
 }
 
-/* Narrow books */
+/* Narrow books: secondary tools keep only their icons first, then all tools */
+
+@container flipbook (max-width: 1500px) {
+  .flipbook__tools .flipbook__tool--minor .flipbook__tool-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .flipbook__tools .flipbook__tool--minor {
+    padding: 0.35rem;
+  }
+}
 
 @container flipbook (max-width: 1180px) {
   .flipbook__tools .flipbook__tool-label {
