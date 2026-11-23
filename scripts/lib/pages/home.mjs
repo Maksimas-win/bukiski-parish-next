@@ -3,6 +3,7 @@ import { html, attrs } from '../html.mjs';
 import { icon, emblem } from '../icons.mjs';
 import { copyButton, externalLink, phoneLink, scheduleData, scheduleStatus, serviceRow, siteLink, socialCards } from '../components.mjs';
 import { gpmSummary, fill } from './gpm.mjs';
+import { CALENDAR_BOOK_PATH } from './calendar-book.mjs';
 import { supportCents, formatCents } from '../../../assets/js/features/gpm/math.js';
 
 const UI_LOCALES = { ru: 'ru-RU', lt: 'lt-LT', en: 'en-GB', pl: 'pl-PL', de: 'de-DE', uk: 'uk-UA' };
@@ -59,6 +60,53 @@ function gpmCard(site, lang, t) {
       ${Object.entries(gpm.phaseLabels).map(([state, label]) => html`<p class="hero-gpm__state" data-phase="${state}"${attrs({ hidden: state !== gpm.phase })}>${label}</p>`)}
     </div>
   </aside>`;
+}
+
+/** Icons of the three points under the calendar window, in the order of homeCalendarPoints. */
+const CALENDAR_POINT_ICONS = ['book', 'calendar', 'search'];
+
+/**
+ * After the services: a window onto the 2027 calendar book. The cover stands
+ * in 3D and opens under the pointer or keyboard focus (on touch screens, while
+ * it scrolls into view); the whole panel leads to the book. The book is in
+ * Russian, so the other languages say so next to the button.
+ */
+function calendarWindow(site, lang, t) {
+  const book = path => site.url(`/assets/calendar-2027/${path}`);
+  const image = (className, thumb, file) => html`<img${attrs({
+    class: className,
+    src: book(file),
+    srcset: `${book(thumb)} 240w, ${book(file)} 480w`,
+    sizes: '(max-width: 47.99rem) 9rem, 16.5rem',
+    width: 480,
+    height: 679,
+    loading: 'lazy',
+    decoding: 'async',
+    alt: ''
+  })}>`;
+  return html`<section class="shell calendar-window" aria-labelledby="calendar-window-title">
+    <div class="calendar-window__panel" data-tilt>
+      <div class="calendar-window__stage" aria-hidden="true">
+        <span class="calendar-window__book">
+          <span class="calendar-window__block"></span>
+          ${image('calendar-window__inside', 'thumbs/t03.webp', 'home/inside.webp')}
+          <span class="calendar-window__cover">${image('calendar-window__face', 'thumbs/t01.webp', 'home/cover.webp')}</span>
+        </span>
+      </div>
+      <div class="calendar-window__copy">
+        <p class="eyebrow calendar-window__kicker">${t.homeCalendarKicker}</p>
+        <h2 id="calendar-window-title" class="calendar-window__title">${t.calendarBook}</h2>
+        <p class="calendar-window__text">${t.homeCalendarText}</p>
+        <ul class="calendar-window__points">
+          ${t.homeCalendarPoints.map((point, index) => html`<li><span class="calendar-window__point-icon" aria-hidden="true">${icon(CALENDAR_POINT_ICONS[index])}</span>${point}</li>`)}
+        </ul>
+        <p class="calendar-window__actions">
+          <a${attrs({ class: 'button button--on-dark calendar-window__open', href: site.url(CALENDAR_BOOK_PATH), hreflang: lang === 'ru' ? null : 'ru' })}>${t.homeCalendarAction}${icon('arrow-right')}</a>
+          ${lang === 'ru' ? '' : html`<span class="calendar-window__language">${icon('globe')}${t.homeCalendarLanguage}</span>`}
+        </p>
+      </div>
+    </div>
+  </section>`;
 }
 
 /**
@@ -272,5 +320,5 @@ function support(site, lang, t) {
 }
 
 export function homePage(site, lang, t) {
-  return html`${hero(site, lang, t)}${quickLinks(site, lang, t)}${services(site, lang, t)}${gpmBand(site, lang, t)}${photos(site, lang, t)}${visit(site, lang, t)}${social(site, lang, t)}${explore(site, lang, t)}${support(site, lang, t)}`;
+  return html`${hero(site, lang, t)}${quickLinks(site, lang, t)}${services(site, lang, t)}${calendarWindow(site, lang, t)}${gpmBand(site, lang, t)}${photos(site, lang, t)}${visit(site, lang, t)}${social(site, lang, t)}${explore(site, lang, t)}${support(site, lang, t)}`;
 }
