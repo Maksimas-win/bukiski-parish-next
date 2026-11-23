@@ -15,6 +15,7 @@
 
 import { writeFile, appendFile } from 'node:fs/promises';
 import { setTimeout as delay } from 'node:timers/promises';
+import { isPermanentRedirect } from './redirect.mjs';
 
 const MODE = process.env.MODE || 'health';
 const TIMEOUT_MS = 15000;
@@ -29,7 +30,7 @@ const SITES = {
   },
   org: {
     origin: 'https://bukiski-hram.org',
-    pages: ['/', '/ru/', '/ru/schedule.html', '/ru/contacts.html', '/lt/', '/en/', '/pl/', '/ru/gpm.html'],
+    pages: ['/ru/', '/ru/schedule.html', '/ru/contacts.html', '/lt/', '/en/', '/pl/', '/ru/gpm.html'],
     marker: 'id="main-content"'
   }
 };
@@ -116,6 +117,10 @@ async function checkOrg() {
     if (age > STALE_HOURS) fail('org:schedule-freshness', `calendar data last fetched ${fetchedAt} (${Math.round(age)} h ago, limit ${STALE_HOURS} h)`);
     const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Vilnius' }).format(new Date());
     if (!feed.coverage?.to || feed.coverage.to < today) fail('org:schedule-coverage', `coverage ends ${feed.coverage?.to}`);
+  }
+  const home = await request(SITES.org.origin + '/');
+  if (!isPermanentRedirect(home, new URL('/ru/', SITES.org.origin))) {
+    fail('org:/', `HTTP ${home.status || home.error} → ${home.headers.get('location')}`);
   }
   for (const path of SITES.org.pages) await checkPage('org', path, { version: `content="${version}"`, marker: SITES.org.marker });
   await checkAsset('org', `/assets/css/base.css?v=${version}`, 'text/css');
