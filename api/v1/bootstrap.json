@@ -78,7 +78,7 @@
     }
   },
   "schedule": {
-    "sourceUpdatedAt": "2026-11-23T03:27:30.601Z",
+    "sourceUpdatedAt": "2026-11-23T09:27:39.960Z",
     "maxAgeHours": 48,
     "stale": false,
     "items": [
