@@ -1,0 +1,74 @@
+/* Calendar 2027 as a book: its page (/ru/calendar-2027.html) and the card on the schedule page. */
+
+.calendar-book {
+  width: min(100% - 2rem, 88rem);
+  margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.calendar-book__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.calendar-book-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0.85rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l, 1rem);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.calendar-book-card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-2px);
+}
+
+.calendar-book-card:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.calendar-book-card__cover {
+  flex: none;
+  width: 4.25rem;
+  height: auto;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.35rem 0.9rem rgba(0, 0, 0, 0.22);
+  transform: rotate(-3deg);
+}
+
+.calendar-book-card__text {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.calendar-book-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.calendar-book-card__note {
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .calendar-book-card {
+    transition: none;
+  }
+
+  .calendar-book-card:hover {
+    transform: none;
+  }
+}

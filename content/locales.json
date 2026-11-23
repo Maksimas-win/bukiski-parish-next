@@ -362,7 +362,9 @@
     "homeGpmResult": "Условный пример поддержки за год",
     "homeGpmResultNote": "Расчёт от суммы подоходного налога. Окончательную сумму определяет VMI.",
     "homeGpmOpen": "Открыть пошаговую инструкцию",
-    "homeGpmCalc": "Рассчитать свой пример"
+    "homeGpmCalc": "Рассчитать свой пример",
+    "calendarBook": "Православный календарь 2027",
+    "calendarBookNote": "Чтения дня и праздники — книга, которую можно листать."
   },
   "lt": {
     "name": "Kristaus Gimimo cerkvė",
@@ -727,7 +729,9 @@
     "homeGpmResult": "Sąlyginis metinės paramos pavyzdys",
     "homeGpmResultNote": "Skaičiuojama nuo pajamų mokesčio sumos. Galutinę sumą nustato VMI.",
     "homeGpmOpen": "Atverti nuoseklią instrukciją",
-    "homeGpmCalc": "Apskaičiuoti savo pavyzdį"
+    "homeGpmCalc": "Apskaičiuoti savo pavyzdį",
+    "calendarBook": "Stačiatikių kalendorius 2027",
+    "calendarBookNote": "Dienos skaitiniai ir šventės – knyga, kurią galima vartyti (rusų kalba)."
   },
   "en": {
     "name": "Church of the Nativity of Christ",
@@ -1092,7 +1096,9 @@
     "homeGpmResult": "Illustrative yearly support",
     "homeGpmResultNote": "Calculated from the income tax amount. VMI determines the final sum.",
     "homeGpmOpen": "Open the step-by-step guide",
-    "homeGpmCalc": "Calculate your own example"
+    "homeGpmCalc": "Calculate your own example",
+    "calendarBook": "Orthodox calendar 2027",
+    "calendarBookNote": "Daily readings and feasts in a book you can leaf through (in Russian)."
   },
   "pl": {
     "name": "Cerkiew Narodzenia Pańskiego",
@@ -1457,7 +1463,9 @@
     "homeGpmResult": "Umowny przykład rocznego wsparcia",
     "homeGpmResultNote": "Obliczenie od kwoty podatku dochodowego. Ostateczną kwotę ustala VMI.",
     "homeGpmOpen": "Otwórz instrukcję krok po kroku",
-    "homeGpmCalc": "Oblicz własny przykład"
+    "homeGpmCalc": "Oblicz własny przykład",
+    "calendarBook": "Kalendarz prawosławny 2027",
+    "calendarBookNote": "Czytania na każdy dzień i święta w książce, którą można kartkować (po rosyjsku)."
   },
   "de": {
     "name": "Kirche der Geburt Christi",
@@ -1822,7 +1830,9 @@
     "homeGpmResult": "Fiktives Beispiel der Jahresunterstützung",
     "homeGpmResultNote": "Berechnet vom Einkommensteuerbetrag. Den endgültigen Betrag bestimmt die VMI.",
     "homeGpmOpen": "Schritt-für-Schritt-Anleitung öffnen",
-    "homeGpmCalc": "Eigenes Beispiel berechnen"
+    "homeGpmCalc": "Eigenes Beispiel berechnen",
+    "calendarBook": "Orthodoxer Kalender 2027",
+    "calendarBookNote": "Tageslesungen und Feste als Buch zum Durchblättern (auf Russisch)."
   },
   "uk": {
     "name": "Храм Різдва Христового",
@@ -2187,6 +2197,8 @@
     "homeGpmResult": "Умовний приклад підтримки за рік",
     "homeGpmResultNote": "Розрахунок від суми податку на доходи. Остаточну суму визначає VMI.",
     "homeGpmOpen": "Відкрити покрокову інструкцію",
-    "homeGpmCalc": "Розрахувати свій приклад"
+    "homeGpmCalc": "Розрахувати свій приклад",
+    "calendarBook": "Православний календар 2027",
+    "calendarBookNote": "Читання дня і свята — книга, яку можна гортати (російською мовою)."
   }
 }

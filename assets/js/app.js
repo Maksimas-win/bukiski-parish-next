@@ -32,6 +32,7 @@ const features = [
   ['[data-history]', () => import('./features/history.js')],
   ['[data-lightbox]', () => import('./features/lightbox.js')],
   ['[data-gpm]', () => import('./features/gpm.js')],
+  ['[data-flipbook]', () => import('./features/calendar-book.js')],
   ['[data-home-gpm]', () => import('./features/home-gpm.js')],
   ['[data-document-download]', () => import('./document-downloads.js')]
 ];

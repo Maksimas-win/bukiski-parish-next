@@ -21,6 +21,7 @@ import { libraryPage, newsPage } from './lib/pages/library.mjs';
 import { articlePage, lightboxDialog } from './lib/pages/article.mjs';
 import { publicationPage } from './lib/pages/publication.mjs';
 import { gpmPage, gpmMeta } from './lib/pages/gpm.mjs';
+import { CALENDAR_BOOK, CALENDAR_BOOK_PATH, calendarBookPage } from './lib/pages/calendar-book.mjs';
 import { documentPage, loadDocument } from './lib/pages/document.mjs';
 import { appBootstrap } from './lib/app-bootstrap.mjs';
 import * as outputs from './lib/outputs.mjs';
@@ -249,6 +250,21 @@ function addPublicationPages() {
   }
 }
 
+/** The Orthodox calendar 2027 as a book (Russian only), offered from the schedule page. */
+function addCalendarBookPage() {
+  const t = site.locales.ru;
+  addRoute({
+    lang: 'ru',
+    pageId: 'calendar-book',
+    title: CALENDAR_BOOK.title,
+    description: CALENDAR_BOOK.description,
+    body: calendarBookPage(site, t),
+    path: CALENDAR_BOOK_PATH,
+    ogImage: { url: site.canonical('/assets/calendar-2027/pages/p01.webp'), width: 1600, height: 2263, alt: `Обложка: ${CALENDAR_BOOK.title}` },
+    trail: [{ name: t.schedule, path: site.route('ru', 'schedule') }, { name: CALENDAR_BOOK.title, path: CALENDAR_BOOK_PATH }]
+  });
+}
+
 /** The page behind the announcement strip, in every site language, while it is shown. */
 function addAnnouncementPages() {
   const { announcement } = site;
@@ -301,6 +317,7 @@ addCorePages();
 const documentFiles = await addDocumentPages();
 addArticlePages();
 addPublicationPages();
+addCalendarBookPage();
 addAnnouncementPages();
 addNotFoundPage();
 for (const [path, route] of routes) await writeOutput(outputPathOf(path), route.html);
