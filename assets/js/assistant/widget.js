@@ -1,9 +1,9 @@
-import { UI, LANGUAGES } from './i18n.js?v=b66f0eb5dd';
-import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js?v=b66f0eb5dd';
-import { WEB_UI } from './web-i18n.js?v=b66f0eb5dd';
-import { providerCopy, allProviderPolicy } from './provider-copy.js?v=b66f0eb5dd';
-import { createWebApi } from './web-api.js?v=b66f0eb5dd';
-import { mountRequestForm } from './request-form.js?v=b66f0eb5dd';
+import { UI, LANGUAGES } from './i18n.js?v=efafe5cc0a';
+import { answerQuestion, intentOf, localeOf, normalizeSchedule, safeLink, MAX_QUESTION } from './engine.js?v=efafe5cc0a';
+import { WEB_UI } from './web-i18n.js?v=efafe5cc0a';
+import { providerCopy, allProviderPolicy } from './provider-copy.js?v=efafe5cc0a';
+import { createWebApi } from './web-api.js?v=efafe5cc0a';
+import { mountRequestForm } from './request-form.js?v=efafe5cc0a';
 
 /** Static-hosting compatible UI; online actions are opt-in, with no browser persistence. */
 export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 'ru', parent = document.body } = {}) {
@@ -348,7 +348,9 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     const rect = dialog.getBoundingClientRect();
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) {dialog.close();}
   } });
-  const erase = () => { reset(); };
+  const erase = event => {
+    if (event.type === 'pagehide' || event.persisted) {reset();}
+  };
   globalThis.addEventListener('pagehide', erase);
   globalThis.addEventListener('pageshow', erase);
   renderSuggestions(); renderOnline(); reset();

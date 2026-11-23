@@ -1,4 +1,4 @@
-import { $, create } from './dom.js?v=b66f0eb5dd';
+import { $, create } from './dom.js?v=efafe5cc0a';
 
 const VISIBLE_MS = 3500;
 
