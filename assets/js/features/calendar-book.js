@@ -12,6 +12,15 @@
 //
 // The module stores nothing, requests only its own JSON and images, and sets
 // positions through the CSSOM, so it works under a strict style-src policy.
+//
+// Optional, switched on by attributes of the [data-flipbook] element:
+//   data-days="…/days.json"  a readable card of a day (text, readings, sharing),
+//                            opened from the day number or by a tap on a day
+//   data-intro="3"           the book arrives and opens by itself (to today in the
+//                            year of the calendar, otherwise to this page)
+//   data-fit                 the book takes the rest of the window below it
+//   data-light               a soft light follows the pointer over the book
+//   data-sound               a switch for a quiet page-turn sound (made on the fly)
 
 const STRINGS = {
   label: 'Православный календарь на 2027 год — книга',
@@ -56,6 +65,22 @@ const STRINGS = {
   nextMonth: 'Следующий месяц',
   hint: 'Потяните за угол страницы, нажмите на край или листайте стрелками',
   hintTouch: 'Свайп — перелистнуть, касание в центре — крупно',
+  hintDays: 'Потяните за угол страницы. Нажмите на число дня — откроется карточка дня',
+  hintDaysTouch: 'Свайп — перелистнуть. Коснитесь дня — откроется его карточка',
+  sound: 'Звук страниц',
+  dayCard: 'Карточка дня',
+  dayLoading: 'Загружаю текст дня…',
+  prevDay: 'Предыдущий день',
+  nextDay: 'Следующий день',
+  showPage: 'Показать в книге',
+  shareDay: 'Поделиться',
+  onAzbyka: '«Азбука веры»',
+  onAzbykaLabel: 'Этот день в календаре «Азбуки веры»',
+  oldStyle: 'по ст. ст.',
+  fast: 'пост',
+  meatless: 'без мяса',
+  great: 'великий праздник',
+  readings: 'Чтения открываются на «Азбуке веры»',
   external: 'откроется в новой вкладке',
   scrub: 'Страница',
   blank: 'Форзац'
@@ -76,7 +101,11 @@ const ICONS = {
   link: 'M10 14a3.5 3.5 0 0 0 5 0l3-3a3.5 3.5 0 0 0-5-5l-1 1M14 10a3.5 3.5 0 0 0-5 0l-3 3a3.5 3.5 0 0 0 5 5l1-1',
   pdf: 'M12 4.5v10M7.5 10.5 12 15l4.5-4.5M5.5 19.5h13',
   close: 'M6.5 6.5l11 11M17.5 6.5l-11 11',
-  out: 'M14 5h5v5M19 5l-7.5 7.5M17 13.5V19H5V7h5.5'
+  out: 'M14 5h5v5M19 5l-7.5 7.5M17 13.5V19H5V7h5.5',
+  sound: 'M4.5 9.5h3l4.5-4v13l-4.5-4h-3zM15.5 9a4.5 4.5 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11',
+  mute: 'M4.5 9.5h3l4.5-4v13l-4.5-4h-3zM16 9.5l5 5M21 9.5l-5 5',
+  book: 'M4 6.5c3-1 5.5-.8 8 1 2.5-1.8 5-2 8-1v11c-3-1-5.5-.8-8 1-2.5-1.8-5-2-8-1zM12 7.5v11',
+  share: 'M12 4.5v10M8 8.5l4-4 4 4M6 12.5v6h12v-6'
 };
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
@@ -190,16 +219,80 @@ class FlipBook {
     this.zoomLevel = 1;
     this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     this.coarse = window.matchMedia('(pointer: coarse)');
+    this.days = null;
+    this.daysPromise = null;
+    this.dayKey = '';
+    this.soundOn = false;
+    this.audio = null;
     this.build();
     this.bind();
+    this.fit();
     this.layout();
-    const start = this.parseHash() || { page: 1 };
+    const fromLink = this.parseHash();
+    const start = fromLink || { page: 1 };
     this.pos = this.positionOf(start.page);
     this.renderStatic();
     this.updateShift(false);
     this.afterNavigate(start, false);
-    this.showHint();
+    if (root.dataset.intro !== undefined && !fromLink && !this.reduced.matches) {
+      this.intro();
+    } else {
+      this.showHint();
+    }
     window.setTimeout(() => this.loadText(), 2500);
+    if (this.root.dataset.days) {
+      window.setTimeout(() => this.loadDays(), 1500);
+    }
+  }
+
+  /** The book arrives, then opens by itself: to today in the calendar's year, otherwise to a chosen page. */
+  intro() {
+    const today = this.todayKey();
+    const target = today && this.data.days[today]
+      ? { page: this.data.days[today][0], day: today }
+      : { page: clamp(Number(this.root.dataset.intro) || 3, 1, this.count) };
+    let stopped = false;
+    const stop = () => {
+      stopped = true;
+    };
+    this.root.addEventListener('pointerdown', stop, { once: true });
+    this.root.addEventListener('keydown', stop, { once: true });
+    this.root.classList.add('flipbook--intro');
+    window.setTimeout(() => {
+      this.root.classList.remove('flipbook--intro');
+      if (stopped || this.flip || this.pos !== this.minPos) {
+        this.showHint();
+        return;
+      }
+      this.turnTo(this.positionOf(target.page), { ...target, quiet: !target.day });
+      if (target.day && this.root.dataset.days && this.mode === 'spread') {
+        this.afterTurn = () => this.openDay(target.day, false);
+      }
+      window.setTimeout(() => this.showHint(), 1300);
+    }, 1150);
+  }
+
+  todayKey() {
+    const now = new Date();
+    if (now.getFullYear() !== this.data.year) {
+      return '';
+    }
+    return `${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}`;
+  }
+
+  /** With data-fit, the book fills the window below its top edge (not on narrow screens). */
+  fit() {
+    if (this.root.dataset.fit === undefined) {
+      return;
+    }
+    const wide = this.root.clientWidth >= 720 && !this.root.classList.contains('flipbook--immersive') && !this.root.classList.contains('flipbook--fullscreen');
+    if (!wide) {
+      this.root.style.height = '';
+      return;
+    }
+    const top = this.root.getBoundingClientRect().top + window.scrollY;
+    const height = clamp(window.innerHeight - top - 12, 520, 1400);
+    this.root.style.height = `${Math.round(height)}px`;
   }
 
   // --- Structure ------------------------------------------------------------
@@ -209,6 +302,7 @@ class FlipBook {
     const root = this.root;
     root.replaceChildren();
     root.classList.add('flipbook--ready');
+    root.classList.toggle('flipbook--cards', Boolean(root.dataset.days));
     root.setAttribute('role', 'region');
     root.setAttribute('aria-label', t.label);
 
@@ -236,6 +330,7 @@ class FlipBook {
         tool('dateButton', 'date', t.date, () => this.togglePanel('date')),
         tool('gridButton', 'grid', t.overview, () => this.openOverview()),
         h('span', { class: 'flipbook__sep', 'aria-hidden': 'true' }),
+        root.dataset.sound !== undefined ? tool('soundButton', 'mute', t.sound, () => this.toggleSound()) : null,
         tool('zoomButton', 'zoom', t.zoom, () => this.openZoom()),
         tool('fullButton', 'full', t.fullscreen, () => this.toggleFullscreen()),
         tool('shareButton', 'link', t.share, () => this.share()),
@@ -292,6 +387,9 @@ class FlipBook {
     this.toast = h('p', { class: 'flipbook__toast', role: 'status', hidden: true });
     root.append(this.top, this.stage, this.bottom, this.panel, this.tip, this.toast, this.live, this.reader);
 
+    if (this.soundButton) {
+      this.soundButton.setAttribute('aria-pressed', 'false');
+    }
     if (!document.fullscreenEnabled && !document.webkitFullscreenEnabled) {
       this.fullButton.dataset.immersive = '1';
     }
@@ -336,6 +434,25 @@ class FlipBook {
       this.resizeFrame = window.requestAnimationFrame(() => this.layout());
     }).observe(this.stage);
 
+    if (this.root.dataset.fit !== undefined) {
+      let frame = 0;
+      window.addEventListener('resize', () => {
+        window.cancelAnimationFrame(frame);
+        frame = window.requestAnimationFrame(() => this.fit());
+      });
+    }
+    if (this.root.dataset.light !== undefined && window.matchMedia('(pointer: fine)').matches && !this.reduced.matches) {
+      this.root.classList.add('flipbook--light');
+      let frame = 0;
+      this.stage.addEventListener('pointermove', event => {
+        window.cancelAnimationFrame(frame);
+        frame = window.requestAnimationFrame(() => {
+          const box = this.stage.getBoundingClientRect();
+          this.stage.style.setProperty('--flipbook-light-x', `${(((event.clientX - box.left) / box.width) * 100).toFixed(1)}%`);
+          this.stage.style.setProperty('--flipbook-light-y', `${(((event.clientY - box.top) / box.height) * 100).toFixed(1)}%`);
+        });
+      });
+    }
     window.addEventListener('hashchange', () => {
       const target = this.parseHash();
       if (target) {
@@ -587,10 +704,13 @@ class FlipBook {
       if (link.href) {
         const web = /^https?:/.test(link.href);
         const kind = link.href.includes('azbyka.ru/biblia/') ? 'bible' : link.href.includes('azbyka.ru/days/') ? 'day' : 'ext';
+        const date = kind === 'day' ? link.href.match(/(\d\d)-(\d\d)$/) : null;
+        const card = date && this.root.dataset.days ? date[1] + date[2] : '';
+        const label = card ? `${this.t.dayCard}: ${link.t.split(' — ')[0]}` : link.t;
         a = h('a', {
           class: `flipbook__link flipbook__link--${kind}`,
           href: link.href, target: web ? '_blank' : null, rel: web ? 'noopener noreferrer' : null,
-          'aria-label': web ? `${link.t} (${this.t.external})` : link.t, 'data-tip': link.t
+          'aria-label': web && !card ? `${label} (${this.t.external})` : label, 'data-tip': label, 'data-day-card': card || null
         });
       } else {
         const day = /^d\d{4}$/.test(link.dest || '') ? link.dest.slice(1) : '';
@@ -838,6 +958,11 @@ class FlipBook {
     this.updateShift(completed);
     if (completed) {
       this.afterNavigate(f.target || {}, true);
+      if (this.afterTurn) {
+        const then = this.afterTurn;
+        this.afterTurn = null;
+        then();
+      }
     }
     if (this.pending !== null) {
       const next = this.pending;
@@ -885,6 +1010,7 @@ class FlipBook {
     const far = Math.abs(pos - this.pos) > 1;
     this.preloadPages(this.pagesAt(pos)).then(() => {
       if (this.flip === f) {
+        this.rustle();
         this.tween(f.end, (this.mode === 'spread' ? 820 : 640) + (far ? 120 : 0), easeInOut, () => this.endFlip(true));
       }
     });
@@ -1079,6 +1205,7 @@ class FlipBook {
     if (complete) {
       f.auto = true;
       this.updateShiftFor(f.to);
+      this.rustle();
     }
     this.tween(complete ? f.end : f.start, 180 + 420 * clamp(remaining, 0, 1), easeOut, () => this.endFlip(complete));
   }
@@ -1152,6 +1279,9 @@ class FlipBook {
         } else {
           this.goToPage(page);
         }
+      } else if (link.dataset.dayCard && this.root.dataset.days) {
+        event.preventDefault();
+        this.openDay(link.dataset.dayCard, false);
       }
       return;
     }
@@ -1160,6 +1290,7 @@ class FlipBook {
       f.peel = false;
       f.auto = true;
       this.updateShiftFor(f.to);
+      this.rustle();
       this.tween(f.end, 560, easeInOut, () => this.endFlip(true));
       return;
     }
@@ -1167,20 +1298,59 @@ class FlipBook {
       return;
     }
     const p = this.local(event.clientX, event.clientY);
+    const cards = Boolean(this.root.dataset.days);
     if (this.mode === 'spread') {
       if (p.x >= this.spine) {
         this.next();
       } else {
         this.prev();
       }
-    } else if (p.x < this.pw * 0.28) {
+    } else if (p.x < this.pw * (cards ? 0.15 : 0.28)) {
       this.prev();
-    } else if (p.x > this.pw * 0.72) {
+    } else if (p.x > this.pw * (cards ? 0.85 : 0.72)) {
       this.next();
     } else {
-      // a single page is small: a tap in the middle opens it large
-      this.openZoom();
+      // a single page is small: a tap in the middle opens the day under the
+      // finger as a readable card, or the page large
+      const day = this.root.dataset.days ? this.dayAt(this.pos, p.y / this.ph) : '';
+      if (day) {
+        this.openDay(day, false);
+      } else {
+        this.openZoom();
+      }
     }
+  }
+
+  /** The day whose row is at height y (0..1) of a page, including a day continued from the page before. */
+  dayAt(page, y) {
+    let found = '';
+    let first = null;
+    for (const [key, [p, y0, y1]] of this.dayList) {
+      if (p !== page) {
+        continue;
+      }
+      if (!first || y0 < first.y0) {
+        first = { key, y0 };
+      }
+      if (y >= y0 && y < y1) {
+        found = key;
+      }
+    }
+    if (!found && first && y < first.y0 && y > 0.07) {
+      const previous = this.shiftDay(first.key, -1);
+      if (previous && this.data.days[previous][0] === page - 1) {
+        found = previous;
+      }
+    }
+    return found;
+  }
+
+  shiftDay(key, delta) {
+    const date = new Date(Date.UTC(this.data.year, Number(key.slice(0, 2)) - 1, Number(key.slice(2)) + delta));
+    if (date.getUTCFullYear() !== this.data.year) {
+      return '';
+    }
+    return `${String(date.getUTCMonth() + 1).padStart(2, '0')}${String(date.getUTCDate()).padStart(2, '0')}`;
   }
 
   showTip(event) {
@@ -1191,7 +1361,7 @@ class FlipBook {
     const box = link.getBoundingClientRect();
     const host = this.root.getBoundingClientRect();
     this.tip.replaceChildren(h('span', { text: link.dataset.tip || '' }));
-    if (link.target === '_blank') {
+    if (link.target === '_blank' && !link.dataset.dayCard) {
       this.tip.append(icon('out'));
     }
     this.tip.hidden = false;
@@ -1302,6 +1472,9 @@ class FlipBook {
   }
 
   updateHash(target) {
+    if (target && target.quiet) {
+      return;
+    }
     let hash = `#p${this.cur}`;
     if (target && target.day) {
       hash = `#${this.data.year}-${target.day.slice(0, 2)}-${target.day.slice(2)}`;
@@ -1426,6 +1599,8 @@ class FlipBook {
       this.renderToc();
     } else if (mode === 'search') {
       this.renderSearch();
+    } else if (mode === 'day') {
+      this.renderDay();
     } else {
       this.renderDate(true);
     }
@@ -1588,7 +1763,11 @@ class FlipBook {
         'aria-current': key === todayKey ? 'date' : null,
         onclick: () => {
           this.calendarFollow = true;
-          this.goToDay(key);
+          if (this.root.dataset.days) {
+            this.openDay(key, true);
+          } else {
+            this.goToDay(key);
+          }
         }
       }, String(day));
       button.classList.toggle('is-sunday', weekday === 6);
@@ -1616,6 +1795,225 @@ class FlipBook {
       if (opening || focusKey !== null) {
         target.focus({ preventScroll: true });
       }
+    }
+  }
+
+  // --- Day card -------------------------------------------------------------------
+
+  loadDays() {
+    if (!this.daysPromise) {
+      const url = new URL(this.root.dataset.days, document.baseURI);
+      this.daysPromise = window.fetch(url.href, { credentials: 'omit', redirect: 'error' })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`days ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(days => {
+          this.days = days;
+          return days;
+        })
+        .catch(() => {
+          this.daysPromise = null;
+          return null;
+        });
+    }
+    return this.daysPromise;
+  }
+
+  /** Show the card of a day; with `navigate`, also turn the book to its page. */
+  openDay(key, navigate) {
+    if (!key || !this.data.days[key]) {
+      return;
+    }
+    this.dayKey = key;
+    const page = this.data.days[key][0];
+    if (navigate) {
+      this.turnTo(this.positionOf(page), { page, day: key });
+    } else {
+      this.marks = { page, day: key };
+      this.applyMarks();
+      this.updateHash({ day: key });
+    }
+    this.showPanel('day');
+  }
+
+  showPanel(mode) {
+    if (!this.panel.hidden && this.panelMode === mode) {
+      if (mode === 'day') {
+        this.renderDay();
+      }
+      return;
+    }
+    this.togglePanel(mode);
+  }
+
+  renderDay() {
+    const t = this.t;
+    const key = this.dayKey;
+    const year = this.data.year;
+    const month = Number(key.slice(0, 2)) - 1;
+    const number = Number(key.slice(2));
+    this.panelTitle.textContent = t.dayCard;
+    if (!this.days) {
+      this.panelBody.replaceChildren(h('p', { class: 'flipbook__search-status', role: 'status', text: t.dayLoading }));
+      this.loadDays().then(days => {
+        if (days && this.panelMode === 'day' && this.dayKey === key) {
+          this.renderDay();
+        }
+      });
+      return;
+    }
+    const day = this.days[key];
+    if (!day) {
+      return;
+    }
+    const diamond = () => h('span', { class: 'flipbook__day-dia', 'aria-hidden': 'true' }, '◆');
+    const runs = list => list.map(([text, flags]) => {
+      let node = document.createTextNode(text);
+      if (flags & 2) {
+        node = h('em', {}, node);
+      }
+      if (flags & 1) {
+        node = h('strong', {}, node);
+      }
+      if (flags & 4) {
+        const lead = text.match(/^\s*/)[0];
+        const rest = text.slice(lead.length);
+        node = h('span', { class: 'flipbook__day-saint' }, lead, diamond(), flags & 1 ? h('strong', {}, rest) : rest);
+      }
+      return node;
+    });
+    const body = [];
+    for (const entry of day.e) {
+      const [kind] = entry;
+      if (kind === 'sp') {
+        body.push(h('p', { class: 'flipbook__day-special', text: entry[1] }));
+      } else if (kind === 'ttl') {
+        body.push(h('p', { class: 'flipbook__day-title' }, runs(entry[1])));
+      } else if (kind === 'lit') {
+        body.push(h('p', { class: 'flipbook__day-title flipbook__day-saint' }, diamond(), runs(entry[1])));
+      } else if (kind === 'svc') {
+        body.push(h('p', { class: 'flipbook__day-service' }, entry[1].map(run => run[0]).join('')));
+      } else if (kind === 'note') {
+        body.push(h('p', { class: 'flipbook__day-note' }, runs(entry[1])));
+      } else if (kind === 'rd') {
+        const [, label, sep, segments] = entry;
+        body.push(h('p', { class: 'flipbook__day-reading' },
+          label ? h('span', { class: 'flipbook__day-label', text: sep === ':' ? `${label}:` : label }) : null,
+          label ? (sep === ':' ? ' ' : h('span', { class: 'flipbook__day-sep', text: ' – ' })) : null,
+          segments.map(([text, href]) => (href
+            ? h('a', { class: 'flipbook__day-ref', href, target: '_blank', rel: 'noopener noreferrer', title: t.readings }, text, icon('out'))
+            : text))));
+      }
+    }
+    const tags = [];
+    if (day.great) {
+      tags.push(h('span', { class: 'flipbook__tag flipbook__tag--great', text: t.great }));
+    }
+    if (day.fast === 'fast') {
+      tags.push(h('span', { class: 'flipbook__tag flipbook__tag--fast', text: t.fast }));
+    } else if (day.fast === 'meatless') {
+      tags.push(h('span', { class: 'flipbook__tag flipbook__tag--fast', text: t.meatless }));
+    }
+    if (day.glas) {
+      tags.push(h('span', { class: 'flipbook__tag', text: day.glas }));
+    }
+    const previous = this.shiftDay(key, -1);
+    const next = this.shiftDay(key, 1);
+    const dateLabel = k => `${Number(k.slice(2))} ${t.monthsGen[Number(k.slice(0, 2)) - 1]}`;
+    const article = h('article', { class: `flipbook__day${day.red ? ' is-red' : ''}${day.special ? ' is-special' : ''}`, tabindex: '-1', 'aria-label': `${number} ${t.monthsGen[month]} ${year}, ${day.wd}` },
+      h('header', { class: 'flipbook__day-head' },
+        h('p', { class: 'flipbook__day-num', text: String(number) }),
+        h('div', { class: 'flipbook__day-when' },
+          h('p', { class: 'flipbook__day-date', text: `${t.monthsGen[month]} ${year}` }),
+          h('p', { class: 'flipbook__day-wd', text: `${day.wd} · ${day.old} ${t.oldStyle}` }),
+          tags.length ? h('p', { class: 'flipbook__day-tags' }, tags) : null)),
+      body,
+      h('div', { class: 'flipbook__day-actions' },
+        h('button', { type: 'button', class: 'flipbook__pill flipbook__pill--quiet', onclick: () => {
+          this.openDay(key, true);
+          this.togglePanelOnSmall();
+        } }, icon('book'), t.showPage),
+        h('button', { type: 'button', class: 'flipbook__pill flipbook__pill--quiet', onclick: () => this.share(this.dayURL(key), `${number} ${t.monthsGen[month]} ${year}`) }, icon('share'), t.shareDay),
+        day.url ? h('a', { class: 'flipbook__pill flipbook__pill--quiet', href: day.url, target: '_blank', rel: 'noopener noreferrer', title: t.onAzbykaLabel }, icon('out'), t.onAzbyka) : null),
+      h('nav', { class: 'flipbook__day-nav', 'aria-label': t.dayCard },
+        h('button', { type: 'button', class: 'flipbook__day-step', disabled: !previous, onclick: () => this.openDay(previous, true) },
+          icon('prev'), h('span', {}, h('span', { class: 'flipbook__day-step-label', text: t.prevDay }), previous ? dateLabel(previous) : '')),
+        h('button', { type: 'button', class: 'flipbook__day-step flipbook__day-step--next', disabled: !next, onclick: () => this.openDay(next, true) },
+          h('span', {}, h('span', { class: 'flipbook__day-step-label', text: t.nextDay }), next ? dateLabel(next) : ''), icon('next'))));
+    const keepFocus = this.panel.contains(document.activeElement) && document.activeElement.closest('.flipbook__day-nav');
+    this.panelBody.replaceChildren(article);
+    this.panelBody.scrollTop = 0;
+    if (keepFocus) {
+      const step = article.querySelector(keepFocus.classList.contains('flipbook__day-step--next') ? '.flipbook__day-step--next' : '.flipbook__day-step');
+      step.focus({ preventScroll: true });
+    } else if (!this.coarse.matches) {
+      article.focus({ preventScroll: true });
+    }
+  }
+
+  dayURL(key) {
+    const url = new URL(window.location.href);
+    url.hash = `${this.data.year}-${key.slice(0, 2)}-${key.slice(2)}`;
+    return url.href;
+  }
+
+  // --- Sound -------------------------------------------------------------------------
+
+  toggleSound() {
+    this.soundOn = !this.soundOn;
+    this.soundButton.setAttribute('aria-pressed', String(this.soundOn));
+    this.soundButton.replaceChildren(icon(this.soundOn ? 'sound' : 'mute'), h('span', { class: 'flipbook__tool-label', text: this.t.sound }));
+    this.rustle(0.6);
+  }
+
+  /** A short rustle of paper, made from filtered noise; nothing is downloaded. */
+  rustle(volume = 1) {
+    if (!this.soundOn) {
+      return;
+    }
+    const Context = window.AudioContext || window.webkitAudioContext;
+    if (!Context) {
+      return;
+    }
+    try {
+      if (!this.audio) {
+        this.audio = new Context();
+      }
+      const audio = this.audio;
+      if (audio.state === 'suspended') {
+        audio.resume();
+      }
+      const seconds = 0.46;
+      const length = Math.floor(audio.sampleRate * seconds);
+      const buffer = audio.createBuffer(1, length, audio.sampleRate);
+      const samples = buffer.getChannelData(0);
+      let brown = 0;
+      for (let i = 0; i < length; i++) {
+        const white = Math.random() * 2 - 1;
+        brown = (brown + 0.05 * white) / 1.05;
+        const t = i / length;
+        const swell = Math.pow(Math.sin(Math.PI * Math.min(1, t * 1.1)), 1.4);
+        const crackle = Math.random() < 0.003 ? (Math.random() * 2 - 1) * 0.9 : 0;
+        samples[i] = (white * 0.32 + brown * 2.6 + crackle) * swell * (0.75 + 0.25 * Math.random());
+      }
+      const source = audio.createBufferSource();
+      source.buffer = buffer;
+      const band = audio.createBiquadFilter();
+      band.type = 'bandpass';
+      band.Q.value = 0.7;
+      band.frequency.setValueAtTime(3400, audio.currentTime);
+      band.frequency.exponentialRampToValueAtTime(850, audio.currentTime + seconds);
+      const gain = audio.createGain();
+      gain.gain.value = 0.2 * volume;
+      source.connect(band);
+      band.connect(gain);
+      gain.connect(audio.destination);
+      source.start();
+    } catch {
+      // the sound is only an ornament
     }
   }
 
@@ -1677,6 +2075,12 @@ class FlipBook {
         this.zoomBody);
       this.zoomBody.addEventListener('click', event => {
         const link = event.target.closest('.flipbook__link');
+        if (link && link.dataset.dayCard) {
+          event.preventDefault();
+          this.zoomDialog.close();
+          this.openDay(link.dataset.dayCard, false);
+          return;
+        }
         if (link && link.dataset.page) {
           event.preventDefault();
           this.zoomDialog.close();
@@ -1737,10 +2141,9 @@ class FlipBook {
     this.book.focus({ preventScroll: true });
   }
 
-  share() {
-    const url = window.location.href;
+  share(url = window.location.href, text = this.describe()) {
     if (navigator.share && this.coarse.matches) {
-      navigator.share({ title: `${this.t.title} ${this.t.year}`, text: this.describe(), url }).catch(() => {});
+      navigator.share({ title: `${this.t.title} ${this.t.year}`, text, url }).catch(() => {});
       return;
     }
     const done = () => this.say(this.t.copied);
@@ -1772,7 +2175,8 @@ class FlipBook {
   }
 
   showHint() {
-    this.hint.textContent = this.coarse.matches ? this.t.hintTouch : this.t.hint;
+    const days = Boolean(this.root.dataset.days);
+    this.hint.textContent = this.coarse.matches ? (days ? this.t.hintDaysTouch : this.t.hintTouch) : (days ? this.t.hintDays : this.t.hint);
     this.hint.classList.add('is-visible');
     const hide = () => this.hint.classList.remove('is-visible');
     window.setTimeout(hide, 6000);

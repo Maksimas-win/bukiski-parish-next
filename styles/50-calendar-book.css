@@ -988,14 +988,290 @@
 }
 
 .flipbook__pill {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
   padding: 0.55rem 1.25rem;
   color: #fff;
   font: inherit;
   font-size: 0.9375rem;
+  text-decoration: none;
   cursor: pointer;
   background: var(--fb-wine);
   border: 0;
   border-radius: 999px;
+}
+
+/* Day card */
+
+.flipbook__day {
+  outline: none;
+}
+
+.flipbook__day-head {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--fb-line);
+}
+
+.flipbook__day-num {
+  flex: none;
+  margin: 0;
+  color: var(--fb-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3.5rem;
+  line-height: 0.9;
+}
+
+.flipbook__day.is-red .flipbook__day-num {
+  color: #ff9d9d;
+}
+
+.flipbook__day.is-special .flipbook__day-num {
+  padding: 0.3rem 0.5rem 0.4rem;
+  color: #ffb3b3;
+  border: 2px solid #e05a5a;
+  border-radius: 0.5rem;
+}
+
+.flipbook__day-when {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.flipbook__day-date,
+.flipbook__day-wd,
+.flipbook__day-tags {
+  margin: 0;
+}
+
+.flipbook__day-date {
+  color: var(--fb-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+}
+
+.flipbook__day-wd {
+  color: var(--fb-muted);
+  font-size: 0.875rem;
+}
+
+.flipbook__day-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+}
+
+.flipbook__tag {
+  padding: 0.1rem 0.5rem;
+  color: var(--fb-ink);
+  font-size: 0.8125rem;
+  background: rgba(245, 238, 229, 0.1);
+  border-radius: 999px;
+}
+
+.flipbook__tag--fast {
+  color: #c8e6c3;
+  background: rgba(120, 170, 110, 0.18);
+}
+
+.flipbook__tag--great {
+  color: #1d1013;
+  background: var(--fb-gold);
+}
+
+.flipbook__day p {
+  max-width: 40rem;
+}
+
+.flipbook__day-special {
+  margin: 0 0 0.5rem;
+  color: #ff9d9d;
+  font-size: 0.8125rem;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+}
+
+.flipbook__day-title {
+  margin: 0 0 0.6rem;
+  color: var(--fb-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.125rem;
+  line-height: 1.45;
+}
+
+.flipbook__day.is-red .flipbook__day-title strong {
+  color: #ffb3b3;
+}
+
+.flipbook__day-saint,
+.flipbook__day .flipbook__day-saint strong {
+  color: #ff9d9d;
+}
+
+.flipbook__day-dia {
+  margin-inline-end: 0.3em;
+  font-size: 0.8em;
+}
+
+.flipbook__day-service {
+  margin: 0 0 0.6rem;
+  color: var(--fb-gold);
+  font-size: 0.875rem;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+.flipbook__day-reading {
+  margin: 0 0 0.45rem;
+  color: var(--fb-ink);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.flipbook__day-label {
+  color: var(--fb-muted);
+  font-weight: 600;
+}
+
+.flipbook__day-sep {
+  color: var(--fb-muted);
+}
+
+.flipbook__day-ref {
+  display: inline-flex;
+  gap: 0.15rem;
+  align-items: center;
+  color: var(--fb-gold);
+  text-decoration: underline;
+  text-decoration-color: rgba(220, 188, 118, 0.45);
+  text-underline-offset: 0.18em;
+  border-radius: 0.25rem;
+}
+
+.flipbook__day-ref:hover {
+  color: #f1d9a3;
+  text-decoration-color: currentcolor;
+}
+
+.flipbook__day-ref:focus-visible,
+.flipbook__day-step:focus-visible {
+  outline: 2px solid var(--fb-gold);
+  outline-offset: 2px;
+}
+
+.flipbook__day-ref .flipbook__icon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.flipbook__day-note {
+  margin: 0.6rem 0;
+  padding-left: 0.75rem;
+  color: var(--fb-muted);
+  font-size: 0.875rem;
+  font-style: italic;
+  line-height: 1.5;
+  border-left: 2px solid rgba(220, 188, 118, 0.4);
+}
+
+.flipbook__day-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1.2rem 0 1rem;
+}
+
+.flipbook__pill--quiet {
+  padding: 0.45rem 0.85rem;
+  color: var(--fb-ink);
+  font-size: 0.875rem;
+  background: rgba(245, 238, 229, 0.08);
+  border: 1px solid var(--fb-line);
+}
+
+.flipbook__pill--quiet:hover {
+  background: rgba(245, 238, 229, 0.16);
+}
+
+.flipbook__pill .flipbook__icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.flipbook__day-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--fb-line);
+}
+
+.flipbook__day-step {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.55rem 0.6rem;
+  color: var(--fb-ink);
+  font: inherit;
+  font-size: 0.9375rem;
+  text-align: left;
+  cursor: pointer;
+  background: rgba(245, 238, 229, 0.05);
+  border: 1px solid var(--fb-line);
+  border-radius: 0.75rem;
+}
+
+.flipbook__day-step:hover {
+  background: rgba(245, 238, 229, 0.12);
+}
+
+.flipbook__day-step:disabled {
+  cursor: default;
+  opacity: 0.35;
+}
+
+.flipbook__day-step > span {
+  display: grid;
+}
+
+.flipbook__day-step--next {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.flipbook__day-step-label {
+  color: var(--fb-muted);
+  font-size: 0.8125rem;
+}
+
+/* Arrival of the book, light following the pointer */
+
+.flipbook--intro .flipbook__book {
+  animation: flipbook-arrive 1.05s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes flipbook-arrive {
+  0% {
+    opacity: 0;
+    transform: perspective(1800px) rotateX(18deg) translateY(2.5rem) scale(0.93);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.flipbook--light .flipbook__stage {
+  background: radial-gradient(circle 34rem at var(--flipbook-light-x, 50%) var(--flipbook-light-y, 42%), rgba(255, 196, 120, 0.12), rgba(255, 196, 120, 0) 70%);
 }
 
 /* Dialogs: all pages, zoom */
@@ -1304,6 +1580,14 @@
   .flipbook__back {
     filter: none;
   }
+
+  /* On a phone the printed links are too small to aim at: a tap on a day opens
+     its card, where the readings are large links. The links stay for keyboards
+     and screen readers. */
+  .flipbook--cards.flipbook--single .flipbook__link--bible,
+  .flipbook--cards.flipbook--single .flipbook__link--day {
+    pointer-events: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1311,7 +1595,8 @@
   .flipbook__page,
   .flipbook__panel,
   .flipbook__hint,
-  .flipbook__mark--day {
+  .flipbook__mark--day,
+  .flipbook--intro .flipbook__book {
     transition: none;
     animation: none;
   }

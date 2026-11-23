@@ -15,6 +15,7 @@ const settings = JSON.parse(await read('content/settings.json'));
 const base = info.basePath;
 const book = JSON.parse(await read('assets/calendar-2027/book.json'));
 const text = JSON.parse(await read('assets/calendar-2027/text.json'));
+const days = JSON.parse(await read('assets/calendar-2027/days.json'));
 const pad = n => String(n).padStart(book.files.pad, '0');
 
 test('the book page is built in Russian, linked from every schedule page and listed in the sitemap', async () => {
@@ -22,6 +23,11 @@ test('the book page is built in Russian, linked from every schedule page and lis
   assert.match(html, /<html lang="ru"/);
   assert.ok(html.includes(`data-src="${base}/assets/calendar-2027/book.json"`));
   assert.ok(html.includes(`data-pdf="${CALENDAR_BOOK_PDF}"`));
+  assert.ok(html.includes(`data-days="${base}/assets/calendar-2027/days.json"`));
+  assert.match(html, /<h1 class="visually-hidden">/);
+  // the book is the first thing on the page: nothing but the hidden heading comes before it
+  const main = html.slice(html.indexOf('<main'), html.indexOf('data-flipbook'));
+  assert.doesNotMatch(main, /<(?:p|h2|header|img)\b/);
   assert.match(html, /class="flipbook__fallback"/);
   assert.doesNotMatch(html, /\sstyle="/);
   for (const lang of settings.locales) {
@@ -58,4 +64,27 @@ test('every page of the book has its image, thumbnail, text, and links that stay
       }
     }
   }
+});
+
+test('every day has a readable card whose readings lead to the Bible on Azbyka', () => {
+  assert.equal(Object.keys(days).length, 365);
+  assert.deepEqual(Object.keys(days).sort(), Object.keys(book.days).sort());
+  let readings = 0;
+  for (const [key, day] of Object.entries(days)) {
+    assert.ok(day.wd && day.old && Array.isArray(day.e) && day.e.some(entry => entry[0] === 'ttl'), key);
+    assert.equal(day.url, `https://azbyka.ru/days/2027-${key.slice(0, 2)}-${key.slice(2)}`);
+    for (const entry of day.e) {
+      assert.ok(['sp', 'ttl', 'lit', 'svc', 'note', 'rd'].includes(entry[0]), `${key}: ${entry[0]}`);
+      if (entry[0] !== 'rd') continue;
+      for (const [part, href] of entry[3]) {
+        assert.equal(typeof part, 'string');
+        if (href) {
+          assert.match(href, /^https:\/\/azbyka\.ru\/biblia\/\?[A-Za-z0-9]+\.\d+:[\d,.:;A-Za-z-]+$/, href);
+          readings++;
+        }
+      }
+    }
+  }
+  assert.ok(readings > 1400, `${readings} readings`);
+  assert.equal(days['0427'].special && days['0726'].special, true, '27 April and 26 July are marked');
 });
