@@ -66,7 +66,7 @@ const STRINGS = {
   hint: 'Потяните за угол страницы, нажмите на край или листайте стрелками',
   hintTouch: 'Свайп — перелистнуть, касание в центре — крупно',
   hintDays: 'Потяните за угол страницы. Нажмите на число дня — откроется карточка дня',
-  hintDaysTouch: 'Свайп — перелистнуть. Коснитесь дня — откроется его карточка',
+  hintDaysTouch: 'Свайп — листать, касание дня — его карточка',
   sound: 'Звук страниц',
   dayCard: 'Карточка дня',
   dayLoading: 'Загружаю текст дня…',
@@ -317,7 +317,7 @@ class FlipBook {
     const pdfAway = Boolean(root.dataset.pdf) && new URL(root.dataset.pdf, document.baseURI).origin !== window.location.origin;
     this.pdfLink = root.dataset.pdf
       ? h('a', {
-        class: 'flipbook__tool', href: root.dataset.pdf, title: t.pdf,
+        class: 'flipbook__tool flipbook__tool--minor', href: root.dataset.pdf, title: t.pdf,
         download: pdfAway ? null : root.dataset.pdfName || '', target: pdfAway ? '_blank' : null, rel: pdfAway ? 'noopener noreferrer' : null
       }, icon('pdf'), h('span', { class: 'flipbook__tool-label', text: t.pdf }))
       : null;
@@ -330,10 +330,10 @@ class FlipBook {
         tool('dateButton', 'date', t.date, () => this.togglePanel('date')),
         tool('gridButton', 'grid', t.overview, () => this.openOverview()),
         h('span', { class: 'flipbook__sep', 'aria-hidden': 'true' }),
-        root.dataset.sound !== undefined ? tool('soundButton', 'mute', t.sound, () => this.toggleSound()) : null,
-        tool('zoomButton', 'zoom', t.zoom, () => this.openZoom()),
-        tool('fullButton', 'full', t.fullscreen, () => this.toggleFullscreen()),
-        tool('shareButton', 'link', t.share, () => this.share()),
+        root.dataset.sound !== undefined ? tool('soundButton', 'mute', t.sound, () => this.toggleSound(), 'flipbook__tool--minor') : null,
+        tool('zoomButton', 'zoom', t.zoom, () => this.openZoom(), 'flipbook__tool--minor'),
+        tool('fullButton', 'full', t.fullscreen, () => this.toggleFullscreen(), 'flipbook__tool--minor'),
+        tool('shareButton', 'link', t.share, () => this.share(), 'flipbook__tool--minor'),
         this.pdfLink));
 
     this.book = h('div', { class: 'flipbook__book', role: 'group', 'aria-roledescription': t.book, tabindex: '0' });
