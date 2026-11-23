@@ -74,6 +74,7 @@ export function publicationPage(site, entry, t) {
     back: site.url(site.route(lang, 'news')),
     backLabel: t.news,
     image: site.url('/assets/img/publications/candles-editorial.jpg'),
+    cross: site.url('/assets/img/cross.svg'),
     dateLabel: t.published
   }));
   const { body, headings } = articleBlocks(publication);
