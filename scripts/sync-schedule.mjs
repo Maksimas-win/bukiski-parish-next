@@ -12,6 +12,7 @@ import { readFile, writeFile, rename } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { normalizeSchedule, safeExternalURL } from '../assets/js/domain.js';
+import { retryScheduleRead } from './retry-schedule-read.mjs';
 
 const MAX_BYTES = 2_000_000;
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -28,7 +29,7 @@ async function readSource() {
   return response.text();
 }
 
-const raw = await readSource();
+const raw = localFile ? await readSource() : await retryScheduleRead(readSource);
 if (Buffer.byteLength(raw) > MAX_BYTES) throw new Error('Schedule exceeds the 2 MB limit');
 const data = JSON.parse(raw);
 // Throws on anything the site could not show safely; nothing is written in that case.
