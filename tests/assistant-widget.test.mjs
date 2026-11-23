@@ -44,10 +44,24 @@ function fixture(t, transport, coarse = false) {
   t.after(() => {assistant.destroy(); for (const reset of restore) {reset();}});
   const byClass = name => all.find(e => e.className.split(' ').includes(name));
   const button = text => all.find(e => e.tag === 'button' && e.textContent === text);
-  return { assistant, all, byClass, button, active: () => active, input: byClass('pa-composer'), form: byClass('pa-form') };
+  return { assistant, all, byClass, button, events, active: () => active, input: byClass('pa-composer'), form: byClass('pa-form') };
 }
 const json = body => new Response(JSON.stringify(body), { headers: { 'Content-Type': 'application/json' } });
 const tick = () => new Promise(resolve => setImmediate(resolve));
+
+test('first pageshow keeps a draft; leaving and restoring clear it', t => {
+  const page = fixture(t, () => { throw Error('Unexpected request'); });
+  page.input.value = 'Draft question';
+  page.events.dispatchEvent(new Event('pageshow'));
+  assert.equal(page.input.value, 'Draft question');
+  page.events.dispatchEvent(new Event('pagehide'));
+  assert.equal(page.input.value, '');
+  page.input.value = 'Restored question';
+  const restored = new Event('pageshow');
+  Object.defineProperty(restored, 'persisted', { value: true });
+  page.events.dispatchEvent(restored);
+  assert.equal(page.input.value, '');
+});
 
 test('a failed AI question stays editable; an explicit retry reuses its ID and avoids duplicate bubbles', async t => {
   const requests = [];

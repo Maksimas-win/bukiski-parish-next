@@ -348,7 +348,9 @@ export function mountAssistant({ site = 'net', base = '', scheduleURL, locale = 
     const rect = dialog.getBoundingClientRect();
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) {dialog.close();}
   } });
-  const erase = () => { reset(); };
+  const erase = event => {
+    if (event.type === 'pagehide' || event.persisted) {reset();}
+  };
   globalThis.addEventListener('pagehide', erase);
   globalThis.addEventListener('pageshow', erase);
   renderSuggestions(); renderOnline(); reset();
