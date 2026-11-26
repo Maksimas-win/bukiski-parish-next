@@ -1,0 +1,685 @@
+{
+ "version": 1,
+ "pages": {
+  "/ru/": {
+   "fingerprint": "41b0964e98c36e4ae14b",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/schedule.html": {
+   "fingerprint": "6e9635a46bde36a52d97",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/history.html": {
+   "fingerprint": "3a4eb236762e10e3afa3",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/sacraments.html": {
+   "fingerprint": "87ba3b3bdf67c56b057e",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/gallery.html": {
+   "fingerprint": "fde7e2f6fce8b00f3ab8",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/news.html": {
+   "fingerprint": "4695662c0200ce4ce720",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/contacts.html": {
+   "fingerprint": "389b573148955e745ed8",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library.html": {
+   "fingerprint": "3741271b24ad4d76dba7",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/notes.html": {
+   "fingerprint": "a14fca0c512a0e5febfa",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/support.html": {
+   "fingerprint": "cb9d0106385473cd0a23",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/gpm.html": {
+   "fingerprint": "380267d511e57edfd292",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/privacy.html": {
+   "fingerprint": "4b856d4b240415edfad4",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/": {
+   "fingerprint": "e5495ac33db0b17111c6",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/schedule.html": {
+   "fingerprint": "c0ae73b724737aa93b5a",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/history.html": {
+   "fingerprint": "588ce489c0d7f3ff30e0",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/sacraments.html": {
+   "fingerprint": "3aaf6c7605dbaaf85b2a",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/gallery.html": {
+   "fingerprint": "69fc4c78118d01bef6b1",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/news.html": {
+   "fingerprint": "af30359ee8c837076a53",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/contacts.html": {
+   "fingerprint": "8eab640d4051f6757d21",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/library.html": {
+   "fingerprint": "c93dbdd95f1172a3624c",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/notes.html": {
+   "fingerprint": "63afd3ac903afc168944",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/support.html": {
+   "fingerprint": "c1c762bb8c6a3493d69b",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/gpm.html": {
+   "fingerprint": "33a2051ac5497474ccb0",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/privacy.html": {
+   "fingerprint": "7288d619e47c2f00d30d",
+   "lastmod": "2026-11-26"
+  },
+  "/en/": {
+   "fingerprint": "b19ee3c7dfa14e76856d",
+   "lastmod": "2026-11-26"
+  },
+  "/en/schedule.html": {
+   "fingerprint": "6bffef95d65caeb2a45e",
+   "lastmod": "2026-11-26"
+  },
+  "/en/history.html": {
+   "fingerprint": "3424d9262a131ef82168",
+   "lastmod": "2026-11-26"
+  },
+  "/en/sacraments.html": {
+   "fingerprint": "958a242235f6401868e3",
+   "lastmod": "2026-11-26"
+  },
+  "/en/gallery.html": {
+   "fingerprint": "5a21f5475ade37bbf884",
+   "lastmod": "2026-11-26"
+  },
+  "/en/news.html": {
+   "fingerprint": "f80c55449e2d944fb06e",
+   "lastmod": "2026-11-26"
+  },
+  "/en/contacts.html": {
+   "fingerprint": "c546b6715d0e95e31b48",
+   "lastmod": "2026-11-26"
+  },
+  "/en/library.html": {
+   "fingerprint": "ce857d1a67fa653a1b67",
+   "lastmod": "2026-11-26"
+  },
+  "/en/notes.html": {
+   "fingerprint": "b9ef05864a7d522dd1a2",
+   "lastmod": "2026-11-26"
+  },
+  "/en/support.html": {
+   "fingerprint": "8db60d452156078d01c8",
+   "lastmod": "2026-11-26"
+  },
+  "/en/gpm.html": {
+   "fingerprint": "4f8c4b93fd365a3e8052",
+   "lastmod": "2026-11-26"
+  },
+  "/en/privacy.html": {
+   "fingerprint": "6b896d9ebb2828fe1111",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/": {
+   "fingerprint": "65a0bf15ca9a4cca50ed",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/schedule.html": {
+   "fingerprint": "5d6088988d49bf1a0cbf",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/history.html": {
+   "fingerprint": "5f87f5e9b6dfeaf4b810",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/sacraments.html": {
+   "fingerprint": "5a22521eacb9de4f8048",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/gallery.html": {
+   "fingerprint": "fe62fe8469b8e8ef0638",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/news.html": {
+   "fingerprint": "2b2e8d346e2c913e7af7",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/contacts.html": {
+   "fingerprint": "87af872e545a0e74b235",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/library.html": {
+   "fingerprint": "97ba5671fbb50025123f",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/notes.html": {
+   "fingerprint": "9f33e6a97f30763e8bb8",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/support.html": {
+   "fingerprint": "2d01beeeac1b4aef79ee",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/gpm.html": {
+   "fingerprint": "7579cd7c8231cc72d8cb",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/privacy.html": {
+   "fingerprint": "192c9b60fc67e78fd04c",
+   "lastmod": "2026-11-26"
+  },
+  "/de/": {
+   "fingerprint": "e296f16921fba3859329",
+   "lastmod": "2026-11-26"
+  },
+  "/de/schedule.html": {
+   "fingerprint": "791720890ed6ab337311",
+   "lastmod": "2026-11-26"
+  },
+  "/de/history.html": {
+   "fingerprint": "fa9eab0f0254a422931a",
+   "lastmod": "2026-11-26"
+  },
+  "/de/sacraments.html": {
+   "fingerprint": "102de2d1daab5f70f6f2",
+   "lastmod": "2026-11-26"
+  },
+  "/de/gallery.html": {
+   "fingerprint": "6da64e4a1d6c4e959db4",
+   "lastmod": "2026-11-26"
+  },
+  "/de/news.html": {
+   "fingerprint": "f9f839dffed7545099a0",
+   "lastmod": "2026-11-26"
+  },
+  "/de/contacts.html": {
+   "fingerprint": "ab346330953122ee104b",
+   "lastmod": "2026-11-26"
+  },
+  "/de/library.html": {
+   "fingerprint": "44700f0681763b427a05",
+   "lastmod": "2026-11-26"
+  },
+  "/de/notes.html": {
+   "fingerprint": "7492263a7e692332b5d4",
+   "lastmod": "2026-11-26"
+  },
+  "/de/support.html": {
+   "fingerprint": "abea00a4f3d3beafc7b6",
+   "lastmod": "2026-11-26"
+  },
+  "/de/gpm.html": {
+   "fingerprint": "7cf7521c2d31a8df6b21",
+   "lastmod": "2026-11-26"
+  },
+  "/de/privacy.html": {
+   "fingerprint": "255669ac56c2632f2382",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/": {
+   "fingerprint": "056a420f6d735753ecdb",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/schedule.html": {
+   "fingerprint": "98f9e512dcad073f20e1",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/history.html": {
+   "fingerprint": "85dd196608b044296052",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/sacraments.html": {
+   "fingerprint": "6e13c7a08675abefb60f",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/gallery.html": {
+   "fingerprint": "d214255b18b9b4f82078",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/news.html": {
+   "fingerprint": "757684ea6578c4373524",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/contacts.html": {
+   "fingerprint": "37e79ceac030fdee2066",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/library.html": {
+   "fingerprint": "e429482d2f2f931abbbe",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/notes.html": {
+   "fingerprint": "b220ac53d447a2e1a8ac",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/support.html": {
+   "fingerprint": "655bf5203e978e6e7d34",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/gpm.html": {
+   "fingerprint": "e451dab589b8b62ac132",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/privacy.html": {
+   "fingerprint": "38d3733aef5cc10d717d",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/ananiya-i-sapfira-pravda-serdca-i-svyatost-cerkvi.html": {
+   "fingerprint": "11bd3daaeffe64abc68b",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-1.html": {
+   "fingerprint": "2be9c76fd04bcae07066",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-2.html": {
+   "fingerprint": "08f1ff327a1d3ab3d196",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-3.html": {
+   "fingerprint": "00caff9fd23c04ac810b",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/arhimandrit-iannuarii-bog-ne-sluzhba-poiska-v-internete.html": {
+   "fingerprint": "10103e928c45bbc35a4c",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/arhimandrit-iannuarii-ivliev-bogoslov-bibleist-svidetel-slova.html": {
+   "fingerprint": "bb00e870da79512efb27",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/bibliya-segodnya-vechnoe-slovo-v-menyayushemsya-mire.html": {
+   "fingerprint": "ec5c367dc7797d83ab11",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/boroda-i-brite-v-drevnosti-istoriya-kultura-i-bibleiskii-smysl.html": {
+   "fingerprint": "0fbd48ce1c151e60c2be",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/car-navuhodonosor-kak-gordynya-prevratila-pravitelya-v-zverya.html": {
+   "fingerprint": "0fdeed1517c19d5b3c9f",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/chetyri-nedeli-do-velikogo-posta.html": {
+   "fingerprint": "9a3b2a339d7ab83aa990",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/chto-oznachayut-simvoly-na-pravoslavnom-kreste.html": {
+   "fingerprint": "aecbefe3c1cc8832265f",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/chto-proishodit-s-dushoi-posle-smerti-pravoslavnoe-uchenie-o-zagrobnoi-zhizni.html": {
+   "fingerprint": "7f0d302e1abedb008557",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/dimitrievskaya-roditelskaya-subbota-istoriya-smysl-tradicii.html": {
+   "fingerprint": "7b15e004a2aaa763f272",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/dve-rodoslovnye-hrista-protivorechie-ili-taina-domostroitelstva.html": {
+   "fingerprint": "d273d48582b8016b7130",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/dzhek-signalshik-babuin-na-gosudarstvennoi-sluzhbe.html": {
+   "fingerprint": "0fecaa67ff196e9f7809",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/eshe-uspeem-chast-i-u-menya-bog-v-dushe.html": {
+   "fingerprint": "2a21c70966d49a652048",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/eshe-uspeem-chast-ii-ya-ne-dostoin.html": {
+   "fingerprint": "03da697efbcf6afbf696",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/eshe-uspeem-chast-iii-hram-ne-obyazannost-a-dyhanie-dushi.html": {
+   "fingerprint": "21c03324dac3b8833286",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/evangelie-o-bludnom-syne-dver-pokayaniya-pered-velikim-postom.html": {
+   "fingerprint": "c5e2728f406fef751068",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/evharisticheskii-post-i-pravila-v-osobye-dni.html": {
+   "fingerprint": "a2600665480678b7973c",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/evharistiya-serdce-cerkvi.html": {
+   "fingerprint": "3788867aad8e8ca0f8ca",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/gde-zhivet-tishina-kak-hram-pomogaet-uslyshat-boga.html": {
+   "fingerprint": "c5074db54d178feadaba",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/hristianskii-brak-ot-vethogo-zaveta-do-nashih-dnei.html": {
+   "fingerprint": "6d138b424a6dd895faa5",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/ispoved-i-duhovnoe-rukovodstvo.html": {
+   "fingerprint": "d8383cf378fbd5d644ee",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/ispoved-i-prichastie-v-pravoslavnoi-tradicii.html": {
+   "fingerprint": "0c4b86a82e862ceb3847",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/ispoved-i-prichastie-v-pravoslavnoi-tradicii-istoriya-razvitie-i-sovremennaya-praktika.html": {
+   "fingerprint": "0bc7bb7d52ca4240acce",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/ispoved-i-prichastie-v-pravoslavnoi-tradicii-istoriya-razvitie-i-sovremennaya-praktika-v-raznyh-patriarhatah.html": {
+   "fingerprint": "0c17546bdc87ce07cba6",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/istoriya-o-hrame.html": {
+   "fingerprint": "46d477791494384dbbfe",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/iz-yadushego-vyshlo-yadomoe.html": {
+   "fingerprint": "fd9484dc710e4835437c",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/kak-chasto-nuzhno-prichashatsya-put-ot-apostolov-do-nashih-dnei.html": {
+   "fingerprint": "0ef6fe2ed8648cea42ce",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/kak-maloe-zlo-razzhigaet-velikii-pozhar.html": {
+   "fingerprint": "22365e9af728e703b952",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/library/kaledu-pasninkas-kelias-i-tylia-betliejaus-sviesa.html": {
+   "fingerprint": "43a4572ce362c215ff64",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/kniga-chisel-kotoraya-na-samom-dele-v-pustyne.html": {
+   "fingerprint": "1318708671222ec6e56d",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/kontracepciya-pravoslavnyi-bogoslovskii-vzglyad-v-kontekste-hristianskogo-bogosloviya-istorii-i-sovremennoi-mediciny.html": {
+   "fingerprint": "b8d6bceae8c8860cf6ae",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/molitva-za-usopshih-bogoslovie-praktika-otvety-na-voprosy.html": {
+   "fingerprint": "43fc266444a7ffb6a40d",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/molitvennaya-podgotovka-i-uchastie-v-bogosluzheniyah.html": {
+   "fingerprint": "f8534210bfb8090b216a",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/ne-boisya-bozhie-slovo-na-kazhdyi-den.html": {
+   "fingerprint": "985e76ea7ca2f94a50d2",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/ne-boisya-tolko-verui-dva-chuda-kotorye-menyayut-vse.html": {
+   "fingerprint": "cc5767a78a68f106cdd3",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/novozavetnye-apokrify-mezhdu-predaniem-i-predosterezheniem.html": {
+   "fingerprint": "43891f6176f5be42f76c",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/o-chinoposledovanii-eleosvyasheniya.html": {
+   "fingerprint": "de617da44b5dbaf3ffa4",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/o-nashem-hrame.html": {
+   "fingerprint": "63d89c2950ffa3f3a9df",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/ob-uchastii-vernyh-v-evharistii-klyuchevye-polozheniya-cerkovnogo-dokumenta.html": {
+   "fingerprint": "05bf722794d1c9525925",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/osobennosti-prichasheniya-miryan-suprugov-i-detei.html": {
+   "fingerprint": "d3be3ec6d7c10eb9e81a",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/otkliki-drevnegrecheskoi-filosofii-v-poslaniyah-apostola-pavla-mezhdu-vdohnoveniem-i-preodoleniem.html": {
+   "fingerprint": "effcdfaa336ef8fdc2b4",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/pochemu-evharistiya-centr-zhizni-cerkvi.html": {
+   "fingerprint": "f72d8c3c7f32280bf486",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/pochemu-hristos-dobrovolno-izbral-krest.html": {
+   "fingerprint": "8f5f135774b1fd56d0ff",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/pochemu-iisus-propovedoval-s-lodki.html": {
+   "fingerprint": "f068af71582db0c8fda6",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/pochemu-ne-srazu-duhovnye-uroki-samogo-strannogo-isceleniya-hristova.html": {
+   "fingerprint": "97f2eca8634aec9a5555",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/podgotovka-k-prichasheniyu-post-molitva-i-vnutrennee-sostoyanie.html": {
+   "fingerprint": "9fc65f6bccd89be88827",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/pravednyi-iosif-miloserdie-prezhde-zakona.html": {
+   "fingerprint": "c437b83dfc77ffd3d2f7",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/preddverie-vechnosti-bogoslovie-i-smysl-vselenskoi-myasopustnoi-roditelskoi-subboty.html": {
+   "fingerprint": "b97c34f55af79f6011c9",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/preddverii-vechnosti.html": {
+   "fingerprint": "572f2820683d6d7f23ff",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/prepodobnyi-blagovernyi-knyaz-aleksandr-nevskii-strazh-very-mudrosti-i-narodnogo-sluzheniya.html": {
+   "fingerprint": "079c0d75b860bd415721",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/prichashenie-i-sostoyanie-dushi-nedopustimye-sluchai.html": {
+   "fingerprint": "765c83a1a53db4c8ac70",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/pritcha-o-molitve-za-blizhnih.html": {
+   "fingerprint": "7b598023fa6a11b69279",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/pritcha-o-sadah-dushi.html": {
+   "fingerprint": "7d1007c84a7064cf120a",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/propoved-v-sedmicu-8-yu-po-pyatidesyatnice-vozmi-krest-svoi.html": {
+   "fingerprint": "0996507c10617c11e7c0",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/raspisanie-bogosluzhenij-velikom-postu.html": {
+   "fingerprint": "eb366dc1599045754419",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/rozhdestvenskii-post-doroga-k-tihomu-svetu-vifleema.html": {
+   "fingerprint": "e925a52852ea0204bfdb",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/sem-yaz-esm-hrista-kak-vethozavetnye-obrazy-obreli-polnotu-v-evangelii-ot-ioanna.html": {
+   "fingerprint": "7e6384a6403d265828aa",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/library/septyni-kristaus-as-esu-kaip-senojo-testamento-vaizdiniai-igavo-pilnatve-jono-evangelijoje.html": {
+   "fingerprint": "487ede329f341ef8c694",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/skolko-lyudei-voskresil-hristos.html": {
+   "fingerprint": "5a2e78cc41a594829c1e",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/sobor-arhistratiga-mihaila-i-nebesnyh-sil.html": {
+   "fingerprint": "6ec522e5099a1cb63533",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/sovremennye-chudesa-bozhii-i-slepota-chelovecheskogo-serdca.html": {
+   "fingerprint": "7dd8a9baa7f98f37c32d",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/sretenie-gospoda-boga-i-spasa-nashego-iisusa-hrista.html": {
+   "fingerprint": "198d2d53433dc4165e5e",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/sutochnyi-krug-bogosluzheniya-kak-cerkov-osvyashaet-vremya.html": {
+   "fingerprint": "a9ab428371c2452521d9",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/library/svenciausiosios-dievo-motinos-ivedimas-i-sventykla.html": {
+   "fingerprint": "80b1359054bf5e93859d",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/svyatitel-ioann-zlatoust-slovo-kotoroe-ne-umolkaet.html": {
+   "fingerprint": "96992626358875b878b9",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/svyatitel-nikolai-arhiepiskop-mir-likiiskih.html": {
+   "fingerprint": "13c3653b2ce8621dc9fd",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/svyatitel-nikolai-arhiepiskop-mir-likiiskih-uteshitel-skorbyashih-zashitnik-vernyh-i-obraz-pastyrskoi-lyubvi.html": {
+   "fingerprint": "062b70c59efa201569f9",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/svyatitel-tihon-pastyr-sformirovavshii-oblik-cerkvi-v-litovskom-krae.html": {
+   "fingerprint": "2c6093e8cb0bf268a466",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/svyatoi-iosif-obruchnik-tishina-v-kotoroi-deistvuet-bog.html": {
+   "fingerprint": "92582f74c0ab6a730c37",
+   "lastmod": "2026-11-26"
+  },
+  "/en/library/the-seven-i-am-sayings-of-christ-how-the-old-testament-symbols-attain-fullness-in-the-gospel-of-john.html": {
+   "fingerprint": "158bb09fc3e18748a199",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/trete-iskushenie-hrista-bogoslovskii-razbor.html": {
+   "fingerprint": "ada1d12bf0f85c91663a",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/urok-lyubvi-sredi-vechnoi-merzloty.html": {
+   "fingerprint": "2d5e9afddb77f6dc00ac",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/velikoe-osvyashenie-vody-agiasma.html": {
+   "fingerprint": "fe2b5ad9afc08b5644dc",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/voskresshie-svyatye-odno-iz-samyh-tainstvennyh-chudes-evangeliya.html": {
+   "fingerprint": "ce6ad606a8d215b78474",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/vvedenie-vo-hram-presvyatoi-bogorodicy-taina-posvyasheniya-i-prizyv-k-chistote-serdca.html": {
+   "fingerprint": "0dddc5bfa8ce0ed668f3",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/vvedenie-vo-hram-presvyatoi-vladychicy-nashei-bogorodicy.html": {
+   "fingerprint": "37f9845062f2c8f86659",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/yasli-i-dom-hleba.html": {
+   "fingerprint": "d74570e8099a2c69b652",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/zapiski-v-hrame-zhivaya-molitva-cerkvi.html": {
+   "fingerprint": "15803f3884096b072474",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/zhenskie-golosa-v-cerkovnom-hore-kak-neprilichie-stalo-normoi.html": {
+   "fingerprint": "35ac06b00f071f0699f6",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/zhizn-posle-prichastiya-kak-hranit-v-sebe-dar.html": {
+   "fingerprint": "1c15c83cd5c15833450b",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/znali-li-vy-chto-pastuhi-byli-merzostyu-dlya-egiptyan.html": {
+   "fingerprint": "806ebb66d2f147bea33b",
+   "lastmod": "2026-11-26"
+  },
+  "/en/artos.html": {
+   "fingerprint": "1a353f99cdd16fed948b",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/artos.html": {
+   "fingerprint": "92775c1f69b44d5ddbcd",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/artos.html": {
+   "fingerprint": "56d78b268223ac76d0f9",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/artos.html": {
+   "fingerprint": "6e486d65f6fd7b38f1da",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/zachem-nuzhny-svechi-v-hrame.html": {
+   "fingerprint": "348fc93cbf7ffa2a44fd",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/kogo-boyalsya-kain.html": {
+   "fingerprint": "0f2896d702898d8817d4",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/library/obrashchenie-prihoda-v-seim-2026.html": {
+   "fingerprint": "54d793f2bb063f6358fc",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/calendar-2027.html": {
+   "fingerprint": "4128bbd74466c1f947e1",
+   "lastmod": "2026-11-26"
+  },
+  "/ru/lpc-info.html": {
+   "fingerprint": "bd4af907a54c71f90b51",
+   "lastmod": "2026-11-26"
+  },
+  "/lt/lpc-info.html": {
+   "fingerprint": "a91f37757e7878533c50",
+   "lastmod": "2026-11-26"
+  },
+  "/en/lpc-info.html": {
+   "fingerprint": "aed11a257ff436c9049a",
+   "lastmod": "2026-11-26"
+  },
+  "/pl/lpc-info.html": {
+   "fingerprint": "0477659b0863e9946ffb",
+   "lastmod": "2026-11-26"
+  },
+  "/de/lpc-info.html": {
+   "fingerprint": "fff8991e099656a0e551",
+   "lastmod": "2026-11-26"
+  },
+  "/uk/lpc-info.html": {
+   "fingerprint": "461d9586e06737ea1511",
+   "lastmod": "2026-11-26"
+  }
+ }
+}

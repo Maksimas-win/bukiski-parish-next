@@ -28,6 +28,7 @@ RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L,NE]
 RewriteCond %{THE_REQUEST} \s/+(?:[^\s?]*/)?index\.html(?:[\s?]|$) [NC]
 RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L,NE]
+RewriteRule ^wooden-chair-mopukh/?$ - [G,L]
 RewriteRule ^ananiya-i-sapfira-pravda-serdca-i-svyatost-cerkvi/?$ /ru/library/ananiya-i-sapfira-pravda-serdca-i-svyatost-cerkvi.html [R=301,L,NE]
 RewriteRule ^apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-1/?$ /ru/library/apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-1.html [R=301,L,NE]
 RewriteRule ^apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-2/?$ /ru/library/apostol-ioann-bogoslov-zhizn-sluzhenie-i-bogoslovskoe-nasledie-chast-2.html [R=301,L,NE]
@@ -41,7 +42,7 @@ RewriteRule ^chetyri-nedeli-do-velikogo-posta/?$ /ru/library/chetyri-nedeli-do-v
 RewriteRule ^chto-oznachayut-simvoly-na-pravoslavnom-kreste/?$ /ru/library/chto-oznachayut-simvoly-na-pravoslavnom-kreste.html [R=301,L,NE]
 RewriteRule ^chto-proishodit-s-dushoi-posle-smerti-pravoslavnoe-uchenie-o-zagrobnoi-zhizni/?$ /ru/library/chto-proishodit-s-dushoi-posle-smerti-pravoslavnoe-uchenie-o-zagrobnoi-zhizni.html [R=301,L,NE]
 RewriteRule ^dimitrievskaya-roditelskaya-subbota-istoriya-smysl-tradicii/?$ /ru/library/dimitrievskaya-roditelskaya-subbota-istoriya-smysl-tradicii.html [R=301,L,NE]
-RewriteRule ^dokumet-ob-uchastii-vernyh-v-evharistii/?$ /ru/library/dokumet-ob-uchastii-vernyh-v-evharistii.html [R=301,L,NE]
+RewriteRule ^dokumet-ob-uchastii-vernyh-v-evharistii/?$ /ru/library/ob-uchastii-vernyh-v-evharistii-klyuchevye-polozheniya-cerkovnogo-dokumenta.html [R=301,L,NE]
 RewriteRule ^dve-rodoslovnye-hrista-protivorechie-ili-taina-domostroitelstva/?$ /ru/library/dve-rodoslovnye-hrista-protivorechie-ili-taina-domostroitelstva.html [R=301,L,NE]
 RewriteRule ^dzhek-signalshik-babuin-na-gosudarstvennoi-sluzhbe/?$ /ru/library/dzhek-signalshik-babuin-na-gosudarstvennoi-sluzhbe.html [R=301,L,NE]
 RewriteRule ^eshe-uspeem-chast-i-u-menya-bog-v-dushe/?$ /ru/library/eshe-uspeem-chast-i-u-menya-bog-v-dushe.html [R=301,L,NE]
@@ -119,5 +120,7 @@ RewriteRule ^zapiski-v-hrame-zhivaya-molitva-cerkvi/?$ /ru/library/zapiski-v-hra
 RewriteRule ^zhenskie-golosa-v-cerkovnom-hore-kak-neprilichie-stalo-normoi/?$ /ru/library/zhenskie-golosa-v-cerkovnom-hore-kak-neprilichie-stalo-normoi.html [R=301,L,NE]
 RewriteRule ^zhizn-posle-prichastiya-kak-hranit-v-sebe-dar/?$ /ru/library/zhizn-posle-prichastiya-kak-hranit-v-sebe-dar.html [R=301,L,NE]
 RewriteRule ^znali-li-vy-chto-pastuhi-byli-merzostyu-dlya-egiptyan/?$ /ru/library/znali-li-vy-chto-pastuhi-byli-merzostyu-dlya-egiptyan.html [R=301,L,NE]
+RewriteRule ^ru/library/dokumet-ob-uchastii-vernyh-v-evharistii\.html/?$ /ru/library/ob-uchastii-vernyh-v-evharistii-klyuchevye-polozheniya-cerkovnogo-dokumenta.html [R=301,L,NE]
 </IfModule>
 ErrorDocument 404 /404.html
+ErrorDocument 410 /404.html
