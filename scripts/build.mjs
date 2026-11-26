@@ -3,14 +3,15 @@
 //   npm run build
 //
 // Environment (all optional): SITE_ORIGIN, BASE_PATH, PRODUCTION, BUILD_TIME,
-// DOCUMENT_DELIVERY. See .env.example and docs/DEPLOYMENT.md.
+// DOCUMENT_DELIVERY, PREVIOUS_PAGE_DATES. See .env.example and docs/DEPLOYMENT.md.
 
 import { readFile, writeFile, mkdir, cp, rm, readdir } from 'node:fs/promises';
 import { resolve, dirname, sep } from 'node:path';
 import { createHash } from 'node:crypto';
 import { documentPath } from '../assets/js/document-data.js';
 import { loadSite, ROOT, DIST, CORE_PAGES } from './lib/site.mjs';
-import { createCatalog } from './lib/catalog.mjs';
+import { createCatalog, RETIRED_PATHS } from './lib/catalog.mjs';
+import { PAGE_DATES_FILE, contentFingerprint, lastmodOf, loadPageDates, pageDatesFile } from './lib/page-dates.mjs';
 import { renderDocument } from './lib/layout.mjs';
 import { homePage } from './lib/pages/home.mjs';
 import { schedulePage } from './lib/pages/schedule.mjs';
@@ -38,7 +39,7 @@ const pageDefinitions = new Map();
 function addRoute(page) {
   if (routes.has(page.path)) throw new Error(`Route collision: ${page.path}`);
   pageDefinitions.set(page.path, page);
-  routes.set(page.path, renderDocument(site, page));
+  routes.set(page.path, { ...renderDocument(site, page), fingerprint: contentFingerprint(page) });
 }
 
 /** A second address for an existing page, with the original as canonical. */
@@ -322,6 +323,18 @@ addAnnouncementPages();
 addNotFoundPage();
 for (const [path, route] of routes) await writeOutput(outputPathOf(path), route.html);
 
+for (const path of RETIRED_PATHS) {
+  if (routes.has(path) || catalog.redirects.some(redirect => redirect.from === path)) throw new Error(`Retired path is still in use: ${path}`);
+}
+
+// <lastmod>: unchanged pages keep the date of the previous publication.
+const pageHistory = await loadPageDates(site.pageDatesFrom);
+const buildDay = new Date(site.buildTime).toISOString().slice(0, 10);
+const datedPages = [...routes].filter(outputs.inSitemap).map(([path, route]) => {
+  route.lastmod = lastmodOf({ path, fingerprint: route.fingerprint, publishedAt: route.publishedAt }, pageHistory, buildDay);
+  return { path, fingerprint: route.fingerprint, lastmod: route.lastmod };
+});
+
 await writeOutput('data/services.json', JSON.stringify(site.rawSchedule));
 // Use the same confirmed services as the page, including rector-confirmed additions.
 await writeOutput('data/assistant-services.json', JSON.stringify(site.schedule));
@@ -329,11 +342,12 @@ await writeOutput('data/assistant-services.json', JSON.stringify(site.schedule))
 await writeOutput('api/v1/bootstrap.json', `${JSON.stringify(appBootstrap(site), null, 2)}\n`);
 await writeOutput('assets/data/search-index.json', JSON.stringify(outputs.searchIndex(catalog)));
 await writeOutput('sitemap.xml', outputs.sitemap(site, routes));
+await writeOutput(PAGE_DATES_FILE, pageDatesFile(datedPages));
 await writeOutput('robots.txt', outputs.robots(site));
 await writeOutput('.nojekyll', '');
 await writeOutput('_headers', outputs.headersFile(site));
 await writeOutput('_redirects', outputs.redirectsFile(site, catalog.redirects));
-await writeOutput('.htaccess', outputs.htaccess(site, catalog.redirects));
+await writeOutput('.htaccess', outputs.htaccess(site, catalog.redirects, RETIRED_PATHS));
 await writeOutput('assets/parish.vcf', outputs.contactCard(site));
 for (const lang of site.languages) await writeOutput(`assets/schedule-${lang}.ics`, outputs.scheduleCalendar(site, lang));
 
@@ -352,6 +366,7 @@ await writeOutput('build-info.json', JSON.stringify({
   sourcePages: site.pages.length,
   generatedPages: routes.size,
   documents: documentFiles.length,
+  pageDates: pageHistory ? 'previous publication' : 'publication dates only',
   confirmedServices: site.schedule.events.length,
   sourceUpdatedAt: site.schedule.sourceUpdatedAt
 }, null, 2));

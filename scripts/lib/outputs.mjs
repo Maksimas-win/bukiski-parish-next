@@ -26,8 +26,11 @@ const CACHE_RULES = [
 const regexEscape = value => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const withoutRoot = redirects => redirects.filter(redirect => redirect.from !== '/');
 
+/** Routes listed in the sitemap: indexable pages at their canonical address. */
+export const inSitemap = ([path, route]) => !route.noindex && path === route.canonicalPath;
+
 export function sitemap(site, routes) {
-  const urls = [...routes].filter(([path, route]) => !route.noindex && path === route.canonicalPath);
+  const urls = [...routes].filter(inSitemap);
   const escapeXML = value => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const lastmod = route => (/^\d{4}-\d{2}-\d{2}/.test(route.lastmod || '') ? `<lastmod>${route.lastmod.slice(0, 10)}</lastmod>` : '');
   return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(([path, route]) => `<url><loc>${escapeXML(site.canonical(path))}</loc>${lastmod(route)}</url>`).join('')}</urlset>`;
@@ -44,15 +47,21 @@ export function robots(site) {
     : 'User-agent: *\nDisallow: /\n';
 }
 
-/** Apache configuration for the new site. */
-export function htaccess(site, redirects) {
+/**
+ * Apache configuration for the new site. `gone` lists old addresses that never
+ * had parish content: they answer 410 so search engines drop them sooner than a 404.
+ */
+export function htaccess(site, redirects, gone = []) {
   const { base } = site;
   const headers = securityHeaders(site).map(([name, value]) => `Header always set ${name} "${value}"`).join('\n');
   const caching = CACHE_RULES.map(([extensions, value]) => `<FilesMatch "\\.(${extensions})$">\nHeader set Cache-Control "${value}"\n</FilesMatch>`).join('\n');
   const documents = site.documentDelivery === 'direct'
     ? '<FilesMatch "\\.(pdf|doc)$">\nHeader set X-Robots-Tag "noindex, nofollow"\n</FilesMatch>\n'
     : '';
-  const rules = withoutRoot(redirects).map(({ from, to }) => `RewriteRule ^${regexEscape(from.slice(1))}/?$ ${base}${to} [R=301,L,NE]`).join('\n');
+  const rules = [
+    ...gone.map(path => `RewriteRule ^${regexEscape(path.slice(1))}/?$ - [G,L]`),
+    ...withoutRoot(redirects).map(({ from, to }) => `RewriteRule ^${regexEscape(from.slice(1))}/?$ ${base}${to} [R=301,L,NE]`)
+  ].join('\n');
   // One host and one address per page: www. moves to the bare domain and
   // index.html to the directory, so search engines see a single URL.
   const canonicalHost = [
@@ -61,7 +70,7 @@ export function htaccess(site, redirects) {
     'RewriteCond %{THE_REQUEST} \\s/+(?:[^\\s?]*/)?index\\.html(?:[\\s?]|$) [NC]',
     `RewriteRule ^(.*/)?index\\.html$ ${base}/$1 [R=301,L,NE]`
   ].join('\n');
-  return `Options -Indexes\n<IfModule mod_setenvif.c>\nSetEnvIfNoCase Host "\\.hostingersite\\.com$" preview_site\n</IfModule>\n<IfModule mod_headers.c>\n${headers}\nHeader always set X-Robots-Tag "noindex, nofollow" env=preview_site\n${caching}\n${documents}</IfModule>\n\n<IfModule mod_rewrite.c>\nRewriteEngine On\nRewriteRule (^|/)\\.git(?:/|$) - [F,L,NC]\n${canonicalHost}\n${rules}\n</IfModule>\nErrorDocument 404 ${base}/404.html\n`;
+  return `Options -Indexes\n<IfModule mod_setenvif.c>\nSetEnvIfNoCase Host "\\.hostingersite\\.com$" preview_site\n</IfModule>\n<IfModule mod_headers.c>\n${headers}\nHeader always set X-Robots-Tag "noindex, nofollow" env=preview_site\n${caching}\n${documents}</IfModule>\n\n<IfModule mod_rewrite.c>\nRewriteEngine On\nRewriteRule (^|/)\\.git(?:/|$) - [F,L,NC]\n${canonicalHost}\n${rules}\n</IfModule>\nErrorDocument 404 ${base}/404.html\nErrorDocument 410 ${base}/404.html\n`;
 }
 
 /**

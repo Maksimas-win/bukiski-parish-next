@@ -204,12 +204,12 @@ function closing(site, story, entry, t, uiLocale) {
       <p class="story-editorial__title" id="story-editorial-title">${t.storyEditorialTitle}</p>
       <p>${t.storyEditorialNote}</p>
       <p>${siteLink(site, site.route(uiLocale, 'history'), site.histories[uiLocale].title)}</p>
-    </aside>
-    <aside class="notice notice--archive" lang="${uiLocale}">
-      <p>${t.archiveNotice}</p>
-      <p class="meta-row">${externalLink(t, entry.url, `${t.source}: ${entry.host}`)}<span>${t.savedOn}: <time datetime="${entry.page.fetchedOn}">${formatDate(uiLocale, `${entry.page.fetchedOn}T12:00:00Z`, { dateStyle: 'long' })}</time></span></p>
       ${entry.archive !== entry.target && html`<p>${siteLink(site, entry.archive, t.archiveOriginal)}</p>`}
     </aside>
+    ${!entry.ownSite && html`<aside class="notice notice--archive" lang="${uiLocale}">
+      <p>${t.archiveNotice}</p>
+      <p class="meta-row">${externalLink(t, entry.url, `${t.source}: ${entry.host}`)}<span>${t.savedOn}: <time datetime="${entry.page.fetchedOn}">${formatDate(uiLocale, `${entry.page.fetchedOn}T12:00:00Z`, { dateStyle: 'long' })}</time></span></p>
+    </aside>`}
     <p>${siteLink(site, site.route(uiLocale, 'history'), html`${icon('chevron-left')}${site.histories[uiLocale].title}`, 'link link--back')}</p>
   </footer>`;
 }

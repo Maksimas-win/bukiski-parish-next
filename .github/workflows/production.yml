@@ -32,6 +32,16 @@ jobs:
         run: npm run schedule:sync
         env:
           SCHEDULE_SOURCE_URL: https://bukiski-hram.org/data/services.json
+      # Read-only copy of the dates published last time, so that unchanged
+      # pages keep their <lastmod>. Missing on the first run: every page is then dated today.
+      - name: Read page dates of the previous publication
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+          ref: hostinger-production
+          path: previous
+          sparse-checkout: page-dates.json
+          sparse-checkout-cone-mode: false
       - name: Build and verify the production export
         working-directory: source
         run: npm run check
@@ -40,6 +50,7 @@ jobs:
           BASE_PATH: ''
           PRODUCTION: 'true'
           DOCUMENT_DELIVERY: envelope
+          PREVIOUS_PAGE_DATES: ${{ github.workspace }}/previous/page-dates.json
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           persist-credentials: true

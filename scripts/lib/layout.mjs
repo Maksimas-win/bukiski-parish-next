@@ -188,7 +188,7 @@ export function renderDocument(site, page) {
     if (!(key in values)) throw new Error(`Unknown template placeholder: ${key}`);
     return html`${values[key]}`.value;
   });
-  // Preserved articles have not changed since the source published them.
-  return { html: document, noindex: noindex || noFollow, canonicalPath, lang, lastmod: page.publishedAt || null };
+  // The build sets `lastmod` from scripts/lib/page-dates.mjs once every page exists.
+  return { html: document, noindex: noindex || noFollow, canonicalPath, lang, publishedAt: page.publishedAt || null };
 }
 
