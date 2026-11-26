@@ -24,6 +24,25 @@ const OLD_MAIN_SECTIONS = {
 // Localised section pages of the old .org site in Polish: kept as archive, not listed as articles.
 const POLISH_SECTION = /^\/pl\/(?:contacts|schedule|history|sacraments|news)/;
 
+// The parish's own earlier sites. Their pages are its own publications, not
+// copies of someone else's, and their old addresses now lead to this site.
+const OWN_HOSTS = new Set(['bukiski-hram.net', 'bukiski-hram.org']);
+
+// Old pages without text of their own whose subject is fully covered by
+// another article. Their addresses, including the library address published
+// before the merge, lead there with 301; the captured page stays in /archive/.
+const MERGED_PAGES = {
+  // A picture gallery and a PDF link; the article explains the same document in text.
+  'https://bukiski-hram.net/dokumet-ob-uchastii-vernyh-v-evharistii':
+    'https://bukiski-hram.net/ob-uchastii-vernyh-v-evharistii-klyuchevye-polozheniya-cerkovnogo-dokumenta'
+};
+
+// Addresses search engines still know from the old .net site builder that
+// never had parish content. The host answers 410 Gone so they leave the index.
+export const RETIRED_PATHS = [
+  '/wooden-chair-mopukh' // template page of the previous site builder
+];
+
 const WORDS_PER_MINUTE = 170;
 const MAX_ARTICLE_IMAGES = 8;
 const MIN_IMAGE_WIDTH = 120;
@@ -72,18 +91,27 @@ export function createCatalog(site) {
   const corePaths = new Set(site.languages.flatMap(lang => CORE_PAGES.map(page => site.route(lang, page))));
   const languageOf = page => (site.languages.includes(page.language) ? page.language : 'ru');
 
-  function targetOf(page) {
+  function ownPathOf(page) {
     const source = new URL(page.url);
     if (source.hostname === 'bukiski-hram.org') return source.pathname === '/' ? '/ru/' : source.pathname;
     if (OLD_MAIN_SECTIONS[source.pathname]) return site.route(languageOf(page), OLD_MAIN_SECTIONS[source.pathname]);
     return `/${languageOf(page)}/library${source.pathname}.html`;
   }
 
+  function targetOf(page) {
+    const mergedInto = MERGED_PAGES[page.url];
+    if (!mergedInto) return ownPathOf(page);
+    const article = site.pages.find(candidate => candidate.url === mergedInto);
+    if (!article || MERGED_PAGES[article.url]) throw new Error(`Merged page needs an existing article: ${page.url}`);
+    return ownPathOf(article);
+  }
+
   const claimed = new Map();
   const entries = site.pages.map(page => {
     const source = new URL(page.url);
     const target = targetOf(page);
-    const ownsTarget = !corePaths.has(target) && !claimed.has(target);
+    const mergedInto = MERGED_PAGES[page.url] || null;
+    const ownsTarget = !mergedInto && !corePaths.has(target) && !claimed.has(target);
     if (ownsTarget) claimed.set(target, page.url);
     const images = imagesOf(page, site);
     const cover = images[0]?.originalWidth >= MIN_COVER_WIDTH ? images[0] : null;
@@ -99,6 +127,12 @@ export function createCatalog(site) {
       target,
       /** True when the preserved text is published at `target` itself. */
       ownsTarget,
+      /** Source URL of the article that now serves this page's subject. */
+      mergedInto,
+      /** Library address this page had before it was merged. */
+      formerPath: mergedInto ? ownPathOf(page) : null,
+      /** Published by the parish on one of its own earlier sites. */
+      ownSite: OWN_HOSTS.has(source.hostname),
       archive: ownsTarget && !site.stories.get(page.url)?.preserveOriginal ? target : `/archive/${hash(page.url)}.html`,
       cover,
       gallery: cover ? images.slice(1) : images,
@@ -124,8 +158,11 @@ export function createCatalog(site) {
     },
     /** Dated articles for the parish-life page, newest first. */
     news: () => articles.filter(entry => entry.publishedAt).sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt)).slice(0, 12),
-    /** Old .net paths and where they lead now. */
-    redirects: entries.filter(entry => entry.host === 'bukiski-hram.net').map(entry => ({ from: entry.sourcePath, to: entry.target })),
+    /** Old .net paths, and library paths of merged pages, and where they lead now. */
+    redirects: [
+      ...entries.filter(entry => entry.host === 'bukiski-hram.net').map(entry => ({ from: entry.sourcePath, to: entry.target })),
+      ...entries.filter(entry => entry.formerPath).map(entry => ({ from: entry.formerPath, to: entry.target }))
+    ],
     inventory: entries.map(entry => ({
       source: entry.url,
       status: entry.page.status,

@@ -512,3 +512,58 @@ test('The host configuration redirects www. and index.html to one canonical addr
   assert.match(file, /Strict-Transport-Security "max-age=31536000"/);
 });
 
+
+test('The parish\'s own articles carry no archive notice; preserved copies link to the current page', async () => {
+  const migration = await readJSON('content/migration.json');
+  const published = new Set(migration.filter(record => record.target === record.archive).map(record => record.target));
+  assert.ok(published.size > 80);
+  for (const path of published) {
+    const html = await page(path);
+    assert.doesNotMatch(html, /notice--archive/, path);
+    assert.doesNotMatch(html, /href="https:\/\/bukiski-hram\.(?:net|org)\/[^"]*"[^>]*>[^<]*<svg/, `${path}: an own old address shown as an external link`);
+  }
+  const story = await page('/ru/library/istoriya-o-hrame.html');
+  assert.doesNotMatch(story, /notice--archive/);
+  for (const { file, html } of pages.filter(item => item.file.startsWith('archive/'))) {
+    const notice = html.match(/<aside class="notice notice--archive"[\s\S]*?<\/aside>/);
+    assert.ok(notice, file);
+    assert.doesNotMatch(notice[0], /href="https?:/, `${file}: the old address leads back to this site`);
+  }
+});
+
+test('A page merged into a fuller article leads there from its old and its former library address', async () => {
+  const migration = await readJSON('content/migration.json');
+  const merged = migration.find(record => record.source === 'https://bukiski-hram.net/dokumet-ob-uchastii-vernyh-v-evharistii');
+  const article = '/ru/library/ob-uchastii-vernyh-v-evharistii-klyuchevye-polozheniya-cerkovnogo-dokumenta.html';
+  const former = '/ru/library/dokumet-ob-uchastii-vernyh-v-evharistii.html';
+  assert.equal(merged.target, article);
+  assert.match(merged.archive, /^\/archive\/[0-9a-f]{16}\.html$/);
+  const rules = (await read('dist/.htaccess')).split('\n');
+  assert.ok(rules.includes(`RewriteRule ^dokumet-ob-uchastii-vernyh-v-evharistii/?$ ${base}${article} [R=301,L,NE]`));
+  assert.ok(rules.includes(`RewriteRule ^ru/library/dokumet-ob-uchastii-vernyh-v-evharistii\\.html/?$ ${base}${article} [R=301,L,NE]`));
+  assert.ok(!(await read('dist/sitemap.xml')).includes(former));
+  // Static hosts without .htaccess serve a copy that names the article as canonical.
+  assert.match(await page(former), new RegExp(`<link rel="canonical" href="https://[^"]+${article.replaceAll('.', '\\.')}">`));
+  assert.ok(!(await page('/ru/library.html')).includes(`href="${base}${former}"`));
+});
+
+test('Old builder addresses without parish content answer 410 Gone', async () => {
+  const file = await read('dist/.htaccess');
+  assert.ok(file.split('\n').includes('RewriteRule ^wooden-chair-mopukh/?$ - [G,L]'));
+  assert.match(file, new RegExp(`ErrorDocument 410 ${base}/404\\.html`));
+  await assert.rejects(stat(fileFor('/wooden-chair-mopukh')));
+});
+
+test('page-dates.json dates exactly the sitemap addresses, and the sitemap uses those dates', async () => {
+  const sitemap = await read('dist/sitemap.xml');
+  const dates = await readJSON('dist/page-dates.json');
+  assert.equal(dates.version, 1);
+  const entries = [...sitemap.matchAll(/<url><loc>([^<]+)<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?<\/url>/g)];
+  assert.equal(entries.length, (sitemap.match(/<url>/g) || []).length);
+  assert.deepEqual(Object.keys(dates.pages).sort(), entries.map(([, url]) => new URL(url).pathname.slice(base.length)).sort());
+  for (const [, url, lastmod] of entries) {
+    const record = dates.pages[new URL(url).pathname.slice(base.length)];
+    assert.match(record.fingerprint, /^[0-9a-f]{20}$/);
+    assert.equal(lastmod ?? null, record.lastmod, url);
+  }
+});

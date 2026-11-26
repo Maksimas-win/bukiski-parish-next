@@ -93,18 +93,26 @@ function documentRegion(t) {
 /** Documents and other preserved articles that the source page linked to. */
 function references(site, catalog, entry, t, uiLocale) {
   const items = new Map();
+  const documentOf = url => site.documents.find(candidate => candidate.source === url);
+  const download = (document, label) => {
+    const type = document.local.split('.').at(-1).toUpperCase();
+    // In envelope mode the browser fetches the download page and saves the original file.
+    return html`<a${attrs({ href: site.url(documentPath(document, uiLocale)), 'data-document-download': site.documentDelivery === 'envelope', rel: 'nofollow' })}>${label} <span class="file-type">${type}</span></a>`;
+  };
   for (const ref of site.sourceLinks) {
     if (ref.from !== entry.url || !ref.label || items.has(ref.to)) continue;
-    const document = site.documents.find(candidate => candidate.source === ref.to);
+    const document = documentOf(ref.to);
     const related = catalog.byUrl.get(ref.to);
     if (document?.local) {
-      const type = document.local.split('.').at(-1).toUpperCase();
-      // In envelope mode the browser fetches the download page and saves the original file.
-      items.set(ref.to, html`<a${attrs({ href: site.url(documentPath(document, uiLocale)), 'data-document-download': site.documentDelivery === 'envelope', rel: 'nofollow' })}>${ref.label} <span class="file-type">${type}</span></a>`);
+      items.set(ref.to, download(document, ref.label));
+    } else if (related?.mergedInto === entry.url) {
+      // The linked page only offered a document and now leads here: offer the document itself.
+      const wrapped = site.sourceLinks.filter(link => link.from === related.url).map(link => documentOf(link.to)).find(candidate => candidate?.local);
+      if (wrapped) items.set(ref.to, download(wrapped, ref.label));
     } else if (document) {
       const blankForm = /бланк.*записк|записк.*бланк/i.test(ref.label);
       items.set(ref.to, html`${externalLink(t, ref.to, ref.label)} <span class="hint">${t.documentUnavailable}</span>${blankForm && html` ${siteLink(site, site.route(uiLocale, 'notes'), t.notes)}`}`);
-    } else if (related && related.ownsTarget && related.url !== entry.url) {
+    } else if (related && ((related.ownsTarget && related.url !== entry.url) || (related.mergedInto && related.target !== entry.target))) {
       items.set(ref.to, siteLink(site, related.target, ref.label));
     }
   }
@@ -122,6 +130,22 @@ function figure(site, image, { className, eager = false, zoomLabel }) {
       <img${attrs({ src: site.url(`/${image.web}`), width: image.width, height: image.height, loading: eager ? 'eager' : 'lazy', decoding: 'async', alt: image.alt })}>
     </a>
   </figure>`;
+}
+
+/**
+ * Shown on preserved copies (/archive/) and on texts from other sites. The
+ * parish's own articles carry no notice: their old addresses lead to the new
+ * page itself, so a "source" link would point back to it.
+ */
+function archiveNotice(site, entry, t, uiLocale, interactiveGuide) {
+  const label = interactiveGuide ? t.gpmInteractiveLink : `${t.source}: ${entry.host}`;
+  const source = entry.ownSite
+    ? siteLink(site, entry.target, interactiveGuide ? t.gpmInteractiveLink : t.archiveCurrent)
+    : externalLink(t, entry.url, label);
+  return html`<aside class="notice notice--archive" lang="${uiLocale}">
+    <p>${interactiveGuide ? t.gpmTextEdition : t.archiveNotice}</p>
+    <p class="meta-row">${source}<span>${t.savedOn}: <time datetime="${entry.page.fetchedOn}">${formatDate(uiLocale, `${entry.page.fetchedOn}T12:00:00Z`, { dateStyle: 'long' })}</time></span></p>
+  </aside>`;
 }
 
 export function lightboxDialog(t, uiLocale) {
@@ -165,10 +189,7 @@ export function articlePage(site, catalog, entry, t, uiLocale, { related = [], a
         <ol>${headings.map(heading => html`<li><a href="#${heading.id}" lang="${entry.language}">${heading.text}</a></li>`)}</ol>
       </nav>`}
       <div class="prose article__body" lang="${entry.language}">
-        <aside class="notice notice--archive" lang="${uiLocale}">
-          <p>${interactiveGuide ? t.gpmTextEdition : t.archiveNotice}</p>
-          <p class="meta-row">${externalLink(t, entry.url, interactiveGuide ? t.gpmInteractiveLink : `${t.source}: ${entry.host}`)}<span>${t.savedOn}: <time datetime="${page.fetchedOn}">${formatDate(uiLocale, `${page.fetchedOn}T12:00:00Z`, { dateStyle: 'long' })}</time></span></p>
-        </aside>
+        ${(archiveOnly || !entry.ownSite) && archiveNotice(site, entry, t, uiLocale, interactiveGuide)}
         ${body}
         ${references(site, catalog, entry, t, uiLocale)}
         ${entry.gallery.length > 0 && html`<div class="gallery">${entry.gallery.map(image => figure(site, image, { className: 'gallery__item', zoomLabel: t.imageOpen }))}</div>`}

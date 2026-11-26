@@ -129,6 +129,8 @@ export async function loadSite(env = process.env) {
     production,
     documentDelivery,
     buildTime,
+    /** page-dates.json of the previous publication, if the build was given one. */
+    pageDatesFrom: env.PREVIOUS_PAGE_DATES || null,
     productionOrigin,
     languages: settings.locales,
     /** Site-relative path -> href usable from any page, including the GitHub project prefix. */
